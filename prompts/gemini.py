@@ -1,4 +1,5 @@
-from data_loader import decode_image
+import base64
+from google.genai import types
 
 SYSTEM = "You are a dental radiologist examining panoramic X-rays."
 
@@ -23,6 +24,13 @@ D) {option4}
 Answer: {answer}"""
 
 
+def _image_part(b64_string):
+    return types.Part.from_bytes(
+        data=base64.b64decode(b64_string),
+        mime_type="image/jpeg",
+    )
+
+
 def build_prompt(row, examples=None):
     """
     Build a Gemini content list for a closed-ended question.
@@ -32,14 +40,14 @@ def build_prompt(row, examples=None):
         examples: optional list of rows to use as few-shot context
 
     Returns:
-        list of content parts to pass to model.generate_content()
+        list of content parts to pass to client.models.generate_content()
     """
     parts = [SYSTEM]
 
     if examples:
         parts.append("\nHere are some examples:\n")
         for ex in examples:
-            parts.append(decode_image(ex["image"]))
+            parts.append(_image_part(ex["image"]))
             parts.append(EXAMPLE_BLOCK.format(
                 question=ex["question"],
                 option1=ex["option1"],
@@ -48,10 +56,9 @@ def build_prompt(row, examples=None):
                 option4=ex["option4"],
                 answer=ex["answer"],
             ))
-
         parts.append("\nNow answer the following:\n")
 
-    parts.append(decode_image(row["image"]))
+    parts.append(_image_part(row["image"]))
     parts.append(QUESTION_BLOCK.format(
         question=row["question"],
         option1=row["option1"],

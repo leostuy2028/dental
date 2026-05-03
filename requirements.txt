@@ -1,4 +1,5 @@
-google-generativeai
+google-genai
+anthropic
 pandas
 pyarrow
 pillow
