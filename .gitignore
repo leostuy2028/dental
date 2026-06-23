@@ -1,2 +1,11 @@
 .*
 data/
+__pycache__/
+*.pyc
+
+# Private research notes — must never be published to the public GitHub mirror.
+# The canonical copy lives outside the repo (~/Documents/dental_research/);
+# these patterns block it from being committed if ever copied in.
+dental_research/
+RESEARCH_PLAN.md
+*RESEARCH_PLAN*
