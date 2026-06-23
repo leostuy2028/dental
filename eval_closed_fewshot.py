@@ -61,8 +61,8 @@ def print_summary(df, model, k):
         print(f"  {cat:<40} {acc:.1f}%  (n={n})")
 
 
-def run(model, k, results_path):
-    full_df = load_closed()
+def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False):
+    full_df = pd.read_parquet(data_path)
     pool_df = full_df.iloc[:POOL_SIZE].copy()
     test_df = full_df.iloc[TEST_START:TEST_END].copy()
 
@@ -85,8 +85,8 @@ def run(model, k, results_path):
             continue
 
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
-        system, messages = build_prompt(row, examples=examples if examples else None)
-        predicted, raw = call(system, messages, model=model)
+        system, messages = build_prompt(row, examples=examples if examples else None, cot=cot)
+        predicted, raw = call(system, messages, model=model, cot=cot)
         correct = predicted == row["answer"]
 
         results.append({
@@ -102,8 +102,13 @@ def run(model, k, results_path):
         })
 
         completed = len(done_indices) + len(results)
+        running_acc = pd.concat([done, pd.DataFrame(results)], ignore_index=True)["correct"].mean() * 100
         status = "OK" if correct else f"WRONG (got {predicted}, expected {row['answer']})"
-        print(f"[{completed}/{len(test_df)}] {status} | {row['category']} | {len(examples)}-shot")
+        line = f"[{completed}/{len(test_df)}] {status} | {row['category']} | acc so far: {running_acc:.1f}%"
+        print(line)
+
+        with open("results/progress.txt", "w") as f:
+            f.write(line + "\n")
 
         if len(results) % 10 == 0:
             pd.concat([done, pd.DataFrame(results)], ignore_index=True).to_csv(results_path, index=False)
@@ -118,9 +123,13 @@ if __name__ == "__main__":
     parser.add_argument("--model", default="claude-haiku-4-5-20251001")
     parser.add_argument("--k", type=int, default=3)
     parser.add_argument("--out", default=None)
+    parser.add_argument("--data", default="data/closed_ended.parquet")
+    parser.add_argument("--cot", action="store_true")
     args = parser.parse_args()
 
     if args.out is None:
-        args.out = f"results/closed_{args.model.split('-')[1]}_{args.k}shot.csv"
+        tag = "shuffled" if "shuffled" in args.data else "original"
+        cot_tag = "_cot" if args.cot else ""
+        args.out = f"results/closed_{args.model.split('-')[1]}_{args.k}shot_{tag}{cot_tag}.csv"
 
-    run(model=args.model, k=args.k, results_path=args.out)
+    run(model=args.model, k=args.k, results_path=args.out, data_path=args.data, cot=args.cot)
