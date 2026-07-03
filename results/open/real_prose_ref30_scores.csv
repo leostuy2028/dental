@@ -1,0 +1,61 @@
+index,rubric,score,judge_raw
+19,original,0.2,0.2
+19,rephrased,0.0,0.0
+26,original,1.0,1.0
+26,rephrased,1.0,1.0
+46,original,0.3,0.3
+46,rephrased,0.2,0.2
+92,original,1.0,1.0
+92,rephrased,1.0,1.0
+95,original,0.2,0.2
+95,rephrased,0.0,0.0
+109,original,0.2,0.2
+109,rephrased,0.2,0.2
+149,original,0.2,Correctness | 0.2
+149,rephrased,0.0,"Based on the provided prediction, which is severely truncate"
+170,original,0.2,0.2
+170,rephrased,1.0,1.0
+224,original,0.2,0.2
+224,rephrased,1.0,1.0
+226,original,0.0,0.0
+226,rephrased,0.0,0.0
+252,original,0.3,Correctness score | 0.3
+252,rephrased,0.5,0.5
+265,original,0.2,0.2
+265,rephrased,0.0,0.0
+269,original,0.2,0.2
+269,rephrased,0.4,0.4
+277,original,0.8,0.8
+277,rephrased,1.0,1.0
+285,original,0.5,0.5
+285,rephrased,1.0,1.0
+289,original,0.2,0.2
+289,rephrased,0.0,0.0
+315,original,0.8,0.8
+315,rephrased,1.0,1.0
+341,original,0.3,0.3
+341,rephrased,0.3,0.3
+369,original,1.0,1.0
+369,rephrased,1.0,1.0
+395,original,0.2,0.2
+395,rephrased,0.1,0.1
+426,original,0.8,0.8
+426,rephrased,0.0,left second molar (tooth #37)**.   
+437,original,0.2,Correctness | 0.2
+437,rephrased,0.0,Based on the provided ground truth and the incomplete predic
+460,original,0.2,0.2
+460,rephrased,0.2,0.2
+471,original,0.0,0.0
+471,rephrased,0.0,0.0
+483,original,0.3,0.3
+483,rephrased,0.5,0.5
+496,original,0.3,0.3
+496,rephrased,0.0,"Based on the clinical completeness of the prediction, which "
+502,original,0.2,0.2
+502,rephrased,0.2,0.2
+534,original,0.3,0.3
+534,rephrased,0.3,0.3
+563,original,0.3,0.3
+563,rephrased,0.3,0.3
+572,original,0.8,0.8
+572,rephrased,1.0,1.0

@@ -1,12 +1,18 @@
 .*
 data/
-results/
 __pycache__/
 *.pyc
+*.log
+
+# Results ARE committed on purpose: they come from paid API experiments and must not
+# be regenerated. Keep result files descriptively named (model / config / n).
+# Only exception — never publish quarantined INVALID data (hand-fabricated /
+# coordinate-forced inputs); kept local for audit.
+results/open/DISCARDED_invalid/
+eval_open/predictions.parquet
 
 # Private research notes — must never be published to the public GitHub mirror.
-# The canonical copy lives outside the repo (~/Documents/dental_research/);
-# these patterns block it from being committed if ever copied in.
 dental_research/
 RESEARCH_PLAN.md
 *RESEARCH_PLAN*
+results/progress.txt

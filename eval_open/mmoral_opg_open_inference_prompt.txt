@@ -1,0 +1,12 @@
+# MMOral-OPG OPEN-ENDED inference prompt — VERBATIM from VLMEvalKit
+# Source: open-compass/VLMEvalKit  vlmeval/dataset/mmoral_opg_open.py
+#         class MMOral_OPG_OPEN(MMOralBase).build_prompt(self, line)  (retrieved 2026-07-03)
+# This is the EXACT text sent to the model under test for each open-ended item,
+# alongside the panoramic image (msgs = [image, text]). There is NO system prompt,
+# NO persona, and NO instruction to emit coordinates/bounding boxes.
+# The model answers however it naturally answers; OralGPT emits coordinates because
+# of its training, not because the prompt asks for them.
+# ---------------------------------------------------------------------------
+
+Question: {question}
+Please provide a detailed and accurate answer to the question.
