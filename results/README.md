@@ -31,30 +31,33 @@ inside a field by `-`.
 
 Example: `results/closed_ended/position_bias/gemini-3.5-flash__cot-k5__clean-shuffled__idx50-149.csv`
 
-## Self-describing files (metadata inside every CSV)
+## Self-describing files (metadata sidecar)
 
-Every result file also carries its own metadata as a leading `#`-comment block, so a file
-can be reconstructed even without this manifest. Write with `results_io.write_results`,
-read with `results_io.load_results` (repo root, `results_io.py`):
+Every result `<name>.csv` is written together with a sidecar `<name>.csv.meta.json` that holds
+its full identity, so a file reconstructs on its own even without this manifest. The **CSV
+stays pristine** (no comment lines) — it opens correctly in plain `pd.read_csv`, Excel, or
+grep, with no chance of confusing metadata with the data (which contains `#`, e.g. `#44`).
 
+Write with `results_io.write_results(df, path, meta)`; read with
+`results_io.load_results(path, return_meta=True)` (repo root, `results_io.py`). Example sidecar:
+
+```json
+{
+  "experiment": "E-nshot",
+  "paper_section": "§5.4",
+  "model": "gemini-3.5-flash",
+  "config": "cot k=5 think-off",
+  "dataset": "clean-shuffled",
+  "slice": "idx50-149",
+  "n": 100,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 5 --cot ...",
+  "code_commit": "eaa3e4a",
+  "generated_utc": "2026-07-04T11:53:26+00:00"
+}
 ```
-# experiment: E-nshot
-# paper_section: §5.4
-# model: gemini-3.5-flash
-# config: cot k=5 think-off
-# dataset: clean-shuffled
-# slice: idx50-149
-# n: 100
-# command: python eval_closed_gemini.py --model gemini-3.5-flash --k 5 --cot ...
-# code_commit: 4362b4f
-# generated_utc: 2026-07-04T11:50:05+00:00
-index,question,option1,...            <- data starts here
-```
 
-**Read these files with `results_io.load_results(path)`, not plain `pd.read_csv`.** The data
-contains `#` (tooth numbers like `#44`); `load_results` strips only the leading comment block
-by line-prefix, so `#` inside the data is preserved. (Plain `pd.read_csv(comment='#')` would
-corrupt the data — do not use it here.)
+Commit the `.csv` and its `.meta.json` together. The sidecar travels with the file; this
+manifest is the searchable index across all files.
 
 ## Manifest
 

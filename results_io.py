@@ -1,34 +1,39 @@
 """
-Self-describing result CSVs.
+Self-describing result files: a pristine CSV + a JSON metadata sidecar.
 
-Every result file we write carries a leading block of `#`-comment lines holding the full
+Each result <name>.csv is written together with <name>.csv.meta.json holding the full
 experiment metadata (experiment id, paper section, model, config, dataset, slice, command,
-git commit, timestamp). The goal: open any CSV and know exactly what it is, even without
-results/README.md.
-
-IMPORTANT — read these files with `load_results()`, NOT plain `pd.read_csv`:
-our data contains '#' (tooth numbers like "#44"), so pandas' `comment='#'` would truncate
-real data. `load_results` strips ONLY the leading comment block (lines whose first
-non-space char is '#'), so '#' inside the data is never touched.
+git commit, timestamp). The CSV itself stays 100% standard — no comment lines — so it opens
+correctly in plain pandas, Excel, or grep, and there is NO chance of confusing metadata with
+the data (which contains '#', e.g. tooth numbers like "#44").
 
     from results_io import write_results, load_results
-    write_results(df, path, meta={...})
-    df, meta = load_results(path, return_meta=True)
+    write_results(df, "results/closed_ended/nshot/....csv", meta={...})
+    df, meta = load_results(path, return_meta=True)   # reads the CSV + its sidecar
+
+Goal: any file is fully reconstructable on its own (via its sidecar), and results/README.md
+is the searchable index across all of them.
 """
-import io
+import os
+import json
 import subprocess
 import datetime
 import pandas as pd
 
-COMMENT = "#"
+META_SUFFIX = ".meta.json"
 
-# Recommended metadata keys (fill what applies; order is preserved in the file):
+# Recommended metadata keys (fill what applies):
 #   experiment, paper_section, description, model, config, dataset, slice, n,
 #   judge (open-ended only), command, code_commit, generated_utc
 RECOMMENDED_KEYS = [
     "experiment", "paper_section", "description", "model", "config",
     "dataset", "slice", "n", "judge", "command", "code_commit", "generated_utc",
 ]
+
+
+def meta_path(csv_path):
+    """Sidecar path for a given result CSV: foo.csv -> foo.csv.meta.json."""
+    return csv_path + META_SUFFIX
 
 
 def _git_commit():
@@ -41,65 +46,69 @@ def _git_commit():
 
 
 def write_results(df, path, meta):
-    """Write `df` to `path` with a leading '#'-comment metadata header.
+    """Write a pristine CSV at `path` and its metadata sidecar at `path + '.meta.json'`.
 
-    `meta` is a dict of key -> value. `code_commit` and `generated_utc` are auto-filled
-    if absent. Values are stringified; newlines in values are collapsed to spaces.
+    `code_commit` and `generated_utc` auto-fill if absent. Both files must be committed
+    together (and share a manifest row in results/README.md).
     """
     meta = dict(meta)
     meta.setdefault("code_commit", _git_commit())
-    meta.setdefault("generated_utc", datetime.datetime.now(datetime.timezone.utc)
-                    .isoformat(timespec="seconds"))
-    header = "".join(
-        f"{COMMENT} {k}: {str(v).replace(chr(10), ' ').strip()}\n" for k, v in meta.items()
-    )
-    with open(path, "w", newline="", encoding="utf-8") as f:
-        f.write(header)
-        df.to_csv(f, index=False, lineterminator="\n")
+    meta.setdefault("generated_utc",
+                    datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
+    meta.setdefault("data_file", os.path.basename(path))
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    df.to_csv(path, index=False)                     # standard CSV, nothing prepended
+    with open(meta_path(path), "w", encoding="utf-8") as f:
+        json.dump(meta, f, indent=2, ensure_ascii=False)
 
 
 def load_results(path, return_meta=False):
-    """Read a result CSV written by `write_results` (or a plain CSV with no header block).
+    """Read a result CSV (plain `pd.read_csv`) and, if present, its `.meta.json` sidecar.
 
-    Strips only the LEADING '#'-comment lines, so '#' inside the data is preserved.
-    Returns a DataFrame, or (DataFrame, meta_dict) if return_meta=True.
+    Returns a DataFrame, or (DataFrame, meta_dict) if return_meta=True. `meta` is {} when
+    no sidecar exists.
     """
-    with open(path, encoding="utf-8") as f:
-        raw = f.readlines()
-    meta, i = {}, 0
-    while i < len(raw) and raw[i].lstrip().startswith(COMMENT):
-        body = raw[i].lstrip()[len(COMMENT):].strip()
-        if ":" in body:
-            k, v = body.split(":", 1)
-            meta[k.strip()] = v.strip()
-        i += 1
-    df = pd.read_csv(io.StringIO("".join(raw[i:])))
-    return (df, meta) if return_meta else df
+    df = pd.read_csv(path)
+    if not return_meta:
+        return df
+    mp = meta_path(path)
+    meta = {}
+    if os.path.exists(mp):
+        with open(mp, encoding="utf-8") as f:
+            meta = json.load(f)
+    return df, meta
 
 
 def read_meta(path):
-    """Return just the metadata dict from a file's header block."""
-    return load_results(path, return_meta=True)[1]
+    """Return just the metadata dict for a result CSV (from its sidecar), or {} if none."""
+    mp = meta_path(path)
+    if os.path.exists(mp):
+        with open(mp, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
 
 
 if __name__ == "__main__":
     # round-trip self-test, deliberately with '#' inside the data
-    import os, tempfile
+    import tempfile
     df = pd.DataFrame({"index": [50, 58], "question": ["Which tooth?", "caries?"],
                        "option1": ["#44", "#45"], "answer": ["A", "D"], "correct": [True, False]})
     meta = {"experiment": "E-selftest", "paper_section": "§5.4",
-            "description": "round-trip demo", "model": "gemini-3.5-flash",
+            "description": "sidecar round-trip demo", "model": "gemini-3.5-flash",
             "config": "direct k=3 think-off", "dataset": "clean-shuffled",
             "slice": "idx50-149", "n": 2,
             "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 3"}
     p = os.path.join(tempfile.gettempdir(), "results_io_selftest.csv")
     write_results(df, p, meta)
-    print("--- file on disk ---")
+    print("--- CSV on disk (pristine, no comment lines) ---")
     print(open(p).read())
-    back, m = load_results(p, return_meta=True)
-    print("--- data survived (note '#44' intact) ---")
-    print(back.to_string(index=False))
-    assert list(back["option1"]) == ["#44", "#45"], "‼ '#' in data was corrupted"
-    assert m["experiment"] == "E-selftest" and m["n"] == "2"
+    print("--- sidecar", os.path.basename(meta_path(p)), "---")
+    print(open(meta_path(p)).read())
+    # the CSV must be readable by *plain* pandas with no special args
+    plain = pd.read_csv(p)
+    assert list(plain["option1"]) == ["#44", "#45"], "‼ data changed"
+    df2, m = load_results(p, return_meta=True)
+    assert list(df2["option1"]) == ["#44", "#45"]
+    assert m["experiment"] == "E-selftest" and m["n"] == 2
     assert "code_commit" in m and "generated_utc" in m
-    print("\nOK: metadata parsed, '#'-in-data preserved, auto fields present.")
+    print("OK: pristine CSV reads with plain pd.read_csv; '#44' intact; sidecar metadata parsed.")
