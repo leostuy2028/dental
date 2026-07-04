@@ -26,6 +26,7 @@ is regenerable by running committed code against committed raw outputs.
 |---|---|---|---|
 | **§5.1** whole/clean/blank table + two-proportion z-test | `paper_analysis/blank_split.py` | `results/closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv` | `_generated/blank_split_table.md`, `_generated/blank_split.values.json` |
 | **§5.2** faithful-vs-coax prompt table + McNemar (clean 453) | `paper_analysis/prompt_axis.py` | `results/closed_ended/prompt_axis/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv` + the E0-repro faithful CSV | `_generated/prompt_axis_table.md`, `_generated/prompt_axis.values.json` |
+| **§5.3.1** answer-key distribution table (dataset-derived, not model outputs) | `paper_analysis/key_skew.py` | `data/closed_ended_clean.parquet` (+ complete, clean-shuffled) | `_generated/key_skew_table.md`, `_generated/key_skew.values.json` |
 | **§6 (F8)** closed-vs-open landscape figure | *(to migrate here: currently `dental_research/figures/make_closed_vs_open.py`)* | paper leaderboard + our open-ended runs | `figures/closed_vs_open.png` |
 
 *(Rows are added as each table/figure is built. Pending paper tables/figures — the §5.2

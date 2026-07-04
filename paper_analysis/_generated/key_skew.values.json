@@ -1,0 +1,61 @@
+{
+  "complete": {
+    "n": 491,
+    "count": {
+      "A": 59,
+      "B": 216,
+      "C": 122,
+      "D": 94
+    },
+    "share": {
+      "A": 12.0,
+      "B": 44.0,
+      "C": 24.8,
+      "D": 19.1
+    },
+    "always_best_letter": "B",
+    "always_best_pct": 44.0
+  },
+  "clean": {
+    "n": 453,
+    "count": {
+      "A": 57,
+      "B": 211,
+      "C": 119,
+      "D": 66
+    },
+    "share": {
+      "A": 12.6,
+      "B": 46.6,
+      "C": 26.3,
+      "D": 14.6
+    },
+    "always_best_letter": "B",
+    "always_best_pct": 46.6
+  },
+  "clean_shuffled": {
+    "n": 453,
+    "count": {
+      "A": 113,
+      "B": 111,
+      "C": 125,
+      "D": 104
+    },
+    "share": {
+      "A": 24.9,
+      "B": 24.5,
+      "C": 27.6,
+      "D": 23.0
+    },
+    "always_best_letter": "C",
+    "always_best_pct": 27.6
+  },
+  "_generator": "paper_analysis/key_skew.py",
+  "_source": [
+    "data/closed_ended.parquet",
+    "data/closed_ended_clean.parquet",
+    "data/closed_ended_clean_shuffled.parquet"
+  ],
+  "_note": "dataset-derived (answer key), not model outputs",
+  "_generated_utc": "2026-07-04T16:46:32+00:00"
+}
