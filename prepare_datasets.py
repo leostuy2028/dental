@@ -16,6 +16,19 @@ Run from the repo root:  python prepare_datasets.py
 import random
 import pandas as pd
 
+# ---------------------------------------------------------------------------
+# DATA PROVENANCE (recorded 2026-07-04)
+# Source: HuggingFace dataset  OralGPT/MMOral-OPG-Bench  (MIT-licensed)
+#   https://huggingface.co/datasets/OralGPT/MMOral-OPG-Bench
+# `closed_ended.parquet` and `open_ended.parquet` were built from that dataset via
+# `datasets.load_dataset` (download cached at data/OralGPT___mm_oral-opg-bench).
+# Because HuggingFace may not host it forever, the two large ORIGINAL parquets are committed
+# to this repo via **Git LFS** (see .gitattributes), so the original, unshuffled data is
+# preserved alongside the code and does not depend on the dataset staying online.
+# The derived sets written below (clean / clean-shuffled) are committed as normal git blobs
+# and are fully regenerable by running this script against closed_ended.parquet.
+# ---------------------------------------------------------------------------
+
 SRC = "data/closed_ended.parquet"
 CLEAN = "data/closed_ended_clean.parquet"
 CLEAN_SHUF = "data/closed_ended_clean_shuffled.parquet"

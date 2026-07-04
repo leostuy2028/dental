@@ -1,5 +1,13 @@
 .*
-data/
+!.gitattributes
+
+# Data parquets ARE committed for provenance/reproducibility (HuggingFace may not persist
+# the source forever). The two large source files (closed_ended, open_ended) are stored via
+# Git LFS (see .gitattributes); the derived clean/shuffled sets go as normal git blobs.
+# The HuggingFace download cache dir (data/OralGPT___mm_oral-opg-bench) stays ignored.
+data/*
+!data/*.parquet
+
 __pycache__/
 *.pyc
 *.log
