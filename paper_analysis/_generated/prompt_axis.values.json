@@ -16,10 +16,20 @@
   "mcnemar_faithful_right": 38,
   "mcnemar_chi2": 14.25,
   "mcnemar_p": 0.00016042158214619117,
+  "whole491": {
+    "n": 491,
+    "faithful_acc": 41.8,
+    "coax_acc": 50.9,
+    "lift": 9.1,
+    "mcnemar_coax_right": 84,
+    "mcnemar_faithful_right": 39,
+    "mcnemar_chi2": 15.74,
+    "mcnemar_p": 7.267732419949003e-05
+  },
   "_generator": "paper_analysis/prompt_axis.py",
   "_source_csv": [
     "results/closed_ended/prompt_axis/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
     "results/closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv"
   ],
-  "_generated_utc": "2026-07-04T16:32:43+00:00"
+  "_generated_utc": "2026-07-04T17:00:21+00:00"
 }

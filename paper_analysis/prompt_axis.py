@@ -47,9 +47,9 @@ def main():
     coax = pd.read_csv(os.path.join(REPO, *COAX_CSV.split("/")))
     repro = pd.read_csv(os.path.join(REPO, *FAITHFUL_CSV.split("/")))
     faith = (repro[["index", "correct"]].rename(columns={"correct": "faith"}))
-    m = (coax[["index", "correct", "refused"]].rename(columns={"correct": "coax"})
-         .merge(faith, on="index"))
-    m = m[~m["index"].isin(BLANK_OPTION)]  # clean 453 only
+    full = (coax[["index", "correct", "refused"]].rename(columns={"correct": "coax"})
+            .merge(faith, on="index"))
+    m = full[~full["index"].isin(BLANK_OPTION)]  # clean 453 (primary, for the §5.2 table)
 
     n = len(m)
     kf, kc = int(m["faith"].sum()), int(m["coax"].sum())
@@ -60,12 +60,25 @@ def main():
     chi2 = (abs(b - c) - 1) ** 2 / (b + c) if (b + c) > 0 else 0.0
     p = math.erfc(math.sqrt(chi2 / 2)) if chi2 > 0 else 1.0
 
+    # whole 491 too (robustness check: is the gain a clean-subset artifact?)
+    nw = len(full)
+    kfw, kcw = int(full["faith"].sum()), int(full["coax"].sum())
+    faw, caw = round(100 * kfw / nw, 1), round(100 * kcw / nw, 1)
+    bw = int((~full["faith"] & full["coax"]).sum())
+    cw = int((full["faith"] & ~full["coax"]).sum())
+    chiw = (abs(bw - cw) - 1) ** 2 / (bw + cw) if (bw + cw) > 0 else 0.0
+    pw = math.erfc(math.sqrt(chiw / 2)) if chiw > 0 else 1.0
+
     vals = {
         "n_clean": n, "faithful_acc": fa, "faithful_ci": fci,
         "coax_acc": ca, "coax_ci": cci, "lift": round(ca - fa, 1),
         "coax_refusal_pct": round(m["refused"].mean() * 100, 1),
         "mcnemar_coax_right": b, "mcnemar_faithful_right": c,
         "mcnemar_chi2": round(chi2, 2), "mcnemar_p": p,
+        "whole491": {"n": nw, "faithful_acc": faw, "coax_acc": caw,
+                     "lift": round(caw - faw, 1), "mcnemar_coax_right": bw,
+                     "mcnemar_faithful_right": cw, "mcnemar_chi2": round(chiw, 2),
+                     "mcnemar_p": pw},
         "_generator": "paper_analysis/prompt_axis.py",
         "_source_csv": [COAX_CSV, FAITHFUL_CSV],
         "_generated_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
@@ -88,8 +101,10 @@ def main():
         json.dump(vals, f, indent=2)
 
     print(table)
-    print(f"lift {vals['lift']:+} pts; McNemar coax-right={b}, faithful-right={c}, "
+    print(f"clean 453: lift {vals['lift']:+} pts; McNemar coax-right={b}, faithful-right={c}, "
           f"chi2={chi2:.2f}, p={p:.2e}; coax refusals {vals['coax_refusal_pct']}%")
+    print(f"whole 491: faithful {faw}% -> coax {caw}% (lift {caw-faw:+}); "
+          f"McNemar chi2={chiw:.2f}, p={pw:.2e}")
     print(f"\nwrote {OUT_DIR}/prompt_axis_table.md and prompt_axis.values.json")
 
 
