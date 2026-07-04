@@ -1,8 +1,8 @@
 import os
 import pandas as pd
-from data_loader import load_closed
+from dataio.data_loader import load_closed
 from prompts.claude import build_prompt
-from claude_client import call
+from clients.claude_client import call
 
 RESULTS_PATH = "results/closed_results.csv"
 

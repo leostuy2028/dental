@@ -2,9 +2,9 @@ import os
 import random
 import argparse
 import pandas as pd
-from data_loader import load_closed
+from dataio.data_loader import load_closed
 from prompts.gemini import build_prompt
-import gemini_client
+from clients import gemini_client
 
 POOL_SIZE = 50
 

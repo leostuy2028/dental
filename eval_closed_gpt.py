@@ -17,9 +17,9 @@ import argparse
 import pandas as pd
 
 from prompts.gpt import build_prompt
-import gpt_client
-from vlmeval_parse import faithful_predict
-import results_io
+from clients import gpt_client
+from utils.vlmeval_parse import faithful_predict
+from utils import results_io
 
 POOL_SIZE = 50
 

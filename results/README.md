@@ -40,7 +40,7 @@ stays pristine** (no comment lines) — it opens correctly in plain `pd.read_csv
 grep, with no chance of confusing metadata with the data (which contains `#`, e.g. `#44`).
 
 Write with `results_io.write_results(df, path, meta)`; read with
-`results_io.load_results(path, return_meta=True)` (repo root, `results_io.py`). Example sidecar:
+`results_io.load_results(path, return_meta=True)` (code repo, `utils/results_io.py`). Example sidecar:
 
 ```json
 {

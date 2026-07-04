@@ -15,7 +15,7 @@ report the completion rate to confirm the truncation bug is gone.
 import pandas as pd
 from pathlib import Path
 
-from data_loader import decode_image
+from dataio.data_loader import decode_image
 from eval_open.answerer import answer_question, INFERENCE_PROMPT
 from eval_open.judges import grade
 from eval_open.rubrics import build_grading_prompt

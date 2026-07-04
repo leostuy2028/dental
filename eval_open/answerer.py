@@ -109,7 +109,7 @@ if __name__ == "__main__":
         s = str(a).strip()
         return (s.startswith("[") or s.startswith("{")) and ("box_2d" in s or "point_2d" in s)
 
-    from data_loader import decode_image
+    from dataio.data_loader import decode_image
     df = pd.read_parquet("data/open_ended.parquet")
     row = df[df["answer"].apply(is_coord)].iloc[0]
     img = decode_image(row["image"])
