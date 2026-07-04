@@ -1,0 +1,18 @@
+{
+  "experiment": "E-prompt-axis",
+  "paper_section": "§5.1-adjacent",
+  "description": "Coax vs faithful prompt lift for GPT-4o on 100 clean items (idx50-149), detail=high; paired vs E0-repro faithful",
+  "model": "gpt-4o-2024-11-20",
+  "config": "coax direct k=0",
+  "dataset": "closed_ended_clean.parquet",
+  "image_detail": "high",
+  "gen_settings": "temperature=0 max_tokens=8192",
+  "n": 100,
+  "accuracy_pct": 45.0,
+  "refusal_pct": 0.0,
+  "random_fallback_pct": 0.0,
+  "command": "python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt coax --detail high --data data/closed_ended_clean.parquet --start 50 --limit 100 --exp E-prompt-axis --paper-section §5.1-adjacent --description Coax vs faithful prompt lift for GPT-4o on 100 clean items (idx50-149), detail=high; paired vs E0-repro faithful --out results/closed_ended/prompt_axis/gpt-4o-2024-11-20__coax-direct-k0__clean__idx50-149.csv",
+  "code_commit": "03cf150",
+  "generated_utc": "2026-07-04T15:59:37+00:00",
+  "data_file": "gpt-4o-2024-11-20__coax-direct-k0__clean__idx50-149.csv"
+}

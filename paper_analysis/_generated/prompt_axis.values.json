@@ -1,0 +1,25 @@
+{
+  "n_clean": 453,
+  "faithful_acc": 44.4,
+  "faithful_ci": [
+    39.9,
+    49.0
+  ],
+  "coax_acc": 53.6,
+  "coax_ci": [
+    49.0,
+    58.2
+  ],
+  "lift": 9.2,
+  "coax_refusal_pct": 0.0,
+  "mcnemar_coax_right": 80,
+  "mcnemar_faithful_right": 38,
+  "mcnemar_chi2": 14.25,
+  "mcnemar_p": 0.00016042158214619117,
+  "_generator": "paper_analysis/prompt_axis.py",
+  "_source_csv": [
+    "results/closed_ended/prompt_axis/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
+    "results/closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv"
+  ],
+  "_generated_utc": "2026-07-04T16:32:43+00:00"
+}

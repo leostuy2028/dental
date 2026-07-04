@@ -20,3 +20,6 @@ results/progress.txt
 # transient run artifacts
 results/progress_gpt.txt
 results/closed_ended/reproduction/repro.pid
+
+results/closed_ended/prompt_axis/*.log
+results/closed_ended/prompt_axis/coax.pid

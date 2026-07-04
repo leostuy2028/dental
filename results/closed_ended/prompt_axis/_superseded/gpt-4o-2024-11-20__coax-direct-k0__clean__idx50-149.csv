@@ -1,0 +1,101 @@
+index,file_name,category,question,answer,predicted,raw_response,correct,refused,used_fallback,n_examples,prompt_mode
+54,016693.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,B,C,C,False,False,False,0,coax
+55,016693.jpg,"Teeth,Patho,SumRec",Which tooth requires monitoring for suspicious caries?,B,B,B,True,False,False,0,coax
+56,016693.jpg,"Teeth,Jaw",In which jaw is the missing tooth region detected?,B,A,A,False,False,False,0,coax
+57,016694.jpg,"HisT,Jaw",Which structures are visible in the radiograph?,C,C,C,True,False,False,0,coax
+59,016694.jpg,Teeth,How many teeth are visualized in the radiograph?,B,C,C,False,False,False,0,coax
+60,016694.jpg,"Teeth,Patho",Which tooth has a periapical lesion?,B,B,B,True,False,False,0,coax
+61,016694.jpg,Jaw,Is there apparent bone loss in the jaw?,A,B,B,False,False,False,0,coax
+62,016708.jpg,"Teeth,HisT",Which tooth shows evidence of a crown restoration and root canal treatment?,B,C,C,False,False,False,0,coax
+63,016708.jpg,"Teeth,HisT",Which tooth is described as having an implant restoration?,B,B,B,True,False,False,0,coax
+64,016708.jpg,"Teeth,Patho",Which tooth is suspected to have a periapical granuloma?,A,C,C,False,False,False,0,coax
+65,016708.jpg,"Patho,Jaw",Which of the following is a finding in the maxillary sinuses?,B,B,B,True,False,False,0,coax
+66,016708.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,A,B,B,False,False,False,0,coax
+67,016712.jpg,"Teeth,Jaw",What is the status of bone loss in the jaw according to the report?,C,C,C,True,False,False,0,coax
+68,016712.jpg,SumRec,Which of the following is a preventive measure recommended in the report?,A,A,A,True,False,False,0,coax
+69,016712.jpg,"HisT,Jaw",Which structures are visible in the radiograph?,D,D,D,True,False,False,0,coax
+70,016712.jpg,"Teeth,SumRec",What is the priority concern regarding tooth 37?,C,C,C,True,False,False,0,coax
+71,016712.jpg,"Teeth,HisT",Which of the following teeth has a crown restoration with underlying root canal treatment?,C,C,C,True,False,False,0,coax
+72,016713.jpg,"Patho,Jaw",Which of the following is NOT a finding in the jaw-specific observations?,C,D,D,False,False,False,0,coax
+74,016713.jpg,Teeth,Which of the following wisdom teeth is suspicious for impaction?,C,C,C,True,False,False,0,coax
+75,016713.jpg,"Teeth,HisT",Which tooth has a crown restoration?,D,B,B,False,False,False,0,coax
+76,016713.jpg,Teeth,How many teeth are visualized in the radiograph?,B,B,B,True,False,False,0,coax
+78,016723.jpg,"Teeth,HisT",Which tooth shows signs of root canal treatment?,D,C,C,False,False,False,0,coax
+79,016723.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,B,B,B,True,False,False,0,coax
+80,016723.jpg,Jaw,What is noted regarding the bone architecture?,B,B,B,True,False,False,0,coax
+81,016723.jpg,Jaw,What is observed in the maxillary sinuses?,B,B,B,True,False,False,0,coax
+82,016726.jpg,Teeth,Which of the following teeth are impacted wisdom teeth according to the report?,B,C,C,False,False,False,0,coax
+83,016726.jpg,"Teeth,Patho",Which tooth is suspicious for deep caries?,B,B,B,True,False,False,0,coax
+84,016726.jpg,"Teeth,Jaw",What is the status of bone architecture in the jaw?,C,C,C,True,False,False,0,coax
+85,016726.jpg,HisT,What type of dental restoration is found on tooth 25?,C,D,D,False,False,False,0,coax
+86,016726.jpg,HisT,Can you identify the dental treatment present on tooth 15?,C,B,B,False,False,False,0,coax
+88,016744.jpg,SumRec,What should be monitored for potential complications?,B,B,B,True,False,False,0,coax
+89,016744.jpg,Jaw,In which jaw is there evidence of bone loss?,D,C,C,False,False,False,0,coax
+90,016744.jpg,Teeth,How many teeth were visualized in the panoramic radiograph?,B,B,B,True,False,False,0,coax
+92,016769.jpg,"Teeth,HisT",Which of the following teeth has signs of a root canal treatment?,D,C,C,False,False,False,0,coax
+93,016769.jpg,Teeth,Which of the following teeth is identified as a wisdom tooth?,B,B,B,True,False,False,0,coax
+94,016769.jpg,Teeth,How many teeth were visualized in the panoramic radiograph?,A,B,B,False,False,False,0,coax
+95,016769.jpg,Jaw,What is the radiographic feature of the maxillary sinus?,A,A,A,True,False,False,0,coax
+96,016783.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,B,B,B,True,False,False,0,coax
+97,016783.jpg,Teeth,What is the status of the wisdom teeth in the radiograph?,B,C,C,False,False,False,0,coax
+98,016783.jpg,Jaw,Is there any apparent bone loss in the radiograph?,C,B,B,False,False,False,0,coax
+99,016783.jpg,"HisT,Jaw",What structures are visible in the jaw?,A,A,A,True,False,False,0,coax
+100,016783.jpg,Patho,How many teeth show periapical lesions in this panoramic X-ray?,C,C,C,True,False,False,0,coax
+101,016790.jpg,"Teeth,HisT",Which tooth has both a crown restoration and root canal treatment?,B,A,A,False,False,False,0,coax
+102,016790.jpg,"Teeth,Patho",Which of the following is a tooth with suspicious caries?,D,B,B,False,False,False,0,coax
+103,016790.jpg,"Teeth,HisT",Which tooth does have a filling?,C,C,C,True,False,False,0,coax
+104,016790.jpg,Teeth,Which tooth is erupted among the wisdom teeth?,D,C,C,False,False,False,0,coax
+106,016792.jpg,"Teeth,Patho",Which tooth is suspicious for caries and deep caries?,C,B,B,False,False,False,0,coax
+107,016792.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,B,B,False,False,False,0,coax
+108,016792.jpg,"Teeth,HisT",Which tooth has signs of both a filling and root canal treatment?,D,B,B,False,False,False,0,coax
+109,016792.jpg,"HisT,Jaw",Which of the following is a visible structure in the imaging?,C,C,C,True,False,False,0,coax
+110,016792.jpg,Jaw,"Can you identify the structure within the bounding box [1377, 36, 1784, 460]?",C,D,D,False,False,False,0,coax
+111,016807.jpg,Jaw,Is there apparent bone loss in the jaw?,B,A,A,False,False,False,0,coax
+112,016807.jpg,"Teeth,HisT",Which tooth site has a dental implant present?,B,C,C,False,False,False,0,coax
+115,016807.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,B,B,B,True,False,False,0,coax
+117,016808.jpg,"HisT,Jaw",Which structures are visible in the imaging?,A,A,A,True,False,False,0,coax
+118,016808.jpg,HisT,Which of the following historical interventions is NOT detected?,D,D,D,True,False,False,0,coax
+119,016808.jpg,Jaw,What is observed regarding the bone architecture?,B,C,C,False,False,False,0,coax
+120,016808.jpg,"Teeth,SumRec",What is the priority concern for tooth 38?,C,D,D,False,False,False,0,coax
+121,016821.jpg,"Teeth,HisT",Which tooth has an implant?,C,B,B,False,False,False,0,coax
+122,016821.jpg,Teeth,Which tooth is erupted as a wisdom tooth?,A,C,C,False,False,False,0,coax
+123,016821.jpg,"Teeth,HisT",How many teeth have signs of crowns?,B,B,B,True,False,False,0,coax
+124,016821.jpg,"Teeth,Patho",Which tooth has signs of a periapical granuloma?,B,C,C,False,False,False,0,coax
+126,016823.jpg,"Teeth,Patho",Which tooth is suspected to have an impacted wisdom tooth?,D,C,C,False,False,False,0,coax
+127,016823.jpg,"Teeth,HisT",How many teeth are observed with crowns?,C,B,B,False,False,False,0,coax
+128,016823.jpg,"Teeth,SumRec",Which tooth requires endodontic evaluation?,B,C,C,False,False,False,0,coax
+129,016823.jpg,"Patho,SumRec",What is recommended for interproximal caries detection?,B,B,B,True,False,False,0,coax
+130,016823.jpg,"HisT,Jaw",Which structures are visible in the radiograph?,C,C,C,True,False,False,0,coax
+131,016825.jpg,"Teeth,Jaw",In which jaw are missing teeth regions detected?,B,C,C,False,False,False,0,coax
+132,016825.jpg,Teeth,Which wisdom tooth is erupted according to the report?,A,B,B,False,False,False,0,coax
+133,016825.jpg,"Teeth,Patho",Which tooth exhibits a periapical granuloma?,A,C,C,False,False,False,0,coax
+134,016825.jpg,Jaw,In which jaw is bone loss observed?,D,C,C,False,False,False,0,coax
+135,016825.jpg,"Teeth,Patho",Which tooth is suspected to have deep caries?,D,C,C,False,False,False,0,coax
+136,016826.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,A,C,C,False,False,False,0,coax
+137,016826.jpg,"Teeth,HisT",Which tooth has a crown and root canal treatment?,A,C,C,False,False,False,0,coax
+138,016826.jpg,Teeth,Which tooth is impacted?,A,C,C,False,False,False,0,coax
+139,016826.jpg,Jaw,What is observed in the jawbone?,C,C,C,True,False,False,0,coax
+140,016826.jpg,Teeth,"Can you identify the object within the bounding box [1749, 638, 1885, 827]?",D,C,C,False,False,False,0,coax
+141,016829.jpg,"Teeth,HisT",Which tooth has a filling and root canal treatment?,B,C,C,False,False,False,0,coax
+142,016829.jpg,"Teeth,Patho",Which tooth has a periapical lesion (likely abscess)?,C,C,C,True,False,False,0,coax
+143,016829.jpg,"HisT,Jaw",Is there any apparent bone loss visible in the radiograph?,A,C,C,False,False,False,0,coax
+144,016829.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,A,C,C,False,False,False,0,coax
+145,016829.jpg,"Teeth,Patho",Which tooth exhibits a periapical lesion?,C,C,C,True,False,False,0,coax
+146,016836.jpg,Teeth,Which of the following is TRUE regarding the wisdom teeth?,B,C,C,False,False,False,0,coax
+147,016836.jpg,"HisT,Jaw",Which structure is visible bilaterally in the maxilla?,A,B,B,False,False,False,0,coax
+148,016836.jpg,Teeth,What procedure has been done on tooth 46?,C,C,C,True,False,False,0,coax
+149,016836.jpg,Jaw,What is observed in the upper jaw bone architecture?,B,D,D,False,False,False,0,coax
+150,016836.jpg,Teeth,How many teeth are visualized in the radiograph?,B,B,B,True,False,False,0,coax
+151,016839.jpg,"Teeth,HisT",Which of the following tooth site presents an implant?,A,B,B,False,False,False,0,coax
+152,016839.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,B,B,B,True,False,False,0,coax
+153,016839.jpg,"Teeth,HisT",Which tooth has a crown restoration?,B,B,B,True,False,False,0,coax
+154,016839.jpg,"Teeth,Patho",Which of the following teeth is suspected to have caries?,B,C,C,False,False,False,0,coax
+155,016839.jpg,"HisT,Jaw",Which of the following structures are visible in the imaging?,C,C,C,True,False,False,0,coax
+156,016855.jpg,Jaw,Where is the evidence of bone loss observed?,C,C,C,True,False,False,0,coax
+157,016855.jpg,"Teeth,HisT",What type of intervention is evident at tooth 26?,C,C,C,True,False,False,0,coax
+158,016855.jpg,Teeth,Which tooth is impacted?,D,C,C,False,False,False,0,coax
+159,016855.jpg,"Teeth,Patho",What is the pathological finding at tooth 26?,C,C,C,True,False,False,0,coax
+160,016855.jpg,Teeth,How many wisdom teeth are erupted according to the report?,B,B,B,True,False,False,0,coax
+161,016874.jpg,Teeth,How many wisdom teeth are erupted according to the report?,B,C,C,False,False,False,0,coax
+163,016874.jpg,"Teeth,HisT",Which tooth has undergone root canal treatment?,B,B,B,True,False,False,0,coax
+164,016874.jpg,Jaw,What is observed in the upper jawbone?,A,B,B,False,False,False,0,coax

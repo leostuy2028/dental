@@ -11,10 +11,11 @@ below, added in the same session the file is produced.** (Convention: RESEARCH_P
 results/
   closed_ended/
     blank_answer/    # §5.1  blank-answer artifact + reasoning-tax re-scores
-    position_bias/   # §5.2  key-skew, susceptibility grid, shuffle delta, corrected set
-    cot_length/      # §5.3  reasoning-length sweep      (E-cot-length)
-    nshot/           # §5.4  few-shot accuracy sweep     (E-nshot)
-    no_image/        # §5.5  no-image / language-prior control (E3)
+    prompt_axis/     # §5.2  faithful vs coax prompt comparison (E-prompt-axis)
+    position_bias/   # §5.3  key-skew, susceptibility grid, shuffle delta, corrected set
+    cot_length/      # §5.4  reasoning-length sweep      (E-cot-length)
+    nshot/           # §5.5  few-shot accuracy sweep     (E-nshot)
+    no_image/        # §5.6  no-image / language-prior control (E3)
   open_ended/
     grader_audit/    # §6.1  grader-prompt analysis
     frontier/        # §6.2  answerer runs, judge comparison, reproduction (E9/E10)
@@ -64,10 +65,13 @@ manifest is the searchable index across all files.
 | Path | Experiment (E#) | Paper § | Model | Config | Dataset | n | Date | Command |
 |------|-----------------|---------|-------|--------|---------|---|------|---------|
 | `closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv` | E0-repro | §2/§5.1 | gpt-4o-2024-11-20 | faithful (VLMEvalKit verbatim prompt+parser), direct, k=0, img_detail=high, max_tokens=8192, temp=0, no resize/system; OpenAI-direct | whole (491) | 491 | 2026-07-04 | `python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt faithful --detail high --data data/closed_ended.parquet --start 0` |
+| `closed_ended/prompt_axis/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv` | E-prompt-axis | §5.2 | gpt-4o-2024-11-20 | **coax** (persona + commit-to-one-letter, strict parse), direct, k=0, img_detail=high, temp=0; OpenAI-direct | whole (491) | 491 | 2026-07-04 | `python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt coax --detail high --data data/closed_ended.parquet --start 0` |
 
 **E0-repro result:** 41.8% [95% CI 37.5–46.2] — reproduces the paper's GPT-4o closed-ended **45.40%** within CI. Real rows 44.2% (n=459), blank rows 6.2% (n=32). Only paper API model still callable; residual vs 45.40 = third-party proxy + model drift. Full write-up: `RESEARCH_PLAN §5.6` ledger + `PAPER_DRAFT §4`.
 
 **Derived analysis E4/D1 (no API):** `paper_analysis/blank_split.py` re-scores the E0-repro CSV (its raw `raw_response` outputs) into the §5.1 whole-vs-clean table: whole (491) 41.8% [37.5–46.2], clean (453) 44.4% [39.9–49.0], the 32 unanswerable items 6.2% [1.7–20.1]; two-proportion z (clean vs blank) = 4.22, p = 2.4e-05. Run `python paper_analysis/blank_split.py` to regenerate `paper_analysis/_generated/blank_split_table.md` + `.values.json`. **Rule (§1.0 rule 7): every paper table/figure has a committed generator in `paper_analysis/`; every number regenerable from a raw-output CSV — no API calls, no hand-typed figures.**
+
+**E-prompt-axis (§5.2):** faithful vs coax prompt for GPT-4o on the clean 453 (paired). faithful **44.4% [39.9–49.0]**, coax **53.6% [49.0–58.2]**, lift **+9.2 pts**, McNemar p **1.6e-04** (coax-right 80 / faithful-right 38); coax refusals 0%. Generator `paper_analysis/prompt_axis.py` → `_generated/prompt_axis_table.md`. Paper adopts coax going forward.
 
 _Pilots under `results/_pilot/` are exploratory (prompt-mode + image-detail sweeps) and are intentionally NOT ledgered._
 

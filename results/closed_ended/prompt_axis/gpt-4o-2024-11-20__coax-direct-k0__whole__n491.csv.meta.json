@@ -1,0 +1,18 @@
+{
+  "experiment": "E-prompt-axis",
+  "paper_section": "§5.1-adjacent",
+  "description": "Coax prompt on whole 491 (detail=high, temp=0) — full paired counterpart to E0-repro faithful; measures prompt lift for GPT-4o",
+  "model": "gpt-4o-2024-11-20",
+  "config": "coax direct k=0",
+  "dataset": "closed_ended.parquet",
+  "image_detail": "high",
+  "gen_settings": "temperature=0 max_tokens=8192",
+  "n": 491,
+  "accuracy_pct": 50.92,
+  "refusal_pct": 0.0,
+  "random_fallback_pct": 0.0,
+  "command": "python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt coax --detail high --data data/closed_ended.parquet --start 0 --exp E-prompt-axis --paper-section §5.1-adjacent --description Coax prompt on whole 491 (detail=high, temp=0) — full paired counterpart to E0-repro faithful; measures prompt lift for GPT-4o --out results/closed_ended/prompt_axis/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
+  "code_commit": "03cf150",
+  "generated_utc": "2026-07-04T16:30:03+00:00",
+  "data_file": "gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
+}
