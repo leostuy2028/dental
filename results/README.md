@@ -67,6 +67,8 @@ manifest is the searchable index across all files.
 
 **E0-repro result:** 41.8% [95% CI 37.5–46.2] — reproduces the paper's GPT-4o closed-ended **45.40%** within CI. Real rows 44.2% (n=459), blank rows 6.2% (n=32). Only paper API model still callable; residual vs 45.40 = third-party proxy + model drift. Full write-up: `RESEARCH_PLAN §5.6` ledger + `PAPER_DRAFT §4`.
 
+**Derived analysis E4/D1 (no API):** `paper_analysis/blank_split.py` re-scores the E0-repro CSV (its raw `raw_response` outputs) into the §5.1 whole-vs-clean table: whole (491) 41.8% [37.5–46.2], clean (453) 44.4% [39.9–49.0], the 32 unanswerable items 6.2% [1.7–20.1]; two-proportion z (clean vs blank) = 4.22, p = 2.4e-05. Run `python paper_analysis/blank_split.py` to regenerate `paper_analysis/_generated/blank_split_table.md` + `.values.json`. **Rule (§1.0 rule 7): every paper table/figure has a committed generator in `paper_analysis/`; every number regenerable from a raw-output CSV — no API calls, no hand-typed figures.**
+
 _Pilots under `results/_pilot/` are exploratory (prompt-mode + image-detail sweeps) and are intentionally NOT ledgered._
 
 ## Quarantine

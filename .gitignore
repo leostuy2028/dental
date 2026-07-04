@@ -16,3 +16,7 @@ dental_research/
 RESEARCH_PLAN.md
 *RESEARCH_PLAN*
 results/progress.txt
+
+# transient run artifacts
+results/progress_gpt.txt
+results/closed_ended/reproduction/repro.pid
