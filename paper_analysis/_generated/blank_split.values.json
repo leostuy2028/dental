@@ -29,6 +29,6 @@
   "clean_vs_blank_z": 4.22,
   "clean_vs_blank_p": 2.3937080042443513e-05,
   "_generator": "paper_analysis/blank_split.py",
-  "_source_csv": "results\\closed_ended\\reproduction\\gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
-  "_generated_utc": "2026-07-04T15:32:32+00:00"
+  "_source_csv": "results/closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
+  "_generated_utc": "2026-07-04T18:14:17+00:00"
 }
