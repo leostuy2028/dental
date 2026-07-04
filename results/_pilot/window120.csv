@@ -1,0 +1,277 @@
+index,file_name,category,question,answer,predicted,raw_response,correct,refused,used_fallback,n_examples,prompt_mode
+120,016808.jpg,"Teeth,SumRec",What is the priority concern for tooth 38?,C,D,"The image provided is a panoramic dental X-ray. Tooth 38 refers to the lower left third molar (wisdom tooth). Based on the X-ray, the most likely concern for tooth 38 appears to be **D. Deep caries**, as wisdom teeth are often prone to decay due to their position and difficulty in cleaning. 
+
+However, if there are no visible signs of decay but other abnormalities are present, further clinical evaluation would be necessary to confirm the diagnosis.",False,False,False,0,faithful
+121,016821.jpg,"Teeth,HisT",Which tooth has an implant?,C,A,"The image shows dental implants in the lower right quadrant of the jaw. Based on the standard tooth numbering system:
+
+- Tooth #44 is the first premolar.
+- Tooth #45 is the second premolar.
+- Tooth #46 is the first molar.
+- Tooth #48 is the third molar (wisdom tooth).
+
+The implants appear to be in the positions of **tooth #46** (first molar). 
+
+### Correct Answer: **C. #46**",False,False,False,0,faithful
+122,016821.jpg,Teeth,Which tooth is erupted as a wisdom tooth?,A,A,"The wisdom teeth are the third molars, which are located at the back of the mouth. In this panoramic X-ray:
+
+- Tooth #18 and #28 (upper left and upper right third molars) appear to be erupted.
+- Tooth #38 (lower left third molar) and #48 (lower right third molar) are not visible or are missing.
+
+The correct answer is:
+
+**A. #18 and #28**",True,False,False,0,faithful
+123,016821.jpg,"Teeth,HisT",How many teeth have signs of crowns?,B,A,"The X-ray shows **3 teeth with crowns** visible in the image. 
+
+The correct answer is:
+
+**A. 3**",False,False,False,0,faithful
+124,016821.jpg,"Teeth,Patho",Which tooth has signs of a periapical granuloma?,B,C,"The radiograph shows a periapical radiolucency around the root of tooth **#21**, which is indicative of a periapical granuloma.
+
+**Correct answer: C. #21**",False,False,False,0,faithful
+125,016821.jpg,Jaw,Which jaw shows signs of bone loss?,D,B,"**B. Lower jaw**
+
+The X-ray shows signs of bone loss in the lower jaw, particularly around the areas where dental implants are placed. Bone loss is evident as reduced bone density or height around the implants.",False,False,False,0,faithful
+126,016823.jpg,"Teeth,Patho",Which tooth is suspected to have an impacted wisdom tooth?,D,C,"The correct answer is:
+
+**C. #32**
+
+Explanation: In the provided panoramic X-ray, the lower right third molar (#32) appears to be impacted, as it is positioned at an angle and does not seem to have fully erupted into the dental arch.",False,False,False,0,faithful
+127,016823.jpg,"Teeth,HisT",How many teeth are observed with crowns?,C,B,"Based on the X-ray image, **6 teeth** appear to have crowns. 
+
+The correct answer is: **B. 6**",False,False,False,0,faithful
+128,016823.jpg,"Teeth,SumRec",Which tooth requires endodontic evaluation?,B,C,"Based on the provided panoramic radiograph, tooth #12 (option C) appears to have a radiolucency near the apex, which is indicative of potential pathology requiring endodontic evaluation. 
+
+Answer: **C. #12**",False,False,False,0,faithful
+129,016823.jpg,"Patho,SumRec",What is recommended for interproximal caries detection?,B,B,"The correct answer is:
+
+**B. Bitewing radiographs**
+
+Bitewing radiographs are specifically designed to detect interproximal caries (cavities between teeth) as they provide a clear view of the contact areas between teeth.",True,False,False,0,faithful
+130,016823.jpg,"HisT,Jaw",Which structures are visible in the radiograph?,C,C,"The radiograph provided is a panoramic dental X-ray, which typically shows both the **mandibular canals** (located in the lower jaw) and the **maxillary sinuses** (located in the upper jaw). 
+
+### Correct Answer: **C. Both mandibular canals and maxillary sinus**",True,False,False,0,faithful
+131,016825.jpg,"Teeth,Jaw",In which jaw are missing teeth regions detected?,B,C,"Based on the provided panoramic X-ray, missing teeth regions are detected in:
+
+**C. Both jaws**",False,False,False,0,faithful
+132,016825.jpg,Teeth,Which wisdom tooth is erupted according to the report?,A,C,"The wisdom tooth that is erupted in the provided X-ray is **#28**. 
+
+Correct answer: **C. #28**",False,False,False,0,faithful
+133,016825.jpg,"Teeth,Patho",Which tooth exhibits a periapical granuloma?,A,D,"The radiograph shows a radiolucent area at the apex of tooth **#47**, which is indicative of a periapical granuloma. 
+
+### Correct Answer: **D. #47**",False,False,False,0,faithful
+134,016825.jpg,Jaw,In which jaw is bone loss observed?,D,B,"The panoramic X-ray shows evidence of bone loss in the **lower jaw**, particularly around the molar regions where the bone level appears reduced compared to the normal height. 
+
+**Correct answer: B. Lower jaw**",False,False,False,0,faithful
+135,016825.jpg,"Teeth,Patho",Which tooth is suspected to have deep caries?,D,C,"The tooth suspected to have deep caries in this panoramic X-ray is **C. #37**. 
+
+This tooth appears to have a radiolucent area indicative of decay extending deep into the tooth structure.",False,False,False,0,faithful
+136,016826.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,A,A,"The radiograph shows a radiolucent area around the apex of tooth #46, which is indicative of a periapical abscess. 
+
+**Correct answer: A. #46**",True,False,False,0,faithful
+137,016826.jpg,"Teeth,HisT",Which tooth has a crown and root canal treatment?,A,B,"The tooth with a crown and root canal treatment in this panoramic X-ray is **B. #14**. 
+
+This tooth appears to have a radiopaque crown and evidence of root canal treatment (visible as a radiopaque filling material in the root canals).",False,False,False,0,faithful
+138,016826.jpg,Teeth,Which tooth is impacted?,A,D,"The correct answer is:
+
+**D. #48**
+
+Explanation: In the provided panoramic X-ray, tooth #48 (the lower right third molar) appears to be impacted, as it is not fully erupted and is positioned at an angle relative to the adjacent teeth.",False,False,False,0,faithful
+139,016826.jpg,Jaw,What is observed in the jawbone?,C,C,"Based on the provided X-ray image, there is no clear evidence of significant bone loss, fractures, or tumors. The jawbone appears to have a normal structure with no apparent abnormalities.
+
+**Correct answer: C. No apparent bone loss**",True,False,False,0,faithful
+140,016826.jpg,Teeth,"Can you identify the object within the bounding box [1749, 638, 1885, 827]?",D,C,"The bounding box [1749, 638, 1885, 827] corresponds to the area of tooth 38 in the panoramic X-ray. Based on the image, tooth 38 appears to be missing.
+
+The correct answer is:
+
+**C. Missing tooth on tooth 38**",False,False,False,0,faithful
+141,016829.jpg,"Teeth,HisT",Which tooth has a filling and root canal treatment?,B,D,"The tooth with a filling and root canal treatment is **D. Tooth 46**. 
+
+This is evident from the radiopaque material visible in the root canal system of the tooth, which is characteristic of root canal treatment.",False,False,False,0,faithful
+142,016829.jpg,"Teeth,Patho",Which tooth has a periapical lesion (likely abscess)?,C,B,"The periapical lesion, which is indicative of a likely abscess, appears to be associated with **Tooth 42**. 
+
+### Correct Answer: **B. Tooth 42**",False,False,False,0,faithful
+143,016829.jpg,"HisT,Jaw",Is there any apparent bone loss visible in the radiograph?,A,A,"**Answer: A. Yes, mild bone loss**
+
+Explanation: The radiograph shows some evidence of bone loss around the teeth, particularly in the posterior regions. However, it does not appear to be severe, as the bone levels are still relatively close to the normal range.",True,False,False,0,faithful
+144,016829.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,A,C,"The tooth with both a crown and root canal treatment in the provided X-ray is **Tooth 14**. 
+
+**Correct answer: C. Tooth 14**",False,False,False,0,faithful
+145,016829.jpg,"Teeth,Patho",Which tooth exhibits a periapical lesion?,C,B,"The periapical lesion is visible around **Tooth 42** in the radiograph. 
+
+Correct answer: **B. Tooth 42**",False,False,False,0,faithful
+146,016836.jpg,Teeth,Which of the following is TRUE regarding the wisdom teeth?,B,A,"To analyze the panoramic X-ray:
+
+- **#18**: This is the lower left third molar (wisdom tooth). It appears to be impacted, as it is not fully erupted and is positioned at an angle.
+- **#28**: This is the upper left third molar. It is not visible in the X-ray, suggesting it is either absent or impacted.
+- **#38**: This is the lower left third molar. It is visible and impacted, not missing.
+- **#48**: This is the lower right third molar. It is visible and impacted, not absent.
+
+### Correct Answer: **A. #18 is impacted**",False,False,False,0,faithful
+147,016836.jpg,"HisT,Jaw",Which structure is visible bilaterally in the maxilla?,A,B,"The correct answer is:
+
+**B. Maxillary sinuses**
+
+Explanation: In the provided panoramic radiograph, the maxillary sinuses are visible bilaterally in the maxilla. These are air-filled cavities located above the upper teeth and are commonly seen in such images.",False,False,False,0,faithful
+148,016836.jpg,Teeth,What procedure has been done on tooth 46?,C,C,"The X-ray shows that tooth 46 has a crown placed on it, which is visible as a radiopaque (bright) structure covering the tooth. Additionally, the root canals of tooth 46 appear to have been treated, as evidenced by the radiopaque filling material extending into the root canals.
+
+The correct answer is:
+
+**C. Crown and root canal treatment**",True,False,False,0,faithful
+149,016836.jpg,Jaw,What is observed in the upper jaw bone architecture?,B,D,"Based on the provided panoramic X-ray image, the upper jaw bone architecture appears to be intact without any obvious signs of increased density, bone loss, or fractures. Therefore, the most likely correct option is:
+
+**D. Normal architecture**",False,False,False,0,faithful
+150,016836.jpg,Teeth,How many teeth are visualized in the radiograph?,B,A,"The radiograph shows a full set of adult teeth, including third molars (wisdom teeth). A full adult dentition typically consists of 32 teeth, assuming no extractions or missing teeth.
+
+**Correct answer: B. 32**",False,False,False,0,faithful
+151,016839.jpg,"Teeth,HisT",Which of the following tooth site presents an implant?,A,B,"The implant is visible in the lower left quadrant of the image, corresponding to tooth site **#18**.
+
+**Correct answer: B. #18**",False,False,False,0,faithful
+152,016839.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,B,C,"In the provided panoramic radiograph, the total number of teeth visualized includes natural teeth, dental implants, and third molars (wisdom teeth). Upon careful observation:
+
+- The upper and lower jaws show a total of **30 teeth**, including the dental implant visible in the lower jaw.
+
+Thus, the correct answer is:
+
+**C. 30**",False,False,False,0,faithful
+153,016839.jpg,"Teeth,HisT",Which tooth has a crown restoration?,B,B,"The tooth with a crown restoration in this panoramic X-ray is **#46**. 
+
+Correct answer: **B. #46**",True,False,False,0,faithful
+154,016839.jpg,"Teeth,Patho",Which of the following teeth is suspected to have caries?,B,C,"Based on the provided panoramic X-ray, tooth **#36** (Option C) appears to have a radiolucent area suggestive of caries. This is visible as a darker region on the crown of the tooth, which is indicative of decay.
+
+Correct answer: **C. #36**",False,False,False,0,faithful
+155,016839.jpg,"HisT,Jaw",Which of the following structures are visible in the imaging?,C,A,"The image provided is a panoramic dental X-ray (orthopantomogram). In such imaging, both the **mandibular canals** and the **maxillary sinuses** are typically visible.
+
+### Correct Answer: **C. Both A and B**",False,False,False,0,faithful
+156,016855.jpg,Jaw,Where is the evidence of bone loss observed?,C,C,"The correct answer is:
+
+**C. Both jaws**
+
+### Explanation:
+The panoramic X-ray shows evidence of bone loss around the teeth in both the upper and lower jaws. This is indicated by the reduced height of the alveolar bone surrounding the teeth, which is a common sign of periodontal disease or other conditions affecting bone support.",True,False,False,0,faithful
+157,016855.jpg,"Teeth,HisT",What type of intervention is evident at tooth 26?,C,A,"The radiograph shows evidence of a dental crown on tooth 26. This is indicated by the radiopaque material covering the tooth, which is characteristic of a crown restoration.
+
+**Correct answer: A. Crown restoration**",False,False,False,0,faithful
+158,016855.jpg,Teeth,Which tooth is impacted?,D,C,"The impacted tooth in the image is **#38** (lower left third molar). 
+
+Correct answer: **C. #38**",False,False,False,0,faithful
+159,016855.jpg,"Teeth,Patho",What is the pathological finding at tooth 26?,C,C,"The pathological finding at tooth 26 in the provided image appears to be a **periapical lesion**. This is evident from the radiolucent area around the apex of the tooth, which is indicative of an inflammatory or infectious process.
+
+### Correct Answer: **C. Periapical lesion**",True,False,False,0,faithful
+160,016855.jpg,Teeth,How many wisdom teeth are erupted according to the report?,B,B,"The panoramic X-ray shows that **two wisdom teeth are erupted**—one in the upper right quadrant and one in the lower left quadrant. 
+
+The correct answer is: **B. 2**",True,False,False,0,faithful
+161,016874.jpg,Teeth,How many wisdom teeth are erupted according to the report?,B,C,"The X-ray shows that none of the wisdom teeth (third molars) are fully erupted. They appear to be impacted or partially erupted.
+
+**Correct answer: C. 0**",False,False,False,0,faithful
+162,016874.jpg,"Teeth,Jaw",Which jaw has a missing tooth region detected?,B,B,**B. Lower jaw**,True,False,False,0,faithful
+163,016874.jpg,"Teeth,HisT",Which tooth has undergone root canal treatment?,B,A,"The tooth that has undergone root canal treatment is typically identified by the presence of a radiopaque (white) filling material in the root canal space on the X-ray. In this image, tooth **#21** shows evidence of root canal treatment.
+
+**Correct answer: A. #21**",False,False,False,0,faithful
+164,016874.jpg,Jaw,What is observed in the upper jawbone?,A,A,"The image provided is a panoramic dental X-ray. Based on the visible details:
+
+**Answer: A. No bone loss**
+
+Explanation: The upper jawbone appears to have a normal bone structure without any evident signs of bone loss, fractures, or tumors. The bone levels around the teeth seem intact, and there are no apparent abnormalities in the upper jawbone.",True,False,False,0,faithful
+165,016910.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,C,B,"The provided X-ray shows a radiolucent area around the apex of the root of tooth #24, which is indicative of a periapical abscess. 
+
+The correct answer is:
+
+**B. #24**",False,False,False,0,faithful
+166,016910.jpg,"HisT,Jaw",What structures are visible in the imaging?,B,B,"The image provided is a panoramic dental X-ray (orthopantomogram). Based on the structures typically visible in such imaging:
+
+- **Bilateral maxillary sinuses** (A) are visible in the upper portion of the image.
+- **Bilateral mandibular canals** (B) are visible as radiolucent lines within the mandible.
+- The **nasal cavity** (C) is also visible in the upper central portion of the image.
+
+Thus, the correct answer is:
+
+**D. Both A and B**",True,False,False,0,faithful
+167,016910.jpg,Jaw,What is the condition of the bone architecture in the lower jaw?,B,B,"Based on the provided X-ray image, the bone architecture in the lower jaw appears to show signs of **bone loss**, as evidenced by the reduced height of the alveolar bone around the teeth. This is often indicative of periodontal disease or other conditions affecting bone density.
+
+**Correct answer: B. Suggestive of bone loss**",True,False,False,0,faithful
+168,016910.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,B,B,"The panoramic radiograph shows a total of **23 teeth** visible, including natural teeth and dental restorations. 
+
+The correct answer is:
+
+**B. 23**",True,False,False,0,faithful
+169,016910.jpg,"Teeth,HisT",Which of the following teeth does NOT have a crown restoration?,C,A,"To answer this question, let's analyze the provided panoramic X-ray image:
+
+- **Crown restorations** are visible as bright, opaque (white) areas on the X-ray due to the high density of the restorative material (e.g., metal or ceramic).
+- Teeth #31, #32, #33, and #41 are located in the lower jaw (mandible). Based on the universal numbering system:
+  - #31 is the second molar on the lower right.
+  - #32 is the third molar (wisdom tooth) on the lower right.
+  - #33 is the canine on the lower left.
+  - #41 is the central incisor on the lower right.
+
+From the X-ray:
+- Tooth #31 appears to have a crown restoration.
+- Tooth #32 appears to have a crown restoration.
+- Tooth #33 does **not** appear to have a crown restoration.
+- Tooth #41 appears to have a crown restoration.
+
+### Correct Answer: **C. #33**",False,False,False,0,faithful
+170,016918.jpg,Teeth,Which of the following wisdom teeth is erupted?,D,A,"Based on the provided panoramic X-ray:
+
+- Tooth #18 (upper left third molar) appears unerupted.
+- Tooth #28 (upper right third molar) appears unerupted.
+- Tooth #38 (lower left third molar) appears partially erupted.
+- Tooth #48 (lower right third molar) appears unerupted.
+
+The most likely correct option is:
+
+**C. #38**",False,False,False,0,faithful
+171,016918.jpg,"Teeth,HisT",Which of the following teeth does NOT show signs of fillings?,A,B,"Based on the provided panoramic X-ray image, it appears that tooth #25 does not show signs of fillings. Therefore, the correct answer is:
+
+**B. #25**",False,False,False,0,faithful
+172,016918.jpg,"Teeth,Patho",Which tooth shows imaging features of a periapical lesion (likely abscess)?,C,B,"The correct answer is:
+
+**B. #37**
+
+### Explanation:
+In the provided panoramic radiograph, tooth #37 (lower left second molar) shows imaging features consistent with a periapical lesion, such as radiolucency around the apex of the tooth, which is indicative of a periapical abscess or infection.",False,False,False,0,faithful
+173,016918.jpg,"Teeth,Jaw",What is the status of the maxillary sinuses?,C,C,"The maxillary sinuses are visible on both sides of the image. Therefore, the correct answer is:
+
+**C. Visible bilaterally**",True,False,False,0,faithful
+174,016918.jpg,Jaw,What is observed in the bilateral mandibular canals?,B,B,"The correct answer is:
+
+**B. Signs of bilateral mandibular canals**
+
+Explanation: The image is a panoramic radiograph (OPG) showing the bilateral mandibular canals, which are anatomical structures visible in the mandible. These canals house the inferior alveolar nerve and blood vessels. The presence of these canals is a normal finding, and they are clearly visible in the image.",True,False,False,0,faithful
+175,016920.jpg,"Teeth,Patho",Which tooth shows signs of a suspected periapical granuloma?,D,A,"The image shows a panoramic dental X-ray. A periapical granuloma typically appears as a radiolucent (dark) area around the apex of a tooth root, indicating chronic inflammation.
+
+Based on the X-ray:
+
+- Tooth **#36** (lower left first molar) shows a radiolucent area around its apex, suggesting a suspected periapical granuloma.
+
+### Correct Answer: **A. #36**",False,False,False,0,faithful
+176,016920.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,C,C,"The correct answer is:
+
+**C. #46**
+
+Explanation: In the provided panoramic X-ray, tooth #46 (lower right first molar) appears to have a crown and evidence of root canal treatment, as indicated by the radiopaque material in the root canals.",True,False,False,0,faithful
+177,016920.jpg,"HisT,Jaw",Which of the following structures are visible in the imaging?,A,A,"The image provided is a panoramic dental X-ray (orthopantomogram). Based on the structures typically visible in such imaging:
+
+**Correct Answer: A. Bilateral maxillary sinuses**
+
+### Explanation:
+- **A. Bilateral maxillary sinuses**: These are commonly visible in panoramic X-rays as they are located above the upper teeth.
+- **B. Unilateral mandibular canal**: The mandibular canal is visible, but it is bilateral in panoramic X-rays, not unilateral.
+- **C. Ethmoid air cells**: These are located higher in the skull and are not typically visible in a panoramic X-ray.
+- **D. Sphenoid sinus**: This sinus is located deeper in the skull and is not usually visible in a panoramic X-ray.
+
+Thus, the most appropriate answer is **A**.",True,False,False,0,faithful
+178,016920.jpg,Teeth,Which of the following wisdom teeth is erupted?,C,A,"The panoramic X-ray shows the positions of the wisdom teeth. Based on the image:
+
+- **#18** (upper left third molar) appears unerupted.
+- **#28** (upper right third molar) appears unerupted.
+- **#38** (lower left third molar) appears partially erupted.
+- **#48** (lower right third molar) appears unerupted.
+
+The most likely correct answer is:
+
+**B. #38**",False,False,False,0,faithful
+179,016920.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,B,C,"The panoramic radiograph shows a full set of adult teeth, including third molars (wisdom teeth). In a typical adult dentition, there are 32 teeth, assuming no extractions or missing teeth.
+
+The correct answer is:
+
+**C. 32**",False,False,False,0,faithful

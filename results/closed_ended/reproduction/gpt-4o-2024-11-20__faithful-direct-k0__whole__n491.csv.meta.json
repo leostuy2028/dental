@@ -1,0 +1,18 @@
+{
+  "experiment": "E0-repro",
+  "paper_section": "§2/§5.1",
+  "description": "GPT-4o whole-491 FAITHFUL reproduction (authors config: detail=high, max_tokens=8192, temp=0; VLMEvalKit verbatim prompt+parser, no resize, no system). OpenAI-direct (paper used dmxapi.cn proxy). Target 45.40.",
+  "model": "gpt-4o-2024-11-20",
+  "config": "faithful direct k=0",
+  "dataset": "closed_ended.parquet",
+  "image_detail": "high",
+  "gen_settings": "temperature=0 max_tokens=8192",
+  "n": 491,
+  "accuracy_pct": 41.75,
+  "refusal_pct": 0.2,
+  "random_fallback_pct": 0.61,
+  "command": "python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt faithful --detail high --data data/closed_ended.parquet --start 0 --exp E0-repro --paper-section §2/§5.1 --description GPT-4o whole-491 FAITHFUL reproduction (authors config: detail=high, max_tokens=8192, temp=0; VLMEvalKit verbatim prompt+parser, no resize, no system). OpenAI-direct (paper used dmxapi.cn proxy). Target 45.40. --out results/closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
+  "code_commit": "4922c7b",
+  "generated_utc": "2026-07-04T14:09:19+00:00",
+  "data_file": "gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv"
+}

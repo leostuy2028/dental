@@ -63,7 +63,11 @@ manifest is the searchable index across all files.
 
 | Path | Experiment (E#) | Paper § | Model | Config | Dataset | n | Date | Command |
 |------|-----------------|---------|-------|--------|---------|---|------|---------|
-| _(no results generated under this scheme yet — first regenerated run adds its row here)_ | | | | | | | | |
+| `closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv` | E0-repro | §2/§5.1 | gpt-4o-2024-11-20 | faithful (VLMEvalKit verbatim prompt+parser), direct, k=0, img_detail=high, max_tokens=8192, temp=0, no resize/system; OpenAI-direct | whole (491) | 491 | 2026-07-04 | `python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt faithful --detail high --data data/closed_ended.parquet --start 0` |
+
+**E0-repro result:** 41.8% [95% CI 37.5–46.2] — reproduces the paper's GPT-4o closed-ended **45.40%** within CI. Real rows 44.2% (n=459), blank rows 6.2% (n=32). Only paper API model still callable; residual vs 45.40 = third-party proxy + model drift. Full write-up: `RESEARCH_PLAN §5.6` ledger + `PAPER_DRAFT §4`.
+
+_Pilots under `results/_pilot/` are exploratory (prompt-mode + image-detail sweeps) and are intentionally NOT ledgered._
 
 ## Quarantine
 

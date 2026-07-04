@@ -1,0 +1,16 @@
+index,file_name,category,question,answer,predicted,raw_response,correct,refused,used_fallback,n_examples,prompt_mode
+0,016640.jpg,"Teeth,Patho",Which of the following teeth is suspected to have caries?,A,A,"Based on the provided panoramic X-ray:
+
+- Tooth **#15** (upper left second molar) appears to have a radiolucent area suggestive of caries.  
+- The other teeth mentioned in the options do not show clear signs of caries in this image.
+
+### Correct Answer: **A. #15**",True,False,False,0,faithful
+1,016640.jpg,Teeth,How many natural teeth are visualized in the panoramic radiograph?,B,A,"The panoramic radiograph shows several missing teeth, as well as dental restorations. Counting the natural teeth visible in the image:
+
+- The upper jaw (maxilla) has 12 natural teeth visible.
+- The lower jaw (mandible) has 14 natural teeth visible.
+
+This totals **26 natural teeth**. Since none of the options match this exact count, the closest and most likely correct option is **A. 28**, assuming some teeth may not be clearly visible or are partially obscured.",False,False,False,0,faithful
+2,016640.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,B,B,"The radiograph shows a periapical radiolucency around the root of tooth **#46**, which is indicative of a periapical abscess.
+
+**Correct answer: B. #46**",True,False,False,0,faithful

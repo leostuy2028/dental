@@ -1,0 +1,18 @@
+{
+  "experiment": "E0-repro-pilot",
+  "paper_section": "",
+  "description": "rerun dip window 120-179 at detail=low",
+  "model": "gpt-4o-2024-11-20",
+  "config": "faithful direct k=0",
+  "dataset": "closed_ended.parquet",
+  "image_detail": "low",
+  "gen_settings": "temperature=0 max_tokens=2048",
+  "n": 60,
+  "accuracy_pct": 33.33,
+  "refusal_pct": 0.0,
+  "random_fallback_pct": 0.0,
+  "command": "python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt faithful --detail low --data data/closed_ended.parquet --start 120 --limit 60 --exp E0-repro-pilot --description rerun dip window 120-179 at detail=low --out results/_pilot/window120.csv",
+  "code_commit": "4922c7b",
+  "generated_utc": "2026-07-04T13:30:28+00:00",
+  "data_file": "window120.csv"
+}

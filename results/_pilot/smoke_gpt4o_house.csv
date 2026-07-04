@@ -1,0 +1,7 @@
+index,file_name,category,question,answer,predicted,raw_response,correct,refused,n_examples,prompt_mode
+0,016640.jpg,"Teeth,Patho",Which of the following teeth is suspected to have caries?,A,B,B,False,False,0,house
+1,016640.jpg,Teeth,How many natural teeth are visualized in the panoramic radiograph?,B,A,A,False,False,0,house
+2,016640.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,B,B,B,True,False,0,house
+3,016640.jpg,"Teeth,HisT",Which of the following teeth has a crown and root canal treatment?,B,A,A,False,False,0,house
+4,016640.jpg,Jaw,Which of the following is TRUE regarding the jaw-specific observations?,A,A,A,True,False,0,house
+5,016641.jpg,"Teeth,Patho",What is required for the periapical lesion at tooth 36?,D,D,D,True,False,0,house

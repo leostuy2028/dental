@@ -1,0 +1,18 @@
+{
+  "experiment": "E0-repro-pilot",
+  "paper_section": "",
+  "description": "detail=low pilot vs auto baseline",
+  "model": "gpt-4o-2024-11-20",
+  "config": "faithful direct k=0",
+  "dataset": "closed_ended.parquet",
+  "image_detail": "low",
+  "gen_settings": "temperature=0 max_tokens=2048",
+  "n": 40,
+  "accuracy_pct": 42.5,
+  "refusal_pct": 0.0,
+  "random_fallback_pct": 0.0,
+  "command": "python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt faithful --detail low --data data/closed_ended.parquet --start 0 --limit 40 --exp E0-repro-pilot --description detail=low pilot vs auto baseline --out results/_pilot/lowdetail40.csv",
+  "code_commit": "4922c7b",
+  "generated_utc": "2026-07-04T13:26:50+00:00",
+  "data_file": "lowdetail40.csv"
+}

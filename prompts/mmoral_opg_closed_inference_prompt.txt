@@ -1,0 +1,36 @@
+MMOral-Bench CLOSED-ENDED (multiple-choice) inference prompt — provenance record
+================================================================================
+Source: VLMEvalKit, the benchmark's own released evaluation toolkit.
+The MMOral-OPG closed set is scored as a standard ImageMCQDataset; the model-facing
+prompt is built by `ImageMCQDataset.build_prompt`
+(open-compass/VLMEvalKit, vlmeval/dataset/image_mcq.py), fetched 2026-07-04.
+
+The paper (arXiv:2509.09254) does NOT print a closed-ended inference prompt in its
+text; it defers to VLMEvalKit. Answer extraction is
+`get_single_choice_prediction` in vlmeval/dataset/utils/mmoral_opg.py, which parses
+the option letter from free-form output and FALLS BACK TO A RANDOM LETTER when it
+cannot parse one (so refusals/garble score as ~25% guesses, not 0).
+
+VERBATIM prompt structure (no system persona is added by the base class):
+
+    [image]
+    Hint: {hint}            <- only if a hint field is present (MMOral closed has none)
+    Question: {question}
+    Options:
+    A. {option1}
+    B. {option2}
+    C. {option3}
+    D. {option4}
+    Please select the correct answer from the options above.
+
+Assembled in code as:
+    if hint is not None:
+        prompt += f'Hint: {hint}\n'
+    prompt += f'Question: {question}\n'
+    if len(options):
+        prompt += options_prompt          # 'Options:\n' + '{key}. {item}\n' per option
+        prompt += 'Please select the correct answer from the options above. \n'
+
+This file is the reproduction-faithful reference. Our harness's default "house"
+prompt (dental-radiologist persona + "reply with only the letter") DIVERGES from
+this and is documented as such; `prompts/gpt.py` implements both as selectable modes.

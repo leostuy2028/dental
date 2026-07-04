@@ -1,0 +1,16 @@
+{
+  "experiment": "E0-repro",
+  "paper_section": "§2/§5.1",
+  "description": "smoke",
+  "model": "gpt-4o-2024-11-20",
+  "config": "faithful direct k=0",
+  "dataset": "closed_ended.parquet",
+  "n": 3,
+  "accuracy_pct": 66.67,
+  "refusal_pct": 0.0,
+  "random_fallback_pct": 0.0,
+  "command": "python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt faithful --data data/closed_ended.parquet --start 0 --limit 3 --exp E0-repro --paper-section §2/§5.1 --description smoke --out results/_pilot/meta_smoke.csv",
+  "code_commit": "4922c7b",
+  "generated_utc": "2026-07-04T13:08:32+00:00",
+  "data_file": "meta_smoke.csv"
+}
