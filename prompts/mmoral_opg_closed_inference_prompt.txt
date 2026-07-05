@@ -7,10 +7,20 @@ script that overrides the base class with a longer custom instruction. That mist
 led us to believe our (correct) reproduction prompt was fabricated — recording it here so
 it does not recur.
 
-TRUE SOURCE (verified verbatim against the file on 2026-07-05):
-  github.com/isbrycee/OralGPT  ->  MMOral-Bench-EvalKit/eval_MMOral-OPG-Closed.py
-This is the paper's OWN evaluation script (arXiv:2509.09254 defers to it). It builds the
-prompt as:
+TRUE SOURCE — used by BOTH evaluation paths, so it is the prompt for the whole leaderboard
+(verified verbatim on 2026-07-05, github.com/isbrycee/OralGPT):
+  (A) DOCUMENTED path (README: `python run.py --config config_mmoral_opg.json`): the
+      `MMOral_OPG_CLOSED` dataset class in MMOral-Bench-EvalKit/vlmeval/dataset/mmoral.py
+      (line 122, build_prompt). This is the class the config uses for EVERY model, open or
+      API. Config settings: temperature=0, max_tokens=8192, image_detail=high, via the
+      dmxapi.cn proxy — these MATCH our reproduction (clients/gpt_client.py) exactly.
+  (B) A standalone GPT-4o-only proxy script, MMOral-Bench-EvalKit/eval_MMOral-OPG-Closed.py
+      (run_inference_gpt4o), at temperature=0.2.
+Both (A) and (B) build the IDENTICAL long prompt below, so whichever path scored GPT-4o's
+published 45.40%, the prompt is the same one we reproduce. (A) even matches our generation
+settings including temperature=0; only the secondary script (B) uses 0.2.
+
+`MMOral_OPG_CLOSED.build_prompt` (path A) is:
 
     options_prompt = 'Options:\n'
     for i, letter in zip(range(1, 5), ['A','B','C','D']):
@@ -43,9 +53,20 @@ Two things about this prompt matter for the audit (PAPER_DRAFT §5.2):
      candidate appearing EARLIEST in the text, and FALLS BACK TO A RANDOM LETTER when it cannot
      parse one. On the prose answers the prompt elicits, it misreads ~1 item in 9 (§5.2).
 
-Generation config in the official script: temperature=0.2, no max_tokens. Our reproduction
-(prompts/gpt.py FAITHFUL_BLOCK + clients/gpt_client.py) uses temperature=0 + max_tokens=8192,
-a documented minor deviation; the reproduction still lands inside the paper's GPT-4o CI (§5.1).
+Generation config: the DOCUMENTED path (config_mmoral_opg.json) uses temperature=0,
+max_tokens=8192, image_detail=high — identical to our reproduction, so there is NO temperature
+deviation from the path the paper documents. (The secondary standalone script uses temp=0.2;
+a minor internal inconsistency in the benchmark, not in our reproduction.)
+
+!! FLAGGED DISCREPANCY (blank options) — needs a dedicated look for §5.1 !!
+`MMOral_OPG_CLOSED.post_build` runs `self.data[col].fillna('None')` on the option columns
+BEFORE build_prompt. So in the real benchmark a blank option is shown to the model as the
+literal word "None" (e.g. "D. None"), which reads like a plausible "none of the above" choice.
+Our harness instead renders a blank option via str(NaN) as "nan" (e.g. "D. nan"). This is a
+REAL difference in what the model sees on the 38 blank-option items, and could change their
+behavior (a model may well pick "D. None" as "none of the above"). §5.1's blank-answer
+analysis and the reproduction on those items should be re-checked under "None" rendering.
+(The standalone script path may differ again — verify before relying.)
 
 Our harness's "coax" prompt (dental-radiologist persona + "output only the letter") DIVERGES
 from this on purpose, to make every answer a bare letter the benchmark's own parser reads
