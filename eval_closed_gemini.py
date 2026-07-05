@@ -42,7 +42,7 @@ def print_summary(df, model, k):
 
 
 def run(model, k, results_path, data_path="data/closed_ended.parquet",
-        limit=None, start=0, thinking_budget=None, cot=False):
+        limit=None, start=0, thinking_budget=None, cot=False, mode="house"):
     # route the client at the requested model (default gemini-2.0-flash)
     gemini_client.MODEL = model
 
@@ -77,7 +77,7 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet",
             continue
 
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
-        parts = build_prompt(row, examples=examples if examples else None, cot=cot)
+        parts = build_prompt(row, examples=examples if examples else None, cot=cot, mode=mode)
         predicted, raw = gemini_client.call(parts, thinking_budget=thinking_budget, cot=cot)
         correct = predicted == row["answer"]
 
@@ -122,6 +122,7 @@ if __name__ == "__main__":
                         help="native thinking tokens; -1 dynamic, 0 off, omit to disable")
     parser.add_argument("--cot", action="store_true",
                         help="visible per-option chain-of-thought prompt (parse 'Answer: X')")
+    parser.add_argument("--prompt", default="house", choices=["house", "coax"])
     args = parser.parse_args()
 
     if args.out is None:
@@ -131,4 +132,4 @@ if __name__ == "__main__":
         args.out = f"results/closed_{args.model}_{args.k}shot_{tag}{cot_tag}{think_tag}.csv"
 
     run(model=args.model, k=args.k, results_path=args.out, data_path=args.data,
-        limit=args.limit, start=args.start, thinking_budget=args.thinking_budget, cot=args.cot)
+        limit=args.limit, start=args.start, thinking_budget=args.thinking_budget, cot=args.cot, mode=args.prompt)

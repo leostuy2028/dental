@@ -61,7 +61,7 @@ def print_summary(df, model, k):
         print(f"  {cat:<40} {acc:.1f}%  (n={n})")
 
 
-def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False):
+def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False, mode="house"):
     full_df = pd.read_parquet(data_path)
     pool_df = full_df.iloc[:POOL_SIZE].copy()
     test_df = full_df.iloc[TEST_START:TEST_END].copy()
@@ -85,7 +85,7 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False
             continue
 
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
-        system, messages = build_prompt(row, examples=examples if examples else None, cot=cot)
+        system, messages = build_prompt(row, examples=examples if examples else None, cot=cot, mode=mode)
         predicted, raw = call(system, messages, model=model, cot=cot)
         correct = predicted == row["answer"]
 
@@ -125,6 +125,7 @@ if __name__ == "__main__":
     parser.add_argument("--out", default=None)
     parser.add_argument("--data", default="data/closed_ended.parquet")
     parser.add_argument("--cot", action="store_true")
+    parser.add_argument("--prompt", default="house", choices=["house", "coax"])
     args = parser.parse_args()
 
     if args.out is None:
@@ -132,4 +133,4 @@ if __name__ == "__main__":
         cot_tag = "_cot" if args.cot else ""
         args.out = f"results/closed_{args.model.split('-')[1]}_{args.k}shot_{tag}{cot_tag}.csv"
 
-    run(model=args.model, k=args.k, results_path=args.out, data_path=args.data, cot=args.cot)
+    run(model=args.model, k=args.k, results_path=args.out, data_path=args.data, cot=args.cot, mode=args.prompt)
