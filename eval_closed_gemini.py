@@ -6,6 +6,7 @@ import pandas as pd
 from dataio.data_loader import load_closed
 from prompts.gemini import build_prompt
 from clients import gemini_client
+from clients.errors import APICallFailed
 from utils import results_io
 
 POOL_SIZE = 50
@@ -34,6 +35,11 @@ def print_summary(df, model, k):
     print(f"Model    : {model}")
     print(f"Shot     : {k}-shot")
     print(f"Overall  : {accuracy:.2f}%")
+    letters = {L: int((df['predicted'] == L).sum()) for L in "ABCD"}
+    print(f"Pred A/B/C/D: {letters}    "
+          f"Unparseable (scored wrong): {df['predicted'].isna().mean()*100:.1f}%")
+    if "refused" in df:
+        print(f"Refusals : {df['refused'].mean()*100:.1f}%")
     print(f"           paper closed-ended refs: Gemini-2.0-Flash 41.20 (RETIRED, not this model),")
     print(f"           GPT-4o 45.40, Claude-3.7-Sonnet 41.40  — gemini-2.5-flash is a NEW data point")
     print(f"\nBy category:")
@@ -80,7 +86,14 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet",
 
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
         parts = build_prompt(row, examples=examples if examples else None, cot=cot, mode=mode)
-        predicted, raw = gemini_client.call(parts, thinking_budget=thinking_budget, cot=cot)
+        try:
+            predicted, raw = gemini_client.call(parts, thinking_budget=thinking_budget, cot=cot)
+        except APICallFailed as e:
+            # skip: leave the item out of the CSV so it is retried on the next resume,
+            # never write an error string as if it were a model answer (§1.0 rule 6).
+            print(f"  [SKIP index {row['index']}] {e}")
+            continue
+        refused = gemini_client.looks_like_refusal(raw)
         correct = predicted == row["answer"]
 
         results.append({
@@ -92,6 +105,7 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet",
             "predicted": predicted,
             "raw_response": raw,
             "correct": correct,
+            "refused": refused,
             "n_examples": len(examples),
         })
 

@@ -1,6 +1,7 @@
 {
   "GPT-4o (coax)": {
     "n": 453,
+    "excluded_failed": 0,
     "count": {
       "content": 278,
       "letter": 77,
@@ -16,21 +17,22 @@
     "acc_drop": 5.3
   },
   "GPT-4o (faithful)": {
-    "n": 453,
+    "n": 351,
+    "excluded_failed": 102,
     "count": {
-      "content": 273,
-      "letter": 68,
-      "neither": 112
+      "content": 252,
+      "letter": 42,
+      "neither": 57
     },
     "pct": {
-      "content": 60.3,
-      "letter": 15.0,
-      "neither": 24.7
+      "content": 71.8,
+      "letter": 12.0,
+      "neither": 16.2
     },
-    "acc_clean": 44.4,
-    "acc_shuffled": 37.1,
-    "acc_drop": 7.3
+    "acc_clean": 43.0,
+    "acc_shuffled": 41.6,
+    "acc_drop": 1.4
   },
   "_generator": "paper_analysis/position_stability.py",
-  "_generated_utc": "2026-07-05T12:08:17+00:00"
+  "_generated_utc": "2026-07-05T13:24:47+00:00"
 }

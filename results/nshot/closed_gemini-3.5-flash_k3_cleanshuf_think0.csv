@@ -21,7 +21,7 @@ index,file_name,category,question,answer,predicted,raw_response,correct,n_exampl
 75,016713.jpg,"Teeth,HisT",Which tooth has a crown restoration?,D,D,D,True,3
 76,016713.jpg,Teeth,How many teeth are visualized in the radiograph?,C,C,C,True,3
 78,016723.jpg,"Teeth,HisT",Which tooth shows signs of root canal treatment?,B,C,C,False,3
-79,016723.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,D,A,"To find the number of visualized teeth in the panoramic radiograph, we can count the teeth present in each quadrant:
+79,016723.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,D,D,"To find the number of visualized teeth in the panoramic radiograph, we can count the teeth present in each quadrant:
 
 1. **Upper Right Quadrant (Patient's Right / Image Left):**
    * There are 7 teeth present (from central incisor to the second molar with a restoration/crown). No third molar (wisdom tooth) is present in this quadrant.
@@ -37,7 +37,7 @@ index,file_name,category,question,answer,predicted,raw_response,correct,n_exampl
 
 **Total count:** 7 + 8 + 7 + 7 = 29 teeth.
 
-D",False,3
+D",True,3
 80,016723.jpg,Jaw,What is noted regarding the bone architecture?,C,C,C,True,3
 81,016723.jpg,Jaw,What is observed in the maxillary sinuses?,C,C,C,True,3
 82,016726.jpg,Teeth,Which of the following teeth are impacted wisdom teeth according to the report?,D,D,D,True,3
@@ -72,9 +72,9 @@ D",False,3
 112,016807.jpg,"Teeth,HisT",Which tooth site has a dental implant present?,B,C,C,False,3
 115,016807.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,A,A,A,True,3
 117,016808.jpg,"HisT,Jaw",Which structures are visible in the imaging?,C,C,C,True,3
-118,016808.jpg,HisT,Which of the following historical interventions is NOT detected?,C,A,"The correct answer is **C** (None of the above - as none of these interventions are present; there are no implants, fillings, or crowns visible on this radiograph, which shows fully intact dentition without restorative work). 
+118,016808.jpg,HisT,Which of the following historical interventions is NOT detected?,C,C,"The correct answer is **C** (None of the above - as none of these interventions are present; there are no implants, fillings, or crowns visible on this radiograph, which shows fully intact dentition without restorative work). 
 
-**C**",False,0
+**C**",True,0
 119,016808.jpg,Jaw,What is observed regarding the bone architecture?,B,D,D,False,3
 120,016808.jpg,"Teeth,SumRec",What is the priority concern for tooth 38?,A,B,B,False,1
 121,016821.jpg,"Teeth,HisT",Which tooth has an implant?,A,A,A,True,3
@@ -95,7 +95,7 @@ D",False,3
 137,016826.jpg,"Teeth,HisT",Which tooth has a crown and root canal treatment?,D,D,D,True,3
 138,016826.jpg,Teeth,Which tooth is impacted?,A,A,A,True,3
 139,016826.jpg,Jaw,What is observed in the jawbone?,C,C,C,True,3
-140,016826.jpg,Teeth,"Can you identify the object within the bounding box [1749, 638, 1885, 827]?",C,B,"Based on the dental radiograph and the standard FDI tooth numbering system, we can analyze the positions:
+140,016826.jpg,Teeth,"Can you identify the object within the bounding box [1749, 638, 1885, 827]?",C,A,"Based on the dental radiograph and the standard FDI tooth numbering system, we can analyze the positions:
 
 * Tooth #38 is located in the lower left quadrant (the right side of the radiographic image, mandibular posterior region). 
 * In that area, there is a missing third molar (wisdom tooth #38), as only the second molar (#37) is present in the lower left posterior segment.
@@ -121,9 +121,9 @@ A",False,3
 156,016855.jpg,Jaw,Where is the evidence of bone loss observed?,A,A,A,True,3
 157,016855.jpg,"Teeth,HisT",What type of intervention is evident at tooth 26?,B,B,B,True,3
 158,016855.jpg,Teeth,Which tooth is impacted?,A,A,A,True,3
-159,016855.jpg,"Teeth,Patho",What is the pathological finding at tooth 26?,A,B,"Based on the panoramic radiograph, tooth 26 (upper left first molar, which has a visible root canal treatment) shows a radiolucent area around its apex, characteristic of a periapical lesion.
+159,016855.jpg,"Teeth,Patho",What is the pathological finding at tooth 26?,A,A,"Based on the panoramic radiograph, tooth 26 (upper left first molar, which has a visible root canal treatment) shows a radiolucent area around its apex, characteristic of a periapical lesion.
 
-Answer: **A**",False,3
+Answer: **A**",True,3
 160,016855.jpg,Teeth,How many wisdom teeth are erupted according to the report?,B,C,C,False,3
 161,016874.jpg,Teeth,How many wisdom teeth are erupted according to the report?,D,C,C,False,3
 163,016874.jpg,"Teeth,HisT",Which tooth has undergone root canal treatment?,A,A,A,True,3

@@ -16,6 +16,9 @@ import time
 import openai
 from dotenv import load_dotenv
 
+from clients.parsing import looks_like_refusal, extract_letter  # noqa: F401 (single-sourced)
+from clients.errors import APICallFailed
+
 load_dotenv()
 
 MODEL = "gpt-4o-2024-11-20"
@@ -36,44 +39,21 @@ def is_reasoning_model(model):
     return model.startswith("gpt-5") or re.match(r"^o\d", model) is not None
 
 
-# phrases that indicate the model declined rather than answered
-_REFUSAL_MARKERS = (
-    "i'm unable", "i am unable", "i cannot", "i can't", "unable to view",
-    "unable to analyze", "can't analyze", "cannot analyze", "as an ai",
-    "i'm sorry", "i am sorry", "consult a", "seek professional",
-    "not able to", "i'm not able", "cannot provide", "can't provide",
-    "unable to provide", "i must decline", "i won't",
-)
-
-
-def looks_like_refusal(text):
-    t = (text or "").lower()
-    return any(m in t for m in _REFUSAL_MARKERS)
-
-
 def extract_answer(text, cot=False):
-    """Extract A/B/C/D. CoT -> trailing 'Answer: X'; else leading/first letter."""
-    if cot:
-        m = re.search(r"Answer:\s*([ABCD])", text or "", re.IGNORECASE)
-        return m.group(1).upper() if m else None
-    t = (text or "").strip().upper()
-    if not t:
-        return None
-    # prefer a standalone letter token (e.g. "B", "B.", "B)", "(B)")
-    m = re.search(r"(?:^|[^A-Z])([ABCD])(?:[^A-Z]|$)", t)
-    if m:
-        return m.group(1)
-    for L in "ABCD":
-        if L in t:
-            return L
-    return None
+    """Extract A/B/C/D for the COAX path via the shared, audit-safe extractor
+    (clients.parsing.extract_letter). Verified to reproduce every committed GPT-4o
+    coax prediction, and it drops the old substring-scan fallback that could read a
+    verbose reply's first stray letter (protects the pending Opus/o-series runs).
+    The FAITHFUL reproduction path does not use this — it uses vlmeval_parse."""
+    return extract_letter(text, cot=cot)
 
 
 def call(system, user_content, model=None, cot=False, reasoning_effort="none",
          retries=4):
     """Return the model's RAW output string. Answer extraction is done by the
-    harness (mode-dependent: faithful=VLMEvalKit parser, coax=strict). Returns
-    "" only if all retries fail."""
+    harness (mode-dependent: faithful=VLMEvalKit parser, coax=strict). An empty
+    string is a real (empty) model reply; a genuine API failure raises APICallFailed
+    so the harness can skip the item instead of scoring an error string as wrong."""
     client = get_client()
     model = model or MODEL
     messages = []
@@ -92,6 +72,7 @@ def call(system, user_content, model=None, cot=False, reasoning_effort="none",
         kwargs["max_tokens"] = 8192
         kwargs["temperature"] = 0.0
 
+    last_err = None
     for attempt in range(retries):
         try:
             resp = client.chat.completions.create(**kwargs)
@@ -99,9 +80,10 @@ def call(system, user_content, model=None, cot=False, reasoning_effort="none",
             time.sleep(DELAY_SECONDS)
             return raw
         except Exception as e:
+            last_err = e
             wait = 2 ** attempt
             print(f"  [gpt:{model}] error (try {attempt+1}/{retries}): "
                   f"{str(e).splitlines()[0][:120]} — {wait}s")
             time.sleep(wait)
 
-    return ""
+    raise APICallFailed(f"gpt {model}: {retries} retries exhausted: {last_err}")

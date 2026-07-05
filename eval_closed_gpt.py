@@ -18,6 +18,7 @@ import pandas as pd
 
 from prompts.gpt import build_prompt
 from clients import gpt_client
+from clients.errors import APICallFailed
 from utils.vlmeval_parse import faithful_predict
 from utils import results_io
 
@@ -102,8 +103,14 @@ def run(model, k, results_path, data_path, mode="faithful", cot=False,
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
         system, content = build_prompt(row, examples=examples or None, cot=cot,
                                        mode=mode, detail=detail)
-        raw = gpt_client.call(system, content, model=model, cot=cot,
-                              reasoning_effort=reasoning_effort)
+        try:
+            raw = gpt_client.call(system, content, model=model, cot=cot,
+                                  reasoning_effort=reasoning_effort)
+        except APICallFailed as e:
+            # skip: leave the item out of the CSV so it is retried on the next resume,
+            # never write an error string as if it were a model answer (§1.0 rule 6).
+            print(f"  [SKIP index {row['index']}] {e}")
+            continue
         predicted, used_fallback, refused = extract(mode, raw, row, cot)
         correct = predicted == row["answer"]
 

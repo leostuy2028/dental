@@ -2,6 +2,14 @@
 
 Full analysis + interpretation: **`dental-research/RESEARCH_PLAN.md` §3.8**.
 
+> **Re-scored 2026-07-05.** The four **3.5 direct** rows were re-derived from `raw_response`
+> after a parser fix: the old extractor mis-read gemini-3.5-flash's verbose replies
+> ("The correct answer is **D**") as 'A', understating direct accuracy by up to 8 pts
+> (k5 54→62). 2.5-flash (bare-letter replies) and all CoT cells are unchanged. Regenerate
+> the canonical grid with `python paper_analysis/nshot_grid.py`; re-score raw CSVs with
+> `python dataio/rescore_predictions.py`. The qualitative story is unchanged (and cleaner):
+> 3.5 %A stays low (14–22%) with no few-shot spike.
+
 **Setup:** `data/closed_ended_clean_shuffled.parquet` (453 rows, blank-answer rows
 removed, options shuffled → balanced key). Test = idx 50–149 (100 items, identical
 across cells). Exemplar pool = idx 0–49 (disjoint, same-category, from the shuffled
@@ -19,10 +27,10 @@ Baselines on this slice (key A/B/C/D = 23/20/33/24): always-C = 33% is the bar; 
 | 2.5 | CoT | 1 | 48.0 [38–58] | 45/18/24/12 | 25.0 * |
 | 2.5 | CoT | 3 | 47.0 [38–57] | 39/22/24/14 | 13.2 * |
 | 2.5 | CoT | 5 | 52.0 [42–62] | 34/24/26/15 | 7.4 |
-| 3.5 | direct | 0 | 48.0 [38–58] | 18/26/25/31 | 3.4 |
-| 3.5 | direct | 1 | 58.0 [48–67] | 21/24/24/31 | 2.2 |
-| 3.5 | direct | 3 | 57.0 [47–66] | 22/24/26/28 | 0.8 |
-| 3.5 | direct | 5 | 54.0 [44–63] | 23/25/25/27 | 0.3 |
+| 3.5 | direct | 0 | 50.0 [40–60] | 14/27/27/32 | 7.1 |
+| 3.5 | direct | 1 | 58.0 [48–67] | 19/22/27/32 | 3.9 |
+| 3.5 | direct | 3 | 60.0 [50–69] | 22/22/27/29 | 1.5 |
+| 3.5 | direct | 5 | 62.0 [52–71] | 20/20/31/29 | 4.1 |
 | 3.5 | CoT | 0 | 52.0 [42–62] | 21/18/29/32 | 5.2 |
 | 3.5 | CoT | 1 | 54.0 [44–63] | 29/19/26/26 | 2.2 |
 | 3.5 | CoT | 3 | 60.0 [50–69] | 25/22/27/26 | 0.6 |

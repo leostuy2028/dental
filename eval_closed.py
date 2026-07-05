@@ -2,7 +2,8 @@ import os
 import pandas as pd
 from dataio.data_loader import load_closed
 from prompts.claude import build_prompt
-from clients.claude_client import call
+from clients.claude_client import call, looks_like_refusal
+from clients.errors import APICallFailed
 
 RESULTS_PATH = "results/closed_results.csv"
 
@@ -40,7 +41,13 @@ def run(limit=None):
             continue
 
         system, messages = build_prompt(row)
-        predicted, raw = call(system, messages)
+        try:
+            predicted, raw = call(system, messages)
+        except APICallFailed as e:
+            # skip: leave the item out of the CSV so it is retried on the next resume,
+            # never write an error string as if it were a model answer (§1.0 rule 6).
+            print(f"  [SKIP index {row['index']}] {e}")
+            continue
         correct = predicted == row["answer"]
 
         results.append({
@@ -52,6 +59,7 @@ def run(limit=None):
             "predicted": predicted,
             "raw_response": raw,
             "correct": correct,
+            "refused": looks_like_refusal(raw),
         })
 
         completed = len(done_indices) + len(results)

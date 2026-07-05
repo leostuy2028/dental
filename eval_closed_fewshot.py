@@ -5,7 +5,8 @@ import argparse
 import pandas as pd
 from dataio.data_loader import load_closed
 from prompts.claude import build_prompt
-from clients.claude_client import call
+from clients.claude_client import call, looks_like_refusal
+from clients.errors import APICallFailed
 from utils import results_io
 
 POOL_SIZE = 50
@@ -56,6 +57,11 @@ def print_summary(df, model, k):
     print(f"Model    : {model}")
     print(f"Shot     : {k}-shot")
     print(f"Overall  : {accuracy:.2f}%  (Haiku 3-shot: 34.00%,  Haiku 0-shot: 38.00%,  GPT-4o: 45.40%)")
+    letters = {L: int((df['predicted'] == L).sum()) for L in "ABCD"}
+    print(f"Pred A/B/C/D: {letters}    "
+          f"Unparseable (scored wrong): {df['predicted'].isna().mean()*100:.1f}%")
+    if "refused" in df:
+        print(f"Refusals : {df['refused'].mean()*100:.1f}%")
     print(f"\nBy category:")
     cat_acc = df.groupby("category")["correct"].mean() * 100
     for cat, acc in cat_acc.sort_values(ascending=False).items():
@@ -97,7 +103,14 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False
 
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
         system, messages = build_prompt(row, examples=examples if examples else None, cot=cot, mode=mode)
-        predicted, raw = call(system, messages, model=model, cot=cot)
+        try:
+            predicted, raw = call(system, messages, model=model, cot=cot)
+        except APICallFailed as e:
+            # skip: leave the item out of the CSV so it is retried on the next resume,
+            # never write an error string as if it were a model answer (§1.0 rule 6).
+            print(f"  [SKIP index {row['index']}] {e}")
+            continue
+        refused = looks_like_refusal(raw)
         correct = predicted == row["answer"]
 
         results.append({
@@ -109,6 +122,7 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False
             "predicted": predicted,
             "raw_response": raw,
             "correct": correct,
+            "refused": refused,
             "n_examples": len(examples),
         })
 

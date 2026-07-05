@@ -81,9 +81,19 @@ manifest is the searchable index across all files.
 - **GPT-4o coax:** content-stable **61.4%**, letter-stable 17.0%, neither 21.6%; acc 53.6→48.3 (drop 5.3).
 - **Gemini-2.5-flash coax:** content-stable **61.8%**, letter-stable 12.1%, neither 26.0%; acc 43.5→43.3 (drop **0.2**).
 - **Headline:** near-identical robustness (~61% content-stable) despite very different accuracy drops — both flip ~38% of items; gemini's cancel out at the aggregate, so **accuracy-under-shuffle is a misleading measure and content-stability is the honest one**.
-- **GPT-4o faithful (robustness check):** content-stable **60.3%** vs coax 61.4% (within 1 pt) — the bias is not prompt-induced and reproduces under the benchmark's own prompt. Full generation panel to follow.
+- **GPT-4o faithful (robustness check) — `[PENDING re-elicitation]`:** the faithful-shuffled run (`...faithful-direct-k0__clean-shuffled__n453.csv`) is **partly corrupted**: an OpenAI **quota outage (429s)** mid-run left its last **102/453** answers empty (see the run's tail in `gpt_faithful_shuf.log`), which `faithful_predict` random-guessed. `position_stability.py` now **excludes** empty/failed rows. On the 351 valid items, faithful content-stable is **71.8%** (preliminary; not directly comparable to coax's 61.4% on n=453). The old committed **60.3%** was the corrupted figure and is retracted. Re-elicit the 102 rows (delete them, re-run the ledgered command; the fixed client now raises `APICallFailed` instead of writing empties) for a clean full-set number.
 
 _Pilots under `results/_pilot/` are exploratory (prompt-mode + image-detail sweeps) and are intentionally NOT ledgered._
+
+**Parser fix + re-score (2026-07-05).** The answer extractor (`clients/parsing.py::extract_letter`)
+was rewritten to read a model's *last* answer declaration instead of the first A/B/C/D
+character, which the old version mis-matched inside words ("**A**nswer" → A, "**B**ased on" → B)
+on verbose replies. Only the four **`results/nshot/closed_gemini-3.5-flash_k{0,1,3,5}_cleanshuf_think0.csv`**
+(direct) files were affected; their `predicted`/`correct` columns were re-derived in place from
+the untouched `raw_response` via `python dataio/rescore_predictions.py` (no API). Effect: direct
+accuracy k0 48→50, k3 57→60, k5 54→62 (k1 unchanged); %A stays low (no few-shot spike). 2.5-flash
+and all CoT cells are byte-identical. The §5.3.2 grid regenerates from raw output via
+`python paper_analysis/nshot_grid.py`.
 
 ## Quarantine
 

@@ -15,12 +15,15 @@ Run:   python paper_analysis/position_stability.py
 Writes: paper_analysis/_generated/position_stability_table.md, position_stability.values.json
 """
 import os
+import sys
 import json
 import datetime
 import pandas as pd
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
+sys.path.insert(0, REPO)
+from clients.parsing import is_api_failure  # noqa: E402
 OUT_DIR = os.path.join(HERE, "_generated")
 L2OPT = {"A": "option1", "B": "option2", "C": "option3", "D": "option4"}
 BLANK_OPTION = {41, 50, 58, 73, 77, 87, 91, 105, 113, 114, 116, 125, 175, 188, 199, 205,
@@ -59,6 +62,15 @@ def _rd(p):
     return pd.read_csv(os.path.join(REPO, *p.split("/")))
 
 
+def _is_failed(raw):
+    """A row with no real model output: empty/NaN reply or the API-failure sentinel.
+    Such a row's `predicted` is meaningless (the faithful parser random-guesses on an
+    empty reply), so it must be excluded from a content-stability count."""
+    if is_api_failure(raw):
+        return True
+    return (not isinstance(raw, str)) or raw.strip() in ("", "nan")
+
+
 def classify(clean_csv, shuf_csv, clean_opts, shuf_opts):
     cl_df = _rd(clean_csv).set_index("index")
     sh_df = _rd(shuf_csv).set_index("index")
@@ -66,6 +78,16 @@ def classify(clean_csv, shuf_csv, clean_opts, shuf_opts):
     sh = sh_df["predicted"]
     idx = [i for i in shuf_opts.index if i in cl.index and i in sh.index
            and i not in BLANK_OPTION]
+    # exclude items where either run has no real model output (empty/failed API call) —
+    # otherwise a random-guessed fallback letter pollutes the stability count.
+    valid = [i for i in idx
+             if not _is_failed(cl_df.loc[i, "raw_response"])
+             and not _is_failed(sh_df.loc[i, "raw_response"])]
+    excluded = len(idx) - len(valid)
+    if excluded:
+        print(f"  [{os.path.basename(shuf_csv)}] excluded {excluded} item(s) with a "
+              f"failed/empty reply; scoring on n={len(valid)}")
+    idx = valid
     # accuracy on the SAME paired items, clean key vs shuffled key (the coarse view)
     acc_clean = round(100 * float(cl_df.loc[idx, "correct"].mean()), 1)
     acc_shuf = round(100 * float(sh_df.loc[idx, "correct"].mean()), 1)
@@ -85,7 +107,7 @@ def classify(clean_csv, shuf_csv, clean_opts, shuf_opts):
             buckets["neither"] += 1
     n = len(idx)
     pct = {k: round(100 * v / n, 1) for k, v in buckets.items()}
-    return {"n": n, "count": buckets, "pct": pct,
+    return {"n": n, "excluded_failed": excluded, "count": buckets, "pct": pct,
             "acc_clean": acc_clean, "acc_shuffled": acc_shuf,
             "acc_drop": round(acc_clean - acc_shuf, 1)}
 

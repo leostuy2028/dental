@@ -1,0 +1,357 @@
+{
+  "2.5-flash|direct|k0": {
+    "model": "2.5-flash",
+    "mode": "direct",
+    "k": 0,
+    "n": 100,
+    "acc": 35.0,
+    "ci": [
+      26,
+      45
+    ],
+    "counts": {
+      "A": 23,
+      "B": 26,
+      "C": 31,
+      "D": 20
+    },
+    "pctA": 23,
+    "chi2": 2.6,
+    "sig": false,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "2.5-flash|direct|k1": {
+    "model": "2.5-flash",
+    "mode": "direct",
+    "k": 1,
+    "n": 100,
+    "acc": 43.0,
+    "ci": [
+      34,
+      53
+    ],
+    "counts": {
+      "A": 44,
+      "B": 20,
+      "C": 19,
+      "D": 17
+    },
+    "pctA": 44,
+    "chi2": 19.4,
+    "sig": true,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "2.5-flash|direct|k3": {
+    "model": "2.5-flash",
+    "mode": "direct",
+    "k": 3,
+    "n": 100,
+    "acc": 49.0,
+    "ci": [
+      39,
+      59
+    ],
+    "counts": {
+      "A": 52,
+      "B": 14,
+      "C": 22,
+      "D": 12
+    },
+    "pctA": 52,
+    "chi2": 41.1,
+    "sig": true,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "2.5-flash|direct|k5": {
+    "model": "2.5-flash",
+    "mode": "direct",
+    "k": 5,
+    "n": 100,
+    "acc": 53.0,
+    "ci": [
+      43,
+      62
+    ],
+    "counts": {
+      "A": 49,
+      "B": 14,
+      "C": 25,
+      "D": 12
+    },
+    "pctA": 49,
+    "chi2": 34.6,
+    "sig": true,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "2.5-flash|cot|k0": {
+    "model": "2.5-flash",
+    "mode": "cot",
+    "k": 0,
+    "n": 99,
+    "acc": 39.4,
+    "ci": [
+      30,
+      49
+    ],
+    "counts": {
+      "A": 28,
+      "B": 25,
+      "C": 25,
+      "D": 20
+    },
+    "pctA": 28,
+    "chi2": 1.3,
+    "sig": false,
+    "unparseable": 1,
+    "api_failures_excluded": 1
+  },
+  "2.5-flash|cot|k1": {
+    "model": "2.5-flash",
+    "mode": "cot",
+    "k": 1,
+    "n": 99,
+    "acc": 48.5,
+    "ci": [
+      39,
+      58
+    ],
+    "counts": {
+      "A": 45,
+      "B": 18,
+      "C": 24,
+      "D": 12
+    },
+    "pctA": 45,
+    "chi2": 25.0,
+    "sig": true,
+    "unparseable": 0,
+    "api_failures_excluded": 1
+  },
+  "2.5-flash|cot|k3": {
+    "model": "2.5-flash",
+    "mode": "cot",
+    "k": 3,
+    "n": 100,
+    "acc": 47.0,
+    "ci": [
+      38,
+      57
+    ],
+    "counts": {
+      "A": 39,
+      "B": 22,
+      "C": 24,
+      "D": 14
+    },
+    "pctA": 39,
+    "chi2": 13.2,
+    "sig": true,
+    "unparseable": 1,
+    "api_failures_excluded": 0
+  },
+  "2.5-flash|cot|k5": {
+    "model": "2.5-flash",
+    "mode": "cot",
+    "k": 5,
+    "n": 100,
+    "acc": 52.0,
+    "ci": [
+      42,
+      62
+    ],
+    "counts": {
+      "A": 34,
+      "B": 24,
+      "C": 26,
+      "D": 15
+    },
+    "pctA": 34,
+    "chi2": 7.4,
+    "sig": false,
+    "unparseable": 1,
+    "api_failures_excluded": 0
+  },
+  "3.5-flash|direct|k0": {
+    "model": "3.5-flash",
+    "mode": "direct",
+    "k": 0,
+    "n": 100,
+    "acc": 50.0,
+    "ci": [
+      40,
+      60
+    ],
+    "counts": {
+      "A": 14,
+      "B": 27,
+      "C": 27,
+      "D": 32
+    },
+    "pctA": 14,
+    "chi2": 7.1,
+    "sig": false,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "3.5-flash|direct|k1": {
+    "model": "3.5-flash",
+    "mode": "direct",
+    "k": 1,
+    "n": 100,
+    "acc": 58.0,
+    "ci": [
+      48,
+      67
+    ],
+    "counts": {
+      "A": 19,
+      "B": 22,
+      "C": 27,
+      "D": 32
+    },
+    "pctA": 19,
+    "chi2": 3.9,
+    "sig": false,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "3.5-flash|direct|k3": {
+    "model": "3.5-flash",
+    "mode": "direct",
+    "k": 3,
+    "n": 100,
+    "acc": 60.0,
+    "ci": [
+      50,
+      69
+    ],
+    "counts": {
+      "A": 22,
+      "B": 22,
+      "C": 27,
+      "D": 29
+    },
+    "pctA": 22,
+    "chi2": 1.5,
+    "sig": false,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "3.5-flash|direct|k5": {
+    "model": "3.5-flash",
+    "mode": "direct",
+    "k": 5,
+    "n": 100,
+    "acc": 62.0,
+    "ci": [
+      52,
+      71
+    ],
+    "counts": {
+      "A": 20,
+      "B": 20,
+      "C": 31,
+      "D": 29
+    },
+    "pctA": 20,
+    "chi2": 4.1,
+    "sig": false,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "3.5-flash|cot|k0": {
+    "model": "3.5-flash",
+    "mode": "cot",
+    "k": 0,
+    "n": 100,
+    "acc": 52.0,
+    "ci": [
+      42,
+      62
+    ],
+    "counts": {
+      "A": 21,
+      "B": 18,
+      "C": 29,
+      "D": 32
+    },
+    "pctA": 21,
+    "chi2": 5.2,
+    "sig": false,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "3.5-flash|cot|k1": {
+    "model": "3.5-flash",
+    "mode": "cot",
+    "k": 1,
+    "n": 100,
+    "acc": 54.0,
+    "ci": [
+      44,
+      63
+    ],
+    "counts": {
+      "A": 29,
+      "B": 19,
+      "C": 26,
+      "D": 26
+    },
+    "pctA": 29,
+    "chi2": 2.2,
+    "sig": false,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "3.5-flash|cot|k3": {
+    "model": "3.5-flash",
+    "mode": "cot",
+    "k": 3,
+    "n": 100,
+    "acc": 60.0,
+    "ci": [
+      50,
+      69
+    ],
+    "counts": {
+      "A": 25,
+      "B": 22,
+      "C": 27,
+      "D": 26
+    },
+    "pctA": 25,
+    "chi2": 0.6,
+    "sig": false,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "3.5-flash|cot|k5": {
+    "model": "3.5-flash",
+    "mode": "cot",
+    "k": 5,
+    "n": 100,
+    "acc": 63.0,
+    "ci": [
+      53,
+      72
+    ],
+    "counts": {
+      "A": 23,
+      "B": 20,
+      "C": 29,
+      "D": 28
+    },
+    "pctA": 23,
+    "chi2": 2.2,
+    "sig": false,
+    "unparseable": 0,
+    "api_failures_excluded": 0
+  },
+  "_generator": "paper_analysis/nshot_grid.py",
+  "_generated_utc": "2026-07-05T13:24:57+00:00",
+  "_note": "predicted re-derived from raw_response via clients.parsing.extract_letter"
+}

@@ -33,7 +33,7 @@ index,file_name,category,question,answer,predicted,raw_response,correct,n_exampl
 89,016744.jpg,Jaw,In which jaw is there evidence of bone loss?,A,A,A,True,0
 90,016744.jpg,Teeth,How many teeth were visualized in the panoramic radiograph?,D,C,C,False,0
 92,016769.jpg,"Teeth,HisT",Which of the following teeth has signs of a root canal treatment?,D,D,D,True,0
-93,016769.jpg,Teeth,Which of the following teeth is identified as a wisdom tooth?,B,A,"The correct answer is **D** (which corresponds to #38 under the FDI World Dental Federation notation system, representing the mandibular left third molar / wisdom tooth).",False,0
+93,016769.jpg,Teeth,Which of the following teeth is identified as a wisdom tooth?,B,D,"The correct answer is **D** (which corresponds to #38 under the FDI World Dental Federation notation system, representing the mandibular left third molar / wisdom tooth).",False,0
 94,016769.jpg,Teeth,How many teeth were visualized in the panoramic radiograph?,C,D,D,False,0
 95,016769.jpg,Jaw,What is the radiographic feature of the maxillary sinus?,B,B,B,True,0
 96,016783.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,C,C,C,True,0
@@ -49,14 +49,14 @@ index,file_name,category,question,answer,predicted,raw_response,correct,n_exampl
 107,016792.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,B,C,C,False,0
 108,016792.jpg,"Teeth,HisT",Which tooth has signs of both a filling and root canal treatment?,A,C,C,False,0
 109,016792.jpg,"HisT,Jaw",Which of the following is a visible structure in the imaging?,D,D,D,True,0
-110,016792.jpg,Jaw,"Can you identify the structure within the bounding box [1377, 36, 1784, 460]?",C,A,"The correct answer is:
+110,016792.jpg,Jaw,"Can you identify the structure within the bounding box [1377, 36, 1784, 460]?",C,B,"The correct answer is:
 
 **B**",False,0
 111,016807.jpg,Jaw,Is there apparent bone loss in the jaw?,D,D,D,True,0
 112,016807.jpg,"Teeth,HisT",Which tooth site has a dental implant present?,B,C,C,False,0
 115,016807.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,A,D,D,False,0
 117,016808.jpg,"HisT,Jaw",Which structures are visible in the imaging?,C,C,C,True,0
-118,016808.jpg,HisT,Which of the following historical interventions is NOT detected?,C,A,"The correct answer is **C** (None of the above, as none of these historical interventions—implants, fillings, or crowns—are detected on this radiograph).",False,0
+118,016808.jpg,HisT,Which of the following historical interventions is NOT detected?,C,C,"The correct answer is **C** (None of the above, as none of these historical interventions—implants, fillings, or crowns—are detected on this radiograph).",True,0
 119,016808.jpg,Jaw,What is observed regarding the bone architecture?,B,D,D,False,0
 120,016808.jpg,"Teeth,SumRec",What is the priority concern for tooth 38?,A,B,B,False,0
 121,016821.jpg,"Teeth,HisT",Which tooth has an implant?,A,A,A,True,0
@@ -77,9 +77,9 @@ index,file_name,category,question,answer,predicted,raw_response,correct,n_exampl
 137,016826.jpg,"Teeth,HisT",Which tooth has a crown and root canal treatment?,D,D,D,True,0
 138,016826.jpg,Teeth,Which tooth is impacted?,A,C,C,False,0
 139,016826.jpg,Jaw,What is observed in the jawbone?,C,C,C,True,0
-140,016826.jpg,Teeth,"Can you identify the object within the bounding box [1749, 638, 1885, 827]?",C,A,"The correct answer is:
+140,016826.jpg,Teeth,"Can you identify the object within the bounding box [1749, 638, 1885, 827]?",C,C,"The correct answer is:
 
-**C**",False,0
+**C**",True,0
 141,016829.jpg,"Teeth,HisT",Which tooth has a filling and root canal treatment?,B,B,B,True,0
 142,016829.jpg,"Teeth,Patho",Which tooth has a periapical lesion (likely abscess)?,A,B,B,False,0
 143,016829.jpg,"HisT,Jaw",Is there any apparent bone loss visible in the radiograph?,C,C,C,True,0

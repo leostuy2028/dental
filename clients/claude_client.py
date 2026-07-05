@@ -1,8 +1,10 @@
 import os
-import re
 import time
 import anthropic
 from dotenv import load_dotenv
+
+from clients.parsing import extract_letter, looks_like_refusal  # noqa: F401 (re-exported)
+from clients.errors import APICallFailed
 
 load_dotenv()
 
@@ -20,37 +22,29 @@ def get_client():
 
 
 def extract_answer(text, cot=False):
-    """Extract A/B/C/D from model response."""
-    if cot:
-        # look for 'Answer: X' at the end of a CoT response
-        match = re.search(r'Answer:\s*([ABCD])', text, re.IGNORECASE)
-        if match:
-            return match.group(1).upper()
-        return None
-
-    text = text.strip().upper()
-    for letter in ["A", "B", "C", "D"]:
-        if text.startswith(letter):
-            return letter
-    for letter in ["A", "B", "C", "D"]:
-        if letter in text:
-            return letter
-    return None
+    """Extract A/B/C/D (shared audit-safe extractor; see clients/parsing.py)."""
+    return extract_letter(text, cot=cot)
 
 
 def call(system, messages, model=MODEL, cot=False, retries=3):
     """
     Send messages to Claude and return (predicted_letter, raw_response).
-    Retries on transient errors with exponential backoff.
+    Raises APICallFailed if all retries are exhausted (the harness then skips the
+    item rather than recording an error string as a model answer).
+
+    Generation is greedy (temperature=0) for reproducibility — the API default is
+    non-zero, so it MUST be set explicitly.
     """
     client = get_client()
     max_tokens = 800 if cot else 16
 
+    last_err = None
     for attempt in range(retries):
         try:
             response = client.messages.create(
                 model=model,
                 max_tokens=max_tokens,
+                temperature=0.0,
                 system=system,
                 messages=messages,
             )
@@ -58,8 +52,9 @@ def call(system, messages, model=MODEL, cot=False, retries=3):
             time.sleep(DELAY_SECONDS)
             return extract_answer(raw, cot=cot), raw
         except Exception as e:
+            last_err = e
             wait = DELAY_SECONDS * (2 ** attempt)
             print(f"  API error (attempt {attempt + 1}/{retries}): {e} — retrying in {wait}s")
             time.sleep(wait)
 
-    return None, "max retries exceeded"
+    raise APICallFailed(f"claude {model}: {retries} retries exhausted: {last_err}")

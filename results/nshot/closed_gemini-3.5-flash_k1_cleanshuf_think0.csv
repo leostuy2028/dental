@@ -21,7 +21,7 @@ index,file_name,category,question,answer,predicted,raw_response,correct,n_exampl
 75,016713.jpg,"Teeth,HisT",Which tooth has a crown restoration?,D,D,D,True,1
 76,016713.jpg,Teeth,How many teeth are visualized in the radiograph?,C,C,C,True,1
 78,016723.jpg,"Teeth,HisT",Which tooth shows signs of root canal treatment?,B,C,C,False,1
-79,016723.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,D,A,"To determine the total number of visualized teeth, we can count the teeth present in each quadrant of the panoramic radiograph:
+79,016723.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,D,C,"To determine the total number of visualized teeth, we can count the teeth present in each quadrant of the panoramic radiograph:
 
 * **Maxillary Right (Upper Right - left side of image):** 
   * Central incisor, lateral incisor, canine, first premolar, second premolar, first molar, second molar, and third molar (with root canal treatment/crown). (8 teeth)
@@ -49,7 +49,7 @@ C",False,1
 93,016769.jpg,Teeth,Which of the following teeth is identified as a wisdom tooth?,B,B,B,True,1
 94,016769.jpg,Teeth,How many teeth were visualized in the panoramic radiograph?,C,C,C,True,1
 95,016769.jpg,Jaw,What is the radiographic feature of the maxillary sinus?,B,B,B,True,1
-96,016783.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,C,A,"To find the number of teeth visualized in the panoramic radiograph, we can count them by quadrants:
+96,016783.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,C,D,"To find the number of teeth visualized in the panoramic radiograph, we can count them by quadrants:
 
 1. **Maxillary Right (Upper Right):** 
    - There is a wisdom tooth (third molar) present and erupted.
@@ -83,14 +83,14 @@ C",False,1
 104,016790.jpg,Teeth,Which tooth is erupted among the wisdom teeth?,C,D,D,False,1
 106,016792.jpg,"Teeth,Patho",Which tooth is suspicious for caries and deep caries?,A,B,B,False,1
 107,016792.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,B,C,C,False,1
-108,016792.jpg,"Teeth,HisT",Which tooth has signs of both a filling and root canal treatment?,A,B,"Based on the panoramic radiograph:
+108,016792.jpg,"Teeth,HisT",Which tooth has signs of both a filling and root canal treatment?,A,A,"Based on the panoramic radiograph:
 
 * Tooth #47 (lower right second molar, located on the left side of the image) has a radiopaque filling in the crown and radiopaque obturation material filling the root canals.
 * Tooth #37 (lower left second molar, located on the right side of the image) has radiopaque filling material in the root canals, but the coronal portion shows a large radiolucent area (cavity/loss of structure) rather than a complete filling.
 
 Therefore, the tooth clearly showing signs of both a filling and root canal treatment is #47.
 
-A",False,1
+A",True,1
 109,016792.jpg,"HisT,Jaw",Which of the following is a visible structure in the imaging?,D,D,D,True,1
 110,016792.jpg,Jaw,"Can you identify the structure within the bounding box [1377, 36, 1784, 460]?",C,A,A,False,1
 111,016807.jpg,Jaw,Is there apparent bone loss in the jaw?,D,D,D,True,1
@@ -110,7 +110,7 @@ A",False,1
 129,016823.jpg,"Patho,SumRec",What is recommended for interproximal caries detection?,B,B,B,True,1
 130,016823.jpg,"HisT,Jaw",Which structures are visible in the radiograph?,B,B,B,True,1
 131,016825.jpg,"Teeth,Jaw",In which jaw are missing teeth regions detected?,C,C,C,True,1
-132,016825.jpg,Teeth,Which wisdom tooth is erupted according to the report?,C,B,"Based on the panoramic radiograph:
+132,016825.jpg,Teeth,Which wisdom tooth is erupted according to the report?,C,C,"Based on the panoramic radiograph:
 
 * Tooth #18 (upper right third molar/wisdom tooth) is present and fully erupted.
 * Tooth #28 (upper left third molar) is missing/absent.
@@ -119,7 +119,7 @@ A",False,1
 
 Therefore, the only erupted wisdom tooth is #18.
 
-**Correct Answer:** **C**",False,1
+**Correct Answer:** **C**",True,1
 133,016825.jpg,"Teeth,Patho",Which tooth exhibits a periapical granuloma?,A,D,D,False,1
 134,016825.jpg,Jaw,In which jaw is bone loss observed?,D,C,C,False,1
 135,016825.jpg,"Teeth,Patho",Which tooth is suspected to have deep caries?,C,C,C,True,1
@@ -128,7 +128,7 @@ Therefore, the only erupted wisdom tooth is #18.
 138,016826.jpg,Teeth,Which tooth is impacted?,A,A,A,True,1
 139,016826.jpg,Jaw,What is observed in the jawbone?,C,C,C,True,1
 140,016826.jpg,Teeth,"Can you identify the object within the bounding box [1749, 638, 1885, 827]?",C,C,C,True,1
-141,016829.jpg,"Teeth,HisT",Which tooth has a filling and root canal treatment?,B,B,"Based on the dental notation system used in the provided examples (Universal Numbering System), let's identify the teeth with root canal treatment and fillings:
+141,016829.jpg,"Teeth,HisT",Which tooth has a filling and root canal treatment?,B,C,"Based on the dental notation system used in the provided examples (Universal Numbering System), let's identify the teeth with root canal treatment and fillings:
 
 * Looking at the lower right quadrant (on the left side of the radiograph):
   * **Tooth #28** is the lower right second premolar (or **Tooth #45** in the FDI two-digit notation system commonly used internationally). 
@@ -136,7 +136,7 @@ Therefore, the only erupted wisdom tooth is #18.
 
 Therefore, corresponding to FDI tooth #45:
 
-**C**",True,1
+**C**",False,1
 142,016829.jpg,"Teeth,Patho",Which tooth has a periapical lesion (likely abscess)?,A,B,B,False,1
 143,016829.jpg,"HisT,Jaw",Is there any apparent bone loss visible in the radiograph?,C,B,B,False,1
 144,016829.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,C,B,B,False,1
@@ -147,7 +147,7 @@ Therefore, corresponding to FDI tooth #45:
 149,016836.jpg,Jaw,What is observed in the upper jaw bone architecture?,B,C,C,False,1
 150,016836.jpg,Teeth,How many teeth are visualized in the radiograph?,C,C,C,True,1
 151,016839.jpg,"Teeth,HisT",Which of the following tooth site presents an implant?,B,D,D,False,1
-152,016839.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,A,A,"To determine the total number of teeth (including roots/impacted teeth and implant crowns) visualized in the panoramic radiograph:
+152,016839.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,A,B,"To determine the total number of teeth (including roots/impacted teeth and implant crowns) visualized in the panoramic radiograph:
 
 1. **Maxillary arch (upper jaw - from left to right on the image, which corresponds to the patient's right to left):**
    - Maxillary right third molar (impacted/erupting horizontally): 1
@@ -165,7 +165,7 @@ Therefore, corresponding to FDI tooth #45:
 
 Adding these together gives approximately **28** distinct visible natural teeth (including fully impacted, partially erupted, and crowned teeth, excluding the separate dental implant fixtures themselves). 
 
-**Correct Answer:** **B**",True,1
+**Correct Answer:** **B**",False,1
 153,016839.jpg,"Teeth,HisT",Which tooth has a crown restoration?,A,B,B,False,1
 154,016839.jpg,"Teeth,Patho",Which of the following teeth is suspected to have caries?,D,C,C,False,1
 155,016839.jpg,"HisT,Jaw",Which of the following structures are visible in the imaging?,D,D,D,True,1

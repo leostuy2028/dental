@@ -10,7 +10,7 @@ Therefore, missing tooth regions are detected in both the upper and lower arches
 
 **Answer: B**",False,2
 57,016694.jpg,"HisT,Jaw",Which structures are visible in the radiograph?,A,A,A,True,3
-59,016694.jpg,Teeth,How many teeth are visualized in the radiograph?,D,B,"Based on the examination of the panoramic radiograph, we can count the natural teeth/restored teeth (excluding the dental implant):
+59,016694.jpg,Teeth,How many teeth are visualized in the radiograph?,D,D,"Based on the examination of the panoramic radiograph, we can count the natural teeth/restored teeth (excluding the dental implant):
 
 1. **Upper right quadrant (Patient's upper right):** 
    - Tooth 17 (molar with crown)
@@ -43,21 +43,21 @@ Counting the total visualized dental structures (excluding the isolated implant 
 - Lower arch: 14 teeth
 - Total = 21 teeth
 
-Therefore, the correct answer is **D**.",False,5
+Therefore, the correct answer is **D**.",True,5
 60,016694.jpg,"Teeth,Patho",Which tooth has a periapical lesion?,C,A,A,False,5
 61,016694.jpg,Jaw,Is there apparent bone loss in the jaw?,C,B,B,False,5
 62,016708.jpg,"Teeth,HisT",Which tooth shows evidence of a crown restoration and root canal treatment?,D,D,D,True,5
-63,016708.jpg,"Teeth,HisT",Which tooth is described as having an implant restoration?,C,B,"Based on the panoramic radiograph showing implant fixtures located in both the upper right quadrant (tooth position #15) and the lower right quadrant (tooth positions #45, #46, #47):
+63,016708.jpg,"Teeth,HisT",Which tooth is described as having an implant restoration?,C,C,"Based on the panoramic radiograph showing implant fixtures located in both the upper right quadrant (tooth position #15) and the lower right quadrant (tooth positions #45, #46, #47):
 
 The matching option that identifies dental implant restorations present is **C** (which includes implants at #45 and #47).
 
-Answer: C",False,5
+Answer: C",True,5
 64,016708.jpg,"Teeth,Patho",Which tooth is suspected to have a periapical granuloma?,C,D,D,False,5
 65,016708.jpg,"Patho,Jaw",Which of the following is a finding in the maxillary sinuses?,C,C,C,True,1
 66,016708.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,D,D,D,True,5
-67,016712.jpg,"Teeth,Jaw",What is the status of bone loss in the jaw according to the report?,A,B,"Based on the examination of the panoramic X-ray, the bone height remains within normal anatomical levels relative to the cementoenamel junctions (CEJ) of the teeth.
+67,016712.jpg,"Teeth,Jaw",What is the status of bone loss in the jaw according to the report?,A,A,"Based on the examination of the panoramic X-ray, the bone height remains within normal anatomical levels relative to the cementoenamel junctions (CEJ) of the teeth.
 
-Answer: A",False,2
+Answer: A",True,2
 68,016712.jpg,SumRec,Which of the following is a preventive measure recommended in the report?,B,B,B,True,0
 69,016712.jpg,"HisT,Jaw",Which structures are visible in the radiograph?,C,C,C,True,3
 70,016712.jpg,"Teeth,SumRec",What is the priority concern regarding tooth 37?,B,B,B,True,1
@@ -67,7 +67,7 @@ Answer: A",False,2
 75,016713.jpg,"Teeth,HisT",Which tooth has a crown restoration?,D,D,D,True,5
 76,016713.jpg,Teeth,How many teeth are visualized in the radiograph?,C,D,D,False,5
 78,016723.jpg,"Teeth,HisT",Which tooth shows signs of root canal treatment?,B,C,C,False,5
-79,016723.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,D,A,"To determine the number of teeth visualized in the panoramic radiograph, we can count them by quadrants:
+79,016723.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,D,D,"To determine the number of teeth visualized in the panoramic radiograph, we can count them by quadrants:
 
 1. **Upper Right Quadrant (Patient's Maxillary Right - Left side of image):** 
    * Teeth present: 17, 16 (with restoration), 15, 14, 13, 12, 11 (7 teeth). Note: Tooth 18 (third molar) is missing.
@@ -80,7 +80,7 @@ Answer: A",False,2
 
 Total number of visualized teeth: 7 + 8 + 7 + 7 = 29 teeth.
 
-D",False,5
+D",True,5
 80,016723.jpg,Jaw,What is noted regarding the bone architecture?,C,C,C,True,5
 81,016723.jpg,Jaw,What is observed in the maxillary sinuses?,C,C,C,True,5
 82,016726.jpg,Teeth,Which of the following teeth are impacted wisdom teeth according to the report?,D,D,D,True,5
@@ -93,7 +93,7 @@ D",False,5
 90,016744.jpg,Teeth,How many teeth were visualized in the panoramic radiograph?,D,C,C,False,5
 92,016769.jpg,"Teeth,HisT",Which of the following teeth has signs of a root canal treatment?,D,C,C,False,5
 93,016769.jpg,Teeth,Which of the following teeth is identified as a wisdom tooth?,B,C,C,False,5
-94,016769.jpg,Teeth,How many teeth were visualized in the panoramic radiograph?,C,A,"To find the number of teeth visualized in the panoramic radiograph, we can count them starting from the upper right quadrant to the upper left, and then from the lower left to the lower right:
+94,016769.jpg,Teeth,How many teeth were visualized in the panoramic radiograph?,C,C,"To find the number of teeth visualized in the panoramic radiograph, we can count them starting from the upper right quadrant to the upper left, and then from the lower left to the lower right:
 
 1. **Maxilla (Upper Arch):**
    * Upper right quadrant has teeth present up to the second molar (#17). Tooth #18 (upper right third molar/wisdom tooth) is missing/not present. (7 teeth)
@@ -107,7 +107,7 @@ D",False,5
 
 Adding them together, there are 28 visualized teeth in this radiograph.
 
-**Correct Answer:** **C**",False,5
+**Correct Answer:** **C**",True,5
 95,016769.jpg,Jaw,What is the radiographic feature of the maxillary sinus?,B,B,B,True,5
 96,016783.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,C,C,C,True,5
 97,016783.jpg,Teeth,What is the status of the wisdom teeth in the radiograph?,D,C,C,False,5
@@ -122,18 +122,18 @@ Adding them together, there are 28 visualized teeth in this radiograph.
 107,016792.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,B,C,C,False,5
 108,016792.jpg,"Teeth,HisT",Which tooth has signs of both a filling and root canal treatment?,A,A,A,True,5
 109,016792.jpg,"HisT,Jaw",Which of the following is a visible structure in the imaging?,D,D,D,True,3
-110,016792.jpg,Jaw,"Can you identify the structure within the bounding box [1377, 36, 1784, 460]?",C,B,"Based on the standard anatomical regions in the provided panoramic radiograph, the structure located on the lower right side of the image (corresponding to the patient's right mandibular region, which appears on the left side of the X-ray scan) is the mandibular canal.
+110,016792.jpg,Jaw,"Can you identify the structure within the bounding box [1377, 36, 1784, 460]?",C,A,"Based on the standard anatomical regions in the provided panoramic radiograph, the structure located on the lower right side of the image (corresponding to the patient's right mandibular region, which appears on the left side of the X-ray scan) is the mandibular canal.
 
 Answer: A",False,5
-111,016807.jpg,Jaw,Is there apparent bone loss in the jaw?,D,B,"Based on the provided panoramic radiograph, there is noticeable generalized horizontal bone loss (reduction of the alveolar crest height relative to the cementoenamel junctions of the teeth). 
+111,016807.jpg,Jaw,Is there apparent bone loss in the jaw?,D,A,"Based on the provided panoramic radiograph, there is noticeable generalized horizontal bone loss (reduction of the alveolar crest height relative to the cementoenamel junctions of the teeth). 
 
 **Answer: A**",False,5
 112,016807.jpg,"Teeth,HisT",Which tooth site has a dental implant present?,B,B,B,True,5
 115,016807.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,A,A,A,True,5
 117,016808.jpg,"HisT,Jaw",Which structures are visible in the imaging?,C,C,C,True,3
-118,016808.jpg,HisT,Which of the following historical interventions is NOT detected?,C,A,"The correct answer is **C** (None of the above, as there are no implants, fillings, or crowns visible on this panoramic radiograph).
+118,016808.jpg,HisT,Which of the following historical interventions is NOT detected?,C,C,"The correct answer is **C** (None of the above, as there are no implants, fillings, or crowns visible on this panoramic radiograph).
 
-**C**",False,0
+**C**",True,0
 119,016808.jpg,Jaw,What is observed regarding the bone architecture?,B,D,D,False,5
 120,016808.jpg,"Teeth,SumRec",What is the priority concern for tooth 38?,A,B,B,False,1
 121,016821.jpg,"Teeth,HisT",Which tooth has an implant?,A,A,"To determine the correct tooth number, we use the FDI World Dental Federation notation system, which is standard in these radiological questions:
@@ -161,9 +161,9 @@ The implant is located at the site of tooth **#46** (and #47). Therefore, option
 123,016821.jpg,"Teeth,HisT",How many teeth have signs of crowns?,C,C,C,True,5
 124,016821.jpg,"Teeth,Patho",Which tooth has signs of a periapical granuloma?,A,D,D,False,5
 126,016823.jpg,"Teeth,Patho",Which tooth is suspected to have an impacted wisdom tooth?,A,A,A,True,5
-127,016823.jpg,"Teeth,HisT",How many teeth are observed with crowns?,C,A,"The correct answer is:
+127,016823.jpg,"Teeth,HisT",How many teeth are observed with crowns?,C,C,"The correct answer is:
 
-**C**",False,5
+**C**",True,5
 128,016823.jpg,"Teeth,SumRec",Which tooth requires endodontic evaluation?,D,D,D,True,1
 129,016823.jpg,"Patho,SumRec",What is recommended for interproximal caries detection?,B,B,B,True,1
 130,016823.jpg,"HisT,Jaw",Which structures are visible in the radiograph?,B,B,B,True,3
@@ -181,18 +181,18 @@ The implant is located at the site of tooth **#46** (and #47). Therefore, option
 142,016829.jpg,"Teeth,Patho",Which tooth has a periapical lesion (likely abscess)?,A,D,D,False,5
 143,016829.jpg,"HisT,Jaw",Is there any apparent bone loss visible in the radiograph?,C,B,B,False,3
 144,016829.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,C,C,C,True,5
-145,016829.jpg,"Teeth,Patho",Which tooth exhibits a periapical lesion?,C,B,"Based on the panoramic radiograph, tooth 43 (lower right canine, which has undergone endodontic treatment with a visible root canal filling) displays a prominent radiolucency around its apex, indicating a periapical lesion.
+145,016829.jpg,"Teeth,Patho",Which tooth exhibits a periapical lesion?,C,C,"Based on the panoramic radiograph, tooth 43 (lower right canine, which has undergone endodontic treatment with a visible root canal filling) displays a prominent radiolucency around its apex, indicating a periapical lesion.
 
-Answer: C",False,5
+Answer: C",True,5
 146,016836.jpg,Teeth,Which of the following is TRUE regarding the wisdom teeth?,D,D,D,True,5
 147,016836.jpg,"HisT,Jaw",Which structure is visible bilaterally in the maxilla?,A,D,D,False,3
 148,016836.jpg,Teeth,What procedure has been done on tooth 46?,C,C,C,True,5
 149,016836.jpg,Jaw,What is observed in the upper jaw bone architecture?,B,C,C,False,5
 150,016836.jpg,Teeth,How many teeth are visualized in the radiograph?,C,C,C,True,5
-151,016839.jpg,"Teeth,HisT",Which of the following tooth site presents an implant?,B,A,"The correct answer is:
+151,016839.jpg,"Teeth,HisT",Which of the following tooth site presents an implant?,B,B,"The correct answer is:
 
-B",False,5
-152,016839.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,A,A,"To find the total number of visualized teeth (including remaining natural teeth/roots and implants):
+B",True,5
+152,016839.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,A,B,"To find the total number of visualized teeth (including remaining natural teeth/roots and implants):
 
 1. **Upper Arch (Maxilla):** 
    - Left side (patient's right - far left on x-ray): wisdom tooth/third molar is present (1), implant/crown in the premolar area (2), followed by 11 other visible teeth/restorations across to the patient's left side (far right on x-ray), including the upper left wisdom tooth which is erupted/present.
@@ -204,8 +204,8 @@ B",False,5
 
 3. **Total:** 14 (upper) + 14 (lower) = 28 teeth/fixtures visualized.
 
-Answer: **B**",True,5
-153,016839.jpg,"Teeth,HisT",Which tooth has a crown restoration?,A,B,"Based on the examination of the panoramic X-ray:
+Answer: **B**",False,5
+153,016839.jpg,"Teeth,HisT",Which tooth has a crown restoration?,A,C,"Based on the examination of the panoramic X-ray:
 
 * **Tooth #47** (lower right second molar) has a radiopaque crown restoration. 
 * Tooth #46 is missing and has been replaced with a dental implant and implant-supported crown.
