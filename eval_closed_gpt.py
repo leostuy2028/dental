@@ -74,6 +74,24 @@ def print_summary(df, model, k, mode):
 
 def run(model, k, results_path, data_path, mode="faithful", cot=False,
         limit=None, start=0, reasoning_effort="none", meta=None, detail="low"):
+    # HARD-ENFORCE the benchmark-faithful config for the reproduction path. The faithful
+    # prompt only reproduces the paper if the generation settings also match
+    # config_mmoral_opg.json (temp=0, max_tokens=8192, img_detail=high). We force image detail
+    # to the benchmark value and refuse a reasoning model (which cannot use temp=0/max_tokens
+    # and so would silently deviate). temperature + max_tokens are pinned in gpt_client.call.
+    if mode == "faithful":
+        if gpt_client.is_reasoning_model(model):
+            raise SystemExit(
+                f"faithful reproduction requires a non-reasoning model (temp=0, "
+                f"max_tokens={gpt_client.BENCHMARK_MAX_TOKENS}); got reasoning model {model!r}")
+        if detail != gpt_client.BENCHMARK_IMG_DETAIL:
+            print(f"[faithful] forcing image detail {detail!r} -> "
+                  f"{gpt_client.BENCHMARK_IMG_DETAIL!r} (benchmark config)")
+            detail = gpt_client.BENCHMARK_IMG_DETAIL
+        print(f"[faithful] enforced benchmark config: temperature="
+              f"{gpt_client.BENCHMARK_TEMPERATURE}, max_tokens={gpt_client.BENCHMARK_MAX_TOKENS}, "
+              f"img_detail={gpt_client.BENCHMARK_IMG_DETAIL}  (source: config_mmoral_opg.json)")
+
     full_df = pd.read_parquet(data_path)
 
     if k > 0:
@@ -142,7 +160,11 @@ def run(model, k, results_path, data_path, mode="faithful", cot=False,
                     + (f" reasoning={reasoning_effort}" if gpt_client.is_reasoning_model(model) else ""))
     meta.setdefault("dataset", os.path.basename(data_path))
     meta.setdefault("image_detail", detail)
-    meta.setdefault("gen_settings", "temperature=0 max_tokens=8192" if not gpt_client.is_reasoning_model(model)
+    meta.setdefault("gen_settings",
+                    (f"temperature={gpt_client.BENCHMARK_TEMPERATURE} "
+                     f"max_tokens={gpt_client.BENCHMARK_MAX_TOKENS} img_detail={detail} "
+                     f"[benchmark-faithful, source config_mmoral_opg.json]")
+                    if not gpt_client.is_reasoning_model(model)
                     else f"reasoning_effort={reasoning_effort} max_completion_tokens=2000")
     meta["n"] = int(len(final))
     meta["accuracy_pct"] = round(float(final["correct"].mean() * 100), 2)

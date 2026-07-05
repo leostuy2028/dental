@@ -24,6 +24,21 @@ load_dotenv()
 MODEL = "gpt-4o-2024-11-20"
 DELAY_SECONDS = 0.5
 
+# ---------------------------------------------------------------------------
+# BENCHMARK-FAITHFUL generation config — HARD-ENFORCED, do not vary for a reproduction.
+# Source: MMOral-Bench-EvalKit/config_mmoral_opg.json (the documented `run.py` path used to
+# score the paper's leaderboard; github.com/isbrycee/OralGPT). Verified verbatim 2026-07-05:
+#   temperature = 0        (deterministic; required for our paired / shuffle analyses too)
+#   max_tokens  = 8192     (the config overrides VLMEvalKit's smaller default)
+#   img_detail  = "high"
+# NOTE: the benchmark's *standalone* side-script eval_MMOral-OPG-Closed.py instead uses
+# temperature=0.2 with no max_tokens — a non-reproducible path we deliberately do NOT follow.
+# These constants are the single source of truth; the faithful harness asserts against them.
+# ---------------------------------------------------------------------------
+BENCHMARK_TEMPERATURE = 0.0
+BENCHMARK_MAX_TOKENS = 8192
+BENCHMARK_IMG_DETAIL = "high"
+
 _client = None
 
 
@@ -67,10 +82,9 @@ def call(system, user_content, model=None, cot=False, reasoning_effort="none",
         kwargs["max_completion_tokens"] = 4000 if cot else 2000
         kwargs["reasoning_effort"] = reasoning_effort
     else:
-        # max_tokens=8192 + temperature=0 match the authors' config_mmoral_opg.json
-        # (which overrides the vendored wrapper's 2048 default).
-        kwargs["max_tokens"] = 8192
-        kwargs["temperature"] = 0.0
+        # benchmark-faithful, single-sourced (see constants above) — never hand-tune here
+        kwargs["max_tokens"] = BENCHMARK_MAX_TOKENS
+        kwargs["temperature"] = BENCHMARK_TEMPERATURE
 
     last_err = None
     for attempt in range(retries):
