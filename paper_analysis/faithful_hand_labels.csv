@@ -1,0 +1,10 @@
+index,true_letter,note
+20,A,"model wrote '#37 (Option A)'; #37 is option A -> chose A"
+42,B,"model wrote '#46 (Option B)' -> chose B"
+56,A,"model wrote 'upper jaw (A)' -> chose A"
+192,B,"model wrote 'localized bone loss (B)' -> chose B"
+343,A,"model wrote '#36 (Option A)' -> chose A"
+384,,"refusal: 'I cannot definitively determine the correct answer' -> no letter chosen"
+409,C,"model wrote '#36 (Option C)' -> chose C"
+423,B,"model wrote 'tooth #37 (Option B)' -> chose B"
+424,A,"model wrote 'Option A: #35, 36, 45, 46 is the correct answer' -> chose A"
