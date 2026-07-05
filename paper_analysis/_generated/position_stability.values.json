@@ -1,0 +1,17 @@
+{
+  "GPT-4o": {
+    "n": 453,
+    "count": {
+      "content": 278,
+      "letter": 77,
+      "neither": 98
+    },
+    "pct": {
+      "content": 61.4,
+      "letter": 17.0,
+      "neither": 21.6
+    }
+  },
+  "_generator": "paper_analysis/position_stability.py",
+  "_generated_utc": "2026-07-05T02:25:53+00:00"
+}

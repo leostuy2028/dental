@@ -1,0 +1,18 @@
+{
+  "experiment": "E1-gpt4o-shuffle",
+  "paper_section": "§5.3.3",
+  "description": "GPT-4o coax on clean-shuffled (453) — position-robustness (content/letter stability) vs coax-clean",
+  "model": "gpt-4o-2024-11-20",
+  "config": "coax direct k=0",
+  "dataset": "closed_ended_clean_shuffled.parquet",
+  "image_detail": "high",
+  "gen_settings": "temperature=0 max_tokens=8192",
+  "n": 453,
+  "accuracy_pct": 48.34,
+  "refusal_pct": 0.0,
+  "random_fallback_pct": 0.0,
+  "command": "python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt coax --detail high --data data/closed_ended_clean_shuffled.parquet --start 0 --exp E1-gpt4o-shuffle --paper-section §5.3.3 --description GPT-4o coax on clean-shuffled (453) — position-robustness (content/letter stability) vs coax-clean --out results/closed_ended/position_bias/gpt-4o-2024-11-20__coax-direct-k0__clean-shuffled__n453.csv",
+  "code_commit": "91163fb",
+  "generated_utc": "2026-07-05T02:24:54+00:00",
+  "data_file": "gpt-4o-2024-11-20__coax-direct-k0__clean-shuffled__n453.csv"
+}

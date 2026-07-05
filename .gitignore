@@ -32,3 +32,5 @@ results/closed_ended/reproduction/repro.pid
 results/closed_ended/prompt_axis/*.log
 results/closed_ended/prompt_axis/coax.pid
 results/progress_gemini.txt
+results/closed_ended/position_bias/*.log
+results/closed_ended/position_bias/coax_shuf.pid
