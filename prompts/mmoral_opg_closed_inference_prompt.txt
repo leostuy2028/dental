@@ -1,36 +1,52 @@
 MMOral-Bench CLOSED-ENDED (multiple-choice) inference prompt — provenance record
 ================================================================================
-Source: VLMEvalKit, the benchmark's own released evaluation toolkit.
-The MMOral-OPG closed set is scored as a standard ImageMCQDataset; the model-facing
-prompt is built by `ImageMCQDataset.build_prompt`
-(open-compass/VLMEvalKit, vlmeval/dataset/image_mcq.py), fetched 2026-07-04.
+CORRECTED 2026-07-05. An earlier version of this file WRONGLY claimed the closed-ended
+prompt is VLMEvalKit's base `ImageMCQDataset.build_prompt` ("Please select the correct
+answer from the options above."). It is NOT. The MMOral benchmark ships its own eval
+script that overrides the base class with a longer custom instruction. That mistake nearly
+led us to believe our (correct) reproduction prompt was fabricated — recording it here so
+it does not recur.
 
-The paper (arXiv:2509.09254) does NOT print a closed-ended inference prompt in its
-text; it defers to VLMEvalKit. Answer extraction is
-`get_single_choice_prediction` in vlmeval/dataset/utils/mmoral_opg.py, which parses
-the option letter from free-form output and FALLS BACK TO A RANDOM LETTER when it
-cannot parse one (so refusals/garble score as ~25% guesses, not 0).
+TRUE SOURCE (verified verbatim against the file on 2026-07-05):
+  github.com/isbrycee/OralGPT  ->  MMOral-Bench-EvalKit/eval_MMOral-OPG-Closed.py
+This is the paper's OWN evaluation script (arXiv:2509.09254 defers to it). It builds the
+prompt as:
 
-VERBATIM prompt structure (no system persona is added by the base class):
+    options_prompt = 'Options:\n'
+    for i, letter in zip(range(1, 5), ['A','B','C','D']):
+        options_prompt += f"{letter}. {str(row[f'option{i}'])}\n"
+    prompt = (f'Question: {row["question"]}\n{options_prompt}'
+              + 'Please answer the above multiple-choice question by selecting the single '
+                'correct option (A, B, C, or D). If the provided information is insufficient '
+                'to determine a clear answer, please choose the most likely correct option '
+                'based on the available data and your judgment.')
 
-    [image]
-    Hint: {hint}            <- only if a hint field is present (MMOral closed has none)
+VERBATIM prompt sent to the model (no system persona; image is attached separately):
+
     Question: {question}
     Options:
     A. {option1}
     B. {option2}
     C. {option3}
     D. {option4}
-    Please select the correct answer from the options above.
+    Please answer the above multiple-choice question by selecting the single correct option
+    (A, B, C, or D). If the provided information is insufficient to determine a clear answer,
+    please choose the most likely correct option based on the available data and your judgment.
 
-Assembled in code as:
-    if hint is not None:
-        prompt += f'Hint: {hint}\n'
-    prompt += f'Question: {question}\n'
-    if len(options):
-        prompt += options_prompt          # 'Options:\n' + '{key}. {item}\n' per option
-        prompt += 'Please select the correct answer from the options above. \n'
+Two things about this prompt matter for the audit (PAPER_DRAFT §5.2):
+  1. It specifies the TASK ("select the single correct option") but NOT the OUTPUT FORMAT.
+     It never says "output only the letter" / "answer with the letter directly" (unlike
+     VLMEvalKit's own MMMU-Pro / MUIR / VMCBench prompts, which do). It even invites reasoning
+     ("based on the available data and your judgment"). So capable models answer in PROSE.
+  2. Answer extraction is `get_single_choice_prediction` in vlmeval/dataset/utils/mmoral_opg.py
+     (verified verbatim). It parses the option letter from free-form output, keeps the
+     candidate appearing EARLIEST in the text, and FALLS BACK TO A RANDOM LETTER when it cannot
+     parse one. On the prose answers the prompt elicits, it misreads ~1 item in 9 (§5.2).
 
-This file is the reproduction-faithful reference. Our harness's default "house"
-prompt (dental-radiologist persona + "reply with only the letter") DIVERGES from
-this and is documented as such; `prompts/gpt.py` implements both as selectable modes.
+Generation config in the official script: temperature=0.2, no max_tokens. Our reproduction
+(prompts/gpt.py FAITHFUL_BLOCK + clients/gpt_client.py) uses temperature=0 + max_tokens=8192,
+a documented minor deviation; the reproduction still lands inside the paper's GPT-4o CI (§5.1).
+
+Our harness's "coax" prompt (dental-radiologist persona + "output only the letter") DIVERGES
+from this on purpose, to make every answer a bare letter the benchmark's own parser reads
+exactly. `prompts/gpt.py` implements both as selectable modes.

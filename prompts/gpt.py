@@ -23,10 +23,15 @@ prompts/mmoral_opg_closed_inference_prompt.txt.
 """
 
 # ---- faithful: VERBATIM MMOral closed-ended prompt ----
-# Source: VLMEvalKit vlmeval/dataset/mmoral_opg_closed.py :: build_prompt (fetched
-# 2026-07-04). No system prompt; image first; every option rendered via str() so a
-# blank option shows literally "D. nan"; parser gets fixed ['A','B','C','D'].
-# The final instruction below is the benchmark's own text, character-for-character.
+# Source: the benchmark's OWN eval script, MMOral-Bench-EvalKit/eval_MMOral-OPG-Closed.py
+# (github.com/isbrycee/OralGPT), which OVERRIDES VLMEvalKit's base ImageMCQDataset prompt
+# ("Please select the correct answer from the options above.") with the longer custom
+# instruction below. Verified character-for-character against that file 2026-07-05
+# (question header, "Options:" header, period-format "A. " options, no system prompt).
+# NOTE: the official script calls the model at temperature=0.2 with no max_tokens; our
+# reproduction uses temperature=0 + max_tokens=8192 (documented minor deviation). Every
+# option is rendered via str() so a blank option shows literally "D. nan"; parser gets a
+# fixed ['A','B','C','D']. The instruction below is the benchmark's own text, verbatim.
 FAITHFUL_BLOCK = (
     "Question: {question}\n"
     "Options:\n"
