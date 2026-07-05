@@ -33,4 +33,8 @@ results/closed_ended/prompt_axis/*.log
 results/closed_ended/prompt_axis/coax.pid
 results/progress_gemini.txt
 results/closed_ended/position_bias/*.log
-results/closed_ended/position_bias/coax_shuf.pid
+results/closed_ended/position_bias/*.pid
+results/progress_claude.txt
+
+# throwaway smoke-test outputs from harness reorg checks (not ledgered)
+results/_pilot/*smoke*

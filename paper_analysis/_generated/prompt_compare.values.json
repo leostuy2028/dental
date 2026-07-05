@@ -1,5 +1,5 @@
 {
-  "GPT-4o": {
+  "GPT-4o (coax)": {
     "n": 453,
     "count": {
       "content": 278,
@@ -15,22 +15,22 @@
     "acc_shuffled": 48.3,
     "acc_drop": 5.3
   },
-  "Gemini-2.5-flash": {
+  "GPT-4o (faithful)": {
     "n": 453,
     "count": {
-      "content": 280,
-      "letter": 55,
-      "neither": 118
+      "content": 273,
+      "letter": 68,
+      "neither": 112
     },
     "pct": {
-      "content": 61.8,
-      "letter": 12.1,
-      "neither": 26.0
+      "content": 60.3,
+      "letter": 15.0,
+      "neither": 24.7
     },
-    "acc_clean": 43.5,
-    "acc_shuffled": 43.3,
-    "acc_drop": 0.2
+    "acc_clean": 44.4,
+    "acc_shuffled": 37.1,
+    "acc_drop": 7.3
   },
   "_generator": "paper_analysis/position_stability.py",
-  "_generated_utc": "2026-07-05T12:08:15+00:00"
+  "_generated_utc": "2026-07-05T12:08:17+00:00"
 }

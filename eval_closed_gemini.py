@@ -1,10 +1,12 @@
 import os
 import random
 import argparse
+import sys
 import pandas as pd
 from dataio.data_loader import load_closed
 from prompts.gemini import build_prompt
 from clients import gemini_client
+from utils import results_io
 
 POOL_SIZE = 50
 
@@ -42,7 +44,7 @@ def print_summary(df, model, k):
 
 
 def run(model, k, results_path, data_path="data/closed_ended.parquet",
-        limit=None, start=0, thinking_budget=None, cot=False, mode="house"):
+        limit=None, start=0, thinking_budget=None, cot=False, mode="house", meta=None):
     # route the client at the requested model (default gemini-2.0-flash)
     gemini_client.MODEL = model
 
@@ -106,8 +108,16 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet",
             pd.concat([done, pd.DataFrame(results)], ignore_index=True).to_csv(results_path, index=False)
 
     final = pd.concat([done, pd.DataFrame(results)], ignore_index=True)
-    final.to_csv(results_path, index=False)
+    meta = dict(meta or {})
+    meta.setdefault("model", model)
+    meta.setdefault("config", f"{mode} {'cot' if cot else 'direct'} think={thinking_budget}")
+    meta.setdefault("dataset", os.path.basename(data_path))
+    meta["n"] = int(len(final))
+    meta["accuracy_pct"] = round(float(final["correct"].mean() * 100), 2)
+    meta.setdefault("command", "python " + " ".join(sys.argv))
+    results_io.write_results(final, results_path, meta)
     print_summary(final, model, k)
+    print(f"Wrote: {results_path} + {results_path}.meta.json")
 
 
 if __name__ == "__main__":
@@ -123,6 +133,9 @@ if __name__ == "__main__":
     parser.add_argument("--cot", action="store_true",
                         help="visible per-option chain-of-thought prompt (parse 'Answer: X')")
     parser.add_argument("--prompt", default="house", choices=["house", "coax"])
+    parser.add_argument("--exp", default="")
+    parser.add_argument("--paper-section", default="")
+    parser.add_argument("--description", default="")
     args = parser.parse_args()
 
     if args.out is None:
@@ -132,4 +145,5 @@ if __name__ == "__main__":
         args.out = f"results/closed_{args.model}_{args.k}shot_{tag}{cot_tag}{think_tag}.csv"
 
     run(model=args.model, k=args.k, results_path=args.out, data_path=args.data,
-        limit=args.limit, start=args.start, thinking_budget=args.thinking_budget, cot=args.cot, mode=args.prompt)
+        limit=args.limit, start=args.start, thinking_budget=args.thinking_budget, cot=args.cot, mode=args.prompt,
+        meta={"experiment": args.exp, "paper_section": args.paper_section, "description": args.description})

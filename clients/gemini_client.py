@@ -8,8 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MODEL = "gemini-2.0-flash"
-DELAY_SECONDS = 4  # gemini-2.0-flash is NOT on the free tier (quota 0) — requires billing enabled.
-                   # On paid tier RPM is high; this delay can be lowered to speed up long runs.
+DELAY_SECONDS = 0  # no artificial pacing; rely on the retry/backoff below if rate-limited.
 
 _client = None
 

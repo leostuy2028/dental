@@ -1,10 +1,12 @@
 import os
+import sys
 import random
 import argparse
 import pandas as pd
 from dataio.data_loader import load_closed
 from prompts.claude import build_prompt
 from clients.claude_client import call
+from utils import results_io
 
 POOL_SIZE = 50
 TEST_START = 50
@@ -61,14 +63,23 @@ def print_summary(df, model, k):
         print(f"  {cat:<40} {acc:.1f}%  (n={n})")
 
 
-def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False, mode="house"):
+def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False, mode="house",
+        limit=None, start=0, meta=None):
     full_df = pd.read_parquet(data_path)
-    pool_df = full_df.iloc[:POOL_SIZE].copy()
-    test_df = full_df.iloc[TEST_START:TEST_END].copy()
+    # k==0 scores the whole dataset (0-shot); use --start/--limit for a sub-slice.
+    if k > 0:
+        pool_df = full_df.iloc[:POOL_SIZE].copy()
+        test_df = full_df.iloc[POOL_SIZE:].copy()
+    else:
+        pool_df = full_df.iloc[:0].copy()
+        test_df = full_df.copy()
+    end = start + limit if limit else None
+    test_df = test_df.iloc[start:end]
 
-    prove_no_contamination(pool_df, test_df)
+    if len(pool_df):
+        prove_no_contamination(pool_df, test_df)
 
-    os.makedirs("results", exist_ok=True)
+    os.makedirs(os.path.dirname(results_path) or "results", exist_ok=True)
 
     if os.path.exists(results_path):
         done = pd.read_csv(results_path)
@@ -107,15 +118,23 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False
         line = f"[{completed}/{len(test_df)}] {status} | {row['category']} | acc so far: {running_acc:.1f}%"
         print(line)
 
-        with open("results/progress.txt", "w") as f:
+        with open("results/progress_claude.txt", "w") as f:
             f.write(line + "\n")
 
         if len(results) % 10 == 0:
             pd.concat([done, pd.DataFrame(results)], ignore_index=True).to_csv(results_path, index=False)
 
     final = pd.concat([done, pd.DataFrame(results)], ignore_index=True)
-    final.to_csv(results_path, index=False)
+    meta = dict(meta or {})
+    meta.setdefault("model", model)
+    meta.setdefault("config", f"{mode} {'cot' if cot else 'direct'} k={k}")
+    meta.setdefault("dataset", os.path.basename(data_path))
+    meta["n"] = int(len(final))
+    meta["accuracy_pct"] = round(float(final["correct"].mean() * 100), 2)
+    meta.setdefault("command", "python " + " ".join(sys.argv))
+    results_io.write_results(final, results_path, meta)
     print_summary(final, model, k)
+    print(f"\nWrote: {results_path}\n   +   {results_path}.meta.json")
 
 
 if __name__ == "__main__":
@@ -126,6 +145,11 @@ if __name__ == "__main__":
     parser.add_argument("--data", default="data/closed_ended.parquet")
     parser.add_argument("--cot", action="store_true")
     parser.add_argument("--prompt", default="house", choices=["house", "coax"])
+    parser.add_argument("--start", type=int, default=0)
+    parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--exp", default="")
+    parser.add_argument("--paper-section", default="")
+    parser.add_argument("--description", default="")
     args = parser.parse_args()
 
     if args.out is None:
@@ -133,4 +157,6 @@ if __name__ == "__main__":
         cot_tag = "_cot" if args.cot else ""
         args.out = f"results/closed_{args.model.split('-')[1]}_{args.k}shot_{tag}{cot_tag}.csv"
 
-    run(model=args.model, k=args.k, results_path=args.out, data_path=args.data, cot=args.cot, mode=args.prompt)
+    meta = {"experiment": args.exp, "paper_section": args.paper_section, "description": args.description}
+    run(model=args.model, k=args.k, results_path=args.out, data_path=args.data, cot=args.cot,
+        mode=args.prompt, start=args.start, limit=args.limit, meta=meta)
