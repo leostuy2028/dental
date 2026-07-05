@@ -28,9 +28,11 @@ prompts/mmoral_opg_closed_inference_prompt.txt.
 # ("Please select the correct answer from the options above.") with the longer custom
 # instruction below. Verified character-for-character against that file 2026-07-05
 # (question header, "Options:" header, period-format "A. " options, no system prompt).
-# NOTE: the official script calls the model at temperature=0.2 with no max_tokens; our
-# reproduction uses temperature=0 + max_tokens=8192 (documented minor deviation). Every
-# option is rendered via str() so a blank option shows literally "D. nan"; parser gets a
+# Generation config matches the DOCUMENTED path (config_mmoral_opg.json): temperature=0,
+# max_tokens=8192, img_detail=high (pinned in clients/gpt_client.py). Blank options are
+# rendered the way the benchmark renders them: MMOral_OPG_CLOSED.post_build does
+# fillna('None'), so a missing option is shown to the model as the literal "None"
+# (e.g. "D. None"), NOT as str(NaN)="nan". We match that via _opt() below. The parser gets a
 # fixed ['A','B','C','D']. The instruction below is the benchmark's own text, verbatim.
 FAITHFUL_BLOCK = (
     "Question: {question}\n"
@@ -98,13 +100,22 @@ def _text_part(text):
     return {"type": "text", "text": text}
 
 
+def _opt(v):
+    """Render one option exactly as the benchmark does. MMOral_OPG_CLOSED.post_build fills a
+    blank/NaN option with the string 'None' before build_prompt, so the model sees "None"
+    (a readable "none of the above" choice), not str(NaN)="nan". Match that byte-for-byte."""
+    if v is None or (isinstance(v, float) and v != v):  # Python None or float NaN
+        return "None"
+    return str(v)
+
+
 def _fmt(row, template):
-    # str() on every option — matches VLMEvalKit exactly, so a blank (NaN) option
-    # renders as the literal "nan" (faithful to mmoral_opg_closed.build_prompt).
+    # options rendered benchmark-faithfully via _opt (blank -> "None"); on the clean set
+    # (no blanks) this is a no-op, so only the 38 blank-option items are affected.
     return template.format(
         question=row["question"],
-        option1=str(row["option1"]), option2=str(row["option2"]),
-        option3=str(row["option3"]), option4=str(row["option4"]),
+        option1=_opt(row["option1"]), option2=_opt(row["option2"]),
+        option3=_opt(row["option3"]), option4=_opt(row["option4"]),
     )
 
 

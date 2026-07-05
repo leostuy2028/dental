@@ -1,0 +1,39 @@
+index,category,answer_key,correct_is_blank,blank_position,question,A,B,C,D
+41,HisT,A,True,A,What previous dental treatment has been done on tooth 24?,None,Dental crown,Dental implant,Root canal treatment
+45,Teeth,B,False,D,Which region has a missing tooth?,Lower side,Upper side,Both sides,None
+48,Jaw,B,False,A,What type of bone loss is detected in the upper jaw?,None,Slight,Moderate,Severe
+50,"Teeth,Patho",D,True,D,Which tooth shows signs of a periapical granuloma?,#15,#16,#17,None
+58,"Teeth,Patho",D,True,D,Which tooth shows signs of caries?,#44,#45,#46,None
+73,"Teeth,Patho",D,True,D,Which tooth shows signs of a periapical granuloma?,#17,#27,#37,None
+77,"Teeth,Patho",D,True,D,Which tooth is suspicious for a periapical granuloma?,#16,#17,#18,None
+87,"Teeth,Patho",D,True,D,Which tooth shows signs of a periapical abscess?,#22,#23,#24,None
+91,"Jaw,SumRec",C,True,C,What necessitates further investigation in the upper jaw?,Impacted wisdom teeth,Bone loss,None,Caries
+105,"Teeth,Patho",D,True,D,Which tooth has a sign of caries?,#14,#24,#34,None
+113,"Teeth,Patho",D,True,D,Which tooth is suspected to have caries?,#13,#14,#15,None
+114,"Teeth,Patho",D,True,D,Which tooth shows signs of a periapical granuloma?,#23,#24,#25,None
+116,"Teeth,Patho",D,True,D,Which tooth is suspicious for deep caries?,#26,#36,#38,None
+125,Jaw,D,True,D,Which jaw shows signs of bone loss?,Upper jaw,Lower jaw,Both jaws,None
+162,"Teeth,Jaw",B,False,D,Which jaw has a missing tooth region detected?,Upper jaw,Lower jaw,Both jaws,None
+175,"Teeth,Patho",D,True,D,Which tooth shows signs of a suspected periapical granuloma?,#36,#26,#46,None
+188,"Teeth,HisT",D,True,D,Which tooth shows signs of a filling?,#14,#26,#36,None
+199,"Teeth,HisT",D,True,D,Which tooth has a filling?,#42,#43,#44,None
+204,"HisT,Jaw",B,False,D,What is visible in the bilateral structures of the mandible?,Sinuses,Canals,Foramina,None
+205,"Teeth,HisT",D,True,D,How many teeth have signs of fillings?,4,6,8,None
+230,"Teeth,Patho,HisT,SumRec",D,True,D,Which tooth shows signs of deep caries and requires immediate restorative intervention?,#18,#28,#38,None
+240,"Patho,Jaw",D,True,D,Which jaw is suspected to have bone loss?,Lower jaw,Upper jaw,Both jaws,None
+243,"HisT,Jaw",B,False,D,What is visible in the imaging of the mandible?,Maxillary sinuses,Mandibular canals,Nasal cavities,None
+288,HisT,D,True,D,Which of the following historical interventions is NOT present in the radiograph?,Filling,Implant,Crown,None
+297,"Teeth,Patho",D,True,D,Which tooth is suspected to have caries?,#35,#34,#37,None
+325,"Teeth,Patho",C,False,D,How many wisdom teeth are suspected to be erupted in the radiograph?,2,3,4,None
+327,Jaw,A,True,A,Is there any apparent bone loss observed in the jaw?,None,Mild,Moderate,Severe
+337,"Teeth,HisT",D,True,D,Which tooth has signs of a filling?,#13,#44,#15,None
+391,"Teeth,Patho",D,True,D,Which tooth exhibits signs of a periapical granuloma?,#47,#48,#38,None
+396,"Teeth,Patho",D,True,D,Which tooth is suspected to have caries?,#34,#44,#54,None
+435,"Teeth,Patho",D,True,D,Which tooth shows signs of suspected caries?,#11,#13,#15,None
+440,Teeth,D,True,D,Which of the following teeth is impacted?,#18,#28,#38,None
+444,"Teeth,Patho",D,True,D,Which tooth shows evidence of a periapical granuloma?,#36,#37,#38,None
+446,HisT,D,True,D,What historical intervention is noted in the report?,Crown,Implant,Filling,None
+455,"Teeth,HisT",D,True,D,Which of the following teeth is suspicious for a filling?,#34,#35,#36,None
+456,Jaw,D,True,D,In which jaw is suspicious bone loss observed?,Upper jaw,Lower jaw,Both jaws,None
+477,"Teeth,Patho",D,True,D,Which tooth shows signs of a periapical granuloma?,#45,#46,#47,None
+486,Teeth,C,True,C,Which wisdom tooth is impacted?,#18,#28,None,#48
