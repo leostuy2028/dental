@@ -182,7 +182,7 @@ if __name__ == "__main__":
     p.add_argument("--model", default="gpt-4o-2024-11-20")
     p.add_argument("--k", type=int, default=0)
     p.add_argument("--out", default=None)
-    p.add_argument("--data", default="data/closed_ended_clean.parquet")
+    p.add_argument("--data", default="data/closed_ended.parquet")
     p.add_argument("--prompt", default="faithful", choices=["faithful", "coax"])
     p.add_argument("--cot", action="store_true")
     p.add_argument("--limit", type=int, default=None)
@@ -196,9 +196,8 @@ if __name__ == "__main__":
     args = p.parse_args()
 
     if args.out is None:
-        tag = "clean-shuffled" if "clean_shuffled" in args.data else (
-              "clean" if "clean" in args.data else (
-              "shuffled" if "shuffled" in args.data else "whole"))
+        tag = ("blanks38" if "blanks38" in args.data else
+               "shuffled" if "shuffled" in args.data else "whole")
         cot_tag = "cot" if args.cot else "direct"
         args.out = f"results/closed_gpt_{args.model}_{args.prompt}_{cot_tag}_k{args.k}_{tag}.csv"
 

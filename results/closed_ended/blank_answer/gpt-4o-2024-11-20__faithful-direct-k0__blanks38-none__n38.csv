@@ -10,21 +10,21 @@ The X-ray shows a missing tooth in the lower side of the jaw.",False,False,False
 **Answer: B. Slight**",True,False,False,0,faithful
 50,016690.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,D,"The provided panoramic X-ray does not clearly show any definitive signs of a periapical granuloma, such as a well-defined radiolucency at the apex of a tooth. Therefore, based on the available information:
 
-**Answer: D. None**",True,False,True,0,faithful
-58,016694.jpg,"Teeth,Patho",Which tooth shows signs of caries?,D,B,"The provided panoramic X-ray does not clearly show any obvious signs of caries (tooth decay) on the teeth. Therefore, the most appropriate answer is:
+**Answer: D. None**",True,False,False,0,faithful
+58,016694.jpg,"Teeth,Patho",Which tooth shows signs of caries?,D,D,"The provided panoramic X-ray does not clearly show any obvious signs of caries (tooth decay) on the teeth. Therefore, the most appropriate answer is:
 
-**D. None**",False,False,True,0,faithful
-73,016713.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,C,"The provided panoramic X-ray does not clearly show any definitive signs of a periapical granuloma, such as a well-defined radiolucency at the apex of a tooth. Therefore, based on the available information:
+**D. None**",True,False,False,0,faithful
+73,016713.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,D,"The provided panoramic X-ray does not clearly show any definitive signs of a periapical granuloma, such as a well-defined radiolucency at the apex of a tooth. Therefore, based on the available information:
 
-**Answer: D. None**",False,False,True,0,faithful
+**Answer: D. None**",True,False,False,0,faithful
 77,016723.jpg,"Teeth,Patho",Which tooth is suspicious for a periapical granuloma?,D,C,"The panoramic radiograph shows a radiolucent area around the apex of tooth **#18**, which is suggestive of a periapical granuloma. 
 
 The correct answer is:
 
 **C. #18**",False,False,False,0,faithful
-87,016744.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,D,B,"The provided panoramic X-ray does not clearly show any definitive signs of a periapical abscess, such as a radiolucent area around the apex of a tooth. Therefore, based on the available information:
+87,016744.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,D,D,"The provided panoramic X-ray does not clearly show any definitive signs of a periapical abscess, such as a radiolucent area around the apex of a tooth. Therefore, based on the available information:
 
-**Answer: D. None**",False,False,True,0,faithful
+**Answer: D. None**",True,False,False,0,faithful
 91,016744.jpg,"Jaw,SumRec",What necessitates further investigation in the upper jaw?,C,A,"The correct answer is:
 
 **A. Impacted wisdom teeth**
@@ -33,9 +33,9 @@ The X-ray shows impacted wisdom teeth in the upper jaw, which may necessitate fu
 105,016790.jpg,"Teeth,Patho",Which tooth has a sign of caries?,D,A,"The panoramic X-ray shows a radiolucent area on tooth **#14**, which is indicative of caries. 
 
 **Correct answer: A. #14**",False,False,False,0,faithful
-113,016807.jpg,"Teeth,Patho",Which tooth is suspected to have caries?,D,A,"The panoramic X-ray shows dental restorations and root canal treatments, but there is no clear evidence of caries visible in the image. Based on the provided information:
+113,016807.jpg,"Teeth,Patho",Which tooth is suspected to have caries?,D,D,"The panoramic X-ray shows dental restorations and root canal treatments, but there is no clear evidence of caries visible in the image. Based on the provided information:
 
-**Answer: D. None**",False,False,True,0,faithful
+**Answer: D. None**",True,False,False,0,faithful
 114,016807.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,A,"The panoramic X-ray shows the teeth and surrounding structures. A periapical granuloma typically appears as a radiolucent (dark) area around the apex of a tooth root, indicating chronic inflammation.
 
 Upon examining the image:
@@ -90,11 +90,11 @@ Explanation: In this panoramic X-ray, the mandibular canals are visible as radio
 297,017239.jpg,"Teeth,Patho",Which tooth is suspected to have caries?,D,C,"The panoramic X-ray shows a suspected carious lesion on tooth **#37** (mandibular left second molar). This is evident from the radiolucent area visible on the crown of the tooth, which is indicative of decay.
 
 **Correct answer: C. #37**",False,False,False,0,faithful
-325,017360.jpg,"Teeth,Patho",How many wisdom teeth are suspected to be erupted in the radiograph?,C,B,"The radiograph shows all four wisdom teeth (third molars) present, but none of them appear to have fully erupted into the oral cavity. They are still within the jawbone and/or partially impacted.
+325,017360.jpg,"Teeth,Patho",How many wisdom teeth are suspected to be erupted in the radiograph?,C,D,"The radiograph shows all four wisdom teeth (third molars) present, but none of them appear to have fully erupted into the oral cavity. They are still within the jawbone and/or partially impacted.
 
 The correct answer is:
 
-**D. None**",False,False,True,0,faithful
+**D. None**",False,False,False,0,faithful
 327,017360.jpg,Jaw,Is there any apparent bone loss observed in the jaw?,A,B,"Based on the provided panoramic X-ray, there appears to be **mild bone loss** around some teeth, particularly in the posterior regions. However, the bone levels are generally preserved, and the loss does not appear to be extensive.
 
 **Answer: B. Mild**",False,False,False,0,faithful
@@ -107,21 +107,21 @@ The correct answer is:
 **B. #44**
 
 This tooth appears to have a potential issue, possibly caries, based on the image. However, a clinical examination and higher-resolution imaging would be necessary for confirmation.",False,False,False,0,faithful
-435,018276.jpg,"Teeth,Patho",Which tooth shows signs of suspected caries?,D,B,"Based on the provided panoramic X-ray image, there are no clear and definitive signs of caries visible on the teeth. Therefore, the correct answer is:
+435,018276.jpg,"Teeth,Patho",Which tooth shows signs of suspected caries?,D,D,"Based on the provided panoramic X-ray image, there are no clear and definitive signs of caries visible on the teeth. Therefore, the correct answer is:
 
-**D. None**",False,False,True,0,faithful
+**D. None**",True,False,False,0,faithful
 440,018277.jpg,Teeth,Which of the following teeth is impacted?,D,C,"The correct answer is:
 
 **C. #38**
 
 ### Explanation:
 Tooth #38 (the lower left third molar) appears to be impacted in the panoramic X-ray. It is positioned at an angle and has not fully erupted into the dental arch, which is a common presentation of an impacted third molar.",False,False,False,0,faithful
-444,018278.jpg,"Teeth,Patho",Which tooth shows evidence of a periapical granuloma?,D,C,"The provided panoramic radiograph does not clearly show any definitive evidence of a periapical granuloma, such as a well-defined radiolucency at the apex of a tooth. Therefore, based on the available information:
+444,018278.jpg,"Teeth,Patho",Which tooth shows evidence of a periapical granuloma?,D,D,"The provided panoramic radiograph does not clearly show any definitive evidence of a periapical granuloma, such as a well-defined radiolucency at the apex of a tooth. Therefore, based on the available information:
 
-**Answer: D. None**",False,False,True,0,faithful
+**Answer: D. None**",True,False,False,0,faithful
 446,018278.jpg,HisT,What historical intervention is noted in the report?,D,D,"The panoramic X-ray does not clearly show any historical dental interventions such as crowns, implants, or fillings. Therefore, the most appropriate answer is:
 
-**D. None**",True,False,True,0,faithful
+**D. None**",True,False,False,0,faithful
 455,018328.jpg,"Teeth,HisT",Which of the following teeth is suspicious for a filling?,D,C,"The tooth suspicious for a filling in this panoramic X-ray is **#36**.  
 Correct answer: **C. #36**",False,False,False,0,faithful
 456,018328.jpg,Jaw,In which jaw is suspicious bone loss observed?,D,B,"The panoramic X-ray shows evidence of suspicious bone loss, particularly in the **lower jaw**, as indicated by the reduced bone height around the roots of some teeth. 

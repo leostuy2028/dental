@@ -16,46 +16,28 @@
     "always_best_letter": "B",
     "always_best_pct": 44.0
   },
-  "clean": {
-    "n": 453,
+  "shuffled": {
+    "n": 491,
     "count": {
-      "A": 57,
-      "B": 211,
-      "C": 119,
-      "D": 66
+      "A": 124,
+      "B": 118,
+      "C": 137,
+      "D": 112
     },
     "share": {
-      "A": 12.6,
-      "B": 46.6,
-      "C": 26.3,
-      "D": 14.6
-    },
-    "always_best_letter": "B",
-    "always_best_pct": 46.6
-  },
-  "clean_shuffled": {
-    "n": 453,
-    "count": {
-      "A": 113,
-      "B": 111,
-      "C": 125,
-      "D": 104
-    },
-    "share": {
-      "A": 24.9,
-      "B": 24.5,
-      "C": 27.6,
-      "D": 23.0
+      "A": 25.3,
+      "B": 24.0,
+      "C": 27.9,
+      "D": 22.8
     },
     "always_best_letter": "C",
-    "always_best_pct": 27.6
+    "always_best_pct": 27.9
   },
   "_generator": "paper_analysis/key_skew.py",
   "_source": [
     "data/closed_ended.parquet",
-    "data/closed_ended_clean.parquet",
-    "data/closed_ended_clean_shuffled.parquet"
+    "data/closed_ended_shuffled.parquet"
   ],
   "_note": "dataset-derived (answer key), not model outputs",
-  "_generated_utc": "2026-07-05T14:47:00+00:00"
+  "_generated_utc": "2026-07-06T02:18:39+00:00"
 }

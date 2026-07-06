@@ -116,8 +116,11 @@ def main():
     import sys
     models = PROMPT_COMPARE if "--compare-prompts" in sys.argv else MODELS
     tag = "prompt_compare" if "--compare-prompts" in sys.argv else "position_stability"
-    clean_opts = pd.read_parquet(os.path.join(REPO, "data/closed_ended_clean.parquet")).set_index("index")
-    shuf_opts = pd.read_parquet(os.path.join(REPO, "data/closed_ended_clean_shuffled.parquet")).set_index("index")
+    # map letters -> option text from the canonical (None) set + its shuffle. These contain
+    # every run's indices; on the shared indices the options are identical to the retired
+    # clean sets, so results are unchanged.
+    clean_opts = pd.read_parquet(os.path.join(REPO, "data/closed_ended.parquet")).set_index("index")
+    shuf_opts = pd.read_parquet(os.path.join(REPO, "data/closed_ended_shuffled.parquet")).set_index("index")
     vals = {}
     for name, (cc, sc) in models.items():
         if not os.path.exists(os.path.join(REPO, *sc.split("/"))):

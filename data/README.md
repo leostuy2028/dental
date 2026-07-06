@@ -19,7 +19,10 @@ was a reproduction bug on our side (it made the model see `"D. nan"` and made th
 | `closed_ended_shuffled.parquet` | 0 NaN | derivative of the canonical: options permuted per-row (seeded by `index`), key flattened for the position-bias analysis. |
 | `closed_ended_blanks38.parquet` | 0 NaN | derivative of the canonical: the 38 items that carry a "None" option (§3.7), for targeted re-runs. |
 | `open_ended.parquet` | n/a | free-text half (no options). |
-| `closed_ended_clean*.parquet` | 0 NaN | **legacy** (blanks-dropped 453). Built under the old "drop the blanks" strategy, which is being reconsidered now that the blanks are answerable "None" questions. Do not build new work on these without revisiting that decision. |
+
+The old blanks-dropped "clean" sets (`closed_ended_clean*.parquet`) were **removed**: the
+blanks are answerable "None" questions, not broken, so there is no reason to drop them. The
+working set is the full 491 canonical.
 
 ## Rules (enforced)
 
