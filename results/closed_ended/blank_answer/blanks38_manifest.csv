@@ -1,4 +1,4 @@
-index,category,answer_key,correct_is_blank,blank_position,question,A,B,C,D
+index,category,answer_key,correct_is_none,none_position,question,A,B,C,D
 41,HisT,A,True,A,What previous dental treatment has been done on tooth 24?,None,Dental crown,Dental implant,Root canal treatment
 45,Teeth,B,False,D,Which region has a missing tooth?,Lower side,Upper side,Both sides,None
 48,Jaw,B,False,A,What type of bone loss is detected in the upper jaw?,None,Slight,Moderate,Severe

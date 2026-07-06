@@ -85,6 +85,18 @@ manifest is the searchable index across all files.
 
 _Pilots under `results/_pilot/` are exploratory (prompt-mode + image-detail sweeps) and are intentionally NOT ledgered._
 
+**Data normalization to "None" (2026-07-05) — see `data/README.md`.** Blank options were being
+rendered as `"nan"` (a reproduction bug); the benchmark renders them `"None"`
+(`MMOral_OPG_CLOSED.post_build`). We now normalize once (`dataio/convert_to_none.py`) into the
+canonical `data/closed_ended.parquet`; the raw NaN file is archived (`closed_ended_raw.parquet`)
+and never used by a run (harnesses load via `dataio/eval_data.read_closed`, which refuses NaN).
+
+_Blank-answer (`results/closed_ended/blank_answer/`) runs: GPT-4o on the 38 "None" items._
+The `coax` run (bare letters, 53.1% on the 32 "None"-correct items) is clean. The `faithful`
+run's committed `correct` column (6.2%) predates the parser `index2ans` fix and still reflects
+the "nan" `index2ans` bug; its `raw_response` is real and re-scores to ~25% with "None"
+`index2ans`. Both are kept as the record; a clean re-run on the None canonical is the next step.
+
 **Parser fix + re-score (2026-07-05).** The answer extractor (`clients/parsing.py::extract_letter`)
 was rewritten to read a model's *last* answer declaration instead of the first A/B/C/D
 character, which the old version mis-matched inside words ("**A**nswer" → A, "**B**ased on" → B)

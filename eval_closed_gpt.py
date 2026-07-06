@@ -92,7 +92,8 @@ def run(model, k, results_path, data_path, mode="faithful", cot=False,
               f"{gpt_client.BENCHMARK_TEMPERATURE}, max_tokens={gpt_client.BENCHMARK_MAX_TOKENS}, "
               f"img_detail={gpt_client.BENCHMARK_IMG_DETAIL}  (source: config_mmoral_opg.json)")
 
-    full_df = pd.read_parquet(data_path)
+    from dataio import eval_data
+    full_df = eval_data.read_closed(data_path)
 
     if k > 0:
         pool_df = full_df.iloc[:POOL_SIZE].copy()

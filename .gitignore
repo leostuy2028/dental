@@ -7,6 +7,7 @@
 # The HuggingFace download cache dir (data/OralGPT___mm_oral-opg-bench) stays ignored.
 data/*
 !data/*.parquet
+!data/README.md
 
 __pycache__/
 *.pyc

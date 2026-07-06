@@ -1,0 +1,39 @@
+index,file_name,category,question,answer,predicted,raw_response,correct,refused,used_fallback,n_examples,prompt_mode
+41,016657.jpg,HisT,What previous dental treatment has been done on tooth 24?,A,B,B,False,False,False,0,coax
+45,016659.jpg,Teeth,Which region has a missing tooth?,B,B,B,True,False,False,0,coax
+48,016690.jpg,Jaw,What type of bone loss is detected in the upper jaw?,B,B,B,True,False,False,0,coax
+50,016690.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,D,D,True,False,False,0,coax
+58,016694.jpg,"Teeth,Patho",Which tooth shows signs of caries?,D,D,D,True,False,False,0,coax
+73,016713.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,D,D,True,False,False,0,coax
+77,016723.jpg,"Teeth,Patho",Which tooth is suspicious for a periapical granuloma?,D,C,C,False,False,False,0,coax
+87,016744.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,D,D,D,True,False,False,0,coax
+91,016744.jpg,"Jaw,SumRec",What necessitates further investigation in the upper jaw?,C,B,B,False,False,False,0,coax
+105,016790.jpg,"Teeth,Patho",Which tooth has a sign of caries?,D,D,D,True,False,False,0,coax
+113,016807.jpg,"Teeth,Patho",Which tooth is suspected to have caries?,D,D,D,True,False,False,0,coax
+114,016807.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,D,D,True,False,False,0,coax
+116,016808.jpg,"Teeth,Patho",Which tooth is suspicious for deep caries?,D,D,D,True,False,False,0,coax
+125,016821.jpg,Jaw,Which jaw shows signs of bone loss?,D,C,C,False,False,False,0,coax
+162,016874.jpg,"Teeth,Jaw",Which jaw has a missing tooth region detected?,B,B,B,True,False,False,0,coax
+175,016920.jpg,"Teeth,Patho",Which tooth shows signs of a suspected periapical granuloma?,D,D,D,True,False,False,0,coax
+188,016955.jpg,"Teeth,HisT",Which tooth shows signs of a filling?,D,B,B,False,False,False,0,coax
+199,016964.jpg,"Teeth,HisT",Which tooth has a filling?,D,D,D,True,False,False,0,coax
+204,016973.jpg,"HisT,Jaw",What is visible in the bilateral structures of the mandible?,B,B,B,True,False,False,0,coax
+205,016975.jpg,"Teeth,HisT",How many teeth have signs of fillings?,D,B,B,False,False,False,0,coax
+230,017091.jpg,"Teeth,Patho,HisT,SumRec",Which tooth shows signs of deep caries and requires immediate restorative intervention?,D,D,D,True,False,False,0,coax
+240,017113.jpg,"Patho,Jaw",Which jaw is suspected to have bone loss?,D,C,C,False,False,False,0,coax
+243,017113.jpg,"HisT,Jaw",What is visible in the imaging of the mandible?,B,B,B,True,False,False,0,coax
+288,017215.jpg,HisT,Which of the following historical interventions is NOT present in the radiograph?,D,B,B,False,False,False,0,coax
+297,017239.jpg,"Teeth,Patho",Which tooth is suspected to have caries?,D,D,D,True,False,False,0,coax
+325,017360.jpg,"Teeth,Patho",How many wisdom teeth are suspected to be erupted in the radiograph?,C,C,C,True,False,False,0,coax
+327,017360.jpg,Jaw,Is there any apparent bone loss observed in the jaw?,A,B,B,False,False,False,0,coax
+337,017416.jpg,"Teeth,HisT",Which tooth has signs of a filling?,D,C,C,False,False,False,0,coax
+391,018105.jpg,"Teeth,Patho",Which tooth exhibits signs of a periapical granuloma?,D,C,C,False,False,False,0,coax
+396,018160.jpg,"Teeth,Patho",Which tooth is suspected to have caries?,D,D,D,True,False,False,0,coax
+435,018276.jpg,"Teeth,Patho",Which tooth shows signs of suspected caries?,D,D,D,True,False,False,0,coax
+440,018277.jpg,Teeth,Which of the following teeth is impacted?,D,C,C,False,False,False,0,coax
+444,018278.jpg,"Teeth,Patho",Which tooth shows evidence of a periapical granuloma?,D,D,D,True,False,False,0,coax
+446,018278.jpg,HisT,What historical intervention is noted in the report?,D,D,D,True,False,False,0,coax
+455,018328.jpg,"Teeth,HisT",Which of the following teeth is suspicious for a filling?,D,C,C,False,False,False,0,coax
+456,018328.jpg,Jaw,In which jaw is suspicious bone loss observed?,D,B,B,False,False,False,0,coax
+477,018494.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,D,D,True,False,False,0,coax
+486,019277.jpg,Teeth,Which wisdom tooth is impacted?,C,B,B,False,False,False,0,coax

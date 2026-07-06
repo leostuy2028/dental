@@ -54,7 +54,8 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet",
     # route the client at the requested model (default gemini-2.0-flash)
     gemini_client.MODEL = model
 
-    full_df = pd.read_parquet(data_path)
+    from dataio import eval_data
+    full_df = eval_data.read_closed(data_path)
 
     # 0-shot reproduces the paper's protocol on the full set; few-shot carves a pool.
     if k > 0:

@@ -1,0 +1,18 @@
+{
+  "experiment": "E-blank-None-coax",
+  "paper_section": "5.1",
+  "description": "GPT-4o coax on the 38 blank-option items, None rendering (clean parser test)",
+  "model": "gpt-4o-2024-11-20",
+  "config": "coax direct k=0",
+  "dataset": "closed_ended_blanks38.parquet",
+  "image_detail": "high",
+  "gen_settings": "temperature=0.0 max_tokens=8192 img_detail=high [benchmark-faithful, source config_mmoral_opg.json]",
+  "n": 38,
+  "accuracy_pct": 60.53,
+  "refusal_pct": 0.0,
+  "random_fallback_pct": 0.0,
+  "command": "python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt coax --detail high --data data/closed_ended_blanks38.parquet --start 0 --exp E-blank-None-coax --paper-section 5.1 --description GPT-4o coax on the 38 blank-option items, None rendering (clean parser test) --out results/closed_ended/blank_answer/gpt-4o-2024-11-20__coax-direct-k0__blanks38-none__n38.csv",
+  "code_commit": "c472f11",
+  "generated_utc": "2026-07-06T01:07:33+00:00",
+  "data_file": "gpt-4o-2024-11-20__coax-direct-k0__blanks38-none__n38.csv"
+}

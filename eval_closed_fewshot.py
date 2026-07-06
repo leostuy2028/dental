@@ -71,7 +71,8 @@ def print_summary(df, model, k):
 
 def run(model, k, results_path, data_path="data/closed_ended.parquet", cot=False, mode="house",
         limit=None, start=0, meta=None):
-    full_df = pd.read_parquet(data_path)
+    from dataio import eval_data
+    full_df = eval_data.read_closed(data_path)
     # k==0 scores the whole dataset (0-shot); use --start/--limit for a sub-slice.
     if k > 0:
         pool_df = full_df.iloc[:POOL_SIZE].copy()
