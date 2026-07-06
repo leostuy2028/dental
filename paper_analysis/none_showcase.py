@@ -13,8 +13,8 @@ ASKING recovers it. All three numbers are re-derived from committed raw model ou
                        (identical to a perfect parser on a bare letter)         ~= 53%
 
 Run:   python paper_analysis/none_showcase.py
-Reads: results/closed_ended/blank_answer/gpt-4o-...faithful...blanks38-none__n38.csv
-       results/closed_ended/blank_answer/gpt-4o-...coax...blanks38-none__n38.csv
+Reads: results/closed_ended/gpt-4o-...faithful...whole__n491.csv (canonical; filtered to the 32 "None")
+       results/closed_ended/gpt-4o-...coax...whole__n491.csv (canonical)
        data/closed_ended.parquet   (canonical option text -> "None" index2ans)
 Writes: paper_analysis/_generated/none_showcase_table.md + .values.json
 """
@@ -31,8 +31,8 @@ sys.path.insert(0, REPO)
 from clients.parsing import extract_letter          # noqa: E402
 from utils.vlmeval_parse import faithful_predict     # noqa: E402
 
-FAITHFUL = "results/closed_ended/blank_answer/gpt-4o-2024-11-20__faithful-direct-k0__blanks38-none__n38.csv"
-COAX = "results/closed_ended/blank_answer/gpt-4o-2024-11-20__coax-direct-k0__blanks38-none__n38.csv"
+FAITHFUL = "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv"
+COAX = "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
 # the 32 items whose correct answer is the "None" slot (RESEARCH_PLAN §3.7)
 BLANK_CORRECT = {41, 50, 58, 73, 77, 87, 91, 105, 113, 114, 116, 125, 175, 188, 199, 205, 230,
                  240, 288, 297, 327, 337, 391, 396, 435, 440, 444, 446, 455, 456, 477, 486}

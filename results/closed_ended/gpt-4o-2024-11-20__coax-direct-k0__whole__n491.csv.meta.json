@@ -1,0 +1,19 @@
+{
+  "experiment": "E-whole491-none",
+  "paper_section": "§5.1/§5.2",
+  "model": "gpt-4o-2024-11-20",
+  "config": "coax direct k=0",
+  "dataset": "closed_ended (canonical, blanks = 'None')",
+  "n": 491,
+  "accuracy_pct": 54.18,
+  "gen_settings": "temperature=0 max_tokens=8192 img_detail=high [benchmark-faithful]",
+  "description": "MERGED from committed raw outputs (no API): 453 non-'None' rows from the original whole-491 run (identical under nan/None), 38 'None' rows from the blanks38-none run; predicted/correct re-derived on canonical data.",
+  "source_runs": [
+    "results/closed_ended/_superseded/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
+    "results/closed_ended/_superseded/gpt-4o-2024-11-20__coax-direct-k0__blanks38-none__n38.csv"
+  ],
+  "command": "python dataio/build_whole491.py",
+  "code_commit": "b659bc4",
+  "generated_utc": "2026-07-06T02:40:28+00:00",
+  "data_file": "gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
+}

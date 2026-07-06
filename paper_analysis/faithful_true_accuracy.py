@@ -12,8 +12,8 @@ unambiguous marker (paper_analysis/faithful_hand_labels.csv). No random guessing
 that states no letter (a refusal) is scored wrong, not assigned a random one.
 
 Run:   python paper_analysis/faithful_true_accuracy.py
-Reads: results/closed_ended/reproduction/...faithful...whole__n491.csv  (verbose replies)
-       results/closed_ended/prompt_axis/...coax...whole__n491.csv        (bare-letter replies)
+Reads: results/closed_ended/gpt-4o-...faithful...whole__n491.csv (canonical, None)  (verbose replies)
+       results/closed_ended/gpt-4o-...coax...whole__n491.csv (canonical, None)        (bare-letter replies)
        paper_analysis/faithful_hand_labels.csv                          (committed hand reads)
 Writes: paper_analysis/_generated/faithful_true_accuracy.values.json + _table.md
 """
@@ -38,8 +38,8 @@ except Exception:
 BLANK = {41, 50, 58, 73, 77, 87, 91, 105, 113, 114, 116, 125, 175, 188, 199, 205, 230, 240,
          288, 297, 327, 337, 391, 396, 435, 440, 444, 446, 455, 456, 477, 486,
          45, 48, 162, 204, 243, 325}
-FAITHFUL = "results/closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv"
-COAX = "results/closed_ended/prompt_axis/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
+FAITHFUL = "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv"
+COAX = "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
 
 
 def wilson(k, n, z=1.96):

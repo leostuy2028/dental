@@ -32,9 +32,9 @@
   },
   "_generator": "paper_analysis/faithful_true_accuracy.py",
   "_source_csv": [
-    "results/closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
-    "results/closed_ended/prompt_axis/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
+    "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
+    "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
     "paper_analysis/faithful_hand_labels.csv"
   ],
-  "_generated_utc": "2026-07-06T02:30:31+00:00"
+  "_generated_utc": "2026-07-06T02:44:40+00:00"
 }

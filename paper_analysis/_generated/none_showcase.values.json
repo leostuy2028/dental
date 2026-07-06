@@ -8,8 +8,8 @@
   "total_pts": 28.1,
   "_generator": "paper_analysis/none_showcase.py",
   "_source_csv": [
-    "results/closed_ended/blank_answer/gpt-4o-2024-11-20__faithful-direct-k0__blanks38-none__n38.csv",
-    "results/closed_ended/blank_answer/gpt-4o-2024-11-20__coax-direct-k0__blanks38-none__n38.csv"
+    "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
+    "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
   ],
-  "_generated_utc": "2026-07-06T02:30:32+00:00"
+  "_generated_utc": "2026-07-06T02:44:42+00:00"
 }

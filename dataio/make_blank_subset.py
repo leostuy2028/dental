@@ -9,14 +9,14 @@ subset is self-checking without ever touching the raw NaN file.
 
 Run:  python dataio/make_blank_subset.py
 Writes: data/closed_ended_blanks38.parquet
-        results/closed_ended/blank_answer/blanks38_manifest.csv
+        results/closed_ended/blanks38_manifest.csv
 """
 import os
 import pandas as pd
 
 CANONICAL = "data/closed_ended.parquet"
 OUT_PARQUET = "data/closed_ended_blanks38.parquet"
-OUT_MANIFEST = "results/closed_ended/blank_answer/blanks38_manifest.csv"
+OUT_MANIFEST = "results/closed_ended/blanks38_manifest.csv"
 OPTS = ["option1", "option2", "option3", "option4"]
 L = ["A", "B", "C", "D"]
 
