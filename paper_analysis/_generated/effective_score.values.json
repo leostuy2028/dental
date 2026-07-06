@@ -1,0 +1,54 @@
+{
+  "GPT-4o": {
+    "n": 491,
+    "acc_original": 54.2,
+    "acc_shuffled": 48.9,
+    "drop": 5.3,
+    "position_robust_acc": 37.1,
+    "position_robust_ci": [
+      32.9,
+      41.4
+    ],
+    "letter_bias_index": 34,
+    "chi2_vs_uniform": 128.4,
+    "letter_bias_significant": true
+  },
+  "Gemini-2.5-flash": {
+    "n": 491,
+    "acc_original": 44.6,
+    "acc_shuffled": 43.6,
+    "drop": 1.0,
+    "position_robust_acc": 34.6,
+    "position_robust_ci": [
+      30.5,
+      38.9
+    ],
+    "letter_bias_index": 8,
+    "chi2_vs_uniform": 6.7,
+    "letter_bias_significant": false
+  },
+  "Gemini-3.5-flash": {
+    "n": 491,
+    "acc_original": 59.9,
+    "acc_shuffled": 58.0,
+    "drop": 1.9,
+    "position_robust_acc": 50.1,
+    "position_robust_ci": [
+      45.7,
+      54.5
+    ],
+    "letter_bias_index": 11,
+    "chi2_vs_uniform": 23.8,
+    "letter_bias_significant": true
+  },
+  "_generator": "paper_analysis/effective_score.py",
+  "_source_csv": [
+    "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
+    "results/closed_ended/position_bias/gpt-4o-2024-11-20__coax-direct-k0__shuffled__n491.csv",
+    "results/closed_ended/position_bias/gemini-2.5-flash__coax-direct-k0__whole__n491.csv",
+    "results/closed_ended/position_bias/gemini-2.5-flash__coax-direct-k0__shuffled__n491.csv",
+    "results/closed_ended/position_bias/gemini-3.5-flash__coax-direct-k0__whole__n491.csv",
+    "results/closed_ended/position_bias/gemini-3.5-flash__coax-direct-k0__shuffled__n491.csv"
+  ],
+  "_generated_utc": "2026-07-06T17:16:29+00:00"
+}
