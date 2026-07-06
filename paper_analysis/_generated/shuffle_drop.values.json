@@ -6,6 +6,10 @@
     "revised_orig": 54.2,
     "revised_shuf": 48.9
   },
+  "true_acc": {
+    "orig": 48.5,
+    "shuf": 44.4
+  },
   "ci": {
     "original_orig": [
       38.9,
@@ -22,21 +26,34 @@
     "revised_shuf": [
       44.5,
       53.3
+    ],
+    "true_orig": [
+      44.1,
+      52.9
+    ],
+    "true_shuf": [
+      40.1,
+      48.8
     ]
   },
   "floor_original_key": 44.0,
   "floor_shuffled_key": 27.9,
-  "gap_original_key": 11.0,
-  "gap_shuffled_key": 8.4,
-  "gap_lost_to_shuffling": 2.6,
-  "drop_original_prompt": 2.7,
+  "pipeline_gap_original_key": 11.0,
+  "pipeline_gap_shuffled_key": 8.4,
+  "true_prompt_gap_original_key": 5.7,
+  "true_prompt_gap_shuffled_key": 4.5,
+  "parser_cost_original_key": 5.3,
+  "parser_cost_shuffled_key": 3.9,
+  "drop_original_prompt_parser": 2.7,
   "drop_revised_prompt": 5.3,
   "_generator": "paper_analysis/shuffle_drop.py",
   "_source_csv": [
     "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
     "results/closed_ended/position_bias/gpt-4o-2024-11-20__faithful-direct-k0__shuffled__n491.csv",
     "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
-    "results/closed_ended/position_bias/gpt-4o-2024-11-20__coax-direct-k0__shuffled__n491.csv"
+    "results/closed_ended/position_bias/gpt-4o-2024-11-20__coax-direct-k0__shuffled__n491.csv",
+    "paper_analysis/faithful_hand_labels.csv",
+    "paper_analysis/faithful_shuffled_hand_labels.csv"
   ],
-  "_generated_utc": "2026-07-06T14:58:23+00:00"
+  "_generated_utc": "2026-07-06T15:29:05+00:00"
 }

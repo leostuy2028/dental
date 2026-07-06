@@ -35,16 +35,29 @@ import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 OUT_DIR = os.path.join(HERE, "_generated")
+sys.path.insert(0, REPO)
+from paper_analysis.faithful_true_accuracy import high_conf   # noqa: E402
 try:
     sys.stdout.reconfigure(encoding="utf-8")
 except Exception:
     pass
 
+# parser-scored runs (benchmark parser for faithful; bare-letter == parser for coax)
 CSV = {
     ("original", "orig"): "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
     ("original", "shuf"): "results/closed_ended/position_bias/gpt-4o-2024-11-20__faithful-direct-k0__shuffled__n491.csv",
     ("revised", "orig"): "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
     ("revised", "shuf"): "results/closed_ended/position_bias/gpt-4o-2024-11-20__coax-direct-k0__shuffled__n491.csv",
+}
+# TRUE (hand-read) accuracy applies only to the verbose original/faithful prompt: high_conf
+# reads the letter the model actually committed to, backed by a committed hand-label for every
+# ambiguous reply. (The revised prompt already replies in a bare letter, so its parser score IS
+# its true score.) Two label files, one per key, because the shuffled replies differ.
+TRUE = {
+    "orig": ("results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
+             "paper_analysis/faithful_hand_labels.csv"),
+    "shuf": ("results/closed_ended/position_bias/gpt-4o-2024-11-20__faithful-direct-k0__shuffled__n491.csv",
+             "paper_analysis/faithful_shuffled_hand_labels.csv"),
 }
 
 
@@ -54,6 +67,26 @@ def wilson(k, n, z=1.96):
     c = (p + z * z / (2 * n)) / den
     h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / den
     return round(100 * (c - h), 1), round(100 * (c + h), 1)
+
+
+def true_accuracy(run_csv, labels_csv):
+    """Accuracy of the letter the model actually stated (high_conf + committed hand-labels).
+    Raises if an ambiguous reply has no committed label — never guesses."""
+    df = pd.read_csv(os.path.join(REPO, *run_csv.split("/"))).set_index("index")
+    lab = pd.read_csv(os.path.join(REPO, *labels_csv.split("/"))).set_index("index")
+    correct, need = 0, []
+    for i, r in df.iterrows():
+        hc = high_conf(r["raw_response"])
+        if hc is None:
+            if i not in lab.index:
+                need.append(int(i)); continue
+            v = lab.loc[i, "true_letter"]
+            hc = None if (isinstance(v, float) or str(v).strip() == "") else str(v).strip().upper()
+        if hc is not None and hc == df.loc[i, "answer"]:
+            correct += 1
+    if need:
+        raise SystemExit(f"unlabeled ambiguous replies in {labels_csv}: {need}")
+    return correct, len(df)
 
 
 def main():
@@ -67,21 +100,34 @@ def main():
         ci[(prompt, key)] = wilson(k, m)
         floor[key] = round(float(df["answer"].value_counts(normalize=True).max() * 100), 1)
 
-    gap_orig = round(cell[("revised", "orig")] - cell[("original", "orig")], 1)
-    gap_shuf = round(cell[("revised", "shuf")] - cell[("original", "shuf")], 1)
+    true = {}
+    for key, (run_csv, lab_csv) in TRUE.items():
+        c, m = true_accuracy(run_csv, lab_csv)
+        true[key] = round(100 * c / m, 1)
+        ci[("true", key)] = wilson(c, m)
+
+    def gap(a, b, key):  # a,b are prompt/row accuracies for the given key
+        return round(a - b, 1)
+
     vals = {
         "n": n,
         "acc": {f"{p}_{k}": cell[(p, k)] for (p, k) in cell},
+        "true_acc": {"orig": true["orig"], "shuf": true["shuf"]},
         "ci": {f"{p}_{k}": ci[(p, k)] for (p, k) in ci},
         "floor_original_key": floor["orig"],
         "floor_shuffled_key": floor["shuf"],
-        "gap_original_key": gap_orig,
-        "gap_shuffled_key": gap_shuf,
-        "gap_lost_to_shuffling": round(gap_orig - gap_shuf, 1),
-        "drop_original_prompt": round(cell[("original", "orig")] - cell[("original", "shuf")], 1),
-        "drop_revised_prompt": round(cell[("revised", "orig")] - cell[("revised", "shuf")], 1),
+        # pipeline gap (revised parser − original parser) and real prompt gap (revised − original TRUE)
+        "pipeline_gap_original_key": gap(cell[("revised", "orig")], cell[("original", "orig")], "orig"),
+        "pipeline_gap_shuffled_key": gap(cell[("revised", "shuf")], cell[("original", "shuf")], "shuf"),
+        "true_prompt_gap_original_key": gap(cell[("revised", "orig")], true["orig"], "orig"),
+        "true_prompt_gap_shuffled_key": gap(cell[("revised", "shuf")], true["shuf"], "shuf"),
+        "parser_cost_original_key": gap(true["orig"], cell[("original", "orig")], "orig"),
+        "parser_cost_shuffled_key": gap(true["shuf"], cell[("original", "shuf")], "shuf"),
+        "drop_original_prompt_parser": gap(cell[("original", "orig")], cell[("original", "shuf")], None),
+        "drop_revised_prompt": gap(cell[("revised", "orig")], cell[("revised", "shuf")], None),
         "_generator": "paper_analysis/shuffle_drop.py",
-        "_source_csv": [CSV[k] for k in CSV],
+        "_source_csv": [CSV[k] for k in CSV] + ["paper_analysis/faithful_hand_labels.csv",
+                                                "paper_analysis/faithful_shuffled_hand_labels.csv"],
         "_generated_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
     }
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -91,9 +137,9 @@ def main():
         prov,
         f"| GPT-4o accuracy ({n} questions) | Original key | Shuffled key |",
         "|:--|--:|--:|",
-        f"| Original prompt (benchmark) | {cell[('original','orig')]}% | {cell[('original','shuf')]}% |",
-        f"| Revised prompt (ours) | {cell[('revised','orig')]}% | {cell[('revised','shuf')]}% |",
-        f"| **Revised − original** | **+{gap_orig}** | **+{gap_shuf}** |",
+        f"| Original prompt, benchmark parser | {cell[('original','orig')]}% | {cell[('original','shuf')]}% |",
+        f"| Original prompt, true answer (hand-read) | {true['orig']}% | {true['shuf']}% |",
+        f"| Revised prompt (bare letter) | {cell[('revised','orig')]}% | {cell[('revised','shuf')]}% |",
         "",
     ])
     with open(os.path.join(OUT_DIR, "shuffle_drop_table.md"), "w", encoding="utf-8") as f:
@@ -102,8 +148,9 @@ def main():
         json.dump(vals, f, indent=2)
 
     print(table)
-    print(f"gap {gap_orig:+} (orig key) -> {gap_shuf:+} (shuffled key); lost to shuffling {vals['gap_lost_to_shuffling']}")
-    print(f"drops under shuffling: original prompt {vals['drop_original_prompt']}, revised prompt {vals['drop_revised_prompt']}")
+    print(f"pipeline gap (revised − parser):  +{vals['pipeline_gap_original_key']} orig -> +{vals['pipeline_gap_shuffled_key']} shuffled")
+    print(f"real prompt gap (revised − true): +{vals['true_prompt_gap_original_key']} orig -> +{vals['true_prompt_gap_shuffled_key']} shuffled")
+    print(f"parser cost (true − parser): {vals['parser_cost_original_key']} orig, {vals['parser_cost_shuffled_key']} shuffled")
     print(f"floor: original key {floor['orig']}% -> shuffled key {floor['shuf']}%")
 
 

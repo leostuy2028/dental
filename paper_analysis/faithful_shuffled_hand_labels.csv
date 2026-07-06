@@ -1,0 +1,11 @@
+index,true_letter,note
+56,D,model wrote 'upper jaw (D)' -> chose D
+101,B,model wrote '#36 (Option B)' -> chose B
+106,B,model wrote '#36 (B)' -> chose B
+197,D,model wrote '#11 (Option D)' -> chose D
+201,A,model wrote '#47 (Option A)' -> chose A
+384,,refusal: correct answer cannot be determined from the image -> no committed option
+389,C,model wrote 'Option C ... seems the most likely correct answer' -> chose C
+438,A,model wrote 'Option A' for the lower anterior teeth -> chose A
+451,,refusal: correct option cannot be determined from the image -> no committed option
+468,B,model wrote '#24 (Option B)' -> chose B
