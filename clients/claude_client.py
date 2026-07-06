@@ -36,7 +36,11 @@ def call(system, messages, model=MODEL, cot=False, retries=3):
     non-zero, so it MUST be set explicitly.
     """
     client = get_client()
-    max_tokens = 800 if cot else 16
+    # CoT writes one sentence per option (4) + a trailing "Answer: X"; 800 can truncate a
+    # verbose model (e.g. Opus) BEFORE the answer line, which the extractor then reads as a
+    # non-pick and scores wrong. 2048 leaves ample room. Direct is a bare letter, but give it
+    # headroom so a model that prefixes a word under the coax prompt still reaches the letter.
+    max_tokens = 2048 if cot else 64
 
     last_err = None
     for attempt in range(retries):

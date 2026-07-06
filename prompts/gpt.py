@@ -88,10 +88,11 @@ D) {option4}
 Answer: {answer}"""
 
 
-def _image_part(b64_string, detail="low"):
-    # VLMEvalKit's GPT-4o wrapper sets detail='low' (img_detail default) and does
-    # NO client-side resize (img_size=-1). detail='low' makes OpenAI serve a fixed
-    # ~512px low-res view, so matching it is what reproduces the paper's numbers.
+def _image_part(b64_string, detail="high"):
+    # The benchmark's DOCUMENTED config (config_mmoral_opg.json) sets img_detail="high"
+    # and does NO client-side resize (img_size=-1). "high" is the faithful value and the
+    # setting every committed run used; the harness force-corrects it in faithful mode.
+    # Default to "high" here so a coax run without an explicit --detail still matches.
     return {"type": "image_url",
             "image_url": {"url": f"data:image/jpeg;base64,{b64_string}", "detail": detail}}
 
@@ -111,7 +112,7 @@ def _fmt(row, template):
     )
 
 
-def build_prompt(row, examples=None, cot=False, mode="faithful", detail="low"):
+def build_prompt(row, examples=None, cot=False, mode="faithful", detail="high"):
     if mode not in ("faithful", "coax"):
         raise ValueError(f"unknown prompt mode: {mode}")
 

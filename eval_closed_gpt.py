@@ -73,7 +73,7 @@ def print_summary(df, model, k, mode):
 
 
 def run(model, k, results_path, data_path, mode="faithful", cot=False,
-        limit=None, start=0, reasoning_effort="none", meta=None, detail="low"):
+        limit=None, start=0, reasoning_effort="none", meta=None, detail="high"):
     # HARD-ENFORCE the benchmark-faithful config for the reproduction path. The faithful
     # prompt only reproduces the paper if the generation settings also match
     # config_mmoral_opg.json (temp=0, max_tokens=8192, img_detail=high). We force image detail
@@ -188,8 +188,8 @@ if __name__ == "__main__":
     p.add_argument("--limit", type=int, default=None)
     p.add_argument("--start", type=int, default=0)
     p.add_argument("--reasoning-effort", default="none")
-    p.add_argument("--detail", default="low", choices=["low", "high", "auto"],
-                   help="OpenAI image detail; VLMEvalKit faithful = low")
+    p.add_argument("--detail", default="high", choices=["low", "high", "auto"],
+                   help="OpenAI image detail; benchmark faithful = high (config_mmoral_opg.json)")
     p.add_argument("--exp", default="", help="experiment id, e.g. E0-repro / E1")
     p.add_argument("--paper-section", default="", help="e.g. §5.2.3")
     p.add_argument("--description", default="", help="one-line human description")
