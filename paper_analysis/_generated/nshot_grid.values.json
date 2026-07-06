@@ -352,6 +352,6 @@
     "api_failures_excluded": 0
   },
   "_generator": "paper_analysis/nshot_grid.py",
-  "_generated_utc": "2026-07-06T02:18:43+00:00",
+  "_generated_utc": "2026-07-06T02:30:29+00:00",
   "_note": "predicted re-derived from raw_response via clients.parsing.extract_letter"
 }

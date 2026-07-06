@@ -24,7 +24,7 @@ is regenerable by running committed code against committed raw outputs.
 
 | Paper element | Generator | Source CSV(s) | Generated artifact(s) |
 |---|---|---|---|
-| **§5.1** whole/clean/blank table + two-proportion z-test | `paper_analysis/blank_split.py` | `results/closed_ended/reproduction/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv` | `_generated/blank_split_table.md`, `_generated/blank_split.values.json` |
+| **§5.2** "none of the above" showcase: benchmark-pipeline vs true-answer vs coax on the 32 "None"-correct items | `paper_analysis/none_showcase.py` | faithful + coax `blanks38-none` CSVs; canonical option text for the "None" index2ans | `_generated/none_showcase_table.md`, `_generated/none_showcase.values.json` |
 | **§5.2** parsing-vs-prompting: faithful parser-acc vs hand-verified TRUE acc vs coax (each with Wilson CI); 49 parser misreads; coax bare-reply + zero-fallback proof; benchmark-vs-coax pipeline McNemar (supersedes the retired `prompt_axis.py`) | `paper_analysis/faithful_true_accuracy.py` (+ committed hand-labels `paper_analysis/faithful_hand_labels.csv`) | faithful + coax whole-491 CSVs; hand-labels for the 9 ambiguous replies | `_generated/faithful_true_accuracy_table.md`, `_generated/faithful_true_accuracy.values.json` |
 | **§5.3.1** answer-key distribution table (dataset-derived, not model outputs) | `paper_analysis/key_skew.py` | `data/closed_ended_clean.parquet` (+ complete, clean-shuffled) | `_generated/key_skew_table.md`, `_generated/key_skew.values.json` |
 | **§5.3** content-stable / letter-stable / neither, per model | `paper_analysis/position_stability.py` (+ figure `dental_research/figures/make_position_stability.py`) | each model's coax run on clean (original key) + clean-shuffled, mapped through the two parquets | `_generated/position_stability_table.md`, `_generated/position_stability.values.json`, `dental_research/figures/position_stability.png` |
@@ -48,7 +48,7 @@ migrate into `paper_analysis/figures/` so all generators live in one place in th
 Run each generator (they are independent):
 
 ```
-python paper_analysis/blank_split.py
+python paper_analysis/none_showcase.py
 # ...one line per generator as they are added
 ```
 

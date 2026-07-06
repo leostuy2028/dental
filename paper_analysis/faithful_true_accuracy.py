@@ -164,7 +164,7 @@ def main():
         return f"{lo} to {hi}"
     table = "\n".join([
         prov,
-        "| GPT-4o on the clean 453 | Accuracy | 95% Wilson range |",
+        "| GPT-4o on the 453 questions with no \"None\" option | Accuracy | 95% Wilson range |",
         "|---|--:|:--|",
         f"| Benchmark prompt, scored by the benchmark's parser | {vals['faithful_paper_parser_acc']}% | {ci('faithful_paper_parser_ci')} |",
         f"| Benchmark prompt, scored by the model's true answer (hand-verified) | {vals['faithful_true_acc']}% | {ci('faithful_true_ci')} |",
