@@ -11,6 +11,10 @@ load_dotenv()
 
 MODEL = "gemini-2.0-flash"
 DELAY_SECONDS = 0  # no artificial pacing between successful calls; backoff below is separate.
+# Explicit output cap, pinned (not the SDK default) so it is reproducible and matches the GPT-4o
+# harness (clients/gpt_client.py BENCHMARK_MAX_TOKENS). Non-binding for direct/thinking-off coax
+# runs (bare-letter replies), but load-bearing for CoT / thinking-on runs, so it must be explicit.
+MAX_OUTPUT_TOKENS = 8192
 
 _client = None
 
@@ -38,13 +42,14 @@ def call(parts, thinking_budget=None, cot=False, retries=3):
     cot: if True, parse the answer from a 'Answer: X' line (visible per-option
     chain-of-thought) instead of the leading letter.
 
-    Generation is greedy (temperature=0) for reproducibility — the SDK default is
-    non-zero, so it MUST be set explicitly or runs are not deterministic. Default max
-    output (8192) leaves room for the answer after any thinking / visible reasoning.
+    Generation is greedy (temperature=0) for reproducibility (the SDK default is
+    non-zero, so it MUST be set explicitly or runs are not deterministic). max_output_tokens
+    is pinned to MAX_OUTPUT_TOKENS (8192), matching the GPT-4o harness, rather than left to the
+    SDK default; this leaves room for the answer after any thinking / visible reasoning.
     """
     client = get_client()
 
-    cfg_kwargs = {"temperature": 0.0}
+    cfg_kwargs = {"temperature": 0.0, "max_output_tokens": MAX_OUTPUT_TOKENS}
     if thinking_budget is not None:
         cfg_kwargs["thinking_config"] = types.ThinkingConfig(thinking_budget=thinking_budget)
     config = types.GenerateContentConfig(**cfg_kwargs)
