@@ -1,17 +1,28 @@
 """
-GENERATOR for: PAPER_DRAFT.md §5.3.1 — what stripping the key costs GPT-4o.
+GENERATOR for: PAPER_DRAFT.md §5.3.1 — what shuffling the key does to GPT-4o (2x2).
 
-GPT-4o under the revised (coax) prompt, scored on the same 491 questions once on the
-benchmark's original (B-skewed) key and once on the position-balanced shuffled key. Both runs
-use identical model-call settings (gpt-4o-2024-11-20, temperature 0, max_tokens 8192,
-img_detail high, coax prompt); only the option order differs, so the accuracy drop isolates
-how much of the score was resting on where the answer sat. The "guess-one-letter floor" is the
-largest share any single letter holds in each key (always-B on the original, best letter on the
-shuffled), i.e. what a model scores by ignoring the image and always picking one letter.
+GPT-4o on the same 491 questions, under both prompts (the benchmark's own "original"/faithful
+prompt and our "revised"/coax prompt) and both keys (the benchmark's original B-skewed key and
+the position-balanced shuffled key). Each prompt is scored by its own pipeline exactly as in
+§5.2 (original = benchmark parser with random fallback; revised = bare-letter). All four runs
+share identical model-call settings (gpt-4o-2024-11-20, temperature 0, max_tokens 8192,
+img_detail high); only the prompt and the option order differ.
+
+Two things the 2x2 shows:
+  * the skewed key pads BOTH prompts' raw scores (both fall when it is balanced), and
+  * the revised prompt's advantage over the benchmark's own prompt LARGELY survives balancing
+    the key (+11.0 original key -> +8.4 shuffled key), i.e. the prompt gain is mostly real, not
+    an artifact of the skew.
+
+The "guess-one-letter floor" (largest single-letter share of each key) is reported in the JSON
+for the prose: 44.0% on the original key, 27.9% on the shuffled key.
 
 Run:   python paper_analysis/shuffle_drop.py
-Reads: results/closed_ended/gpt-4o-...coax...whole__n491.csv          (original key)
-       results/closed_ended/position_bias/gpt-4o-...coax...shuffled__n491.csv  (shuffled key)
+Reads (all committed, no API):
+  results/closed_ended/gpt-4o-...faithful...whole__n491.csv          (original prompt, original key)
+  results/closed_ended/position_bias/gpt-4o-...faithful...shuffled__n491.csv  (original prompt, shuffled key)
+  results/closed_ended/gpt-4o-...coax...whole__n491.csv              (revised prompt, original key)
+  results/closed_ended/position_bias/gpt-4o-...coax...shuffled__n491.csv      (revised prompt, shuffled key)
 Writes: paper_analysis/_generated/shuffle_drop_table.md + .values.json
 """
 import os
@@ -29,8 +40,12 @@ try:
 except Exception:
     pass
 
-ORIGINAL = "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
-SHUFFLED = "results/closed_ended/position_bias/gpt-4o-2024-11-20__coax-direct-k0__shuffled__n491.csv"
+CSV = {
+    ("original", "orig"): "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv",
+    ("original", "shuf"): "results/closed_ended/position_bias/gpt-4o-2024-11-20__faithful-direct-k0__shuffled__n491.csv",
+    ("revised", "orig"): "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
+    ("revised", "shuf"): "results/closed_ended/position_bias/gpt-4o-2024-11-20__coax-direct-k0__shuffled__n491.csv",
+}
 
 
 def wilson(k, n, z=1.96):
@@ -41,42 +56,44 @@ def wilson(k, n, z=1.96):
     return round(100 * (c - h), 1), round(100 * (c + h), 1)
 
 
-def summarize(df):
-    k, n = int(df["correct"].sum()), len(df)
-    lo, hi = wilson(k, n)
-    floor = float(df["answer"].value_counts(normalize=True).max() * 100)
-    return {"n": n, "acc": round(100 * k / n, 1), "ci": [lo, hi], "floor": round(floor, 1)}
-
-
 def main():
-    orig = pd.read_csv(os.path.join(REPO, *ORIGINAL.split("/")))
-    shuf = pd.read_csv(os.path.join(REPO, *SHUFFLED.split("/")))
-    assert set(orig["index"]) == set(shuf["index"]), "original and shuffled cover different items"
+    cell, ci, floor = {}, {}, {}
+    n = None
+    for (prompt, key), path in CSV.items():
+        df = pd.read_csv(os.path.join(REPO, *path.split("/")))
+        k, m = int(df["correct"].sum()), len(df)
+        n = m
+        cell[(prompt, key)] = round(100 * k / m, 1)
+        ci[(prompt, key)] = wilson(k, m)
+        floor[key] = round(float(df["answer"].value_counts(normalize=True).max() * 100), 1)
 
-    o, s = summarize(orig), summarize(shuf)
+    gap_orig = round(cell[("revised", "orig")] - cell[("original", "orig")], 1)
+    gap_shuf = round(cell[("revised", "shuf")] - cell[("original", "shuf")], 1)
     vals = {
-        "n": o["n"],
-        "original_key": o,
-        "shuffled_key": s,
-        "drop_pts": round(o["acc"] - s["acc"], 1),
-        "floor_drop_pts": round(o["floor"] - s["floor"], 1),
+        "n": n,
+        "acc": {f"{p}_{k}": cell[(p, k)] for (p, k) in cell},
+        "ci": {f"{p}_{k}": ci[(p, k)] for (p, k) in ci},
+        "floor_original_key": floor["orig"],
+        "floor_shuffled_key": floor["shuf"],
+        "gap_original_key": gap_orig,
+        "gap_shuffled_key": gap_shuf,
+        "gap_lost_to_shuffling": round(gap_orig - gap_shuf, 1),
+        "drop_original_prompt": round(cell[("original", "orig")] - cell[("original", "shuf")], 1),
+        "drop_revised_prompt": round(cell[("revised", "orig")] - cell[("revised", "shuf")], 1),
         "_generator": "paper_analysis/shuffle_drop.py",
-        "_source_csv": [ORIGINAL, SHUFFLED],
+        "_source_csv": [CSV[k] for k in CSV],
         "_generated_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
     }
     os.makedirs(OUT_DIR, exist_ok=True)
     prov = (f"<!-- GENERATED by paper_analysis/shuffle_drop.py on {vals['_generated_utc']}. "
             f"Do not hand-edit; run `python paper_analysis/shuffle_drop.py`. -->")
-
-    def row(label, d):
-        return f"| {label} | {d['acc']}% [{d['ci'][0]}–{d['ci'][1]}] | {d['floor']}% |"
-
     table = "\n".join([
         prov,
-        f"| GPT-4o, revised prompt ({o['n']} questions) | Accuracy [95% CI] | Guess-one-letter floor |",
+        f"| GPT-4o accuracy ({n} questions) | Original key | Shuffled key |",
         "|:--|--:|--:|",
-        row("Original (B-skewed) key", o),
-        row("Shuffled (balanced) key", s),
+        f"| Original prompt (benchmark) | {cell[('original','orig')]}% | {cell[('original','shuf')]}% |",
+        f"| Revised prompt (ours) | {cell[('revised','orig')]}% | {cell[('revised','shuf')]}% |",
+        f"| **Revised − original** | **+{gap_orig}** | **+{gap_shuf}** |",
         "",
     ])
     with open(os.path.join(OUT_DIR, "shuffle_drop_table.md"), "w", encoding="utf-8") as f:
@@ -85,8 +102,9 @@ def main():
         json.dump(vals, f, indent=2)
 
     print(table)
-    print(f"drop {vals['drop_pts']} pts (acc {o['acc']} -> {s['acc']}); "
-          f"floor collapses {o['floor']} -> {s['floor']} ({vals['floor_drop_pts']} pts)")
+    print(f"gap {gap_orig:+} (orig key) -> {gap_shuf:+} (shuffled key); lost to shuffling {vals['gap_lost_to_shuffling']}")
+    print(f"drops under shuffling: original prompt {vals['drop_original_prompt']}, revised prompt {vals['drop_revised_prompt']}")
+    print(f"floor: original key {floor['orig']}% -> shuffled key {floor['shuf']}%")
 
 
 if __name__ == "__main__":

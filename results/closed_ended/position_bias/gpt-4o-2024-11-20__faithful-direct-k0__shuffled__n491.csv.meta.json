@@ -1,0 +1,18 @@
+{
+  "experiment": "E-faithful-shuffle491",
+  "paper_section": "5.3.1",
+  "description": "",
+  "model": "gpt-4o-2024-11-20",
+  "config": "faithful direct k=0",
+  "dataset": "closed_ended_shuffled.parquet",
+  "image_detail": "high",
+  "gen_settings": "temperature=0.0 max_tokens=8192 img_detail=high [benchmark-faithful, source config_mmoral_opg.json]",
+  "n": 491,
+  "accuracy_pct": 40.53,
+  "refusal_pct": 0.0,
+  "random_fallback_pct": 1.22,
+  "command": "python eval_closed_gpt.py --model gpt-4o-2024-11-20 --prompt faithful --detail high --data data/closed_ended_shuffled.parquet --start 0 --out results/closed_ended/position_bias/gpt-4o-2024-11-20__faithful-direct-k0__shuffled__n491.csv --exp E-faithful-shuffle491 --paper-section 5.3.1",
+  "code_commit": "65d9874",
+  "generated_utc": "2026-07-06T14:56:13+00:00",
+  "data_file": "gpt-4o-2024-11-20__faithful-direct-k0__shuffled__n491.csv"
+}
