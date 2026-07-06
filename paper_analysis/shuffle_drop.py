@@ -135,10 +135,11 @@ def main():
             f"Do not hand-edit; run `python paper_analysis/shuffle_drop.py`. -->")
     table = "\n".join([
         prov,
-        f"| GPT-4o accuracy ({n} questions) | Original prompt, parser | Original prompt, true answer (hand-read) | Revised prompt |",
-        "|:--|--:|--:|--:|",
-        f"| Original key | {cell[('original','orig')]}% | {true['orig']}% | {cell[('revised','orig')]}% |",
-        f"| Shuffled key | {cell[('original','shuf')]}% | {true['shuf']}% | {cell[('revised','shuf')]}% |",
+        f"| GPT-4o accuracy ({n} questions) | Original key | Shuffled key |",
+        "|:--|--:|--:|",
+        f"| Original prompt, benchmark parser | {cell[('original','orig')]}% | {cell[('original','shuf')]}% |",
+        f"| Original prompt, true answer (hand-read) | {true['orig']}% | {true['shuf']}% |",
+        f"| Revised prompt (bare letter) | {cell[('revised','orig')]}% | {cell[('revised','shuf')]}% |",
         "",
     ])
     with open(os.path.join(OUT_DIR, "shuffle_drop_table.md"), "w", encoding="utf-8") as f:
