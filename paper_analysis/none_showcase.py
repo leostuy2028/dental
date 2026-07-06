@@ -1,5 +1,11 @@
 """
-GENERATOR for: PAPER_DRAFT.md §5.2 — the "none of the above" showcase.
+GENERATOR for: RESEARCH_PLAN.md §3.7 (supporting evidence — NOT a paper table).
+
+Retired from PAPER_DRAFT.md in v0.10: the paper's §5.2 now makes the prompt-and-parser point
+on the full 491 released set and deliberately does not single out the "None" items, so this
+32-item showcase was cut from the paper (it over-indexed on one narrow question type). The
+analysis is kept here as documented evidence for RESEARCH_PLAN §3.7, because it is the most
+extreme illustration of the same effect the paper reports on the whole set.
 
 On the 32 items whose correct answer is the "None" option, shows how the benchmark's own
 pipeline turns a capable model into an apparent failure, and that fixing the READING and the

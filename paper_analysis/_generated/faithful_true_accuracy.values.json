@@ -1,34 +1,34 @@
 {
-  "n_clean": 453,
-  "faithful_paper_parser_acc": 44.4,
+  "n": 491,
+  "faithful_paper_parser_acc": 43.2,
   "faithful_paper_parser_ci": [
-    39.9,
-    49.0
+    38.9,
+    47.6
   ],
-  "faithful_true_acc": 49.9,
+  "faithful_true_acc": 48.5,
   "faithful_true_ci": [
-    45.3,
-    54.5
+    44.1,
+    52.9
   ],
   "faithful_refusals": 1,
-  "parser_misreads": 49,
-  "parser_misread_pct": 10.8,
-  "parser_cost_pts": 5.5,
-  "coax_bare_replies": 453,
-  "coax_n": 453,
-  "coax_paper_parser_acc": 53.6,
+  "parser_misreads": 52,
+  "parser_misread_pct": 10.6,
+  "parser_cost_pts": 5.3,
+  "coax_bare_replies": 491,
+  "coax_n": 491,
+  "coax_paper_parser_acc": 54.2,
   "coax_paper_parser_ci": [
-    49.0,
-    58.2
+    49.8,
+    58.5
   ],
   "coax_paper_parser_fallbacks": 0,
-  "prompt_effect_true_pts": 3.7,
-  "combined_pts": 9.2,
+  "prompt_effect_true_pts": 5.7,
+  "combined_pts": 11.0,
   "mcnemar_combined": {
-    "coax_right_faithful_wrong": 80,
+    "coax_right_faithful_wrong": 92,
     "faithful_right_coax_wrong": 38,
-    "chi2": 14.25,
-    "p": 0.00016042158214619117
+    "chi2": 21.61,
+    "p": 3.345075648615819e-06
   },
   "_generator": "paper_analysis/faithful_true_accuracy.py",
   "_source_csv": [
@@ -36,5 +36,5 @@
     "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
     "paper_analysis/faithful_hand_labels.csv"
   ],
-  "_generated_utc": "2026-07-06T02:44:40+00:00"
+  "_generated_utc": "2026-07-06T12:27:53+00:00"
 }

@@ -1,15 +1,19 @@
 """
-GENERATOR for: PAPER_DRAFT.md §5.2 — parsing vs prompting.
+GENERATOR for: PAPER_DRAFT.md §5.2 — the prompt and the parser move the score.
 
-Establishes GPT-4o's TRUE accuracy under the benchmark's own ("faithful") prompt on the
-clean 453, by reading the letter the model actually committed to in each verbose reply, and
-contrasts it with (a) what the benchmark's own parser (faithful_predict) scores and (b) the
-coax prompt, whose bare-letter replies the benchmark's parser reads exactly.
+The single §5.2 table. Establishes GPT-4o's TRUE accuracy under the benchmark's own
+("faithful") prompt on the FULL 491 released MCQ set, by reading the letter the model
+actually committed to in each verbose reply, and contrasts it with (a) what the benchmark's
+own parser (faithful_predict) scores and (b) the coax prompt, whose bare-letter replies the
+benchmark's parser reads exactly. The table is the full released set — no subset is carved
+out — so the reader tracks one denominator (491).
 
 "True" = a high-confidence auto-read of each reply's stated answer (last explicit "answer is
 X" cue, else a bolded letter) PLUS a committed hand-label for every reply that has no such
 unambiguous marker (paper_analysis/faithful_hand_labels.csv). No random guessing: a reply
-that states no letter (a refusal) is scored wrong, not assigned a random one.
+that states no letter (a refusal) is scored wrong, not assigned a random one. (On the full
+491, high_conf resolves 482 replies and the 9 remaining ambiguous ones are all committed
+hand-labels; zero new labels were needed to extend from the old 453 subset to 491.)
 
 Run:   python paper_analysis/faithful_true_accuracy.py
 Reads: results/closed_ended/gpt-4o-...faithful...whole__n491.csv (canonical, None)  (verbose replies)
@@ -35,9 +39,6 @@ try:
 except Exception:
     pass
 
-BLANK = {41, 50, 58, 73, 77, 87, 91, 105, 113, 114, 116, 125, 175, 188, 199, 205, 230, 240,
-         288, 297, 327, 337, 391, 396, 435, 440, 444, 446, 455, 456, 477, 486,
-         45, 48, 162, 204, 243, 325}
 FAITHFUL = "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv"
 COAX = "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
 
@@ -81,8 +82,7 @@ def paper_pick(i, raw, opts):
 
 def main():
     opts = pd.read_parquet(os.path.join(REPO, "data/closed_ended.parquet")).set_index("index")
-    fa = pd.read_csv(os.path.join(REPO, *FAITHFUL.split("/")))
-    fa = fa[~fa["index"].isin(BLANK)].set_index("index")
+    fa = pd.read_csv(os.path.join(REPO, *FAITHFUL.split("/"))).set_index("index")
     labels = pd.read_csv(os.path.join(HERE, "faithful_hand_labels.csv")).set_index("index")
 
     true, paper, misread = {}, {}, 0
@@ -111,8 +111,7 @@ def main():
     refusals = sum(1 for i in true if true[i] is None)
 
     # coax + the SAME (benchmark) parser: bare letters, so the parser is exact
-    cx = pd.read_csv(os.path.join(REPO, *COAX.split("/")))
-    cx = cx[~cx["index"].isin(BLANK)].set_index("index")
+    cx = pd.read_csv(os.path.join(REPO, *COAX.split("/"))).set_index("index")
     coax_bare = sum(1 for r in cx["raw_response"] if re.fullmatch(r'\s*[ABCD][.)]?\s*', str(r)))
     coax_fallback = 0
     coax_right = {}
@@ -135,7 +134,7 @@ def main():
     faithful_true = round(100 * true_correct / n, 1)
     coax_paper = round(100 * coax_paper_correct / len(cx), 1)
     vals = {
-        "n_clean": n,
+        "n": n,
         "faithful_paper_parser_acc": faithful_paper,
         "faithful_paper_parser_ci": wilson(paper_correct, n),
         "faithful_true_acc": faithful_true,
@@ -164,7 +163,7 @@ def main():
         return f"{lo} to {hi}"
     table = "\n".join([
         prov,
-        "| GPT-4o on the 453 questions with no \"None\" option | Accuracy | 95% Wilson range |",
+        "| GPT-4o on all 491 released questions | Accuracy | 95% Wilson range |",
         "|---|--:|:--|",
         f"| Benchmark prompt, scored by the benchmark's parser | {vals['faithful_paper_parser_acc']}% | {ci('faithful_paper_parser_ci')} |",
         f"| Benchmark prompt, scored by the model's true answer (hand-verified) | {vals['faithful_true_acc']}% | {ci('faithful_true_ci')} |",
