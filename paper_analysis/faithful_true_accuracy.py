@@ -161,13 +161,16 @@ def main():
     def ci(key):
         lo, hi = vals[key]
         return f"{lo} to {hi}"
+    # Display names: the paper calls the two prompts "original" (code mode `faithful`, the
+    # benchmark's verbatim prompt) and "revised" (code mode `coax`, ours). The code, CLI, and
+    # committed CSV filenames keep faithful/coax; only these paper-facing labels are renamed.
     table = "\n".join([
         prov,
         "| GPT-4o on all 491 released questions | Accuracy | 95% Wilson range |",
         "|---|--:|:--|",
-        f"| Benchmark prompt, scored by the benchmark's parser | {vals['faithful_paper_parser_acc']}% | {ci('faithful_paper_parser_ci')} |",
-        f"| Benchmark prompt, scored by the model's true answer (hand-verified) | {vals['faithful_true_acc']}% | {ci('faithful_true_ci')} |",
-        f"| Coax prompt, scored by the benchmark's parser | {vals['coax_paper_parser_acc']}% | {ci('coax_paper_parser_ci')} |",
+        f"| Original prompt, scored by the benchmark's parser | {vals['faithful_paper_parser_acc']}% | {ci('faithful_paper_parser_ci')} |",
+        f"| Original prompt, scored by the model's true answer (hand-verified) | {vals['faithful_true_acc']}% | {ci('faithful_true_ci')} |",
+        f"| Revised prompt, scored by the benchmark's parser | {vals['coax_paper_parser_acc']}% | {ci('coax_paper_parser_ci')} |",
         "",
     ])
     with open(os.path.join(OUT_DIR, "faithful_true_accuracy_table.md"), "w", encoding="utf-8") as f:
