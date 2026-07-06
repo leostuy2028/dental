@@ -1,38 +1,55 @@
 {
   "GPT-4o": {
-    "n": 453,
+    "n": 491,
     "excluded_failed": 0,
     "count": {
-      "content": 278,
-      "letter": 77,
-      "neither": 98
+      "content": 294,
+      "letter": 82,
+      "neither": 115
     },
     "pct": {
-      "content": 61.4,
-      "letter": 17.0,
-      "neither": 21.6
+      "content": 59.9,
+      "letter": 16.7,
+      "neither": 23.4
     },
-    "acc_clean": 53.6,
-    "acc_shuffled": 48.3,
+    "acc_clean": 54.2,
+    "acc_shuffled": 48.9,
     "acc_drop": 5.3
   },
   "Gemini-2.5-flash": {
-    "n": 453,
+    "n": 491,
     "excluded_failed": 0,
     "count": {
-      "content": 280,
-      "letter": 55,
-      "neither": 118
+      "content": 356,
+      "letter": 61,
+      "neither": 74
     },
     "pct": {
-      "content": 61.8,
-      "letter": 12.1,
-      "neither": 26.0
+      "content": 72.5,
+      "letter": 12.4,
+      "neither": 15.1
     },
-    "acc_clean": 43.5,
-    "acc_shuffled": 43.3,
-    "acc_drop": 0.2
+    "acc_clean": 44.6,
+    "acc_shuffled": 43.6,
+    "acc_drop": 1.0
+  },
+  "Gemini-3.5-flash": {
+    "n": 491,
+    "excluded_failed": 0,
+    "count": {
+      "content": 377,
+      "letter": 45,
+      "neither": 69
+    },
+    "pct": {
+      "content": 76.8,
+      "letter": 9.2,
+      "neither": 14.1
+    },
+    "acc_clean": 59.9,
+    "acc_shuffled": 58.0,
+    "acc_drop": 1.9
   },
   "_generator": "paper_analysis/position_stability.py",
-  "_generated_utc": "2026-07-06T02:45:12+00:00"
+  "_generated_utc": "2026-07-06T17:32:32+00:00"
 }

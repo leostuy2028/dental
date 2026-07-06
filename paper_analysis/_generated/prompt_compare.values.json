@@ -1,38 +1,38 @@
 {
-  "GPT-4o (coax)": {
-    "n": 453,
+  "GPT-4o (revised)": {
+    "n": 491,
     "excluded_failed": 0,
     "count": {
-      "content": 278,
-      "letter": 77,
-      "neither": 98
+      "content": 294,
+      "letter": 82,
+      "neither": 115
     },
     "pct": {
-      "content": 61.4,
-      "letter": 17.0,
-      "neither": 21.6
+      "content": 59.9,
+      "letter": 16.7,
+      "neither": 23.4
     },
-    "acc_clean": 53.6,
-    "acc_shuffled": 48.3,
+    "acc_clean": 54.2,
+    "acc_shuffled": 48.9,
     "acc_drop": 5.3
   },
-  "GPT-4o (faithful)": {
-    "n": 351,
-    "excluded_failed": 102,
+  "GPT-4o (original)": {
+    "n": 491,
+    "excluded_failed": 0,
     "count": {
-      "content": 252,
-      "letter": 42,
-      "neither": 57
+      "content": 341,
+      "letter": 56,
+      "neither": 94
     },
     "pct": {
-      "content": 71.8,
-      "letter": 12.0,
-      "neither": 16.2
+      "content": 69.5,
+      "letter": 11.4,
+      "neither": 19.1
     },
-    "acc_clean": 43.0,
-    "acc_shuffled": 41.6,
-    "acc_drop": 1.4
+    "acc_clean": 43.2,
+    "acc_shuffled": 40.5,
+    "acc_drop": 2.7
   },
   "_generator": "paper_analysis/position_stability.py",
-  "_generated_utc": "2026-07-05T13:24:47+00:00"
+  "_generated_utc": "2026-07-06T17:32:34+00:00"
 }
