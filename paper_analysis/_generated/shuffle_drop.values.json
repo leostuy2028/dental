@@ -1,0 +1,29 @@
+{
+  "n": 491,
+  "original_key": {
+    "n": 491,
+    "acc": 54.2,
+    "ci": [
+      49.8,
+      58.5
+    ],
+    "floor": 44.0
+  },
+  "shuffled_key": {
+    "n": 491,
+    "acc": 48.9,
+    "ci": [
+      44.5,
+      53.3
+    ],
+    "floor": 27.9
+  },
+  "drop_pts": 5.3,
+  "floor_drop_pts": 16.1,
+  "_generator": "paper_analysis/shuffle_drop.py",
+  "_source_csv": [
+    "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv",
+    "results/closed_ended/position_bias/gpt-4o-2024-11-20__coax-direct-k0__shuffled__n491.csv"
+  ],
+  "_generated_utc": "2026-07-06T14:33:12+00:00"
+}
