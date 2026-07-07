@@ -1,0 +1,15 @@
+{
+  "experiment": "e11-ctx",
+  "paper_section": "5.5",
+  "description": "OPG primer from sources 1,2,A,B",
+  "context_file": "reference/opg_primer.txt",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_e11_sel.parquet",
+  "n": 130,
+  "accuracy_pct": 40.77,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended_e11_sel.parquet --start 0 --context reference/opg_primer.txt --out results/closed_ended/knowledge_context/gemini-3.5-flash__coax-direct-ctx-opgprimer__e11sel__n130.csv --exp e11-ctx --paper-section 5.5 --description OPG primer from sources 1,2,A,B",
+  "code_commit": "a0395c8",
+  "generated_utc": "2026-07-07T18:06:35+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-ctx-opgprimer__e11sel__n130.csv"
+}

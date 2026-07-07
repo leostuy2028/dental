@@ -70,7 +70,7 @@ def _image_part(b64_string):
     )
 
 
-def build_prompt(row, examples=None, cot=False, mode="house"):
+def build_prompt(row, examples=None, cot=False, mode="house", context=None):
     """
     Build a Gemini content list for a closed-ended question.
 
@@ -79,11 +79,15 @@ def build_prompt(row, examples=None, cot=False, mode="house"):
         examples: optional list of rows to use as few-shot context
         cot: if True, use the per-option chain-of-thought prompt (reason about
             each option, then emit "Answer: X")
+        context: optional fixed reference text prepended as a preamble (E11, §5.5)
 
     Returns:
         list of content parts to pass to client.models.generate_content()
     """
     parts = [COAX_SYSTEM if mode == "coax" else SYSTEM]
+
+    if context:
+        parts.append("\n" + context.strip() + "\n")
 
     if examples:
         parts.append("\nHere are some examples:\n")

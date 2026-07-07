@@ -50,7 +50,8 @@ def print_summary(df, model, k):
 
 
 def run(model, k, results_path, data_path="data/closed_ended.parquet",
-        limit=None, start=0, thinking_budget=None, cot=False, mode="house", meta=None):
+        limit=None, start=0, thinking_budget=None, cot=False, mode="house", meta=None,
+        context=None):
     # route the client at the requested model (default gemini-2.0-flash)
     gemini_client.MODEL = model
 
@@ -86,7 +87,8 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet",
             continue
 
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
-        parts = build_prompt(row, examples=examples if examples else None, cot=cot, mode=mode)
+        parts = build_prompt(row, examples=examples if examples else None, cot=cot, mode=mode,
+                             context=context)
         try:
             predicted, raw = gemini_client.call(parts, thinking_budget=thinking_budget, cot=cot)
         except APICallFailed as e:
@@ -151,6 +153,8 @@ if __name__ == "__main__":
     parser.add_argument("--exp", default="")
     parser.add_argument("--paper-section", default="")
     parser.add_argument("--description", default="")
+    parser.add_argument("--context", default=None,
+                        help="path to a reference text file prepended to each question (E11, §5.5)")
     args = parser.parse_args()
 
     if args.out is None:
@@ -159,6 +163,9 @@ if __name__ == "__main__":
         cot_tag = "_cot" if args.cot else ""
         args.out = f"results/closed_{args.model}_{args.k}shot_{tag}{cot_tag}{think_tag}.csv"
 
+    context_text = open(args.context, encoding="utf-8").read() if args.context else None
     run(model=args.model, k=args.k, results_path=args.out, data_path=args.data,
         limit=args.limit, start=args.start, thinking_budget=args.thinking_budget, cot=args.cot, mode=args.prompt,
-        meta={"experiment": args.exp, "paper_section": args.paper_section, "description": args.description})
+        context=context_text,
+        meta={"experiment": args.exp, "paper_section": args.paper_section, "description": args.description,
+              "context_file": args.context or ""})

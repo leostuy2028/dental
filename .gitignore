@@ -40,3 +40,4 @@ results/progress_claude.txt
 # throwaway smoke-test outputs from harness reorg checks (not ledgered)
 results/_pilot/*smoke*
 data/closed_ended_hard50_shuffled.parquet
+data/closed_ended_e11_sel.parquet
