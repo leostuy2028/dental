@@ -1,0 +1,51 @@
+index,file_name,category,question,answer,predicted,raw_response,correct,refused,n_examples
+9,016642.jpg,Jaw,Is there any apparent bone loss in the image?,B,A,A,False,False,0
+20,016649.jpg,"Teeth,Patho",Which tooth has a suspected deep caries?,D,B,B,False,False,0
+26,016650.jpg,"Teeth,Patho",Which teeth are suspected to have deep caries?,D,D,D,True,False,0
+28,016652.jpg,"Teeth,Patho,SumRec",Which teeth are recommended for monitoring due to suspicious caries?,B,B,B,True,False,0
+37,016655.jpg,"Patho,Jaw",Which of the following is NOT a finding related to the maxillary sinuses?,A,B,B,False,False,0
+79,016723.jpg,Teeth,How many teeth are visualized in the panoramic radiograph?,D,D,D,True,False,0
+86,016726.jpg,HisT,Can you identify the dental treatment present on tooth 15?,C,D,D,False,False,0
+90,016744.jpg,Teeth,How many teeth were visualized in the panoramic radiograph?,D,C,C,False,False,0
+108,016792.jpg,"Teeth,HisT",Which tooth has signs of both a filling and root canal treatment?,A,A,A,True,False,0
+112,016807.jpg,"Teeth,HisT",Which tooth site has a dental implant present?,B,B,B,True,False,0
+115,016807.jpg,"Teeth,HisT",Which tooth has both a crown and root canal treatment?,A,D,D,False,False,0
+116,016808.jpg,"Teeth,Patho",Which tooth is suspicious for deep caries?,B,D,D,False,False,0
+128,016823.jpg,"Teeth,SumRec",Which tooth requires endodontic evaluation?,D,D,D,True,False,0
+133,016825.jpg,"Teeth,Patho",Which tooth exhibits a periapical granuloma?,A,D,D,False,False,0
+146,016836.jpg,Teeth,Which of the following is TRUE regarding the wisdom teeth?,D,D,D,True,False,0
+163,016874.jpg,"Teeth,HisT",Which tooth has undergone root canal treatment?,A,B,B,False,False,0
+164,016874.jpg,Jaw,What is observed in the upper jawbone?,D,B,B,False,False,0
+191,016961.jpg,"Teeth,Patho",Which tooth shows evidence of both deep caries and a periapical abscess?,B,B,B,True,False,0
+192,016961.jpg,Jaw,What type of bone loss is observed in the upper jaw?,D,D,D,True,False,0
+194,016961.jpg,Teeth,How many wisdom teeth are erupted in the patient?,C,C,C,True,False,0
+195,016964.jpg,Teeth,Which wisdom tooth is likely erupted?,D,B,B,False,False,0
+197,016964.jpg,"Teeth,HisT",Which tooth has undergone root canal treatment?,A,B,B,False,False,0
+226,017083.jpg,"Teeth,Patho",Which of the following teeth are suspicious for caries?,A,C,C,False,False,0
+240,017113.jpg,"Patho,Jaw",Which jaw is suspected to have bone loss?,C,A,A,False,False,0
+251,017137.jpg,Teeth,Which wisdom teeth are erupted according to the report?,A,B,B,False,False,0
+259,017144.jpg,"Teeth,Jaw",How many missing teeth regions were detected in the lower jaw?,A,C,C,False,False,0
+272,017202.jpg,"Teeth,HisT",How many teeth show signs of crowns in the imaging?,A,C,C,False,False,0
+288,017215.jpg,HisT,Which of the following historical interventions is NOT present in the radiograph?,B,C,C,False,False,0
+289,017215.jpg,"Teeth,Jaw",What is the status of bone loss in the radiograph?,D,D,D,True,False,0
+292,017220.jpg,Teeth,How many wisdom teeth are detected?,D,D,D,True,False,0
+303,017271.jpg,Jaw,What is the observed condition of the bone architecture?,A,A,A,True,False,0
+305,017300.jpg,Jaw,Is there any apparent bone loss observed in the jaw?,B,B,B,True,False,0
+319,017336.jpg,Teeth,How many wisdom teeth are detected in the radiograph?,D,C,C,False,False,0
+334,017375.jpg,"Teeth,HisT",What historical intervention is evident at tooth 36?,D,C,C,False,False,0
+347,017656.jpg,"Teeth,Patho",Which tooth is suspicious for caries?,B,B,B,True,False,0
+350,017690.jpg,"Teeth,HisT",Which of the following tooth site presents an implant?,D,D,D,True,False,0
+364,017773.jpg,SumRec,Which of the following is a priority concern?,B,C,C,False,False,0
+374,017880.jpg,"Teeth,Patho,SumRec",Which tooth shows signs of a deep caries suspicious for further clinical evaluation?,A,C,C,False,False,0
+398,018160.jpg,Teeth,How many wisdom teeth are erupted?,A,B,B,False,False,0
+414,018211.jpg,"Teeth,HisT",Which tooth shows evidence of a filling?,C,C,C,True,False,0
+422,018254.jpg,Teeth,Which wisdom tooth is impacted?,D,D,D,True,False,0
+428,018263.jpg,"Teeth,Patho",Which tooth shows signs suggestive of a periapical cyst?,D,D,D,True,False,0
+431,018263.jpg,Teeth,Which of the following teeth is erupted according to the report?,B,C,C,False,False,0
+443,018278.jpg,"Teeth,Patho",Which tooth is suspicious for caries?,D,D,D,True,False,0
+451,018325.jpg,"Teeth,Patho",Which tooth is suspected to have caries according to the report?,A,D,D,False,False,0
+456,018328.jpg,Jaw,In which jaw is suspicious bone loss observed?,D,C,C,False,False,0
+458,018377.jpg,"HisT,Jaw",What structures are visible bilaterally in the jaw?,C,C,C,True,False,0
+469,018466.jpg,"Patho,Jaw",Which of the following is NOT a finding in the bone architecture?,A,B,B,False,False,0
+486,019277.jpg,Teeth,Which wisdom tooth is impacted?,A,A,A,True,False,0
+489,019277.jpg,"Teeth,Patho",Which tooth shows evidence of a periapical cyst?,D,D,D,True,False,0

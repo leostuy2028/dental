@@ -1,0 +1,14 @@
+{
+  "experiment": "thinking-budget-hard50",
+  "paper_section": "5.4",
+  "description": "budget sweep on 50 hard items (gpt4o AND gemini-2.5 both wrong, shuffled key)",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=-1",
+  "dataset": "closed_ended_hard50_shuffled.parquet",
+  "n": 50,
+  "accuracy_pct": 54.0,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget -1 --data data/closed_ended_hard50_shuffled.parquet --start 0 --out results/closed_ended/cot_length/gemini-3.5-flash__direct-think-1__hard50-shuffled__n50.csv --exp thinking-budget-hard50 --paper-section 5.4 --description budget sweep on 50 hard items (gpt4o AND gemini-2.5 both wrong, shuffled key)",
+  "code_commit": "afb0dfa",
+  "generated_utc": "2026-07-07T14:44:55+00:00",
+  "data_file": "gemini-3.5-flash__direct-think-1__hard50-shuffled__n50.csv"
+}

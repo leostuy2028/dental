@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panoramic X-ray Review</title>
+<style>
+  :root { --bg:#0f1216; --panel:#1a1f27; --line:#2c333d; --ink:#e8ecf1; --mut:#9aa5b1;
+          --acc:#4f8cff; --accd:#1e2a3d; --ok:#2ea16b; --warn:#c9762f; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  header { position:sticky; top:0; background:var(--panel); border-bottom:1px solid var(--line);
+           padding:10px 16px; display:flex; align-items:center; gap:14px; z-index:5; }
+  header .bar { flex:1; height:8px; background:var(--accd); border-radius:6px; overflow:hidden; }
+  header .fill { height:100%; background:var(--acc); width:0%; transition:width .2s; }
+  header .lbl { font-size:13px; color:var(--mut); white-space:nowrap; }
+  main { max-width:860px; margin:0 auto; padding:18px 16px 120px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; }
+  .imgwrap { text-align:center; background:#000; border-radius:10px; padding:6px; cursor:zoom-in; }
+  .imgwrap img { max-width:100%; max-height:52vh; border-radius:6px; }
+  .q { font-size:19px; font-weight:600; margin:16px 0 4px; }
+  .meta { font-size:12px; color:var(--mut); margin-bottom:10px; }
+  .opts { display:flex; flex-direction:column; gap:9px; margin-top:8px; }
+  button.opt { text-align:left; padding:12px 14px; border:1px solid var(--line); background:#141922;
+               color:var(--ink); border-radius:9px; font-size:15px; cursor:pointer; transition:.12s; }
+  button.opt:hover { border-color:var(--acc); }
+  button.opt.sel { border-color:var(--acc); background:var(--accd); box-shadow:0 0 0 1px var(--acc) inset; }
+  button.opt .k { display:inline-block; min-width:24px; font-weight:700; color:var(--acc); }
+  button.opt.special { color:var(--mut); font-style:italic; }
+  .refbox { background:#141922; border:1px solid var(--line); border-left:3px solid var(--warn);
+            border-radius:8px; padding:12px 14px; margin-top:10px; white-space:pre-wrap; font-size:15px; }
+  .note { width:100%; margin-top:12px; background:#141922; color:var(--ink); border:1px solid var(--line);
+          border-radius:8px; padding:9px 11px; font:inherit; resize:vertical; min-height:40px; }
+  footer { position:fixed; bottom:0; left:0; right:0; background:var(--panel); border-top:1px solid var(--line);
+           padding:12px 16px; display:flex; justify-content:space-between; align-items:center; }
+  footer .inner { max-width:860px; margin:0 auto; width:100%; display:flex; justify-content:space-between; gap:12px; }
+  .btn { padding:11px 20px; border-radius:9px; border:1px solid var(--line); background:#141922;
+         color:var(--ink); font-size:15px; cursor:pointer; }
+  .btn.primary { background:var(--acc); border-color:var(--acc); color:#fff; font-weight:600; }
+  .btn:disabled { opacity:.4; cursor:not-allowed; }
+  .hint { font-size:12px; color:var(--mut); margin-top:14px; }
+  .cmp { display:flex; gap:12px; margin-top:12px; flex-wrap:wrap; }
+  .cmp div { flex:1; min-width:200px; background:#141922; border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+  .cmp .lab { font-size:12px; color:var(--mut); }
+  #overlay { position:fixed; inset:0; background:rgba(0,0,0,.95); display:none; z-index:20; overflow:auto;
+             cursor:zoom-out; text-align:center; }
+  #overlay img { max-width:none; margin:20px auto; }
+  h1 { font-size:22px; } h2 { font-size:18px; color:var(--acc); }
+  a { color:var(--acc); }
+</style>
+</head>
+<body>
+<header>
+  <div class="lbl" id="phaseLbl">Review</div>
+  <div class="bar"><div class="fill" id="fill"></div></div>
+  <div class="lbl" id="count"></div>
+</header>
+<main id="stage"></main>
+<footer><div class="inner">
+  <button class="btn" id="back">‹ Back</button>
+  <button class="btn primary" id="next" disabled>Next ›</button>
+</div></footer>
+<div id="overlay" onclick="this.style.display='none'"><img id="ovimg"></div>
+
+<script>
+const ACCESS_KEY = "613d029b-3294-425c-8238-c7941365c59f"; // public key (safe client-side)
+const params = new URLSearchParams(location.search);
+const TOKEN = params.get("token") || "default";
+const LSKEY = "dentist_survey_" + TOKEN;
+
+let DATA = null, S = null, enterTime = 0;
+
+function loadState() {
+  try { const s = JSON.parse(localStorage.getItem(LSKEY)); if (s && s.version === 1) return s; } catch(e){}
+  return { version:1, token:TOKEN, phase:"intro", pos:0, apos:0,
+           answers:{}, adjud:{}, startedAt:new Date().toISOString() };
+}
+function save() { localStorage.setItem(LSKEY, JSON.stringify(S)); }
+
+const CLOSED_CHOICES = [
+  {v:"A",label:null},{v:"B",label:null},{v:"C",label:null},{v:"D",label:null},
+  {v:"CANT",label:"Cannot determine from this panoramic X-ray",special:true},
+  {v:"NONE",label:"None of these options is correct",special:true},
+];
+const OPEN_CHOICES = [
+  {v:"AGREE",label:"Agree — correct and complete"},
+  {v:"PARTIAL",label:"Partially agree — something wrong or missing"},
+  {v:"DISAGREE",label:"Disagree — the reference answer is wrong"},
+  {v:"CANT",label:"Cannot determine from this panoramic X-ray"},
+];
+
+function blindItems(){ return DATA.items; }
+function disagreements(){
+  return DATA.items.filter(it => it.task_type==="closed"
+    && "ABCD".includes((S.answers[it.item_id]||{}).choice)
+    && S.answers[it.item_id].choice !== it._key);
+}
+
+function el(tag, cls, html){ const e=document.createElement(tag); if(cls)e.className=cls; if(html!=null)e.innerHTML=html; return e; }
+function zoom(src){ document.getElementById("ovimg").src=src; document.getElementById("overlay").style.display="block"; }
+
+function render(){
+  const stage=document.getElementById("stage"); stage.innerHTML="";
+  const back=document.getElementById("back"), next=document.getElementById("next");
+  const fill=document.getElementById("fill"), count=document.getElementById("count"), pl=document.getElementById("phaseLbl");
+
+  if(S.phase==="intro"){
+    pl.textContent="Welcome"; fill.style.width="0%"; count.textContent="";
+    const c=el("div","card");
+    c.innerHTML=`<h1>Panoramic X-ray Review</h1>
+      <p>Thank you for helping. You will see ${DATA.n_closed} multiple-choice cases, then ${DATA.n_open} short
+      free-text cases. It takes about 45–55 minutes and <b>saves as you go</b>, so you can close the tab and
+      come back to this same link any time.</p>
+      <p><b>How to answer:</b> give the answer you would give <b>from the panoramic X-ray alone</b>.
+      If the X-ray cannot settle it, choose <i>“Cannot determine”</i> — please do not guess.
+      Tap the image to zoom.</p>
+      <p class="hint">Your responses are anonymous and used only to check the quality of a public research benchmark.</p>`;
+    const b=el("button","btn primary","Start ›"); b.style.marginTop="8px";
+    b.onclick=()=>{ S.phase="blind"; S.pos=0; save(); render(); };
+    c.appendChild(b); stage.appendChild(c);
+    back.style.visibility="hidden"; next.style.visibility="hidden";
+    return;
+  }
+  back.style.visibility="visible"; next.style.visibility="visible";
+
+  if(S.phase==="blind"){
+    const items=blindItems(), it=items[S.pos];
+    pl.textContent = it.task_type==="closed" ? "Multiple choice" : "Free text";
+    count.textContent = `Case ${S.pos+1} of ${items.length}`;
+    fill.style.width = (100*S.pos/items.length)+"%";
+    const cur=(S.answers[it.item_id]||{});
+    const c=el("div","card");
+    const iw=el("div","imgwrap"); const im=el("img"); im.src=it.image; im.alt="panoramic radiograph";
+    iw.onclick=()=>zoom(it.image); iw.appendChild(im); c.appendChild(iw);
+    c.appendChild(el("div","q",escapeHtml(it.question)));
+
+    const opts=el("div","opts");
+    if(it.task_type==="closed"){
+      c.appendChild(el("div","meta","Choose the single best answer from the X-ray."));
+      CLOSED_CHOICES.forEach(ch=>{
+        const txt = ch.label!=null ? ch.label : `<span class="k">${ch.v})</span> ${escapeHtml(it.options[ch.v])}`;
+        const b=el("button","opt"+(ch.special?" special":"")+(cur.choice===ch.v?" sel":""), txt);
+        b.onclick=()=>choose(it,ch.v); opts.appendChild(b);
+      });
+    } else {
+      c.appendChild(el("div","meta","Does the benchmark’s reference answer below match what you see?"));
+      c.appendChild(el("div","refbox",escapeHtml(it.reference)));
+      OPEN_CHOICES.forEach(ch=>{
+        const b=el("button","opt"+(cur.choice===ch.v?" sel":""), ch.label);
+        b.onclick=()=>choose(it,ch.v); opts.appendChild(b);
+      });
+    }
+    c.appendChild(opts);
+    const note=el("textarea","note"); note.placeholder="Optional note"; note.value=cur.note||"";
+    note.oninput=()=>{ (S.answers[it.item_id]=S.answers[it.item_id]||{}).note=note.value; save(); };
+    c.appendChild(note);
+    stage.appendChild(c);
+    back.disabled = S.pos===0;
+    next.disabled = !cur.choice;
+    next.textContent = S.pos===items.length-1 ? "Finish review ›" : "Next ›";
+    enterTime=Date.now();
+    return;
+  }
+
+  if(S.phase==="adjud"){
+    const dis=disagreements();
+    if(dis.length===0){ S.phase="done"; save(); return render(); }
+    const it=dis[S.apos];
+    pl.textContent="Quick check"; count.textContent=`Check ${S.apos+1} of ${dis.length}`;
+    fill.style.width=(100*S.apos/dis.length)+"%";
+    const cur=(S.adjud[it.item_id]||{});
+    const c=el("div","card");
+    c.innerHTML=`<h2>You and the benchmark chose differently</h2>
+      <p class="meta">On these few cases your answer differed from the benchmark’s stored answer.
+      Please tell us whether the benchmark’s answer is still defensible, or is a mistake.</p>`;
+    const iw=el("div","imgwrap"); const im=el("img"); im.src=it.image; iw.onclick=()=>zoom(it.image); iw.appendChild(im); c.appendChild(iw);
+    c.appendChild(el("div","q",escapeHtml(it.question)));
+    const yourTxt = it.options[S.answers[it.item_id].choice];
+    const cmp=el("div","cmp");
+    cmp.appendChild(el("div",null,`<div class="lab">Your answer</div><b>${S.answers[it.item_id].choice})</b> ${escapeHtml(yourTxt)}`));
+    cmp.appendChild(el("div",null,`<div class="lab">Benchmark’s answer</div><b>${it._key})</b> ${escapeHtml(it.options[it._key])}`));
+    c.appendChild(cmp);
+    const opts=el("div","opts");
+    [["DEFENSIBLE","The benchmark’s answer is defensible (both could be right)"],
+     ["ERROR","The benchmark’s answer is wrong — mine is correct"],
+     ["UNSURE","Unsure"]].forEach(([v,l])=>{
+      const b=el("button","opt"+(cur.verdict===v?" sel":""), l);
+      b.onclick=()=>{ (S.adjud[it.item_id]=S.adjud[it.item_id]||{}).verdict=v; save(); render(); };
+      opts.appendChild(b);
+    });
+    c.appendChild(opts);
+    const note=el("textarea","note"); note.placeholder="Optional: the correct finding, in a few words"; note.value=cur.note||"";
+    note.oninput=()=>{ (S.adjud[it.item_id]=S.adjud[it.item_id]||{}).note=note.value; save(); };
+    c.appendChild(note);
+    stage.appendChild(c);
+    back.disabled=S.apos===0;
+    next.disabled=!cur.verdict;
+    next.textContent = S.apos===dis.length-1 ? "Submit ›" : "Next ›";
+    return;
+  }
+
+  if(S.phase==="done"){ renderDone(); }
+}
+
+function choose(it,v){
+  const a=(S.answers[it.item_id]=S.answers[it.item_id]||{});
+  a.choice=v; a.seconds=(a.seconds||0)+Math.round((Date.now()-enterTime)/1000);
+  save(); render();
+}
+
+document.getElementById("next").onclick=()=>{
+  if(S.phase==="blind"){
+    if(S.pos<blindItems().length-1){ S.pos++; }
+    else { S.phase="adjud"; S.apos=0; }
+  } else if(S.phase==="adjud"){
+    if(S.apos<disagreements().length-1){ S.apos++; }
+    else { S.phase="done"; }
+  }
+  save(); render();
+};
+document.getElementById("back").onclick=()=>{
+  if(S.phase==="blind" && S.pos>0){ S.pos--; }
+  else if(S.phase==="adjud"){ if(S.apos>0) S.apos--; else { S.phase="blind"; S.pos=blindItems().length-1; } }
+  save(); render();
+};
+document.addEventListener("keydown",e=>{
+  if(e.target.tagName==="TEXTAREA") return;
+  if(S.phase==="blind"){
+    const it=blindItems()[S.pos];
+    const ch = it.task_type==="closed" ? CLOSED_CHOICES : OPEN_CHOICES;
+    const n=parseInt(e.key); if(n>=1&&n<=ch.length){ choose(it,ch[n-1].v); }
+    if(it.task_type==="closed" && "abcdABCD".includes(e.key)) choose(it,e.key.toUpperCase());
+  }
+  if(e.key==="Enter" && !document.getElementById("next").disabled) document.getElementById("next").click();
+});
+
+function buildPayload(){
+  const ans = DATA.items.map(it=>({
+    order:it.order, item_id:it.item_id, task_type:it.task_type,
+    choice:(S.answers[it.item_id]||{}).choice||null,
+    note:(S.answers[it.item_id]||{}).note||"",
+    seconds:(S.answers[it.item_id]||{}).seconds||null,
+  }));
+  const adj = Object.entries(S.adjud).map(([id,v])=>({item_id:id, verdict:v.verdict, note:v.note||""}));
+  return { token:TOKEN, started_at:S.startedAt, submitted_at:new Date().toISOString(),
+           n_answered:ans.filter(a=>a.choice).length, answers:ans, adjudications:adj };
+}
+function download(p){
+  const b=new Blob([JSON.stringify(p,null,2)],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(b);
+  a.download="dentist_survey_"+TOKEN+".json"; a.click();
+}
+async function submit(p){
+  const r=await fetch("https://api.web3forms.com/submit",{
+    method:"POST", headers:{"Content-Type":"application/json",Accept:"application/json"},
+    body:JSON.stringify({access_key:ACCESS_KEY, subject:"Dentist survey — "+TOKEN,
+                         from_name:"MMOral audit", payload:JSON.stringify(p)}) });
+  return r.ok;
+}
+function renderDone(){
+  const stage=document.getElementById("stage"); stage.innerHTML="";
+  document.getElementById("phaseLbl").textContent="Finished";
+  document.getElementById("fill").style.width="100%"; document.getElementById("count").textContent="";
+  document.getElementById("back").style.visibility="hidden"; document.getElementById("next").style.visibility="hidden";
+  const p=buildPayload();
+  const c=el("div","card");
+  c.innerHTML=`<h1>Almost done — please submit</h1>
+    <p>You answered <b>${p.n_answered}</b> of ${DATA.items.length} cases. Click submit to send your responses.</p>`;
+  const sb=el("button","btn primary","Submit my responses"); sb.style.marginRight="10px";
+  const status=el("p","hint","");
+  sb.onclick=async()=>{ sb.disabled=true; status.textContent="Sending…";
+    try{ const ok=await submit(p);
+      status.innerHTML = ok ? "✓ Submitted — thank you! You may close this tab."
+                            : "Could not reach the server. Please click “Download” and email the file.";
+      if(!ok) sb.disabled=false;
+    }catch(e){ status.innerHTML="Could not reach the server. Please click “Download” and email the file."; sb.disabled=false; }
+  };
+  const db=el("button","btn","Download responses");
+  db.onclick=()=>download(p);
+  c.appendChild(sb); c.appendChild(db); c.appendChild(status);
+  stage.appendChild(c);
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m])); }
+
+fetch("survey_data.json").then(r=>r.json()).then(d=>{ DATA=d; S=loadState(); render(); })
+  .catch(e=>{ document.getElementById("stage").innerHTML=
+    '<div class="card">Could not load the survey data. If testing locally, run a local web server '+
+    '(<code>python -m http.server</code>) rather than opening the file directly.</div>'; });
+</script>
+</body>
+</html>

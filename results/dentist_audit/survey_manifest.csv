@@ -1,0 +1,76 @@
+survey_order,item_id,task_type,bucket,index,category,question,A,B,C,D,answer_key,reference_answer
+1,c90,closed,T1,90,Teeth,How many teeth were visualized in the panoramic radiograph?,28,29,30,31,B,
+2,c72,closed,T1,72,"Patho,Jaw",Which of the following is NOT a finding in the jaw-specific observations?,Mandibular canal,Maxillary sinuses,Bone loss,All are findings,C,
+3,c454,closed,C,454,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,#45,#46,#47,#44,B,
+4,c120,closed,T1,120,"Teeth,SumRec",What is the priority concern for tooth 38?,Periapical cyst,Periapical granuloma,Root fracture ,Deep caries,C,
+5,c220,closed,T2,220,Jaw,Which jaw shows imaging features suggestive of bone loss?,Lower jaw,Upper jaw,Both jaws,Neither jaw,D,
+6,c408,closed,T2,408,Teeth,How many wisdom teeth are visualized in the panoramic radiograph?,2,3,4,5,C,
+7,c480,closed,T3,480,Jaw,Is there apparent bone loss in the image?,Yes,No,Partial,Unclear,B,
+8,c250,closed,T1,250,"Teeth,HisT",Which tooth has a sign of a filling?,#35,#34,#36,#37,B,
+9,c466,closed,T2,466,"Teeth,Patho",Which of the following teeth show signs of periapical granuloma?,#47 and #26,#27 and #37,#17 and #36,#46 and #56,A,
+10,c349,closed,T1,349,Jaw,Which of the following is NOT observed in the bone architecture?,Bone loss,Mandibular canals,Maxillary sinuses,Clear anatomical definition,A,
+11,c393,closed,T2,393,Jaw,"What structure is located within the coordinates [367, 537, 875, 1018]?",Nerve pathway,Bone structure,Maxillary sinus,Mandibular canal,D,
+12,c211,closed,T2,211,"Teeth,Patho",Which tooth is suspected to have caries?,#14,#13,#15,#16,D,
+13,c449,closed,C,449,"HisT,Jaw",Which of the following is NOT a visible structure in the jaw?,Mandibular canals,Maxillary sinuses,Nasal cavity,Sphenoid sinus,D,
+14,c134,closed,T1,134,Jaw,In which jaw is bone loss observed?,Upper jaw,Lower jaw,Both jaws,No bone loss,D,
+15,c359,closed,T1,359,Jaw,What is observed in the bilateral maxillary sinuses?,Signs of sinusitis,Signs of maxillary sinuses,Signs of bone loss,No apparent abnormalities,B,
+16,c117,closed,C,117,"HisT,Jaw",Which structures are visible in the imaging?,Bilateral mandibular canals and maxillary sinuses,Unilateral mandibular canals and maxillary sinuses,Bilateral maxillary canals and mandibular sinuses,Unilateral maxillary canals and mandibular sinuses,A,
+17,c296,closed,T1,296,"Patho,Jaw",Which of the following is NOT a finding in the jawbone?,Mild bone loss in the upper jaw ,Mandibular canal,No apparent bone loss,Periapical lesion,A,
+18,c248,closed,T1,248,Teeth,Which of the following is true about the wisdom teeth 38 and 48?,Both are impacted,Both are erupted,"#38 impacted, #48 erupted","#38 erupted, #48 impacted",B,
+19,c37,closed,T1,37,"Patho,Jaw",Which of the following is NOT a finding related to the maxillary sinuses?,Bilaterally visible,Obscuration and Signs of infection,Obscuration,Not visible,B,
+20,c275,closed,T3,275,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,#14,#15,#16,#17,B,
+21,c388,closed,T2,388,"Teeth,Patho",Which tooth shows signs of a periapical cyst?,#26,#28,#36,#37,D,
+22,c434,closed,T3,434,Teeth,How many teeth are visualized in the panoramic radiograph?,28,32,36,40,B,
+23,c164,closed,T1,164,Jaw,What is observed in the upper jawbone?,No bone loss,Signs of bone loss,Fracture,Tumor,A,
+24,c36,closed,T1,36,Teeth,What is the condition of tooth 18?,Erupted,Impacted,Missing,Restored,A,
+25,c242,closed,T1,242,Teeth,Which tooth is erupted and suspicious for eruption?,#38,#36,#45,All,D,
+26,c469,closed,T2,469,"Patho,Jaw",Which of the following is NOT a finding in the bone architecture?,Apparent bone loss,Bilateral mandibular canals,Clear maxillary sinuses,No apparent bone loss,A,
+27,c190,closed,C,190,"HisT,Jaw",Which structures are visible in the lower jaw?,Maxillary sinuses,Mandibular canals,Nasal cavities,Tonsils,B,
+28,c122,closed,T2,122,Teeth,Which tooth is erupted as a wisdom tooth?,#18 and #28,#28,#38,#48,A,
+29,c200,closed,T1,200,Jaw,Where is bone loss detected?,Lower jaw,Upper jaw,Both jaws,No bone loss,D,
+30,c166,closed,T1,166,"HisT,Jaw",What structures are visible in the imaging?,Bilateral maxillary sinuses,Bilateral mandibular canals,Nasal cavity,Both A and B,B,
+31,c17,closed,T2,17,"Teeth,Patho",Which tooth shows evidence of a periapical lesion?,#18,#28,#47,"#18, #47, and #48",D,
+32,c487,closed,C,487,"Teeth,Jaw",What is the status of the maxillary sinus?,Not visible,Partially visible and normal,Fully visible and abnormal,Not mentioned,B,
+33,c416,closed,T2,416,Patho,How many teeth show periapical lesions in this panoramic X-ray?,32,0,1,27,C,
+34,c119,closed,T1,119,Jaw,What is observed regarding the bone architecture?,Severe bone loss,Mild bone loss,No apparent bone loss,Significant bone loss,B,
+35,c442,closed,T2,442,"HisT,Jaw",What structures are visible in the imaging?,Unilateral mandibular canals,Bilateral maxillary sinuses,Bilateral mandibular canals,Both B and C,D,
+36,c305,closed,T3,305,Jaw,Is there any apparent bone loss observed in the jaw?,"Yes, severe bone loss","Yes, moderate bone loss","Yes, mild bone loss",No apparent bone loss,D,
+37,c483,closed,C,483,"Teeth,HisT",Which teeth show signs of both crown and root canal treatment?,#16 only,#36 only,#16 and #36,"#16, #36, and #32",C,
+38,c381,closed,T2,381,Teeth,How many wisdom teeth are erupted in the patient?,2,3,4,1,B,
+39,c334,closed,T1,334,"Teeth,HisT",What historical intervention is evident at tooth 36?,Crown,Filling,Root canal treatment,Extraction,B,
+40,c422,closed,T2,422,Teeth,Which wisdom tooth is impacted?,#18,#28,#38,#48,D,
+41,c342,closed,T1,342,Jaw,What is observed in the upper jaw bone architecture?,Generalized bone loss,Localized bone loss,No significant bone loss,Fracture,B,
+42,c150,closed,C,150,Teeth,How many teeth are visualized in the radiograph?,28,32,36,40,B,
+43,c452,closed,T2,452,"Teeth,HisT",Which tooth has undergone root canal treatment?,#21,#11,#46,All of the above,D,
+44,c227,closed,T3,227,"Teeth,HisT",Which tooth has a crown restoration without any signs of root canal treatment?,#11,#12 and #22,#21,#22,B,
+45,c11,closed,T1,11,Teeth,Which of the following wisdom teeth are impacted?,#18 and #28,#48,#28 and #38,#18 and #38,B,
+46,c367,closed,C,367,Jaw,What is the condition of the maxillary sinuses?,Cloudy unilaterally,Clear bilaterally,Obscured,Enlarged,B,
+47,c29,closed,C,29,"HisT,Jaw",Which of the following is NOT a visible structure in the imaging?,Mandibular canals,Maxillary sinuses,Nasal cavity,Ethmoid air cells,D,
+48,c398,closed,T1,398,Teeth,How many wisdom teeth are erupted?,2,3,4,5,C,
+49,c138,closed,T3,138,Teeth,Which tooth is impacted?,#18 and #48,#28,#38,#48,A,
+50,c314,closed,T3,314,"Teeth,Jaw",What is the status of bone loss in the radiograph?,Severe bone loss,Moderate bone loss,No apparent bone loss,Mild bone loss,C,
+51,c294,closed,T2,294,"Teeth,Patho",Which tooth shows signs of a periapical cyst?,#11,#12,#13,#14,B,
+52,c329,closed,T3,329,Jaw,"Can you identify the structure within the bounding box [1596, 539, 2126, 1039]?",Nerve pathway,Bone structure,Maxillary sinus,Mandibular canal,D,
+53,c225,closed,T2,225,"HisT,Jaw",Is there any apparent bone loss visible in the image?,Yes,No,Unclear,Not mentioned,B,
+54,c25,closed,T1,25,Jaw,Does the imaging indicate any bone loss?,Yes,No,Maybe,Unclear,B,
+55,c237,closed,C,237,"Teeth,HisT",Which teeth have root canal treatment with restoration?,#24 and #35,#36 and #46,#14 and #38,#18 and #48,B,
+56,c278,closed,T3,278,Teeth,How many wisdom teeth are present in the radiograph?,1,2,3,4,B,
+57,c100,closed,T2,100,Patho,How many teeth show periapical lesions in this panoramic X-ray?,0,9,1,2,C,
+58,c178,closed,T3,178,Teeth,Which of the following wisdom teeth is erupted?,#18,#38,#48,#28,C,
+59,c171,closed,T2,171,"Teeth,HisT",Which of the following teeth does NOT show signs of fillings?,"#14, #25, #37",#25,#37,#45,A,
+60,c147,closed,T1,147,"HisT,Jaw",Which structure is visible bilaterally in the maxilla?,Mandibular canals and maxillary sinuses,Maxillary sinuses,Nasal cavities,Ethmoid air cells,A,
+61,o399,open,prose,399,"HisT,Jaw",What visible structures are noted in the jaw?,,,,,,Bilateral mandibular canals and clear maxillary sinuses with clear boundaries are visible.
+62,o351,open,prose,351,"Teeth,HisT",What historical interventions are noted in tooth #46?,,,,,,Tooth #46 shows imaging features of both a crown restoration and root canal treatment.
+63,o325,open,prose,325,"Teeth,HisT",Which teeth show signs of dental implants?,,,,,,"Teeth #35, #36, and #37 show signs of dental implants."
+64,o80,open,prose,80,"Teeth,Patho",What pathological findings are noted in teeth #34 and #24?,,,,,,24 and 34 show signs of a periapical lesion.
+65,o221,open,prose,221,"HisT,Jaw",What structures are visible in the jaw?,,,,,,Bilateral mandibular canals and bilateral maxillary sinuses.
+66,o61,open,prose,61,Teeth,"What is the general condition of the teeth, and how many are visualized?",,,,,,32 teeth are visualized with clear anatomical definition.
+67,o350,open,prose,350,"HisT,Jaw",What structures are visible in the jaw besides the bone architecture?,,,,,,The mandibular canal is visible in the image.
+68,o26,open,prose,26,HisT,What historical interventions are noted in the report?,,,,,,"Signs of fillings in #16,26,38,46; crown restoration in #36; root canal treatment in #26; and a dental implant in #36."
+69,o248,open,prose,248,Patho,What pathological findings were identified in the report?,,,,,,Tooth #36 shows signs of a periapical granuloma.
+70,o355,open,prose,355,"Teeth,Patho",What is the finding related to tooth #38?,,,,,,Sign of deep caries.
+71,o381,open,prose,381,Teeth,How many teeth are visualized with clear anatomical definition?,,,,,,31 teeth are visualized with clear anatomical definition.
+72,o168,open,prose,168,Patho,What pathological findings are present in the radiograph?,,,,,,Tooth 42 shows evidence of periapical lesion.
+73,o498,open,prose,498,"Teeth,Patho",What pathological findings are associated with tooth #37?,,,,,,Tooth #37 shows evidence of caries and signs of a periapical abscess.
+74,o225,open,prose,225,"Teeth,Patho",What pathological findings are present in tooth #47?,,,,,,Tooth #47 shows evidence of a periapical abscess.
+75,o73,open,prose,73,Teeth,What is the general condition of the teeth?,,,,,,"21 teeth are visualized with clear anatomical definition, and there is a suspected missing tooth on the upper side."

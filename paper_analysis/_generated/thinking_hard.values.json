@@ -1,0 +1,96 @@
+{
+  "_generator": "paper_analysis/thinking_hard.py",
+  "_source_dir": "results/closed_ended/cot_length",
+  "_generated_utc": "2026-07-07T14:45:41.732480+00:00",
+  "per_budget": {
+    "0": {
+      "label": "off",
+      "n": 50,
+      "correct": 23,
+      "acc": 46.0,
+      "ci": [
+        33.0,
+        59.6
+      ],
+      "letters": {
+        "A": 5,
+        "B": 14,
+        "C": 14,
+        "D": 17
+      }
+    },
+    "512": {
+      "label": "512",
+      "n": 50,
+      "correct": 24,
+      "acc": 48.0,
+      "ci": [
+        34.8,
+        61.5
+      ],
+      "letters": {
+        "A": 10,
+        "B": 15,
+        "C": 12,
+        "D": 13
+      }
+    },
+    "2048": {
+      "label": "2048",
+      "n": 50,
+      "correct": 25,
+      "acc": 50.0,
+      "ci": [
+        36.6,
+        63.4
+      ],
+      "letters": {
+        "A": 12,
+        "B": 13,
+        "C": 11,
+        "D": 14
+      }
+    },
+    "8192": {
+      "label": "8192",
+      "n": 50,
+      "correct": 25,
+      "acc": 50.0,
+      "ci": [
+        36.6,
+        63.4
+      ],
+      "letters": {
+        "A": 11,
+        "B": 14,
+        "C": 14,
+        "D": 11
+      }
+    },
+    "-1": {
+      "label": "dynamic",
+      "n": 50,
+      "correct": 27,
+      "acc": 54.0,
+      "ci": [
+        40.4,
+        67.0
+      ],
+      "letters": {
+        "A": 11,
+        "B": 14,
+        "C": 12,
+        "D": 13
+      }
+    }
+  },
+  "paired_0_vs_8192": {
+    "n": 50,
+    "acc0": 46.0,
+    "acc8192": 50.0,
+    "rescued": 7,
+    "broke": 5,
+    "net": 2,
+    "mcnemar_p": 0.7744
+  }
+}
