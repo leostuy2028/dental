@@ -1,0 +1,18 @@
+{
+  "experiment": "e11-primer+visualex-v2",
+  "paper_section": "5.4",
+  "description": "STACKED: text primer v1 + 12 combined exemplars (DENTEX pathology/numbering + Zenodo HisT/Jaw)",
+  "context_file": "reference/opg_primer.txt",
+  "max_image_px": "full",
+  "crops": false,
+  "visual_exemplars": "reference/exemplars_v2.json",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_e11_sel.parquet",
+  "n": 130,
+  "accuracy_pct": 49.23,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended_e11_sel.parquet --start 0 --context reference/opg_primer.txt --visual-exemplars reference/exemplars_v2.json --out results/closed_ended/knowledge_context/gemini-3.5-flash__coax-direct-primerv1+visualex-v2__e11sel__n130.csv --exp e11-primer+visualex-v2 --paper-section 5.4 --description STACKED: text primer v1 + 12 combined exemplars (DENTEX pathology/numbering + Zenodo HisT/Jaw)",
+  "code_commit": "4ce3012",
+  "generated_utc": "2026-07-08T19:43:37+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-primerv1+visualex-v2__e11sel__n130.csv"
+}

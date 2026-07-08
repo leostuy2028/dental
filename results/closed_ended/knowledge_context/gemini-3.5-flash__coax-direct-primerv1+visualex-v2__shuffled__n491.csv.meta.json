@@ -1,0 +1,18 @@
+{
+  "experiment": "s54-primer-visualex-v2-full",
+  "paper_section": "5.4",
+  "description": "STACKED: OPG text primer + 12 combined visual exemplars (DENTEX pathology/numbering + Zenodo HisT/Jaw), full benchmark shuffled key",
+  "context_file": "reference/opg_primer.txt",
+  "max_image_px": "full",
+  "crops": false,
+  "visual_exemplars": "reference/exemplars_v2.json",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_shuffled.parquet",
+  "n": 491,
+  "accuracy_pct": 62.73,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended_shuffled.parquet --start 0 --paper-section 5.4 --context reference/opg_primer.txt --visual-exemplars reference/exemplars_v2.json --out results/closed_ended/knowledge_context/gemini-3.5-flash__coax-direct-primerv1+visualex-v2__shuffled__n491.csv --exp s54-primer-visualex-v2-full --description STACKED: OPG text primer + 12 combined visual exemplars (DENTEX pathology/numbering + Zenodo HisT/Jaw), full benchmark shuffled key",
+  "code_commit": "4ce3012",
+  "generated_utc": "2026-07-08T20:28:07+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-primerv1+visualex-v2__shuffled__n491.csv"
+}
