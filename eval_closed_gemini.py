@@ -51,15 +51,25 @@ def print_summary(df, model, k):
 
 def run(model, k, results_path, data_path="data/closed_ended.parquet",
         limit=None, start=0, thinking_budget=None, cot=False, mode="house", meta=None,
-        context=None, max_image_px=None):
+        context=None, max_image_px=None, crops=False, pool_images=None, visual_exemplars=None):
     # route the client at the requested model (default gemini-2.0-flash)
     gemini_client.MODEL = model
 
     from dataio import eval_data
     full_df = eval_data.read_closed(data_path)
 
-    # 0-shot reproduces the paper's protocol on the full set; few-shot carves a pool.
-    if k > 0:
+    # pool_images: contamination-safe few-shot — reserve the FIRST N distinct images
+    # (all their questions) as the exemplar bank; test only on the disjoint remaining
+    # images, so an exemplar can never share an X-ray with a test item (P13).
+    if pool_images:
+        ids = full_df["image_id"].drop_duplicates().tolist()
+        pool_ids = set(ids[:pool_images])
+        pool_df = full_df[full_df["image_id"].isin(pool_ids)].copy()
+        test_df = full_df[~full_df["image_id"].isin(pool_ids)].copy()
+        assert not (set(pool_df["image_id"]) & set(test_df["image_id"])), "image leak between pool and test"
+        print(f"[image-disjoint few-shot] pool: {pool_df['image_id'].nunique()} images / "
+              f"{len(pool_df)} exemplars | test: {test_df['image_id'].nunique()} images / {len(test_df)} questions")
+    elif k > 0:
         pool_df = full_df.iloc[:POOL_SIZE].copy()
         test_df = full_df.iloc[POOL_SIZE:].copy()
     else:
@@ -88,7 +98,8 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet",
 
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
         parts = build_prompt(row, examples=examples if examples else None, cot=cot, mode=mode,
-                             context=context, max_image_px=max_image_px)
+                             context=context, max_image_px=max_image_px, crops=crops,
+                             visual_exemplars=visual_exemplars)
         try:
             predicted, raw = gemini_client.call(parts, thinking_budget=thinking_budget, cot=cot)
         except APICallFailed as e:
@@ -158,6 +169,10 @@ if __name__ == "__main__":
     parser.add_argument("--max-image-px", type=int, default=None,
                         help="downscale each image so its longest side <= N (exploration cost only; "
                              "paper numbers use full-res). Gemini 1-tile threshold is 768.")
+    parser.add_argument("--crops", action="store_true",
+                        help="also send left/right half crops as focused regional views (P13 region-crop test)")
+    parser.add_argument("--visual-exemplars", default=None,
+                        help="path to a manifest.json of labeled example images to prepend (P13 visual few-shot)")
     args = parser.parse_args()
 
     if args.out is None:
@@ -167,8 +182,16 @@ if __name__ == "__main__":
         args.out = f"results/closed_{args.model}_{args.k}shot_{tag}{cot_tag}{think_tag}.csv"
 
     context_text = open(args.context, encoding="utf-8").read() if args.context else None
+    vis_ex = None
+    if args.visual_exemplars:
+        import json as _json
+        man = _json.load(open(args.visual_exemplars, encoding="utf-8"))
+        mdir = os.path.dirname(os.path.abspath(args.visual_exemplars))
+        vis_ex = [(open(os.path.join(mdir, os.path.basename(e["image"])), "rb").read(), e["caption"])
+                  for e in man["exemplars"]]
     run(model=args.model, k=args.k, results_path=args.out, data_path=args.data,
         limit=args.limit, start=args.start, thinking_budget=args.thinking_budget, cot=args.cot, mode=args.prompt,
-        context=context_text, max_image_px=args.max_image_px,
+        context=context_text, max_image_px=args.max_image_px, crops=args.crops, visual_exemplars=vis_ex,
         meta={"experiment": args.exp, "paper_section": args.paper_section, "description": args.description,
-              "context_file": args.context or "", "max_image_px": args.max_image_px or "full"})
+              "context_file": args.context or "", "max_image_px": args.max_image_px or "full",
+              "crops": args.crops, "visual_exemplars": args.visual_exemplars or ""})

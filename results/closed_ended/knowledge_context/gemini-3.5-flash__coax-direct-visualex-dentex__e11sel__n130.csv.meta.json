@@ -1,0 +1,18 @@
+{
+  "experiment": "e11-visualex-dentex",
+  "paper_section": "5.4",
+  "description": "6 DENTEX (CC-BY) labeled visual exemplars: impacted/caries/deep-caries/periapical, FDI-boxed",
+  "context_file": "",
+  "max_image_px": "full",
+  "crops": false,
+  "visual_exemplars": "reference/dentex_exemplars/manifest.json",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_e11_sel.parquet",
+  "n": 130,
+  "accuracy_pct": 38.46,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended_e11_sel.parquet --start 0 --visual-exemplars reference/dentex_exemplars/manifest.json --out results/closed_ended/knowledge_context/gemini-3.5-flash__coax-direct-visualex-dentex__e11sel__n130.csv --exp e11-visualex-dentex --paper-section 5.4 --description 6 DENTEX (CC-BY) labeled visual exemplars: impacted/caries/deep-caries/periapical, FDI-boxed",
+  "code_commit": "6ee217e",
+  "generated_utc": "2026-07-08T16:21:13+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-visualex-dentex__e11sel__n130.csv"
+}

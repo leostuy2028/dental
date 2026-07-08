@@ -1,0 +1,17 @@
+{
+  "experiment": "region-crop-baseline",
+  "paper_section": "5.4",
+  "description": "",
+  "context_file": "",
+  "max_image_px": "full",
+  "crops": false,
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_shuffled.parquet",
+  "n": 150,
+  "accuracy_pct": 57.33,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended_shuffled.parquet --start 0 --limit 150 --out results/closed_ended/region_crop/gemini-3.5-flash__coax-direct-full__shuffled__idx0-149.csv --exp region-crop-baseline --paper-section 5.4",
+  "code_commit": "6ee217e",
+  "generated_utc": "2026-07-08T15:45:20+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-full__shuffled__idx0-149.csv"
+}

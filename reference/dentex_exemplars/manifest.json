@@ -1,0 +1,29 @@
+{
+ "_source": "DENTEX (ibrahimhamamci/DENTEX), CC-BY; validation set; labels verbatim from annotations",
+ "exemplars": [
+  {
+   "image": "dentex_exemplars/val_9.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #48 impacted; #38 impacted."
+  },
+  {
+   "image": "dentex_exemplars/val_20.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #38 caries."
+  },
+  {
+   "image": "dentex_exemplars/val_39.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #14 deep caries."
+  },
+  {
+   "image": "dentex_exemplars/val_34.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #35 periapical lesion; #17 caries."
+  },
+  {
+   "image": "dentex_exemplars/val_19.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #37 deep caries; #38 periapical lesion."
+  },
+  {
+   "image": "dentex_exemplars/val_37.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #38 impacted; #25 deep caries."
+  }
+ ]
+}

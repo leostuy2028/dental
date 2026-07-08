@@ -1,0 +1,18 @@
+{
+  "experiment": "e11-primer+visualex",
+  "paper_section": "5.4",
+  "description": "STACKED: text primer v1 + 6 DENTEX visual exemplars",
+  "context_file": "reference/opg_primer.txt",
+  "max_image_px": "full",
+  "crops": false,
+  "visual_exemplars": "reference/dentex_exemplars/manifest.json",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_e11_sel.parquet",
+  "n": 130,
+  "accuracy_pct": 41.54,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended_e11_sel.parquet --start 0 --context reference/opg_primer.txt --visual-exemplars reference/dentex_exemplars/manifest.json --out results/closed_ended/knowledge_context/gemini-3.5-flash__coax-direct-primerv1+visualex__e11sel__n130.csv --exp e11-primer+visualex --paper-section 5.4 --description STACKED: text primer v1 + 6 DENTEX visual exemplars",
+  "code_commit": "6ee217e",
+  "generated_utc": "2026-07-08T16:31:51+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-primerv1+visualex__e11sel__n130.csv"
+}

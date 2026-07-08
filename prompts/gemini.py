@@ -87,7 +87,23 @@ def _image_part(b64_string, max_image_px=None):
     )
 
 
-def build_prompt(row, examples=None, cot=False, mode="house", context=None, max_image_px=None):
+def _half_crops(b64_string):
+    """Split the panoramic vertically at the midline into left+right halves (whole
+    teeth preserved). Focused regional views to ease localization/counting (P13)."""
+    import io
+    from PIL import Image
+    img = Image.open(io.BytesIO(base64.b64decode(b64_string))).convert("RGB")
+    w, h = img.size
+    parts = []
+    for box in ((0, 0, w // 2, h), (w // 2, 0, w, h)):
+        buf = io.BytesIO()
+        img.crop(box).save(buf, format="JPEG", quality=90)
+        parts.append(types.Part.from_bytes(data=buf.getvalue(), mime_type="image/jpeg"))
+    return parts
+
+
+def build_prompt(row, examples=None, cot=False, mode="house", context=None, max_image_px=None,
+                 crops=False, visual_exemplars=None):
     """
     Build a Gemini content list for a closed-ended question.
 
@@ -106,6 +122,14 @@ def build_prompt(row, examples=None, cot=False, mode="house", context=None, max_
     if context:
         parts.append("\n" + context.strip() + "\n")
 
+    if visual_exemplars:
+        parts.append("\nHere are example panoramic X-rays with their findings marked (red boxes) and "
+                     "labeled in FDI tooth numbering, to show what these findings look like:")
+        for img_bytes, caption in visual_exemplars:
+            parts.append(types.Part.from_bytes(data=img_bytes, mime_type="image/jpeg"))
+            parts.append(caption)
+        parts.append("\nNow examine the following panoramic X-ray and answer the question:\n")
+
     if examples:
         parts.append("\nHere are some examples:\n")
         for ex in examples:
@@ -120,7 +144,12 @@ def build_prompt(row, examples=None, cot=False, mode="house", context=None, max_
             ))
         parts.append("\nNow answer the following:\n")
 
-    parts.append(_image_part(row["image"], max_image_px))
+    parts.append(_image_part(row["image"], max_image_px))  # the test X-ray, full-res
+    if crops:
+        parts.append("\nHere are enlarged views of the left and right halves of the same "
+                     "panoramic X-ray, to help you examine individual teeth more closely:")
+        parts.extend(_half_crops(row["image"]))
+        parts.append("\nNow answer using all three views of this one X-ray:\n")
     if mode == "coax":
         template = COAX_COT_BLOCK if cot else COAX_BLOCK
     else:
