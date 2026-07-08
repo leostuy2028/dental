@@ -1,0 +1,53 @@
+{
+ "_source": "Combined P13 v2 visual-exemplar set. DENTEX (ibrahimhamamci/DENTEX, CC-BY) supplies numbering + pathology (impaction/caries/periapical, FDI-labeled); Zenodo 15487430 (CC-BY-4.0) supplies the HisT/Jaw dimensions DENTEX lacked (implants/crowns/fillings/root-canal + periodontal bone loss). All captions verbatim from real annotations; no tooth numbers invented. Image paths are relative to this file (reference/).",
+ "exemplars": [
+  {
+   "image": "dentex_exemplars/val_9.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #48 impacted; #38 impacted."
+  },
+  {
+   "image": "dentex_exemplars/val_20.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #38 caries."
+  },
+  {
+   "image": "dentex_exemplars/val_39.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #14 deep caries."
+  },
+  {
+   "image": "dentex_exemplars/val_34.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #35 periapical lesion; #17 caries."
+  },
+  {
+   "image": "dentex_exemplars/val_19.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #37 deep caries; #38 periapical lesion."
+  },
+  {
+   "image": "dentex_exemplars/val_37.jpg",
+   "caption": "Labeled findings (red boxes, FDI numbering): #38 impacted; #25 deep caries."
+  },
+  {
+   "image": "zenodo_exemplars/implant.jpg",
+   "caption": "This panoramic X-ray shows a dental implant (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/crown.jpg",
+   "caption": "This panoramic X-ray shows a prosthetic crown / restoration (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/filling.jpg",
+   "caption": "This panoramic X-ray shows a dental filling (obturation) (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/rct.jpg",
+   "caption": "This panoramic X-ray shows root canal treatment (endodontic filling) (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/boneloss1.jpg",
+   "caption": "This panoramic X-ray shows periodontal bone loss (bone resorption) (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/boneloss2.jpg",
+   "caption": "This panoramic X-ray shows periodontal bone loss (bone resorption) (red box)."
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "_source": "Zenodo 15487430 panoramic condition dataset, CC-BY-4.0; labels verbatim from YOLO annotations (no tooth numbers annotated)",
+ "exemplars": [
+  {
+   "image": "zenodo_exemplars/implant.jpg",
+   "caption": "This panoramic X-ray shows a dental implant (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/crown.jpg",
+   "caption": "This panoramic X-ray shows a prosthetic crown / restoration (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/filling.jpg",
+   "caption": "This panoramic X-ray shows a dental filling (obturation) (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/rct.jpg",
+   "caption": "This panoramic X-ray shows root canal treatment (endodontic filling) (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/boneloss1.jpg",
+   "caption": "This panoramic X-ray shows periodontal bone loss (bone resorption) (red box)."
+  },
+  {
+   "image": "zenodo_exemplars/boneloss2.jpg",
+   "caption": "This panoramic X-ray shows periodontal bone loss (bone resorption) (red box)."
+  }
+ ]
+}

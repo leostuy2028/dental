@@ -187,7 +187,17 @@ if __name__ == "__main__":
         import json as _json
         man = _json.load(open(args.visual_exemplars, encoding="utf-8"))
         mdir = os.path.dirname(os.path.abspath(args.visual_exemplars))
-        vis_ex = [(open(os.path.join(mdir, os.path.basename(e["image"])), "rb").read(), e["caption"])
+
+        def _resolve(rel):
+            # combined manifest in reference/ uses subdir paths (dentex_exemplars/x.jpg);
+            # standalone manifest in reference/dentex_exemplars/ also stores that same
+            # relative string but sits inside the subdir. Try full path, then basename.
+            for cand in (os.path.join(mdir, rel), os.path.join(mdir, os.path.basename(rel))):
+                if os.path.exists(cand):
+                    return cand
+            raise FileNotFoundError(rel)
+
+        vis_ex = [(open(_resolve(e["image"]), "rb").read(), e["caption"])
                   for e in man["exemplars"]]
     run(model=args.model, k=args.k, results_path=args.out, data_path=args.data,
         limit=args.limit, start=args.start, thinking_budget=args.thinking_budget, cot=args.cot, mode=args.prompt,
