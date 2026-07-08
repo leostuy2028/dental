@@ -63,14 +63,31 @@ consistent with what you see; never refuse. Then on the last line write exactly:
 Answer: A, Answer: B, Answer: C, or Answer: D."""
 
 
-def _image_part(b64_string):
+def _maybe_downscale(raw, max_px):
+    """Resize so the longest side <= max_px (JPEG). Cuts Gemini image tokens for the
+    large panoramic X-rays; for EXPLORATION cost only — paper numbers use full-res."""
+    if not max_px:
+        return raw
+    import io
+    from PIL import Image
+    img = Image.open(io.BytesIO(raw))
+    if max(img.size) <= max_px:
+        return raw
+    s = max_px / max(img.size)
+    img = img.convert("RGB").resize((max(1, int(img.width * s)), max(1, int(img.height * s))))
+    buf = io.BytesIO()
+    img.save(buf, format="JPEG", quality=90)
+    return buf.getvalue()
+
+
+def _image_part(b64_string, max_image_px=None):
     return types.Part.from_bytes(
-        data=base64.b64decode(b64_string),
+        data=_maybe_downscale(base64.b64decode(b64_string), max_image_px),
         mime_type="image/jpeg",
     )
 
 
-def build_prompt(row, examples=None, cot=False, mode="house", context=None):
+def build_prompt(row, examples=None, cot=False, mode="house", context=None, max_image_px=None):
     """
     Build a Gemini content list for a closed-ended question.
 
@@ -92,7 +109,7 @@ def build_prompt(row, examples=None, cot=False, mode="house", context=None):
     if examples:
         parts.append("\nHere are some examples:\n")
         for ex in examples:
-            parts.append(_image_part(ex["image"]))
+            parts.append(_image_part(ex["image"], max_image_px))
             parts.append(EXAMPLE_BLOCK.format(
                 question=ex["question"],
                 option1=ex["option1"],
@@ -103,7 +120,7 @@ def build_prompt(row, examples=None, cot=False, mode="house", context=None):
             ))
         parts.append("\nNow answer the following:\n")
 
-    parts.append(_image_part(row["image"]))
+    parts.append(_image_part(row["image"], max_image_px))
     if mode == "coax":
         template = COAX_COT_BLOCK if cot else COAX_BLOCK
     else:

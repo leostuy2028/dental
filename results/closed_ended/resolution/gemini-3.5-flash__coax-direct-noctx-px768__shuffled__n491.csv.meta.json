@@ -1,0 +1,16 @@
+{
+  "experiment": "resolution-768-whole",
+  "paper_section": "5.4",
+  "description": "",
+  "context_file": "",
+  "max_image_px": 768,
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_shuffled.parquet",
+  "n": 491,
+  "accuracy_pct": 57.43,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended_shuffled.parquet --start 0 --max-image-px 768 --out results/closed_ended/resolution/gemini-3.5-flash__coax-direct-noctx-px768__shuffled__n491.csv --exp resolution-768-whole --paper-section 5.4",
+  "code_commit": "a81eb25",
+  "generated_utc": "2026-07-08T13:40:13+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-noctx-px768__shuffled__n491.csv"
+}

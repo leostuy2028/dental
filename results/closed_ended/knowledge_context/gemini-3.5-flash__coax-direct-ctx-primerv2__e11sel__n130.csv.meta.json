@@ -1,0 +1,16 @@
+{
+  "experiment": "e11-ctx-primerv2",
+  "paper_section": "5.4",
+  "description": "primer v2: explicit use-FDI-not-Universal framing",
+  "context_file": "reference/opg_primer_v2.txt",
+  "max_image_px": "full",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_e11_sel.parquet",
+  "n": 130,
+  "accuracy_pct": 38.46,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended_e11_sel.parquet --start 0 --context reference/opg_primer_v2.txt --out results/closed_ended/knowledge_context/gemini-3.5-flash__coax-direct-ctx-primerv2__e11sel__n130.csv --exp e11-ctx-primerv2 --paper-section 5.4 --description primer v2: explicit use-FDI-not-Universal framing",
+  "code_commit": "a81eb25",
+  "generated_utc": "2026-07-08T14:21:16+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-ctx-primerv2__e11sel__n130.csv"
+}

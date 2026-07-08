@@ -51,7 +51,7 @@ def print_summary(df, model, k):
 
 def run(model, k, results_path, data_path="data/closed_ended.parquet",
         limit=None, start=0, thinking_budget=None, cot=False, mode="house", meta=None,
-        context=None):
+        context=None, max_image_px=None):
     # route the client at the requested model (default gemini-2.0-flash)
     gemini_client.MODEL = model
 
@@ -88,7 +88,7 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet",
 
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
         parts = build_prompt(row, examples=examples if examples else None, cot=cot, mode=mode,
-                             context=context)
+                             context=context, max_image_px=max_image_px)
         try:
             predicted, raw = gemini_client.call(parts, thinking_budget=thinking_budget, cot=cot)
         except APICallFailed as e:
@@ -155,6 +155,9 @@ if __name__ == "__main__":
     parser.add_argument("--description", default="")
     parser.add_argument("--context", default=None,
                         help="path to a reference text file prepended to each question (E11, §5.5)")
+    parser.add_argument("--max-image-px", type=int, default=None,
+                        help="downscale each image so its longest side <= N (exploration cost only; "
+                             "paper numbers use full-res). Gemini 1-tile threshold is 768.")
     args = parser.parse_args()
 
     if args.out is None:
@@ -166,6 +169,6 @@ if __name__ == "__main__":
     context_text = open(args.context, encoding="utf-8").read() if args.context else None
     run(model=args.model, k=args.k, results_path=args.out, data_path=args.data,
         limit=args.limit, start=args.start, thinking_budget=args.thinking_budget, cot=args.cot, mode=args.prompt,
-        context=context_text,
+        context=context_text, max_image_px=args.max_image_px,
         meta={"experiment": args.exp, "paper_section": args.paper_section, "description": args.description,
-              "context_file": args.context or ""})
+              "context_file": args.context or "", "max_image_px": args.max_image_px or "full"})
