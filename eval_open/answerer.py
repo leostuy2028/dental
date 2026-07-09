@@ -68,6 +68,41 @@ def answer_question_openai(image_b64, question, model="gpt-4o", retries=3):
     return ""
 
 
+def answer_openai_custom(image_b64, system, user_text, model="gpt-4o",
+                         retries=3, max_tokens=1024, detail="high"):
+    """GPT-4o answers from base64 JPEG + a caller-supplied (system, user) prompt.
+
+    Used by the §6.2 coordinate-arm study (eval_open/prompts_open.py). Real model
+    output only; the prompt varies by arm but the model and grader do not. `system`
+    may be None (the faithful/plain arm sends no system message).
+
+    detail: image fidelity sent to the vision model. Default 'high' to match the
+    benchmark's documented reproduction config (temperature 0, max_tokens 8192,
+    HIGH image detail). max_tokens here is lower but verified non-binding (no answer
+    is truncated on these items), so output is identical to the larger cap.
+    """
+    client = _get_openai()
+    messages = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": [
+        {"type": "text", "text": user_text},
+        {"type": "image_url",
+         "image_url": {"url": f"data:image/jpeg;base64,{image_b64}", "detail": detail}},
+    ]})
+    for attempt in range(retries):
+        try:
+            resp = client.chat.completions.create(
+                model=model, messages=messages,
+                max_tokens=max_tokens, temperature=0.0)
+            return (resp.choices[0].message.content or "").strip()
+        except Exception as e:
+            wait = 2 ** attempt
+            print(f"  [answerer/custom] error (try {attempt+1}/{retries}): {e} — {wait}s")
+            time.sleep(wait)
+    return ""
+
+
 def answer_question(pil_image, question, model=DEFAULT_MODEL, retries=3,
                     thinking_budget=0, max_output_tokens=1024):
     """Return the model's real free-text answer (empty string on hard failure).

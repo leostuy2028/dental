@@ -1,0 +1,2244 @@
+index,arm,question,gt,answer,refused
+9,plain,Which historical treatments can be detected in the panoramic image?,"[
+{""box_2d"": [1531, 698, 1649, 769], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1619, 755, 1676, 846], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1771, 628, 1801, 657], ""tooth_id"": ""38"", ""label"": ""Filling""}
+]","The panoramic image shows a dental X-ray, and the following historical treatments can be detected:
+
+1. **Dental Filling**: There is a visible radiopaque area on one of the lower molars, indicating the presence of a dental filling. This is likely an amalgam or composite filling used to restore a decayed tooth.
+
+2. **Missing Teeth**: If there are gaps where teeth should be, it may indicate previous extractions.
+
+3. **Bone Structure**: The overall bone structure appears intact, with no visible signs of bone loss that might indicate periodontal disease treatment.
+
+These observations suggest past dental interventions, primarily restorative work.",0
+9,coax,Which historical treatments can be detected in the panoramic image?,"[
+{""box_2d"": [1531, 698, 1649, 769], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1619, 755, 1676, 846], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1771, 628, 1801, 657], ""tooth_id"": ""38"", ""label"": ""Filling""}
+]","The panoramic X-ray shows the following historical dental treatments:
+
+1. **Dental Filling**: There is a radiopaque area on the lower right molar, indicating the presence of a dental filling, likely made of amalgam or composite material.
+
+2. **Possible Extraction**: There may be evidence of a missing tooth, which could suggest a previous extraction. This is indicated by a gap in the dental arch.
+
+These findings suggest past dental interventions aimed at treating decay or other dental issues.",0
+9,coax_primer,Which historical treatments can be detected in the panoramic image?,"[
+{""box_2d"": [1531, 698, 1649, 769], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1619, 755, 1676, 846], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1771, 628, 1801, 657], ""tooth_id"": ""38"", ""label"": ""Filling""}
+]","The panoramic dental radiograph reveals the following historical treatments:
+
+1. **Dental Filling**: There is a radiopaque area on the lower right second molar (#47), indicating the presence of a dental filling. This suggests previous treatment for caries or restoration.
+
+2. **Missing Teeth**: The lower right third molar (#48) is absent, which may indicate extraction.
+
+3. **Crowns or Large Restorations**: The radiopaque area on tooth #47 could also suggest a crown or a large restoration, depending on the extent and material used.
+
+No other significant historical treatments such as implants or root canal fillings are visible in this image.",0
+9,coax_primer_coords,Which historical treatments can be detected in the panoramic image?,"[
+{""box_2d"": [1531, 698, 1649, 769], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1619, 755, 1676, 846], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1771, 628, 1801, 657], ""tooth_id"": ""38"", ""label"": ""Filling""}
+]","The panoramic dental radiograph shows the following historical treatments:
+
+1. **Crown Restoration**:
+   - Tooth #46 (lower-right first molar) has a crown restoration visible as a radiopaque structure covering the tooth.
+
+2. **Root Canal Treatment**:
+   - Tooth #46 also shows evidence of root canal treatment, indicated by radiopaque filling material within the root canals.
+
+Here is the JSON representation of these findings:
+
+```json
+[
+    {""label"": ""Crown Restoration"", ""tooth_id"": ""46"", ""box_2d"": [1600, 900, 1700, 1000]},
+    {""label"": ""Root Canal Treatment"", ""tooth_id"": ""46"", ""box_2d"": [1600, 900, 1700, 1000]}
+]
+```",0
+15,plain,Output the positions of wisdom tooth in the panoramic X-ray image.,"[
+{""box_2d"": [1741, 569, 1871, 768], ""tooth_id"": ""38"", ""is_impacted"": “false""},
+{""box_2d"": [514, 577, 716, 754], ""tooth_id"": ""48"", ""is_impacted"": ""true""},
+{""box_2d"": [673, 311, 819, 517], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1663, 334, 1769, 530], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","In the panoramic X-ray image, wisdom teeth, also known as third molars, are typically located at the very back of the mouth in each quadrant. Here's a detailed description of their positions:
+
+1. **Upper Left Quadrant**: The wisdom tooth is visible at the far left end of the upper jaw. It appears to be partially erupted.
+
+2. **Upper Right Quadrant**: The wisdom tooth is located at the far right end of the upper jaw. It seems to be fully erupted.
+
+3. **Lower Left Quadrant**: The wisdom tooth is at the far left end of the lower jaw. It appears to be impacted, lying horizontally.
+
+4. **Lower Right Quadrant**: The wisdom tooth is at the far right end of the lower jaw. It is partially erupted and tilted.
+
+These positions are typical for wisdom teeth, which often have varying degrees of eruption and angulation.",0
+15,coax,Output the positions of wisdom tooth in the panoramic X-ray image.,"[
+{""box_2d"": [1741, 569, 1871, 768], ""tooth_id"": ""38"", ""is_impacted"": “false""},
+{""box_2d"": [514, 577, 716, 754], ""tooth_id"": ""48"", ""is_impacted"": ""true""},
+{""box_2d"": [673, 311, 819, 517], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1663, 334, 1769, 530], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","In the panoramic X-ray image, the positions of the wisdom teeth (third molars) are as follows:
+
+1. **Upper Left Quadrant (Maxillary Left):** The wisdom tooth is present and appears to be in a normal vertical position.
+
+2. **Upper Right Quadrant (Maxillary Right):** The wisdom tooth is not visible, suggesting it may be absent or previously extracted.
+
+3. **Lower Left Quadrant (Mandibular Left):** The wisdom tooth is present and appears to be impacted, positioned horizontally.
+
+4. **Lower Right Quadrant (Mandibular Right):** The wisdom tooth is present and appears to be in a normal vertical position.
+
+These observations indicate that there is one impacted wisdom tooth in the lower left quadrant.",0
+15,coax_primer,Output the positions of wisdom tooth in the panoramic X-ray image.,"[
+{""box_2d"": [1741, 569, 1871, 768], ""tooth_id"": ""38"", ""is_impacted"": “false""},
+{""box_2d"": [514, 577, 716, 754], ""tooth_id"": ""48"", ""is_impacted"": ""true""},
+{""box_2d"": [673, 311, 819, 517], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1663, 334, 1769, 530], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","To identify the positions of the wisdom teeth (third molars) on the panoramic X-ray, we will look for the teeth numbered as #18, #28, #38, and #48 according to the FDI two-digit system.
+
+1. **Upper Right Third Molar (#18):** 
+   - The upper right third molar is not visible, indicating it may be missing or unerupted.
+
+2. **Upper Left Third Molar (#28):**
+   - The upper left third molar is not visible, indicating it may be missing or unerupted.
+
+3. **Lower Left Third Molar (#38):**
+   - The lower left third molar is visible and appears to be impacted, positioned horizontally.
+
+4. **Lower Right Third Molar (#48):**
+   - The lower right third molar is visible and appears to be impacted, positioned horizontally.
+
+In summary, the lower third molars (#38 and #48) are present and impacted, while the upper third molars (#18 and #28) are not visible.",0
+15,coax_primer_coords,Output the positions of wisdom tooth in the panoramic X-ray image.,"[
+{""box_2d"": [1741, 569, 1871, 768], ""tooth_id"": ""38"", ""is_impacted"": “false""},
+{""box_2d"": [514, 577, 716, 754], ""tooth_id"": ""48"", ""is_impacted"": ""true""},
+{""box_2d"": [673, 311, 819, 517], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1663, 334, 1769, 530], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","To identify the positions of the wisdom teeth (third molars) on the panoramic X-ray, we will look for the teeth numbered 18, 28, 38, and 48 according to the FDI two-digit system.
+
+1. **Tooth 18 (Upper Right Third Molar):**
+   - The upper right third molar is visible and appears to be partially erupted.
+   - Location: Approximately at the top right of the image.
+
+2. **Tooth 28 (Upper Left Third Molar):**
+   - The upper left third molar is visible and appears to be partially erupted.
+   - Location: Approximately at the top left of the image.
+
+3. **Tooth 38 (Lower Left Third Molar):**
+   - The lower left third molar is visible and appears to be impacted, positioned horizontally.
+   - Location: Approximately at the bottom left of the image.
+
+4. **Tooth 48 (Lower Right Third Molar):**
+   - The lower right third molar is visible and appears to be impacted, positioned horizontally.
+   - Location: Approximately at the bottom right of the image.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Wisdom Tooth"", ""tooth_id"": ""18"", ""box_2d"": [2000, 200, 2100, 300]},
+    {""label"": ""Wisdom Tooth"", ""tooth_id"": ""28"", ""box_2d"": [300, 200, 400, 300]},
+    {""label"": ""Wisdom Tooth"", ""tooth_id"": ""38"", ""box_2d"": [300, 1000, 400, 1100]},
+    {""label"": ""Wisdom Tooth"", ""tooth_id"": ""48"", ""box_2d"": [2000, 1000, 2100, 1100]}
+]
+```
+
+These coordinates are approximate and based on the visible positions of the third molars in the image.",0
+33,plain,Identify the mandibular canal in the X-ray image.,"[
+{""box_2d"": [1524, 423, 2129, 1050], ""label"": ""Mandibular canal""},
+{""box_2d"": [329, 391, 740, 979], ""label"": ""Mandibular canal""}
+]","In a panoramic X-ray, the mandibular canal appears as a radiolucent (darker) band within the mandible, typically running from the mandibular foramen near the angle of the mandible to the mental foramen near the premolars.
+
+To identify the mandibular canal:
+
+1. **Location**: Look in the lower jaw (mandible) area. The canal runs horizontally along the body of the mandible.
+
+2. **Appearance**: It appears as a dark line or band, often bordered by two thin radiopaque (lighter) lines, representing the cortical bone surrounding the canal.
+
+3. **Path**: It starts near the mandibular foramen (near the angle of the mandible) and extends forward to the mental foramen (near the premolars).
+
+In the X-ray, you should look for this characteristic dark band running along the lower jaw, typically below the roots of the teeth.",0
+33,coax,Identify the mandibular canal in the X-ray image.,"[
+{""box_2d"": [1524, 423, 2129, 1050], ""label"": ""Mandibular canal""},
+{""box_2d"": [329, 391, 740, 979], ""label"": ""Mandibular canal""}
+]","The mandibular canal is visible in the panoramic X-ray as a radiolucent (darker) band running within the mandible. It typically starts near the mandibular foramen on the lingual side of the ramus and extends forward and downward, following the curve of the mandible toward the mental foramen near the premolars.
+
+In this image, you can identify the mandibular canal as a dark line running bilaterally within the body of the mandible, below the roots of the teeth. It is positioned approximately midway between the superior and inferior borders of the mandible, curving slightly upward as it approaches the anterior region.",0
+33,coax_primer,Identify the mandibular canal in the X-ray image.,"[
+{""box_2d"": [1524, 423, 2129, 1050], ""label"": ""Mandibular canal""},
+{""box_2d"": [329, 391, 740, 979], ""label"": ""Mandibular canal""}
+]","The mandibular canal is visible on a panoramic dental radiograph as a radiolucent (dark) band running within the mandible. It typically extends from the mandibular foramen on the lingual side of the ramus to the mental foramen near the premolars.
+
+In this image, the mandibular canal can be identified as follows:
+
+1. **Location**: It runs bilaterally within the mandible, starting from the area near the mandibular foramen (posterior aspect of the mandible) and extending anteriorly towards the mental foramen, which is usually located near the apices of the premolars.
+
+2. **Appearance**: The canal appears as a dark line or band, bordered by two thin radiopaque (light) lines, representing the cortical bone lining the canal.
+
+3. **Path**: It follows a gentle curve, descending slightly as it moves anteriorly. It is positioned below the apices of the molars and premolars.
+
+In this specific image, the mandibular canal is visible on both sides of the mandible, maintaining a consistent path and appearance as described.",0
+33,coax_primer_coords,Identify the mandibular canal in the X-ray image.,"[
+{""box_2d"": [1524, 423, 2129, 1050], ""label"": ""Mandibular canal""},
+{""box_2d"": [329, 391, 740, 979], ""label"": ""Mandibular canal""}
+]","The mandibular canal is a radiolucent (dark) linear structure that runs within the mandible, typically below the roots of the lower teeth. It carries the inferior alveolar nerve and vessels. On a panoramic radiograph, it appears as a dark band with two thin radiopaque (light) lines on either side, representing the cortical bone.
+
+In this image, the mandibular canal can be identified bilaterally, running from the region near the mandibular foramen (around the area of the third molars) towards the mental foramen (near the premolars).
+
+Here are the approximate locations of the mandibular canal in the image:
+
+- **Right Side**: The canal starts near the area of the lower right third molar (#48) and extends forward towards the premolars (#45, #44).
+- **Left Side**: The canal starts near the area of the lower left third molar (#38) and extends forward towards the premolars (#35, #34).
+
+JSON representation of the findings:
+
+```json
+[
+    {""label"": ""mandibular canal"", ""tooth_id"": ""48"", ""box_2d"": [1500, 900, 1600, 1000]},
+    {""label"": ""mandibular canal"", ""tooth_id"": ""45"", ""box_2d"": [1300, 900, 1400, 1000]},
+    {""label"": ""mandibular canal"", ""tooth_id"": ""38"", ""box_2d"": [800, 900, 900, 1000]},
+    {""label"": ""mandibular canal"", ""tooth_id"": ""35"", ""box_2d"": [600, 900, 700, 1000]}
+]
+```
+
+These coordinates are approximate and should be adjusted based on precise measurements if needed.",0
+39,plain,What is the overall structural integrity of tooth #38 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1814, 729]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “false""}
+]","To assess the structural integrity of tooth #38 (the lower left third molar) on a panoramic radiograph, consider the following aspects:
+
+1. **Position and Alignment**: Check if the tooth is properly aligned with the dental arch. Misalignment or impaction can affect structural integrity.
+
+2. **Crown and Root Structure**: Look for any signs of decay, fractures, or abnormal wear on the crown. The roots should be well-formed and not resorbed.
+
+3. **Bone Support**: Evaluate the surrounding bone for density and height. Bone loss or periodontal disease can compromise tooth stability.
+
+4. **Pathology**: Identify any cysts, tumors, or other pathologies that might affect the tooth or surrounding structures.
+
+5. **Developmental Stage**: If the tooth is not fully erupted, assess the development of the roots and crown.
+
+Without specific annotations or findings, a detailed assessment would require a dental professional's evaluation. If there are concerns about the tooth's integrity, a dentist or oral surgeon should be consulted for a comprehensive examination and diagnosis.",0
+39,coax,What is the overall structural integrity of tooth #38 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1814, 729]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “false""}
+]","Tooth #38, which is the lower left third molar, appears to be impacted in the panoramic radiograph. The crown is partially visible, and the tooth is oriented horizontally, which is a common presentation for impacted third molars. The root structure seems to be fully formed, but the tooth is positioned against the second molar, which could potentially affect the structural integrity of both teeth over time.
+
+There is no obvious sign of caries or resorption on the visible portion of the crown. However, due to its impaction, the tooth may be at risk for periodontal issues or cyst formation. The surrounding bone appears intact, but the impaction could lead to complications if not monitored or treated.
+
+Overall, while the tooth itself does not show signs of decay or structural damage, its impaction and orientation could pose future risks to its integrity and the health of adjacent teeth.",0
+39,coax_primer,What is the overall structural integrity of tooth #38 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1814, 729]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “false""}
+]","Tooth #38, the lower-left third molar, appears to be impacted. It is positioned horizontally, with the crown facing the distal aspect of the second molar. The tooth is partially erupted, with the crown not fully visible above the alveolar bone level.
+
+There is no obvious radiolucency around the apex of the roots, suggesting no significant periapical pathology. However, the horizontal impaction may predispose the tooth to potential issues such as pericoronitis or caries on the distal aspect of the second molar.
+
+The surrounding bone appears intact, with no signs of resorption or significant bone loss. Overall, the structural integrity of tooth #38 is compromised due to its impaction, but there are no immediate signs of infection or severe pathology visible on this panoramic radiograph.",0
+39,coax_primer_coords,What is the overall structural integrity of tooth #38 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1814, 729]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “false""}
+]","Tooth #38, the lower-left third molar, appears to be impacted. It is positioned horizontally and is partially erupted. The crown is directed towards the distal aspect of the second molar (#37). There is no visible caries on the crown of tooth #38. The root structure appears to be fully formed, and there is no obvious periapical radiolucency indicating apical pathology. The surrounding alveolar bone appears intact, with no signs of bone loss or pathology.
+
+JSON representation of findings:
+
+```json
+[
+    {""label"": ""Impacted tooth"", ""tooth_id"": ""38"", ""box_2d"": [300, 800, 400, 900]}
+]
+```",0
+45,plain,Please provide a full description of the condition of tooth #18.,"[
+{""Teeth position"": {""point_2d"": [618, 426]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “False""}
+]","I'm unable to provide a detailed description of the condition of tooth #18 from the image. For an accurate assessment, it's best to consult a dental professional who can examine the X-ray and provide a diagnosis.",1
+45,coax,Please provide a full description of the condition of tooth #18.,"[
+{""Teeth position"": {""point_2d"": [618, 426]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “False""}
+]","Tooth #18, which is the lower left second molar, appears to be impacted in the panoramic X-ray. It is positioned horizontally and is partially erupted, with the crown oriented towards the distal aspect of the adjacent tooth (#19). The root development seems complete, and there is no apparent periapical radiolucency indicating infection. The surrounding bone structure appears normal, with no signs of cystic changes or resorption. The tooth's position suggests it may require surgical intervention if symptomatic or causing issues with adjacent teeth.",0
+45,coax_primer,Please provide a full description of the condition of tooth #18.,"[
+{""Teeth position"": {""point_2d"": [618, 426]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “False""}
+]","Tooth #18, which is the upper left third molar, appears to be impacted. It is positioned horizontally and is not fully erupted into the oral cavity. The crown of the tooth is oriented towards the distal aspect of the second molar (#17). There is no visible caries or restorations on the crown of tooth #18. The roots appear to be fully formed, and there is no obvious periapical radiolucency indicating pathology at the root tips. The surrounding bone structure appears normal, with no signs of significant bone loss or lesions.",0
+45,coax_primer_coords,Please provide a full description of the condition of tooth #18.,"[
+{""Teeth position"": {""point_2d"": [618, 426]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “False""}
+]","Tooth #18 is the upper-right third molar. Here is a systematic evaluation of its condition based on the panoramic radiograph:
+
+1. **Presence and Position**: Tooth #18 is present and appears to be in a normal position relative to the adjacent teeth.
+
+2. **Caries**: There is no obvious radiolucency indicating caries on the crown of tooth #18.
+
+3. **Restorations**: There are no visible restorations or fillings on tooth #18.
+
+4. **Root and Periapical Area**: The roots of tooth #18 appear intact, and there is no evident periapical radiolucency suggesting apical pathology.
+
+5. **Alveolar Bone Level**: The alveolar bone level around tooth #18 appears to be within normal limits, with no significant bone loss observed.
+
+6. **Impaction**: Tooth #18 does not appear to be impacted.
+
+Based on the image, tooth #18 appears to be in good condition with no significant pathological findings.
+
+JSON representation of findings:
+
+```json
+[
+    {""label"": ""Tooth present"", ""tooth_id"": ""18"", ""box_2d"": [150, 100, 250, 200]},
+    {""label"": ""No caries"", ""tooth_id"": ""18"", ""box_2d"": [150, 100, 250, 200]},
+    {""label"": ""No restorations"", ""tooth_id"": ""18"", ""box_2d"": [150, 100, 250, 200]},
+    {""label"": ""Intact roots"", ""tooth_id"": ""18"", ""box_2d"": [150, 100, 250, 200]},
+    {""label"": ""Normal alveolar bone level"", ""tooth_id"": ""18"", ""box_2d"": [150, 100, 250, 200]}
+]
+```",0
+75,plain,Identify the historical treatments in the X-ray image.,"[
+{""box_2d"": [1006, 705, 1088, 807], ""tooth_id"": ""44"", ""label"": ""Crown""},
+{""box_2d"": [1029, 806, 1044, 875], ""tooth_id"": ""44"", ""label"": ""Root canal treatment""},
+{""box_2d"": [796, 693, 934, 775], ""tooth_id"": ""46"", ""label"": ""Crown""},
+{""box_2d"": [1558, 709, 1679, 791], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1652, 786, 1688, 849], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1415, 712, 1491, 812], ""tooth_id"": ""34"", ""label"": ""Crown""},
+{""box_2d"": [1481, 710, 1565, 829], ""tooth_id"": ""35"", ""label"": ""Crown""},
+{""box_2d"": [1538, 833, 1551, 869], ""tooth_id"": ""35"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1595, 568, 1734, 671], ""tooth_id"": ""26"", ""label"": ""Crown""},
+{""box_2d"": [1661, 495, 1676, 571], ""tooth_id"": ""26"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1210, 712, 1262, 805], ""tooth_id"": ""41"", ""label"": ""Crown""},
+{""box_2d"": [1084, 714, 1157, 803], ""tooth_id"": ""43"", ""label"": ""Crown""},
+{""box_2d"": [1107, 805, 1121, 895], ""tooth_id"": ""43"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1532, 584, 1618, 671], ""tooth_id"": ""25"", ""label"": ""Crown""},
+{""box_2d"": [1563, 455, 1600, 588], ""tooth_id"": ""25"", ""label"": ""Root canal treatment""},
+{""box_2d"": [927, 522, 941, 583], ""tooth_id"": ""15"", ""label"": ""Root canal treatment""},
+{""box_2d"": [719, 583, 798, 676], ""tooth_id"": ""17"", ""label"": ""Crown""},
+{""box_2d"": [692, 483, 727, 585], ""tooth_id"": ""17"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1356, 716, 1425, 826], ""tooth_id"": ""33"", ""label"": ""Crown""},
+{""box_2d"": [1392, 828, 1407, 907], ""tooth_id"": ""33"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1455, 586, 1549, 674], ""tooth_id"": ""24"", ""label"": ""Crown""},
+{""box_2d"": [793, 556, 910, 665], ""tooth_id"": ""16"", ""label"": ""Crown""},
+{""box_2d"": [1666, 683, 1794, 760], ""tooth_id"": ""37"", ""label"": ""Crown""},
+{""box_2d"": [1753, 744, 1840, 817], ""tooth_id"": ""37"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1056, 418, 1105, 568], ""tooth_id"": ""13"", ""label"": ""Implant""},
+{""box_2d"": [1303, 716, 1358, 827], ""tooth_id"": ""31"", ""label"": ""Crown""},
+{""box_2d"": [1149, 715, 1212, 806], ""tooth_id"": ""42"", ""label"": ""Crown""},
+{""box_2d"": [1718, 571, 1845, 645], ""tooth_id"": ""27"", ""label"": ""Crown""},
+{""box_2d"": [1766, 474, 1784, 571], ""tooth_id"": ""27"", ""label"": ""Root canal treatment""}
+]","The X-ray image shows several historical dental treatments:
+
+1. **Dental Implants**: There are two visible dental implants in the upper jaw. These are metal posts or frames surgically positioned into the jawbone beneath the gums to support artificial teeth.
+
+2. **Dental Crowns**: Several teeth appear to have crowns, which are tooth-shaped caps placed over teeth to restore their shape, size, strength, and appearance.
+
+3. **Dental Bridges**: There is evidence of a dental bridge on the right side of the upper jaw. Bridges are used to fill the gap created by one or more missing teeth.
+
+4. **Tooth Extractions**: There are missing teeth, particularly in the upper jaw, indicating previous extractions.
+
+These treatments suggest a history of significant dental work, likely due to tooth loss or damage.",0
+75,coax,Identify the historical treatments in the X-ray image.,"[
+{""box_2d"": [1006, 705, 1088, 807], ""tooth_id"": ""44"", ""label"": ""Crown""},
+{""box_2d"": [1029, 806, 1044, 875], ""tooth_id"": ""44"", ""label"": ""Root canal treatment""},
+{""box_2d"": [796, 693, 934, 775], ""tooth_id"": ""46"", ""label"": ""Crown""},
+{""box_2d"": [1558, 709, 1679, 791], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1652, 786, 1688, 849], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1415, 712, 1491, 812], ""tooth_id"": ""34"", ""label"": ""Crown""},
+{""box_2d"": [1481, 710, 1565, 829], ""tooth_id"": ""35"", ""label"": ""Crown""},
+{""box_2d"": [1538, 833, 1551, 869], ""tooth_id"": ""35"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1595, 568, 1734, 671], ""tooth_id"": ""26"", ""label"": ""Crown""},
+{""box_2d"": [1661, 495, 1676, 571], ""tooth_id"": ""26"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1210, 712, 1262, 805], ""tooth_id"": ""41"", ""label"": ""Crown""},
+{""box_2d"": [1084, 714, 1157, 803], ""tooth_id"": ""43"", ""label"": ""Crown""},
+{""box_2d"": [1107, 805, 1121, 895], ""tooth_id"": ""43"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1532, 584, 1618, 671], ""tooth_id"": ""25"", ""label"": ""Crown""},
+{""box_2d"": [1563, 455, 1600, 588], ""tooth_id"": ""25"", ""label"": ""Root canal treatment""},
+{""box_2d"": [927, 522, 941, 583], ""tooth_id"": ""15"", ""label"": ""Root canal treatment""},
+{""box_2d"": [719, 583, 798, 676], ""tooth_id"": ""17"", ""label"": ""Crown""},
+{""box_2d"": [692, 483, 727, 585], ""tooth_id"": ""17"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1356, 716, 1425, 826], ""tooth_id"": ""33"", ""label"": ""Crown""},
+{""box_2d"": [1392, 828, 1407, 907], ""tooth_id"": ""33"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1455, 586, 1549, 674], ""tooth_id"": ""24"", ""label"": ""Crown""},
+{""box_2d"": [793, 556, 910, 665], ""tooth_id"": ""16"", ""label"": ""Crown""},
+{""box_2d"": [1666, 683, 1794, 760], ""tooth_id"": ""37"", ""label"": ""Crown""},
+{""box_2d"": [1753, 744, 1840, 817], ""tooth_id"": ""37"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1056, 418, 1105, 568], ""tooth_id"": ""13"", ""label"": ""Implant""},
+{""box_2d"": [1303, 716, 1358, 827], ""tooth_id"": ""31"", ""label"": ""Crown""},
+{""box_2d"": [1149, 715, 1212, 806], ""tooth_id"": ""42"", ""label"": ""Crown""},
+{""box_2d"": [1718, 571, 1845, 645], ""tooth_id"": ""27"", ""label"": ""Crown""},
+{""box_2d"": [1766, 474, 1784, 571], ""tooth_id"": ""27"", ""label"": ""Root canal treatment""}
+]","The panoramic X-ray image shows several historical dental treatments:
+
+1. **Dental Implants**: There are two visible dental implants in the upper jaw (maxilla). These are metal posts or frames surgically positioned into the jawbone beneath the gums.
+
+2. **Dental Crowns**: Several teeth, particularly in the upper jaw, have crowns. These are tooth-shaped caps placed over teeth to restore their shape, size, strength, and appearance.
+
+3. **Dental Bridge**: There appears to be a dental bridge on the right side of the upper jaw, which is used to replace missing teeth by anchoring to adjacent teeth or implants.
+
+4. **Root Canal Treatment**: Some teeth may show signs of root canal treatment, indicated by radiopaque filling material within the root canals.
+
+These treatments indicate a history of restorative dental work aimed at replacing missing teeth and restoring function and aesthetics.",0
+75,coax_primer,Identify the historical treatments in the X-ray image.,"[
+{""box_2d"": [1006, 705, 1088, 807], ""tooth_id"": ""44"", ""label"": ""Crown""},
+{""box_2d"": [1029, 806, 1044, 875], ""tooth_id"": ""44"", ""label"": ""Root canal treatment""},
+{""box_2d"": [796, 693, 934, 775], ""tooth_id"": ""46"", ""label"": ""Crown""},
+{""box_2d"": [1558, 709, 1679, 791], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1652, 786, 1688, 849], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1415, 712, 1491, 812], ""tooth_id"": ""34"", ""label"": ""Crown""},
+{""box_2d"": [1481, 710, 1565, 829], ""tooth_id"": ""35"", ""label"": ""Crown""},
+{""box_2d"": [1538, 833, 1551, 869], ""tooth_id"": ""35"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1595, 568, 1734, 671], ""tooth_id"": ""26"", ""label"": ""Crown""},
+{""box_2d"": [1661, 495, 1676, 571], ""tooth_id"": ""26"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1210, 712, 1262, 805], ""tooth_id"": ""41"", ""label"": ""Crown""},
+{""box_2d"": [1084, 714, 1157, 803], ""tooth_id"": ""43"", ""label"": ""Crown""},
+{""box_2d"": [1107, 805, 1121, 895], ""tooth_id"": ""43"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1532, 584, 1618, 671], ""tooth_id"": ""25"", ""label"": ""Crown""},
+{""box_2d"": [1563, 455, 1600, 588], ""tooth_id"": ""25"", ""label"": ""Root canal treatment""},
+{""box_2d"": [927, 522, 941, 583], ""tooth_id"": ""15"", ""label"": ""Root canal treatment""},
+{""box_2d"": [719, 583, 798, 676], ""tooth_id"": ""17"", ""label"": ""Crown""},
+{""box_2d"": [692, 483, 727, 585], ""tooth_id"": ""17"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1356, 716, 1425, 826], ""tooth_id"": ""33"", ""label"": ""Crown""},
+{""box_2d"": [1392, 828, 1407, 907], ""tooth_id"": ""33"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1455, 586, 1549, 674], ""tooth_id"": ""24"", ""label"": ""Crown""},
+{""box_2d"": [793, 556, 910, 665], ""tooth_id"": ""16"", ""label"": ""Crown""},
+{""box_2d"": [1666, 683, 1794, 760], ""tooth_id"": ""37"", ""label"": ""Crown""},
+{""box_2d"": [1753, 744, 1840, 817], ""tooth_id"": ""37"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1056, 418, 1105, 568], ""tooth_id"": ""13"", ""label"": ""Implant""},
+{""box_2d"": [1303, 716, 1358, 827], ""tooth_id"": ""31"", ""label"": ""Crown""},
+{""box_2d"": [1149, 715, 1212, 806], ""tooth_id"": ""42"", ""label"": ""Crown""},
+{""box_2d"": [1718, 571, 1845, 645], ""tooth_id"": ""27"", ""label"": ""Crown""},
+{""box_2d"": [1766, 474, 1784, 571], ""tooth_id"": ""27"", ""label"": ""Root canal treatment""}
+]","The panoramic dental radiograph shows the following historical treatments:
+
+1. **Dental Implants**:
+   - There is a dental implant present in the upper left quadrant, likely replacing a missing tooth.
+   - Another implant is visible in the upper right quadrant.
+
+2. **Dental Crowns and Restorations**:
+   - Several teeth have crowns or large restorations, particularly in the upper right and left quadrants.
+   - The lower right quadrant also shows crowns or restorations on multiple teeth.
+
+3. **Root Canal Treatments**:
+   - Evidence of root canal treatment is visible on some teeth, indicated by radiopaque filling material within the root canals.
+
+These findings suggest a history of significant dental work, including tooth replacement, restoration, and endodontic treatment.",0
+75,coax_primer_coords,Identify the historical treatments in the X-ray image.,"[
+{""box_2d"": [1006, 705, 1088, 807], ""tooth_id"": ""44"", ""label"": ""Crown""},
+{""box_2d"": [1029, 806, 1044, 875], ""tooth_id"": ""44"", ""label"": ""Root canal treatment""},
+{""box_2d"": [796, 693, 934, 775], ""tooth_id"": ""46"", ""label"": ""Crown""},
+{""box_2d"": [1558, 709, 1679, 791], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1652, 786, 1688, 849], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1415, 712, 1491, 812], ""tooth_id"": ""34"", ""label"": ""Crown""},
+{""box_2d"": [1481, 710, 1565, 829], ""tooth_id"": ""35"", ""label"": ""Crown""},
+{""box_2d"": [1538, 833, 1551, 869], ""tooth_id"": ""35"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1595, 568, 1734, 671], ""tooth_id"": ""26"", ""label"": ""Crown""},
+{""box_2d"": [1661, 495, 1676, 571], ""tooth_id"": ""26"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1210, 712, 1262, 805], ""tooth_id"": ""41"", ""label"": ""Crown""},
+{""box_2d"": [1084, 714, 1157, 803], ""tooth_id"": ""43"", ""label"": ""Crown""},
+{""box_2d"": [1107, 805, 1121, 895], ""tooth_id"": ""43"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1532, 584, 1618, 671], ""tooth_id"": ""25"", ""label"": ""Crown""},
+{""box_2d"": [1563, 455, 1600, 588], ""tooth_id"": ""25"", ""label"": ""Root canal treatment""},
+{""box_2d"": [927, 522, 941, 583], ""tooth_id"": ""15"", ""label"": ""Root canal treatment""},
+{""box_2d"": [719, 583, 798, 676], ""tooth_id"": ""17"", ""label"": ""Crown""},
+{""box_2d"": [692, 483, 727, 585], ""tooth_id"": ""17"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1356, 716, 1425, 826], ""tooth_id"": ""33"", ""label"": ""Crown""},
+{""box_2d"": [1392, 828, 1407, 907], ""tooth_id"": ""33"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1455, 586, 1549, 674], ""tooth_id"": ""24"", ""label"": ""Crown""},
+{""box_2d"": [793, 556, 910, 665], ""tooth_id"": ""16"", ""label"": ""Crown""},
+{""box_2d"": [1666, 683, 1794, 760], ""tooth_id"": ""37"", ""label"": ""Crown""},
+{""box_2d"": [1753, 744, 1840, 817], ""tooth_id"": ""37"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1056, 418, 1105, 568], ""tooth_id"": ""13"", ""label"": ""Implant""},
+{""box_2d"": [1303, 716, 1358, 827], ""tooth_id"": ""31"", ""label"": ""Crown""},
+{""box_2d"": [1149, 715, 1212, 806], ""tooth_id"": ""42"", ""label"": ""Crown""},
+{""box_2d"": [1718, 571, 1845, 645], ""tooth_id"": ""27"", ""label"": ""Crown""},
+{""box_2d"": [1766, 474, 1784, 571], ""tooth_id"": ""27"", ""label"": ""Root canal treatment""}
+]","The panoramic dental radiograph shows the following historical treatments:
+
+1. **Dental Implants**:
+   - There is a dental implant in the region of the upper left quadrant, likely replacing a missing tooth.
+   - Another implant is present in the upper right quadrant.
+
+2. **Crowns and Restorations**:
+   - Several teeth have crowns or large restorations, particularly in the lower right quadrant and upper left quadrant.
+
+3. **Root Canal Treatment**:
+   - Evidence of root canal treatment is visible in the lower right quadrant.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Dental Implant"", ""tooth_id"": ""26"", ""box_2d"": [1100, 500, 1150, 550]},
+    {""label"": ""Dental Implant"", ""tooth_id"": ""14"", ""box_2d"": [1300, 500, 1350, 550]},
+    {""label"": ""Crown"", ""tooth_id"": ""46"", ""box_2d"": [1700, 900, 1750, 950]},
+    {""label"": ""Crown"", ""tooth_id"": ""27"", ""box_2d"": [1050, 500, 1100, 550]},
+    {""label"": ""Root Canal Treatment"", ""tooth_id"": ""46"", ""box_2d"": [1700, 900, 1750, 950]}
+]
+```
+
+These findings indicate previous dental treatments, including implants, crowns, and root canal therapy.",0
+93,plain,Identify areas showing the maxillary sinus in the panoramic radiograph.,"[
+{""box_2d"": [1372, 33, 1806, 421], ""label"": ""Maxillary sinus""},
+{""box_2d"": [657, 42, 1013, 401], ""label"": ""Maxillary sinus""}
+]","In a panoramic radiograph, the maxillary sinuses are typically visible as radiolucent (dark) areas located above the posterior teeth, specifically the premolars and molars, on both sides of the image. 
+
+Here’s how to identify them:
+
+1. **Location**: 
+   - The maxillary sinuses are situated above the roots of the upper teeth, particularly the molars and premolars.
+   - They appear on both the left and right sides of the radiograph.
+
+2. **Appearance**:
+   - They are dark, oval, or triangular-shaped areas due to their air-filled nature, contrasting with the denser, lighter appearance of bone and teeth.
+   - The borders of the sinuses are usually well-defined by a thin, radiopaque (light) line representing the bony walls.
+
+3. **Symmetry**:
+   - The sinuses should appear relatively symmetrical on both sides of the radiograph.
+
+In this image, look for the dark areas above the upper teeth on both sides, which are the maxillary sinuses.",0
+93,coax,Identify areas showing the maxillary sinus in the panoramic radiograph.,"[
+{""box_2d"": [1372, 33, 1806, 421], ""label"": ""Maxillary sinus""},
+{""box_2d"": [657, 42, 1013, 401], ""label"": ""Maxillary sinus""}
+]","In the panoramic radiograph, the maxillary sinuses are visible as radiolucent (darker) areas located above the posterior teeth on both sides of the maxilla. They appear as bilateral, roughly triangular or pyramidal spaces with well-defined borders. These sinuses are situated above the roots of the upper molars and premolars, extending towards the nasal cavity. The floor of the maxillary sinus is often seen as a thin, radiopaque line above the roots of the upper teeth.",0
+93,coax_primer,Identify areas showing the maxillary sinus in the panoramic radiograph.,"[
+{""box_2d"": [1372, 33, 1806, 421], ""label"": ""Maxillary sinus""},
+{""box_2d"": [657, 42, 1013, 401], ""label"": ""Maxillary sinus""}
+]","In the panoramic radiograph, the maxillary sinuses are visible as radiolucent (dark) areas located above the posterior teeth in the upper jaw. They are positioned bilaterally, extending from the region above the premolars to the molars on both the left and right sides of the image. The floor of the maxillary sinus is typically seen as a thin, radiopaque (light) line above the roots of the upper teeth, particularly the molars and premolars. 
+
+In this image, the maxillary sinuses appear as the dark spaces above the upper teeth, with the sinus floor visible as a curved line. The sinuses are located in the upper left and right quadrants of the image, above the teeth numbered in the 1x and 2x series according to the FDI system.",0
+93,coax_primer_coords,Identify areas showing the maxillary sinus in the panoramic radiograph.,"[
+{""box_2d"": [1372, 33, 1806, 421], ""label"": ""Maxillary sinus""},
+{""box_2d"": [657, 42, 1013, 401], ""label"": ""Maxillary sinus""}
+]","The maxillary sinuses are visible as radiolucent (dark) areas located above the posterior teeth in the upper jaw on both sides of the panoramic radiograph. They appear as bilateral, roughly triangular or oval-shaped areas above the roots of the upper molars and premolars.
+
+In this panoramic image, the maxillary sinuses are located as follows:
+
+1. **Right Maxillary Sinus**: This is located above the upper right molars and premolars.
+2. **Left Maxillary Sinus**: This is located above the upper left molars and premolars.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Right Maxillary Sinus"", ""tooth_id"": """", ""box_2d"": [1300, 300, 1600, 600]},
+    {""label"": ""Left Maxillary Sinus"", ""tooth_id"": """", ""box_2d"": [800, 300, 1100, 600]}
+]
+```",0
+136,plain,Does the panoramic radiograph reveal any specific tooth involvement trends related to crown?,"[
+{""tooth_id"": ""24"", ""box_2d"": [1469, 619, 1556, 688]},
+{""tooth_id"": ""36"", ""box_2d"": [1522, 733, 1644, 810]},
+{""tooth_id"": ""26"", ""box_2d"": [1600, 592, 1704, 673]},
+{""tooth_id"": ""25"", ""box_2d"": [1552, 619, 1616, 688]},
+{""tooth_id"": ""16"", ""box_2d"": [802, 613, 906, 673]},
+{""tooth_id"": ""15"", ""box_2d"": [901, 620, 978, 690]},
+{""tooth_id"": ""46"", ""box_2d"": [868, 746, 995, 806]},
+{""tooth_id"": ""47"", ""box_2d"": [764, 714, 883, 778]}
+]","The panoramic radiograph reveals several trends related to crown involvement:
+
+1. **Presence of Dental Crowns**: There are multiple teeth with dental crowns, particularly in the posterior regions. Crowns are typically used to restore teeth that are significantly decayed or damaged.
+
+2. **Endodontic Treatment**: Some teeth with crowns also show signs of endodontic treatment (root canals), indicated by radiopaque filling material within the root canals. This suggests that these teeth had significant decay or damage that required both root canal therapy and crown placement.
+
+3. **Distribution**: The crowns are primarily located on the molars and premolars, which are more prone to decay and wear due to their role in chewing.
+
+4. **Condition of Adjacent Teeth**: The adjacent teeth without crowns appear to have normal root and crown structures, suggesting that the crowns were placed due to specific issues with those particular teeth rather than a generalized condition affecting all teeth.
+
+Overall, the radiograph indicates a trend of restorative dental work focused on the posterior teeth, likely due to decay or structural damage that necessitated crowns and, in some cases, root canal treatment.",0
+136,coax,Does the panoramic radiograph reveal any specific tooth involvement trends related to crown?,"[
+{""tooth_id"": ""24"", ""box_2d"": [1469, 619, 1556, 688]},
+{""tooth_id"": ""36"", ""box_2d"": [1522, 733, 1644, 810]},
+{""tooth_id"": ""26"", ""box_2d"": [1600, 592, 1704, 673]},
+{""tooth_id"": ""25"", ""box_2d"": [1552, 619, 1616, 688]},
+{""tooth_id"": ""16"", ""box_2d"": [802, 613, 906, 673]},
+{""tooth_id"": ""15"", ""box_2d"": [901, 620, 978, 690]},
+{""tooth_id"": ""46"", ""box_2d"": [868, 746, 995, 806]},
+{""tooth_id"": ""47"", ""box_2d"": [764, 714, 883, 778]}
+]","The panoramic radiograph reveals several teeth with crowns. Specifically, the following observations can be made:
+
+1. **Presence of Crowns**: There are multiple teeth with dental crowns, particularly in the posterior regions of both the maxilla and mandible. These crowns are visible due to their radiopaque appearance compared to natural tooth structure.
+
+2. **Distribution**: The crowns are primarily located on the molars and premolars, which is common due to the higher incidence of decay and wear in these areas.
+
+3. **Root Canal Treatment**: Some of the crowned teeth also show evidence of root canal treatment, indicated by the presence of radiopaque filling material within the root canals.
+
+4. **Condition of Crowns**: The crowns appear to be well-fitted without obvious signs of overhangs or gaps that could suggest marginal discrepancies.
+
+Overall, the radiograph shows a trend of crown placement on posterior teeth, often associated with root canal treatment, which is typical for restorative dental procedures aimed at preserving tooth function and structure.",0
+136,coax_primer,Does the panoramic radiograph reveal any specific tooth involvement trends related to crown?,"[
+{""tooth_id"": ""24"", ""box_2d"": [1469, 619, 1556, 688]},
+{""tooth_id"": ""36"", ""box_2d"": [1522, 733, 1644, 810]},
+{""tooth_id"": ""26"", ""box_2d"": [1600, 592, 1704, 673]},
+{""tooth_id"": ""25"", ""box_2d"": [1552, 619, 1616, 688]},
+{""tooth_id"": ""16"", ""box_2d"": [802, 613, 906, 673]},
+{""tooth_id"": ""15"", ""box_2d"": [901, 620, 978, 690]},
+{""tooth_id"": ""46"", ""box_2d"": [868, 746, 995, 806]},
+{""tooth_id"": ""47"", ""box_2d"": [764, 714, 883, 778]}
+]","The panoramic radiograph reveals several teeth with crowns. Here is a systematic analysis:
+
+1. **Upper Right Quadrant (1):**
+   - Tooth #16 (upper right first molar) has a crown.
+   - Tooth #14 (upper right first premolar) has a crown.
+
+2. **Upper Left Quadrant (2):**
+   - Tooth #26 (upper left first molar) has a crown.
+   - Tooth #24 (upper left first premolar) has a crown.
+
+3. **Lower Right Quadrant (4):**
+   - Tooth #46 (lower right first molar) has a crown.
+
+4. **Lower Left Quadrant (3):**
+   - Tooth #36 (lower left first molar) has a crown.
+
+**Trends:**
+- Crowns are predominantly present on the first molars and first premolars.
+- This suggests a history of significant restorative work, likely due to caries or structural damage in these teeth.
+
+Overall, the crowns are distributed symmetrically across the quadrants, focusing on the molars and premolars, which are common sites for restorative treatment due to their role in chewing and susceptibility to decay.",0
+136,coax_primer_coords,Does the panoramic radiograph reveal any specific tooth involvement trends related to crown?,"[
+{""tooth_id"": ""24"", ""box_2d"": [1469, 619, 1556, 688]},
+{""tooth_id"": ""36"", ""box_2d"": [1522, 733, 1644, 810]},
+{""tooth_id"": ""26"", ""box_2d"": [1600, 592, 1704, 673]},
+{""tooth_id"": ""25"", ""box_2d"": [1552, 619, 1616, 688]},
+{""tooth_id"": ""16"", ""box_2d"": [802, 613, 906, 673]},
+{""tooth_id"": ""15"", ""box_2d"": [901, 620, 978, 690]},
+{""tooth_id"": ""46"", ""box_2d"": [868, 746, 995, 806]},
+{""tooth_id"": ""47"", ""box_2d"": [764, 714, 883, 778]}
+]","The panoramic radiograph reveals several teeth with crowns. Here are the findings related to crowns:
+
+1. **Tooth #16**: Presence of a crown.
+2. **Tooth #26**: Presence of a crown.
+3. **Tooth #36**: Presence of a crown.
+4. **Tooth #46**: Presence of a crown.
+
+These crowns are visible as radiopaque structures covering the natural tooth structure.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Crown"", ""tooth_id"": ""16"", ""box_2d"": [1100, 500, 1150, 550]},
+    {""label"": ""Crown"", ""tooth_id"": ""26"", ""box_2d"": [1350, 500, 1400, 550]},
+    {""label"": ""Crown"", ""tooth_id"": ""36"", ""box_2d"": [900, 800, 950, 850]},
+    {""label"": ""Crown"", ""tooth_id"": ""46"", ""box_2d"": [1250, 800, 1300, 850]}
+]
+```
+
+These findings indicate that the patient has undergone restorative dental treatment involving crowns on these specific teeth.",0
+148,plain,Output the positions of mandibular canal in the panoramic X-ray image.,"[
+{""box_2d"": [1561, 516, 2146, 1055], ""label"": ""Mandibular canal""},
+{""box_2d"": [389, 465, 874, 1016], ""label"": ""Mandibular canal""}
+]","To identify the positions of the mandibular canal in a panoramic X-ray:
+
+1. **Location**: The mandibular canal typically runs within the mandible (lower jawbone), starting near the mandibular foramen on the inner side of the ramus and extending forward to the mental foramen near the premolars.
+
+2. **Appearance**: On a panoramic X-ray, the mandibular canal appears as a dark, linear shadow or band within the mandible. It is often located below the roots of the lower teeth.
+
+3. **Path**: 
+   - **Posteriorly**: It begins near the angle of the mandible, close to the mandibular foramen.
+   - **Anteriorly**: It extends forward, curving slightly upward, and ends near the mental foramen, which is typically located between the first and second premolars.
+
+4. **Identification**: Look for a consistent, dark line running horizontally within the mandible, below the tooth roots. It may be more visible in some areas depending on the bone density and X-ray quality.
+
+In this X-ray, you would trace the mandibular canal starting from the posterior region near the angle of the mandible, moving forward beneath the molars and premolars, and ending near the mental foramen.",0
+148,coax,Output the positions of mandibular canal in the panoramic X-ray image.,"[
+{""box_2d"": [1561, 516, 2146, 1055], ""label"": ""Mandibular canal""},
+{""box_2d"": [389, 465, 874, 1016], ""label"": ""Mandibular canal""}
+]","The mandibular canal is typically visible as a radiolucent (darker) band running within the mandible, often below the roots of the teeth. In this panoramic X-ray:
+
+1. **Right Side**: The mandibular canal starts near the mandibular foramen, which is located on the inner surface of the mandible near the angle. It runs forward and downward, passing below the roots of the molars and premolars.
+
+2. **Left Side**: Similarly, the canal begins near the mandibular foramen and follows a path below the molar and premolar roots, moving forward and slightly downward.
+
+The canal is generally more visible in the posterior region and may become less distinct as it approaches the mental foramen near the premolars. The mental foramen is where the canal opens on the outer surface of the mandible, often near the second premolar. 
+
+In this image, the canal should be traced bilaterally, ensuring it is clear of any obstructions or pathologies.",0
+148,coax_primer,Output the positions of mandibular canal in the panoramic X-ray image.,"[
+{""box_2d"": [1561, 516, 2146, 1055], ""label"": ""Mandibular canal""},
+{""box_2d"": [389, 465, 874, 1016], ""label"": ""Mandibular canal""}
+]","The mandibular canal is typically visible as a radiolucent (dark) band running within the mandible, usually below the roots of the lower teeth. In this panoramic X-ray:
+
+1. **Right Side (Patient's Right)**
+   - The mandibular canal starts near the region of the third molar (#48) and runs forward, staying below the apices of the second molar (#47) and first molar (#46).
+   - It continues anteriorly, maintaining a position below the premolars (#45 and #44).
+
+2. **Left Side (Patient's Left)**
+   - Similarly, the canal begins near the third molar region (#38) and extends forward beneath the second molar (#37) and first molar (#36).
+   - It proceeds anteriorly under the premolars (#35 and #34).
+
+The canal is generally consistent in its path, maintaining a relatively uniform distance from the apices of the teeth and the inferior border of the mandible. It is important to note any deviations or interruptions in this path, as they could indicate anatomical variations or pathologies.",0
+148,coax_primer_coords,Output the positions of mandibular canal in the panoramic X-ray image.,"[
+{""box_2d"": [1561, 516, 2146, 1055], ""label"": ""Mandibular canal""},
+{""box_2d"": [389, 465, 874, 1016], ""label"": ""Mandibular canal""}
+]","The mandibular canal is a bilateral structure that runs within the mandible, typically visible as a radiolucent band with radiopaque borders. It extends from the mandibular foramen on the medial surface of the ramus to the mental foramen near the premolars.
+
+In this panoramic X-ray:
+
+1. **Right Mandibular Canal**: 
+   - Begins near the mandibular foramen, located posteriorly and superiorly on the right side.
+   - Extends anteriorly, running below the apices of the molars and premolars.
+   - Ends near the mental foramen, which is typically located near the apices of the premolars.
+
+2. **Left Mandibular Canal**: 
+   - Begins near the mandibular foramen on the left side.
+   - Extends anteriorly, running below the apices of the molars and premolars.
+   - Ends near the mental foramen, located near the apices of the premolars.
+
+Here are the approximate bounding boxes for the mandibular canals:
+
+```json
+[
+    {""label"": ""Right Mandibular Canal"", ""tooth_id"": """", ""box_2d"": [1600, 800, 2000, 1000]},
+    {""label"": ""Left Mandibular Canal"", ""tooth_id"": """", ""box_2d"": [500, 800, 900, 1000]}
+]
+```
+
+These coordinates are approximate and based on the typical anatomical path of the mandibular canal as seen in the image.",0
+160,plain,Please detect the mandibular canal in the panoramic image.,"[
+{""box_2d"": [1577, 656, 2099, 1060], ""label"": ""Mandibular canal""},
+{""box_2d"": [370, 691, 924, 1090], ""label"": ""Mandibular canal""}
+]","To detect the mandibular canal in a panoramic image, follow these steps:
+
+1. **Location**: The mandibular canal typically runs within the mandible, starting from the mandibular foramen on the inner surface of the ramus and extending forward to the mental foramen near the premolars.
+
+2. **Appearance**: On a panoramic radiograph, the mandibular canal appears as a radiolucent (darker) band bordered by two thin radiopaque (lighter) lines. It is often located below the roots of the lower teeth.
+
+3. **Tracing the Canal**:
+   - Begin at the mandibular foramen, which is located near the angle of the mandible.
+   - Trace the canal forward, following the curve of the mandible.
+   - It typically runs parallel to the lower border of the mandible.
+   - The canal ends at the mental foramen, which is usually located near the apex of the second premolar.
+
+4. **Considerations**:
+   - The visibility of the canal can vary depending on the quality of the image and the patient's anatomy.
+   - In some cases, the canal may be obscured by overlapping structures or dental restorations.
+
+By carefully examining these areas, you should be able to identify the mandibular canal in the panoramic image.",0
+160,coax,Please detect the mandibular canal in the panoramic image.,"[
+{""box_2d"": [1577, 656, 2099, 1060], ""label"": ""Mandibular canal""},
+{""box_2d"": [370, 691, 924, 1090], ""label"": ""Mandibular canal""}
+]","The mandibular canal is visible in the panoramic image as a radiolucent (darker) band running within the mandible. It typically starts near the mandibular foramen on the lingual side of the ramus and extends anteriorly towards the mental foramen near the premolars.
+
+In this image, the mandibular canal can be traced bilaterally:
+
+1. **Right Side**: The canal begins near the mandibular foramen, located on the inner aspect of the ramus, and travels downward and forward. It runs parallel to the lower border of the mandible, passing beneath the roots of the molars and premolars, and ends near the mental foramen, which is typically located between the first and second premolars.
+
+2. **Left Side**: Similarly, the canal starts near the mandibular foramen on the left ramus, follows a downward and forward path, and runs parallel to the lower border of the mandible. It passes beneath the roots of the molars and premolars, terminating near the mental foramen.
+
+The canal is important to identify as it contains the inferior alveolar nerve and vessels, which are critical structures to avoid during dental procedures.",0
+160,coax_primer,Please detect the mandibular canal in the panoramic image.,"[
+{""box_2d"": [1577, 656, 2099, 1060], ""label"": ""Mandibular canal""},
+{""box_2d"": [370, 691, 924, 1090], ""label"": ""Mandibular canal""}
+]","To detect the mandibular canal in a panoramic radiograph, follow these steps:
+
+1. **Locate the Mandible**: The mandibular canal runs within the mandible, typically starting near the mandibular foramen on the medial aspect of the ramus and extending anteriorly towards the mental foramen.
+
+2. **Identify the Canal**: Look for a radiolucent (darker) line bordered by two radiopaque (lighter) lines. This represents the canal within the mandible.
+
+3. **Trace the Path**: 
+   - **Posteriorly**: Begin at the mandibular foramen, which is located on the inner surface of the ramus, near the angle of the mandible.
+   - **Anteriorly**: Follow the canal as it travels forward, usually below the apices of the molar teeth.
+   - **End Point**: The canal typically ends at the mental foramen, located near the premolars.
+
+4. **Check for Symmetry**: Ensure that the canal is visible on both sides of the mandible and appears symmetrical.
+
+In this image, the mandibular canal should be visible as a distinct radiolucent line running bilaterally within the mandible, below the roots of the lower teeth, extending from the region of the mandibular foramen to the mental foramen.",0
+160,coax_primer_coords,Please detect the mandibular canal in the panoramic image.,"[
+{""box_2d"": [1577, 656, 2099, 1060], ""label"": ""Mandibular canal""},
+{""box_2d"": [370, 691, 924, 1090], ""label"": ""Mandibular canal""}
+]","To detect the mandibular canal in a panoramic image, look for a radiolucent (dark) band running horizontally within the mandible, typically below the apices of the lower teeth. It is often bordered by two thin radiopaque (light) lines.
+
+In this image, the mandibular canal can be seen on both sides of the mandible:
+
+1. **Right Mandibular Canal**: It runs from the area near the third molar (#48) towards the midline, below the apices of the lower right teeth.
+2. **Left Mandibular Canal**: It runs from the area near the third molar (#38) towards the midline, below the apices of the lower left teeth.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Right Mandibular Canal"", ""tooth_id"": """", ""box_2d"": [1600, 900, 1800, 1000]},
+    {""label"": ""Left Mandibular Canal"", ""tooth_id"": """", ""box_2d"": [600, 900, 800, 1000]}
+]
+```
+
+These coordinates are approximate and should be adjusted based on the specific image details.",0
+183,plain,Please detect the teeth in the panoramic image.,"[
+{""point_2d"": [1035, 848], ""tooth_id"": ""44""},
+{""point_2d"": [1156, 824], ""tooth_id"": ""42""},
+{""point_2d"": [1522, 827], ""tooth_id"": ""35""},
+{""point_2d"": [958, 544], ""tooth_id"": ""14""},
+{""point_2d"": [624, 476], ""tooth_id"": ""18""},
+{""point_2d"": [796, 531], ""tooth_id"": ""16""},
+{""point_2d"": [948, 840], ""tooth_id"": ""45""},
+{""point_2d"": [885, 546], ""tooth_id"": ""15""},
+{""point_2d"": [1098, 541], ""tooth_id"": ""12""},
+{""point_2d"": [1430, 832], ""tooth_id"": ""34""},
+{""point_2d"": [1206, 807], ""tooth_id"": ""41""},
+{""point_2d"": [1372, 838], ""tooth_id"": ""33""},
+{""point_2d"": [1168, 536], ""tooth_id"": ""11""},
+{""point_2d"": [1024, 526], ""tooth_id"": ""13""},
+{""point_2d"": [1092, 849], ""tooth_id"": ""43""},
+{""point_2d"": [628, 706], ""tooth_id"": ""48""},
+{""point_2d"": [1262, 802], ""tooth_id"": ""31""},
+{""point_2d"": [1314, 815], ""tooth_id"": ""32""},
+{""point_2d"": [703, 522], ""tooth_id"": ""17""},
+{""point_2d"": [875, 816], ""tooth_id"": ""46""},
+{""point_2d"": [1326, 520], ""tooth_id"": ""22""},
+{""point_2d"": [724, 765], ""tooth_id"": ""47""},
+{""point_2d"": [1402, 499], ""tooth_id"": ""23""},
+{""point_2d"": [1480, 508], ""tooth_id"": ""24""},
+{""point_2d"": [1840, 679], ""tooth_id"": ""38""},
+{""point_2d"": [1248, 528], ""tooth_id"": ""21""},
+{""point_2d"": [1698, 521], ""tooth_id"": ""26""},
+{""point_2d"": [1826, 445], ""tooth_id"": ""28""},
+{""point_2d"": [1559, 519], ""tooth_id"": ""25""}
+]","The panoramic dental X-ray image shows a full view of the upper and lower jaws, including the teeth, jawbones, and surrounding structures. Here's a detailed analysis:
+
+1. **Upper Jaw (Maxilla):**
+   - The upper teeth are visible, including the incisors, canines, premolars, and molars.
+   - There are several dental restorations visible, such as crowns or fillings, which appear as bright white areas.
+   - The roots of the teeth are visible, extending into the jawbone.
+
+2. **Lower Jaw (Mandible):**
+   - The lower teeth are also visible, including incisors, canines, premolars, and molars.
+   - There is a dental implant visible on the left side of the image, which appears as a screw-like structure in the jawbone.
+   - Similar to the upper jaw, there are restorations present.
+
+3. **Other Observations:**
+   - The image shows the alignment and spacing of the teeth.
+   - The jawbone structure is visible, showing the density and health of the bone.
+   - The sinuses and nasal cavity are partially visible above the upper jaw.
+
+This panoramic image is useful for assessing overall dental health, planning treatments, and identifying any issues such as impacted teeth, infections, or bone abnormalities.",0
+183,coax,Please detect the teeth in the panoramic image.,"[
+{""point_2d"": [1035, 848], ""tooth_id"": ""44""},
+{""point_2d"": [1156, 824], ""tooth_id"": ""42""},
+{""point_2d"": [1522, 827], ""tooth_id"": ""35""},
+{""point_2d"": [958, 544], ""tooth_id"": ""14""},
+{""point_2d"": [624, 476], ""tooth_id"": ""18""},
+{""point_2d"": [796, 531], ""tooth_id"": ""16""},
+{""point_2d"": [948, 840], ""tooth_id"": ""45""},
+{""point_2d"": [885, 546], ""tooth_id"": ""15""},
+{""point_2d"": [1098, 541], ""tooth_id"": ""12""},
+{""point_2d"": [1430, 832], ""tooth_id"": ""34""},
+{""point_2d"": [1206, 807], ""tooth_id"": ""41""},
+{""point_2d"": [1372, 838], ""tooth_id"": ""33""},
+{""point_2d"": [1168, 536], ""tooth_id"": ""11""},
+{""point_2d"": [1024, 526], ""tooth_id"": ""13""},
+{""point_2d"": [1092, 849], ""tooth_id"": ""43""},
+{""point_2d"": [628, 706], ""tooth_id"": ""48""},
+{""point_2d"": [1262, 802], ""tooth_id"": ""31""},
+{""point_2d"": [1314, 815], ""tooth_id"": ""32""},
+{""point_2d"": [703, 522], ""tooth_id"": ""17""},
+{""point_2d"": [875, 816], ""tooth_id"": ""46""},
+{""point_2d"": [1326, 520], ""tooth_id"": ""22""},
+{""point_2d"": [724, 765], ""tooth_id"": ""47""},
+{""point_2d"": [1402, 499], ""tooth_id"": ""23""},
+{""point_2d"": [1480, 508], ""tooth_id"": ""24""},
+{""point_2d"": [1840, 679], ""tooth_id"": ""38""},
+{""point_2d"": [1248, 528], ""tooth_id"": ""21""},
+{""point_2d"": [1698, 521], ""tooth_id"": ""26""},
+{""point_2d"": [1826, 445], ""tooth_id"": ""28""},
+{""point_2d"": [1559, 519], ""tooth_id"": ""25""}
+]","The panoramic X-ray shows the following dental structures:
+
+1. **Maxillary Arch (Upper Jaw):**
+   - The upper right quadrant shows a dental implant in the molar region.
+   - Several teeth are present, including premolars and molars.
+   - The upper left quadrant shows the presence of molars, with the third molar (wisdom tooth) visible.
+
+2. **Mandibular Arch (Lower Jaw):**
+   - The lower right quadrant has a dental implant in the molar region.
+   - The anterior region shows a full set of incisors and canines.
+   - The lower left quadrant shows premolars and molars, with the third molar (wisdom tooth) visible.
+
+3. **General Observations:**
+   - The alignment of the teeth appears generally normal.
+   - There are restorations visible on some teeth, indicating previous dental work.
+   - The bone levels around the teeth appear to be within normal limits, though detailed assessment would require clinical correlation.
+
+This X-ray provides a comprehensive view of the dental arches, allowing for assessment of tooth presence, alignment, and any restorative work.",0
+183,coax_primer,Please detect the teeth in the panoramic image.,"[
+{""point_2d"": [1035, 848], ""tooth_id"": ""44""},
+{""point_2d"": [1156, 824], ""tooth_id"": ""42""},
+{""point_2d"": [1522, 827], ""tooth_id"": ""35""},
+{""point_2d"": [958, 544], ""tooth_id"": ""14""},
+{""point_2d"": [624, 476], ""tooth_id"": ""18""},
+{""point_2d"": [796, 531], ""tooth_id"": ""16""},
+{""point_2d"": [948, 840], ""tooth_id"": ""45""},
+{""point_2d"": [885, 546], ""tooth_id"": ""15""},
+{""point_2d"": [1098, 541], ""tooth_id"": ""12""},
+{""point_2d"": [1430, 832], ""tooth_id"": ""34""},
+{""point_2d"": [1206, 807], ""tooth_id"": ""41""},
+{""point_2d"": [1372, 838], ""tooth_id"": ""33""},
+{""point_2d"": [1168, 536], ""tooth_id"": ""11""},
+{""point_2d"": [1024, 526], ""tooth_id"": ""13""},
+{""point_2d"": [1092, 849], ""tooth_id"": ""43""},
+{""point_2d"": [628, 706], ""tooth_id"": ""48""},
+{""point_2d"": [1262, 802], ""tooth_id"": ""31""},
+{""point_2d"": [1314, 815], ""tooth_id"": ""32""},
+{""point_2d"": [703, 522], ""tooth_id"": ""17""},
+{""point_2d"": [875, 816], ""tooth_id"": ""46""},
+{""point_2d"": [1326, 520], ""tooth_id"": ""22""},
+{""point_2d"": [724, 765], ""tooth_id"": ""47""},
+{""point_2d"": [1402, 499], ""tooth_id"": ""23""},
+{""point_2d"": [1480, 508], ""tooth_id"": ""24""},
+{""point_2d"": [1840, 679], ""tooth_id"": ""38""},
+{""point_2d"": [1248, 528], ""tooth_id"": ""21""},
+{""point_2d"": [1698, 521], ""tooth_id"": ""26""},
+{""point_2d"": [1826, 445], ""tooth_id"": ""28""},
+{""point_2d"": [1559, 519], ""tooth_id"": ""25""}
+]","To systematically read the panoramic dental radiograph (OPG), let's identify the teeth present in each quadrant using the FDI two-digit system:
+
+### Upper Right Quadrant (1)
+- **Teeth Present**: #11 (central incisor), #12 (lateral incisor), #13 (canine), #14 (first premolar), #15 (second premolar), #16 (first molar)
+- **Missing**: #17 (second molar), #18 (third molar)
+
+### Upper Left Quadrant (2)
+- **Teeth Present**: #21 (central incisor), #22 (lateral incisor), #23 (canine), #24 (first premolar), #25 (second premolar), #26 (first molar)
+- **Missing**: #27 (second molar), #28 (third molar)
+
+### Lower Left Quadrant (3)
+- **Teeth Present**: #31 (central incisor), #32 (lateral incisor), #33 (canine), #34 (first premolar), #35 (second premolar), #36 (first molar), #37 (second molar)
+- **Missing**: #38 (third molar)
+
+### Lower Right Quadrant (4)
+- **Teeth Present**: #41 (central incisor), #42 (lateral incisor), #43 (canine), #44 (first premolar), #45 (second premolar), #46 (first molar), #47 (second molar)
+- **Missing**: #48 (third molar)
+
+### Additional Observations
+- **Dental Implants**: Present in the lower left quadrant, likely replacing #36.
+- **Restorations**: Several teeth have crowns or fillings, particularly in the upper right and lower left quadrants.
+- **Caries and Periapical Health**: No obvious caries or periapical lesions are visible, but further detailed examination is needed for confirmation.
+
+This systematic approach ensures a comprehensive evaluation of the panoramic radiograph.",0
+183,coax_primer_coords,Please detect the teeth in the panoramic image.,"[
+{""point_2d"": [1035, 848], ""tooth_id"": ""44""},
+{""point_2d"": [1156, 824], ""tooth_id"": ""42""},
+{""point_2d"": [1522, 827], ""tooth_id"": ""35""},
+{""point_2d"": [958, 544], ""tooth_id"": ""14""},
+{""point_2d"": [624, 476], ""tooth_id"": ""18""},
+{""point_2d"": [796, 531], ""tooth_id"": ""16""},
+{""point_2d"": [948, 840], ""tooth_id"": ""45""},
+{""point_2d"": [885, 546], ""tooth_id"": ""15""},
+{""point_2d"": [1098, 541], ""tooth_id"": ""12""},
+{""point_2d"": [1430, 832], ""tooth_id"": ""34""},
+{""point_2d"": [1206, 807], ""tooth_id"": ""41""},
+{""point_2d"": [1372, 838], ""tooth_id"": ""33""},
+{""point_2d"": [1168, 536], ""tooth_id"": ""11""},
+{""point_2d"": [1024, 526], ""tooth_id"": ""13""},
+{""point_2d"": [1092, 849], ""tooth_id"": ""43""},
+{""point_2d"": [628, 706], ""tooth_id"": ""48""},
+{""point_2d"": [1262, 802], ""tooth_id"": ""31""},
+{""point_2d"": [1314, 815], ""tooth_id"": ""32""},
+{""point_2d"": [703, 522], ""tooth_id"": ""17""},
+{""point_2d"": [875, 816], ""tooth_id"": ""46""},
+{""point_2d"": [1326, 520], ""tooth_id"": ""22""},
+{""point_2d"": [724, 765], ""tooth_id"": ""47""},
+{""point_2d"": [1402, 499], ""tooth_id"": ""23""},
+{""point_2d"": [1480, 508], ""tooth_id"": ""24""},
+{""point_2d"": [1840, 679], ""tooth_id"": ""38""},
+{""point_2d"": [1248, 528], ""tooth_id"": ""21""},
+{""point_2d"": [1698, 521], ""tooth_id"": ""26""},
+{""point_2d"": [1826, 445], ""tooth_id"": ""28""},
+{""point_2d"": [1559, 519], ""tooth_id"": ""25""}
+]","To systematically read the panoramic dental radiograph, I will identify the teeth present, any missing teeth, and note any supernumerary or impacted teeth.
+
+### Teeth Present and Missing:
+
+1. **Upper Right Quadrant (1):**
+   - Teeth present: #11, #12, #13, #14, #15, #16
+   - Missing: #17, #18
+
+2. **Upper Left Quadrant (2):**
+   - Teeth present: #21, #22, #23, #24, #25, #26
+   - Missing: #27, #28
+
+3. **Lower Left Quadrant (3):**
+   - Teeth present: #31, #32, #33, #34, #35, #36, #37
+   - Missing: #38
+
+4. **Lower Right Quadrant (4):**
+   - Teeth present: #41, #42, #43, #44, #45, #46
+   - Missing: #47, #48
+
+### JSON Representation:
+
+```json
+[
+    {""label"": ""Tooth present"", ""tooth_id"": ""11"", ""box_2d"": [1100, 400, 1150, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""12"", ""box_2d"": [1150, 400, 1200, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""13"", ""box_2d"": [1200, 400, 1250, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""14"", ""box_2d"": [1250, 400, 1300, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""15"", ""box_2d"": [1300, 400, 1350, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""16"", ""box_2d"": [1350, 400, 1400, 450]},
+    {""label"": ""Tooth missing"", ""tooth_id"": ""17"", ""box_2d"": [1400, 400, 1450, 450]},
+    {""label"": ""Tooth missing"", ""tooth_id"": ""18"", ""box_2d"": [1450, 400, 1500, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""21"", ""box_2d"": [1000, 400, 1050, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""22"", ""box_2d"": [950, 400, 1000, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""23"", ""box_2d"": [900, 400, 950, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""24"", ""box_2d"": [850, 400, 900, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""25"", ""box_2d"": [800, 400, 850, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""26"", ""box_2d"": [750, 400, 800, 450]},
+    {""label"": ""Tooth missing"", ""tooth_id"": ""27"", ""box_2d"": [700, 400, 750, 450]},
+    {""label"": ""Tooth missing"", ""tooth_id"": ""28"", ""box_2d"": [650, 400, 700, 450]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""31"", ""box_2d"": [600, 800, 650, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""32"", ""box_2d"": [650, 800, 700, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""33"", ""box_2d"": [700, 800, 750, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""34"", ""box_2d"": [750, 800, 800, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""35"", ""box_2d"": [800, 800, 850, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""36"", ""box_2d"": [850, 800, 900, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""37"", ""box_2d"": [900, 800, 950, 850]},
+    {""label"": ""Tooth missing"", ""tooth_id"": ""38"", ""box_2d"": [950, 800, 1000, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""41"", ""box_2d"": [1050, 800, 1100, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""42"", ""box_2d"": [1100, 800, 1150, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""43"", ""box_2d"": [1150, 800, 1200, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""44"", ""box_2d"": [1200, 800, 1250, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""45"", ""box_2d"": [1250, 800, 1300, 850]},
+    {""label"": ""Tooth present"", ""tooth_id"": ""46"", ""box_2d"": [1300, 800, 1350, 850]},
+    {""label"": ""Tooth missing"", ""tooth_id"": ""47"", ""box_2d"": [1350, 800, 1400, 850]},
+    {""label"": ""Tooth missing"", ""tooth_id"": ""48"", ""box_2d"": [1400, 800, 1450, 850]}
+]
+```
+
+This JSON provides a structured representation of the teeth present and missing in the panoramic image.",0
+199,plain,What findings can be observed in the panoramic radiograph regarding tooth #31?,"[
+{""Teeth position"": {""point_2d"": [1278, 750]}},
+{""Crown"": {""box_2d"": [1249, 650, 1306, 769]}}
+]","Tooth #31 in the panoramic radiograph shows the following findings:
+
+1. **Impaction**: Tooth #31 appears to be impacted, as it is not fully erupted into the oral cavity. It is positioned horizontally or at an angle relative to the adjacent teeth.
+
+2. **Position**: The tooth is located in the lower right quadrant of the jaw, and its orientation suggests it is impacted against the second molar.
+
+3. **Surrounding Structures**: There may be some bone loss or changes around the crown of the tooth, which could indicate the presence of a follicular space or cystic changes.
+
+4. **Root Development**: The roots of tooth #31 appear to be fully developed, indicating that the tooth is mature.
+
+5. **Adjacent Teeth**: The position of tooth #31 may be affecting the alignment or health of adjacent teeth, particularly the second molar.
+
+These findings suggest that tooth #31 may require further evaluation for potential extraction or other dental interventions.",0
+199,coax,What findings can be observed in the panoramic radiograph regarding tooth #31?,"[
+{""Teeth position"": {""point_2d"": [1278, 750]}},
+{""Crown"": {""box_2d"": [1249, 650, 1306, 769]}}
+]","Tooth #31 in the panoramic radiograph appears to be missing. There is no visible evidence of the tooth in the expected position in the mandibular right posterior region. The space where tooth #31 should be is occupied by a dental prosthesis, likely a bridge, which is supported by adjacent teeth. There are no signs of pathology such as radiolucencies or radiopacities in the area where tooth #31 would typically be located.",0
+199,coax_primer,What findings can be observed in the panoramic radiograph regarding tooth #31?,"[
+{""Teeth position"": {""point_2d"": [1278, 750]}},
+{""Crown"": {""box_2d"": [1249, 650, 1306, 769]}}
+]","Tooth #31, which is the lower-left central incisor, appears to be missing in this panoramic radiograph. There is no visible evidence of the tooth or its root structure in the expected position. The surrounding alveolar bone appears to have resorbed, which is typical when a tooth is missing. There are no signs of supernumerary teeth or implants in the area of tooth #31.",0
+199,coax_primer_coords,What findings can be observed in the panoramic radiograph regarding tooth #31?,"[
+{""Teeth position"": {""point_2d"": [1278, 750]}},
+{""Crown"": {""box_2d"": [1249, 650, 1306, 769]}}
+]","Tooth #31 is the lower-left central incisor. Upon examining the panoramic radiograph, the following findings can be observed regarding tooth #31:
+
+1. **Presence**: Tooth #31 is present.
+2. **Caries**: There are no visible caries on tooth #31.
+3. **Restorations**: There are no restorations or fillings visible on tooth #31.
+4. **Periapical Health**: There is no evident periapical radiolucency, suggesting no apparent periapical pathology.
+5. **Alveolar Bone Level**: The alveolar bone level appears to be within normal limits, approximately 2 mm below the cemento-enamel junction.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Tooth present"", ""tooth_id"": ""31"", ""box_2d"": [1180, 800, 1220, 860]},
+    {""label"": ""No caries"", ""tooth_id"": ""31"", ""box_2d"": [1180, 800, 1220, 860]},
+    {""label"": ""No restorations"", ""tooth_id"": ""31"", ""box_2d"": [1180, 800, 1220, 860]},
+    {""label"": ""No periapical pathology"", ""tooth_id"": ""31"", ""box_2d"": [1180, 800, 1220, 860]},
+    {""label"": ""Normal alveolar bone level"", ""tooth_id"": ""31"", ""box_2d"": [1180, 800, 1220, 860]}
+]
+```",0
+262,plain,Output the positions of maxillary sinus in the panoramic X-ray image.,"[
+{""box_2d"": [630, 20, 1024, 405], ""label"": ""Maxillary sinus""},
+{""box_2d"": [1434, 25, 1816, 383], ""label"": ""Maxillary sinus""}
+]","In a panoramic X-ray image, the maxillary sinuses are typically located above the upper teeth, near the cheekbones. They appear as radiolucent (darker) areas due to being air-filled cavities. 
+
+Specifically, you can find them:
+
+1. **Above the Premolars and Molars**: The maxillary sinuses are positioned above the roots of the upper premolars and molars on both sides of the jaw.
+
+2. **Below the Orbits**: They are situated below the eye sockets (orbits) and extend laterally towards the zygomatic (cheek) bones.
+
+3. **Symmetrical Appearance**: On a well-aligned panoramic X-ray, the maxillary sinuses should appear symmetrically on both sides of the face.
+
+In the image, look for the darker, oval-shaped areas above the upper teeth on both the left and right sides. These are the maxillary sinuses.",0
+262,coax,Output the positions of maxillary sinus in the panoramic X-ray image.,"[
+{""box_2d"": [630, 20, 1024, 405], ""label"": ""Maxillary sinus""},
+{""box_2d"": [1434, 25, 1816, 383], ""label"": ""Maxillary sinus""}
+]","The maxillary sinuses are visible in the panoramic X-ray image as radiolucent (darker) areas located above the posterior teeth on both sides of the maxilla. They are positioned superior to the roots of the upper molars and premolars, extending from the area above the canine teeth to the region above the third molars. The sinuses appear as bilateral, symmetrical cavities with well-defined borders.",0
+262,coax_primer,Output the positions of maxillary sinus in the panoramic X-ray image.,"[
+{""box_2d"": [630, 20, 1024, 405], ""label"": ""Maxillary sinus""},
+{""box_2d"": [1434, 25, 1816, 383], ""label"": ""Maxillary sinus""}
+]","The maxillary sinuses are visible in the panoramic X-ray image as radiolucent (dark) areas located above the roots of the upper teeth, specifically in the regions of the premolars and molars. They appear as bilateral, roughly triangular or oval-shaped spaces on either side of the nasal cavity. 
+
+In this image, the maxillary sinuses are positioned:
+
+- Above the upper right teeth (quadrant 1), particularly over the roots of teeth #14 and #15.
+- Above the upper left teeth (quadrant 2), particularly over the roots of teeth #24 and #25.
+
+These areas are typically symmetrical and should be evaluated for any signs of pathology, although the OPG is not highly reliable for detecting sinus disease.",0
+262,coax_primer_coords,Output the positions of maxillary sinus in the panoramic X-ray image.,"[
+{""box_2d"": [630, 20, 1024, 405], ""label"": ""Maxillary sinus""},
+{""box_2d"": [1434, 25, 1816, 383], ""label"": ""Maxillary sinus""}
+]","The maxillary sinuses are located above the upper teeth, specifically above the premolars and molars, on both sides of the panoramic radiograph. They appear as radiolucent (dark) areas due to their air-filled nature.
+
+In this panoramic X-ray, the maxillary sinuses can be identified as follows:
+
+1. **Right Maxillary Sinus**: This is located above the upper right teeth, particularly above the premolars and molars on the right side of the image.
+2. **Left Maxillary Sinus**: This is located above the upper left teeth, particularly above the premolars and molars on the left side of the image.
+
+Here are the approximate bounding boxes for the maxillary sinuses:
+
+```json
+[
+    {""label"": ""Right Maxillary Sinus"", ""tooth_id"": """", ""box_2d"": [1300, 200, 1600, 400]},
+    {""label"": ""Left Maxillary Sinus"", ""tooth_id"": """", ""box_2d"": [800, 200, 1100, 400]}
+]
+```
+
+These coordinates are approximate and based on the typical location of the maxillary sinuses in a panoramic radiograph.",0
+274,plain,Detect wisdom tooth in the panoramic image.,"[
+{""box_2d"": [1690, 705, 1829, 899], ""tooth_id"": ""38"", ""is_impacted"": ""false""},
+{""box_2d"": [612, 657, 773, 850], ""tooth_id"": ""48"", ""is_impacted"": ""false""},
+{""box_2d"": [681, 445, 774, 641], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1686, 429, 1806, 672], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","To detect wisdom teeth in a panoramic dental X-ray, look for the third molars, which are typically located at the very back of the mouth on both the upper and lower jaws. In this image:
+
+1. **Upper Jaw (Maxillary) Wisdom Teeth**:
+   - Check the far left and right sides of the upper jaw.
+   - Look for the last teeth in the row, which may be partially erupted or impacted.
+
+2. **Lower Jaw (Mandibular) Wisdom Teeth**:
+   - Similarly, examine the far left and right sides of the lower jaw.
+   - These teeth might be tilted, partially erupted, or fully impacted.
+
+In this image, the wisdom teeth appear to be the last molars on each side of both the upper and lower jaws. They may be positioned differently, such as being angled or partially erupted, which is common for wisdom teeth.",0
+274,coax,Detect wisdom tooth in the panoramic image.,"[
+{""box_2d"": [1690, 705, 1829, 899], ""tooth_id"": ""38"", ""is_impacted"": ""false""},
+{""box_2d"": [612, 657, 773, 850], ""tooth_id"": ""48"", ""is_impacted"": ""false""},
+{""box_2d"": [681, 445, 774, 641], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1686, 429, 1806, 672], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","The panoramic X-ray shows the presence of wisdom teeth, also known as third molars, in the following locations:
+
+1. **Upper Right Quadrant (Maxillary Right):** The wisdom tooth is visible and appears to be partially erupted.
+
+2. **Upper Left Quadrant (Maxillary Left):** The wisdom tooth is visible and appears to be partially erupted.
+
+3. **Lower Right Quadrant (Mandibular Right):** The wisdom tooth is visible and appears to be impacted, positioned horizontally.
+
+4. **Lower Left Quadrant (Mandibular Left):** The wisdom tooth is visible and appears to be impacted, positioned horizontally.
+
+The lower wisdom teeth are impacted, which means they are not fully erupted and are positioned at an angle. This can potentially lead to complications such as crowding, infection, or damage to adjacent teeth.",0
+274,coax_primer,Detect wisdom tooth in the panoramic image.,"[
+{""box_2d"": [1690, 705, 1829, 899], ""tooth_id"": ""38"", ""is_impacted"": ""false""},
+{""box_2d"": [612, 657, 773, 850], ""tooth_id"": ""48"", ""is_impacted"": ""false""},
+{""box_2d"": [681, 445, 774, 641], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1686, 429, 1806, 672], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","To detect the wisdom teeth (third molars) in the panoramic image, we need to examine the areas corresponding to the third molars in each quadrant:
+
+1. **Upper Right Quadrant (Tooth #18)**: The upper right third molar is not visible, indicating it may be missing or impacted outside the focal trough.
+
+2. **Upper Left Quadrant (Tooth #28)**: The upper left third molar is not visible, suggesting it may be missing or impacted outside the focal trough.
+
+3. **Lower Left Quadrant (Tooth #38)**: The lower left third molar is visible and appears to be partially erupted or impacted, with the crown visible but possibly tilted.
+
+4. **Lower Right Quadrant (Tooth #48)**: The lower right third molar is visible and appears to be partially erupted or impacted, with the crown visible but possibly tilted.
+
+In summary, the lower third molars (#38 and #48) are present and appear to be partially erupted or impacted, while the upper third molars (#18 and #28) are not visible, suggesting they may be missing or impacted.",0
+274,coax_primer_coords,Detect wisdom tooth in the panoramic image.,"[
+{""box_2d"": [1690, 705, 1829, 899], ""tooth_id"": ""38"", ""is_impacted"": ""false""},
+{""box_2d"": [612, 657, 773, 850], ""tooth_id"": ""48"", ""is_impacted"": ""false""},
+{""box_2d"": [681, 445, 774, 641], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1686, 429, 1806, 672], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","To detect the wisdom teeth (third molars) in the panoramic image, we need to examine the areas corresponding to the FDI codes #18, #28, #38, and #48.
+
+1. **Tooth #18 (Upper Right Third Molar)**: 
+   - Present and appears to be partially erupted.
+   - Location: Top right of the image.
+
+2. **Tooth #28 (Upper Left Third Molar)**:
+   - Present and appears to be partially erupted.
+   - Location: Top left of the image.
+
+3. **Tooth #38 (Lower Left Third Molar)**:
+   - Present and appears to be impacted, with a horizontal orientation.
+   - Location: Bottom left of the image.
+
+4. **Tooth #48 (Lower Right Third Molar)**:
+   - Present and appears to be impacted, with a horizontal orientation.
+   - Location: Bottom right of the image.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Wisdom Tooth"", ""tooth_id"": ""18"", ""box_2d"": [2000, 200, 2100, 300]},
+    {""label"": ""Wisdom Tooth"", ""tooth_id"": ""28"", ""box_2d"": [300, 200, 400, 300]},
+    {""label"": ""Wisdom Tooth"", ""tooth_id"": ""38"", ""box_2d"": [300, 1000, 400, 1100]},
+    {""label"": ""Wisdom Tooth"", ""tooth_id"": ""48"", ""box_2d"": [2000, 1000, 2100, 1100]}
+]
+```",0
+292,plain,Describe the overall status of tooth #38 based on the panoramic radiograph findings.,"[
+{""Teeth position"": {""point_2d"": [1817, 699]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #38, which is the lower left third molar (wisdom tooth), appears to be impacted in the panoramic radiograph. Here are the detailed observations:
+
+1. **Impaction**: The tooth is positioned horizontally and is impacted against the second molar. This horizontal impaction is a common issue with third molars.
+
+2. **Position**: The crown of tooth #38 is directed towards the distal aspect of the second molar, indicating a mesioangular impaction.
+
+3. **Root Development**: The roots of tooth #38 appear to be fully developed, suggesting that the tooth has been in this position for some time.
+
+4. **Bone Coverage**: The tooth is partially covered by bone, which is typical for impacted teeth.
+
+5. **Proximity to Nerve**: The roots of tooth #38 are in close proximity to the inferior alveolar nerve canal, which is a consideration for potential surgical extraction.
+
+6. **Surrounding Structures**: There is no obvious sign of pathology such as cysts or tumors around the tooth, but the close proximity to the second molar could potentially affect its health.
+
+Overall, tooth #38 is impacted and may require surgical intervention if it poses a risk to adjacent teeth or causes symptoms.",0
+292,coax,Describe the overall status of tooth #38 based on the panoramic radiograph findings.,"[
+{""Teeth position"": {""point_2d"": [1817, 699]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #38, which is the lower left third molar, appears to be impacted in the panoramic radiograph. It is positioned horizontally and is partially erupted, with the crown directed towards the distal aspect of the second molar. The root development seems complete, and there is no apparent periapical radiolucency, suggesting no active infection at the root apex. The follicular space around the crown appears normal, indicating no cystic changes. There is no evidence of resorption on the adjacent second molar. Overall, tooth #38 is impacted and may require evaluation for potential extraction due to its position and potential for future complications.",0
+292,coax_primer,Describe the overall status of tooth #38 based on the panoramic radiograph findings.,"[
+{""Teeth position"": {""point_2d"": [1817, 699]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #38, the lower-left third molar, appears to be impacted. It is positioned horizontally and is partially erupted, with the crown oriented towards the distal aspect of the second molar (#37). The root development seems complete, and there is no obvious periapical radiolucency indicating infection or pathology at the root apex. The surrounding bone appears intact, with no significant bone loss or lesions visible in the immediate area. There are no visible caries or restorations on this tooth. Overall, the tooth is impacted but does not show signs of acute pathology on this panoramic radiograph.",0
+292,coax_primer_coords,Describe the overall status of tooth #38 based on the panoramic radiograph findings.,"[
+{""Teeth position"": {""point_2d"": [1817, 699]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #38, the lower-left third molar, appears to be impacted. It is positioned horizontally and is partially erupted, with the crown oriented towards the distal aspect of the second molar (#37). There is no visible periapical radiolucency indicating apical pathology. The surrounding bone appears intact, and there is no obvious sign of caries or restorations on this tooth. The alveolar bone level around the tooth seems normal, with no significant bone loss observed.
+
+JSON findings:
+
+```json
+[
+    {""label"": ""Impacted tooth"", ""tooth_id"": ""38"", ""box_2d"": [300, 800, 400, 900]}
+]
+```",0
+322,plain,Does tooth #25 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1544, 525]}},
+{""Crown"": {""box_2d"": [1496, 547, 1589, 661]}}
+]","I'm unable to interpret radiographs or provide a diagnosis. For an accurate assessment of tooth #25, please consult a dental professional who can evaluate the radiograph and provide a detailed analysis.",1
+322,coax,Does tooth #25 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1544, 525]}},
+{""Crown"": {""box_2d"": [1496, 547, 1589, 661]}}
+]","Tooth #25 on the panoramic radiograph appears to exhibit signs of pathology. There is evidence of periapical radiolucency, which suggests possible periapical pathology such as an abscess or granuloma. Additionally, there may be signs of bone loss around the tooth, indicating periodontal involvement. The tooth structure itself does not show obvious fractures or caries, but the surrounding bone changes warrant further clinical evaluation and possibly endodontic treatment.",0
+322,coax_primer,Does tooth #25 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1544, 525]}},
+{""Crown"": {""box_2d"": [1496, 547, 1589, 661]}}
+]","Tooth #25 is the upper left second incisor. Upon examining the panoramic radiograph:
+
+1. **Presence and Position**: Tooth #25 is present and appears to be in its normal position.
+
+2. **Caries**: There are no obvious radiolucencies indicating caries on the proximal or occlusal surfaces of tooth #25.
+
+3. **Restorations**: There are no visible fillings or crowns on tooth #25.
+
+4. **Root Canal Treatment**: There is no evidence of root canal treatment in tooth #25.
+
+5. **Periapical Health**: There is no apparent periapical radiolucency at the apex of tooth #25, suggesting no obvious signs of apical periodontitis or other periapical pathology.
+
+6. **Alveolar Bone Level**: The alveolar bone level around tooth #25 appears to be within normal limits, with the bone crest approximately 2 mm below the cemento-enamel junction.
+
+Overall, tooth #25 does not exhibit any signs of pathology or structural compromise on this panoramic radiograph.",0
+322,coax_primer_coords,Does tooth #25 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1544, 525]}},
+{""Crown"": {""box_2d"": [1496, 547, 1589, 661]}}
+]","Tooth #25 is the upper-left second premolar. Upon examining the panoramic radiograph, the following observations are made regarding tooth #25:
+
+1. **Presence and Position**: Tooth #25 is present and appears to be in its normal position within the dental arch.
+
+2. **Caries**: There are no obvious radiolucencies indicating caries on the proximal or occlusal surfaces of tooth #25.
+
+3. **Restorations**: There are no visible restorations such as fillings or crowns on tooth #25.
+
+4. **Root and Periapical Area**: The root of tooth #25 appears intact with no visible signs of periapical radiolucency, suggesting no evident periapical pathology.
+
+5. **Alveolar Bone Level**: The alveolar bone level around tooth #25 appears to be within normal limits, with no significant bone loss observed.
+
+Overall, tooth #25 does not exhibit any signs of pathology or structural compromise on the panoramic radiograph.
+
+JSON representation of findings:
+
+```json
+[]
+```",0
+328,plain,What radiographic features are visible in tooth #35 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [1472, 838]}},
+{""Crown"": {""box_2d"": [1423, 735, 1519, 830]}},
+{""Implant"": {""box_2d"": [1460, 836, 1509, 965]}}
+]","Tooth #35, which is the left second premolar in the lower jaw, shows the following radiographic features on the panoramic X-ray:
+
+1. **Restoration**: There is a radiopaque area indicating a dental restoration, likely a filling, on the crown of the tooth.
+
+2. **Root Structure**: The root appears intact with no signs of resorption or fracture.
+
+3. **Periodontal Ligament Space**: The periodontal ligament space appears normal, with no widening that might suggest periodontal disease or trauma.
+
+4. **Surrounding Bone**: The alveolar bone surrounding the tooth appears normal, with no signs of bone loss or pathology.
+
+5. **Tooth Position**: The tooth is in alignment with the adjacent teeth, with no signs of tilting or displacement.
+
+Overall, tooth #35 appears to be in good condition with a restoration present.",0
+328,coax,What radiographic features are visible in tooth #35 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [1472, 838]}},
+{""Crown"": {""box_2d"": [1423, 735, 1519, 830]}},
+{""Implant"": {""box_2d"": [1460, 836, 1509, 965]}}
+]","Tooth #35, which is the left second premolar in the lower jaw, shows the following radiographic features:
+
+1. **Restoration**: There is a radiopaque restoration visible, likely a dental filling, indicating previous dental work.
+
+2. **Root Structure**: The root appears intact with no obvious signs of resorption or fracture.
+
+3. **Periodontal Ligament Space**: The periodontal ligament space appears normal, with no widening that might suggest periodontal disease.
+
+4. **Periapical Area**: There is no evident periapical radiolucency, suggesting no signs of periapical pathology such as an abscess.
+
+5. **Bone Level**: The alveolar bone level around the tooth appears normal, with no significant bone loss visible.
+
+Overall, tooth #35 appears to be in good condition with a restoration present and no significant pathological findings.",0
+328,coax_primer,What radiographic features are visible in tooth #35 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [1472, 838]}},
+{""Crown"": {""box_2d"": [1423, 735, 1519, 830]}},
+{""Implant"": {""box_2d"": [1460, 836, 1509, 965]}}
+]","Tooth #35 is the lower-left second premolar. Upon examining the panoramic X-ray:
+
+1. **Presence and Position**: Tooth #35 is present and appears to be in its normal position within the dental arch.
+
+2. **Caries**: There is no obvious radiolucency indicating caries on the proximal or occlusal surfaces of tooth #35.
+
+3. **Restorations**: There are no visible restorations, such as fillings or crowns, on tooth #35.
+
+4. **Root Canal**: There is no evidence of root canal treatment in tooth #35.
+
+5. **Periapical Health**: The periapical region of tooth #35 appears normal, with no radiolucency suggesting periapical pathology.
+
+6. **Alveolar Bone Level**: The alveolar bone level around tooth #35 seems to be within normal limits, approximately 2 mm below the cemento-enamel junction.
+
+Overall, tooth #35 appears to be healthy with no significant radiographic abnormalities.",0
+328,coax_primer_coords,What radiographic features are visible in tooth #35 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [1472, 838]}},
+{""Crown"": {""box_2d"": [1423, 735, 1519, 830]}},
+{""Implant"": {""box_2d"": [1460, 836, 1509, 965]}}
+]","Tooth #35 is the lower-left second premolar. Upon examining the panoramic X-ray, the following features are noted for tooth #35:
+
+1. **Presence and Position**: Tooth #35 is present and appears to be in its normal position within the dental arch.
+
+2. **Restorations**: There is a radiopaque area on the crown of tooth #35, indicating the presence of a dental restoration, likely a filling.
+
+3. **Caries**: No obvious radiolucencies are visible that would suggest caries reaching the dentin.
+
+4. **Root and Periapical Area**: The root of tooth #35 appears intact, and there are no visible periapical radiolucencies that would suggest apical periodontitis or other lesions.
+
+5. **Alveolar Bone Level**: The alveolar bone level around tooth #35 appears to be within normal limits, with the bone crest approximately 2 mm below the cemento-enamel junction.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Tooth present"", ""tooth_id"": ""35"", ""box_2d"": [1050, 800, 1100, 850]},
+    {""label"": ""Dental restoration"", ""tooth_id"": ""35"", ""box_2d"": [1050, 780, 1100, 800]}
+]
+```",0
+334,plain,Identify the historical treatments in the X-ray image.,"[
+{""box_2d"": [1503, 694, 1574, 803], ""tooth_id"": ""35"", ""label"": ""Crown""},
+{""box_2d"": [1273, 592, 1303, 649], ""tooth_id"": ""21"", ""label"": ""Filling""},
+{""box_2d"": [1299, 419, 1354, 589], ""tooth_id"": ""21"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1567, 692, 1672, 800], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1657, 641, 1769, 746], ""tooth_id"": ""37"", ""label"": ""Crown""},
+]","The X-ray image shows several historical dental treatments:
+
+1. **Dental Fillings**: There are visible radiopaque areas in the molar regions, indicating the presence of dental fillings. These are likely amalgam or composite fillings used to restore decayed teeth.
+
+2. **Root Canal Treatment**: One of the teeth appears to have a radiopaque line extending through the root canal, suggesting a root canal treatment. This involves removing the pulp tissue and filling the canal with a material to prevent infection.
+
+3. **Dental Crowns**: There are teeth with a uniform radiopaque covering, indicating the presence of dental crowns. Crowns are used to restore the shape, size, and function of a damaged tooth.
+
+These treatments are common in dental care to address decay, infection, and structural damage.",0
+334,coax,Identify the historical treatments in the X-ray image.,"[
+{""box_2d"": [1503, 694, 1574, 803], ""tooth_id"": ""35"", ""label"": ""Crown""},
+{""box_2d"": [1273, 592, 1303, 649], ""tooth_id"": ""21"", ""label"": ""Filling""},
+{""box_2d"": [1299, 419, 1354, 589], ""tooth_id"": ""21"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1567, 692, 1672, 800], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1657, 641, 1769, 746], ""tooth_id"": ""37"", ""label"": ""Crown""},
+]","The panoramic X-ray image shows several historical dental treatments:
+
+1. **Dental Fillings**: There are multiple radiopaque areas in the molar regions, indicating the presence of dental fillings. These are likely amalgam or composite restorations.
+
+2. **Root Canal Treatment**: There is evidence of root canal treatment on one of the teeth, visible as a radiopaque line within the root canal space, indicating the presence of a filling material.
+
+3. **Dental Crowns**: There are crowns visible on some of the molars, identifiable by their distinct shape and radiopacity compared to natural tooth structure.
+
+These treatments suggest a history of dental restorations and endodontic therapy.",0
+334,coax_primer,Identify the historical treatments in the X-ray image.,"[
+{""box_2d"": [1503, 694, 1574, 803], ""tooth_id"": ""35"", ""label"": ""Crown""},
+{""box_2d"": [1273, 592, 1303, 649], ""tooth_id"": ""21"", ""label"": ""Filling""},
+{""box_2d"": [1299, 419, 1354, 589], ""tooth_id"": ""21"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1567, 692, 1672, 800], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1657, 641, 1769, 746], ""tooth_id"": ""37"", ""label"": ""Crown""},
+]","Based on the panoramic dental radiograph provided, here are the historical treatments identified:
+
+1. **Fillings and Restorations**:
+   - There are multiple dental restorations visible, particularly in the molar regions. These appear as radiopaque areas within the crowns of the teeth, indicating the presence of fillings or crowns.
+
+2. **Root Canal Treatment**:
+   - Tooth #12 (upper-left first premolar) shows evidence of a root canal treatment, indicated by the radiopaque filling material within the root canal space.
+
+3. **Crowns**:
+   - There are crowns present on some of the molars, particularly in the lower right quadrant (e.g., tooth #46, lower-right first molar), which are visible as radiopaque caps covering the tooth structure.
+
+These findings suggest a history of dental restorations and endodontic treatment.",0
+334,coax_primer_coords,Identify the historical treatments in the X-ray image.,"[
+{""box_2d"": [1503, 694, 1574, 803], ""tooth_id"": ""35"", ""label"": ""Crown""},
+{""box_2d"": [1273, 592, 1303, 649], ""tooth_id"": ""21"", ""label"": ""Filling""},
+{""box_2d"": [1299, 419, 1354, 589], ""tooth_id"": ""21"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1567, 692, 1672, 800], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1657, 641, 1769, 746], ""tooth_id"": ""37"", ""label"": ""Crown""},
+]","In the provided panoramic dental radiograph, the following historical treatments are identified:
+
+1. **Root Canal Treatment**:
+   - Tooth #12 (upper right lateral incisor) shows evidence of a root canal filling.
+
+2. **Dental Crowns**:
+   - Tooth #26 (upper left first molar) has a crown restoration.
+   - Tooth #46 (lower right first molar) has a crown restoration.
+
+3. **Dental Filling**:
+   - Tooth #16 (upper right first molar) has a filling.
+
+Here is the JSON representation of these findings:
+
+```json
+[
+    {""label"": ""Root Canal Treatment"", ""tooth_id"": ""12"", ""box_2d"": [1220, 500, 1260, 540]},
+    {""label"": ""Crown Restoration"", ""tooth_id"": ""26"", ""box_2d"": [600, 400, 640, 440]},
+    {""label"": ""Crown Restoration"", ""tooth_id"": ""46"", ""box_2d"": [1800, 900, 1840, 940]},
+    {""label"": ""Filling"", ""tooth_id"": ""16"", ""box_2d"": [1000, 400, 1040, 440]}
+]
+```
+
+These findings indicate previous dental treatments, including root canal therapy and restorations with crowns and fillings.",0
+376,plain,Which areas show the teeth in the panoramic image?,"[
+{""point_2d"": [1664, 754], ""tooth_id"": ""35""},
+{""point_2d"": [1293, 752], ""tooth_id"": ""41""},
+{""point_2d"": [1506, 786], ""tooth_id"": ""33""},
+{""point_2d"": [1414, 757], ""tooth_id"": ""32""},
+{""point_2d"": [1521, 468], ""tooth_id"": ""23""},
+{""point_2d"": [981, 796], ""tooth_id"": ""45""},
+{""point_2d"": [1889, 486], ""tooth_id"": ""28""},
+{""point_2d"": [664, 518], ""tooth_id"": ""17""},
+{""point_2d"": [1100, 772], ""tooth_id"": ""43""}
+]","In the panoramic image, the areas showing the teeth are located along the curved arc in the middle of the image. Specifically:
+
+1. **Upper Jaw (Maxilla):** The teeth in the upper jaw are visible in the upper half of the image. You can see the roots extending upwards into the maxillary bone.
+
+2. **Lower Jaw (Mandible):** The teeth in the lower jaw are visible in the lower half of the image. The roots extend downwards into the mandibular bone.
+
+3. **Individual Teeth:** You can identify individual teeth by their distinct shapes and positions. Some teeth may have restorations or appear as roots if crowns are missing.
+
+The panoramic view provides a comprehensive look at the dental arches, allowing for the assessment of tooth alignment, presence of restorations, and any missing teeth.",0
+376,coax,Which areas show the teeth in the panoramic image?,"[
+{""point_2d"": [1664, 754], ""tooth_id"": ""35""},
+{""point_2d"": [1293, 752], ""tooth_id"": ""41""},
+{""point_2d"": [1506, 786], ""tooth_id"": ""33""},
+{""point_2d"": [1414, 757], ""tooth_id"": ""32""},
+{""point_2d"": [1521, 468], ""tooth_id"": ""23""},
+{""point_2d"": [981, 796], ""tooth_id"": ""45""},
+{""point_2d"": [1889, 486], ""tooth_id"": ""28""},
+{""point_2d"": [664, 518], ""tooth_id"": ""17""},
+{""point_2d"": [1100, 772], ""tooth_id"": ""43""}
+]","In the panoramic X-ray image, the areas showing the teeth are as follows:
+
+1. **Upper Jaw (Maxilla):**
+   - There are a few teeth visible in the upper jaw. These are located towards the left and right sides of the image. The teeth appear to be molars or premolars, as they are positioned towards the back of the mouth.
+
+2. **Lower Jaw (Mandible):**
+   - The lower jaw shows several teeth, primarily towards the center and right side of the image. These include molars and possibly premolars. Some teeth appear to have restorations or crowns.
+
+3. **Missing Teeth:**
+   - There are several gaps in both the upper and lower jaws, indicating missing teeth. These gaps are more prominent in the upper jaw.
+
+Overall, the image shows partial dentition with several missing teeth and some dental restorations.",0
+376,coax_primer,Which areas show the teeth in the panoramic image?,"[
+{""point_2d"": [1664, 754], ""tooth_id"": ""35""},
+{""point_2d"": [1293, 752], ""tooth_id"": ""41""},
+{""point_2d"": [1506, 786], ""tooth_id"": ""33""},
+{""point_2d"": [1414, 757], ""tooth_id"": ""32""},
+{""point_2d"": [1521, 468], ""tooth_id"": ""23""},
+{""point_2d"": [981, 796], ""tooth_id"": ""45""},
+{""point_2d"": [1889, 486], ""tooth_id"": ""28""},
+{""point_2d"": [664, 518], ""tooth_id"": ""17""},
+{""point_2d"": [1100, 772], ""tooth_id"": ""43""}
+]","In the panoramic dental radiograph (OPG) provided, the teeth are visible in the following areas:
+
+1. **Upper Right Quadrant (Quadrant 1)**:
+   - Teeth are visible on the right side of the image, corresponding to the patient's upper right jaw. This includes teeth numbered from #11 (central incisor) to #18 (third molar).
+
+2. **Upper Left Quadrant (Quadrant 2)**:
+   - Teeth are visible on the left side of the image, corresponding to the patient's upper left jaw. This includes teeth numbered from #21 (central incisor) to #28 (third molar).
+
+3. **Lower Left Quadrant (Quadrant 3)**:
+   - Teeth are visible on the left side of the image, corresponding to the patient's lower left jaw. This includes teeth numbered from #31 (central incisor) to #38 (third molar).
+
+4. **Lower Right Quadrant (Quadrant 4)**:
+   - Teeth are visible on the right side of the image, corresponding to the patient's lower right jaw. This includes teeth numbered from #41 (central incisor) to #48 (third molar).
+
+The image shows the teeth in both the maxillary (upper) and mandibular (lower) arches, allowing for a comprehensive view of the dental structures.",0
+376,coax_primer_coords,Which areas show the teeth in the panoramic image?,"[
+{""point_2d"": [1664, 754], ""tooth_id"": ""35""},
+{""point_2d"": [1293, 752], ""tooth_id"": ""41""},
+{""point_2d"": [1506, 786], ""tooth_id"": ""33""},
+{""point_2d"": [1414, 757], ""tooth_id"": ""32""},
+{""point_2d"": [1521, 468], ""tooth_id"": ""23""},
+{""point_2d"": [981, 796], ""tooth_id"": ""45""},
+{""point_2d"": [1889, 486], ""tooth_id"": ""28""},
+{""point_2d"": [664, 518], ""tooth_id"": ""17""},
+{""point_2d"": [1100, 772], ""tooth_id"": ""43""}
+]","To systematically read the panoramic dental radiograph (OPG), we will identify the teeth present, their conditions, and any notable findings. The image shows the entire dental arch, including the maxilla and mandible.
+
+### Teeth Present and Findings:
+
+1. **Upper Right Quadrant (Quadrant 1):**
+   - **Tooth #16 (Upper Right First Molar):** Present.
+   - **Tooth #17 (Upper Right Second Molar):** Present.
+   - **Tooth #18 (Upper Right Third Molar):** Present.
+
+2. **Upper Left Quadrant (Quadrant 2):**
+   - **Tooth #26 (Upper Left First Molar):** Present.
+   - **Tooth #27 (Upper Left Second Molar):** Present.
+   - **Tooth #28 (Upper Left Third Molar):** Present.
+
+3. **Lower Left Quadrant (Quadrant 3):**
+   - **Tooth #36 (Lower Left First Molar):** Present.
+   - **Tooth #37 (Lower Left Second Molar):** Present.
+   - **Tooth #38 (Lower Left Third Molar):** Present.
+
+4. **Lower Right Quadrant (Quadrant 4):**
+   - **Tooth #46 (Lower Right First Molar):** Present.
+   - **Tooth #47 (Lower Right Second Molar):** Present.
+   - **Tooth #48 (Lower Right Third Molar):** Present.
+
+### JSON Representation:
+
+```json
+[
+    {""label"": ""Tooth Present"", ""tooth_id"": ""16"", ""box_2d"": [1800, 300, 1900, 400]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""17"", ""box_2d"": [1700, 300, 1800, 400]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""18"", ""box_2d"": [1600, 300, 1700, 400]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""26"", ""box_2d"": [500, 300, 600, 400]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""27"", ""box_2d"": [400, 300, 500, 400]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""28"", ""box_2d"": [300, 300, 400, 400]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""36"", ""box_2d"": [500, 900, 600, 1000]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""37"", ""box_2d"": [400, 900, 500, 1000]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""38"", ""box_2d"": [300, 900, 400, 1000]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""46"", ""box_2d"": [1800, 900, 1900, 1000]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""47"", ""box_2d"": [1700, 900, 1800, 1000]},
+    {""label"": ""Tooth Present"", ""tooth_id"": ""48"", ""box_2d"": [1600, 900, 1700, 1000]}
+]
+```
+
+This analysis identifies the presence of molars in each quadrant. No additional findings such as caries, restorations, or periapical lesions are noted in this overview.",0
+424,plain,What is the overall structural integrity of tooth #46 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [796, 806]}},
+{""Filling"": {""box_2d"": [776, 704, 872, 757]}}
+]","I'm unable to assess the structural integrity of tooth #46 from the panoramic radiograph. For an accurate evaluation, a dental professional should examine the image, considering factors such as the presence of caries, restorations, root structure, and surrounding bone health.",1
+424,coax,What is the overall structural integrity of tooth #46 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [796, 806]}},
+{""Filling"": {""box_2d"": [776, 704, 872, 757]}}
+]","Tooth #46, which is the lower right first molar, appears to have a restoration, likely a crown, as indicated by the radiopaque material visible on the crown of the tooth. The structural integrity of the tooth seems to be maintained, as there is no obvious evidence of fractures or significant decay beneath the restoration. The periodontal ligament space appears normal, and there is no apparent bone loss around the tooth, suggesting good periodontal health. The roots are intact, and there are no signs of periapical pathology. Overall, the structural integrity of tooth #46 appears to be stable.",0
+424,coax_primer,What is the overall structural integrity of tooth #46 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [796, 806]}},
+{""Filling"": {""box_2d"": [776, 704, 872, 757]}}
+]","To assess the structural integrity of tooth #46 on the panoramic radiograph, let's systematically evaluate the relevant aspects:
+
+1. **Presence and Position**: Tooth #46 is present in its expected position in the lower-right quadrant.
+
+2. **Restorations**: There is a large radiopaque restoration visible, likely a crown, indicating previous dental work.
+
+3. **Caries**: No obvious radiolucencies suggestive of caries are visible on the crown or root surfaces.
+
+4. **Root Canal Treatment**: There is no evidence of root canal filling material, suggesting the tooth has not undergone endodontic treatment.
+
+5. **Periapical Health**: The periapical region of tooth #46 does not show any significant radiolucency, indicating no apparent periapical pathology.
+
+6. **Alveolar Bone Level**: The alveolar bone level appears to be within normal limits, with the bone crest approximately 2 mm below the cemento-enamel junction, suggesting healthy periodontal support.
+
+Overall, tooth #46 appears to have good structural integrity with a restoration in place, no evident caries, and healthy surrounding bone and periapical regions.",0
+424,coax_primer_coords,What is the overall structural integrity of tooth #46 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [796, 806]}},
+{""Filling"": {""box_2d"": [776, 704, 872, 757]}}
+]","To assess the structural integrity of tooth #46 on the panoramic radiograph, we will systematically evaluate the following aspects:
+
+1. **Presence and Position**: Tooth #46 is present and appears to be in its correct anatomical position.
+
+2. **Caries**: There are no obvious radiolucencies indicating caries on the proximal or occlusal surfaces of tooth #46.
+
+3. **Restorations**: There is no evidence of fillings, crowns, or other restorations on tooth #46.
+
+4. **Root Canal Treatment**: There is no indication of root canal treatment in tooth #46.
+
+5. **Periapical Health**: The periapical region of tooth #46 does not show any radiolucency, suggesting no periapical lesions are present.
+
+6. **Alveolar Bone Level**: The alveolar bone level around tooth #46 appears normal, with the bone crest approximately 2 mm below the cemento-enamel junction, indicating healthy bone support.
+
+Overall, tooth #46 shows good structural integrity with no signs of caries, restorations, periapical pathology, or bone loss.
+
+```json
+[
+    {""label"": ""Tooth #46 present"", ""tooth_id"": ""46"", ""box_2d"": [1600, 800, 1700, 900]},
+    {""label"": ""No caries"", ""tooth_id"": ""46"", ""box_2d"": [1600, 800, 1700, 900]},
+    {""label"": ""No restorations"", ""tooth_id"": ""46"", ""box_2d"": [1600, 800, 1700, 900]},
+    {""label"": ""No root canal treatment"", ""tooth_id"": ""46"", ""box_2d"": [1600, 800, 1700, 900]},
+    {""label"": ""Healthy periapical region"", ""tooth_id"": ""46"", ""box_2d"": [1600, 800, 1700, 900]},
+    {""label"": ""Normal alveolar bone level"", ""tooth_id"": ""46"", ""box_2d"": [1600, 800, 1700, 900]}
+]
+```",0
+435,plain,Please provide a full description of the condition of tooth #38.,"[
+{""Teeth position"": {""point_2d"": [1798, 676]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","I'm unable to provide a detailed analysis of dental X-rays. For an accurate assessment of tooth #38, it's best to consult a dental professional who can evaluate the X-ray and provide a diagnosis.",1
+435,coax,Please provide a full description of the condition of tooth #38.,"[
+{""Teeth position"": {""point_2d"": [1798, 676]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #38, which is the lower left third molar (wisdom tooth), appears to be impacted. It is positioned horizontally and is partially erupted, with the crown oriented towards the distal aspect of the second molar. The root development seems complete, and there is no visible sign of periapical pathology or cystic changes around the tooth. The position of the tooth suggests potential impaction against the second molar, which could lead to complications such as resorption of the adjacent tooth or periodontal issues. There is no evidence of caries or significant bone loss around the area.",0
+435,coax_primer,Please provide a full description of the condition of tooth #38.,"[
+{""Teeth position"": {""point_2d"": [1798, 676]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #38, the lower-left third molar, appears to be impacted. It is positioned horizontally and is partially erupted, with the crown oriented towards the distal aspect of the second molar (#37). The root development seems complete, and there is no obvious periapical radiolucency indicating infection at the root apex. The surrounding bone appears intact, with no signs of significant bone loss or pathology. There is no visible caries or restorations on this tooth. The position of the tooth suggests potential for future complications, such as pericoronitis or pressure resorption of the adjacent second molar.",0
+435,coax_primer_coords,Please provide a full description of the condition of tooth #38.,"[
+{""Teeth position"": {""point_2d"": [1798, 676]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #38, the lower-left third molar, appears to be impacted. It is positioned horizontally and is partially erupted, with the crown oriented towards the distal aspect of the second molar (#37). There is no visible caries or restorations on tooth #38. The root development appears complete, and there is no obvious periapical radiolucency indicating pathology at the root apex. The surrounding alveolar bone level appears normal, with no signs of bone loss or periodontal disease.
+
+JSON:
+```json
+[
+    {""label"": ""Impacted tooth"", ""tooth_id"": ""38"", ""box_2d"": [150, 950, 300, 1100]}
+]
+```",0
+446,plain,What is the overall structural integrity of tooth #28 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1814, 464]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","I'm unable to evaluate the structural integrity of tooth #28 from the panoramic radiograph. For an accurate assessment, it's best to consult a dental professional who can analyze the image in detail.",1
+446,coax,What is the overall structural integrity of tooth #28 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1814, 464]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #28, which is the first premolar on the lower right side, appears to have good structural integrity on the panoramic radiograph. The tooth shows no signs of fractures or significant decay. The periodontal ligament space around the tooth is uniform, and there is no evidence of bone loss or periodontal disease. The root structure appears intact, and there are no visible periapical radiolucencies that would suggest infection or abscess. Overall, tooth #28 seems to be in good condition.",0
+446,coax_primer,What is the overall structural integrity of tooth #28 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1814, 464]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #28 is the upper-left third molar. Upon examining the panoramic radiograph:
+
+1. **Presence and Position**: Tooth #28 is present and appears to be in a normal position without any signs of impaction.
+
+2. **Crown and Root Structure**: The crown of tooth #28 appears intact without any visible caries or fractures. The root structure is also intact, with no obvious signs of resorption or abnormality.
+
+3. **Periapical Health**: There are no visible periapical radiolucencies around the root apex of tooth #28, suggesting no apparent periapical pathology.
+
+4. **Alveolar Bone Level**: The alveolar bone level around tooth #28 appears to be within normal limits, with no significant bone loss evident.
+
+Overall, tooth #28 shows good structural integrity with no apparent pathologies or abnormalities on this panoramic radiograph.",0
+446,coax_primer_coords,What is the overall structural integrity of tooth #28 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1814, 464]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #28 is the upper-left third molar. Upon examining the panoramic radiograph:
+
+1. **Presence and Position**: Tooth #28 is present and appears to be in a normal position without any signs of impaction.
+
+2. **Structural Integrity**: The crown and root structure of tooth #28 appear intact. There are no visible caries or fractures.
+
+3. **Periapical Health**: There is no evident periapical radiolucency around the root apex of tooth #28, suggesting no signs of apical periodontitis or other periapical pathology.
+
+4. **Alveolar Bone Level**: The alveolar bone level around tooth #28 appears to be within normal limits, with no significant bone loss observed.
+
+5. **Restorations**: There are no restorations or fillings visible on tooth #28.
+
+Overall, tooth #28 shows good structural integrity with no apparent pathologies.
+
+```json
+[
+    {""label"": ""Tooth #28 present and intact"", ""tooth_id"": ""28"", ""box_2d"": [1800, 300, 1900, 400]},
+    {""label"": ""No periapical radiolucency"", ""tooth_id"": ""28"", ""box_2d"": [1800, 400, 1900, 500]},
+    {""label"": ""Normal alveolar bone level"", ""tooth_id"": ""28"", ""box_2d"": [1800, 500, 1900, 600]}
+]
+```",0
+452,plain,Identify areas showing the dental caries in the panoramic radiograph.,"[
+{""box_2d"": [676, 616, 753, 712], ""tooth_id"": ""47"", ""label"": ""Caries""}
+]","I'm unable to analyze images directly. However, I can guide you on how to identify dental caries in a panoramic radiograph.
+
+### Identifying Dental Caries:
+
+1. **Radiolucent Areas**: Look for dark spots or areas on the teeth. Caries appear as radiolucent (darker) areas because the decay causes a loss of mineral density.
+
+2. **Common Locations**:
+   - **Occlusal Surfaces**: Check the biting surfaces of the molars and premolars.
+   - **Interproximal Areas**: Examine between the teeth, especially the molars and premolars.
+   - **Cervical Regions**: Look near the gum line where the enamel is thinner.
+
+3. **Shape and Borders**:
+   - Caries often have an irregular shape.
+   - The borders may be diffuse or well-defined depending on the stage of the decay.
+
+4. **Comparison**:
+   - Compare with adjacent teeth for symmetry and uniformity.
+   - Healthy enamel appears more radiopaque (lighter) than decayed areas.
+
+5. **Advanced Caries**:
+   - In severe cases, caries may extend into the dentin or pulp, appearing as larger radiolucent areas.
+
+For a precise diagnosis, it's best to consult a dental professional who can interpret the radiograph accurately.",1
+452,coax,Identify areas showing the dental caries in the panoramic radiograph.,"[
+{""box_2d"": [676, 616, 753, 712], ""tooth_id"": ""47"", ""label"": ""Caries""}
+]","In the provided panoramic radiograph, dental caries typically appear as radiolucent (darker) areas on the teeth. Here are the observations:
+
+1. **Upper Right Quadrant**: 
+   - There is a radiolucent area on the distal surface of the second molar, indicating possible caries.
+
+2. **Upper Left Quadrant**:
+   - The first molar shows a radiolucent area on the occlusal surface, suggesting caries.
+
+3. **Lower Right Quadrant**:
+   - The second premolar has a radiolucent area on the mesial surface, indicating caries.
+
+4. **Lower Left Quadrant**:
+   - The first molar shows a radiolucent area on the distal surface, suggesting caries.
+
+These areas should be clinically correlated with a dental examination for confirmation and appropriate treatment planning.",0
+452,coax_primer,Identify areas showing the dental caries in the panoramic radiograph.,"[
+{""box_2d"": [676, 616, 753, 712], ""tooth_id"": ""47"", ""label"": ""Caries""}
+]","To identify areas showing dental caries on the panoramic radiograph, follow these steps:
+
+1. **Upper Right Quadrant (Teeth #11 to #18):**
+   - Check for radiolucencies on the proximal and occlusal surfaces of the molars and premolars.
+   - Look for any dark areas indicating caries, especially between teeth where they contact each other.
+
+2. **Upper Left Quadrant (Teeth #21 to #28):**
+   - Examine the molars and premolars for similar radiolucencies.
+   - Pay attention to the occlusal surfaces and interproximal areas.
+
+3. **Lower Left Quadrant (Teeth #31 to #38):**
+   - Inspect the molars and premolars for any signs of caries.
+   - Focus on the occlusal and proximal surfaces for dark areas.
+
+4. **Lower Right Quadrant (Teeth #41 to #48):**
+   - Look for radiolucencies on the molars and premolars.
+   - Check the occlusal and interproximal surfaces for any signs of decay.
+
+**Findings:**
+- **Upper Right Quadrant:** Possible caries on the distal surface of the second molar (#17).
+- **Upper Left Quadrant:** Potential caries on the occlusal surface of the first molar (#26).
+- **Lower Left Quadrant:** Radiolucency suggesting caries on the occlusal surface of the first molar (#36).
+- **Lower Right Quadrant:** Possible caries on the distal surface of the second molar (#47).
+
+These observations are based on visible radiolucencies that penetrate the dentin. Further clinical examination and possibly additional imaging may be necessary to confirm these findings.",0
+452,coax_primer_coords,Identify areas showing the dental caries in the panoramic radiograph.,"[
+{""box_2d"": [676, 616, 753, 712], ""tooth_id"": ""47"", ""label"": ""Caries""}
+]","To identify dental caries on the panoramic radiograph, I systematically examined each tooth for radiolucencies that penetrate the dentin, typically on the proximal or occlusal surfaces. Here are the findings:
+
+1. **Tooth #16**: There is a radiolucency on the occlusal surface indicating caries.
+2. **Tooth #26**: A radiolucency is visible on the distal surface, suggesting caries.
+3. **Tooth #36**: Caries is evident on the mesial surface with a radiolucent area.
+4. **Tooth #46**: There is a radiolucency on the occlusal surface indicating caries.
+
+Here is the JSON representation of these findings:
+
+```json
+[
+    {""label"": ""Caries"", ""tooth_id"": ""16"", ""box_2d"": [1800, 400, 1850, 450]},
+    {""label"": ""Caries"", ""tooth_id"": ""26"", ""box_2d"": [1300, 400, 1350, 450]},
+    {""label"": ""Caries"", ""tooth_id"": ""36"", ""box_2d"": [700, 800, 750, 850]},
+    {""label"": ""Caries"", ""tooth_id"": ""46"", ""box_2d"": [1600, 800, 1650, 850]}
+]
+```
+
+These areas should be further evaluated clinically to confirm the presence and extent of caries.",0
+463,plain,Which teeth exhibit signs of pathology on the panoramic radiograph? Summarize the key findings.,"[
+{""box_2d"": [691, 628, 717, 684], ""tooth_id"": ""47"", ""label"": ""Caries""},
+{""box_2d"": [626, 599, 692, 683], ""tooth_id"": ""48"", ""label"": ""Caries""}
+]{""box_2d"": [496, 548, 693, 696], ""tooth_id"": ""48"", ""is_impacted"": ""true""}
+]","The panoramic radiograph shows several key findings indicating dental pathology:
+
+1. **Impacted Third Molars**: 
+   - The lower left and right third molars (wisdom teeth) appear impacted. They are positioned horizontally and are not erupting properly, which can lead to potential issues such as infection or damage to adjacent teeth.
+
+2. **Periapical Radiolucency**:
+   - There is a radiolucent area around the apex of the lower right second molar, suggesting possible periapical pathology, such as an abscess or cyst.
+
+3. **Caries**:
+   - There are signs of dental caries on the lower left second molar, visible as radiolucent areas on the crown of the tooth.
+
+4. **Bone Loss**:
+   - There is evidence of bone loss around the lower anterior teeth, which may indicate periodontal disease.
+
+These findings suggest the need for further clinical evaluation and possible intervention to address the impacted teeth, potential infections, and periodontal health.",0
+463,coax,Which teeth exhibit signs of pathology on the panoramic radiograph? Summarize the key findings.,"[
+{""box_2d"": [691, 628, 717, 684], ""tooth_id"": ""47"", ""label"": ""Caries""},
+{""box_2d"": [626, 599, 692, 683], ""tooth_id"": ""48"", ""label"": ""Caries""}
+]{""box_2d"": [496, 548, 693, 696], ""tooth_id"": ""48"", ""is_impacted"": ""true""}
+]","The panoramic radiograph shows the following key findings:
+
+1. **Impacted Third Molars**: The lower left third molar (tooth #17) appears to be impacted, positioned horizontally, and partially erupted. This can lead to potential issues such as pericoronitis or resorption of the adjacent second molar.
+
+2. **Periapical Radiolucency**: There is a radiolucent area around the apex of the lower right third molar (tooth #32), suggesting possible periapical pathology, such as an abscess or cyst.
+
+3. **Crowding**: There is noticeable crowding in the anterior mandibular region, which may contribute to periodontal issues or complicate oral hygiene.
+
+4. **Bone Loss**: Mild horizontal bone loss is observed, particularly around the lower anterior teeth, indicating early periodontal disease.
+
+These findings suggest the need for further clinical evaluation and possibly intervention to address the impacted tooth, potential infection, and periodontal health.",0
+463,coax_primer,Which teeth exhibit signs of pathology on the panoramic radiograph? Summarize the key findings.,"[
+{""box_2d"": [691, 628, 717, 684], ""tooth_id"": ""47"", ""label"": ""Caries""},
+{""box_2d"": [626, 599, 692, 683], ""tooth_id"": ""48"", ""label"": ""Caries""}
+]{""box_2d"": [496, 548, 693, 696], ""tooth_id"": ""48"", ""is_impacted"": ""true""}
+]","Based on the panoramic radiograph provided, here is a systematic analysis:
+
+1. **Teeth Present and Missing:**
+   - All permanent teeth appear to be present except for the third molars (wisdom teeth), which are often congenitally absent or extracted.
+
+2. **Supernumerary or Impacted Teeth:**
+   - The lower left third molar (#38) appears impacted, positioned horizontally and partially erupted.
+
+3. **Dental Implants:**
+   - No dental implants are visible.
+
+4. **Caries:**
+   - There are no obvious radiolucencies indicating caries reaching the dentin on the visible surfaces of the teeth.
+
+5. **Fillings and Restorations:**
+   - Several teeth have restorations, particularly in the posterior regions. These appear as radiopaque areas, indicating fillings or crowns.
+
+6. **Root Canal Fillings:**
+   - No root canal fillings are visible.
+
+7. **Apical (Periapical) Health:**
+   - There is a radiolucency around the apex of the lower left third molar (#38), suggesting a possible periapical lesion, likely due to its impacted status.
+
+8. **Alveolar Bone Level:**
+   - The alveolar bone levels appear generally within normal limits, with the bone crest approximately 2 mm below the cemento-enamel junction in most areas.
+
+**Key Findings:**
+- The lower left third molar (#38) is impacted and shows signs of a periapical radiolucency, indicating potential pathology.
+- Restorations are present on several teeth, but no active caries or other significant pathologies are evident in the remaining dentition.
+
+Further clinical correlation and possibly additional imaging might be necessary to assess the impacted third molar and any associated pathology.",0
+463,coax_primer_coords,Which teeth exhibit signs of pathology on the panoramic radiograph? Summarize the key findings.,"[
+{""box_2d"": [691, 628, 717, 684], ""tooth_id"": ""47"", ""label"": ""Caries""},
+{""box_2d"": [626, 599, 692, 683], ""tooth_id"": ""48"", ""label"": ""Caries""}
+]{""box_2d"": [496, 548, 693, 696], ""tooth_id"": ""48"", ""is_impacted"": ""true""}
+]","Based on the panoramic radiograph, here are the key findings:
+
+1. **Impacted Teeth**: 
+   - Tooth #38 (lower-left third molar) is impacted, positioned horizontally.
+   - Tooth #48 (lower-right third molar) is impacted, positioned horizontally.
+
+2. **Periapical Radiolucency**:
+   - Tooth #36 (lower-left first molar) shows a periapical radiolucency, indicating possible apical periodontitis.
+
+3. **Caries**:
+   - Tooth #26 (upper-left first molar) shows radiolucency suggestive of caries on the occlusal surface.
+
+4. **Missing Teeth**:
+   - Tooth #18 (upper-right third molar) is missing.
+   - Tooth #28 (upper-left third molar) is missing.
+
+5. **Alveolar Bone Loss**:
+   - Generalized mild to moderate alveolar bone loss is observed, particularly around the lower anterior teeth.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Impacted tooth"", ""tooth_id"": ""38"", ""box_2d"": [200, 800, 300, 900]},
+    {""label"": ""Impacted tooth"", ""tooth_id"": ""48"", ""box_2d"": [1800, 800, 1900, 900]},
+    {""label"": ""Periapical radiolucency"", ""tooth_id"": ""36"", ""box_2d"": [400, 700, 500, 800]},
+    {""label"": ""Caries"", ""tooth_id"": ""26"", ""box_2d"": [600, 300, 700, 400]},
+    {""label"": ""Missing tooth"", ""tooth_id"": ""18"", ""box_2d"": [50, 200, 150, 300]},
+    {""label"": ""Missing tooth"", ""tooth_id"": ""28"", ""box_2d"": [1300, 200, 1400, 300]},
+    {""label"": ""Alveolar bone loss"", ""tooth_id"": """", ""box_2d"": [900, 600, 1000, 700]}
+]
+```
+
+These findings should be correlated with clinical examination and history for a comprehensive diagnosis and treatment plan.",0
+480,plain,Please detect the dental caries in the panoramic image.,"[
+{""box_2d"": [1643, 664, 1667, 710], ""tooth_id"": ""36"", ""label"": ""Caries""}
+]","I'm unable to analyze images directly. However, I can guide you on how to detect dental caries in a panoramic image:
+
+1. **Look for Dark Areas**: Caries often appear as dark spots or shadows on the teeth, indicating demineralization.
+
+2. **Check the Enamel**: Examine the outer layer of the teeth for any breaks or irregularities.
+
+3. **Interproximal Areas**: Pay attention to the spaces between teeth, as caries often develop there.
+
+4. **Margins of Restorations**: Inspect around fillings or crowns for any signs of decay.
+
+5. **Root Surfaces**: In older patients, root caries can occur, so check the roots for any dark areas.
+
+For a precise diagnosis, it's best to consult a dental professional who can interpret the image accurately.",1
+480,coax,Please detect the dental caries in the panoramic image.,"[
+{""box_2d"": [1643, 664, 1667, 710], ""tooth_id"": ""36"", ""label"": ""Caries""}
+]","In the provided panoramic X-ray image, dental caries can be identified as radiolucent (darker) areas on the teeth, indicating demineralization. Here are the observations:
+
+1. **Upper Right Quadrant**: 
+   - There appears to be a radiolucent area on the distal surface of the first molar, suggesting possible caries.
+
+2. **Upper Left Quadrant**:
+   - The second molar shows a radiolucent area on the occlusal surface, indicating potential caries.
+
+3. **Lower Right Quadrant**:
+   - The first molar has a radiolucent area on the mesial surface, which may indicate caries.
+
+4. **Lower Left Quadrant**:
+   - The second premolar shows a radiolucent area on the distal surface, suggesting caries.
+
+These observations should be confirmed with a clinical examination and possibly additional imaging for accurate diagnosis and treatment planning.",0
+480,coax_primer,Please detect the dental caries in the panoramic image.,"[
+{""box_2d"": [1643, 664, 1667, 710], ""tooth_id"": ""36"", ""label"": ""Caries""}
+]","To systematically evaluate the panoramic radiograph for dental caries, follow these steps:
+
+1. **Identify Present and Missing Teeth:**
+   - All permanent teeth appear to be present, with no obvious missing teeth.
+
+2. **Check for Dental Caries:**
+   - Look for radiolucencies on the proximal or occlusal surfaces of the teeth, indicating caries.
+
+3. **Upper Arch:**
+   - **Quadrant 1 (Upper Right):** 
+     - Tooth #16: No visible caries.
+     - Tooth #15: No visible caries.
+     - Tooth #14: No visible caries.
+     - Tooth #13: No visible caries.
+     - Tooth #12: No visible caries.
+     - Tooth #11: No visible caries.
+   - **Quadrant 2 (Upper Left):**
+     - Tooth #21: No visible caries.
+     - Tooth #22: No visible caries.
+     - Tooth #23: No visible caries.
+     - Tooth #24: No visible caries.
+     - Tooth #25: No visible caries.
+     - Tooth #26: No visible caries.
+
+4. **Lower Arch:**
+   - **Quadrant 3 (Lower Left):**
+     - Tooth #36: No visible caries.
+     - Tooth #35: No visible caries.
+     - Tooth #34: No visible caries.
+     - Tooth #33: No visible caries.
+     - Tooth #32: No visible caries.
+     - Tooth #31: No visible caries.
+   - **Quadrant 4 (Lower Right):**
+     - Tooth #41: No visible caries.
+     - Tooth #42: No visible caries.
+     - Tooth #43: No visible caries.
+     - Tooth #44: No visible caries.
+     - Tooth #45: No visible caries.
+     - Tooth #46: No visible caries.
+
+5. **Conclusion:**
+   - No obvious dental caries are detected in this panoramic radiograph. All teeth appear intact without radiolucencies indicative of caries.
+
+Note: Panoramic radiographs have limitations in detecting early carious lesions, especially interproximal caries, due to overlapping structures and lower resolution compared to bitewing radiographs. Regular clinical examination and additional imaging may be necessary for comprehensive caries detection.",0
+480,coax_primer_coords,Please detect the dental caries in the panoramic image.,"[
+{""box_2d"": [1643, 664, 1667, 710], ""tooth_id"": ""36"", ""label"": ""Caries""}
+]","Upon examining the panoramic dental radiograph, I have identified the following dental caries:
+
+1. **Tooth #27**: There is a radiolucency on the distal surface indicating caries.
+2. **Tooth #36**: There is a radiolucency on the occlusal surface indicating caries.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Caries"", ""tooth_id"": ""27"", ""box_2d"": [1100, 500, 1150, 550]},
+    {""label"": ""Caries"", ""tooth_id"": ""36"", ""box_2d"": [600, 900, 650, 950]}
+]
+```",0
+501,plain,Which areas show the periapical lesions in the panoramic image?,"[
+{""box_2d"": [1843, 818, 1905, 884], ""tooth_id"": ""37"", ""label"": ""Periapical lesions (Abscess)""}
+]","In the panoramic image, periapical lesions typically appear as radiolucent (darker) areas around the apex (tip) of a tooth root. These lesions indicate potential issues such as infection or inflammation in the periapical region.
+
+In this image, look for:
+
+1. **Radiolucent Areas**: Check for any dark spots around the root tips of the teeth, particularly in the molar and premolar regions, as these are common sites for periapical lesions.
+
+2. **Symmetry**: Compare both sides of the jaw. Asymmetrical dark areas around the root tips may indicate a lesion.
+
+3. **Root Apex**: Focus on the areas directly at the root apex. Any disruption in the continuity of the bone or a visible dark halo around the apex could suggest a lesion.
+
+If you suspect any abnormalities, it is advisable to consult a dental professional for a thorough evaluation and diagnosis.",0
+501,coax,Which areas show the periapical lesions in the panoramic image?,"[
+{""box_2d"": [1843, 818, 1905, 884], ""tooth_id"": ""37"", ""label"": ""Periapical lesions (Abscess)""}
+]","In the provided panoramic X-ray, periapical lesions are typically identified as radiolucent (darker) areas around the apex of a tooth root, indicating potential infection or inflammation.
+
+Upon examining the image:
+
+1. **Upper Right Quadrant**: There is a noticeable radiolucency around the apices of the first molar, suggesting a periapical lesion.
+
+2. **Lower Left Quadrant**: The second premolar shows a radiolucent area at the apex, indicating a possible periapical lesion.
+
+These findings suggest areas of potential periapical pathology that may require further clinical evaluation or intervention.",0
+501,coax_primer,Which areas show the periapical lesions in the panoramic image?,"[
+{""box_2d"": [1843, 818, 1905, 884], ""tooth_id"": ""37"", ""label"": ""Periapical lesions (Abscess)""}
+]","In the provided panoramic dental radiograph, periapical lesions are identified as radiolucent (dark) areas near the apex of the tooth roots. Here is a systematic analysis of the image:
+
+1. **Upper Right Quadrant (Teeth #11 to #18):**
+   - No significant periapical radiolucencies are observed.
+
+2. **Upper Left Quadrant (Teeth #21 to #28):**
+   - No significant periapical radiolucencies are observed.
+
+3. **Lower Left Quadrant (Teeth #31 to #38):**
+   - Tooth #36 shows a periapical radiolucency, indicating a possible periapical lesion.
+
+4. **Lower Right Quadrant (Teeth #41 to #48):**
+   - Tooth #46 shows a periapical radiolucency, indicating a possible periapical lesion.
+
+Overall, periapical lesions are noted at the apices of teeth #36 and #46. These findings suggest possible apical periodontitis or other odontogenic conditions. Further clinical correlation and possibly additional imaging may be necessary for a definitive diagnosis.",0
+501,coax_primer_coords,Which areas show the periapical lesions in the panoramic image?,"[
+{""box_2d"": [1843, 818, 1905, 884], ""tooth_id"": ""37"", ""label"": ""Periapical lesions (Abscess)""}
+]","Upon examining the panoramic dental radiograph, I have identified the following periapical lesions:
+
+1. **Tooth #36**: There is a radiolucency at the apex of the mesial root, suggesting a periapical lesion.
+
+2. **Tooth #46**: A radiolucency is present at the apex of the distal root, indicating a possible periapical lesion.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Periapical lesion"", ""tooth_id"": ""36"", ""box_2d"": [850, 900, 900, 950]},
+    {""label"": ""Periapical lesion"", ""tooth_id"": ""46"", ""box_2d"": [1600, 900, 1650, 950]}
+]
+```",0
+541,plain,Which mandibular canal is/are visible in the panoramic dental image?,"[
+{""box_2d"": [1516, 611, 2146, 1093], ""label"": ""Mandibular canal""},
+{""box_2d"": [358, 658, 991, 1108], ""label"": ""Mandibular canal""}
+]","In the panoramic dental image, both mandibular canals are visible. They appear as radiolucent (darker) lines running horizontally within the mandible, typically below the roots of the teeth. These canals house the inferior alveolar nerve and blood vessels. 
+
+In this image, the mandibular canals can be seen on both the left and right sides of the mandible, extending from the mandibular foramen near the ramus to the mental foramen near the premolars. The canals are usually more distinct in the posterior region and may become less visible as they approach the anterior region.",0
+541,coax,Which mandibular canal is/are visible in the panoramic dental image?,"[
+{""box_2d"": [1516, 611, 2146, 1093], ""label"": ""Mandibular canal""},
+{""box_2d"": [358, 658, 991, 1108], ""label"": ""Mandibular canal""}
+]","In the panoramic dental image, both the right and left mandibular canals are visible. They appear as radiolucent (darker) lines running horizontally within the mandible, typically below the roots of the teeth. The canals are more prominent in the posterior regions and can be traced from the mandibular foramen near the ramus to the mental foramen near the premolars.",0
+541,coax_primer,Which mandibular canal is/are visible in the panoramic dental image?,"[
+{""box_2d"": [1516, 611, 2146, 1093], ""label"": ""Mandibular canal""},
+{""box_2d"": [358, 658, 991, 1108], ""label"": ""Mandibular canal""}
+]","In the panoramic dental image provided, the mandibular canals are visible bilaterally. They appear as radiolucent (dark) lines running horizontally within the mandible, typically below the apices of the lower teeth. The canals are more clearly seen in the posterior regions of the mandible, extending from the area near the mandibular foramen towards the mental foramen. The visibility of the canals can vary depending on the patient's anatomy and the quality of the radiograph.",0
+541,coax_primer_coords,Which mandibular canal is/are visible in the panoramic dental image?,"[
+{""box_2d"": [1516, 611, 2146, 1093], ""label"": ""Mandibular canal""},
+{""box_2d"": [358, 658, 991, 1108], ""label"": ""Mandibular canal""}
+]","The mandibular canals are visible in the panoramic dental image. They appear as radiolucent (dark) lines running bilaterally within the mandible, typically below the apices of the mandibular teeth. These canals carry the inferior alveolar nerve and vessels.
+
+In this image, both the right and left mandibular canals are visible. They can be seen extending from the mandibular foramen near the ramus of the mandible, running anteriorly towards the mental foramen near the premolars.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Right mandibular canal"", ""tooth_id"": """", ""box_2d"": [1600, 800, 1800, 1000]},
+    {""label"": ""Left mandibular canal"", ""tooth_id"": """", ""box_2d"": [700, 800, 900, 1000]}
+]
+```",0
+547,plain,What are the characteristic features of the filling visible in multiple teeth on the panoramic radiograph?,"[
+{""tooth_id"": ""16"", ""box_2d"": [845, 511, 916, 583]},
+{""tooth_id"": ""46"", ""box_2d"": [825, 620, 884, 648]},
+{""tooth_id"": ""37"", ""box_2d"": [1665, 578, 1745, 628]},
+{""tooth_id"": ""27"", ""box_2d"": [1684, 511, 1720, 546]}
+]","The panoramic radiograph shows several teeth with dental fillings. The characteristic features of these fillings include:
+
+1. **Radiopacity**: The fillings appear more radiopaque (whiter) than the surrounding tooth structure. This is typical of materials like amalgam or certain composite resins, which are denser and block more X-rays.
+
+2. **Shape and Contour**: The fillings conform to the shape of the cavities they fill. They may have smooth or irregular margins depending on the restoration technique and material used.
+
+3. **Location**: The fillings are located in the crowns of the teeth, which is common for restorative work addressing decay or damage.
+
+4. **Material Type**:
+   - **Amalgam Fillings**: These are highly radiopaque and have a metallic appearance. They are often used in posterior teeth due to their durability.
+   - **Composite Fillings**: These may appear less radiopaque than amalgam and can be more difficult to distinguish from the natural tooth structure on radiographs.
+
+5. **Size**: The size of the fillings varies, indicating different extents of decay or damage that were repaired.
+
+These features help in identifying and assessing the condition of dental restorations on radiographs.",0
+547,coax,What are the characteristic features of the filling visible in multiple teeth on the panoramic radiograph?,"[
+{""tooth_id"": ""16"", ""box_2d"": [845, 511, 916, 583]},
+{""tooth_id"": ""46"", ""box_2d"": [825, 620, 884, 648]},
+{""tooth_id"": ""37"", ""box_2d"": [1665, 578, 1745, 628]},
+{""tooth_id"": ""27"", ""box_2d"": [1684, 511, 1720, 546]}
+]","The panoramic radiograph shows multiple teeth with dental fillings. The characteristic features of these fillings are:
+
+1. **Radiopacity**: The fillings appear more radiopaque (whiter) than the surrounding tooth structure, indicating the presence of a dense material, likely amalgam or composite resin.
+
+2. **Shape and Contour**: The fillings conform to the contours of the teeth, filling cavities or defects. They are well-defined and fit the occlusal surfaces and interproximal areas.
+
+3. **Location**: The fillings are located in the posterior teeth, which is common for restorative materials used to repair molars and premolars.
+
+4. **Material Type**: The high radiopacity suggests that the fillings are likely amalgam, which is a common material used for its durability and strength in posterior restorations.
+
+These features are typical of restorative dental work aimed at repairing carious lesions or structural damage in teeth.",0
+547,coax_primer,What are the characteristic features of the filling visible in multiple teeth on the panoramic radiograph?,"[
+{""tooth_id"": ""16"", ""box_2d"": [845, 511, 916, 583]},
+{""tooth_id"": ""46"", ""box_2d"": [825, 620, 884, 648]},
+{""tooth_id"": ""37"", ""box_2d"": [1665, 578, 1745, 628]},
+{""tooth_id"": ""27"", ""box_2d"": [1684, 511, 1720, 546]}
+]","The panoramic radiograph shows multiple teeth with dental restorations. Here are the characteristic features of the fillings visible:
+
+1. **Radiopacity**: The fillings appear as radiopaque (white) areas on the radiograph, indicating the presence of materials such as amalgam or composite resin.
+
+2. **Location and Extent**:
+   - **Upper Right Quadrant**: There is a large restoration on the first molar (#16), likely a crown, given its extensive coverage.
+   - **Lower Right Quadrant**: The first molar (#46) also has a large restoration, possibly a crown, due to its full coverage.
+   - **Upper Left Quadrant**: The second molar (#27) shows a smaller restoration, likely a filling, on the occlusal surface.
+
+3. **Shape and Margins**: 
+   - The restorations have well-defined margins, typical of dental fillings or crowns.
+   - The larger restorations on the molars suggest crowns, as they cover the entire occlusal surface and extend to the sides.
+
+4. **Material**:
+   - The radiopacity suggests the use of materials like amalgam or metal-based crowns, which are common for molar restorations due to their durability.
+
+These features indicate a history of dental treatment involving restorations, likely due to caries or structural damage to the teeth.",0
+547,coax_primer_coords,What are the characteristic features of the filling visible in multiple teeth on the panoramic radiograph?,"[
+{""tooth_id"": ""16"", ""box_2d"": [845, 511, 916, 583]},
+{""tooth_id"": ""46"", ""box_2d"": [825, 620, 884, 648]},
+{""tooth_id"": ""37"", ""box_2d"": [1665, 578, 1745, 628]},
+{""tooth_id"": ""27"", ""box_2d"": [1684, 511, 1720, 546]}
+]","The panoramic radiograph shows multiple teeth with dental restorations. The characteristic features of the fillings visible in the image are as follows:
+
+1. **Tooth #26**: 
+   - The filling appears as a radiopaque material, indicating a metallic restoration, likely an amalgam filling. It is located on the occlusal surface and extends to the proximal surfaces.
+   - Location: Upper left quadrant.
+
+2. **Tooth #36**: 
+   - This tooth has a large radiopaque restoration, likely a crown, covering the entire occlusal surface and extending to the proximal surfaces. The material appears dense, suggesting a metal or metal-ceramic crown.
+   - Location: Lower left quadrant.
+
+3. **Tooth #46**: 
+   - Similar to tooth #36, this tooth has a large radiopaque restoration, likely a crown, covering the occlusal and proximal surfaces. The density suggests a metal or metal-ceramic crown.
+   - Location: Lower right quadrant.
+
+Here is the JSON representation of the findings:
+
+```json
+[
+    {""label"": ""Amalgam filling"", ""tooth_id"": ""26"", ""box_2d"": [650, 400, 700, 450]},
+    {""label"": ""Crown"", ""tooth_id"": ""36"", ""box_2d"": [1100, 800, 1150, 850]},
+    {""label"": ""Crown"", ""tooth_id"": ""46"", ""box_2d"": [1600, 800, 1650, 850]}
+]
+```",0
+553,plain,What radiographic features are visible in tooth #48 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [596, 616]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""},
+{""Crown"": {""box_2d"": [592, 554, 682, 665]}}
+]","Tooth #48, also known as the lower right third molar or wisdom tooth, is visible on the panoramic X-ray. Here are the radiographic features:
+
+1. **Position**: Tooth #48 appears to be impacted, as it is not fully erupted into the oral cavity. It is positioned at an angle relative to the adjacent second molar.
+
+2. **Angulation**: The tooth is mesioangularly impacted, meaning it is tilted towards the front of the mouth.
+
+3. **Root Development**: The roots of tooth #48 appear to be fully developed.
+
+4. **Bone Surrounding the Tooth**: There is no obvious sign of bone loss or pathology surrounding the tooth, although the angulation may suggest potential for future issues.
+
+5. **Adjacent Structures**: The tooth is in close proximity to the mandibular canal, which carries the inferior alveolar nerve. This is important for surgical considerations.
+
+6. **Crown**: The crown of the tooth is partially visible, with the occlusal surface facing the distal aspect of the second molar.
+
+These features suggest that tooth #48 is impacted and may require evaluation for potential extraction, especially if it poses a risk to adjacent teeth or structures.",0
+553,coax,What radiographic features are visible in tooth #48 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [596, 616]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""},
+{""Crown"": {""box_2d"": [592, 554, 682, 665]}}
+]","Tooth #48, which is the lower right third molar, shows the following radiographic features on the panoramic X-ray:
+
+1. **Impaction**: The tooth appears to be impacted, as it is not fully erupted into the oral cavity. It is positioned at an angle relative to the adjacent second molar.
+
+2. **Angulation**: The tooth is mesioangularly impacted, meaning it is tilted towards the front of the mouth.
+
+3. **Root Development**: The roots of tooth #48 appear to be fully developed.
+
+4. **Bone Coverage**: There is partial bone coverage over the crown of the tooth, indicating it is partially impacted in the bone.
+
+5. **Proximity to Nerve**: The roots of tooth #48 are in close proximity to the inferior alveolar nerve canal, which is a consideration for surgical extraction.
+
+These features suggest that tooth #48 is impacted and may require surgical intervention if symptomatic or causing issues with adjacent teeth.",0
+553,coax_primer,What radiographic features are visible in tooth #48 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [596, 616]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""},
+{""Crown"": {""box_2d"": [592, 554, 682, 665]}}
+]","Tooth #48, which is the lower-right third molar, appears to be impacted. It is positioned horizontally and is partially erupted, with the crown oriented towards the distal aspect of the second molar (#47). The root development seems complete, and there is no obvious periapical radiolucency indicating infection or pathology at the root apex. The surrounding bone appears intact, and there is no visible caries or restorations on this tooth. The position of the tooth suggests potential impaction against the second molar, which could lead to complications such as crowding or resorption of the adjacent tooth.",0
+553,coax_primer_coords,What radiographic features are visible in tooth #48 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [596, 616]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""},
+{""Crown"": {""box_2d"": [592, 554, 682, 665]}}
+]","Tooth #48 is the lower-right third molar. Here are the radiographic features visible for tooth #48:
+
+1. **Impaction**: Tooth #48 appears to be impacted, positioned horizontally and partially erupted.
+2. **Periapical Radiolucency**: There is a radiolucent area near the apex of tooth #48, suggesting a possible periapical lesion.
+3. **Bone Level**: The alveolar bone level around tooth #48 appears to be reduced, indicating possible bone loss.
+
+JSON representation of findings:
+
+```json
+[
+    {""label"": ""Impacted tooth"", ""tooth_id"": ""48"", ""box_2d"": [1800, 900, 1900, 1000]},
+    {""label"": ""Periapical radiolucency"", ""tooth_id"": ""48"", ""box_2d"": [1850, 950, 1950, 1050]},
+    {""label"": ""Reduced bone level"", ""tooth_id"": ""48"", ""box_2d"": [1800, 900, 1900, 1000]}
+]
+```",0
+576,plain,Does tooth #48 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [666, 686]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","I'm unable to interpret specific details from radiographic images. For an accurate assessment of tooth #48, it's best to consult a dental professional who can evaluate the radiograph for any signs of pathology or structural compromise.",1
+576,coax,Does tooth #48 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [666, 686]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #48, also known as the lower right third molar, appears to be impacted in the panoramic radiograph. It is positioned horizontally and is partially erupted, with the crown directed towards the distal aspect of the second molar. This impaction can potentially lead to several issues:
+
+1. **Pericoronitis**: Due to partial eruption, there is a risk of inflammation or infection of the gum tissue surrounding the crown.
+
+2. **Caries**: The position may make it difficult to clean, increasing the risk of decay on the third molar or the adjacent second molar.
+
+3. **Resorption**: There is a potential risk of resorption of the distal root of the second molar due to the pressure exerted by the impacted tooth.
+
+4. **Periodontal Issues**: The impaction can lead to periodontal problems due to difficulty in maintaining hygiene.
+
+5. **Cyst Formation**: Impacted teeth can sometimes be associated with cysts, although there is no clear evidence of cystic formation in this image.
+
+Overall, the tooth exhibits signs of impaction, which could lead to various complications if not monitored or treated appropriately.",0
+576,coax_primer,Does tooth #48 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [666, 686]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #48, the lower-right third molar, appears to be impacted. It is positioned horizontally and is partially erupted, with the crown oriented towards the distal aspect of the second molar (#47). This positioning can potentially lead to complications such as pericoronitis, caries on the distal surface of the second molar, or resorption of the adjacent tooth.
+
+There is no obvious periapical radiolucency indicating apical pathology, but the visibility is limited due to the tooth's position and potential superimposition. The surrounding bone appears intact, but the horizontal impaction suggests a risk for future issues.
+
+Overall, while there is no immediate sign of pathology, the impaction itself is a structural compromise that may require monitoring or intervention.",0
+576,coax_primer_coords,Does tooth #48 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [666, 686]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""}
+]","Tooth #48, the lower-right third molar, appears to be impacted. It is positioned horizontally and is partially erupted, with the crown directed towards the distal aspect of the second molar (#47). There is no clear evidence of periapical radiolucency or other signs of pathology such as caries or resorption around the root area of tooth #48. However, the impaction itself can potentially lead to complications such as pericoronitis or damage to adjacent teeth.
+
+Here is the JSON representation of the finding:
+
+```json
+[{""label"": ""Impacted tooth"", ""tooth_id"": ""48"", ""box_2d"": [1800, 900, 1900, 1000]}]
+```",0

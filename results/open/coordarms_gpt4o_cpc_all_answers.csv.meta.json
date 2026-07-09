@@ -1,0 +1,18 @@
+{
+  "experiment": "E-open-coord (coordinate-elicitation arms)",
+  "paper_section": "§6.1/§6.2",
+  "model": "gpt-4o",
+  "judge": "gpt-4o/default",
+  "config": "temperature=0.0, image_detail=high, max_tokens=1024 (coords 2048; verified non-binding, no truncation); grader=rubric='original' (verbatim VLMEvalKit, UNCHANGED)",
+  "dataset": "data/open_ended.parquet (ref_type=all)",
+  "slice": "all sample n=578 seed=0",
+  "arms": [
+    "coax_primer_coords"
+  ],
+  "n": 578,
+  "command": "python -m eval_open.run_coord_arms --n 578 --ref-type all --seed 0 --model gpt-4o --judge gpt-4o --arms coax_primer_coords --tag gpt4o_cpc_all",
+  "description": "REAL model answers, 4 prompt arms (plain/coax/+primer/+coords)",
+  "code_commit": "149531d",
+  "generated_utc": "2026-07-09T18:58:35+00:00",
+  "data_file": "coordarms_gpt4o_cpc_all_answers.csv"
+}
