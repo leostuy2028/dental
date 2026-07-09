@@ -22,7 +22,10 @@ _client = None
 def get_client():
     global _client
     if _client is None:
-        _client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+        # per-request HTTP timeout (ms): a silent hang otherwise blocks the run forever
+        # (the retry loop only fires on exceptions); a timeout becomes a retryable error.
+        _client = genai.Client(api_key=os.environ["GEMINI_API_KEY"],
+                               http_options=types.HttpOptions(timeout=180_000))
     return _client
 
 

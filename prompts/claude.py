@@ -64,11 +64,17 @@ def _image_part(b64_string):
     return {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": b64_string}}
 
 
+def _image_bytes_part(img_bytes):
+    """Image content part from raw bytes (visual exemplars arrive as bytes, not base64)."""
+    import base64
+    return _image_part(base64.b64encode(img_bytes).decode())
+
+
 def _text_part(text):
     return {"type": "text", "text": text}
 
 
-def build_prompt(row, examples=None, cot=False, mode="house"):
+def build_prompt(row, examples=None, cot=False, mode="house", context=None, visual_exemplars=None):
     """
     Build an Anthropic messages payload for a closed-ended question.
 
@@ -76,11 +82,27 @@ def build_prompt(row, examples=None, cot=False, mode="house"):
         row: a single row from the closed_ended dataframe
         examples: optional list of rows to use as few-shot context
         cot: if True, use chain-of-thought prompt
+        context: optional fixed reference text prepended as a preamble (E11, §5.4)
+        visual_exemplars: optional list of (image_bytes, caption) labeled examples,
+            prepended before the question (P13 visual few-shot). Mirrors prompts/gemini.py
+            so the Claude runs are directly comparable to the Gemini ones.
 
     Returns:
         (system, messages) tuple to pass to client.messages.create()
     """
     content = []
+
+    if context:
+        content.append(_text_part(context.strip() + "\n"))
+
+    if visual_exemplars:
+        content.append(_text_part("\nHere are example panoramic X-rays with their findings marked "
+                                  "(red boxes) and labeled in FDI tooth numbering, to show what these "
+                                  "findings look like:"))
+        for img_bytes, caption in visual_exemplars:
+            content.append(_image_bytes_part(img_bytes))
+            content.append(_text_part(caption))
+        content.append(_text_part("\nNow examine the following panoramic X-ray and answer the question:\n"))
 
     if examples:
         content.append(_text_part("Here are some examples:\n"))
