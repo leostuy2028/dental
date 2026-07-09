@@ -1,0 +1,18 @@
+{
+  "experiment": "s54-primer-benchkey",
+  "paper_section": "5.4",
+  "description": "OPG text primer, ORIGINAL benchmark key (B-skewed) for reference",
+  "context_file": "reference/opg_primer.txt",
+  "max_image_px": "full",
+  "crops": false,
+  "visual_exemplars": "",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended.parquet",
+  "n": 491,
+  "accuracy_pct": 62.53,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended.parquet --start 0 --paper-section 5.4 --context reference/opg_primer.txt --out results/closed_ended/knowledge_context/gemini-3.5-flash__coax-direct-ctx-opgprimer__whole__n491.csv --exp s54-primer-benchkey --description OPG text primer, ORIGINAL benchmark key (B-skewed) for reference",
+  "code_commit": "unknown",
+  "generated_utc": "2026-07-09T02:05:15+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-ctx-opgprimer__whole__n491.csv"
+}
