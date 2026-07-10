@@ -61,9 +61,13 @@ def load_exemplars(path):
 
 
 # --- providers: (image_b64, system, user, model) -> raw text -----------------
+REASONING_EFFORT = "minimal"   # set by main(); OpenAI reasoning-model effort
+_MAXTOK = {"minimal": 12000, "low": 16000, "medium": 24000, "high": 32000}
+
+
 def _openai(image_b64, system, user, model, exemplars=None):
     import openai
-    c = _clients.setdefault("openai", openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"], timeout=300, max_retries=5))
+    c = _clients.setdefault("openai", openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"], timeout=600, max_retries=5))
     content = []
     if exemplars:
         content.append({"type": "text", "text": EXEMPLAR_INTRO})
@@ -76,8 +80,8 @@ def _openai(image_b64, system, user, model, exemplars=None):
     msgs = [{"role": "system", "content": system}, {"role": "user", "content": content}]
     kw = dict(model=model, messages=msgs)
     if model.startswith("gpt-5") or re.match(r"^o\d", model):   # reasoning models
-        kw["max_completion_tokens"] = 12000   # room for hidden reasoning + 6 answers
-        kw["reasoning_effort"] = "minimal"     # direct answers, keep cost/latency down
+        kw["max_completion_tokens"] = _MAXTOK.get(REASONING_EFFORT, 16000)  # room for hidden reasoning + answers
+        kw["reasoning_effort"] = REASONING_EFFORT
     else:
         kw["max_tokens"] = 4096
         kw["temperature"] = 0.0
@@ -156,8 +160,14 @@ def main():
     ap.add_argument("--n-images", type=int, default=100, help="limit unique images (for smoke)")
     ap.add_argument("--judge", default="gpt-4o")
     ap.add_argument("--exemplars", default=None, help="visual-exemplar manifest json (e.g. reference/exemplars_v2.json)")
+    ap.add_argument("--reasoning-effort", default="minimal", choices=["minimal", "low", "medium", "high"],
+                    help="OpenAI reasoning-model effort (gpt-5*/o*)")
+    ap.add_argument("--workers", type=int, default=1, help="parallel image calls in phase 1")
     ap.add_argument("--tag", default=None)
     args = ap.parse_args()
+    global REASONING_EFFORT
+    REASONING_EFFORT = args.reasoning_effort
+    print(f"reasoning_effort = {REASONING_EFFORT}")
     tag = args.tag or f"{args.model.replace('/','-')}_batched"
     exemplars = load_exemplars(args.exemplars) if args.exemplars else None
     if exemplars:
@@ -170,22 +180,31 @@ def main():
     primer = open(PRIMER, encoding="utf-8").read()
     images = sorted(df["image_name"].unique())[:args.n_images]
 
-    # phase 1: one call per image
+    # phase 1: one call per image, parallel over images
+    from concurrent.futures import ThreadPoolExecutor, as_completed
     rec, done = [], set()
     if Path(ans_out).exists():
         rec = pd.read_csv(ans_out).to_dict("records"); done = {r["image_name"] for r in rec}
-    for k, im in enumerate(images):
-        if im in done:
-            continue
+    todo = [im for im in images if im not in done]
+
+    def work(im):
         g = df[df["image_name"] == im].sort_values("index")
-        qs = g["question"].tolist(); idxs = g["index"].tolist(); gts = g["answer"].tolist()
-        b64 = g.iloc[0]["image"]
-        ans, _ = answer_image(b64, qs, primer, COAX_SYSTEM, args.provider, args.model, exemplars=exemplars)
-        for i, idx in enumerate(idxs):
-            rec.append({"index": int(idx), "image_name": im, "question": qs[i],
-                        "gt": str(gts[i]), "answer": ans[i]})
-        pd.DataFrame(rec).to_csv(ans_out, index=False)
-        print(f"  [{k+1}/{len(images)}] {im}: {len(qs)} Q answered")
+        ans, _ = answer_image(g.iloc[0]["image"], g["question"].tolist(), primer,
+                              COAX_SYSTEM, args.provider, args.model, exemplars=exemplars)
+        return im, g, ans
+
+    n = len(done)
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futs = [pool.submit(work, im) for im in todo]
+        for fut in as_completed(futs):
+            im, g, ans = fut.result()
+            qs, idxs, gts = g["question"].tolist(), g["index"].tolist(), g["answer"].tolist()
+            for i, idx in enumerate(idxs):
+                rec.append({"index": int(idx), "image_name": im, "question": qs[i],
+                            "gt": str(gts[i]), "answer": ans[i]})
+            pd.DataFrame(rec).to_csv(ans_out, index=False)   # saved in main thread only
+            n += 1
+            print(f"  [{n}/{len(images)}] {im}: {len(qs)} Q answered")
     answers = pd.DataFrame(rec)
 
     # phase 2: grade per question (unchanged rubric)

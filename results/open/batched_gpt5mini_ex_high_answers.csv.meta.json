@@ -1,0 +1,16 @@
+{
+  "experiment": "E-open-model (gpt-5-mini + exemplars, HIGH reasoning)",
+  "paper_section": "§6.1",
+  "model": "gpt-5-mini (answerer) + gpt-4o (judge)",
+  "config": "image-batched (8 workers); coax persona + reference/opg_primer.txt + 12 visual exemplars (reference/exemplars_v2.json), NO coordinates; reasoning_effort=high, max_completion_tokens=32000, img_detail=high; grader rubric 'original' UNCHANGED",
+  "dataset": "data/open_ended.parquet (all)",
+  "slice": "all 578 open",
+  "n": 578,
+  "judge": "gpt-4o",
+  "command": "python -m eval_open.run_batched --model gpt-5-mini --provider openai --exemplars reference/exemplars_v2.json --reasoning-effort high --workers 8 --n-images 100 --tag gpt5mini_ex_high",
+  "result": "overall 46.3%; reasoning effect vs +ex/minimal +0.1 (Wilcoxon p=0.84) -> raising a reasoning model minimal->high does NOT help the free-text half (perception-limited)",
+  "description": "REAL gpt-5-mini answers, batched, +exemplars, high reasoning",
+  "code_commit": "060869e",
+  "generated_utc": "2026-07-10T13:33:44+00:00",
+  "data_file": "batched_gpt5mini_ex_high_answers.csv"
+}
