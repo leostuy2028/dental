@@ -37,9 +37,15 @@ _clients = {}
 def _img_tokens_note(): pass
 
 
-def build_user(primer, questions):
+def build_user(primer, questions, detection_text=None):
     qs = "\n".join(f"{i+1}. {q}" for i, q in enumerate(questions))
-    return f"{primer.strip()}{FORMAT_INSTR}\nQuestions:\n{qs}"
+    det = ""
+    if detection_text:
+        det = ("\n\nTOOTH CHART for THIS X-ray, produced by a tooth-detection tool (FDI numbers and "
+               "locations only; it reports tooth presence/position, NOT findings). Use it to decide "
+               "which numbered tooth a finding sits on, and to count teeth:\n"
+               + str(detection_text).strip() + "\n")
+    return f"{primer.strip()}{det}{FORMAT_INSTR}\nQuestions:\n{qs}"
 
 
 EXEMPLAR_INTRO = ("Here are example panoramic X-rays with their findings marked (red boxes) "
@@ -138,8 +144,9 @@ def parse_numbered(raw, n):
     return [got.get(k + 1, "") for k in range(n)]
 
 
-def answer_image(image_b64, questions, primer, system, provider, model, retries=3, exemplars=None):
-    user = build_user(primer, questions)
+def answer_image(image_b64, questions, primer, system, provider, model, retries=3,
+                 exemplars=None, detection_text=None):
+    user = build_user(primer, questions, detection_text)
     for a in range(retries):
         try:
             raw = PROVIDERS[provider](image_b64, system, user, model, exemplars)
@@ -160,6 +167,7 @@ def main():
     ap.add_argument("--n-images", type=int, default=100, help="limit unique images (for smoke)")
     ap.add_argument("--judge", default="gpt-4o")
     ap.add_argument("--exemplars", default=None, help="visual-exemplar manifest json (e.g. reference/exemplars_v2.json)")
+    ap.add_argument("--detections", default=None, help="tooth-map json {image_name: chart} from detect_teeth.py")
     ap.add_argument("--reasoning-effort", default="minimal", choices=["minimal", "low", "medium", "high"],
                     help="OpenAI reasoning-model effort (gpt-5*/o*)")
     ap.add_argument("--workers", type=int, default=1, help="parallel image calls in phase 1")
@@ -172,6 +180,9 @@ def main():
     exemplars = load_exemplars(args.exemplars) if args.exemplars else None
     if exemplars:
         print(f"loaded {len(exemplars)} visual exemplars from {args.exemplars}")
+    detections = json.load(open(args.detections, encoding="utf-8")) if args.detections else {}
+    if detections:
+        print(f"loaded {len(detections)} tooth-detection maps from {args.detections}")
     ans_out = f"results/open/batched_{tag}_answers.csv"
     score_out = f"results/open/batched_{tag}_scores.csv"
     Path("results/open").mkdir(parents=True, exist_ok=True)
@@ -190,7 +201,8 @@ def main():
     def work(im):
         g = df[df["image_name"] == im].sort_values("index")
         ans, _ = answer_image(g.iloc[0]["image"], g["question"].tolist(), primer,
-                              COAX_SYSTEM, args.provider, args.model, exemplars=exemplars)
+                              COAX_SYSTEM, args.provider, args.model, exemplars=exemplars,
+                              detection_text=detections.get(im))
         return im, g, ans
 
     n = len(done)
