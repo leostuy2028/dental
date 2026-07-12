@@ -1,0 +1,17 @@
+==================================================================
+Dentist audit — token 'sandeep'
+==================================================================
+
+[pipeline check] 20 definite disagreements, 20 adjudications, exact match: True
+
+Per bucket (certified error = dentist ruled the key WRONG in the 2nd pass):
+  bucket    n  agree  disagree  ERROR  cant  none       error rate [95% CI]
+  T1       22      8        11      3     1     2                14% [5-33]
+  T2       18     11         6      1     1     0                 6% [1-26]
+  T3       10      6         2      0     1     1                0% [-0-28]
+  C        10      9         1      0     0     0                0% [-0-28]
+
+[predicts errors?] suspect T1+T2: 4/40 (10%) vs control C: 0/10 (0%)
+[re-weighted] full-491 bucket sizes {'T1': 22, 'T2': 123, 'T3': 72, 'C': 119}; estimated key errors in those 336 items ≈ 10 (3%)
+
+Open-ended reference endorsement (n=15): {'AGREE': 13, 'DISAGREE': 1, 'PARTIAL': 1}
