@@ -1,0 +1,11 @@
+results/open/batched_gemini35_plain39_answers.csv: 228 rows, 0 done, 228 to grade  (judge=claude/claude-haiku-4-5-20251001)
+  graded 25/228
+  graded 50/228
+  graded 75/228
+  graded 100/228
+  graded 125/228
+  graded 150/228
+  graded 175/228
+  graded 200/228
+  graded 225/228
+DONE results/open/batched_gemini35_plain39_CLAUDEjudge_scores.csv: 228 scores, mean 47.3%

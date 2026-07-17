@@ -1,0 +1,20 @@
+{
+  "model": "gemini-3.5-flash",
+  "provider": "gemini",
+  "thinking_budget": 4000,
+  "primer": "reference/opg_primer.txt",
+  "system": "COAX_SYSTEM (eval_open/prompts_open.py)",
+  "exemplars": null,
+  "judge": "gpt-4o",
+  "rubric": "original",
+  "n_images": 39,
+  "n_questions": 228,
+  "images": "39 LOCALIZE images (reference/tooth_boxes.json keys)",
+  "overlay_commit": "07ba66d",
+  "note": "batched: one model call per image, all its questions; grading per-question",
+  "arm": "overlay",
+  "overlay_dir": "reference/overlays",
+  "overlay_note": "OVERLAY_NOTE (green FDI chips = tooth identity only, not findings)",
+  "overlay_method": "BLIND hand-numbered FDI overlays (Opus, single-rater), committed 07ba66d before grading",
+  "desc": "reads reference/overlays/<image>.jpg instead of parquet image"
+}

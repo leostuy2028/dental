@@ -1,0 +1,14 @@
+{
+  "experiment": "cot-vs-direct-8k-shuf",
+  "paper_section": "probe",
+  "description": "",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=8192",
+  "dataset": "closed_ended_shuffled.parquet",
+  "n": 50,
+  "accuracy_pct": 58.0,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 8192 --data data/closed_ended_shuffled.parquet --start 0 --limit 50 --out results/_pilot/gemini35__coax-direct-think8k__shuf__n50.csv --exp cot-vs-direct-8k-shuf --paper-section probe",
+  "code_commit": "afb0dfa",
+  "generated_utc": "2026-07-06T18:57:36+00:00",
+  "data_file": "gemini35__coax-direct-think8k__shuf__n50.csv"
+}

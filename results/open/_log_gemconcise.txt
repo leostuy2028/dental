@@ -1,0 +1,51 @@
+reasoning_effort = minimal | thinking_budget = 4000
+images-file: restricted to 39 images
+  [1/39] 016690.jpg: 6 Q answered
+  [2/39] 016713.jpg: 6 Q answered
+  [3/39] 016723.jpg: 5 Q answered
+  [4/39] 016650.jpg: 6 Q answered
+  [5/39] 016726.jpg: 5 Q answered
+  [6/39] 016655.jpg: 6 Q answered
+  [7/39] 016657.jpg: 6 Q answered
+  [8/39] 016640.jpg: 6 Q answered
+  [9/39] 016808.jpg: 6 Q answered
+  [10/39] 016825.jpg: 6 Q answered
+  [11/39] 016769.jpg: 5 Q answered
+  [12/39] 016790.jpg: 6 Q answered
+  [13/39] 016874.jpg: 5 Q answered
+  [14/39] 016839.jpg: 6 Q answered
+  [15/39] 016918.jpg: 6 Q answered
+  [16/39] 016955.jpg: 6 Q answered
+  [17/39] 016823.jpg: 6 Q answered
+  [18/39] 016975.jpg: 6 Q answered
+  [19/39] 016964.jpg: 6 Q answered
+  [20/39] 017168.jpg: 6 Q answered
+  [21/39] 017137.jpg: 6 Q answered
+  [22/39] 017144.jpg: 6 Q answered
+  [23/39] 017113.jpg: 6 Q answered
+  [24/39] 017204.jpg: 6 Q answered
+  [25/39] 017118.jpg: 6 Q answered
+  [26/39] 017215.jpg: 6 Q answered
+  [27/39] 017220.jpg: 6 Q answered
+  [28/39] 017690.jpg: 6 Q answered
+  [29/39] 017936.jpg: 6 Q answered
+  [30/39] 018010.jpg: 6 Q answered
+  [31/39] 017656.jpg: 6 Q answered
+  [32/39] 018047.jpg: 6 Q answered
+  [33/39] 018278.jpg: 5 Q answered
+  [34/39] 017239.jpg: 6 Q answered
+  [35/39] 017360.jpg: 6 Q answered
+  [36/39] 018328.jpg: 6 Q answered
+  [37/39] 018160.jpg: 5 Q answered
+  [38/39] 018384.jpg: 6 Q answered
+  [39/39] 018466.jpg: 6 Q answered
+  [gpt-4o] API error (t=0.0, try 1/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29776, Requested 935. Please try again in 1.422s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}} — 1s
+  [gpt-4o] API error (t=0.0, try 1/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29483, Requested 627. Please try again in 220ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}} — 1s
+  [gpt-4o] API error (t=0.0, try 1/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29908, Requested 664. Please try again in 1.144s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}} — 1s
+  [gpt-4o] API error (t=0.0, try 1/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29953, Requested 1012. Please try again in 1.93s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}} — 1s
+  [gpt-4o] API error (t=0.0, try 1/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29643, Requested 626. Please try again in 538ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}} — 1s
+  [gpt-4o] API error (t=0.0, try 1/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29791, Requested 609. Please try again in 800ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}} — 1s
+  [gpt-4o] API error (t=0.0, try 1/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29616, Requested 1062. Please try again in 1.356s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}} — 1s
+  [gpt-4o] API error (t=0.0, try 1/3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29587, Requested 643. Please try again in 460ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}} — 1s
+
+gemini-3.5-flash: overall 41.4%  (n=228)  -> results/open/batched_gemini35_concise39_scores.csv

@@ -1,0 +1,25 @@
+results/open/batched_gpt5mini_answers.csv: 578 rows, 0 done, 578 to grade  (judge=claude/claude-haiku-4-5-20251001)
+  graded 25/578
+  graded 50/578
+  graded 75/578
+  graded 100/578
+  graded 125/578
+  graded 150/578
+  graded 175/578
+  graded 200/578
+  graded 225/578
+  graded 250/578
+  graded 275/578
+  graded 300/578
+  graded 325/578
+  graded 350/578
+  graded 375/578
+  graded 400/578
+  graded 425/578
+  graded 450/578
+  graded 475/578
+  graded 500/578
+  graded 525/578
+  graded 550/578
+  graded 575/578
+DONE results/open/batched_gpt5mini_CLAUDEjudge_scores.csv: 578 scores, mean 50.9%

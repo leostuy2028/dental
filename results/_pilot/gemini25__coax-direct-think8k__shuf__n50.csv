@@ -1,0 +1,163 @@
+index,file_name,category,question,answer,predicted,raw_response,correct,refused,n_examples
+0,016640.jpg,"Teeth,Patho",Which of the following teeth is suspected to have caries?,B,B,"The image provided is a panoramic radiograph. The task is to identify which of the listed teeth is suspected to have caries.
+
+First, let's locate the teeth mentioned in the options. There are two primary dental numbering systems: the Universal Numbering System (common in the USA) and the FDI World Dental Federation Notation (common internationally). The question does not specify which system to use, which creates ambiguity as options A and B refer to the same physical tooth (maxillary left second molar) but with different numbers in each system. However, I must choose one answer. Given that many public educational benchmarks originate from US institutions, I will proceed with the assumption of the **Universal Numbering System**.
+
+Under the Universal Numbering System:
+*   **A) #27:** This refers to the mandibular right canine.
+    *   Locating this tooth on the radiograph (lower arch, patient's right side, which is the left side of the image): Starting from the midline, the first tooth is the mandibular right central incisor (#25), followed by the mandibular right lateral incisor (#26), and then the mandibular right canine (#27).
+    *   Examination of tooth #27 shows an intact crown with no obvious radiolucency indicative of caries.
+
+*   **B) #15:** This refers to the maxillary left second molar.
+    *   Locating this tooth on the radiograph (upper arch, patient's left side, which is the right side of the image): Starting from the midline, we see the central incisor (#9), lateral incisor (#10), canine (#11), first premolar (#12), and second premolar (#13). Distal to the second premolar is a tooth with a full coverage crown, which is the maxillary left first molar (#14). Distal to this crowned first molar is the maxillary left second molar (#15).
+    *   Examination of tooth #15 reveals a distinct radiolucency on its mesial surface, just apical to the contact point with the crown on #14. This radiolucency extends into the dentin, which is highly suggestive of mesial caries. This finding is clearly visible in the original image and also in the third cropped image (upper right quadrant).
+
+*   **C) #24:** This refers to the mandibular left central incisor.
+    *   Locating this tooth on the radiograph (lower arch, patient's left side, which is the right side of the image): This is the tooth immediately to the right of the midline on the lower arch.
+    *   Examination of tooth #24 shows an intact crown with no obvious radiolucency indicative of caries.
+
+*   **D) #42:** This number is not a valid tooth number in the Universal Numbering System. If it were a typo for another tooth (e.g., #22 for mandibular left canine or #32 for mandibular right third molar), those teeth do not show caries or are missing. If it refers to the FDI system, #42 is the mandibular right lateral incisor, which also appears healthy.
+
+Based on the examination using the Universal Numbering System, tooth #15 (maxillary left second molar) clearly exhibits radiographic signs of caries.
+
+The final answer is $\boxed{B}$",True,False,0
+1,016640.jpg,Teeth,How many natural teeth are visualized in the panoramic radiograph?,D,B,B,False,False,0
+2,016640.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,A,B,B,False,False,0
+3,016640.jpg,"Teeth,HisT",Which of the following teeth has a crown and root canal treatment?,D,B,B,False,False,0
+4,016640.jpg,Jaw,Which of the following is TRUE regarding the jaw-specific observations?,B,B,B,True,False,0
+5,016641.jpg,"Teeth,Patho",What is required for the periapical lesion at tooth 36?,C,C,C,True,False,0
+6,016641.jpg,"HisT,Jaw",Which structures are visible in the image?,A,A,A,True,False,0
+7,016641.jpg,"Teeth,Patho",Which tooth exhibits imaging features suggestive of a periapical granuloma?,D,D,D,True,False,0
+8,016641.jpg,"Teeth,HisT,SumRec",Which tooth is obvious for a filling?,B,D,D,False,False,0
+9,016642.jpg,Jaw,Is there any apparent bone loss in the image?,B,A,A,False,False,0
+10,016642.jpg,"Teeth,HisT",Which tooth has a crown restoration?,B,B,B,True,False,0
+11,016642.jpg,Teeth,Which of the following wisdom teeth are impacted?,B,C,C,False,False,0
+12,016642.jpg,Teeth,How many teeth are visualized in the radiograph?,B,A,A,False,False,0
+13,016642.jpg,"Teeth,HisT",Which tooth shows signs of root canal treatment?,D,D,D,True,False,0
+14,016648.jpg,Teeth,How many wisdom teeth are erupted in the patient?,C,C,C,True,False,0
+15,016648.jpg,"Teeth,Jaw",What is the status of bone loss in the image?,A,D,D,False,False,0
+16,016648.jpg,"Teeth,Patho",Which tooth is suspicious for deep caries?,C,B,B,False,False,0
+17,016648.jpg,"Teeth,Patho",Which tooth shows evidence of a periapical lesion?,D,B,"The question asks to identify which tooth shows evidence of a periapical lesion. A periapical lesion is a radiolucency (dark area) at the apex (tip) of a tooth root, indicating bone destruction, often due to infection from pulpal necrosis.
+
+Let's examine the teeth mentioned in the options using FDI numbering, which appears to be used in the question:
+
+*   **A) #18 (Maxillary right third molar):** This tooth is horizontally impacted in the upper right quadrant. There is a radiolucency surrounding the crown of #18, which is a pericoronal radiolucency (likely a normal follicular space or a dentigerous cyst). The roots are underdeveloped, and there is no clear periapical radiolucency at the root apices.
+*   **B) #47 (Mandibular right second molar):** This tooth is located in the lower right quadrant, anterior to the impacted #48. Upon close inspection of the roots of #47, particularly the distal root, there is a distinct, well-defined radiolucency at its apex. This is a classic appearance of a periapical lesion, indicating bone loss around the root tip.
+*   **C) #28 (Maxillary left third molar):** Similar to #18, this tooth is horizontally impacted in the upper left quadrant. There is a pericoronal radiolucency around its crown, but no clear periapical lesion at the root apices.
+*   **D) #18, #47, and #48:** As established, #18 and #48 primarily show pericoronal radiolucencies, not periapical ones. While #47 does show a periapical lesion, this option is incorrect because it implies that #18 and #48 also have periapical lesions, which they do not.
+
+Therefore, the only tooth among the options that clearly demonstrates a periapical lesion is #47.
+
+The final answer is $\boxed{B}$",False,False,0
+18,016649.jpg,"Teeth,HisT",Which site has a dental implant placed?,D,D,D,True,False,0
+19,016649.jpg,"Teeth,HisT",Which tooth has evidence of root canal treatment?,C,A,A,False,False,0
+20,016649.jpg,"Teeth,Patho",Which tooth has a suspected deep caries?,D,B,B,False,False,0
+21,016649.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,D,A,A,False,False,0
+22,016649.jpg,"Teeth,HisT",Which tooth has a crown restoration?,B,B,B,True,False,0
+23,016650.jpg,"Teeth,HisT",Which teeth have undergone root canal treatment?,A,A,A,True,False,0
+24,016650.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,A,A,A,True,False,0
+25,016650.jpg,Jaw,Does the imaging indicate any bone loss?,A,C,C,False,False,0
+26,016650.jpg,"Teeth,Patho",Which teeth are suspected to have deep caries?,D,B,B,False,False,0
+27,016650.jpg,"HisT,Jaw",What is visible in the mandibular areas?,A,A,A,True,False,0
+28,016652.jpg,"Teeth,Patho,SumRec",Which teeth are recommended for monitoring due to suspicious caries?,B,A,A,False,False,0
+29,016652.jpg,"HisT,Jaw",Which of the following is NOT a visible structure in the imaging?,A,A,A,True,False,0
+30,016652.jpg,Jaw,Is there apparent bone loss observed in the jaw?,A,A,A,True,False,0
+31,016652.jpg,"Teeth,Patho",Which tooth shows signs of a periapical granuloma?,B,A,A,False,False,0
+32,016652.jpg,"Patho,SumRec",What is the primary recommendation for the periapical lesion at 46?,B,B,B,True,False,0
+33,016655.jpg,"Teeth,Patho",Which tooth shows signs of a periapical abscess?,D,D,"Upon careful examination of the panoramic radiograph, I will focus on the periapical regions of the mandibular anterior teeth, as the options provided (#40, #41, #42, #43) likely refer to teeth in this area, assuming an FDI numbering system where #41 is the mandibular right central incisor, #42 is the mandibular right lateral incisor, and #43 is the mandibular right canine. The number #40 is not a standard tooth number in common systems.
+
+Let's evaluate the periapical areas of the relevant teeth:
+
+1.  **Tooth #43 (Mandibular right canine):** The periapical bone and periodontal ligament space appear normal. There is no evidence of a periapical radiolucency.
+2.  **Tooth #42 (Mandibular right lateral incisor):** The periapical bone and periodontal ligament space appear normal. There is no evidence of a periapical radiolucency.
+3.  **Tooth #41 (Mandibular right central incisor):** Upon close inspection, there is a very subtle, ill-defined radiolucency at the apex of the mandibular right central incisor (#41). While not a classic, well-demarcated lesion, there is a diffuse decrease in bone density in this region compared to the adjacent teeth, suggesting a possible periapical inflammatory lesion or early bone resorption consistent with a periapical abscess.
+
+Given the options and the requirement to select the single best answer, the subtle periapical radiolucency associated with tooth #41 makes it the most likely candidate for showing signs of a periapical abscess among the choices provided.
+
+The final answer is $\boxed{D}$",True,False,0
+34,016655.jpg,Teeth,How many wisdom teeth were detected in the radiograph?,A,A,A,True,False,0
+35,016655.jpg,"Teeth,SumRec",What is the recommended course of action for the impacted wisdom teeth?,B,B,B,True,False,0
+36,016655.jpg,Teeth,What is the condition of tooth 18?,C,D,D,False,False,0
+37,016655.jpg,"Patho,Jaw",Which of the following is NOT a finding related to the maxillary sinuses?,A,B,"The question asks ""Which of the following is NOT a finding related to the maxillary sinuses?"". This means we are looking for the statement that is *false* when describing the maxillary sinuses in this panoramic radiograph.
+
+Let's examine the maxillary sinuses:
+1.  **Visibility:** Both the right and left maxillary sinuses are clearly visible as large radiolucent (dark) areas superior to the posterior maxillary teeth.
+2.  **Obscuration/Opacification:** The sinuses are largely clear and air-filled. There might be very subtle mucosal thickening along the floor of the right maxillary sinus (patient's left), but it does not constitute significant ""obscuration"" or opacification. The left maxillary sinus (patient's right) appears clear.
+3.  **Signs of infection:** There are no overt signs of acute infection such as air-fluid levels, complete opacification, or significant bone changes. The subtle mucosal thickening, if present, could indicate chronic inflammation but not necessarily acute infection.
+
+Now let's evaluate the options:
+
+*   **A) Obscuration and Signs of infection:** This statement suggests significant opacification and clear signs of infection. Neither is definitively present in this image. Therefore, this statement is *false* as a description of the image, making it ""NOT a finding"".
+*   **B) Not visible:** This statement is unequivocally *false*. The maxillary sinuses are clearly visible on both sides of the radiograph. Since the statement is false, it is ""NOT a finding"".
+*   **C) Obscuration:** This statement suggests significant opacification. The sinuses are largely clear. Therefore, this statement is *false* as a description of the image, making it ""NOT a finding"".
+*   **D) Bilaterally visible:** This statement is *true*. Both maxillary sinuses are clearly seen. Therefore, this *is* a finding.
+
+The question asks for the option that is ""NOT a finding"". Options A, B, and C are all statements that are *false* about the image, and thus are ""NOT a finding"". However, in multiple-choice questions of this nature, one typically looks for the most definitively or unequivocally false statement.
+
+The statement ""Not visible"" (B) is the most fundamentally and unequivocally false description of the maxillary sinuses in this image. They are clearly present and delineated. While ""obscuration"" (C) and ""obscuration and signs of infection"" (A) are also not significant findings, there can sometimes be subjective interpretation of very subtle mucosal changes. However, the visibility of the sinuses is beyond doubt.
+
+Therefore, the most accurate answer for ""NOT a finding"" is that they are ""Not visible"".
+
+The final answer is $\boxed{B}$",False,False,0
+38,016657.jpg,"Teeth,HisT",Which teeth show signs of fillings?,B,C,"The patient's panoramic X-ray shows multiple radiopaque restorations, which are signs of fillings. Let's examine each option:
+
+*   **A) #32, #33, #34, #35**
+    *   #32 (lower left lateral incisor): Does not clearly show a filling.
+    *   #33 (lower left canine): Shows a small radiopaque filling on the distal surface.
+    *   #34 (lower left first premolar): Shows a radiopaque filling on the occlusal/distal surface.
+    *   #35 (lower left second premolar): Shows a radiopaque filling on the occlusal/distal surface.
+    *   Since #32 does not show a clear filling, this option is incorrect.
+
+*   **B) #26**
+    *   #26 (upper left first molar): Shows a clear radiopaque filling on its occlusal surface. This statement is correct.
+
+*   **C) #33, #34, #35, #36**
+    *   #33 (lower left canine): Shows a small radiopaque filling on the distal surface.
+    *   #34 (lower left first premolar): Shows a radiopaque filling on the occlusal/distal surface.
+    *   #35 (lower left second premolar): Shows a radiopaque filling on the occlusal/distal surface.
+    *   #36 (lower left first molar): Shows a radiopaque filling on its occlusal surface.
+    *   All four teeth listed in this option clearly show signs of fillings.
+
+*   **D) #38, #39, #40, #41**
+    *   #38 (lower left third molar): This tooth is impacted and does not show a filling.
+    *   #39, #40: These are not standard FDI notation for permanent teeth.
+    *   #41 (lower right central incisor): Does not show a filling.
+    *   This option is incorrect due to invalid tooth numbers and incorrect identification of fillings.
+
+Comparing options B and C:
+Both options B and C contain teeth that show signs of fillings. However, the question asks ""Which **teeth** show signs of fillings?"" (plural). Option C lists four teeth, all of which correctly show fillings, making it a more comprehensive and fitting answer to the plural ""teeth"" than option B, which lists only one tooth.
+
+The final answer is $\boxed{C}$",False,False,0
+39,016657.jpg,Teeth,Which wisdom tooth is impacted?,B,D,D,False,False,0
+40,016657.jpg,"Teeth,Jaw",What is the status of the bone architecture in the jaw?,C,C,C,True,False,0
+41,016657.jpg,HisT,What previous dental treatment has been done on tooth 24?,B,D,D,False,False,0
+42,016659.jpg,"Teeth,Patho",Which tooth shows signs of deep caries?,B,C,"The question asks to identify which tooth shows signs of deep caries from the provided panoramic X-ray. I will use the FDI World Dental Federation notation for tooth numbering, as the options (16, 26, 36, 46) are standard FDI numbers for the first molars in each quadrant.
+
+1.  **Identify the teeth based on FDI notation:**
+    *   **A) #26:** Upper left first molar.
+    *   **B) #46:** Lower right first molar.
+    *   **C) #16:** Upper right first molar.
+    *   **D) #36:** Lower left first molar.
+
+2.  **Examine each tooth for deep caries:** Deep caries appears as a radiolucency (darker area) extending significantly into the dentin, approaching or involving the pulp chamber.
+
+    *   **Tooth #16 (Upper right first molar):** Located on the patient's right side (left side of the image), in the upper arch. This tooth has a large, radiopaque (white) restoration. On its mesial (front) aspect, there is a very prominent and extensive radiolucency extending deeply from beneath the restoration into the dentin, reaching very close to the pulp chamber. This is a clear sign of deep recurrent caries.
+
+    *   **Tooth #26 (Upper left first molar):** Located on the patient's left side (right side of the image), in the upper arch. This tooth also has a large, radiopaque restoration. On its mesial aspect, there is a significant radiolucency extending deeply from beneath the restoration into the dentin, also reaching very close to the pulp chamber. This is also a clear sign of deep recurrent caries.
+
+    *   **Tooth #36 (Lower left first molar):** Located on the patient's left side (right side of the image), in the lower arch. This tooth has a large, radiopaque restoration. On its mesial aspect, there is a radiolucency extending into the dentin. While present, it appears less extensive and possibly not as close to the pulp as the caries in #16 or #26.
+
+    *   **Tooth #46 (Lower right first molar):** Located on the patient's right side (left side of the image), in the lower arch. This tooth has a large, radiopaque restoration. On its distal (back) aspect, there is a radiolucency extending into the dentin. Similar to #36, it appears less extensive and possibly not as close to the pulp as the caries in #16 or #26.
+
+3.  **Compare the severity:** Both #16 and #26 show very deep recurrent caries. However, upon close comparison, the radiolucency on the mesial aspect of tooth #16 (upper right first molar) appears slightly larger in overall volume and extends marginally closer to the pulp chamber, particularly towards the mesiobuccal pulp horn, compared to #26. The borders of the radiolucency in #16 also appear slightly more irregular at its deepest extent, which can be indicative of a more advanced lesion.
+
+Therefore, while both #16 and #26 exhibit deep caries, #16 shows slightly more pronounced signs of deep caries.
+
+The final answer is $\boxed{C}$",False,False,0
+43,016659.jpg,"Teeth,Patho",Which tooth has a periapical abscess?,C,B,B,False,False,0
+44,016659.jpg,"Teeth,HisT",Which tooth has a sign of filling?,A,C,C,False,False,0
+45,016659.jpg,Teeth,Which region has a missing tooth?,C,D,D,False,False,0
+46,016659.jpg,Teeth,How many erupted wisdom teeth are present in the radiograph?,C,D,D,False,False,0
+47,016690.jpg,Teeth,Which of the following is TRUE regarding the wisdom teeth in this patient?,A,B,B,False,False,0
+48,016690.jpg,Jaw,What type of bone loss is detected in the upper jaw?,B,C,C,False,False,0
+49,016690.jpg,"Teeth,HisT",Which tooth has both a filling and root canal treatment?,A,A,A,True,False,0
