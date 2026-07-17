@@ -21,6 +21,8 @@ ROWS = [
      "results/open/batched_gpt5mini_scores.csv"),
     ("gpt-5-mini + 12 visual exemplars", "primer + exemplars, no coordinates",
      "results/open/batched_gpt5mini_ex_scores.csv"),
+    ("gemini-3.5-flash", "primer, no coordinates (thinking 4000)",
+     "results/open/batched_gemini35_plain578_scores.csv"),
 ]
 
 

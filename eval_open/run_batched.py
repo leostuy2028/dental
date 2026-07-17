@@ -37,15 +37,34 @@ _clients = {}
 def _img_tokens_note(): pass
 
 
-def build_user(primer, questions, detection_text=None):
+# Plain-sentence note for the numbered-box OVERLAY image (V2). Deliberately NOT the
+# "TOOTH CHART" text-map template (there is no text chart here); the numbers are drawn
+# ON the image, so the note just tells the model what those green numbers are.
+OVERLAY_NOTE = (
+    "The green two-digit numbers printed on THIS X-ray are FDI tooth codes labeling each "
+    "tooth (placed by a tooth-detection tool; they mark tooth identity and position ONLY, "
+    "not findings). Use them to state which numbered tooth a finding sits on, and to count teeth.")
+
+
+CONCISE_NOTE = (
+    "\n\nAnswer as tersely as each question demands, matching the style of a terse clinical key. "
+    "When a question asks WHICH tooth/teeth, name only the single most-likely FDI code; add another "
+    "only if the finding is unmistakably on more than one tooth. Do NOT list differential candidates "
+    "or extra teeth to be safe — naming an extra wrong tooth is penalized. Commit to your best single answer.")
+
+
+def build_user(primer, questions, detection_text=None, overlay=False, concise=False):
     qs = "\n".join(f"{i+1}. {q}" for i, q in enumerate(questions))
     det = ""
-    if detection_text:
+    if overlay:
+        det = "\n\n" + OVERLAY_NOTE + "\n"
+    elif detection_text:
         det = ("\n\nTOOTH CHART for THIS X-ray, produced by a tooth-detection tool (FDI numbers and "
                "locations only; it reports tooth presence/position, NOT findings). Use it to decide "
                "which numbered tooth a finding sits on, and to count teeth:\n"
                + str(detection_text).strip() + "\n")
-    return f"{primer.strip()}{det}{FORMAT_INSTR}\nQuestions:\n{qs}"
+    con = CONCISE_NOTE if concise else ""
+    return f"{primer.strip()}{det}{FORMAT_INSTR}{con}\nQuestions:\n{qs}"
 
 
 EXEMPLAR_INTRO = ("Here are example panoramic X-rays with their findings marked (red boxes) "
@@ -69,6 +88,7 @@ def load_exemplars(path):
 # --- providers: (image_b64, system, user, model) -> raw text -----------------
 REASONING_EFFORT = "minimal"   # set by main(); OpenAI reasoning-model effort
 _MAXTOK = {"minimal": 12000, "low": 16000, "medium": 24000, "high": 32000}
+THINKING_BUDGET = 0            # set by main(); Gemini thinking-token budget (0 = off)
 
 
 def _openai(image_b64, system, user, model, exemplars=None):
@@ -122,9 +142,11 @@ def _gemini(image_b64, system, user, model, exemplars=None):
             parts.append(decode_image(b64)); parts.append(cap)
         parts.append(EXEMPLAR_OUTRO)
     parts += [user, decode_image(image_b64)]
+    # max_output_tokens must leave room for thinking tokens + the visible answer
+    max_out = 4096 + (THINKING_BUDGET if THINKING_BUDGET > 0 else 0)
     r = c.models.generate_content(model=model, contents=parts,
-        config=types.GenerateContentConfig(temperature=0.0, max_output_tokens=4096,
-            thinking_config=types.ThinkingConfig(thinking_budget=0)))
+        config=types.GenerateContentConfig(temperature=0.0, max_output_tokens=max_out,
+            thinking_config=types.ThinkingConfig(thinking_budget=THINKING_BUDGET)))
     return r.text or ""
 
 
@@ -145,8 +167,8 @@ def parse_numbered(raw, n):
 
 
 def answer_image(image_b64, questions, primer, system, provider, model, retries=3,
-                 exemplars=None, detection_text=None):
-    user = build_user(primer, questions, detection_text)
+                 exemplars=None, detection_text=None, overlay=False, concise=False):
+    user = build_user(primer, questions, detection_text, overlay=overlay, concise=concise)
     for a in range(retries):
         try:
             raw = PROVIDERS[provider](image_b64, system, user, model, exemplars)
@@ -168,14 +190,24 @@ def main():
     ap.add_argument("--judge", default="gpt-4o")
     ap.add_argument("--exemplars", default=None, help="visual-exemplar manifest json (e.g. reference/exemplars_v2.json)")
     ap.add_argument("--detections", default=None, help="tooth-map json {image_name: chart} from detect_teeth.py")
+    ap.add_argument("--overlay-dir", default=None,
+                    help="dir of numbered-box overlay JPEGs <image_name>; used INSTEAD of the parquet image, "
+                         "with the plain OVERLAY_NOTE (not the TOOTH CHART text template)")
+    ap.add_argument("--images-file", default=None,
+                    help="restrict to image_names listed in this file (json list, json {name:...}, or one-per-line)")
     ap.add_argument("--reasoning-effort", default="minimal", choices=["minimal", "low", "medium", "high"],
                     help="OpenAI reasoning-model effort (gpt-5*/o*)")
+    ap.add_argument("--thinking-budget", type=int, default=0, help="Gemini thinking-token budget (0 = off)")
+    ap.add_argument("--concise", action="store_true", help="append CONCISE_NOTE (commit to single best answer, no over-listing)")
     ap.add_argument("--workers", type=int, default=1, help="parallel image calls in phase 1")
     ap.add_argument("--tag", default=None)
     args = ap.parse_args()
-    global REASONING_EFFORT
+    global REASONING_EFFORT, THINKING_BUDGET
     REASONING_EFFORT = args.reasoning_effort
-    print(f"reasoning_effort = {REASONING_EFFORT}")
+    THINKING_BUDGET = args.thinking_budget
+    print(f"reasoning_effort = {REASONING_EFFORT} | thinking_budget = {THINKING_BUDGET}")
+    if args.overlay_dir:
+        print(f"OVERLAY mode: images from {args.overlay_dir} (note = OVERLAY_NOTE)")
     tag = args.tag or f"{args.model.replace('/','-')}_batched"
     exemplars = load_exemplars(args.exemplars) if args.exemplars else None
     if exemplars:
@@ -189,7 +221,17 @@ def main():
 
     df = pd.read_parquet(DATA)
     primer = open(PRIMER, encoding="utf-8").read()
-    images = sorted(df["image_name"].unique())[:args.n_images]
+    images = sorted(df["image_name"].unique())
+    if args.images_file:
+        raw = open(args.images_file, encoding="utf-8").read().strip()
+        try:
+            obj = json.loads(raw)
+            keep = set(obj) if isinstance(obj, list) else {k for k in obj if not k.startswith("_")}
+        except json.JSONDecodeError:
+            keep = {ln.strip() for ln in raw.splitlines() if ln.strip()}
+        images = [im for im in images if im in keep]
+        print(f"images-file: restricted to {len(images)} images")
+    images = images[:args.n_images]
 
     # phase 1: one call per image, parallel over images
     from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -200,9 +242,14 @@ def main():
 
     def work(im):
         g = df[df["image_name"] == im].sort_values("index")
-        ans, _ = answer_image(g.iloc[0]["image"], g["question"].tolist(), primer,
+        if args.overlay_dir:
+            img_b64 = base64.b64encode(open(os.path.join(args.overlay_dir, im), "rb").read()).decode()
+        else:
+            img_b64 = g.iloc[0]["image"]
+        ans, _ = answer_image(img_b64, g["question"].tolist(), primer,
                               COAX_SYSTEM, args.provider, args.model, exemplars=exemplars,
-                              detection_text=detections.get(im))
+                              detection_text=detections.get(im), overlay=bool(args.overlay_dir),
+                              concise=args.concise)
         return im, g, ans
 
     n = len(done)

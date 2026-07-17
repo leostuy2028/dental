@@ -1,7 +1,7 @@
 {
   "_generator": "paper_analysis/thinking_hard.py",
   "_source_dir": "results/closed_ended/cot_length",
-  "_generated_utc": "2026-07-07T14:45:41.732480+00:00",
+  "_generated_utc": "2026-07-12T19:24:14.051895+00:00",
   "per_budget": {
     "0": {
       "label": "off",

@@ -97,6 +97,10 @@ def _call_claude(prompt, model, temperature):
         model=model,
         max_tokens=16,
         temperature=temperature,
+        # Claude tends to add markdown/reasoning and blow the 16-tok cap before the
+        # number; force the bare-number format the rubric already requests, so parse
+        # succeeds (mirrors GPT-4o's natural terse behaviour). Does NOT change the rubric.
+        system="Respond with ONLY the correctness score as a single number such as 0.0, 0.5, or 1.0. No words, no markdown, no explanation.",
         messages=[{"role": "user", "content": prompt}],
     )
     return resp.content[0].text
