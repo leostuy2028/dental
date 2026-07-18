@@ -1,0 +1,21 @@
+survey_order,item_id,image_name,bucket,key_stance,gpt_stance,gem_stance,n_bone_q,reference_answers
+1,bl01,018010.jpg,DISAGREE,none,loss,loss,1,There is no apparent bone loss in the jaw.
+2,bl02,017137.jpg,DISAGREE,none,loss,loss,1,No apparent bone loss is observed in the jaw.
+3,bl03,016955.jpg,KEY_POS,loss,loss,loss,1,Apparent bone loss is observed in the upper and lower jaws.
+4,bl04,016975.jpg,DISAGREE,none,loss,loss,1,No apparent bone loss
+5,bl05,017840.jpg,DISAGREE,none,loss,loss,1,No apparent Bone loss is detected.
+6,bl06,017215.jpg,DISAGREE,none,loss,loss,1,There is no apparent bone loss in the image.
+7,bl07,016839.jpg,DISAGREE,none,loss,loss,1,No apparent bone loss is visible in the image.
+8,bl08,016769.jpg,KEY_POS,loss,loss,loss,1,The upper jaw is suspicious for bone loss.
+9,bl09,016693.jpg,DISAGREE,none,loss,loss,1,"There is no apparent bone loss, with bilateral mandibular canals and maxillary sinuses visible."
+10,bl10,016910.jpg,KEY_POS,loss,loss,loss,1,Monitor the suspicious bone loss in the upper and lower jaws.
+11,bl11,018278.jpg,DISAGREE,none,loss,loss,1,No apparent bone loss
+12,bl12,016920.jpg,AGREE_NORM,none,none,none,1,The imaging features signs of bilateral mandibular canals and bilateral maxillary sinuses.
+13,bl13,018254.jpg,AGREE_NORM,none,none,none,1,"Bilateral mandibular canals are visible, and the maxillary sinuses are partially visible."
+14,bl14,017112.jpg,DISAGREE,none,loss,loss,1,No apparent bone loss is observed in the image.
+15,bl15,017336.jpg,AGREE_NORM,none,none,none,1,Bilateral mandibular canals and maxillary sinus are visible.
+16,bl16,016790.jpg,DISAGREE,none,loss,loss,1,No apparent bone loss in the image.
+17,bl17,016657.jpg,DISAGREE,none,loss,loss,1,No apparent bone loss is observed in the image.
+18,bl18,016655.jpg,KEY_POS,loss,none,none,1,No obvious bone loss.
+19,bl19,016726.jpg,DISAGREE,none,loss,loss,1,No apparent bone loss is observed in the image.
+20,bl20,016650.jpg,KEY_POS,loss,loss,loss,1,Mild bone loss is indicated. Bilateral mandibular canals are visible.
