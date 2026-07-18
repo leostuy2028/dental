@@ -53,7 +53,19 @@ CONCISE_NOTE = (
     "or extra teeth to be safe — naming an extra wrong tooth is penalized. Commit to your best single answer.")
 
 
-def build_user(primer, questions, detection_text=None, overlay=False, concise=False):
+# Scoped precision note (§ open-ended Report/summary precision probe). Unlike CONCISE_NOTE
+# (which globally suppresses listing and was NULL), this conditions on question type: be
+# selective ONLY on summary/report/caption questions, where padding with non-present teeth
+# costs score (measured: gemini score 54% at <=1 extra tooth vs 41% at >=3 extra), and answer
+# specific/count questions fully so recall-driven dimensions do not regress.
+PRECISION_NOTE = (
+    "\n\nWhen a question asks you to SUMMARIZE or write a REPORT or CAPTION of the overall findings, "
+    "report only the teeth and findings you are confident are present; do not add extra teeth or "
+    "findings just to be thorough, because naming a finding that is not there is penalized. For a "
+    "specific question (how many teeth, which tooth, a single named condition), answer it fully as usual.")
+
+
+def build_user(primer, questions, detection_text=None, overlay=False, concise=False, precision=False):
     qs = "\n".join(f"{i+1}. {q}" for i, q in enumerate(questions))
     det = ""
     if overlay:
@@ -64,7 +76,8 @@ def build_user(primer, questions, detection_text=None, overlay=False, concise=Fa
                "which numbered tooth a finding sits on, and to count teeth:\n"
                + str(detection_text).strip() + "\n")
     con = CONCISE_NOTE if concise else ""
-    return f"{primer.strip()}{det}{FORMAT_INSTR}{con}\nQuestions:\n{qs}"
+    prec = PRECISION_NOTE if precision else ""
+    return f"{primer.strip()}{det}{FORMAT_INSTR}{con}{prec}\nQuestions:\n{qs}"
 
 
 EXEMPLAR_INTRO = ("Here are example panoramic X-rays with their findings marked (red boxes) "
@@ -167,8 +180,8 @@ def parse_numbered(raw, n):
 
 
 def answer_image(image_b64, questions, primer, system, provider, model, retries=3,
-                 exemplars=None, detection_text=None, overlay=False, concise=False):
-    user = build_user(primer, questions, detection_text, overlay=overlay, concise=concise)
+                 exemplars=None, detection_text=None, overlay=False, concise=False, precision=False):
+    user = build_user(primer, questions, detection_text, overlay=overlay, concise=concise, precision=precision)
     for a in range(retries):
         try:
             raw = PROVIDERS[provider](image_b64, system, user, model, exemplars)
@@ -199,6 +212,7 @@ def main():
                     help="OpenAI reasoning-model effort (gpt-5*/o*)")
     ap.add_argument("--thinking-budget", type=int, default=0, help="Gemini thinking-token budget (0 = off)")
     ap.add_argument("--concise", action="store_true", help="append CONCISE_NOTE (commit to single best answer, no over-listing)")
+    ap.add_argument("--precision", action="store_true", help="append PRECISION_NOTE (scoped: be selective on summary/report questions only)")
     ap.add_argument("--workers", type=int, default=1, help="parallel image calls in phase 1")
     ap.add_argument("--tag", default=None)
     args = ap.parse_args()
@@ -249,7 +263,7 @@ def main():
         ans, _ = answer_image(img_b64, g["question"].tolist(), primer,
                               COAX_SYSTEM, args.provider, args.model, exemplars=exemplars,
                               detection_text=detections.get(im), overlay=bool(args.overlay_dir),
-                              concise=args.concise)
+                              concise=args.concise, precision=args.precision)
         return im, g, ans
 
     n = len(done)

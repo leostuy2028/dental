@@ -1,0 +1,1743 @@
+index,image_name,question,gt,answer
+11,016642.jpg,What structures are visible in the radiograph?,Bilateral mandibular canals and maxillary sinuses are visible.,"The structures visible in the radiograph include the maxilla, mandible, dentition, bilateral maxillary sinuses, nasal cavity, hard palate, zygomatic arches, and bilateral temporomandibular joints (condyles and articular eminences)."
+12,016642.jpg,What is the radiographic finding at tooth #46?,"Tooth #46 shows signs of a periapical granuloma, crown restoration, and root canal treatment.","Tooth #46 exhibits a highly radiopaque coronal restoration, consistent with a full-coverage prosthetic crown."
+13,016642.jpg,What is the status of the bone architecture in the radiograph?,There is no apparent bone loss in the image.,"The bone architecture is generally stable and within normal limits, showing healthy alveolar bone height with no significant horizontal or vertical bone loss, and intact cortical borders of the mandible, maxilla, and TMJ condyles."
+14,016642.jpg,What is the condition of tooth #28?,Tooth #28 is suspicious for caries and requires clinical re-evaluation.,"Tooth #28 is an unerupted, impacted third molar positioned high in the left maxillary tuberosity."
+15,016642.jpg,Output the positions of wisdom tooth in the panoramic X-ray image.,"[
+{""box_2d"": [1741, 569, 1871, 768], ""tooth_id"": ""38"", ""is_impacted"": “false""},
+{""box_2d"": [514, 577, 716, 754], ""tooth_id"": ""48"", ""is_impacted"": ""true""},
+{""box_2d"": [673, 311, 819, 517], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1663, 334, 1769, 530], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","The wisdom teeth (third molars) are positioned as follows:
+- Tooth #28 (upper left third molar): Impacted and unerupted in the left maxillary tuberosity.
+- Tooth #48 (lower right third molar): Horizontally/mesioangularly impacted in the right mandibular angle/ramus, abutting the distal root of tooth #47.
+- Teeth #18 (upper right) and #38 (lower left) are absent (missing)."
+16,016642.jpg,Can you summarize with findings the panoramic X-ray images presented?,"### Teeth-Specific Observations
+
+1. **General Condition:**
+   - 32 teeth visualized with findings suggestive of clear anatomical definition.
+   - 4 wisdom teeth detected:
+     - #18: Erupted.
+     - #28: Erupted.
+     - #38: Erupted.
+     - #48: Impacted.
+
+2. **Pathological Findings:**
+   - #18: Suspicious for severe caries, suggest clinical re-evaluation.
+   - #28: Suspicious for deep caries, suggest clinical re-evaluation.
+   - #46: Imaging features sign of periapical granuloma.
+
+3. **Historical Interventions:**
+   - #46: Imaging features sign of crown restoration.
+   - #46: Signs of root canal treatment.
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture:**
+   - No apparent bone loss in the image.
+
+2. **Visible Structures:**
+   - Imaging features signs of bilateral mandibular canals.
+   - Maxillary sinuses are visible bilaterally.
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns:**
+   - Periapical lesion at #46 requires endodontic evaluation.
+   - 18,28,38,48 suggest extraction.
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Summary of findings:
+- Partially edentulous dentition with missing teeth #18 and #38.
+- Impacted upper left third molar (#28) and horizontally impacted lower right third molar (#48) abutting tooth #47.
+- Prosthetic crown restoration on tooth #46.
+- Normal alveolar bone levels and unremarkable TMJ and maxillary sinus anatomy."
+35,016652.jpg,What is the immediate intervention required for tooth #46?,The periapical lesion requires endodontic evaluation.,"Tooth #46 requires endodontic treatment (root canal therapy) or extraction, depending on the clinical restorability of the tooth."
+36,016652.jpg,What structures are visible in the imaging?,Bilateral mandibular canals and bilateral maxillary sinuses.,"The structures visible in this panoramic radiograph include the mandible (condyles, coronoid processes, rami, and body), the maxilla, the maxillary sinuses, the nasal cavity, the hard palate, the temporomandibular joints (TMJs), and the dentition."
+37,016652.jpg,What pathological findings are present in tooth #46?,Signs of imaging features suggestive of a periapical granuloma.,"Tooth #46 exhibits deep dental caries extending into the pulp chamber, accompanied by periapical radiolucency (apical periodontitis) at the root apices."
+38,016652.jpg,What is the status of the wisdom tooth #18?,Impacted with signs of impaction.,"Wisdom tooth #18 is fully formed, erupted, and vertically oriented."
+39,016652.jpg,What is the overall structural integrity of tooth #38 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1814, 729]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “false""}
+]","Tooth #38 is structurally intact with no visible dental caries or restorations, but it is mesioangularly impacted."
+40,016652.jpg,Please provide a caption consists of findings for this panoramic X-ray image.,"### Teeth-Specific Observations
+
+1. **General Condition:**
+   - 32 teeth visualized with clear anatomical definition.
+   - 4 wisdom teeth detected:
+     - #18: Impacted (sign of impaction)
+     - #28: Impacted (sign of impaction)
+     - #38: Erupted 
+     - #48: Impacted (sign of impaction)
+
+2. **Pathological Findings:**
+   - #15: Suspicious for caries
+   - #23: Suspicious for caries
+   - #46: Signs of deep caries
+   - #46: Imaging features sign of periapical granuloma
+
+3. **Historical Interventions:**
+   - #16, #46, #47: Signs of fillings
+   - #36: Imaging features sign of crown restoration
+   - #36: Signs of root canal treatment
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture:**
+   - No apparent bone loss observed.
+
+2. **Visible Structures:**
+   - Imaging features signs of bilateral mandibular canals
+   - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns:**
+   - Periapical lesion at #46 requires endodontic evaluation
+  
+2. **Preventive Measures:**
+  - Regular fluoride application and dental hygiene maintenance recommended
+  - Suggest teeth 18, 28, 48 extraction
+
+3. **Follow-up Protocol:**
+  - Bitewing series recommended for interproximal caries detection
+   - Evaluate impacted wisdom teeth (18, #28, #48) for potential complications
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating deep dental caries with pulpal involvement and periapical lesions on tooth #46, a full-coverage crown on tooth #36, a radiopaque restoration on tooth #14, and mesioangularly impacted mandibular third molars (#38 and #48)."
+17,016648.jpg,How many teeth are visualized in the radiograph?,32 teeth are visualized.,30 teeth are visualized in the radiograph.
+18,016648.jpg,What is the status of the wisdom teeth in the patient?,"All four wisdom teeth (18, #28, #38, #48) are erupted.",The upper right wisdom tooth (#18) is present and erupted. The upper left (#28) and lower left (#38) wisdom teeth are congenitally absent (missing). The lower right wisdom tooth (#48) is horizontally/mesioangularly impacted.
+19,016648.jpg,What is the finding for tooth #47?,Tooth #47 shows evidence of a periapical lesion.,"Tooth #47 is in close contact with the crown of the horizontally impacted tooth #48 on its distal aspect, which has resulted in localized alveolar bone loss and potential distal root resorption."
+20,016648.jpg,What is the status of bone architecture in the image?,No apparent bone loss is observed in the image.,"The overall bone architecture is normal, with well-preserved alveolar bone levels and normal trabecular patterns, except for localized bone loss distal to tooth #47 associated with the impacted #48."
+21,016648.jpg,Describe the overall status of tooth #18 based on the panoramic radiograph findings.,"[
+{""Teeth position"": {""point_2d"": [687, 350]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""},
+{""Caries"": {""box_2d"": [628, 364, 701, 454]}},
+{""Deep caries"": {""box_2d"": [615, 228, 764, 481]}},
+{""Periapical lesions (Granuloma)"": {""box_2d"": [691, 219, 744, 269]}}
+]","Tooth #18 is present, erupted, and appears clinically normal with no obvious dental caries, periapical radiolucency, or associated pathology."
+22,016648.jpg,Please provide a caption consists of findings for this panoramic X-ray image.,"### Teeth-Specific Observations
+
+1. **General Condition**:  
+   - 32 teeth visualized with clear anatomical definition.  
+   - 4 wisdom teeth detected:  
+     - #18: Erupted  
+     - #28: Erupted  
+     - #38: Erupted  
+     - #48: Erupted  
+
+2. **Pathological Findings**:  
+   - #18: Suspicious for deep caries; recommend clinical correlation.  
+   - #47 and #48: Shows evidence of a periapical lesion.  
+   - #18: Shows evidence of periapical granuloma.  
+
+3. **Historical Interventions**:  
+   - #18: No historical interventions identified.  
+   - #47: No historical interventions identified.  
+
+---
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture**:  
+   - No apparent bone loss observed in the image.  
+
+2. **Visible Structures**:  
+   - Imaging features signs of bilateral mandibular canals.  
+
+---
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns**:  
+   - Periapical lesion at #47 requires endodontic evaluation.  
+   - Periapical granuloma at #18 needs further investigation.  
+
+2. **Preventive Measures**:  
+   - Tooth #18 extraction
+
+3. **Follow-up Protocol**:  
+   - 6-month recall for monitoring of periapical lesions progression.  
+   - Bitewing series recommended for detailed assessment of interproximal areas.  
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating 30 teeth with congenital absence of the left third molars (#28 and #38). Tooth #18 is erupted, and tooth #48 is horizontally/mesioangularly impacted, abutting the distal surface of tooth #47. The remaining dentition and alveolar bone height are within normal limits."
+6,016641.jpg,What are the findings associated with tooth #36?,"Imaging features sign of crown restoration; obvious for root canal treatment, suspicious for a periapical lesion.",Tooth #36 exhibits a well-defined root canal treatment (endodontic obturation of the root canals) and is restored with a highly radiopaque full-coverage crown.
+7,016641.jpg,What is the observation regarding tooth #38?,"Obvious ious for filling, suspicious for a periapical lesion.",Tooth #38 is mesially tilted (mesioangularly inclined/drifted) into the space of the missing adjacent tooth #37.
+8,016641.jpg,Does the panoramic radiograph reveal any specific tooth involvement trends related to root canal treatment?,"[
+{""tooth_id"": ""36"", ""box_2d"": [1619, 755, 1676, 846]}
+]","No, there is no widespread trend of endodontic treatment; root canal treatment is isolated specifically to a single tooth, #36."
+9,016641.jpg,Which historical treatments can be detected in the panoramic image?,"[
+{""box_2d"": [1531, 698, 1649, 769], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1619, 755, 1676, 846], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1771, 628, 1801, 657], ""tooth_id"": ""38"", ""label"": ""Filling""}
+]","The historical treatments visible include root canal therapy (on #36), a full-coverage crown restoration (on #36), multiple conservative dental restorations/fillings (on various posterior teeth, such as #17, #16, and #46), and past tooth extraction/loss (notably #37)."
+10,016641.jpg,Can you provide a caption consists of findings for this panoramic X-ray scan?,"### Teeth-Specific Observations
+
+1. **General Condition**:
+   - 31 teeth visualized with findings suggestive of clear anatomical definition.
+   - 3 wisdom teeth detected:
+     - #18: Erupted
+     - #28: Erupted
+     - #38: Erupted
+
+2. **Pathological Findings**:
+   - #36: Imaging features sign of periapical granuloma
+
+3. **Historical Interventions**:
+   - #36: Imaging features sign of crown restoration and root canal treatment; suspicious for a periapical lesion, suggest clinical re-evaluation
+   - #38: Sign of filling
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture**:
+   - No apparent bone loss
+
+2. **Visible Structures**:
+   - Imaging features signs of bilateral mandibular canals
+   - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns**:
+   - Periapical lesion at #36 requires endodontic evaluation","Panoramic radiograph demonstrating a root canal-treated and crowned lower left first molar (#36), a missing lower left second molar (#37) with subsequent mesial tilting of the lower left third molar (#38), and several localized dental restorations (fillings) in the posterior teeth."
+0,016640.jpg,How many wisdom teeth are detected in the radiograph and which are they?,"Four wisdom teeth are detected: #18, #28, #38, and #48.","Three wisdom teeth are detected: #18 (upper right third molar), #38 (lower left third molar), and #48 (lower right third molar). All three are mesioangularly tilted/impacted."
+1,016640.jpg,Which teeth are suspected to have caries?,"Teeth #15, and #38 are suspected to have caries.","Dental caries are suspected in teeth #14, #24, #25, #35, #37, and #47."
+2,016640.jpg,Which teeth have a fixed dental prosthesis ?,"Teeth #16, #26, #31, #42, #46, and #41.","Fixed dental prostheses are present on:
+- Single crowns on #16, #26, and #46.
+- A 3-unit fixed bridge in the mandibular anterior region (involving #41, #31, and #32)."
+3,016640.jpg,Which tooth shows signs of a periapical abscess?,Tooth #46 shows signs of a periapical abscess.,Tooth #26 shows clear signs of a periapical abscess (periapical radiolucency).
+4,016640.jpg,Please provide a full description of the condition of tooth #26.,"[
+{""Teeth position"": {""point_2d"": [1576, 470]}},
+{""Crown"": {""box_2d"": [1513, 501, 1631, 588]}},
+{""Root canal treatment"": {""box_2d"": [1548, 375, 1574, 500]}}
+]","Tooth #26 has a radiopaque full-coverage crown and has undergone root canal treatment (endodontic obturation is visible in the root canals). There is a large, well-defined periapical radiolucency surrounding the root apices, indicating a chronic periapical abscess or lesion (endodontic failure)."
+5,016640.jpg,Please write a caption consists of findings for this image.,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+   - 31 teeth visualized with findings suggestive of clear anatomical definition.
+   - 4 wisdom teeth detected:
+      - #18: Erupted (suspected, recommend clinical review)
+      - #28: Erupted (suspected, recommend clinical review)
+      - #38: Erupted (suspected, recommend clinical review)
+      - #48: Erupted (suspected, recommend clinical review)
+
+2. Pathological Findings:
+   - #15: Suspicious for caries
+   - #38: Suspicious for caries
+   - #46: Imaging features sign of periapical abscess
+
+3. Historical Interventions:
+  - #16: Signs of crown and root canal treatment
+   - #46: Signs of crowns
+   - #26: Signs of crown and root canal treatment
+   - #41: Sign of a dental bridge
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+   - Apparent alveolar bone loss in the image at the sites of the upper anterior teeth. 
+
+2. Visible Structures:
+   - Imaging features signs of bilateral mandibular canals.
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+   - Periapical abscess at #46 requires endodontic evaluation.
+   - All suspected caries (15,38) need prompt clinical re-evaluation and possible intervention.
+
+2. Preventive Measures:
+   - Regular fluoride application and oral hygiene maintenance are recommended to prevent progression of carious lesions.
+
+3. Follow-up Protocol:
+   - 3-month recall for monitoring of suspected caries and assessment of periapical lesion resolution.
+   - Bitewing series recommended for detailed evaluation of interproximal areas.
+
+Further clinical correlation with physical examination and patient history is essential for a comprehensive diagnosis.","Panoramic radiograph demonstrating: three impacted third molars (#18, #38, #48); fixed prosthodontics including single crowns on #16, #26, #46, and a 3-unit mandibular anterior bridge (#41-#32); endodontic treatment on #26 with an associated large periapical lesion/abscess; and multiple areas of suspected dental caries (notably #14, #24, #25, #35, #37, #47)."
+23,016649.jpg,What pathological findings are present in the report?,"Signs of deep caries in #38, and imaging features suggestive of a periapical granuloma in #35.",Pathological findings include mild to moderate generalized alveolar bone loss (indicative of periodontitis) and significant mesial tipping/angulation of the mandibular left molars (teeth 36 and 37) into the adjacent space.
+24,016649.jpg,What are the priority concerns in the clinical summary?,"Periapical granuloma at #35 requires endodontic evaluation, and deep caries in #38 necessitates immediate intervention.","The priority concerns in the clinical summary are the periodontal health and bone support around the dental implant at position 35, the management of the mesially tipped mandibular left molars (which are prone to food impaction and localized periodontal pocketing), and the monitoring of the endodontically treated tooth 25."
+25,016649.jpg,"What is the general condition of the teeth, and how many wisdom teeth are detected?","26 teeth are visualized with clear anatomical definition, and 3 wisdom teeth (18, #28, #38) are detected, all of which are erupted (suspected, recommend clinical review).","The general condition of the teeth is fair, characterized by multiple restored teeth, a dental implant, and mild-to-moderate generalized alveolar bone loss. There are 0 wisdom teeth detected, as all four third molars (18, 28, 38, and 48) are absent."
+26,016649.jpg,What historical interventions are noted in the report?,"Signs of fillings in #16,26,38,46; crown restoration in #36; root canal treatment in #26; and a dental implant in #36.","Historical interventions include a dental implant with an implant-supported crown at position 35, root canal treatment (endodontic therapy) on tooth 25, dental restorations (fillings) on teeth 14, 24, 46, and 37, and historical extractions of the third molars and tooth 35."
+27,016649.jpg,Does the panoramic radiograph reveal any specific tooth involvement trends related to crown?,"[
+{""tooth_id"": “36"", ""box_2d"": [1491, 668, 1592, 748]}
+]","Yes, the radiograph reveals specific crown-related trends: there is a single implant-supported prosthetic crown at position 35, and tooth 25 has a crown or large restoration associated with its root canal treatment. Other restored teeth (such as 14, 24, and 46) exhibit conservative intracoronal restorations rather than full-coverage crowns."
+28,016649.jpg,Please caption this panoramic X-ray scan with findings,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 26 teeth visualized with findings suggestive of clear anatomical definition
+    - 3 wisdom teeth detected:
+        - #18: Erupted (suspected, recommend clinical review)
+        - #28: Erupted (suspected, recommend clinical review)
+        - #38: Erupted (suspected, recommend clinical review)
+    - Tooth #23 impacted canine 
+2. Pathological Findings:
+    - #38: Signs of caries
+    - #38: Suspected deep caries
+    - #35: Imaging features suggestive of periapical granuloma
+3. Historical Interventions:
+    - #16,26,38,46: Signs of fillings
+    - #36: Imaging features suggest a crown restoration
+    - #26: Evidence of root canal treatment with post-core restoration
+    - #36: Presence of a dental implant
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - Mild bone loss observed in the anterior maxilla and mandible on the image
+2. Visible Structures:
+    - Imaging features show bilateral mandibular canals
+    - Both maxillary sinuses are visible with clear boundaries
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical granuloma at #35 requires endodontic evaluation
+    - Deep caries in #38 necessitates immediate intervention
+2. Preventive Measures:
+    - Tooth #18 extraction 
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph showing a single dental implant with an implant-supported crown at position 35, endodontic treatment on tooth 25, and multiple radiopaque restorations (including teeth 14, 24, 46, and 37). Notable findings include mesial tipping of the mandibular left molars (36 and 37), mild to moderate generalized alveolar bone loss, and the complete absence of all four third molars."
+29,016650.jpg,"What is the general condition of the teeth, and how many wisdom teeth are erupted?","32 teeth are visualized with clear anatomical definition, and all four wisdom teeth (18, #28, #38, #48) are erupted.","**General condition and wisdom teeth:** The dentition is in poor general condition, characterized by severe dental caries, retained roots, and previous endodontic treatments. There are four wisdom teeth present (#18, #28, #38, and #48), all of which are unerupted or impacted (0 are fully erupted into normal occlusion)."
+30,016650.jpg,"Which teeth show signs of deep caries, and what additional finding is noted in tooth #46?","Teeth #18, #28, #38, #45, #48, and #46 show signs of deep caries. Tooth #46 also has a periapical granuloma.","**Deep caries and tooth #46:** Deep caries and severe crown destruction (retained roots) are visible in teeth #45 and #46. Tooth #46 is severely broken down to the root level and is associated with a large, diffuse area of surrounding bone sclerosis (condensing osteitis/periapical osteosclerosis) in the right posterior mandible."
+31,016650.jpg,"Which teeth have signs of fillings, and which have undergone root canal treatment?","Teeth #16, #17, #35, and #37 have signs of fillings. Teeth #35, #38, #45 and #46 have undergone root canal treatment.","**Fillings and root canal treatments:** 
+   * **Fillings/Restorations:** Visible on teeth #35 and #36.
+   * **Root canal treatments:** Present in teeth #44 (lower right first premolar) and #35 (lower left second premolar)."
+32,016650.jpg,"What is observed regarding the bone architecture, and what structures are visible in the mandibular areas?",Mild bone loss is indicated. Bilateral mandibular canals are visible.,"**Bone architecture and mandibular structures:** The alveolar bone height is generally stable, but there is localized bone loss around the severely decayed teeth (#45, #46). A prominent area of increased bone density (osteosclerosis/condensing osteitis) is observed in the right posterior mandible. Visible mandibular structures include the bilateral condyles, coronoid processes, mandibular rami, mental foramina, and the mandibular canals."
+33,016650.jpg,Identify the mandibular canal in the X-ray image.,"[
+{""box_2d"": [1524, 423, 2129, 1050], ""label"": ""Mandibular canal""},
+{""box_2d"": [329, 391, 740, 979], ""label"": ""Mandibular canal""}
+]","**Mandibular canal identification:** The mandibular canal (inferior alveolar canal) is visible bilaterally as a radiolucent pathway bordered by thin radiopaque cortical lines. It travels downward through the mandibular ramus and anteriorly through the body of the mandible, running beneath the roots of the molars and premolars before terminating at the mental foramen."
+34,016650.jpg,Can you provide a summary consists of findings of this panoramic radiograph?,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 32 teeth visualized with findings suggestive of clear anatomical definition
+    - 4 wisdom teeth detected:
+        - #18: Erupted
+        - #28: Erupted
+        - #38: Erupted
+        - #48: Erupted
+
+2. Pathological Findings:
+    - #45: Signs of caries; Suspicious for deep caries
+    - #38: Signs of caries; Suspicious for deep caries
+    - #48: Signs of caries; Suspicious for deep caries
+    - #18: Signs of caries; Suspicious for deep caries
+    - #28: Signs of caries; Suspicious for deep caries
+    - #46: Signs of deep caries; Periapical granuloma
+
+3. Historical Interventions:
+    - #16,17,35,37: Signs of fillings
+    - #35,38: Signs of root canal treatment
+    - #45,46: Signs of root canal treatment
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - Mild bone loss observed in the anterior maxilla and mandible on the image
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Tooth #46 extraction
+    - Tooth #18,28,38,48 extraction
+    - Deep caries in #45 need immediate intervention
+2. Preventive Measures:
+    - Monitor caries at #45 with radiographic follow-up
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","**Summary of findings:**
+   * **Impacted Teeth:** All four third molars (#18, #28, #38, #48) are impacted or unerupted.
+   * **Caries & Retained Roots:** Severe dental caries and retained roots at #45 and #46.
+   * **Endodontic Treatments:** Root canal fillings are present in #44 and #35.
+   * **Restorations:** Radiopaque restorations are noted on #35 and #36.
+   * **Bone Pathology:** Significant focal osteosclerosis (condensing osteitis) in the right posterior mandible surrounding the roots of #46 and #47, secondary to chronic dental infection.
+   * **Anatomy:** Normal condylar morphology and clear visualization of the mandibular canals bilaterally."
+59,016690.jpg,Which teeth show signs of fillings?,"#16, #26, #36, and #46 show signs of fillings.","Teeth 15, 25, 35, and 45 (the upper right, upper left, lower left, and lower right second premolars) show radiopaque fillings."
+60,016690.jpg,What is the status of the wisdom teeth in this patient?,"All four wisdom teeth (18, #28, #38, #48) are erupted.","All four wisdom teeth (third molars: 18, 28, 38, and 48) are absent (extracted or congenitally missing)."
+61,016690.jpg,"What is the general condition of the teeth, and how many are visualized?",32 teeth are visualized with clear anatomical definition.,"There are 28 teeth visualized. The general condition of the dentition is good, with well-maintained alveolar bone levels and localized restorations (fillings) on the second premolars, with no obvious signs of active gross decay or severe periodontal disease."
+62,016690.jpg,What preventive measure is emphasized to prevent caries progression?,Emphasize oral hygiene practices to prevent caries progression.,"To prevent caries progression, the emphasized preventive measures include maintaining excellent oral hygiene (twice-daily brushing with fluoride toothpaste and daily flossing), routine professional dental cleanings, dietary modification (reducing sugar and acidic food intake), and regular clinical and radiographic monitoring."
+63,016690.jpg,Output the positions of mandibular canal in the panoramic X-ray image.,"[
+{""box_2d"": [1584, 616, 2147, 1018], ""label"": ""Mandibular canal""},
+{""box_2d"": [317, 478, 768, 1014], ""label"": ""Mandibular canal""}
+]","The mandibular canals are visualized bilaterally as radiolucent pathways bordered by thin radiopaque lines. They originate at the mandibular foramina on the medial aspect of the ascending rami, course downward and forward through the mandibular body inferior to the roots of the molars and premolars, and terminate anteriorly at the mental foramina, located near the apices of the premolars (around teeth 34/35 on the left and 44/45 on the right)."
+64,016690.jpg,Please caption this panoramic X-ray scan with findings,"### Teeth-Specific Observations
+
+1. **General Condition**:
+    - 32 teeth visualized with findings suggestive of clear anatomical definition.
+    - 4 wisdom teeth detected:
+        - #18: Erupted
+        - #28: Erupted
+        - #38: Erupted
+        - #48: Erupted
+
+2. **Historical Interventions**:
+    - #16: Sign of filling
+    - #26: Sign of filling
+    - #36: Sign of filling
+    - #46: Sign of filling and root canal treatment
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture**:
+    - Suspicious for bone loss in the upper jaw
+
+2. **Visible Structures**:
+    - Imaging features signs of bilateral mandibular canals
+    - Well-defined maxillary sinuses bilaterally
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns**:
+    - Periapical lesion at #16 requires endodontic evaluation
+    - Bone loss in the upper jaw warrants further investigation
+
+2. **Preventive Measures**:
+    - Monitor the erupted wisdom teeth for potential complications
+    - Emphasize oral hygiene practices to prevent caries progression
+
+3. **Follow-up Protocol**:
+    - 6-month recall for monitoring of bone loss
+    - Bitewing series recommended for comprehensive caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating 28 teeth present with all third molars (18, 28, 38, 48) missing. Radiopaque dental restorations (fillings) are noted on teeth 15, 25, 35, and 45. Alveolar bone heights are within normal limits, and there are no obvious periapical radiolucencies or gross pathology."
+47,016657.jpg,What is the status of the wisdom teeth as per the report?,"Teeth #48, #38, and #18 are erupted (suspected, recommend clinical review), and tooth #28 is impacted (suspected, recommend clinical review).","The wisdom teeth (#18, #28, #38, and #48) are present and impacted. Specifically, #28, #38, and #48 exhibit mesioangular to horizontal impactions."
+48,016657.jpg,Which teeth show signs of fillings?,Tooth #26 show signs of fillings.,"Teeth #26, #27, #37, and #47 show radiopaque restorations consistent with dental fillings."
+49,016657.jpg,What is observed regarding the bone architecture in the jaw?,No apparent bone loss is observed in the image.,"The bone architecture of the maxilla and mandible appears normal and healthy, with stable alveolar bone levels and no signs of generalized periodontal bone loss or gross osteolytic lesions."
+50,016657.jpg,What is recommended for the suspected caries?,Monitor suspected caries with radiographic follow-up.,Clinical correlation and intraoral bitewing radiographs are recommended to confirm and evaluate any suspected dental caries.
+51,016657.jpg,What radiographic features are visible in tooth #35 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [1586, 829]}},
+]",Tooth #35 exhibits a radiopaque full-coverage prosthetic crown and a completed root canal treatment (endodontic obturation).
+52,016657.jpg,What are the findings presented in this panoramic X-ray scan?,"### Teeth-Specific Observations
+
+1. **General Condition**:
+   - 32 teeth visualized with clear anatomical definition.
+   - 4 wisdom teeth detected:
+     - #48: Erupted (suspected, recommend clinical review)
+     - #38: Erupted (suspected, recommend clinical review)
+     - #18: Erupted (suspected, recommend clinical review)
+     - #28: Impacted (suspected, recommend clinical review)
+
+2. **Historical Interventions**:
+   - #26: Sign of fillings.
+   - #37: Imaging features sign of crown restoration.
+   - #37: Signs of root canal treatment with post-core restoration.
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture**:
+   - No apparent bone loss in the image.
+
+2. **Visible Structures**:
+   - Imaging features signs of bilateral mandibular canals.
+
+### Clinical Summary & Recommendations
+
+1. **Preventive Measures**:
+   - Monitor suspected caries with radiographic follow-up.
+
+2. **Follow-up Protocol**:
+   - 6-month recall for caries monitoring (particularly suspected areas).
+   - Bitewing series recommended for interproximal caries detection.
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","The findings on this panoramic X-ray include:
+- Impacted third molars (#18, #28, #38, and #48).
+- Missing tooth #36.
+- Endodontically treated tooth #35 with a prosthetic crown.
+- Dental restorations (fillings) on teeth #26, #27, #37, and #47.
+- Normal alveolar bone levels and healthy jaw bone architecture."
+41,016655.jpg,How many teeth are visualized in the radiograph?,32 teeth.,"**32 teeth** are visualized in the radiograph (a complete permanent dentition, including all four third molars)."
+42,016655.jpg,What is the condition of tooth #18?,Erupted.,"Tooth #18 is **impacted** (specifically, it is unerupted and distoangularly impacted/positioned high in the right maxillary tuberosity)."
+43,016655.jpg,What is the suspected finding in the upper jaw bone architecture?,No obvious bone loss.,"There is a well-defined, dome-shaped radiopaque lesion arising from the floor of the left maxillary sinus, which is highly suggestive of a **mucous retention cyst (antral pseudocyst)**."
+44,016655.jpg,Which tooth shows imaging features of a periapical abscess?,#41.,**None of the teeth** show imaging features of a periapical abscess; the periapical regions of all teeth appear healthy with intact lamina dura and no pathological periapical radiolucencies.
+45,016655.jpg,Please provide a full description of the condition of tooth #18.,"[
+{""Teeth position"": {""point_2d"": [618, 426]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": “False""}
+]","Tooth #18 is a **permanent upper right third molar** that is **unerupted and distoangularly impacted** within the maxillary tuberosity. Its crown is positioned superiorly and tilted distally relative to the adjacent second molar (#17), with no signs of associated pericoronal pathology or root resorption of the adjacent tooth."
+46,016655.jpg,Please caption this panoramic X-ray scan with findings.,"### Teeth-Specific Observations
+
+1. **General Condition:**
+   - 32 teeth are visualized with clear anatomical definition.
+   - 4 wisdom teeth detected:
+     - #18: Erupted
+     - #28: Erupted
+     - #38: Erupted
+     - #48: Impacted (sign of impaction)
+
+2. **Pathological Findings:**
+   - #41: Imaging features sign of periapical abscess
+
+3. **Historical Interventions:**
+   - No historical interventions detected.
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture:**
+  - No apparent bone loss observed
+
+2. **Visible Structures:**
+   - Imaging features signs of bilateral mandibular canals
+   - Maxillary sinuses are visible bilaterally
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns:**
+   - Periapical abscess at #41 requires endodontic evaluation
+   - Wisdom teeth (18, #28, #38, #48) may necessitate surgical intervention
+
+2. **Preventive Measures:**
+  - Evaluate wisdom teeth for potential complications
+
+3. **Follow-up Protocol:**
+   - Immediate referral to an oral surgeon for assessment of impacted teeth
+   - 3-month recall for monitoring of the periapical abscess post-treatment
+   - Full-mouth series recommended for comprehensive evaluation of bone health
+
+Further clinical correlation with physical examination and patient history is essential for a definitive diagnosis and treatment planning.","**Panoramic X-ray Caption:** Complete permanent dentition of 32 teeth with no visible dental caries, restorations, or periapical pathology. Bilateral impaction of the maxillary third molars (#18 and #28) and mesioangular impaction of the mandibular right third molar (#48). A well-defined, dome-shaped radiopacity is noted"
+53,016659.jpg,What pathological findings are noted in tooth #46?,Tooth #46 shows signs of deep caries and a periapical abscess.,"Tooth #46 exhibits moderate-to-severe horizontal alveolar bone loss (periodontal bone loss) extending toward the middle third of the root, along with mild widening of the periodontal ligament space."
+54,016659.jpg,What is the status of the wisdom teeth?,"All four wisdom teeth (18, #28, #38, #48) are erupted.","The mandibular wisdom teeth (#38 and #48) are mesioangularly impacted. The maxillary right wisdom tooth (#18) is present and erupted, while the maxillary left wisdom tooth (#28) is missing."
+55,016659.jpg,What is observed in the bone architecture of the lower jaw?,Signs of bone loss are present in the lower jaw.,"The bone architecture of the lower jaw shows a large, well-defined, unilocular radiolucent lesion in the left mandibular ramus (highly suggestive of an odontogenic cyst or tumor, such as an odontogenic keratocyst or ameloblastoma). Additionally, there is generalized horizontal alveolar bone loss throughout the mandibular arch."
+56,016659.jpg,What is recommended regarding the missing tooth region?,Monitor the missing tooth region on the upper side for potential prosthetic needs.,"For the missing tooth region (specifically the space of the missing upper left first molar, #26), prosthetic rehabilitation is recommended—such as a dental implant, a fixed partial denture (bridge), or a removable partial denture—to restore masticatory function and prevent the tilting of adjacent teeth (#25 and #27) or supraeruption of opposing teeth."
+57,016659.jpg,Identify areas showing the bone loss in the panoramic radiograph.,"[
+{""box_2d"": [651, 641, 1823, 833], ""label"": ""Bone loss"", ""side"": ""lower""}
+]","Bone loss is identified in two main areas:
+- Generalized horizontal alveolar bone loss (periodontal bone loss) affecting the crestal bone of both the maxillary and mandibular arches, most notably in the mandibular anterior and premolar regions.
+- A large, localized area of osteolytic bone loss (radiolucency) in the left mandibular ramus."
+58,016659.jpg,Can you provide a caption consists of findings for this panoramic X-ray scan?,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 31 teeth visualized with findings suggestive of clear anatomical definition
+    - 4 wisdom teeth detected:
+        - #18: Erupted (sign of presence)
+        - #28: Erupted (sign of presence)
+        - #38: Erupted (sign of presence)
+        - #48: Erupted (sign of presence)
+    - 1 missing tooth on the upper side
+
+2. Pathological Findings:
+    - #46: Suspected deep caries (suggest clinical re-evaluation)
+    - #46: Sign of periapical abscess
+
+3. Historical Interventions:
+    - #17: Sign of filling
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - Sign of bone loss in the lower jaw
+
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Deep caries at #46 requires immediate intervention
+    - Periapical lesion at #46 necessitates endodontic evaluation
+
+2. Preventive Measures:
+    - Monitor the missing tooth on the upper side for potential prosthetic needs
+
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating a large, well-defined unilocular radiolucent lesion in the left mandibular ramus, mesioangular impaction of the bilateral mandibular third molars (#38 and #48), a missing maxillary left first molar (#26), a radiopaque restoration on the maxillary right first molar (#16), and generalized horizontal alveolar bone loss."
+77,016708.jpg,What jaw-specific observations are noted in the report?,"Apparent bone loss in the posterior maxilla (upper posterior jaw) is observed, and the bilateral mandibular canals and maxillary sinuses are clearly visible.","Alveolar bone resorption (atrophy) is observed in the edentulous regions of both the maxilla and mandible, particularly in the posterior segments. The mandibular condyles, coronoid processes, and maxillary sinuses appear within normal limits."
+78,016708.jpg,What is the general condition of the teeth as observed in the report?,"22 teeth are visualized with clear anatomical definition, and there is 1 missing tooth region in the upper jaw.","The dentition shows partial edentulism with multiple missing teeth, localized alveolar bone loss, mesial tipping of remaining molars (#17 and #27) into adjacent edentulous spaces, active periapical pathology, and evidence of restorative and reconstructive treatments including dental implants and endodontic therapy."
+79,016708.jpg,What historical interventions are evident in tooth #36?,Tooth #36 shows evidence of a crown restoration and root canal treatment.,Tooth #36 exhibits a radiopaque full-coverage prosthetic crown and previous endodontic (root canal) treatment with obturated root canals.
+80,016708.jpg,What pathological findings are noted in teeth #34 and #24?,24 and 34 show signs of a periapical lesion.,"Both teeth #34 and #24 exhibit periapical radiolucencies (periapical lesions/apical periodontitis) at their root apices, indicating chronic inflammatory pathology."
+81,016708.jpg,Detect missing teeth in the panoramic image.,"[
+{""box_2d"": [1481, 441, 1682, 602], ""side"": ""upper""}
+]","The missing teeth are #18, #16, #15, #14, #25, #26, #28, #38, #45, #46, #47, and #48."
+82,016708.jpg,What are the findings presented in this panoramic X-ray scan?,"### Teeth-Specific Observations
+
+1. General Condition:
+    - 22 teeth visualized with findings suggestive of clear anatomical definition
+    - Missing tooth: Upper jaw (suspected, recommend clinical review)
+
+2. Pathological Findings:
+    - #34: Signs of periapical lesion
+    - #24: Suspicious for periapical lesion
+
+3. Historical Interventions:
+    - #36: Shows evidence of crown restoration and root canal treatment
+    - #15: Imaging features sign of dental implant
+    - #47: Signs of dental implant
+    - #45: Imaging features sign of dental implant
+    - #46: Shows evidence of dental implant
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - Bone loss in the posterior maxilla (upper posterior jaw) 
+
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+    - Maxillary sinuses are clearly visible bilaterally
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical lesion at #34 requires endodontic evaluation
+    - Periapical lesion at #24 needs further investigation
+
+2. Preventive Measures:
+    - Monitor the missing tooth in the upper jaw with radiographic follow-up
+
+3. Follow-up Protocol:
+    - 6-month recall for monitoring periapical lesions
+    - Bitewing series recommended for detailed assessment of interproximal areas
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","The findings presented in this panoramic X-ray scan are:
+- Partial edentulism with missing teeth #18, #16, #15, #14, #25, #26, #28, #38, #45, #46, #47, and #48.
+- Four dental implants: one in the upper right quadrant (maxillary right premolar region) and three in the lower right quadrant (mandibular right premolar/molar region).
+- Root canal treatment and a prosthetic crown on tooth #36.
+- Periapical lesions (radiolucencies) at the root apices of teeth #24 and #34.
+- Mesial tipping of teeth #17 and #27 into adjacent edentulous spaces.
+- Alveolar bone resorption in the edentulous areas."
+65,016693.jpg,What is observed regarding bone architecture and visible structures?,"There is no apparent bone loss, with bilateral mandibular canals and maxillary sinuses visible.","The bone architecture shows a normal trabecular pattern with mild generalized horizontal alveolar bone loss, particularly in the posterior mandibular regions. The mandibular cortical borders, ramus, and condyles appear bilaterally symmetrical and intact. The maxillary sinuses show normal pneumatization without obvious pathology."
+66,016693.jpg,What is the finding for tooth #47?,Tooth #47 is suspicious for caries with a confidence score less than 0.80.,"Tooth #47 is intact but has a mesioangularly impacted third molar (#48) abutting its distal surface, which has resulted in localized distal alveolar bone loss and potential distal cervical caries/resorption."
+67,016693.jpg,How many wisdom teeth are present and what is their status?,"There are four wisdom teeth: #18 and #28 are erupted, while #38 and #48 are impacted.",Four wisdom teeth are present. The maxillary third molars (#18 and #28) are erupted. The mandibular third molars (#38 and #48) are mesioangularly impacted and abutting the distal surfaces of the adjacent second molars (#37 and #47).
+68,016693.jpg,What is the condition of tooth #21?,Tooth #21 has a periapical abscess and signs of both crown restoration and root canal treatment.,"Tooth #21 is endodontically treated (root canal filling and post visible) and restored with a radiopaque crown that is part of a splinted three-unit anterior bridge/restoration spanning #12, #11, and #21."
+69,016693.jpg,Please detect the teeth in the panoramic image.,"[
+{""point_2d"": [1712, 526], ""tooth_id"": ""26""},
+{""point_2d"": [1626, 534], ""tooth_id"": ""25""},
+{""point_2d"": [794, 520], ""tooth_id"": ""16""},
+{""point_2d"": [1132, 510], ""tooth_id"": ""12""},
+{""point_2d"": [678, 752], ""tooth_id"": ""47""},
+{""point_2d"": [964, 504], ""tooth_id"": ""14""},
+{""point_2d"": [1555, 530], ""tooth_id"": ""24""},
+{""point_2d"": [1328, 776], ""tooth_id"": ""32""},
+{""point_2d"": [1086, 783], ""tooth_id"": ""43""},
+{""point_2d"": [812, 774], ""tooth_id"": ""46""},
+{""point_2d"": [668, 506], ""tooth_id"": ""17""},
+{""point_2d"": [522, 680], ""tooth_id"": ""48""},
+{""point_2d"": [920, 788], ""tooth_id"": ""45""},
+{""point_2d"": [1301, 515], ""tooth_id"": ""21""},
+{""point_2d"": [1778, 764], ""tooth_id"": ""37""},
+{""point_2d"": [1048, 498], ""tooth_id"": ""13""},
+{""point_2d"": [1272, 768], ""tooth_id"": ""31""},
+{""point_2d"": [890, 515], ""tooth_id"": ""15""},
+{""point_2d"": [580, 488], ""tooth_id"": ""18""},
+{""point_2d"": [1471, 516], ""tooth_id"": ""23""},
+{""point_2d"": [1389, 530], ""tooth_id"": ""22""},
+{""point_2d"": [1210, 511], ""tooth_id"": ""11""},
+{""point_2d"": [1926, 708], ""tooth_id"": ""38""},
+{""point_2d"": [1005, 789], ""tooth_id"": ""44""},
+{""point_2d"": [1656, 794], ""tooth_id"": ""36""},
+{""point_2d"": [1903, 497], ""tooth_id"": ""28""},
+{""point_2d"": [1154, 758], ""tooth_id"": ""42""},
+{""point_2d"": [1398, 798], ""tooth_id"": ""33""},
+{""point_2d"": [1826, 512], ""tooth_id"": ""27""},
+{""point_2d"": [1213, 762], ""tooth_id"": ""41""},
+{""point_2d"": [1476, 801], ""tooth_id"": ""35""}
+]","The teeth present in this panoramic image are:
+- Maxilla: #18, #17, #16, #15, #14, #13, #12, #11, #21, #22, #23, #24, #25, #26, #27, and #28.
+- Mandible: #48, #47, #46, #45, #44, #43, #42, #41, #31, #32, #33, #34, #35, #37, and #38 (tooth #36 is missing)."
+70,016693.jpg,Can you provide a caption consists of findings for this panoramic X-ray scan?,"### Teeth-Specific Observations
+
+1. General Condition:
+    - 31 teeth visualized with findings suggestive of clear anatomical definition.
+    - 4 wisdom teeth detected:
+        - #18: Non-impacted, erupted (evident based on high confidence).
+        - #28: Non-impacted, erupted (evident based on high confidence).
+        - #38: Impacted (evident based on high confidence).
+        - #48: Impacted (evident based on high confidence).
+    - 1 missing tooth detected on the lower jaw (side: lower).
+
+2. Pathological Findings:
+    - #47: Suspicious for caries (confidence score <0.80, suggests clinical re-evaluation).
+    - #21: Imaging features sign of periapical abscess (confidence score ≥0.80).
+
+3. Historical Interventions:
+    - #12: Sign of crown restoration.
+    - #12: Sign of root canal treatment.
+    - #21: Sign of crown restoration.
+    - #21: Sign of root canal treatment.
+    - #11: Sign of crown restoration.
+    - #11: Sign of root canal treatment.
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - No apparent bone loss in the image.
+
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals.
+    - Imaging features signs of bilateral maxillary sinuses.
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical abscess at #21 requires immediate endodontic evaluation.
+
+2. Preventive Measures:
+    - Monitor suspicious caries at #47 with radiographic follow-up.
+
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring (particularly suspicious areas).
+    - Bitewing series recommended for interproximal caries detection.
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph of an adult patient showing 31 teeth present with tooth #36 missing. Key findings include a three-unit anterior bridge/splinted crowns on endodontically treated teeth #12, #11, and #21, bilateral mesioangular impaction of the mandibular third molars (#38 and #48) abutting the adjacent second molars, and mild generalized horizontal alveolar bone loss."
+71,016694.jpg,What pathological findings are present in the radiograph?,A periapical lesion is present at tooth #34.,"Pathological findings include generalized moderate-to-severe horizontal alveolar bone loss (indicative of periodontitis), partial edentulism (multiple missing teeth), and a retained root tip/severely broken-down tooth in the upper right quadrant (likely #15)."
+72,016694.jpg,What historical interventions are noted for tooth #44?,Tooth #44 shows signs of crown and root canal treatment.,Tooth #44 has undergone endodontic therapy (root canal treatment) and is restored with a full-coverage crown.
+73,016694.jpg,What is the general condition of the teeth?,"21 teeth are visualized with clear anatomical definition, and there is a suspected missing tooth on the upper side.","The remaining teeth are heavily compromised and highly restored, characterized by extensive tooth loss (partial edentulism), multiple crowns, fixed bridges, endodontic treatments, and generalized periodontal disease."
+74,016694.jpg,What is the condition of the bone architecture in the jaw?,No apparent bone loss is detected in the image.,"The bone architecture shows generalized moderate-to-severe horizontal alveolar bone resorption (bone loss) in both the maxilla and mandible, consistent with chronic periodontitis, along with alveolar ridge atrophy in the edentulous areas."
+75,016694.jpg,Identify the historical treatments in the X-ray image.,"[
+{""box_2d"": [1006, 705, 1088, 807], ""tooth_id"": ""44"", ""label"": ""Crown""},
+{""box_2d"": [1029, 806, 1044, 875], ""tooth_id"": ""44"", ""label"": ""Root canal treatment""},
+{""box_2d"": [796, 693, 934, 775], ""tooth_id"": ""46"", ""label"": ""Crown""},
+{""box_2d"": [1558, 709, 1679, 791], ""tooth_id"": ""36"", ""label"": ""Crown""},
+{""box_2d"": [1652, 786, 1688, 849], ""tooth_id"": ""36"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1415, 712, 1491, 812], ""tooth_id"": ""34"", ""label"": ""Crown""},
+{""box_2d"": [1481, 710, 1565, 829], ""tooth_id"": ""35"", ""label"": ""Crown""},
+{""box_2d"": [1538, 833, 1551, 869], ""tooth_id"": ""35"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1595, 568, 1734, 671], ""tooth_id"": ""26"", ""label"": ""Crown""},
+{""box_2d"": [1661, 495, 1676, 571], ""tooth_id"": ""26"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1210, 712, 1262, 805], ""tooth_id"": ""41"", ""label"": ""Crown""},
+{""box_2d"": [1084, 714, 1157, 803], ""tooth_id"": ""43"", ""label"": ""Crown""},
+{""box_2d"": [1107, 805, 1121, 895], ""tooth_id"": ""43"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1532, 584, 1618, 671], ""tooth_id"": ""25"", ""label"": ""Crown""},
+{""box_2d"": [1563, 455, 1600, 588], ""tooth_id"": ""25"", ""label"": ""Root canal treatment""},
+{""box_2d"": [927, 522, 941, 583], ""tooth_id"": ""15"", ""label"": ""Root canal treatment""},
+{""box_2d"": [719, 583, 798, 676], ""tooth_id"": ""17"", ""label"": ""Crown""},
+{""box_2d"": [692, 483, 727, 585], ""tooth_id"": ""17"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1356, 716, 1425, 826], ""tooth_id"": ""33"", ""label"": ""Crown""},
+{""box_2d"": [1392, 828, 1407, 907], ""tooth_id"": ""33"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1455, 586, 1549, 674], ""tooth_id"": ""24"", ""label"": ""Crown""},
+{""box_2d"": [793, 556, 910, 665], ""tooth_id"": ""16"", ""label"": ""Crown""},
+{""box_2d"": [1666, 683, 1794, 760], ""tooth_id"": ""37"", ""label"": ""Crown""},
+{""box_2d"": [1753, 744, 1840, 817], ""tooth_id"": ""37"", ""label"": ""Root canal treatment""},
+{""box_2d"": [1056, 418, 1105, 568], ""tooth_id"": ""13"", ""label"": ""Implant""},
+{""box_2d"": [1303, 716, 1358, 827], ""tooth_id"": ""31"", ""label"": ""Crown""},
+{""box_2d"": [1149, 715, 1212, 806], ""tooth_id"": ""42"", ""label"": ""Crown""},
+{""box_2d"": [1718, 571, 1845, 645], ""tooth_id"": ""27"", ""label"": ""Crown""},
+{""box_2d"": [1766, 474, 1784, 571], ""tooth_id"": ""27"", ""label"": ""Root canal treatment""}
+]","Historical treatments visible include a dental implant fixture in the upper right anterior region, multiple fixed dental bridges (maxillary left, mandibular left, and mandibular anterior), multiple root canal fillings (some with post-and-core restorations), and previous tooth extractions."
+76,016694.jpg,Describe the findings of the panoramic X-ray image you see.,"### Teeth-Specific Observations
+
+1. **General Condition**:  
+   - 21 teeth visualized with findings suggestive of clear anatomical definition.  
+   - Suggests missing tooth on the upper side (recommend clinical review).  
+
+2. **Pathological Findings**:  
+   - #45: Suggests caries.  
+   - #34: Imaging features sign of periapical abscess.  
+
+3. **Historical Interventions**:  
+   - #44: Sign of crown and root canal treatment.  
+   - #46: Sign of crown.  
+   - #36: Sign of crown and root canal treatment.  
+   - #34: Sign of crown.  
+   - #35: Sign of crown and root canal treatment.  
+   - #41: Sign of crown.  
+   - #43: Sign of crown and root canal treatment.  
+   - #26: Sign of crown and root canal treatment.  
+   - #25: Sign of crown and root canal treatment.  
+   - #15: Sign of root canal treatment.  
+   - #17: Sign of crown and root canal treatment.  
+   - #33: Sign of crown and root canal treatment.  
+   - #24: Sign of crown.  
+   - #16: Sign of crown.  
+   - #37: Sign of crown and root canal treatment.  
+   - #13: Sign of implant.  
+   - #31: Sign of crown.  
+   - #42: Sign of crown.  
+   - #27: Sign of crown and root canal treatment.  
+
+---
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture**:  
+   - Mild apparent bone loss in the image.  
+
+2. **Visible Structures**:  
+   - Imaging features signs of bilateral mandibular canals.  
+   - Imaging features signs of bilateral maxillary sinuses.  
+
+---
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns**:  
+   - Periapical abscess at #34 requires endodontic evaluation.  
+
+2. **Preventive Measures**:  
+   - Monitor the suspected missing tooth on the upper side with radiographic follow-up.  
+
+3. **Follow-up Protocol**:  
+   - 6-month recall for monitoring of periapical lesion progression.  
+   - Bitewing series recommended for interproximal caries detection.  
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","The panoramic radiograph shows a partially edentulous adult dentition with extensive prosthodontic and endodontic rehabilitation. Key findings include a single osseointegrated dental implant in the maxillary right anterior region, multiple fixed bridges in the upper left, lower left, and lower anterior regions, several root canal-treated teeth (including #44 and mandibular anteriors), a retained root in the upper right quadrant, and generalized moderate-to-severe horizontal alveolar bone loss. The bilateral temporomandibular joints and visualized maxillary sinuses appear within normal limits."
+95,016723.jpg,What is the clinical recommendation for tooth #17?,Endodontic evaluation is required for tooth #17.,Clinical and radiographic monitoring (follow-up) to evaluate the long-term stability and healing of the root canal treatment and restoration on tooth #17.
+96,016723.jpg,What is the condition of the bone architecture?,Normal bone architecture is noted.,"The bone architecture is healthy and well-preserved, showing normal trabecular patterns and stable alveolar bone levels with no signs of significant horizontal or vertical bone loss."
+97,016723.jpg,Which tooth is identified as a wisdom tooth?,#28 is identified as the wisdom tooth.,Tooth #38 (lower left third molar) is identified as a mesioangularly impacted wisdom tooth. Tooth #28 (upper left third molar) is also present.
+98,016723.jpg,Which historical treatments could be detected in the panoramic image?,"[
+{""box_2d"": [717, 503, 742, 584], ""tooth_id"": ""17"", ""label"": ""Root canal treatment""}
+]",Historical treatments detected include endodontic therapy (root canal filling) and a large radiopaque restoration (filling or crown) on tooth #17.
+99,016723.jpg,Describe the findings of the panoramic X-ray image you see.,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+   - 29 teeth visualized with findings suggestive of clear anatomical definition
+   - 1 wisdom tooth detected:
+     - #28: Erupted (score: 0.88, suggests clinical re-evaluation)
+
+2. Historical Interventions:
+   - #17: Signs of root canal treatment
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+   - No apparent bone loss in the image
+
+2. Visible Structures:
+   - Imaging features signs of bilateral mandibular canals
+   - Maxillary sinuses appear normal
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+   - Periapical lesion at #17 requires endodontic evaluation
+
+2. Preventive Measures:
+   - Monitor the erupted wisdom tooth #28 with radiographic follow-up
+
+3. Follow-up Protocol:
+   - 6-month recall for monitoring
+   - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","The panoramic radiograph shows a permanent dentition with missing third molars #18 and #48. Tooth #38 is a mesioangularly impacted wisdom tooth, and tooth #28 is also present and impacted/erupting. Tooth #17 has undergone root canal treatment and has a large radiopaque restoration. The alveolar bone levels are healthy and well-preserved throughout, and the surrounding anatomical structures, including the mandibular condyles and maxillary sinuses, appear within normal limits."
+89,016713.jpg,What is the general condition of the teeth and the status of the wisdom teeth?,"31 teeth are visualized. Wisdom teeth #18, #28, #48 are erupted; #38 is suspicious for impaction.","The general condition of the dentition is fair, with stable alveolar bone levels and some existing restorations. The upper wisdom teeth (18 and 28) are congenitally absent or have been extracted. The lower wisdom teeth (38 and 48) are present and horizontally/mesioangularly impacted, abutting the distal surfaces of the adjacent second molars (37 and 47)."
+90,016713.jpg,Which teeth have fillings and require clinical review?,#17 has a filling.,"Tooth 16 (upper right first molar) has a prominent radiopaque filling on its mesial/occlusal surface. Additionally, the impacted lower third molars (38 and 48) and the adjacent second molars (37 and 47) require clinical and radiographic review to assess for periodontal pocketing, caries, or root resorption."
+91,016713.jpg,What jaw-specific structures are visible in the radiograph?,Mandibular canal and bilateral maxillary sinuses are visible.,"The visible jaw-specific structures include the mandible (including the bilateral condyles, coronoid processes, rami, body, and mandibular canal), the maxilla (alveolar process and hard palate), the bilateral temporomandibular joints (TMJs), the nasal cavity (including the nasal septum and inferior conchae), and the bilateral maxillary sinuses."
+92,016713.jpg,Which teeth have crown restorations?,#11 and #21 have crown restorations.,"Teeth 11 and 21 (the maxillary central incisors) have radiopaque, full-coverage crown restorations."
+93,016713.jpg,Identify areas showing the maxillary sinus in the panoramic radiograph.,"[
+{""box_2d"": [1372, 33, 1806, 421], ""label"": ""Maxillary sinus""},
+{""box_2d"": [657, 42, 1013, 401], ""label"": ""Maxillary sinus""}
+]","The maxillary sinuses are visible as large, bilateral, radiolucent (dark) air-filled cavities located superior to the roots of the maxillary premolars and molars, outlined by thin, radiopaque cortical borders."
+94,016713.jpg,Can you provide a summary consists of findings of this panoramic radiograph?,"### Teeth-Specific Observations
+
+1. **General Condition:**
+   - 31 teeth visualized with clear anatomical definition.
+   - 4 wisdom teeth detected:
+     - #48: Erupted.
+     - #18: Erupted.
+     - #28: Erupted.
+     - #38: Suspicious for impaction; recommend clinical re-evaluation.
+
+2. **Pathological Findings:**
+   - #17: Suspicious for caries; suggest clinical re-evaluation.
+   - #27: Suspicious for caries; suggest clinical re-evaluation.
+
+3. **Historical Interventions:**
+   - #11: Sign of crown restoration.
+   - #17: Signs of filling and root canal treatment.
+   - #21: Sign of crown restoration.
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture:**
+   - No apparent bone loss visible.
+
+2. **Visible Structures:**
+   - Imaging features sign of mandibular canal.
+   - Imaging features signs of bilateral maxillary sinuses.
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns:**
+  - Caries at #27 needs intervention.
+
+2. **Preventive Measures:**
+   - Monitor suspected caries at #17 and #27 with radiographic follow-up.
+
+3. **Follow-up Protocol:**
+   - 6-month recall for caries monitoring.
+   - Bitewing series recommended for interproximal caries detection.
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","**Summary of Findings:**
+- **Missing Teeth:** Tooth 36 is missing (edentulous space in the lower left quadrant). The upper third molars (18 and 28) are also absent.
+- **Restorations:** Full-coverage crowns are present on the maxillary central incisors (11 and 21). A radiopaque filling is present on the mesio-occlusal aspect of tooth 16.
+- **Impacted Teeth:** Bilateral mesioangular/horizontal impaction of the mandibular third molars (38 and 48) positioned against the second molars (37 and 47).
+- **Alveolar Bone:** Generally normal bone height with mild horizontal bone loss.
+- **Anatomical Structures:** Maxillary sinuses, nasal cavity, and bilateral TMJs appear radiographically normal."
+83,016712.jpg,What preventive measure is recommended for the wisdom teeth #28 and #38?,Regular follow-up the suspected eruption status of wisdom teeth #28 and #38,"Teeth #28 and #38 are absent (either congenitally missing or previously extracted); therefore, no preventive measures or treatments are required for these teeth."
+84,016712.jpg,What is the priority concern for tooth #37?,Periapical abscess at #37 requires endodontic evaluation and management,"The priority concern for tooth #37 is its severe mesioangular impaction/tipping against the adjacent tooth #36, which poses a significant risk of causing root resorption, periodontal bone loss, or dental caries on the distal aspect of #36."
+85,016712.jpg,What pathological finding is noted for tooth #37?,Imaging features sign of periapical abscess,"Tooth #37 exhibits severe mesioangular impaction/angulation, with its crown directly abutting the distal surface of tooth #36, accompanied by a small radiopaque restoration on its occlusal surface and a mild pericoronal radiolucency."
+86,016712.jpg,What structures are visible in the maxillary and mandibular regions?,Bilateral maxillary sinuses and bilateral mandibular canals,"Visible structures include the bilateral maxillary sinuses, nasal cavity, nasal septum, hard palate, zygomatic processes, bilateral mandibular condyles, coronoid processes, mandibular rami, mandibular body, mental foramina, and the inferior alveolar canals."
+87,016712.jpg,Which mandibular canal is/are visible in the panoramic dental image?,"[
+{""box_2d"": [298, 564, 869, 1010], ""label"": ""Mandibular canal""},
+{""box_2d"": [1589, 567, 2133, 1043], ""label"": ""Mandibular canal""}
+]",Both the right and left mandibular (inferior alveolar) canals are visible bilaterally.
+88,016712.jpg,Please caption this image with findings.,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 30 teeth visualized with findings suggestive of clear anatomical definition
+    - 2 wisdom teeth detected:
+        - #28: Erupted (suspected, recommend clinical review)
+        - #38: Erupted (suspected, recommend clinical review)
+2. Pathological Findings:
+    - #37: Imaging features sign of periapical abscess
+3. Historical Interventions:
+    - #11: Imaging features sign of crown restoration with underlying root canal treatment
+    - #12: Imaging features sign of crown restoration with underlying root canal treatment
+    - #23,25,38: Imaging features sign of fillings
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - No apparent bone loss in the image
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+    - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical abscess at #37 requires urgent endodontic evaluation and management
+2. Preventive Measures:
+    - Regular follow up the suspected eruption status of wisdom teeth #28 and #38
+3. Follow-up Protocol:
+    - 6-month recall for radiographic monitoring of wisdom teeth and pathological findings
+    - Bitewing series recommended for comprehensive assessment of interproximal areas and existing restorations
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph showing:
+- Missing teeth: #18, #28, #38, and #48.
+- Tooth #11: Completed root canal treatment and a radiopaque full-coverage crown.
+- Tooth #36: Large radiopaque restoration on the crown.
+- Tooth #37: Severe mesioangular impaction abutting the distal aspect of tooth #36, with a small occlusal restoration.
+- Normal bilateral temporomandibular joints (TMJs) and clear maxillary sinuses."
+105,016744.jpg,What signs were present in the mandibular canals?,Bilateral mandibular canals,"The mandibular canals show a normal course and distinct cortication bilaterally, with their paths running in close proximity to and superimposing the root apices of the impacted mandibular third molars (#38 and #48)."
+106,016744.jpg,How many teeth were visualized with clear anatomical definition?,29 teeth,30 teeth are visualized with clear anatomical definition (14 maxillary teeth and 16 mandibular teeth).
+107,016744.jpg,Which wisdom teeth were detected as impacted?,#38 and #48,"The mandibular third molars, #38 (lower left third molar) and #48 (lower right third molar), are impacted (mesioangular/horizontal impaction)."
+108,016744.jpg,Please caption this panoramic X-ray scan with findings.,"### Teeth-Specific Observations
+
+1. General Condition:
+    - 29 teeth visualized with clear anatomical definition
+    - 2 wisdom teeth detected:
+        - #38: Impacted (detected with high confidence)
+        - #48: Impacted (detected with high confidence)
+
+2. Historical Interventions:
+    - No historical treatments detected in the provided data
+
+### Jaw-Specific Observations
+
+1. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+    - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. Preventive Measures:
+    - Monitor impacted wisdom teeth (38 and #48) for potential complications
+
+2. Follow-up Protocol:
+   - Comprehensive clinical examination advised to assess the impacted wisdom teeth","Panoramic radiograph demonstrating 30 teeth present, with the maxillary third molars (#18 and #28) being absent. There is bilateral mesioangular to horizontal impaction of the mandibular third molars (#38 and #48). A well-defined, round radiolucency with a corticated border is visible in the right mandibular ramus/angle region, posterior to tooth #48. The remaining dentition shows stable alveolar bone levels and no obvious gross caries or periapical lesions."
+100,016726.jpg,How many wisdom teeth are detected in the report and what is their status?,"Three wisdom teeth are detected, all of which are impacted: #18, #28, and #48.","Four wisdom teeth (third molars) are detected: #18, #28, #38, and #48. All four are impacted/unerupted. The maxillary third molars (#18 and #28) are high-riding and unerupted, while the mandibular third molars (#38 and #48) are mesioangularly impacted."
+101,016726.jpg,Which teeth are suspicious for caries?,"#36 and #47 are suspicious for deep caries, while #45 and #46 are suspicious for caries (low confidence for #45).",Teeth suspicious for dental caries include #12 (distal aspect) and #22 (distal aspect).
+102,016726.jpg,Are there any signs of bone loss in the jaw?,No apparent bone loss is observed in the image.,"Yes, there are signs of mild generalized horizontal alveolar bone loss. Additionally, there is localized alveolar ridge resorption (bone loss) in the anterior maxilla at the edentulous site of the missing tooth #21."
+103,016726.jpg,What is the overall structural integrity of tooth #22 as seen on the panoramic radiograph?,"[
+{""Teeth position"": {""point_2d"": [1348, 548]}},
+]","Tooth #22 shows compromised coronal integrity, characterized by a radiopaque restoration on its mesial surface and a suspicious radiolucency (suggestive of caries) on its distal surface. There is also mild alveolar bone loss on its mesial aspect adjacent to the edentulous space of #21. The root structure and periapical tissues appear intact with no obvious signs of periapical pathology."
+104,016726.jpg,Can you provide a caption consists of findings for this panoramic X-ray image?,"### Teeth-Specific Observations
+
+1. General Condition:
+    - 30 teeth visualized with findings suggestive of clear anatomical definition.
+    - 3 wisdom teeth detected:
+        - #18: Impacted
+        - #28: Impacted
+        - #48: Impacted
+
+2. Pathological Findings:
+    - #36: Suspicious for caries; suspicious for deep caries
+    - #46: Suspicious for caries
+    - #45: Suspicious for caries (low confidence)
+    - #47: Suspicious for deep caries
+
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - No apparent bone loss in the image
+
+2. Visible Structures:
+    - Imaging features signs of left and right mandibular canals
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Deep caries in #36 and #47 require immediate intervention
+    - Impacted wisdom teeth (18, #28, #48) may need surgical evaluation
+
+2. Preventive Measures:
+    - Monitor suspicious caries at #45 and #46 with radiographic follow-up
+
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring (particularly suspicious areas)
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph findings:
+- Missing tooth #21 with localized alveolar ridge resorption.
+- Four impacted third molars (#18, #28, #38, #48), with #38 and #48 in mesioangular imposition.
+- Previous endodontic treatment (root canal filling) on tooth #11.
+- Radiopaque restorations on teeth #12, #11, and #22.
+- Suspicious proximal caries on teeth #12 and #22.
+- Mild generalized horizontal alveolar bone loss.
+- Maxillary sinuses, mandibular condyles, and temporomandibular joints appear within normal limits."
+109,016769.jpg,How many wisdom teeth were detected and which one is erupted?,"One wisdom tooth was detected, #18, which is overerupted.","Two wisdom teeth are detected (teeth 18 and 28), and both are erupted."
+110,016769.jpg,What is the observed condition of the upper jawbone?,The upper jaw is suspicious for bone loss.,"The upper jawbone (maxilla) shows normal trabecular bone density, normal pneumatization of the maxillary sinuses, and mild horizontal alveolar bone resorption."
+111,016769.jpg,What visible structures are present in the radiograph?,Bilateral mandibular canals and maxillary sinuses are visible.,"The visible structures include the maxilla, mandible, bilateral maxillary sinuses, nasal cavity, hard palate, bilateral temporomandibular joints (condyles and articular eminences), cervical vertebrae, and the dentition."
+112,016769.jpg,Which tooth is suspicious for root canal treatment?,#35 is suspicious for root canal treatment.,"Teeth 46 and 35 show clear evidence of root canal treatment, with radiopaque obturation material visible within their root canals."
+113,016769.jpg,Can you provide a summary consists of findings of this panoramic radiograph?,"### Teeth-Specific Observations
+
+1. **General Condition:**
+   - 28 teeth visualized with findings suggestive of clear anatomical definition.
+   - 1 wisdom tooth detected:
+     - #18: Erupted.
+
+2. **Pathological Findings:**
+   - Suspicious for bone loss in the upper jaw (recommend clinical correlation).
+
+3. **Historical Interventions:**
+  - #35: Suspicious for root canal treatment.
+   - #47: Sign of root canal treatment.
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture:**
+   - Suspicious for bone loss in the upper jaw (recommend clinical correlation).
+
+2. **Visible Structures:**
+   - Imaging features sign of bilateral mandibular canals.
+   - Suspicious for maxillary sinus visibility bilaterally.
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns:**
+  - Suspicious bone loss in the upper jaw needs further assessment.
+
+2. **Preventive Measures:**
+   - Monitor the suspicious missing tooth in the lower jaw with radiographic follow-up.
+
+3. **Follow-up Protocol:**
+   - 6-month recall for monitoring suspicious findings.
+   - Bitewing series recommended for further assessment of interproximal areas.
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","- **Missing Teeth:** Teeth 36, 38, and 48 are missing.
+- **Endodontic Treatments:** Root canal fillings are present in teeth 46 and 35.
+- **Periapical Pathology:** A well-defined, round radiolucency is present at the apex of tooth 35, highly suggestive of a periapical cyst or granuloma.
+- **Periodontal Status:** Mild generalized horizontal alveolar bone loss is observed.
+- **Surrounding Structures:** The bilateral maxillary sinuses, temporomandibular joints, and mandibular borders appear within normal limits."
+114,016783.jpg,How many wisdom teeth are present and what is their status?,"One wisdom tooth is present, erupted.","Two wisdom teeth are present: tooth #18 is erupted in the upper right quadrant, and tooth #38 is mesioangularly impacted/tilted in the lower left quadrant."
+115,016783.jpg,How many teeth have signs of crowns?,"Three teeth (45, 46, 47) have signs of crowns.","Two teeth have crowns (teeth #45 and #47, which serve as the abutments for a 3-unit fixed bridge)."
+116,016783.jpg,What is observed regarding bone architecture in the jaw?,No apparent bone loss.,"The bone architecture is generally stable with mild horizontal alveolar bone loss. Notably, there is a well-defined, round radiopacity in the right mandibular body inferior to the premolar roots, consistent with idiopathic osteosclerosis (dense bone island)."
+117,016783.jpg,What is the clinical recommendation for tooth #47?,Endodontic evaluation is required.,"Tooth #47 serves as the posterior abutment for a 3-unit bridge. The clinical recommendation is regular clinical and radiographic monitoring to evaluate the marginal integrity of the crown, periodontal pocket depths, and periapical health."
+118,016783.jpg,Which areas show the wisdom tooth in the panoramic image?,"[
+{""box_2d"": [1688, 582, 1825, 738], ""tooth_id"": ""38"", ""is_impacted"": ""false""},
+]","The wisdom teeth are visible in the upper right posterior region (maxillary right quadrant, tooth #18) and the lower left posterior region (mandibular left quadrant, tooth #38)."
+119,016783.jpg,Please caption this image with findings.,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 29 (28 natural teeth) teeth visualized with findings suggestive of clear anatomical definition
+    - 3 wisdom teeth detected:
+        - #38: Erupted (suspected, recommend clinical review)
+2. Pathological Findings:
+    - #47: Imaging features suspicious for periapical lesion (likely abscess)
+3. Historical Interventions:
+    - #45,46,47: Signs of crowns
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - No apparent bone loss in the image
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+    - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical lesion at #47 requires endodontic evaluation
+2. Preventive Measures:
+    - Monitor periapical lesion with radiographic follow-up
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating a 3-unit bridge in the lower right quadrant (abutments #45 and #47, pontic #46), an erupted upper right wisdom tooth (#18), a mesioangularly impacted lower left wisdom tooth (#38), and a well-defined radiopaque focus (idiopathic osteosclerosis) in the right mandibular body inferior to the premolars."
+120,016790.jpg,Which teeth are suspected of having caries and require clinical re-evaluation?,#25.,"Suspected caries requiring clinical re-evaluation are present on the distal surfaces of the second molars #37 and #47 (associated with the adjacent mesioangularly impacted third molars), as well as potential interproximal caries on the premolars (notably #15, #25, #35, and #45)."
+121,016790.jpg,Describe the findings for tooth #46.,"Sign of periapical granuloma, crown restoration, and root canal treatment.","Tooth #46 exhibits a large, highly radiopaque restoration (consistent with a full-coverage crown or a large multi-surface restoration) covering the crown. There is no radiographic evidence of root canal treatment. The periapical tissues and surrounding periodontal ligament space appear within normal limits, with mild crestal alveolar bone loss."
+122,016790.jpg,List the impacted wisdom teeth and their statuses.,#18: Impacted; #28: Impacted; #38: Impacted.,"All four third molars are impacted:
+- #18: Impacted high in the right maxillary tuberosity region.
+- #28: Impacted high in the left maxillary tuberosity/sinus region.
+- #38: Mesioangularly impacted, abutting the distal aspect of the second molar #37.
+- #48: Mesioangularly impacted, abutting the distal aspect of the second molar #47."
+123,016790.jpg,What is observed regarding the bone architecture?,No apparent bone loss in the image.,"The bone architecture shows mild generalized horizontal alveolar bone loss, with the bone crest sitting slightly lower than the normal 2 mm below the cemento-enamel junction. Additionally, there is a well-defined, round radiopacity (consistent with idiopathic osteosclerosis or a dense bone island) in the right mandibular body, located apically to the roots of the premolars #44 and #45. The remaining trabecular pattern and cortical borders of the mandible appear normal."
+124,016790.jpg,What are the most significant radiographic anomalies present in this panoramic radiograph?,"[
+{""box_2d"": [825, 746, 996, 995], ""tooth_id"": ""45"", ""label"": ""Deep caries""},
+{""box_2d"": [562, 325, 685, 512], ""tooth_id"": ""18"", ""is_impacted"": ""true""},
+{""box_2d"": [1769, 621, 1955, 753], ""tooth_id"": ""38"", ""is_impacted"": ""true""},
+{""box_2d"": [1729, 348, 1850, 485], ""tooth_id"": ""28"", ""is_impacted"": ""true""}
+]","The most significant radiographic anomalies include:
+- Impacted third molars (#18, #28, #38, and #48), with the mandibular third molars being mesioangularly impacted and the maxillary third molars being highly superiorly positioned.
+- A well-defined radiopaque area of idiopathic osteosclerosis (dense bone island) in the right mandible apical to #44 and #45.
+- Large radiopaque restorations on #16 and #46."
+125,016790.jpg,Can you provide a description consists of findings of this panoramic X-ray scan?,"### Teeth-Specific Observations
+
+1. General Condition:
+    - 31 teeth visualized with findings suggestive of clear anatomical definition.
+    - 4 wisdom teeth detected:
+        - #18: Impacted (sign of impaction)
+        - #28: Impacted (sign of impaction)
+        - #38: Impacted (sign of impaction)
+        - #48: Erupted (sign of eruption)
+
+2. Pathological Findings:
+    - #25: Suspicious for caries, suggest clinical re-evaluation
+   - #46: Imaging features sign of periapical granuloma
+
+3. Historical Interventions:
+   - #16: Sign of crown restoration
+    - #16: Sign of root canal treatment
+   - #36: Sign of filling
+    - #46: Sign of crown restoration
+    - #46: Sign of root canal treatment
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - No apparent bone loss in the image
+
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+    - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical lesion at #46 requires endodontic evaluation
+    - Suspicious caries at #25 need clinical re-evaluation
+
+2. Preventive Measures:
+    - Monitor suspicious caries at #25 with radiographic follow-up
+
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring (particularly suspicious areas)
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","This panoramic radiograph shows a complete dentition of 32 teeth. The mandibular third molars (#38 and #48) are mesioangularly impacted against the adjacent second molars, and the maxillary third molars (#18 and #28) are highly superiorly impacted. Large radiopaque restorations are present on the crowns of #16 and #46. There is mild generalized horizontal alveolar bone loss and suspected interproximal caries on the distal surfaces of #37 and #47, as well as some premolars. A well-demarcated radiopaque lesion consistent with idiopathic osteosclerosis is noted in the right mandible apical to #44 and #45. The temporomandibular joints and maxillary sinuses appear radiographically normal within the limits of this projection."
+138,016808.jpg,What visible structures are noted in the imaging?,Imaging features signs of bilateral mandibular canals and bilateral maxillary sinuses.,"The panoramic radiograph displays the maxilla, mandible (including the bilateral condyles, coronoid processes, rami, and body), the temporomandibular joints (TMJs), the maxillary sinuses, the nasal cavity and septum, the hard palate, and a complete permanent dentition (32 teeth)."
+139,016808.jpg,What is the general condition of the teeth?,32 teeth visualized with clear anatomical definition.,"The general condition of the teeth is fair. The majority of the dentition is intact with stable alveolar bone support, showing only mild generalized horizontal bone loss. However, there is pathology associated with the third molars, specifically bilateral mesioangular impaction of the mandibular third molars and significant dental caries/coronal destruction."
+140,016808.jpg,Which teeth are suspected to be erupted?,"#18, #28, #38, #48 are suspected to be erupted.","Teeth #11 to #17, #21 to #27, #31 to #37, and #41 to #47 are fully erupted. The maxillary third molars (#18 and #28) appear erupted or erupting. The mandibular third molars (#38 and #48) are impacted/partially erupted."
+141,016808.jpg,What pathological findings are present in the report?,"Tooth #26 is suspicious for periapical granuloma, and tooth #38 shows evidence of periapical abscess.","Pathological findings include bilateral mesioangular impaction of the mandibular third molars (#38 and #48), deep dental caries with extensive coronal radiolucency/destruction on tooth #38, and mild generalized horizontal alveolar bone loss (mild periodontitis)."
+142,016808.jpg,What radiographic features are visible in tooth #38 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [1798, 645]}},
+{""is_wisdom_tooth"": ""True""},
+{""is_impacted"": ""false""},
+{""Periapical lesions (Abscess)"": {""box_2d"": [1818, 708, 1895, 774]}}
+]","Tooth #38 (lower left third molar) exhibits mesioangular impaction/tilting against the distal aspect of tooth #37. There is a large, deep radiolucency on the distal-occlusal aspect of its crown, indicating severe dental caries with extensive coronal destruction. The roots are fully formed and project near the course of the mandibular canal."
+143,016808.jpg,Can you summarize with findings the panoramic X-ray images presented?,"### Teeth-Specific Observations
+
+1. **General Condition**:
+   - 32 teeth visualized with clear anatomical definition.
+   - 4 wisdom teeth detected:
+     - #18: Erupted (suspected, recommend clinical review)
+     - #28: Erupted (suspected, recommend clinical review)
+     - #38: Erupted (suspected, recommend clinical review)
+     - #48: Erupted (suspected, recommend clinical review)
+
+2. **Pathological Findings**:
+   - #26: Suspicious for periapical granuloma (recommend clinical re-evaluation)
+   - #38: Shows evidence of periapical abscess
+
+3. **Historical Interventions**:
+   - No historical interventions detected.
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture**:
+   - Mild apparent bone loss observed.
+
+2. **Visible Structures**:
+   - Imaging features signs of bilateral mandibular canals
+   - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. **Preventive Measures**:
+   - Monitor suspected periapical granuloma at #26 with radiographic follow-up
+
+2. **Follow-up Protocol**:
+   - 6-month recall for monitoring of suspicious pathological findings
+   - Bitewing series recommended for detailed interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","This panoramic radiograph reveals a complete permanent dentition with bilateral mesioangular impaction of the mandibular third molars (#38 and #48). Tooth #38 shows advanced dental caries with severe coronal destruction. The remaining dentition demonstrates mild generalized horizontal alveolar bone loss but is otherwise stable, with no other gross pathology, retained roots, or periapical lesions visible. The visualized maxillofacial osseous structures, TMJs, and maxillary sinuses appear within normal limits."
+132,016807.jpg,What historical interventions are noted for tooth #25?,"Tooth #25 has a crown, root canal treatment, and a post.","Tooth #25 (upper left second premolar) has undergone endodontic treatment (root canal therapy), placement of an intra-canal post (specifically a threaded/screw post), and restoration with a full-coverage prosthetic crown."
+133,016807.jpg,What is the status of the wisdom tooth?,Wisdom tooth #38 is erupted but requires clinical review.,"All four wisdom teeth (third molars: #18, #28, #38, and #48) are missing (previously extracted or congenitally absent)."
+134,016807.jpg,What is the general condition of the teeth?,29 teeth are visualized with clear anatomical definition.,"The general condition of the teeth shows extensive restorative and endodontic rehabilitation. There are multiple crowns, root canal treatments, and posts, particularly in the posterior segments. The remaining dentition is well-aligned with mild generalized horizontal alveolar bone loss (mild periodontitis) but no obvious untreated gross caries or active periapical pathology."
+135,016807.jpg,What visible structures are observed in the jaw?,Bilateral mandibular canals and maxillary sinuses.,"Visible jaw and maxillofacial structures include the bilateral mandibular condyles and coronoid processes, mandibular rami and body, mental foramina, inferior alveolar nerve canals, the hard palate, the maxillary sinuses, the nasal septum, and the nasal cavity. The temporomandibular joints (TMJs) appear symmetric and within normal limits."
+136,016807.jpg,Does the panoramic radiograph reveal any specific tooth involvement trends related to crown?,"[
+{""tooth_id"": ""24"", ""box_2d"": [1469, 619, 1556, 688]},
+{""tooth_id"": ""36"", ""box_2d"": [1522, 733, 1644, 810]},
+{""tooth_id"": ""26"", ""box_2d"": [1600, 592, 1704, 673]},
+{""tooth_id"": ""25"", ""box_2d"": [1552, 619, 1616, 688]},
+{""tooth_id"": ""16"", ""box_2d"": [802, 613, 906, 673]},
+{""tooth_id"": ""15"", ""box_2d"": [901, 620, 978, 690]},
+{""tooth_id"": ""46"", ""box_2d"": [868, 746, 995, 806]},
+{""tooth_id"": ""47"", ""box_2d"": [764, 714, 883, 778]}
+]","Yes, there is a clear trend of crown restorations localized to the posterior dentition, specifically involving the premolars and molars (#15, #16, #25, #26, #36, #46, and #47). Additionally, the upper premolars (#15 and #25) demonstrate a trend of endodontic treatment and post-and-core placement prior to crown fabrication."
+137,016807.jpg,Can you summarize with findings the panoramic X-ray images presented?,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 29 teeth visualized with findings suggestive of clear anatomical definition
+    - 1 wisdom tooth detected:
+        - #38: Erupted (suspected, recommend clinical review)
+
+2. Historical Interventions:
+    - #15: Imaging features sign of crown and root canal treatment
+    - #16: Imaging features sign of crown
+   - #24: Imaging features sign of crown and root canal treatment
+    - #25: Imaging features sign of crown, root canal treatment, and post
+    - #26: Imaging features sign of crown
+    - #36: Imaging features sign of crown and root canal treatment
+    - #46: Imaging features sign of crown
+    - #47: Imaging features sign of crown
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - No apparent bone loss in the image
+
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+    - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. Follow-up Protocol:
+    - 6-month recall for caries monitoring
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","This panoramic radiograph demonstrates a restored dentition with the following findings:
+- **Missing Teeth:** All third molars (#18, #28, #38, #48) are absent.
+- **Endodontic Treatments:** Root canal fillings are present in teeth #15, #24, and #25.
+- **Restorations:** Intra-canal posts are visible in #15 and #25 (with a threaded screw post in #25). Full-coverage crowns are present on teeth #15, #16, #25, #26, #36, #46, and #47.
+- **Periodontal Status:** Mild generalized horizontal alveolar bone loss is present.
+- **Surrounding Structures:** The maxillary sinuses, nasal cavity, and bilateral TMJs appear radiographically normal with no gross pathology or fractures detected."
+144,016821.jpg,How many wisdom teeth are erupted?,"Two wisdom teeth are erupted: #18, and #28.",Two wisdom teeth are erupted: the maxillary right third molar (#18) and the maxillary left third molar (#28).
+145,016821.jpg,Where is the missing tooth located?,The missing tooth is located in the lower jaw.,"The missing teeth are located in the mandible: the lower left first molar (#36) is missing (resulting in the mesial tilting of #37), and the lower right first and second molars (#46 and #47) are missing."
+146,016821.jpg,What historical interventions are noted at #44 and #45?,Signs of crowns and root canal treatments are noted at #44 and #45.,Teeth #44 and #45 have been treated with prosthetic crowns (splinted crowns).
+147,016821.jpg,What is observed in the bilateral mandibular canals?,Imaging features signs of bilateral mandibular canals.,"The bilateral mandibular canals are intact, well-defined, and follow a normal anatomical course. On the right side, the two dental implants are positioned safely superior to the right mandibular canal."
+148,016821.jpg,Output the positions of mandibular canal in the panoramic X-ray image.,"[
+{""box_2d"": [1561, 516, 2146, 1055], ""label"": ""Mandibular canal""},
+{""box_2d"": [389, 465, 874, 1016], ""label"": ""Mandibular canal""}
+]","The mandibular canals run bilaterally from the mandibular foramina on the medial aspect of the mandibular rami, extending downwards and anteriorly through the body of the mandible, and terminating at the mental foramina located inferior to the premolar root apices (below #34/#35 on the left and #44/#45 on the right)."
+149,016821.jpg,Please caption this image with findings.,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 26 teeth visualized with findings suggestive of clear anatomical definition
+    - 3 wisdom teeth detected:
+        - #18: Erupted
+        - #28: Erupted
+   - 6 missing teeth detected in the lower jaw
+
+2. Pathological Findings:
+    - #11: Imaging features sign of periapical granuloma
+    - #27: Suspicious for caries, suggest clinical re-evaluation
+    - #28: Suspicious for caries, suggest clinical re-evaluation
+
+3. Historical Interventions:
+    - #11,12,44,45: Signs of crowns
+    - #44: Signs of root canal treatment
+    - #45: Signs of root canal treatment
+    - #46: Imaging features sign of dental implant
+    - #48: Imaging features sign of dental implant
+
+### Jaw-Specific Observations
+
+1. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical lesion at #11 requires endodontic evaluation
+
+2. Preventive Measures:
+    - Monitor suspected caries at #27 and #28 with radiographic follow-up
+
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring (particularly suspected areas)
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating:
+- Erupted maxillary third molars (#18, #28).
+- Missing mandibular left first molar (#36) with subsequent mesial tilting of the mandibular left second molar (#37).
+- Missing mandibular right molars (#46, #47) replaced by two dental implants.
+- Endodontic treatment (root canal filling) with an intra-canal post and crown on the maxillary right central incisor (#11), and a crown on the maxillary right lateral incisor (#12).
+- Splinted prosthetic crowns on the mandibular right premolars (#44, #45).
+- Mild generalized alveolar bone loss.
+- Normal appearance of the bilateral temporomandibular joints and maxillary sinuses."
+126,016792.jpg,What is the general condition of the teeth in the report?,28 teeth are visualized with clear anatomical definition.,"The general condition of the dentition is fair, with most permanent teeth present and well-aligned, but characterized by localized endodontic treatments and severe coronal destruction of the lower-left second molar (#37)."
+127,016792.jpg,What is recommended for tooth #37?,Suspicious caries and deep caries in #37 need further investigation.,Extraction is recommended for tooth #37 because the extensive coronal destruction and caries render the tooth non-restorable.
+128,016792.jpg,What are the pathological findings for tooth #37?,Tooth #37 is suspicious for caries and deep caries.,"The pathological findings for tooth #37 include extensive dental caries, severe coronal destruction (non-restorable crown), previous root canal treatment, and associated periapical radiolucency (apical periodontitis)."
+129,016792.jpg,What is recommended for tooth #47?,Periapical lesion at #47 requires endodontic evaluation.,"For tooth #47, which has undergone root canal treatment and has a large restoration, placement of a full-coverage prosthetic crown is recommended to protect the tooth from fracture and restore long-term function, along with routine clinical and radiographic monitoring."
+130,016792.jpg,Please accurately identify the teeth in the X-ray image.,"[
+{""point_2d"": [1406, 771], ""tooth_id"": ""34""},
+{""point_2d"": [1182, 782], ""tooth_id"": ""41""},
+{""point_2d"": [1232, 782], ""tooth_id"": ""31""},
+{""point_2d"": [1594, 734], ""tooth_id"": ""36""},
+{""point_2d"": [1446, 530], ""tooth_id"": ""24""},
+{""point_2d"": [1484, 758], ""tooth_id"": ""35""},
+{""point_2d"": [936, 746], ""tooth_id"": ""45""},
+{""point_2d"": [1005, 764], ""tooth_id"": ""44""},
+{""point_2d"": [1285, 778], ""tooth_id"": ""32""},
+{""point_2d"": [1072, 776], ""tooth_id"": ""43""},
+{""point_2d"": [1376, 519], ""tooth_id"": ""23""},
+{""point_2d"": [1594, 515], ""tooth_id"": ""26""},
+{""point_2d"": [1312, 551], ""tooth_id"": ""22""},
+{""point_2d"": [1170, 544], ""tooth_id"": ""11""},
+{""point_2d"": [1130, 780], ""tooth_id"": ""42""},
+{""point_2d"": [973, 527], ""tooth_id"": ""14""},
+{""point_2d"": [1102, 544], ""tooth_id"": ""12""},
+{""point_2d"": [1342, 778], ""tooth_id"": ""33""},
+{""point_2d"": [742, 463], ""tooth_id"": ""17""},
+{""point_2d"": [1242, 543], ""tooth_id"": ""21""},
+{""point_2d"": [842, 720], ""tooth_id"": ""46""},
+{""point_2d"": [830, 498], ""tooth_id"": ""16""},
+{""point_2d"": [1517, 523], ""tooth_id"": ""25""},
+{""point_2d"": [906, 514], ""tooth_id"": ""15""},
+{""point_2d"": [1039, 525], ""tooth_id"": ""13""},
+{""point_2d"": [726, 677], ""tooth_id"": ""47""},
+{""point_2d"": [1712, 696], ""tooth_id"": ""37""},
+{""point_2d"": [1696, 489], ""tooth_id"": ""27""}
+]","The teeth present in this panoramic radiograph are:
+- Upper right quadrant: #17, #16, #15, #14, #13, #12, #11
+- Upper left quadrant: #21, #22, #23, #24, #25, #26, #27
+- Lower left quadrant: #31, #32, #33, #34, #35, #36, #37
+- Lower right quadrant: #41, #42, #43, #44, #45, #46, #47
+Third molars (#18, #28, #38, and #48) are absent."
+131,016792.jpg,Can you provide a description consists of findings of this panoramic X-ray scan?,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 28 teeth visualized with findings suggestive of clear anatomical definition
+    - Wisdom teeth status not specified in the provided data
+
+2. Pathological Findings:
+    - #37: Suspicious for caries
+    - #37: Suspicious for deep caries
+    - #47: Imaging features sign of periapical granuloma
+
+3. Historical Interventions:
+    - #47: Signs of filling and root canal treatment
+    - #37: Signs of root canal treatment
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - No apparent bone loss in the image
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+    - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical lesion at #47 requires endodontic evaluation
+    - Suspicious caries and deep caries in #37 need further investigation
+2. Preventive Measures:
+    - Monitor suspicious caries at #37 with radiographic follow-up
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring (particularly suspicious areas)
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","**Panoramic Radiograph Findings:**
+- **Dentition:** 28 permanent teeth are present. All four third molars (#18, #28, #38, #48) are missing.
+- **Endodontic & Restorative:** Tooth #47 has a previous root canal filling and a large radiopaque coronal restoration. Tooth #37 has a previous root canal filling.
+- **Pathology:** Tooth #37 shows severe coronal destruction and extensive caries extending below the cemento-enamel junction, accompanied by periapical radiolucency.
+- **Periodontal & Bone Structures:** Alveolar bone levels are generally stable with minimal horizontal bone loss.
+- **Surrounding Anatomy:** The maxillary sinuses, nasal cavity, mandibular condyles, and temporomandibular joints (TMJs) appear radiographically normal."
+150,016823.jpg,Which tooth needs endodontic evaluation?,Tooth #11 requires endodontic evaluation due to the periapical lesion.,Tooth #16 (upper right first molar) requires endodontic evaluation due to a prominent periapical radiolucency.
+151,016823.jpg,"How many teeth were visualized, and were there any impacted wisdom teeth?",26 teeth were visualized with no impacted wisdom teeth detected.,"There are 29 teeth visualized in total. The third molar #28 is present and partially erupted/impacted, while the other three third molars (#18, #38, and #48) are missing."
+152,016823.jpg,Which tooth has evidence of a periapical granuloma?,Tooth #11 shows evidence of a periapical granuloma.,Tooth #16 shows evidence of a periapical lesion consistent with a periapical granuloma or cyst.
+153,016823.jpg,What preventive measures are recommended?,Monitor all crowned teeth for stability and consider bitewing radiographs for interproximal caries detection.,"Recommended preventive measures include professional dental cleanings (scaling and prophylaxis), oral hygiene instruction, regular clinical and radiographic monitoring of the existing fixed prostheses, and routine caries prevention."
+154,016823.jpg,What radiographic features are visible in tooth #16 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [810, 560]}},
+{""Crown"": {""box_2d"": [760, 512, 861, 623]}}
+]","Tooth #16 exhibits a radiopaque crown (serving as an abutment for a fixed bridge) and a well-defined periapical radiolucency surrounding its root apex, indicating chronic apical periodontitis/periapical pathology."
+155,016823.jpg,Can you provide a summary consists of findings of this panoramic radiograph?,"### Teeth-Specific Observations
+
+1. **General Condition**:
+   - 26 teeth visualized with findings suggestive of clear anatomical definition.
+   - No impacted wisdom teeth detected.
+
+2. **Pathological Findings**:
+   - #11: Shows evidence of periapical granuloma.
+
+3. **Historical Interventions**:
+   - #15, 16, 17, 24, 25, 26, 37: Show signs of crowns.
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture**:
+   - Mild apparent bone loss in the image.
+
+2. **Visible Structures**:
+   - Imaging features signs of bilateral mandibular canals.
+   - Maxillary sinus visible on the right side.
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns**:
+   - Periapical lesion at #11 requires endodontic evaluation.
+
+2. **Preventive Measures**:
+   - Monitor all crowned teeth for stability and function.
+   - Consider bitewing radiographs for interproximal caries detection.
+
+3. **Follow-up Protocol**:
+   - 6-month recall for monitoring of dental health.
+   - Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","The panoramic radiograph reveals 29 teeth present, with third molars #18, #38, and #48 missing, and #28 partially erupted. Fixed bridges are present in the upper right posterior region (#15 to #17) and upper left posterior region (#25 to #27), along with a single crown on #37. A well-defined periapical radiolucency is associated with the roots of tooth #16, indicating a periapical lesion (granuloma or cyst). Mild generalized horizontal alveolar bone loss is also observed."
+162,016826.jpg,What pathological findings are present?,"Suspected caries at #25, #35; periapical abscesses at #46, #47.","Pathological findings include four impacted third molars (18, 28, 38, and 48) and mild generalized horizontal alveolar bone loss indicative of mild periodontitis."
+163,016826.jpg,What historical interventions are noted?,"Fillings at #37; crowns at #11, #44, #46; root canal treatments at #11, #26, #46, #47.","Historical interventions include endodontic (root canal) treatment and a full-coverage crown on tooth 11, a 3-unit fixed partial denture (bridge) in the lower right quadrant spanning from tooth 45 to 47 (replacing tooth 46), and dental restorations (fillings) on teeth 26 and 36."
+164,016826.jpg,How many wisdom teeth are impacted?,"Three wisdom teeth are impacted: #18, #38, #48.","Four wisdom teeth are impacted (18, 28, 38, and 48)."
+165,016826.jpg,What is the general condition of the teeth?,30 teeth visualized with clear anatomical definition.,"The general condition of the teeth is fair to good; the dentition is well-restored and largely intact, with stable historical dental work, mild generalized periodontal bone loss, and bilateral maxillary and mandibular third molar impactions."
+166,016826.jpg,Identify areas showing the maxillary sinus in the panoramic radiograph.,"[
+{""box_2d"": [1387, 34, 1850, 500], ""label"": ""Maxillary sinus""},
+{""box_2d"": [560, 37, 1014, 503], ""label"": ""Maxillary sinus""}
+]","The maxillary sinuses are visible as the large, bilateral, radiolucent (dark) air-filled cavities located in the upper jaw, superior to the root apices of the maxillary premolars and molars, and bounded by thin radiopaque cortical lines."
+167,016826.jpg,Please caption this image with findings.,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 30 teeth visualized with findings suggestive of clear anatomical definition
+    - 3 wisdom teeth detected:
+        - #18: Impacted (suspected, recommend clinical review)
+        - #38: Impacted (suspected, recommend clinical review)
+        - #48: Impacted (suspected, recommend clinical review)
+
+2. Pathological Findings:
+    - #25: Suspected caries
+    - #35: Suspected caries
+    - #46: Sign of periapical abscess
+
+3. Historical Interventions:
+    - #11: Sign of crown and root canal treatment
+    - #26: Sign of filling and root canal treatment
+    - #37: Sign of filling
+    - #44: Sign of crown
+    - #46: Sign of crown and root canal treatment
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - No apparent bone loss in the image
+
+2. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+    - Imaging features signs of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical abscesses at #46 require urgent endodontic evaluation
+    - Suspected caries at #25, and #35 need clinical re-evaluation
+
+2. Preventive Measures:
+    - Monitor suspected caries with radiographic follow-up
+    - Maintain good oral hygiene to prevent progression of caries
+
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring
+    - Bitewing series recommended for interproximal caries detection
+    - Consider CBCT imaging for impacted wisdom teeth assessment
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating four impacted third molars (18, 28, 38, 48), a root canal-treated and crowned tooth 11, a 3-unit fixed bridge in the lower right quadrant (45-47), restorations on teeth 26 and 36, and mild generalized horizontal alveolar bone loss."
+156,016825.jpg,What restorations and pathologies are noted for tooth #45?,Tooth #45 has a crown restoration.,"Tooth #45 presents with a highly radiopaque full-coverage crown (restoration) and an associated periapical radiolucency (pathology) at the root apex, indicating apical periodontitis. No root canal treatment is visible, suggesting pulpal necrosis."
+157,016825.jpg,What are the priority concerns in the clinical summary?,The priority concerns are the periapical lesion at #45.,"The priority concerns are the active periapical infections (apical periodontitis) associated with teeth #46 and #45, which require prompt endodontic evaluation/therapy or extraction to prevent further bone destruction and systemic spread. Secondary concerns include the edentulous space at missing tooth #35 and mild generalized alveolar bone loss."
+158,016825.jpg,Which tooth has a periapical lesion?,Tooth #45 has a periapical lesion (likely abscess).,"Teeth #46 (lower right first molar) and #45 (lower right second premolar) both exhibit periapical lesions, with #46 showing a particularly large and well-defined periapical radiolucency encompassing both the mesial and distal root apices."
+159,016825.jpg,What structures are visible in the jaw and sinus?,Bilateral mandibular canals and maxillary sinus are visible.,"Visible structures include the mandible (bilateral condyles, coronoid processes, rami, body, and symphysis), the maxilla (alveolar process and hard palate), the bilateral maxillary sinuses, the nasal cavity (including the nasal septum and inferior conchae), the zygomatic processes, and the bilateral temporomandibular joints (TMJs)."
+160,016825.jpg,Please detect the mandibular canal in the panoramic image.,"[
+{""box_2d"": [1577, 656, 2099, 1060], ""label"": ""Mandibular canal""},
+{""box_2d"": [370, 691, 924, 1090], ""label"": ""Mandibular canal""}
+]","The mandibular canal is visible bilaterally as a radiolucent pathway running horizontally through the mandibular body, bordered by thin radiopaque cortical lines. It runs inferior to the roots of the mandibular molars and premolars, originating at the mandibular foramen on the ramus and terminating anteriorly at the mental foramen near the premolar apices."
+161,016825.jpg,Please caption this panoramic X-ray scan with findings.,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 29 teeth visualized with findings suggestive of clear anatomical definition
+    - 2 wisdom teeth detected:
+        - #18, 28: Erupted (suspected, recommend clinical review)
+
+2. Pathological Findings:
+    - #45: Imaging features sign of periapical lesion (likely abscess).
+
+3. Historical Interventions:
+    - #16: Imaging features sign of filling
+    - #45: Imaging features sign of crown restoration
+
+### Jaw-Specific Observations
+
+1. Visible Structures:
+    - Imaging features signs of bilateral mandibular canals
+    - Maxillary sinus visible on the both side
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical lesion at #45 requires endodontic evaluation
+
+2. Follow-up Protocol:
+    - 6-month recall for caries monitoring
+    - Bitewing series recommended for interproximal caries detection
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph showing a crown on tooth #45 with an associated periapical lesion, a large periapical radiolucency at the root apices of tooth #46, missing teeth #35, #38, and #48, and mild generalized horizontal alveolar bone loss. Maxillary sinuses and TMJs appear radiographically normal."
+168,016829.jpg,What pathological findings are present in the radiograph?,Tooth 42 shows evidence of periapical lesion.,"Pathological findings are minimal, with mild horizontal alveolar bone loss (mild periodontitis) and a suspected small periapical radiolucency (apical periodontitis) associated with the apex of the endodontically treated tooth 45."
+169,016829.jpg,What interventions are present for Tooth 44?,Tooth 44 has a filling and root canal treatment.,"Tooth 44 has undergone root canal treatment (endodontic obturation), placement of an intracanal post (post-and-core), and restoration with a full-coverage prosthetic crown."
+170,016829.jpg,What historical interventions are noted for Tooth 13?,Tooth 13 has a crown and root canal treatment.,"Tooth 13 has a history of root canal treatment (endodontic obturation), an intracanal post-and-core restoration, and a full-coverage prosthetic crown."
+171,016829.jpg,What is the general condition of the teeth in the radiograph?,27 teeth are visualized with clear anatomical definition.,"The general condition of the teeth is good and well-restored. The patient has a nearly complete dentition (excluding the missing third molars 18, 28, 38, and 48), stable alveolar bone support, and high-quality endodontic and prosthodontic restorations on teeth 13, 44, and 45, with no obvious active caries."
+172,016829.jpg,What radiographic features are visible in tooth #44 on the panoramic X-ray?,"[
+{""Teeth position"": {""point_2d"": [1104, 869]}},
+{""Periapical lesions (Cyst)"": {""box_2d"": [1028, 916, 1135, 1019]}},
+{""Filling"": {""box_2d"": [1023, 759, 1084, 788]}},
+{""Root canal treatment"": {""box_2d"": [1082, 846, 1117, 962]}}
+]","Tooth 44 exhibits a highly radiopaque full-coverage crown, a radiopaque intracanal post extending into the coronal half of the root canal, and radiopaque root canal filling material (obturation) in the apical portion of the canal."
+173,016829.jpg,Please write a caption consists of findings for this image.,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. **General Condition**:
+    - 27 teeth visualized with clear anatomical definition.
+
+2. **Pathological Findings**:
+    - Tooth 43: Shows evidence of periapical lesion.
+
+3. **Historical Interventions**:
+    - Tooth 13: Crown and root canal treatment.
+    - Tooth 36: Filling.
+    - Tooth 42, 43: Crown.
+    - Tooth 44: Filling and root canal treatment.
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture**:
+    - Mild apparent bone loss visible.
+
+2. **Visible Structures**:
+    - Bilateral mandibular canals are visible.
+    - Maxillary sinuses are visible bilaterally.
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns**:
+    - Periapical granuloma at tooth 43 requires endodontic evaluation.
+
+2. **Preventive Measures**:
+    - Regular monitoring of teeth with historical interventions to ensure stability and integrity.
+
+3. **Follow-up Protocol**:
+    - Schedule a 6-month recall for evaluation of the periapical lesions and treated teeth.
+    - Consider bitewing X-rays for detailed assessment of interproximal areas.
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating a well-maintained dentition with missing third molars (18, 28, 38, 48). Notable findings include endodontic treatment and post-retained crowns on teeth 13 and 44, and endodontic treatment on tooth 45. Alveolar bone heights are generally stable with mild horizontal bone loss."
+174,016836.jpg,What is the condition of tooth #27 according to the report?,Tooth #27 is suspicious for caries and requires clinical re-evaluation.,"Tooth #27 (upper left second molar) exhibits a deep radiolucency on its distal-occlusal surface extending into the dentin and approaching the pulp chamber, highly suggestive of deep dental caries."
+175,016836.jpg,Describe the findings related to tooth #46.,Tooth #46 shows signs of a periapical lesion (likely abscess) and has undergone crown and root canal treatment.,"Tooth #46 (lower right first molar) has undergone endodontic treatment, visible as radiopaque root canal fillings in both the mesial and distal roots, and is restored with a full-coverage radiopaque crown. There is a distinct periapical radiolucency surrounding the root apices (particularly the mesial root), indicating persistent periapical pathology/apical periodontitis."
+176,016836.jpg,What are the priority concerns highlighted in the clinical summary?,The priority concerns are the periapical lesion at #46 requiring endodontic evaluation and the suspicious caries at #27 needing clinical re-evaluation.,"The priority concerns highlighted in this radiograph are:
+- The periapical lesion (apical periodontitis) associated with the endodontically treated tooth #46, indicating potential root canal failure or active infection.
+- Deep dental caries on tooth #27 with probable pulpal involvement.
+- Mesioangular impaction of the bilateral mandibular third molars (#38 and #48), which poses a risk of pericoronitis, food impaction, and caries on the adjacent second molars (#37 and #47)."
+177,016836.jpg,Identify areas showing the wisdom tooth in the panoramic radiograph.,"[
+{""box_2d"": [565, 312, 664, 511], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [1798, 518, 1961, 696], ""tooth_id"": ""38"", ""is_impacted"": ""false""},
+{""box_2d"": [516, 546, 660, 721], ""tooth_id"": ""48"", ""is_impacted"": ""false""},
+{""box_2d"": [1769, 284, 1883, 500], ""tooth_id"": ""28"", ""is_impacted"": ""false""}
+]","Wisdom teeth (third molars) are present in all four quadrants:
+- Tooth #18 (upper right third molar) and Tooth #28 (upper left third molar) are erupted.
+- Tooth #38 (lower left third molar) and Tooth #48 (lower right third molar) are mesioangularly impacted and tipped mesially against the distal surfaces of the adjacent second molars (#37 and #47, respectively)."
+178,016836.jpg,Can you summarize with findings the panoramic X-ray images presented?,"### Teeth-Specific Observations
+
+1. **General Condition**:  
+   - 32 teeth visualized with clear anatomical definition.  
+   - 4 wisdom teeth detected:  
+     - #18: Erupted  
+     - #38: Erupted  
+     - #48: Erupted  
+     - #28: Erupted  
+
+2. **Pathological Findings**:  
+   - #27: Suspicious for caries (recommend clinical re-evaluation).  
+   - #46: Imaging features sign of periapical lesion (likely abscess).  
+
+3. **Historical Interventions**:  
+   - #46: Imaging features sign of crown and root canal treatment.  
+
+---
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture**:  
+   - Imaging features signs of bone loss in the upper and lower jaw.  
+
+2. **Visible Structures**:  
+   - Imaging features signs of bilateral mandibular canals.  
+   - Maxillary sinuses are visible bilaterally.  
+
+---
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns**:  
+   - Periapical lesion at #46 requires endodontic evaluation.  
+   - Suspicious caries at #27 needs clinical re-evaluation.  
+
+2. **Preventive Measures**:  
+   - Monitor suspicious caries at #27 with radiographic follow-up.  
+
+3. **Follow-up Protocol**:  
+   - 6-month recall for caries monitoring (particularly suspected areas).  
+   - Bitewing series recommended for interproximal caries detection.  
+   - Consider CBCT imaging if clinical symptoms persist or progress.  
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","**Panoramic Radiograph Summary:**
+- **Dentition:** All 32 permanent teeth are present, including all four third molars.
+- **Restorations & Endodontics:** Tooth #46 is endodontically treated with root canal fillings and restored with a radiopaque crown.
+- **Caries & Pathology:** Deep dental caries are noted on the distal-occlusal aspect of tooth #27. A periapical radiolucency is present at the root apices of tooth #46, consistent with apical periodontitis.
+- **Impactions:** Bilateral mandibular third molars (#38 and #48) are mesioangularly impacted.
+- **Bone & Surrounding Structures:** Alveolar bone height is generally well-preserved with mild horizontal bone loss. Maxillary sinuses and bilateral temporomandibular joints (TMJs) appear radiographically normal within the limits of this projection."
+185,016855.jpg,What interventions are noted at teeth #26?,Evidence of fillings.,Tooth #26 has undergone root canal treatment (endodontic therapy) and has a radiopaque coronal restoration (filling or crown).
+186,016855.jpg,What is the general condition of the teeth?,26 teeth are visualized with clear anatomical definition.,"The patient has a partially edentulous dentition with multiple missing teeth, generalized mild-to-moderate horizontal alveolar bone loss (periodontitis), a fixed bridge in the anterior mandible, and a horizontally/mesioangularly impacted lower right third molar."
+187,016855.jpg,What is observed in the bone architecture of the upper jaw?,Evidence of bone loss.,"The upper jaw shows generalized horizontal alveolar bone resorption (bone loss) and localized alveolar ridge atrophy in the edentulous areas (such as the missing #22 region), along with normal pneumatization of the maxillary sinuses."
+188,016855.jpg,Please accurately identify the wisdom tooth in the X-ray image.,"[
+{""box_2d"": [1818, 398, 1944, 628], ""tooth_id"": ""28"", ""is_impacted"": ""false""},
+{""box_2d"": [574, 360, 695, 601], ""tooth_id"": ""18"", ""is_impacted"": ""false""},
+{""box_2d"": [549, 648, 748, 790], ""tooth_id"": ""48"", ""is_impacted"": ""true""}
+]","The wisdom tooth is the lower right third molar (#48), which is horizontally/mesioangularly impacted in the mandible (visible on the lower left side of the radiograph)."
+189,016855.jpg,Please write a caption consists of findings for this panoramic X-ray image.,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. General Condition:
+    - 26 teeth visualized with findings suggestive of clear anatomical definition
+    - 3 wisdom teeth detected:
+        - #18: Erupted (evidence of eruption)
+        - #28: Erupted (evidence of eruption)
+        - #48: Impacted (evidence of impaction)
+    - Missing teeth identified in upper and lower regions
+
+2. Pathological Findings:
+    - #26: Evidence of periapical lesion (likely abscess) 
+    - #24: Evidence of periapical lesion (likely abscess) 
+
+3. Historical Interventions:
+    - #26: Evidence of fillings
+    - #26: Evidence of root canal treatment
+    - #33, 41, 42, 43, 32, 31: Evidence of crown restorations
+
+### Jaw-Specific Observations
+
+1. Bone Architecture:
+    - Evidence of bone loss in the upper and lower jaws
+2. Visible Structures:
+    - Evidence of bilateral mandibular canals
+    - Evidence of bilateral maxillary sinuses
+
+### Clinical Summary & Recommendations
+
+1. Priority Concerns:
+    - Periapical lesion (likely abscess)  at #24 requires surgical evaluation
+    - Periapical lesion (likely abscess)  at #26 necessitates endodontic evaluation
+
+2. Preventive Measures:
+   - Assess impacted wisdom tooth #48 for potential complications
+
+3. Follow-up Protocol:
+    - 6-month recall for caries monitoring
+    - Bitewing series recommended for interproximal caries detection
+    - Regular monitoring of the upper and lower jaws bone loss
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating a partially edentulous dentition with multiple missing teeth, a horizontally impacted lower right third molar (#48), a fixed dental bridge in the anterior mandible, an endodontically treated upper left first molar (#26) with a coronal restoration, a prominent diastema/edentulous space in the upper left lateral incisor region (#22), and generalized moderate horizontal alveolar bone loss."
+195,016910.jpg,What is the general condition of the teeth?,23 teeth are visualized with clear anatomical definition.,"The teeth show generalized severe horizontal bone loss (advanced periodontitis), multiple missing teeth (partial edentulism, particularly in the mandible), active dental caries, and several existing restorations and prosthodontics."
+196,016910.jpg,What pathological findings are present in tooth #24?,Tooth #24 is suspicious for deep caries and shows signs of a periapical abscess.,Tooth #24 exhibits severe coronal destruction due to deep dental caries (radiolucency extending to the pulp chamber) and severe alveolar bone loss.
+197,016910.jpg,What historical interventions are noted for tooth #41?,Tooth #41 shows signs of crown restoration.,Tooth #41 has undergone prosthetic crown restoration as part of a fixed bridge/splint in the anterior mandible.
+198,016910.jpg,What is the clinical recommendation for the suspicious bone loss?,Monitor the suspicious bone loss in the upper and lower jaws.,"The clinical recommendation for the severe bone loss includes a comprehensive periodontal evaluation, periodontal therapy (scaling and root planing), oral hygiene instruction, and assessment of the prognosis of the remaining teeth to determine if any are hopeless and require extraction."
+199,016910.jpg,What findings can be observed in the panoramic radiograph regarding tooth #31?,"[
+{""Teeth position"": {""point_2d"": [1278, 750]}},
+{""Crown"": {""box_2d"": [1249, 650, 1306, 769]}}
+]",Tooth #31 is restored with a prosthetic crown (serving as an abutment for the anterior bridge) and exhibits severe horizontal alveolar bone loss with significantly reduced periodontal support.
+200,016910.jpg,Can you provide a caption consists of findings for this panoramic X-ray scan?,"This is a panoramic dental X-ray image, which provides a broad view of the entire mouth, including the teeth, jawbones, sinuses, and other structures. Below is a detailed analysis of the image:
+
+### Teeth-Specific Observations
+
+1. **General Condition:**
+   - 23 teeth visualized with findings suggestive of clear anatomical definition.
+   - 1 wisdom tooth detected:
+     - #38: Erupted (suspected, recommend clinical review).
+   - 6 missing teeth detected in the lower jaw.
+
+2. **Pathological Findings:**
+   - #24: Suspicious for deep caries.
+   - #14: Sign of periapical abscess.
+   - #24: Sign of periapical abscess.
+
+3. **Historical Interventions:**
+   - #35: Imaging features sign of filling and root canal treatment.
+   - #41: Imaging features sign of crown restoration.
+   - #32: Imaging features sign of crown restoration.
+   - #31: Imaging features sign of crown restoration.
+   - #35: Imaging features sign of filling.
+
+### Jaw-Specific Observations
+
+1. **Bone Architecture:**
+   - Suspicious for bone loss in the upper and lower jaws (recommend clinical re-evaluation).
+
+2. **Visible Structures:**
+   - Imaging features signs of bilateral mandibular canals.
+
+### Clinical Summary & Recommendations
+
+1. **Priority Concerns:**
+   - Periapical abscesses at #14 and #24 require endodontic evaluation.
+   - Deep caries in #24 needs immediate intervention.
+
+2. **Preventive Measures:**
+  - Monitor suspicious bone loss in the upper and lower jaws.
+
+3. **Follow-up Protocol:**
+   - 6-month recall for caries monitoring (particularly suspected areas).
+   - Bitewing series recommended for interproximal caries detection.
+
+Further clinical correlation with physical examination and patient history is recommended for a comprehensive diagnosis.","Panoramic radiograph demonstrating generalized severe horizontal bone loss (periodontitis), partial edentulism with multiple missing mandibular teeth, a 3-unit fixed bridge in the anterior mandible, root canal treatment on tooth #33, a mesially tipped/impacted tooth #38, and severe dental caries/coronal destruction on tooth #24."
