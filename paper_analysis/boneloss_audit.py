@@ -62,6 +62,7 @@ def main():
         rows.append({"item_id": iid, "bucket": r["bucket"], "image": r["image_name"],
                      "key": r["key_stance"], "rating": rr.get("rating"),
                      "dentist_loss": loss_call(rr.get("rating")),
+                     "key_count": r.get("gt_count"), "dentist_count": rr.get("teeth_count"),
                      "conf": rr.get("confidence"), "note": rr.get("note", "")})
     df = pd.DataFrame(rows)
 
@@ -93,10 +94,31 @@ def main():
             verdict = "MIXED / underpowered: neither hypothesis is clearly supported."
         print(f"  => {verdict}")
 
-    print("\nper-image:")
+    # --- tooth-count key audit ---
+    def as_num(x):
+        try:
+            return float(str(x).strip())
+        except (ValueError, TypeError):
+            return None
+    cc = df.copy()
+    cc["kc"] = cc.key_count.map(as_num)
+    cc["dc"] = cc.dentist_count.map(as_num)
+    cc = cc.dropna(subset=["kc", "dc"])
+    if len(cc):
+        cc["diff"] = cc.dc - cc.kc
+        big = cc[cc["diff"].abs() >= 4]
+        print("\nTOOTH-COUNT KEY AUDIT (dentist's count vs the benchmark's key count):")
+        print(f"  mean |dentist - key| = {cc['diff'].abs().mean():.1f} teeth over {len(cc)} images")
+        print(f"  images differing by >= 4 teeth (key likely over-counts): {len(big)}/{len(cc)}")
+        for _, r in cc.sort_values("diff").iterrows():
+            flag = "  <== KEY LIKELY WRONG" if abs(r["diff"]) >= 4 else ""
+            tag = "[count-test] " if r.bucket == "COUNT_TEST" else ""
+            print(f"    {tag}{r.image:14s} key={int(r.kc):2d}  dentist={int(r.dc):2d}  diff={r['diff']:+.0f}{flag}")
+
+    print("\nper-image (bone):")
     for _, r in df.sort_values(["bucket", "item_id"]).iterrows():
         d = {True: "LOSS", False: "none", None: "n/a"}[r.dentist_loss]
-        print(f"  {r.item_id} {r.bucket:11s} key={r.key:4s} dentist={d:4s} conf={r.conf or '-':6s} {r.note[:50]}")
+        print(f"  {r.item_id} {r.bucket:11s} key={r.key:4s} dentist={d:4s} conf={r.conf or '-':6s} {str(r.note)[:50]}")
 
 
 if __name__ == "__main__":

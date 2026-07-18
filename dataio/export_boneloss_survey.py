@@ -42,7 +42,7 @@ textarea{width:100%;min-height:42px;margin-top:6px;font-family:inherit;padding:6
 border-bottom:2px solid #d6e0ef;padding:10px 0;margin-bottom:10px;z-index:5;display:flex;gap:16px;align-items:center}
 button{background:#1a56db;color:#fff;border:0;border-radius:8px;padding:10px 18px;font-size:1rem;cursor:pointer}
 button:disabled{background:#9db4e8;cursor:not-allowed} .count{font-weight:600} input[type=text]{padding:6px;font-size:1rem}
-.hint{color:#555;font-size:.9rem}
+input[type=number].tcount{padding:6px 8px;font-size:1rem;width:150px} .hint{color:#555;font-size:.9rem}
 """
 
 JS = """
@@ -58,8 +58,11 @@ function collect(){
     const id = c.dataset.id, order = +c.dataset.order;
     const r = c.querySelector('input[name="r_'+id+'"]:checked');
     const cf = c.querySelector('input[name="c_'+id+'"]:checked');
+    const tc = c.querySelector('input[name="t_'+id+'"]');
     responses.push({order:order, item_id:id, rating:r?r.value:null,
-                    confidence:cf?cf.value:null, note:c.querySelector('textarea').value.trim(),
+                    confidence:cf?cf.value:null,
+                    teeth_count:(tc && tc.value!=='')?+tc.value:null,
+                    note:c.querySelector('textarea').value.trim(),
                     seconds:(id in answeredAt)?answeredAt[id]:null});
   });
   return responses;
@@ -75,6 +78,7 @@ function restore(){
     (s.responses||[]).forEach(x=>{
       if(x.rating){ const el=document.querySelector('input[name="r_'+x.item_id+'"][value="'+x.rating+'"]'); if(el){el.checked=true; answeredAt[x.item_id]=x.seconds;} }
       if(x.confidence){ const el=document.querySelector('input[name="c_'+x.item_id+'"][value="'+x.confidence+'"]'); if(el) el.checked=true; }
+      if(x.teeth_count!=null){ const el=document.querySelector('input[name="t_'+x.item_id+'"]'); if(el) el.value=x.teeth_count; }
       if(x.note){ const t=document.querySelector('.card[data-id="'+x.item_id+'"] textarea'); if(t) t.value=x.note; }
     });
   }catch(e){}
@@ -82,7 +86,11 @@ function restore(){
 function progress(){
   const cards = document.querySelectorAll('.card');
   let done = 0;
-  cards.forEach(c=>{ if(c.querySelector('input[type=radio][name^=r_]:checked')) done++; });
+  cards.forEach(c=>{
+    const hasR = c.querySelector('input[type=radio][name^=r_]:checked');
+    const tc = c.querySelector('input[name^=t_]');
+    if(hasR && tc && tc.value!=='') done++;   // both the bone rating and a tooth count
+  });
   document.getElementById('count').textContent = done + ' / ' + cards.length + ' answered';
   document.getElementById('dl').disabled = (done < cards.length) || !document.getElementById('dname').value.trim();
 }
@@ -118,6 +126,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   document.getElementById('dname').addEventListener('input', ()=>{save();progress();});
   document.querySelectorAll('textarea').forEach(t=>t.addEventListener('input', save));
   document.querySelectorAll('input[name^=c_]').forEach(r=>r.addEventListener('change', save));
+  document.querySelectorAll('input[name^=t_]').forEach(t=>t.addEventListener('input', ()=>{save();progress();}));
   progress();
 });
 """
@@ -151,21 +160,25 @@ def main():
   <div class="q">{QUESTION}</div>
   {opts}
   <div class="row"><span class="hint">Confidence:</span> {conf}</div>
-  <textarea placeholder="Optional: site/tooth, or any caveat"></textarea>
+  <div class="q">How many teeth are present in this radiograph? (your best count)</div>
+  <div class="row"><input type="number" name="t_{r.item_id}" min="0" max="32" step="1" placeholder="count, e.g. 28" class="tcount">
+  <span class="hint">count natural teeth you can see; roots/implants optional in the note</span></div>
+  <textarea placeholder="Optional: site of bone loss, missing teeth, or any caveat"></textarea>
 </div>""")
 
     html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Alveolar bone-level survey</title><style>{CSS}</style></head><body>
-<h1>Alveolar bone-level assessment</h1>
+<h1>Dental radiograph assessment</h1>
 <div class="intro">
-<p>Thank you for helping again. This is a short, focused follow-up to the earlier survey. Please assess
-<b>{len(man)}</b> panoramic radiographs for one thing only: <b>alveolar bone level</b>. Judge each image on
-its own, from the image alone. There are no trick questions and no time limit; about 15 minutes is typical.</p>
-<p>For each radiograph, choose the option that best matches what you see, add your confidence, and note the
-site if the loss is localized. When every image is answered, enter your name and click <b>Download responses</b>,
-then send us the downloaded file.</p>
-<p class="hint">Your answers are recorded only in the file you download; nothing is uploaded.</p>
+<p>Thank you for helping again. This is a short, focused follow-up to the earlier survey. For each of
+<b>{len(man)}</b> panoramic radiographs, please tell us two things, judging from the image alone:
+(1) the <b>alveolar bone level</b>, and (2) <b>how many teeth are present</b>. There are no trick questions
+and no time limit; about 15 to 20 minutes is typical.</p>
+<p>For each radiograph, choose the bone-level option that best matches what you see, add your confidence,
+enter your best tooth count, and note anything useful (site of bone loss, missing teeth). When every image
+is answered, enter your name and click <b>Submit responses</b>.</p>
+<p class="hint">Both the bone rating and a tooth count are needed on each image before you can submit.</p>
 <label>Your name: <input type="text" id="dname" placeholder="e.g. Dr. Sandeep"></label>
 </div>
 <div class="bar"><span class="count" id="count"></span>
