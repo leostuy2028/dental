@@ -57,10 +57,21 @@
       49.4
     ]
   },
+  "templating": {
+    "n_refs": 578,
+    "clear_anatomical_definition": 141,
+    "no_apparent_bone_loss": 87,
+    "coordinate_box_refs": 101,
+    "verbatim_count_template_example_images": [
+      "016648.jpg",
+      "016652.jpg",
+      "016657.jpg"
+    ]
+  },
   "_generator": "paper_analysis/question_concreteness.py",
   "_source_csv": [
     "results/open/batched_gpt5mini_scores.csv",
     "results/open/batched_gemini35_plain578_scores.csv"
   ],
-  "_generated_utc": "2026-07-19T11:22:42+00:00"
+  "_generated_utc": "2026-07-19T11:49:05+00:00"
 }
