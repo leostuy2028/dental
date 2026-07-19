@@ -1,0 +1,66 @@
+{
+  "total": 578,
+  "buckets": {
+    "Concrete": {
+      "n": 287,
+      "share_pct": 49.7,
+      "gpt5mini": [
+        46.7,
+        42.8,
+        50.6
+      ],
+      "gemini35": [
+        49.7,
+        45.7,
+        53.7
+      ]
+    },
+    "Broad": {
+      "n": 180,
+      "share_pct": 31.1,
+      "gpt5mini": [
+        47.8,
+        43.3,
+        52.3
+      ],
+      "gemini35": [
+        41.7,
+        36.9,
+        46.5
+      ]
+    },
+    "Vague": {
+      "n": 111,
+      "share_pct": 19.2,
+      "gpt5mini": [
+        54.1,
+        50.4,
+        57.9
+      ],
+      "gemini35": [
+        47.7,
+        43.7,
+        51.8
+      ]
+    }
+  },
+  "all": {
+    "n": 578,
+    "gpt5mini": [
+      48.5,
+      46.0,
+      51.0
+    ],
+    "gemini35": [
+      46.8,
+      44.2,
+      49.4
+    ]
+  },
+  "_generator": "paper_analysis/question_concreteness.py",
+  "_source_csv": [
+    "results/open/batched_gpt5mini_scores.csv",
+    "results/open/batched_gemini35_plain578_scores.csv"
+  ],
+  "_generated_utc": "2026-07-19T11:22:42+00:00"
+}
