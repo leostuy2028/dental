@@ -51,7 +51,8 @@ def main():
         img = Image.open(io.BytesIO(raw)).convert("RGB")
         pred_n = count_teeth(model, img, args.imgsz, args.conf)   # agnostic NMS, physical teeth
         if args.map_out:
-            tmap[name] = detect_map(model, img, args.imgsz, args.conf)
+            tmap[name] = {"count": pred_n,   # validated physical count (agnostic NMS)
+                          "teeth": detect_map(model, img, args.imgsz, args.conf)}
         rows.append({"image": name, "detector_count": pred_n,
                      "ref_count": ref.get(name, ""),
                      "diff": (pred_n - ref[name]) if name in ref else ""})
