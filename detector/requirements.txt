@@ -1,0 +1,6 @@
+ultralytics>=8.2.0
+remotezip>=0.12.3
+lightly>=1.5.0
+pyyaml>=6.0
+pillow>=10.0
+pandas>=2.0
