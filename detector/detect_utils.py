@@ -17,11 +17,30 @@ tooth. Report raw vs cleaned side by side so post-processing never hides a weak 
 """
 
 
+# class id (0..31) -> FDI code ("11".."48"), same order as detector/prepare_data.py
+FDI = [f"{q}{t}" for q in (1, 2, 3, 4) for t in range(1, 9)]
+
+
 def predict_boxes(model, source, imgsz=1024, conf=0.25, agnostic=True):
     """Return [(fdi_class_id, confidence), ...] for one image."""
     r = model.predict(source, imgsz=imgsz, conf=conf, agnostic_nms=agnostic, verbose=False)[0]
     return list(zip((int(c) for c in r.boxes.cls.tolist()),
                     (float(c) for c in r.boxes.conf.tolist())))
+
+
+def detect_map(model, source, imgsz=1024, conf=0.25):
+    """The labeled tooth map for one image: one box per FDI code (highest confidence),
+    agnostic NMS. Returns [{'fdi': '26', 'conf': 0.9, 'box': [x1,y1,x2,y2]}, ...] sorted
+    by FDI. Boxes are in original-image pixels. This is the full detector output used to
+    ground a VLM (which tooth is where), not just the count."""
+    r = model.predict(source, imgsz=imgsz, conf=conf, agnostic_nms=True, verbose=False)[0]
+    best = {}
+    for c, cf, xy in zip(r.boxes.cls.tolist(), r.boxes.conf.tolist(), r.boxes.xyxy.tolist()):
+        c = int(c)
+        if c not in best or cf > best[c][0]:
+            best[c] = (float(cf), [round(v) for v in xy])
+    return [{"fdi": FDI[c], "conf": round(cf, 3), "box": box}
+            for c, (cf, box) in sorted(best.items())]
 
 
 def dedup_fdi(boxes):

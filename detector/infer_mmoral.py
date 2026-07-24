@@ -28,12 +28,14 @@ def main():
     ap.add_argument("--imgsz", type=int, default=1024)
     ap.add_argument("--conf", type=float, default=0.25)
     ap.add_argument("--out", default="results/detector/mmoral_counts.csv")
+    ap.add_argument("--map-out", default=None,
+                    help="also dump the full FDI map (per tooth: fdi+box) as JSON here")
     args = ap.parse_args()
 
     import pandas as pd
     from PIL import Image
     from ultralytics import YOLO
-    from detect_utils import count_teeth
+    from detect_utils import count_teeth, detect_map
 
     op = pd.read_parquet(args.data)
     # per-image trusted reference count (from any reference that states one)
@@ -43,11 +45,13 @@ def main():
     images = op.drop_duplicates("image_name").set_index("image_name")["image"]
 
     model = YOLO(args.weights)
-    rows = []
+    rows, tmap = [], {}
     for name, b64 in images.items():
         raw = base64.b64decode(re.sub(r"^data:image/\w+;base64,", "", str(b64)))
         img = Image.open(io.BytesIO(raw)).convert("RGB")
         pred_n = count_teeth(model, img, args.imgsz, args.conf)   # agnostic NMS, physical teeth
+        if args.map_out:
+            tmap[name] = detect_map(model, img, args.imgsz, args.conf)
         rows.append({"image": name, "detector_count": pred_n,
                      "ref_count": ref.get(name, ""),
                      "diff": (pred_n - ref[name]) if name in ref else ""})
@@ -69,6 +73,11 @@ def main():
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
     df.to_csv(args.out, index=False)
     print(f"\nper-image detector vs reference counts -> {args.out}")
+    if args.map_out:
+        import json
+        with open(args.map_out, "w") as f:
+            json.dump(tmap, f)
+        print(f"full FDI map ({len(tmap)} images) -> {args.map_out}")
 
 
 if __name__ == "__main__":
