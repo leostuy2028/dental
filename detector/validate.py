@@ -26,6 +26,7 @@ def main():
 
     import yaml as pyyaml
     from ultralytics import YOLO
+    from detect_utils import predict_boxes, tooth_codes
     model = YOLO(args.weights)
 
     # 1) standard detection metrics (mAP) — writes plots next to the weights
@@ -38,41 +39,43 @@ def main():
     val_split = os.path.basename(valrel.rstrip("/"))     # 'val'
     imgs = sorted(glob.glob(os.path.join(root, valrel, "*")))
 
-    exact = 0
-    abs_err = []
+    raw_exact = clean_exact = 0
+    raw_err, clean_err = [], []
     fdi_hit = fdi_tot = 0
     rows = []
     for ip in imgs:
         stem = os.path.splitext(os.path.basename(ip))[0]
         lab = os.path.join(root, "labels", val_split, stem + ".txt")
-        true = [ln.split()[0] for ln in open(lab)] if os.path.exists(lab) else []
+        true = [int(ln.split()[0]) for ln in open(lab)] if os.path.exists(lab) else []
         true_set, true_n = set(true), len(true)
 
-        r = model.predict(ip, imgsz=args.imgsz, conf=args.conf, verbose=False)[0]
-        pred = [str(int(c)) for c in r.boxes.cls.tolist()]
-        pred_n = len(pred)
+        raw_n = len(predict_boxes(model, ip, args.imgsz, args.conf, agnostic=False))  # default NMS
+        clean = tooth_codes(model, ip, args.imgsz, args.conf)                         # agnostic + 1/FDI
+        clean_n = len(clean)
 
-        abs_err.append(abs(pred_n - true_n))
-        exact += (pred_n == true_n)
+        raw_err.append(abs(raw_n - true_n));     raw_exact += (raw_n == true_n)
+        clean_err.append(abs(clean_n - true_n)); clean_exact += (clean_n == true_n)
         fdi_tot += true_n
-        fdi_hit += len(true_set & set(pred))      # true teeth whose FDI we also predicted
-        rows.append((stem, true_n, pred_n, pred_n - true_n))
+        fdi_hit += len(true_set & clean)          # true teeth whose FDI we also predicted
+        rows.append((stem, true_n, raw_n, clean_n, clean_n - true_n))
 
     n = max(len(imgs), 1)
-    print(f"COUNT:      exact {exact}/{n} ({exact / n * 100:.0f}%)   "
-          f"mean |error| = {sum(abs_err) / n:.2f} teeth")
+    print(f"COUNT raw   (per-class NMS):        exact {raw_exact}/{n} ({raw_exact / n * 100:.0f}%)   "
+          f"mean |err| {sum(raw_err) / n:.2f} teeth")
+    print(f"COUNT clean (agnostic NMS + 1/FDI): exact {clean_exact}/{n} ({clean_exact / n * 100:.0f}%)   "
+          f"mean |err| {sum(clean_err) / n:.2f} teeth")
     print(f"FDI:        {fdi_hit}/{fdi_tot} true teeth detected with the right number "
           f"({fdi_hit / max(fdi_tot, 1) * 100:.0f}%)")
 
-    print("\nWorst count errors (true -> predicted):")
-    for stem, tn, pn, e in sorted(rows, key=lambda x: -abs(x[3]))[:10]:
-        print(f"  {stem}:  true {tn:2d}  pred {pn:2d}  ({e:+d})")
+    print("\nWorst CLEAN count errors (true -> predicted):")
+    for stem, tn, rn, cn, e in sorted(rows, key=lambda x: -abs(x[4]))[:10]:
+        print(f"  {stem}:  true {tn:2d}  pred {cn:2d}  ({e:+d})   [raw {rn}]")
 
     if args.report:
         import csv
         with open(args.report, "w", newline="") as f:
             w = csv.writer(f)
-            w.writerow(["image", "true_count", "pred_count", "error"])
+            w.writerow(["image", "true_count", "raw_count", "clean_count", "clean_error"])
             w.writerows(rows)
         print(f"\nper-image counts -> {args.report}")
 

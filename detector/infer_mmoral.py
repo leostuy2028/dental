@@ -33,6 +33,7 @@ def main():
     import pandas as pd
     from PIL import Image
     from ultralytics import YOLO
+    from detect_utils import tooth_codes
 
     op = pd.read_parquet(args.data)
     # per-image trusted reference count (from any reference that states one)
@@ -46,8 +47,7 @@ def main():
     for name, b64 in images.items():
         raw = base64.b64decode(re.sub(r"^data:image/\w+;base64,", "", str(b64)))
         img = Image.open(io.BytesIO(raw)).convert("RGB")
-        r = model.predict(img, imgsz=args.imgsz, conf=args.conf, verbose=False)[0]
-        pred_n = len(r.boxes)
+        pred_n = len(tooth_codes(model, img, args.imgsz, args.conf))   # agnostic NMS + 1/FDI
         rows.append({"image": name, "detector_count": pred_n,
                      "ref_count": ref.get(name, ""),
                      "diff": (pred_n - ref[name]) if name in ref else ""})
