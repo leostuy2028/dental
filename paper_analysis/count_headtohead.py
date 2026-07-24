@@ -19,7 +19,7 @@ import os
 import pandas as pd
 
 OPEN = "data/open_ended.parquet"
-DETECTOR_CSV = "results/detector/mmoral_counts.csv"   # from Colab Stage 4 (optional, if downloaded)
+DETECTOR_CSV_CANDIDATES = ["results/detector/mmoral_counts.csv", "mmoral_counts.csv"]  # Colab Stage 4 output
 MODELS = [
     ("Gemini 3.5", "results/open/batched_gemini35_plain578_answers.csv"),
     ("GPT-5-mini", "results/open/batched_gpt5mini_answers.csv"),
@@ -76,10 +76,18 @@ def main():
     ref = (op.dropna(subset=["gtc"]).groupby("image_name")["gtc"]
            .agg(lambda s: int(s.mode().iloc[0])).to_dict())
     N = len(ref)
-    count_rows = op.dropna(subset=["gtc"])[["index", "image_name", "question"]].copy()
+    count_rows = op.dropna(subset=["gtc"])[["index", "question"]].copy()
     count_rows["howmany"] = count_rows.question.str.contains("how many", case=False)
     idx2img = op.drop_duplicates("index").set_index("index")["image_name"]
 
+    # detector per-image counts (Colab Stage 4)
+    det = {}
+    dcsv = next((p for p in DETECTOR_CSV_CANDIDATES if os.path.exists(p)), None)
+    if dcsv:
+        dd = pd.read_csv(dcsv).dropna(subset=["ref_count"])
+        det = {im: int(c) for im, c in zip(dd.image, dd.detector_count)}
+
+    model_per_img = {}                                  # name -> {image: stated count}
     results = []                                        # (name, cov, exact, within1, mae)
     for name, path in MODELS:
         if not os.path.exists(path):
@@ -95,17 +103,10 @@ def main():
             hm = grp[grp.howmany]
             src = hm if len(hm) else grp
             per_img[nm] = int(src.pc.mode().iloc[0])
+        model_per_img[name] = per_img
         results.append((name,) + score(per_img, ref))
 
-    # detector row (from Colab Stage 4 CSV if downloaded, else the verified Colab numbers)
-    if os.path.exists(DETECTOR_CSV):
-        dc = pd.read_csv(DETECTOR_CSV)
-        dc = dc[dc.ref_count.astype(str).str.strip() != ""].copy()
-        per_img = dict(zip(dc.image, dc.detector_count.astype(int)))
-        refc = {im: int(c) for im, c in zip(dc.image, dc.ref_count)}
-        results.append(("Detector",) + score(per_img, refc))
-    else:
-        results.append(("Detector", 86, 44, 74, 0.87))   # verified Stage 4 output
+    results.append(("Detector",) + (score(det, ref) if det else (86, 44, 74, 0.87)))
 
     print(f"Reference set: {N} MMOral images with a dentist-confirmed count.\n")
     print(f"{'':<12}{'commits':>9} | {'when it commits':^17} | {'over all ' + str(N) + ' imgs':^17}")
@@ -121,6 +122,20 @@ def main():
     print("\n'commits' = images where the model stated a number. 'over all N' counts a "
           "non-committal answer\nas a miss (the reference caption reports the count, so a "
           "complete answer should too).")
+
+    # fairness check: detector vs each model on the EXACT images that model committed to
+    if det:
+        print("\nSame-subset check — detector vs model on the exact images the model committed to:")
+        print(f"{'Model':<12} {'n':>3} |  {'model exact/w1':^13} |  {'detector exact/w1':^15}")
+        print("-" * 54)
+        for name, per_img in model_per_img.items():
+            imgs = [i for i in per_img if i in ref and i in det]
+            if not imgs:
+                continue
+            n = len(imgs)
+            mex = sum(per_img[i] == ref[i] for i in imgs); mw1 = sum(abs(per_img[i] - ref[i]) <= 1 for i in imgs)
+            dex = sum(det[i] == ref[i] for i in imgs);     dw1 = sum(abs(det[i] - ref[i]) <= 1 for i in imgs)
+            print(f"{name:<12} {n:>3} |   {mex/n*100:3.0f}% / {mw1/n*100:3.0f}%   |    {dex/n*100:3.0f}% / {dw1/n*100:3.0f}%")
 
 
 if __name__ == "__main__":
