@@ -1,0 +1,17 @@
+{
+  "open": {
+    "n": 578,
+    "bone_mentioned": 136,
+    "keyed_no_bone_loss": 89,
+    "keyed_no_bone_loss_pct": 15.4
+  },
+  "closed": {
+    "n": 491,
+    "bone_mentioned": 81,
+    "keyed_no_bone_loss": 25,
+    "keyed_no_bone_loss_pct": 5.1
+  },
+  "_generator": "paper_analysis/boneloss_footprint.py",
+  "_note": "dataset-derived footprint (at-risk items), not confirmed errors",
+  "_generated_utc": "2026-07-24T11:19:08+00:00"
+}

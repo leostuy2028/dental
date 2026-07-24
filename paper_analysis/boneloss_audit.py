@@ -118,7 +118,8 @@ def main():
     print("\nper-image (bone):")
     for _, r in df.sort_values(["bucket", "item_id"]).iterrows():
         d = {True: "LOSS", False: "none", None: "n/a"}[r.dentist_loss]
-        print(f"  {r.item_id} {r.bucket:11s} key={r.key:4s} dentist={d:4s} conf={r.conf or '-':6s} {str(r.note)[:50]}")
+        conf = r.conf if isinstance(r.conf, str) else "-"
+        print(f"  {r.item_id} {r.bucket:11s} key={str(r.key):4s} dentist={d:4s} conf={conf:6s} {str(r.note)[:50]}")
 
 
 if __name__ == "__main__":
