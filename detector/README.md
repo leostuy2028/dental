@@ -28,7 +28,7 @@ Runtime -> Change runtime type -> **T4 GPU**, then run the cells top to bottom.
 
 | Stage | Script | Where | Notes |
 |------|--------|-------|-------|
-| 0 data | `prepare_data.py` | Colab (once) | streams DENTEX set (b), cleans the 3% noise, converts to YOLO, splits, writes `dentex.yaml` to **Drive** |
+| 0 data | `prepare_data.py` | Colab (once) | streams DENTEX set (b), **excludes** the ~2.5% count-erroneous images, converts to YOLO, splits, writes `dentex.yaml` to **Drive** |
 | 1 pretrain *(optional)* | `pretrain_ssl.py` | Colab GPU | SimCLR / InfoNCE on unlabeled X-rays -> a ResNet backbone |
 | 2 train | `train.py` | Colab GPU | YOLO fine-tune (~1 hr on T4); curves + confusion matrix + val previews saved to Drive |
 | 3 validate | `validate.py` | Colab | mAP **plus** count + FDI accuracy and the worst errors — this is the gate |
@@ -42,9 +42,30 @@ dentex_yolo/
   images/{train,val}/*.png
   labels/{train,val}/*.txt      # class x_center y_center w h  (normalized)
   dentex.yaml                   # 32 FDI classes (11..18, 21..28, 31..38, 41..48)
+  qc_report.csv                 # every image: n_boxes, status (ok/excluded), reason
+  excluded.json                 # the blocklist of dropped files + reasons
   runs/<name>/weights/best.pt   # trained weights (Stage 2)
 ```
 The raw 10.9 GB DENTEX zip is **never** persisted — set (b) is streamed out of it.
+
+## Data hygiene — keeping count-erroneous images out
+
+Some DENTEX annotations box a tooth twice, so the image's tooth count is wrong (the
+worst has 40 boxes). Those must never reach the detector — training it on a bad count
+would defeat the one thing it exists to do. So Stage 0 runs a single QC gate,
+`qc_image()`, over the **raw** annotations *before* the train/val split:
+
+- an image is **excluded** if any FDI code repeats (duplicate tooth), if it has >32
+  boxes, or if it has fewer than 4 (a broken, near-empty annotation);
+- genuine sparse/edentulous mouths are **kept** (the counter must handle them);
+- exclusions are written to `qc_report.csv` + `excluded.json` — one auditable blocklist
+  that is the *only* thing feeding `images/{train,val}`, so `train.py` and `validate.py`
+  both read the already-filtered split and nothing else can slip past;
+- after writing, a verify pass re-reads every emitted label and **asserts** no file
+  contains a duplicate class — the build fails loudly if a bad label ever leaks through.
+
+On the current DENTEX set that drops **16 of 634** images (all duplicate-tooth), leaving
+618 clean. `infer_mmoral.py` runs on MMOral, not DENTEX, so it never touches these.
 
 ## Watching progress / errors
 
