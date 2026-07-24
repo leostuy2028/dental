@@ -85,7 +85,12 @@ def main():
     rng.shuffle(clean_ids)
     val_ids = set(clean_ids[: int(len(clean_ids) * args.val_frac)])
 
+    # rebuild the split from scratch so a re-run never leaves stale (e.g. previously
+    # kept) images behind; only touches images/ + labels/, never runs/ (weights).
+    import shutil
     for split in ("train", "val"):
+        shutil.rmtree(f"{args.out}/images/{split}", ignore_errors=True)
+        shutil.rmtree(f"{args.out}/labels/{split}", ignore_errors=True)
         os.makedirs(f"{args.out}/images/{split}", exist_ok=True)
         os.makedirs(f"{args.out}/labels/{split}", exist_ok=True)
 
