@@ -1,0 +1,42 @@
+{
+  "closed": {
+    "total": 491,
+    "KEEP": 413,
+    "FLAG": 71,
+    "REPAIR": 0,
+    "SEPARATE": 0,
+    "DROP": 7,
+    "detail": {
+      "coord_in_question": 7,
+      "ambiguous_codes": 32,
+      "bone_loss_items": 39
+    },
+    "note": "every KEEP/FLAG item is additionally re-keyed onto the position-balanced key (\u00a75.3)"
+  },
+  "open": {
+    "total": 578,
+    "KEEP": 339,
+    "FLAG": 29,
+    "REPAIR": 99,
+    "SEPARATE": 111,
+    "DROP": 0,
+    "detail": {
+      "coord_reference": 101,
+      "bone_loss_reference": 87,
+      "vague": 111
+    },
+    "concreteness": {
+      "Concrete": 287,
+      "Broad": 180,
+      "Vague": 111
+    },
+    "concrete_and_clean": 190,
+    "concrete_but_coordinate_reference": 97
+  },
+  "_generator": "paper_analysis/corrected_benchmark.py",
+  "_generated_utc": "2026-07-25T15:59:39+00:00",
+  "_source": [
+    "data/closed_ended.parquet",
+    "data/open_ended.parquet"
+  ]
+}
