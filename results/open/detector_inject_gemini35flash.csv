@@ -1,0 +1,17 @@
+image,index,dtype,q,base,A_nochart,B_chart,ansA,ansB
+016640.jpg,1,whichtooth,Which teeth are suspected to have caries?,0.3,0.3,0.0,Teeth suspected to have caries include #24 (severe distal ca,"Teeth suspected to have dental caries include #17, #27, #37,"
+016640.jpg,3,whichtooth,Which tooth shows signs of a periapical abscess?,0.0,0.0,0.0,Tooth #24 shows clear signs of a periapical abscess (periapi,Tooth #26 shows clear signs of a periapical abscess (charact
+016642.jpg,14,cond#N,What is the condition of tooth #28?,0.0,0.0,0.3,"Tooth #28 is present, unerupted/impacted, positioned high in",Tooth #28 (upper-left third molar) is present and erupted/pa
+016648.jpg,17,count,How many teeth are visualized in the radiograph?,0.0,0.0,0.9,There are 30 teeth visualized in this panoramic radiograph.,31 teeth are visualized in this radiograph.
+016649.jpg,25,count,"What is the general condition of the teeth, and how ",0.0,0.0,0.3,"The general condition of the teeth is fair, characterized by","The general condition of the teeth is fair, showing a histor"
+016650.jpg,29,count,"What is the general condition of the teeth, and how ",0.3,0.0,0.6,"The general condition of the dentition is fair, showing a mi",**General Condition and Wisdom Teeth:** The overall dentitio
+016650.jpg,30,cond#N,"Which teeth show signs of deep caries, and what addi",0.3,0.0,0.6,Signs of deep caries are noted on the distal surfaces of tee,**Deep Caries and Tooth #46 Findings:** Deep dental caries (
+016650.jpg,31,whichtooth,"Which teeth have signs of fillings, and which have u",0.4,0.3,0.6,"Teeth showing signs of fillings/restorations include #16, #2",**Fillings and Root Canal Treatments:** Multiple teeth show 
+016655.jpg,42,cond#N,What is the condition of tooth #18?,0.0,0.0,1.0,Tooth #18 is impacted and positioned high in the right maxil,"Tooth #18 is fully erupted, clinically normal, and shows no "
+016655.jpg,44,whichtooth,Which tooth shows imaging features of a periapical a,0.0,0.0,0.0,Tooth #36 (lower left first molar) shows a periapical radiol,None of the teeth show definitive imaging features of a peri
+016655.jpg,45,cond#N,Please provide a full description of the condition o,0.3,0.0,0.6,Tooth #18 is an impacted upper right third molar located hig,Tooth #18 (the upper-right third molar) is fully erupted and
+016657.jpg,48,whichtooth,Which teeth show signs of fillings?,0.2,0.2,0.2,**Teeth with Fillings/Restorations:** Radiopaque restoration,"Dental restorations (fillings) are visible on teeth #16, #26"
+016690.jpg,59,whichtooth,Which teeth show signs of fillings?,0.0,0.0,0.7,"Teeth 15, 25, 35, and 45 show clear signs of radiopaque dent",Teeth showing signs of radiopaque restorations (fillings) ar
+016690.jpg,61,count,"What is the general condition of the teeth, and how ",0.4,0.4,1.0,"The general condition of the teeth is good, with well-preser","The general condition of the teeth is excellent, with well-m"
+016708.jpg,81,missing,Detect missing teeth in the panoramic image.,0.0,0.0,0.0,"The missing teeth are #18, #16, #15, #26, #28, #38, #45, #46","The missing teeth are #18, #16, #25, #26, #28, #38, #45, #46"
+016713.jpg,90,whichtooth,Which teeth have fillings and require clinical revie,0.0,0.0,0.0,Fillings/restorations are visible on teeth #16 (large mesio-,There is a large radiopaque filling/restoration on the dista
