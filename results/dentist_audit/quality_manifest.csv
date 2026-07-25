@@ -1,0 +1,864 @@
+image,index,task_type,question,A,B,C,D,keyed_answer,keyed_text,reference,risk_rank,survey,item_id
+016825,131,closed,In which jaw are missing teeth regions detected?,Upper jaw,Lower jaw,Both jaws,No missing teeth,C,Both jaws,,0,1,q0001
+016825,132,closed,Which wisdom tooth is erupted according to the report?,#18,#38,#28,#48,C,#28,,0,1,q0002
+016825,133,closed,Which tooth exhibits a periapical granuloma?,#45,#27,#37,#47,A,#45,,0,1,q0003
+016825,135,closed,Which tooth is suspected to have deep caries?,#27,#25,#37,#18 and #28,C,#37,,0,1,q0004
+016825,156,open,What restorations and pathologies are noted for tooth #45?,,,,,,,Tooth #45 has a crown restoration.,0,1,q0005
+016825,158,open,Which tooth has a periapical lesion?,,,,,,,Tooth #45 has a periapical lesion (likely abscess).,0,1,q0006
+016825,159,open,What structures are visible in the jaw and sinus?,,,,,,,Bilateral mandibular canals and maxillary sinus are visible.,0,1,q0007
+016825,160,open,Please detect the mandibular canal in the panoramic image.,,,,,,,Findings: mandibular canal.,0,1,q0008
+016790,101,closed,Which tooth has both a crown restoration and root canal treatment?,#14,#16,#24,#36,D,#36,,1,1,q0009
+016790,102,closed,Which of the following is a tooth with suspicious caries?,#34,#44,#17,#25,B,#44,,1,1,q0010
+016790,103,closed,Which tooth does have a filling?,#14,#24,#36,#25,C,#36,,1,1,q0011
+016790,104,closed,Which tooth is erupted among the wisdom teeth?,#18,#28,#38,#48,C,#38,,1,1,q0012
+016790,105,closed,Which tooth has a sign of caries?,#14,#24,#34,None,C,#34,,1,1,q0013
+016790,120,open,Which teeth are suspected of having caries and require clinical re-evaluation?,,,,,,,#25.,1,1,q0014
+016790,121,open,Describe the findings for tooth #46.,,,,,,,"Sign of periapical granuloma, crown restoration, and root canal treatment.",1,1,q0015
+016790,122,open,List the impacted wisdom teeth and their statuses.,,,,,,,#18: Impacted; #28: Impacted; #38: Impacted.,1,1,q0016
+016790,123,open,What is observed regarding the bone architecture?,,,,,,,No apparent bone loss in the image.,1,1,q0017
+016790,124,open,What are the most significant radiographic anomalies present in this panoramic radiograph?,,,,,,,Tooth #45: deep caries. Tooth #18: impacted. Tooth #38: impacted. Tooth #28: impacted.,1,1,q0018
+016807,111,closed,Is there apparent bone loss in the jaw?,Yes,No,Unclear,Partial,D,Partial,,2,1,q0019
+016807,112,closed,Which tooth site has a dental implant present?,#24,#25,#26,#36,B,#25,,2,1,q0020
+016807,113,closed,Which tooth is suspected to have caries?,#13,#14,#15,None,A,#13,,2,1,q0021
+016807,114,closed,Which tooth shows signs of a periapical granuloma?,#23,#24,#25,None,A,#23,,2,1,q0022
+016807,115,closed,Which tooth has both a crown and root canal treatment?,#16,#24 and #36,#36,#46,A,#16,,2,1,q0023
+016807,132,open,What historical interventions are noted for tooth #25?,,,,,,,"Tooth #25 has a crown, root canal treatment, and a post.",2,1,q0024
+016807,133,open,What is the status of the wisdom tooth?,,,,,,,Wisdom tooth #38 is erupted but requires clinical review.,2,1,q0025
+016807,134,open,What is the general condition of the teeth?,,,,,,,29 teeth are visualized with clear anatomical definition.,2,1,q0026
+016807,135,open,What visible structures are observed in the jaw?,,,,,,,Bilateral mandibular canals and maxillary sinuses.,2,1,q0027
+016807,136,open,Does the panoramic radiograph reveal any specific tooth involvement trends related to crown?,,,,,,,"Tooth #24, #36, #26, #25, #16, #15, #46, #47.",2,1,q0028
+017693,355,closed,Which tooth shows signs of a crown restoration?,#26,#27,#28,#37,D,#37,,3,1,q0029
+017693,356,closed,Which of the following teeth has signs of a periapical granuloma?,#26,#27,#28,#37,C,#28,,3,1,q0030
+017693,357,closed,How many wisdom teeth are detected in the panoramic radiograph?,1,2,3,4,A,1,,3,1,q0031
+017693,358,closed,Which of the following teeth has a filling?,#27,#37,#46,Both B and C,B,#37,,3,1,q0032
+017693,420,open,What pathological findings are present in the radiograph?,,,,,,,Imaging features sign of periapical granuloma at #27.,3,1,q0033
+017693,421,open,What is the general condition of the teeth and how many wisdom teeth are erupted?,,,,,,,"31 teeth are visualized with clear anatomical definition. Three wisdom teeth (18, #28, #38) are erupted.",3,1,q0034
+017693,422,open,What historical interventions are noted in the radiograph?,,,,,,,"Signs of fillings at #37 and #46, and a crown restoration at #27.",3,1,q0035
+017693,423,open,What is the condition of the bone architecture in the jaw?,,,,,,,No apparent bone loss is observed.,3,1,q0036
+017693,424,open,What is the overall structural integrity of tooth #46 as seen on the panoramic radiograph?,,,,,,,Findings: filling.,3,1,q0037
+016964,195,closed,Which wisdom tooth is likely erupted?,#18,#28,#38,"#28, #38, #48",D,"#28, #38, #48",,4,1,q0038
+016964,196,closed,How many teeth are visualized in the panoramic radiograph?,25,30,32,35,B,30,,4,1,q0039
+016964,197,closed,Which tooth has undergone root canal treatment?,#11,#12,#13,#14,A,#11,,4,1,q0040
+016964,198,closed,Which tooth shows signs of a periapical abscess?,#35,#37,#46,#47,A,#35,,4,1,q0041
+016964,199,closed,Which tooth has a filling?,#42,#43,#44,None,C,#44,,4,1,q0042
+016964,228,open,What is the clinical recommendation for the periapical abscess at #47?,,,,,,,Extraction of residual roots.,4,1,q0043
+016964,229,open,What historical interventions are noted in the radiograph?,,,,,,,Root canal treatment at #12.,4,1,q0044
+016964,230,open,What is the general condition of the teeth in the radiograph?,,,,,,,30 teeth are visualized with clear anatomical definition.,4,1,q0045
+016964,231,open,Which teeth show signs of caries?,,,,,,,"#35, #28, #37, #47.",4,1,q0046
+016964,232,open,Please accurately identify the mandibular canal in the X-ray image.,,,,,,,Findings: mandibular canal.,4,1,q0047
+017148,260,closed,Which tooth shows signs of a periapical abscess?,#35,#36,#37,#38,A,#35,,5,1,q0048
+017148,261,closed,Which tooth has signs of a crown and implant restoration?,#17,#25,#35,#45,C,#35,,5,1,q0049
+017148,262,closed,Which of the following is NOT a visible structure in the jaw?,Bilateral mandibular canals,Maxillary sinus,Nasal cavity,All,C,Nasal cavity,,5,1,q0050
+017148,263,closed,Which tooth has signs of a crown and root canal treatment?,#26,#35,#25 and #35,#17,B,#35,,5,1,q0051
+017148,306,open,"What is the general condition of the teeth, and how many wisdom teeth are detected?",,,,,,,"30 teeth are visualized with clear anatomical definition. Three wisdom teeth are detected: #18 is erupted (suspected, recommend clinical review), and #38 is impacted (suspected, recommend clinical review).",5,1,q0052
+017148,307,open,What are the priority concerns for immediate attention?,,,,,,,Periapical abscess at #37 requires immediate endodontic evaluation and treatment. Suspected caries at #36 need prompt intervention and monitoring.,5,1,q0053
+017148,308,open,What pathological findings are present in the teeth?,,,,,,,"#36 has suspected caries, and #37 shows imaging features sign of a periapical abscess.",5,1,q0054
+017148,309,open,What visible structures are observed in the jaw?,,,,,,,Imaging features signs of bilateral mandibular canals and bilateral maxillary sinuses.,5,1,q0055
+017148,310,open,Does the panoramic radiograph reveal any specific tooth involvement trends related to root canal treatment?,,,,,,,"Tooth #35, #37, #25.",5,1,q0056
+017220,290,closed,Which tooth is indicated with a periapical abscess?,#41,#42,#43,#44,B,#42,,6,1,q0057
+017220,291,closed,Which tooth has an implant?,#36,#37,#38,#39,A,#36,,6,1,q0058
+017220,292,closed,How many wisdom teeth are detected?,1,2,3,4,D,4,,6,1,q0059
+017220,293,closed,Which tooth is suspected to have an erupted wisdom tooth?,#18,#21,#38,#48,B,#21,,6,1,q0060
+017220,342,open,What historical interventions are noted for tooth #11?,,,,,,,Tooth #11 has a crown and root canal treatment.,6,1,q0061
+017220,343,open,What preventive measures are recommended?,,,,,,,Monitor suspicious caries with radiographic follow-up and emphasize oral hygiene practices.,6,1,q0062
+017220,344,open,Which teeth are suspicious for caries?,,,,,,,#46 is suspicious for caries.,6,1,q0063
+017220,345,open,What is the general condition of the teeth?,,,,,,,"29 (including restored teeth; otherwise, 25 natural teeth) teeth are visualized with clear anatomical definition.",6,1,q0064
+016713,73,closed,Which tooth shows signs of a periapical granuloma?,#17,#27,#37,None,A,#17,,7,1,q0065
+016713,74,closed,Which of the following wisdom teeth is suspicious for impaction?,#18,#28,#38,#48,A,#18,,7,1,q0066
+016713,75,closed,Which tooth has a crown restoration?,#11,#21,#31,Both A and B,D,Both A and B,,7,1,q0067
+016713,76,closed,How many teeth are visualized in the radiograph?,28,31,32,34,C,32,,7,1,q0068
+016713,89,open,What is the general condition of the teeth and the status of the wisdom teeth?,,,,,,,"31 teeth are visualized. Wisdom teeth #18, #28, #48 are erupted; #38 is suspicious for impaction.",7,1,q0069
+016713,90,open,Which teeth have fillings and require clinical review?,,,,,,,#17 has a filling.,7,1,q0070
+016713,91,open,What jaw-specific structures are visible in the radiograph?,,,,,,,Mandibular canal and bilateral maxillary sinuses are visible.,7,1,q0071
+016713,92,open,Which teeth have crown restorations?,,,,,,,#11 and #21 have crown restorations.,7,1,q0072
+016713,93,open,Identify areas showing the maxillary sinus in the panoramic radiograph.,,,,,,,Findings: maxillary sinus.,7,1,q0073
+016821,121,closed,Which tooth has an implant?,#44,#45,#46,#48,A,#44,,8,1,q0074
+016821,123,closed,How many teeth have signs of crowns?,3,4,5,6,C,5,,8,1,q0075
+016821,124,closed,Which tooth has signs of a periapical granuloma?,#12,#11,#21,#22,A,#12,,8,1,q0076
+016821,125,closed,Which jaw shows signs of bone loss?,Upper jaw,Lower jaw,Both jaws,None,B,Lower jaw,,8,1,q0077
+016821,144,open,How many wisdom teeth are erupted?,,,,,,,"Two wisdom teeth are erupted: #18, and #28.",8,1,q0078
+016821,145,open,Where is the missing tooth located?,,,,,,,The missing tooth is located in the lower jaw.,8,1,q0079
+016821,146,open,What historical interventions are noted at #44 and #45?,,,,,,,Signs of crowns and root canal treatments are noted at #44 and #45.,8,1,q0080
+016821,147,open,What is observed in the bilateral mandibular canals?,,,,,,,Imaging features signs of bilateral mandibular canals.,8,1,q0081
+017137,251,closed,Which wisdom teeth are erupted according to the report?,"#18, #28, #38","#18, #28, #48","#18, #38, #48","#28, #38, #48",A,"#18, #28, #38",,9,1,q0082
+017137,252,closed,Which teeth have signs of root canal treatment?,"#36, #42, #35","#34, #35, #36","#35, #36, #37","#32, #34, #36",D,"#32, #34, #36",,9,1,q0083
+017137,253,closed,What interventions are noted on tooth 36?,Crown only,Filling only,Filling and Root Canal Treatment,Crown and Filling,A,Crown only,,9,1,q0084
+017137,254,closed,Which tooth has a suspected periapical granuloma?,#35,#35 and #36,#37,#38,B,#35 and #36,,9,1,q0085
+017137,294,open,Which teeth have signs of root canal treatment?,,,,,,,"Teeth #36, #42, and #35 show signs of root canal treatment.",9,1,q0086
+017137,295,open,What interventions are noted on tooth #46?,,,,,,,Tooth #46 shows signs of a crown and root canal treatment.,9,1,q0087
+017137,296,open,What is observed regarding the bone architecture in the jaw?,,,,,,,No apparent bone loss is observed in the jaw.,9,1,q0088
+017137,297,open,What preventive measure is suggested for the wisdom teeth?,,,,,,,Monitoring of the suspected wisdom teeth impaction with radiographic follow-up is recommended.,9,1,q0089
+017137,298,open,What findings can be observed in the panoramic radiograph regarding tooth #26?,,,,,,,Findings: crown.,9,1,q0090
+017656,345,closed,Which tooth is suspicious for a periapical lesion likely abscess?,#36,#46,#26,#16,A,#36,,10,1,q0091
+017656,346,closed,Which tooth shows signs of both a crown restoration and an implant placement?,#36,#16,#37,#17,C,#37,,10,1,q0092
+017656,347,closed,Which tooth is suspicious for caries?,#38,#48,#28,#18,B,#48,,10,1,q0093
+017656,348,closed,Which tooth is impacted?,#28,#38,#48,#18,D,#18,,10,1,q0094
+017656,408,open,Which teeth are identified as wisdom teeth and what are their statuses?,,,,,,,#28 is erupted and #48 is impacted.,10,1,q0095
+017656,410,open,What is noted regarding the bone architecture in the radiograph?,,,,,,,No apparent bone loss is observed.,10,1,q0096
+017656,411,open,What pathological findings are associated with #46 and #48?,,,,,,,#46 is suspicious for a periapical cyst and #48 is suspicious for caries.,10,1,q0097
+017656,412,open,Identify areas showing the historical treatments in the panoramic radiograph.,,,,,,,"Tooth #46: crown. Tooth #36: filling. Tooth #16: crown. Tooth #17: filling. Tooth #37: crown, implant.",10,1,q0098
+017773,360,closed,Is there any apparent bone loss in the jaw?,Yes,No,Slight,Moderate,D,Moderate,,11,1,q0099
+017773,361,closed,Which of the following wisdom teeth is erupted?,#18,#28,#38,#48,C,#38,,11,1,q0100
+017773,362,closed,Which tooth has signs of root canal treatment?,#34,#36,#37,#38,D,#38,,11,1,q0101
+017773,363,closed,Which tooth shows evidence of a periapical cyst?,#34,#36,#37,#38,B,#36,,11,1,q0102
+017773,364,closed,Which of the following is a priority concern?,Caries at 34,Periapical cyst at 37,Deep caries at 47,All of the above,B,Periapical cyst at 37,,11,1,q0103
+017773,426,open,What is the clinical recommendation for the periapical cyst at #37?,,,,,,,The periapical cyst at #37 requires endodontic evaluation.,11,1,q0104
+017773,427,open,Are there any signs of bone loss in the jaw?,,,,,,,No apparent bone loss is observed in the image.,11,1,q0105
+017773,428,open,What is the status of the wisdom teeth?,,,,,,,"#18, #28, and #48 are impacted, while #38 is erupted.",11,1,q0106
+017773,429,open,Please accurately identify the historical treatments in the X-ray image.,,,,,,,"Tooth #25: filling. Tooth #36: filling. Tooth #26: filling. Tooth #47: filling. Tooth #17: filling. Tooth #37: root canal treatment. Tooth #46: crown, root canal treatment. Tooth #15: filling. Tooth #27: filling. Tooth #16: filling.",11,1,q0107
+018263,427,closed,Which of the following structures are visible in the left maxillary sinus?,Nasal cavity,Mandibular canal,Normal appearance,Signs of infection,C,Normal appearance,,12,1,q0108
+018263,428,closed,Which tooth shows signs suggestive of a periapical cyst?,#36,#37,#46,#47,D,#47,,12,1,q0109
+018263,429,closed,What is the status of bone loss in the jaw?,Severe bone loss,Moderate bone loss,No apparent bone loss,Mild bone loss,A,Severe bone loss,,12,1,q0110
+018263,430,closed,Which of the following is NOT a recommended clinical action for tooth 46?,Endodontic evaluation,Surgical consultation,Crown restoration,Monitoring,C,Crown restoration,,12,1,q0111
+018263,431,closed,Which of the following teeth is erupted according to the report?,#38,#48,#28,#32,B,#48,,12,1,q0112
+018263,503,open,What structures are visible in the left maxillary sinus?,,,,,,,Left maxillary sinus visible with normal appearance.,12,1,q0113
+018263,504,open,What is the status of the wisdom teeth #38 and #48?,,,,,,,Impacted.,12,1,q0114
+018263,505,open,What is the status of bone architecture in the jaw?,,,,,,,No apparent bone loss.,12,1,q0115
+018263,506,open,What radiographic features are visible in tooth #46 on the panoramic X-ray?,,,,,,,"Findings: periapical lesions (cyst), crown.",12,1,q0116
+018277,437,closed,What is a priority concern based on the findings?,Bone loss around 11,Periapical granuloma at 47,Impacted wisdom teeth,Both B and C,A,Bone loss around 11,,13,1,q0117
+018277,438,closed,Which teeth are observed to have crowns?,"#11,12,13,21,22,23","#14,15,16,24,25,26","#17,18,19,27,28,29","#31,32,33,41,42,43",B,"#14,15,16,24,25,26",,13,1,q0118
+018277,439,closed,Is there any apparent bone loss in the image?,Yes,No,Maybe,Not specified,C,Maybe,,13,1,q0119
+018277,440,closed,Which of the following teeth is impacted?,#18,#28,#38,None,C,#38,,13,1,q0120
+018277,441,closed,How many wisdom teeth are non-impacted and erupted?,1,2,3,4,C,3,,13,1,q0121
+018277,514,open,What clinical recommendations are prioritized?,,,,,,,Endodontic evaluation for the periapical granuloma at #47 is recommended.,13,1,q0122
+018277,515,open,What is the general condition of the teeth?,,,,,,,32 teeth are visualized with clear anatomical definition.,13,1,q0123
+018277,516,open,What is the condition of the maxillary sinuses?,,,,,,,The maxillary sinuses appear normal in size and density.,13,1,q0124
+018277,517,open,What structures are visible in the jawbones?,,,,,,,Bilateral mandibular canals are visible.,13,1,q0125
+018277,518,open,Which areas show the mandibular canal in the panoramic image?,,,,,,,Findings: mandibular canal.,13,1,q0126
+018377,457,closed,Which tooth shows signs of a periapical granuloma?,#43,#37,#44,#45,D,#45,,14,1,q0127
+018377,458,closed,What structures are visible bilaterally in the jaw?,Mandibular canals,Maxillary sinuses,Both A and B,None of the above,C,Both A and B,,14,1,q0128
+018377,459,closed,What is observed in the upper jawbone?,Evidence of bone gain,Evidence of bone loss,No significant findings,Fracture,A,Evidence of bone gain,,14,1,q0129
+018377,460,closed,Which tooth is suspected to have caries?,#43,#44,#37,All of the above,D,All of the above,,14,1,q0130
+018377,461,closed,Which of the following requires endodontic evaluation?,#37 and #38,#37 and #45,#43 and #44,#28 and #38,B,#37 and #45,,14,1,q0131
+018377,537,open,"What is the general condition of the teeth, and how many wisdom teeth are detected?",,,,,,,"30 teeth are visualized with clear anatomical definition. Two wisdom teeth are detected: #28 is impacted, and #38 is impacted.",14,1,q0132
+018377,538,open,What pathological findings are associated with tooth #37?,,,,,,,Tooth #37 shows signs of suspicious caries and a periapical lesion likely abscess.,14,1,q0133
+018377,539,open,What is the status of the maxillary sinuses and mandibular canals?,,,,,,,Signs of bilateral maxillary sinuses and bilateral mandibular canals are present.,14,1,q0134
+018377,541,open,Which mandibular canal is/are visible in the panoramic dental image?,,,,,,,Findings: mandibular canal.,14,1,q0135
+016659,42,closed,Which tooth shows signs of deep caries?,#36,#46,#26,#16,B,#46,,15,1,q0136
+016659,43,closed,Which tooth has a periapical abscess?,#36,#46,#26,#16,C,#26,,15,1,q0137
+016659,44,closed,Which tooth has a sign of filling?,#16,#17,#18,#19,A,#16,,15,1,q0138
+016659,45,closed,Which region has a missing tooth?,Lower side,Upper side,Both sides,None,C,Both sides,,15,1,q0139
+016659,46,closed,How many erupted wisdom teeth are present in the radiograph?,3,4,5,6,C,5,,15,1,q0140
+016659,53,open,What pathological findings are noted in tooth #46?,,,,,,,Tooth #46 shows signs of deep caries and a periapical abscess.,15,1,q0141
+016659,54,open,What is the status of the wisdom teeth?,,,,,,,"All four wisdom teeth (18, #28, #38, #48) are erupted.",15,1,q0142
+016659,55,open,What is observed in the bone architecture of the lower jaw?,,,,,,,Signs of bone loss are present in the lower jaw.,15,1,q0143
+016659,56,open,What is recommended regarding the missing tooth region?,,,,,,,Monitor the missing tooth region on the upper side for potential prosthetic needs.,15,1,q0144
+016659,57,open,Identify areas showing the bone loss in the panoramic radiograph.,,,,,,,"Findings: bone loss, side lower.",15,1,q0145
+016874,161,closed,How many wisdom teeth are erupted according to the report?,3,4,0,1,D,1,,16,1,q0146
+016874,162,closed,Which jaw has a missing tooth region detected?,Upper jaw,Lower jaw,Both jaws,None,A,Upper jaw,,16,1,q0147
+016874,163,closed,Which tooth has undergone root canal treatment?,#21,#22,#23,#24,A,#21,,16,1,q0148
+016874,190,open,What pathological findings are associated with tooth #27?,,,,,,,Tooth #27 has deep caries and signs of a periapical granuloma.,16,1,q0149
+016874,191,open,"What is the general condition of the teeth, and how many wisdom teeth are erupted?",,,,,,,"30 teeth are visualized with clear anatomical definition, and 4 wisdom teeth (18, #28, #38, #48) are erupted.",16,1,q0150
+016874,192,open,Which teeth show signs of fillings?,,,,,,,"Teeth #17, #21, #26, #46, #22, #38, #48 show signs of fillings.",16,1,q0151
+016874,193,open,What radiographic features are visible in tooth #48 on the panoramic X-ray?,,,,,,,"Findings: wisdom tooth, filling.",16,1,q0152
+016947,180,closed,Which tooth has a crown restoration and root canal treatment?,#35,#36,#37,#38,D,#38,,17,1,q0153
+016947,181,closed,How many erupted wisdom teeth are suspected in the radiograph?,1,2,3,4,A,1,,17,1,q0154
+016947,182,closed,In which jaw is evidence of bone loss observed?,Lower jaw,Upper jaw,Both jaws,No jaw,D,No jaw,,17,1,q0155
+016947,183,closed,Which tooth requires endodontic evaluation due to a periapical granuloma?,#35,#36,#37,#38,A,#35,,17,1,q0156
+016947,184,closed,Which jaw shows evidence of bone loss?,Lower jaw,Upper jaw,Both jaws,No jaw,A,Lower jaw,,17,1,q0157
+016947,213,open,What preventive measure is recommended for the erupted wisdom teeth?,,,,,,,"Tooth 28 extraction, monitor the erupted wisdom teeth 18, 48 for potential complications.",17,1,q0158
+016947,214,open,What is observed in the bone architecture of the upper jaw?,,,,,,,No bone loss is observed in the upper jaw.,17,1,q0159
+016947,215,open,What are the pathological findings at teeth #36 and #37?,,,,,,,#36 shows signs of periapical lesions (abscess).,17,1,q0160
+016947,216,open,Does the panoramic X-ray demonstrate any jawbone-related structures?,,,,,,,"Findings: mandibular canal, maxillary sinus.",17,1,q0161
+016955,185,closed,What is the suspected finding at tooth 31?,Periapical granuloma,Periapical abscess,Dental caries,Crown restoration,D,Crown restoration,,18,1,q0162
+016955,186,closed,Which of the following is NOT a visible structure in the jaw?,Mandibular canals,Maxillary sinuses,Nasal cavity,All,C,Nasal cavity,,18,1,q0163
+016955,187,closed,What is the suspected finding at tooth 45?,Periapical abscess,Periapical granuloma,Dental caries,Impacted tooth,B,Periapical granuloma,,18,1,q0164
+016955,188,closed,Which tooth shows signs of a filling?,#14,#26,#36,None,C,#36,,18,1,q0165
+016955,189,closed,Which tooth is identified as impacted in the report?,#28,#29,#30,#31,A,#28,,18,1,q0166
+016955,218,open,What is the status of bone architecture in the report?,,,,,,,Apparent bone loss is observed in the upper and lower jaws.,18,1,q0167
+016955,219,open,What is the general condition of the teeth in the report?,,,,,,,29 teeth are visualized with clear anatomical definition.,18,1,q0168
+016955,220,open,What is the suspected finding at tooth #31?,,,,,,,Imaging features suspicious for periapical lesion.,18,1,q0169
+016955,222,open,Which teeth are impacted as seen on the panoramic radiograph? Specify their positions.,,,,,,,Tooth #28: impacted.,18,1,q0170
+017083,226,closed,Which of the following teeth are suspicious for caries?,"#15, #16, #17","#16, #33, #34","#18, #19, #20","#21, #22, #23",A,"#15, #16, #17",,19,1,q0171
+017083,228,closed,How many teeth are visualized in the panoramic radiograph?,28,29,30,31,D,31,,19,1,q0172
+017083,229,closed,What is the condition of the maxillary sinuses?,Unilateral,Bilateral,Absent,Not visible,D,Not visible,,19,1,q0173
+017083,264,open,What are the findings associated with tooth #16?,,,,,,,Tooth #16 shows signs of a periapical abscess and is suspicious for caries.,19,1,q0174
+017083,265,open,What type of restoration is present in tooth #11?,,,,,,,Tooth #11 has a crown restoration with signs of root canal treatment.,19,1,q0175
+017083,266,open,What is the condition of the maxillary sinuses in the radiograph?,,,,,,,The maxillary sinuses are visible bilaterally with clear definition.,19,1,q0176
+017083,267,open,What preventive measures are recommended based on the radiographic findings?,,,,,,,Regular monitoring of suspected carious lesions and good oral hygiene practices to prevent progression of potential caries.,19,1,q0177
+017083,268,open,Which periapical lesions could be detected in the panoramic image?,,,,,,,Tooth #16: periapical lesions (abscess).,19,1,q0178
+017118,245,closed,How many teeth have crowns?,3,5,7,9,B,5,,20,1,q0179
+017118,246,closed,How many teeth have had root canal treatment?,2,4,6,8,B,4,,20,1,q0180
+017118,247,closed,How many teeth are visualized in the radiograph?,28,30,32,34,C,32,,20,1,q0181
+017118,249,closed,Which teeth show signs of periapical granuloma?,#45 and #47,#46 and #48,#35 and #36,#15 and #11,B,#46 and #48,,20,1,q0182
+017118,288,open,List the teeth with crowns and root canal treatments.,,,,,,,"Crowns are present on teeth #11, 21, 35, 36, 46, 47, 48. Root canal treatments are noted on teeth #11, 21, 46, 48.",20,1,q0183
+017118,289,open,What is the priority concern for the periapical lesions?,,,,,,,Periapical lesions on teeth #46 and #48 require endodontic evaluation.,20,1,q0184
+017118,290,open,What is the general condition of the teeth and the status of the wisdom teeth?,,,,,,,30 (29 natural teeth) teeth are visualized with clear anatomical definition. Wisdom teeth #38 and #48 are both erupted and not impacted.,20,1,q0185
+017118,291,open,Which teeth show signs of periapical granuloma?,,,,,,,Teeth #46 and #48 show signs of periapical granuloma.,20,1,q0186
+017118,292,open,Describe the overall status of tooth #38 based on the panoramic radiograph findings.,,,,,,,Findings: wisdom tooth.,20,1,q0187
+017239,295,closed,Which tooth has both a crown and root canal treatment?,#35,#37,#36,#46,C,#36,,21,1,q0188
+017239,297,closed,Which tooth is suspected to have caries?,#35,#34,#37,None,C,#37,,21,1,q0189
+017239,298,closed,Which tooth shows imaging features of a periapical lesion (likely abscess)?,#34,#35,#45,#46,A,#34,,21,1,q0190
+017239,299,closed,How many wisdom teeth are detected in the panoramic radiograph?,1,2,3,4,A,1,,21,1,q0191
+017239,348,open,What is the status of the wisdom teeth in the panoramic radiograph?,,,,,,,"Two wisdom teeth are detected: #18 and #28, both suspected to be erupted.",21,1,q0192
+017239,349,open,Which teeth show signs of caries and require clinical re-evaluation?,,,,,,,None tooth show signs of caries and require clinical re-evaluation.,21,1,q0193
+017239,352,open,What findings can be observed in the panoramic radiograph regarding tooth #37?,,,,,,,Findings: crown.,21,1,q0194
+017690,350,closed,Which of the following tooth site presents an implant?,#32,#31,#37,#44,D,#44,,22,1,q0195
+017690,351,closed,What is observed in the bilateral mandibular canals?,Bone loss,Signs of bilateral mandibular canals,Caries,Abscess,C,Caries,,22,1,q0196
+017690,352,closed,How many teeth are visualized in the radiograph?,28,29,30,31,A,28,,22,1,q0197
+017690,353,closed,How many wisdom teeth are erupted in the patient?,1,2,3,4,B,2,,22,1,q0198
+017690,354,closed,Which of the following is NOT a tooth with a crown?,#32,#46,#31,#25 and #46,A,#32,,22,1,q0199
+017690,414,open,Which teeth have root canal treatments?,,,,,,,"#31, #11, #14, #16, #26, #36, #45.",22,1,q0200
+017690,415,open,What is recommended for suspected caries?,,,,,,,Radiographic follow-up and a bitewing series for comprehensive interproximal caries detection.,22,1,q0201
+017690,416,open,What is the status of the wisdom teeth?,,,,,,,Both #18 and #28 are erupted.,22,1,q0202
+017690,417,open,Which teeth have implants?,,,,,,,"#37, #47.",22,1,q0203
+017690,418,open,Does the panoramic X-ray show any systemic involvement of the crown across the entire dentition?,,,,,,,"Tooth #32, #31, #16, #45, #11, #14, #12, #26, #21, #13, #37.",22,1,q0204
+018254,423,closed,Which tooth shows evidence of caries?,#36,#37,#46,#47,B,#37,,23,1,q0205
+018254,424,closed,Which teeth show signs of fillings?,"#35, 36, 45, 46","#36, 37, 46","#37, 38, 47, 48","#38, 39, 48, 49",A,"#35, 36, 45, 46",,23,1,q0206
+018254,425,closed,Is there any apparent bone loss in the image?,Yes,No,Partial,Unclear,A,Yes,,23,1,q0207
+018254,497,open,How many wisdom teeth are present and which one is impacted?,,,,,,,"Four wisdom teeth are present: #18, #28, #38, and #48. Tooth #48 is impacted.",23,1,q0208
+018254,499,open,What anatomical structures are visible in the jawbones?,,,,,,,"Bilateral mandibular canals are visible, and the maxillary sinuses are partially visible.",23,1,q0209
+018254,500,open,What is the clinical recommendation for tooth #37?,,,,,,,Tooth #37 requires urgent endodontic evaluation due to a periapical abscess and prompt intervention for caries.,23,1,q0210
+018254,501,open,Which areas show the periapical lesions in the panoramic image?,,,,,,,Tooth #37: periapical lesions (abscess).,23,1,q0211
+016655,33,closed,Which tooth shows signs of a periapical abscess?,#42,#41,#43,#40,D,#40,,24,1,q0212
+016655,34,closed,How many wisdom teeth were detected in the radiograph?,2,4,3,1,A,2,,24,1,q0213
+016655,35,closed,What is the recommended course of action for the impacted wisdom teeth?,Monitoring,Surgical intervention,Orthodontic treatment,Restoration,B,Surgical intervention,,24,1,q0214
+016655,41,open,How many teeth are visualized in the radiograph?,,,,,,,32 teeth.,24,1,q0215
+016655,42,open,What is the condition of tooth #18?,,,,,,,Erupted.,24,1,q0216
+016655,43,open,What is the suspected finding in the upper jaw bone architecture?,,,,,,,No obvious bone loss.,24,1,q0217
+016655,44,open,Which tooth shows imaging features of a periapical abscess?,,,,,,,#41.,24,1,q0218
+016694,57,closed,Which structures are visible in the radiograph?,Unilateral mandibular canals,Bilateral maxillary sinuses,Bilateral mandibular canals and maxillary sinuses,Unilateral maxillary sinuses,A,Unilateral mandibular canals,,25,2,q0219
+016694,58,closed,Which tooth shows signs of caries?,#44,#45,#46,None,A,#44,,25,2,q0220
+016694,59,closed,How many teeth are visualized in the radiograph?,20,21,22,18,D,18,,25,2,q0221
+016694,60,closed,Which tooth has a periapical lesion?,#35,#34,#33,#36,C,#33,,25,2,q0222
+016694,61,closed,Is there apparent bone loss in the jaw?,Mild bone loss,Moderate bone loss,Severe bone loss,No apparent bone loss,C,Severe bone loss,,25,2,q0223
+016694,71,open,What pathological findings are present in the radiograph?,,,,,,,A periapical lesion is present at tooth #34.,25,2,q0224
+016694,72,open,What historical interventions are noted for tooth #44?,,,,,,,Tooth #44 shows signs of crown and root canal treatment.,25,2,q0225
+016694,74,open,What is the condition of the bone architecture in the jaw?,,,,,,,No apparent bone loss is detected in the image.,25,2,q0226
+016694,75,open,Identify the historical treatments in the X-ray image.,,,,,,,"Tooth #44: crown, root canal treatment. Tooth #46: crown. Tooth #36: crown, root canal treatment. Tooth #34: crown. Tooth #35: crown, root canal treatment. Tooth #26: crown, root canal treatment. Tooth #41: crown. Tooth #43: crown, root canal treatment. Tooth #25: crown, root canal treatment. Tooth #15: root canal treatment. Tooth #17: crown, root canal treatment. Tooth #33: crown, root canal treatment. Tooth #24: crown. Tooth #16: crown. Tooth #37: crown, root canal treatment. Tooth #13: implant. Tooth #31: crown. Tooth #42: crown. Tooth #27: crown, root canal treatment.",25,2,q0227
+016792,106,closed,Which tooth is suspicious for caries and deep caries?,#35,#36,#37,#38,A,#35,,26,2,q0228
+016792,107,closed,Which tooth shows signs of a periapical granuloma?,#35,#36,#37,#47,B,#36,,26,2,q0229
+016792,108,closed,Which tooth has signs of both a filling and root canal treatment?,#35,#36,#37,#47,A,#35,,26,2,q0230
+016792,109,closed,Which of the following is a visible structure in the imaging?,Unilateral mandibular canal,Unilateral maxillary sinus,Bilateral mandibular canals,None of the above,D,None of the above,,26,2,q0231
+016792,126,open,What is the general condition of the teeth in the report?,,,,,,,28 teeth are visualized with clear anatomical definition.,26,2,q0232
+016792,127,open,What is recommended for tooth #37?,,,,,,,Suspicious caries and deep caries in #37 need further investigation.,26,2,q0233
+016792,128,open,What are the pathological findings for tooth #37?,,,,,,,Tooth #37 is suspicious for caries and deep caries.,26,2,q0234
+016792,129,open,What is recommended for tooth #47?,,,,,,,Periapical lesion at #47 requires endodontic evaluation.,26,2,q0235
+016792,130,open,Please accurately identify the teeth in the X-ray image.,,,,,,,"Tooth #34, #41, #31, #36, #24, #35, #45, #44, #32, #43, #23, #26, #22, #11, #42, #14, #12, #33, #17, #21, #46, #16, #25, #15, #13, #47, #37, #27.",26,2,q0236
+016808,116,closed,Which tooth is suspicious for deep caries?,#26,#36,#38,None,B,#36,,27,2,q0237
+016808,118,closed,Which of the following historical interventions is NOT detected?,Filling,Crown,Implant,None of the above,C,Implant,,27,2,q0238
+016808,138,open,What visible structures are noted in the imaging?,,,,,,,Imaging features signs of bilateral mandibular canals and bilateral maxillary sinuses.,27,2,q0239
+016808,139,open,What is the general condition of the teeth?,,,,,,,32 teeth visualized with clear anatomical definition.,27,2,q0240
+016808,140,open,Which teeth are suspected to be erupted?,,,,,,,"#18, #28, #38, #48 are suspected to be erupted.",27,2,q0241
+016808,141,open,What pathological findings are present in the report?,,,,,,,"Tooth #26 is suspicious for periapical granuloma, and tooth #38 shows evidence of periapical abscess.",27,2,q0242
+016808,142,open,What radiographic features are visible in tooth #38 on the panoramic X-ray?,,,,,,,"Findings: wisdom tooth, periapical lesions (abscess).",27,2,q0243
+016829,141,closed,Which tooth has a filling and root canal treatment?,Tooth 43,Tooth 44,Tooth 45,Tooth 46,B,Tooth 44,,28,2,q0244
+016829,142,closed,Which tooth has a periapical lesion (likely abscess)?,Tooth 41,Tooth 42,Tooth 43,Tooth 44,A,Tooth 41,,28,2,q0245
+016829,143,closed,Is there any apparent bone loss visible in the radiograph?,"Yes, mild bone loss","Yes, severe bone loss",No apparent bone loss,Unclear,C,No apparent bone loss,,28,2,q0246
+016829,144,closed,Which tooth has both a crown and root canal treatment?,Tooth 12,Tooth 13,Tooth 14,Tooth 15,C,Tooth 14,,28,2,q0247
+016829,145,closed,Which tooth exhibits a periapical lesion?,Tooth 41,Tooth 42,Tooth 43,Tooth 44,C,Tooth 43,,28,2,q0248
+016829,169,open,What interventions are present for Tooth 44?,,,,,,,Tooth 44 has a filling and root canal treatment.,28,2,q0249
+016829,170,open,What historical interventions are noted for Tooth 13?,,,,,,,Tooth 13 has a crown and root canal treatment.,28,2,q0250
+016829,171,open,What is the general condition of the teeth in the radiograph?,,,,,,,27 teeth are visualized with clear anatomical definition.,28,2,q0251
+016829,172,open,What radiographic features are visible in tooth #44 on the panoramic X-ray?,,,,,,,"Findings: periapical lesions (cyst), filling, root canal treatment.",28,2,q0252
+016836,146,closed,Which of the following is TRUE regarding the wisdom teeth?,#18 is impacted,#28 is erupted,#38 is missing,#48 is absent,D,#48 is absent,,29,2,q0253
+016836,148,closed,What procedure has been done on tooth 46?,Crown only,Root canal treatment only,Crown and root canal treatment,Extraction,C,Crown and root canal treatment,,29,2,q0254
+016836,149,closed,What is observed in the upper jaw bone architecture?,Increased density,Bone loss,Fracture,Normal architecture,B,Bone loss,,29,2,q0255
+016836,174,open,What is the condition of tooth #27 according to the report?,,,,,,,Tooth #27 is suspicious for caries and requires clinical re-evaluation.,29,2,q0256
+016836,175,open,Describe the findings related to tooth #46.,,,,,,,Tooth #46 shows signs of a periapical lesion (likely abscess) and has undergone crown and root canal treatment.,29,2,q0257
+016836,177,open,Identify areas showing the wisdom tooth in the panoramic radiograph.,,,,,,,"Tooth #18, #38, #48, #28.",29,2,q0258
+016839,151,closed,Which of the following tooth site presents an implant?,#17,#18,#11,#12,B,#18,,30,2,q0259
+016839,152,closed,How many teeth are visualized in the panoramic radiograph?,28,29,30,31,A,28,,30,2,q0260
+016839,153,closed,Which tooth has a crown restoration?,#47,#46,#45,#48,A,#47,,30,2,q0261
+016839,154,closed,Which of the following teeth is suspected to have caries?,#34,#35,#36,#37,D,#37,,30,2,q0262
+016839,155,closed,Which of the following structures are visible in the imaging?,Mandibular canals,Maxillary sinuses,Both A and B,Neither,D,Neither,,30,2,q0263
+016839,179,open,What is the status of the wisdom teeth?,,,,,,,"All four wisdom teeth (18, #28, #38, #48) are erupted.",30,2,q0264
+016839,180,open,What is the condition of the jawbone?,,,,,,,No apparent bone loss is visible in the image.,30,2,q0265
+016839,181,open,What is the general condition of the teeth in the radiograph?,,,,,,,29 teeth are visualized with clear anatomical definition.,30,2,q0266
+016839,182,open,Which teeth have crown restorations?,,,,,,,"Teeth #12,13,14,17,21,22,23,24,31,32,33,34,41,42,43,44,46 have crowns.",30,2,q0267
+016839,183,open,Please detect the teeth in the panoramic image.,,,,,,,"Tooth #44, #42, #35, #14, #18, #16, #45, #15, #12, #34, #41, #33, #11, #13, #43, #48, #31, #32, #17, #46, #22, #47, #23, #24, #38, #21, #26, #28, #25.",30,2,q0268
+016910,165,closed,Which tooth shows signs of a periapical abscess?,#14,#24,Both A and B,#34,A,#14,,31,2,q0269
+016910,167,closed,What is the condition of the bone architecture in the lower jaw?,Normal,Suggestive of bone loss,Fractured,No significant findings,D,No significant findings,,31,2,q0270
+016910,168,closed,How many teeth are visualized in the panoramic radiograph?,21,23,25,27,B,23,,31,2,q0271
+016910,169,closed,Which of the following teeth does NOT have a crown restoration?,#31,#32,#33,#41,D,#41,,31,2,q0272
+016910,195,open,What is the general condition of the teeth?,,,,,,,23 teeth are visualized with clear anatomical definition.,31,2,q0273
+016910,196,open,What pathological findings are present in tooth #24?,,,,,,,Tooth #24 is suspicious for deep caries and shows signs of a periapical abscess.,31,2,q0274
+016910,197,open,What historical interventions are noted for tooth #41?,,,,,,,Tooth #41 shows signs of crown restoration.,31,2,q0275
+016910,198,open,What is the clinical recommendation for the suspicious bone loss?,,,,,,,Monitor the suspicious bone loss in the upper and lower jaws.,31,2,q0276
+016910,199,open,What findings can be observed in the panoramic radiograph regarding tooth #31?,,,,,,,Findings: crown.,31,2,q0277
+017144,255,closed,Which tooth shows signs of caries?,#35,#36,#37,#38,A,#35,,32,2,q0278
+017144,256,closed,Which tooth is suspected to have deep caries?,#23,#36,#37,#42,B,#36,,32,2,q0279
+017144,257,closed,Which tooth shows signs of a periapical abscess?,#35,#36 and #37,#37,#38,C,#37,,32,2,q0280
+017144,258,closed,How many teeth were visualized with clear anatomical definition?,10,12,14,16,B,12,,32,2,q0281
+017144,259,closed,How many missing teeth regions were detected in the lower jaw?,2,4,6,8,A,2,,32,2,q0282
+017144,300,open,What is the status of the wisdom teeth in the radiographic examination?,,,,,,,"Two wisdom teeth were detected, both erupted: #38 and #48.",32,2,q0283
+017144,301,open,What preventive measures were recommended based on the radiographic findings?,,,,,,,Monitor suspicious caries at #36 and #37 with radiographic follow-up and recommend fluoride therapy to prevent further caries progression.,32,2,q0284
+017144,302,open,Which teeth are suspected for caries and require clinical re-evaluation?,,,,,,,"#36, #37.",32,2,q0285
+017144,303,open,What clinical priority concerns were identified in the radiographic examination?,,,,,,,"Periapical abscess at #36, #37 requiring urgent endodontic evaluation and deep caries in #37 needing immediate intervention.",32,2,q0286
+017300,306,closed,Which teeth have both a crown and root canal treatment?,#34 and #38,#36 and #45,#46 and #47,#32 and #42,A,#34 and #38,,33,2,q0287
+017300,307,closed,What is recommended for the periapical cyst at tooth 45?,Extraction,Filling,Crown placement,Endodontic evaluation,C,Crown placement,,33,2,q0288
+017300,308,closed,How many wisdom teeth are present and erupted in the patient?,2,3,4,5,A,2,,33,2,q0289
+017300,309,closed,Which tooth exhibits evidence of a periapical lesion (cyst)?,#44,#45,#46,#47,C,#46,,33,2,q0290
+017300,360,open,"List the teeth with fillings, crowns, and root canal treatments as per the report.",,,,,,,"Fillings: #38, #34; Crowns: #47, #46; Crown and Root canal treatment: #36, #45.",33,2,q0291
+017300,361,open,Describe the pathological finding at tooth #45.,,,,,,,Tooth #45 shows evidence of a periapical lesion (cyst).,33,2,q0292
+017300,362,open,What is the visibility status of the mandibular canals and maxillary sinuses?,,,,,,,"Mandibular canals are clearly visible bilaterally, and maxillary sinuses are visible with good clarity.",33,2,q0293
+017300,363,open,"How many teeth are visualized in total, and what is the status of the wisdom teeth?",,,,,,,"32 (including a restored tooth; otherwise, 31 natural teeth) teeth are visualized with clear anatomical definition. All four wisdom teeth (18, #28, #38, #48) are erupted.",33,2,q0294
+017300,364,open,Describe the overall status of tooth #38 based on the panoramic radiograph findings.,,,,,,,"Findings: wisdom tooth, filling.",33,2,q0295
+017540,340,closed,Which tooth shows signs of a periapical granuloma?,#46,#47,#48,#45,A,#46,,34,2,q0296
+017540,341,closed,What type of restoration is present on tooth 45?,Filling,Crown,Implant,Root canal treatment,A,Filling,,34,2,q0297
+017540,343,closed,Which tooth has both a crown and a root canal treatment?,#36,#37,#45,#47,C,#45,,34,2,q0298
+017540,344,closed,Which tooth site presents implant?,#36,#46,#47,#48,C,#47,,34,2,q0299
+017540,402,open,What is the condition of the maxillary sinuses as per the radiograph?,,,,,,,Clearly visible bilaterally.,34,2,q0300
+017540,403,open,What is the general condition of the teeth in terms of number and anatomical definition?,,,,,,,"32 (including a restored tooth; otherwise, 31 natural teeth) teeth visualized with clear anatomical definition.",34,2,q0301
+017540,404,open,What is the status of the mandibular canal in the radiograph?,,,,,,,Clearly visible bilaterally.,34,2,q0302
+017540,405,open,What is the overall structural integrity of tooth #38 as seen on the panoramic radiograph?,,,,,,,Findings: wisdom tooth.,34,2,q0303
+017540,406,open,Which wisdom tooth can be detected in the panoramic image?,,,,,,,"Tooth #48, #18, #38, #28.",34,2,q0304
+017880,370,closed,Which tooth requires prompt treatment due to caries and deep caries?,#27,#28,#37,#38,B,#28,,35,2,q0305
+017880,371,closed,What is the observed status of the bone architecture?,Severe bone loss,Moderate bone loss,No apparent bone loss,Slight bone loss,D,Slight bone loss,,35,2,q0306
+017880,372,closed,How many wisdom teeth are erupted according to the report?,2,3,4,5,C,4,,35,2,q0307
+017880,373,closed,Which of the following is clearly visible bilaterally?,Mandibular canals,Maxillary sinuses,Both A and B,None of the above,B,Maxillary sinuses,,35,2,q0308
+017880,374,closed,Which tooth shows signs of a deep caries suspicious for further clinical evaluation?,#17,#18,#19,#28,A,#17,,35,2,q0309
+017880,437,open,What is the general condition of the teeth and the status of the wisdom teeth?,,,,,,,"32 teeth are visualized with clear anatomical definition. Four wisdom teeth are detected, all showing signs of eruption.",35,2,q0310
+017880,438,open,What are the pathological findings at tooth #28?,,,,,,,"Tooth #28 shows caries and deep caries, both suspicious for further clinical evaluation.",35,2,q0311
+017880,439,open,What observations were made regarding the jawbone and visible structures?,,,,,,,No apparent bone loss is observed. Mandibular canals and maxillary sinuses are clearly visible bilaterally.,35,2,q0312
+017880,440,open,Which areas show the historical treatments in the panoramic image?,,,,,,,Tooth #38: filling. Tooth #17: filling. Tooth #18: filling. Tooth #48: filling. Tooth #37: filling. Tooth #47: filling. Tooth #27: filling.,35,2,q0313
+016642,9,closed,Is there any apparent bone loss in the image?,Yes,No,Unclear,Not mentioned,B,No,,36,2,q0314
+016642,10,closed,Which tooth has a crown restoration?,#28,#38,#46,#48,B,#38,,36,2,q0315
+016642,12,closed,How many teeth are visualized in the radiograph?,30,31,32,33,B,31,,36,2,q0316
+016642,13,closed,Which tooth shows signs of root canal treatment?,#28,#38,#46,#48,D,#48,,36,2,q0317
+016642,11,open,What structures are visible in the radiograph?,,,,,,,Bilateral mandibular canals and maxillary sinuses are visible.,36,2,q0318
+016642,12,open,What is the radiographic finding at tooth #46?,,,,,,,"Tooth #46 shows signs of a periapical granuloma, crown restoration, and root canal treatment.",36,2,q0319
+016642,13,open,What is the status of the bone architecture in the radiograph?,,,,,,,There is no apparent bone loss in the image.,36,2,q0320
+016642,14,open,What is the condition of tooth #28?,,,,,,,Tooth #28 is suspicious for caries and requires clinical re-evaluation.,36,2,q0321
+016649,18,closed,Which site has a dental implant placed?,#35,#36,#37,#38,D,#38,,37,2,q0322
+016649,19,closed,Which tooth has evidence of root canal treatment?,#24,#25,#26,#27,C,#26,,37,2,q0323
+016649,20,closed,Which tooth has a suspected deep caries?,#37,#38,#11,#12,D,#12,,37,2,q0324
+016649,21,closed,Which tooth shows signs of a periapical granuloma?,#34,#35,#36,#37,D,#37,,37,2,q0325
+016649,22,closed,Which tooth has a crown restoration?,#34,#35,#36,#37,B,#35,,37,2,q0326
+016649,23,open,What pathological findings are present in the report?,,,,,,,"Signs of deep caries in #38, and imaging features suggestive of a periapical granuloma in #35.",37,2,q0327
+016649,25,open,"What is the general condition of the teeth, and how many wisdom teeth are detected?",,,,,,,"26 teeth are visualized with clear anatomical definition, and 3 wisdom teeth (18, #28, #38) are detected, all of which are erupted (suspected, recommend clinical review).",37,2,q0328
+016726,82,closed,Which of the following teeth are impacted wisdom teeth according to the report?,"#18, #28, #38","#18, #28, #48","#18, #38, #48","#28, #38, #48",D,"#28, #38, #48",,38,2,q0329
+016726,83,closed,Which tooth is suspicious for deep caries?,#35,#36,#45,#47,C,#45,,38,2,q0330
+016726,84,closed,What is the status of bone architecture in the jaw?,Severe bone loss,Moderate bone loss,No apparent bone loss,Mild bone loss,D,Mild bone loss,,38,2,q0331
+016726,85,closed,What type of dental restoration is found on tooth 25?,Root canal treatment,Dental implant,No treatment,Dental filling,C,No treatment,,38,2,q0332
+016726,86,closed,Can you identify the dental treatment present on tooth 15?,Dental filling,Dental crown,No treatment,Root canal treatment,C,No treatment,,38,2,q0333
+016726,100,open,How many wisdom teeth are detected in the report and what is their status?,,,,,,,"Three wisdom teeth are detected, all of which are impacted: #18, #28, and #48.",38,2,q0334
+016726,101,open,Which teeth are suspicious for caries?,,,,,,,"#36 and #47 are suspicious for deep caries, while #45 and #46 are suspicious for caries (low confidence for #45).",38,2,q0335
+016726,102,open,Are there any signs of bone loss in the jaw?,,,,,,,No apparent bone loss is observed in the image.,38,2,q0336
+016961,191,closed,Which tooth shows evidence of both deep caries and a periapical abscess?,#17,#36,#47,#48,B,#36,,39,2,q0337
+016961,192,closed,What type of bone loss is observed in the upper jaw?,Generalized bone loss,Localized bone loss,No bone loss,Severe bone loss,D,Severe bone loss,,39,2,q0338
+016961,193,closed,How many teeth show signs of filling or crown restoration?,1,2,3,4,D,4,,39,2,q0339
+016961,194,closed,How many wisdom teeth are erupted in the patient?,2,3,4,5,C,4,,39,2,q0340
+016961,224,open,What is the general condition of the teeth and the status of the wisdom teeth?,,,,,,,"32 teeth are visualized with clear anatomical definition. All four wisdom teeth (18, #28, #38, #48) are erupted.",39,2,q0341
+016961,226,open,What historical interventions are noted in the teeth?,,,,,,,"Teeth #17 and #36 are suggestive of fillings, and tooth #47 shows signs of crown restoration.",39,2,q0342
+017061,221,closed,Which tooth is suspected to have root canal treatment?,#24,#37,#41,#32,D,#32,,40,2,q0343
+017061,222,closed,Which tooth shows imaging features suggestive of a crown restoration?,#24,#37,#32,#42,B,#37,,40,2,q0344
+017061,223,closed,Which of the following is NOT an impacted wisdom tooth?,#18,#28,#38,#48,C,#38,,40,2,q0345
+017061,224,closed,Which tooth is suspected to have a periapical lesion (likely cyst)  based on the radiographic findings?,#31,#41,#42,#32,B,#41,,40,2,q0346
+017061,258,open,What is the clinical recommendation for tooth #41?,,,,,,,Periapical lesion (likely cyst) at #41 requires endodontic evaluation.,40,2,q0347
+017061,259,open,What historical intervention is noted for tooth #24?,,,,,,,Imaging features suggestive of filling.,40,2,q0348
+017061,260,open,What is the status of wisdom tooth #18?,,,,,,,"Impacted (suspected, recommend clinical review).",40,2,q0349
+017061,261,open,What is the clinical recommendation for the erupted wisdom tooth #28?,,,,,,,Erupted wisdom tooth #28 needs monitoring for potential complications.,40,2,q0350
+017113,240,closed,Which jaw is suspected to have bone loss?,Lower jaw,Upper jaw,Both jaws,None,C,Both jaws,,41,2,q0351
+017113,241,closed,Which tooth shows signs of a periapical granuloma?,#45,#21,#38,#12,C,#38,,41,2,q0352
+017113,243,closed,What is visible in the imaging of the mandible?,Maxillary sinuses,Mandibular canals,Nasal cavities,None,C,Nasal cavities,,41,2,q0353
+017113,244,closed,Which tooth has signs of root canal treatment?,#12,#36,#45,#38,C,#45,,41,2,q0354
+017113,282,open,What preventive measures are recommended for tooth #38?,,,,,,,Monitor with radiographic follow-up.,41,2,q0355
+017113,283,open,Which teeth show signs of crowns?,,,,,,,"Teeth #11,12,13,22,23,31,32,33,36,41,42,43 show signs of crowns.",41,2,q0356
+017113,284,open,What structures are visible in the imaging of the maxilla?,,,,,,,Bilateral maxillary sinuses.,41,2,q0357
+017113,285,open,What historical interventions are noted in the radiograph?,,,,,,,Signs of crowns in multiple teeth and root canal treatment in #36.,41,2,q0358
+017113,286,open,Please provide a full description of the condition of tooth #32.,,,,,,,Findings: crown.,41,2,q0359
+017202,270,closed,Which tooth exhibits imaging features suspicious for a periapical granuloma?,#18,#22,#41,#43,C,#41,,42,2,q0360
+017202,271,closed,Which of the following teeth is erupted and suspected to be a wisdom tooth?,#18,#38,Both A and B,Neither,C,Both A and B,,42,2,q0361
+017202,272,closed,How many teeth show signs of crowns in the imaging?,3,5,6,7,A,3,,42,2,q0362
+017202,273,closed,Which of the following is a finding related to the maxillary sinuses?,Signs of bilateral mandibular canals,Visible bilaterally with normal appearance,Periapical lesion,Bone loss,D,Bone loss,,42,2,q0363
+017202,274,closed,What historical dental intervention is visible on tooth 27?,Root canal treatment,Dental filling,Dental implant,Dental crown,C,Dental implant,,42,2,q0364
+017202,319,open,What is the number of teeth showing signs of fillings?,,,,,,,Multiple teeth show signs of fillings.,42,2,q0365
+017202,320,open,How many teeth are visualized in the panoramic radiograph?,,,,,,,"29 (including restored teeth; otherwise, 27 natural teeth) teeth are visualized with clear anatomical definition.",42,2,q0366
+017202,321,open,Is there any apparent bone loss observed in the image?,,,,,,,No apparent bone loss is observed in the image.,42,2,q0367
+017202,322,open,Does tooth #25 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,,,,,,,Findings: crown.,42,2,q0368
+017215,285,closed,Which structures are visible bilaterally in the radiograph?,Mandibular canals,Maxillary sinuses,Both A and B,Neither A nor B,D,Neither A nor B,,43,2,q0369
+017215,286,closed,Which tooth is suspected to have a periapical abscess?,#36,#37,#38,#35,C,#38,,43,2,q0370
+017215,287,closed,Which of the following wisdom teeth is impacted?,#18,#28,#38,#48,B,#28,,43,2,q0371
+017215,288,closed,Which of the following historical interventions is NOT present in the radiograph?,Filling,Implant,Crown,None,B,Implant,,43,2,q0372
+017215,289,closed,What is the status of bone loss in the radiograph?,Severe bone loss,Moderate bone loss,No apparent bone loss,Slight bone loss,D,Slight bone loss,,43,2,q0373
+017215,336,open,How many wisdom teeth are erupted?,,,,,,,"Three wisdom teeth (18, #28, #48) are erupted.",43,2,q0374
+017215,337,open,Which tooth is suspected to have a periapical abscess?,,,,,,,Tooth #36 is suspected to have a periapical abscess.,43,2,q0375
+017215,338,open,Which wisdom tooth is impacted?,,,,,,,Tooth #38 is impacted.,43,2,q0376
+017215,339,open,What is the status of bone loss in the radiograph?,,,,,,,There is no apparent bone loss in the image.,43,2,q0377
+018010,380,closed,What is the condition of the maxillary sinuses?,Infected,Normal,Obstructed,Deviated,D,Deviated,,44,2,q0378
+018010,382,closed,Which tooth has a periapical granuloma?,#38,#48,#28,#18,C,#28,,44,2,q0379
+018010,383,closed,Is there any apparent bone loss in the jaw?,"Yes, mild bone loss","Yes, moderate bone loss",No apparent bone loss,Severe bone loss,B,"Yes, moderate bone loss",,44,2,q0380
+018010,384,closed,Which tooth exhibits caries according to the report?,#46,#47,#42,#45,A,#46,,44,2,q0381
+018010,448,open,What is the condition of the wisdom teeth in the patient?,,,,,,,The patient has three erupted wisdom teeth: #18 and #28; one impacted tooth: #48,44,2,q0382
+018010,449,open,Which teeth are affected by caries and a periapical granuloma?,,,,,,,"Tooth #47 has caries, and tooth #48 has a periapical granuloma.",44,2,q0383
+018010,450,open,What is observed regarding the bone architecture in the jaw?,,,,,,,There is no apparent bone loss in the jaw.,44,2,q0384
+018010,451,open,What is the condition of the maxillary sinuses?,,,,,,,The maxillary sinuses appear normal bilaterally.,44,2,q0385
+018010,452,open,Identify areas showing the dental caries in the panoramic radiograph.,,,,,,,Tooth #47: caries.,44,2,q0386
+018160,395,closed,Which tooth exhibits signs of a periapical cyst?,#28,#38,#48,#18,C,#48,,45,2,q0387
+018160,396,closed,Which tooth is suspected to have caries?,#34,#44,#54,None,A,#34,,45,2,q0388
+018160,397,closed,Which tooth has had root canal treatment?,#26,#36,#46,#56,B,#36,,45,2,q0389
+018160,399,closed,What is observed in the bone architecture?,Severe bone loss,Moderate bone loss,No apparent bone loss,Slight bone loss,B,Moderate bone loss,,45,2,q0390
+018160,466,open,Which teeth have crown restorations?,,,,,,,"#36, #37, #45, #46, #47 have crown restorations.",45,2,q0391
+018160,467,open,Which teeth have fillings?,,,,,,,#38 has fillings.,45,2,q0392
+018160,468,open,What is the status of the mandibular canal?,,,,,,,The mandibular canal is visible in the imaging.,45,2,q0393
+018160,469,open,Please accurately identify the periapical lesions in the X-ray image.,,,,,,,Tooth #38: periapical lesions (cyst).,45,2,q0394
+018189,409,closed,Which of the following teeth is associated with a suspected periapical abscess?,#11,#12,#36,#34,A,#11,,46,2,q0395
+018189,410,closed,Which tooth has a sign of a crown according to the report?,#11,#12,#13,All of the above,B,#12,,46,2,q0396
+018189,411,closed,What is the observed bone architecture in the jaw?,Severe bone loss,Moderate bone loss,No apparent bone loss,Slight bone loss,A,Severe bone loss,,46,2,q0397
+018189,412,closed,Which wisdom teeth are impacted?,#18 and #28,#38 and #48,#18 and #38,#28 and #48,A,#18 and #28,,46,2,q0398
+018189,482,open,What are the findings for tooth #36?,,,,,,,Tooth #36 shows signs of a periapical abscess.,46,2,q0399
+018189,483,open,What is observed regarding the bone architecture and missing teeth regions in the jaw?,,,,,,,"No apparent bone loss is observed, and there is 1 missing teeth region detected in the lower jaw.",46,2,q0400
+018189,484,open,"What is the general condition of the teeth, and how many wisdom teeth are detected?",,,,,,,"31 teeth are visualized with clear anatomical definition, and 4 wisdom teeth are detected.",46,2,q0401
+018189,485,open,Describe all abnormal radiographic features observed across the dentition in this panoramic X-ray.,,,,,,,Tooth #36: caries.,46,2,q0402
+018231,417,closed,Which structures are visible in the imaging?,Unilateral mandibular canals,Unilateral maxillary sinuses,Bilateral mandibular canals and bilateral maxillary sinuses,None of the above,A,Unilateral mandibular canals,,47,2,q0403
+018231,418,closed,Which tooth is suspicious for caries and requires clinical re-evaluation?,#17,#18,#16,#15,C,#16,,47,2,q0404
+018231,419,closed,Which tooth shows signs of crown restoration and root canal treatment?,#20,#21,#22,#23,D,#23,,47,2,q0405
+018231,420,closed,How many teeth were visualized in the panoramic radiograph?,28,32,30,31,B,32,,47,2,q0406
+018231,421,closed,"Which of the following describes the status of the wisdom teeth 18, 28, 38, and 48?",All impacted,All erupted and non-impacted,Partially impacted,Not visualized,C,Partially impacted,,47,2,q0407
+018231,493,open,What is the finding associated with tooth #18?,,,,,,,Tooth #18 is suspicious for caries and requires clinical re-evaluation.,47,2,q0408
+018231,494,open,What interventions are evident for tooth #21?,,,,,,,Tooth #21 shows signs of crown restoration and suggests root canal treatment.,47,2,q0409
+018231,495,open,Detect mandibular canal in the panoramic image.,,,,,,,Findings: mandibular canal.,47,2,q0410
+018328,453,closed,Which teeth have crown restorations?,"#15, #25, #35","#46, #21, #11","#48, #38, #18","#24, #47, #38",D,"#24, #47, #38",,48,2,q0411
+018328,455,closed,Which of the following teeth is suspicious for a filling?,#34,#35,#36,None,B,#35,,48,2,q0412
+018328,456,closed,In which jaw is suspicious bone loss observed?,Upper jaw,Lower jaw,Both jaws,None,D,None,,48,2,q0413
+018328,531,open,Which teeth are suspicious for fillings?,,,,,,,#38 is suspicious for fillings.,48,2,q0414
+018328,532,open,What are the priority concerns?,,,,,,,The priority concerns are the periapical lesion at #46.,48,2,q0415
+018328,533,open,How many wisdom teeth are erupted and which ones?,,,,,,,"Three wisdom teeth are erupted: #18, #38, and #48.",48,2,q0416
+018328,534,open,Which teeth have crown restorations?,,,,,,,"#46, #21, and #11 have crown restorations.",48,2,q0417
+018328,535,open,Which teeth demonstrate radiographic features associated with the filling on the panoramic radiograph?,,,,,,,Tooth #38.,48,2,q0418
+016657,38,closed,Which teeth show signs of fillings?,#26,"#33, #34, #35, #36","#32, #33, #34, #35","#38, #39, #40, #41",B,"#33, #34, #35, #36",,49,2,q0419
+016657,39,closed,Which wisdom tooth is impacted?,#48,#38,#28,#18,B,#38,,49,2,q0420
+016657,40,closed,What is the status of the bone architecture in the jaw?,Severe bone loss,Moderate bone loss,No apparent bone loss,Bone fracture,C,No apparent bone loss,,49,2,q0421
+016657,41,closed,What previous dental treatment has been done on tooth 24?,None,Dental crown,Dental implant,Root canal treatment,B,Dental crown,,49,2,q0422
+016657,47,open,What is the status of the wisdom teeth as per the report?,,,,,,,"Teeth #48, #38, and #18 are erupted (suspected, recommend clinical review), and tooth #28 is impacted (suspected, recommend clinical review).",49,2,q0423
+016657,48,open,Which teeth show signs of fillings?,,,,,,,Tooth #26 show signs of fillings.,49,2,q0424
+016657,49,open,What is observed regarding the bone architecture in the jaw?,,,,,,,No apparent bone loss is observed in the image.,49,2,q0425
+016657,50,open,What is recommended for the suspected caries?,,,,,,,Monitor suspected caries with radiographic follow-up.,49,2,q0426
+016783,96,closed,How many teeth are visualized in the panoramic radiograph?,28,29,30,31,C,30,,50,3,q0427
+016783,97,closed,What is the status of the wisdom teeth in the radiograph?,All impacted,All erupted,Partially erupted,Not visualized,D,Not visualized,,50,3,q0428
+016783,98,closed,Is there any apparent bone loss in the radiograph?,"Yes, moderate","Yes, mild",No,Severe,D,Severe,,50,3,q0429
+016783,99,closed,What structures are visible in the jaw?,Mandibular canals and maxillary sinuses,Only maxillary sinuses,Only mandibular canals,None of the above,B,Only maxillary sinuses,,50,3,q0430
+016783,114,open,How many wisdom teeth are present and what is their status?,,,,,,,"One wisdom tooth is present, erupted.",50,3,q0431
+016783,115,open,How many teeth have signs of crowns?,,,,,,,"Three teeth (45, 46, 47) have signs of crowns.",50,3,q0432
+016783,116,open,What is observed regarding bone architecture in the jaw?,,,,,,,No apparent bone loss.,50,3,q0433
+016783,117,open,What is the clinical recommendation for tooth #47?,,,,,,,Endodontic evaluation is required.,50,3,q0434
+016920,175,closed,Which tooth shows signs of a suspected periapical granuloma?,#36,#26,#46,None,D,None,,51,3,q0435
+016920,176,closed,Which tooth has both a crown and root canal treatment?,#26,#36,#46,#16,B,#36,,51,3,q0436
+016920,177,closed,Which of the following structures are visible in the imaging?,Bilateral maxillary sinuses,Unilateral mandibular canal,Ethmoid air cells,Sphenoid sinus,A,Bilateral maxillary sinuses,,51,3,q0437
+016920,179,closed,How many teeth are visualized in the panoramic radiograph?,30,31,32,33,D,33,,51,3,q0438
+016920,207,open,What is the condition of tooth #46?,,,,,,,Tooth #46 has a crown and root canal treatment.,51,3,q0439
+016920,208,open,How many wisdom teeth are impacted?,,,,,,,"Two wisdom teeth (18 and #38) are impacted, while #48 is erupted.",51,3,q0440
+016920,209,open,What structures are visible in the jawbone imaging?,,,,,,,The imaging features signs of bilateral mandibular canals and bilateral maxillary sinuses.,51,3,q0441
+016920,210,open,What preventive measure is recommended for the impacted wisdom teeth?,,,,,,,Monitor impacted wisdom teeth for potential complications.,51,3,q0442
+017168,265,closed,How many wisdom teeth are erupted according to the radiograph?,1,2,3,4,C,3,,52,3,q0443
+017168,266,closed,What is the pathological finding at tooth 21?,Dental caries,Periapical granuloma,Dental filling,Crown restoration,A,Dental caries,,52,3,q0444
+017168,267,closed,Which of the following is NOT a finding in the jaw-specific observations?,Apparent bone loss,Bilateral mandibular canals,Clear maxillary sinuses,All,B,Bilateral mandibular canals,,52,3,q0445
+017168,268,closed,Which of the following is an appropriate clinical recommendation?,Extract tooth 21,Restore missing teeth in the upper jaw,Place an implant in tooth 23,Perform root canal treatment on tooth 24,B,Restore missing teeth in the upper jaw,,52,3,q0446
+017168,269,closed,How many teeth are visualized in the radiograph?,20,25,30,35,A,20,,52,3,q0447
+017168,312,open,What is observed in the bone architecture of the jaw?,,,,,,,Apparent bone loss is observed in the image.,52,3,q0448
+017168,313,open,What is recommended for the missing teeth in the upper jaw?,,,,,,,It is recommended to restore the missing teeth in the upper jaw.,52,3,q0449
+017168,314,open,Which teeth have signs of root canal treatment with restorations?,,,,,,,Teeth #23 and #33 have signs of root canal treatment with restorations.,52,3,q0450
+017168,315,open,What structures are clearly visualized in the radiograph?,,,,,,,Bilateral mandibular canals and both maxillary sinuses are clearly visualized.,52,3,q0451
+017168,316,open,What findings can be observed in the panoramic radiograph regarding tooth #11?,,,,,,,Findings: crown.,52,3,q0452
+017271,300,closed,Which tooth is suspected to have a periapical abscess?,#16,#37,#46,#48,D,#48,,53,3,q0453
+017271,301,closed,Which tooth is indicated to have deep caries?,#16,#38,#46,#48,B,#38,,53,3,q0454
+017271,302,closed,What is the general condition of the maxillary sinuses?,Radiographically normal,Signs of infection,Obstructed,Enlarged,B,Signs of infection,,53,3,q0455
+017271,303,closed,What is the observed condition of the bone architecture?,Apparent bone loss,No apparent bone loss,Severe bone loss,Moderate bone loss,A,Apparent bone loss,,53,3,q0456
+017271,304,closed,What is the status of the mandibular canals?,Narrow,Wide,Bilateral,Unilateral,A,Narrow,,53,3,q0457
+017271,354,open,What is the status of the mandibular canals?,,,,,,,Bilateral mandibular canals are visible.,53,3,q0458
+017271,356,open,What is the status of the wisdom tooth #48?,,,,,,,"Erupted (suspected, recommend clinical review).",53,3,q0459
+017271,357,open,What is the finding related to tooth #46?,,,,,,,"Sign of periapical abscess and suspicious for deep caries, root fracture, and root canal treatment.",53,3,q0460
+017271,358,open,Detect wisdom tooth in the panoramic image.,,,,,,,Tooth #48.,53,3,q0461
+017336,315,closed,Which tooth has a crown and root canal treatment?,#17,#28,#35,#36,C,#35,,54,3,q0462
+017336,316,closed,Which tooth is suspected to have a periapical lesion likely abscess?,#17,#28,#35,#36,A,#17,,54,3,q0463
+017336,317,closed,Which tooth shows signs of caries?,#17,#28,#35,#36,C,#35,,54,3,q0464
+017336,318,closed,What is observed in the lower jawbone?,No abnormalities,Bone expansion,Bone loss,Fracture,B,Bone expansion,,54,3,q0465
+017336,319,closed,How many wisdom teeth are detected in the radiograph?,0,1,2,3,D,3,,54,3,q0466
+017336,372,open,How many teeth are missing in the upper jaw?,,,,,,,13 missing teeth are suspected in the upper jaw.,54,3,q0467
+017336,373,open,What is the status of tooth #28?,,,,,,,"Tooth #28 is erupted (suspected, recommend clinical review).",54,3,q0468
+017336,374,open,What historical interventions are noted for tooth #35?,,,,,,,"Tooth #35 shows signs of filling, crown, and root canal treatment with post-core restoration.",54,3,q0469
+017336,375,open,What structures are visible in the jawbones?,,,,,,,Bilateral mandibular canals and maxillary sinus are visible.,54,3,q0470
+017336,376,open,Which areas show the teeth in the panoramic image?,,,,,,,"Tooth #35, #41, #33, #32, #23, #45, #28, #17, #43.",54,3,q0471
+017375,330,closed,What pathological finding is noted at tooth 36?,Dental caries,Periapical lesion likely abscess,Periodontal pocket,Cyst,B,Periapical lesion likely abscess,,55,3,q0472
+017375,331,closed,Where is bone loss observed in the jaw?,Lower jaw,Upper jaw,Both jaws,Neither jaw,A,Lower jaw,,55,3,q0473
+017375,332,closed,What is the status of tooth 38?,Erupted,Partially erupted,Impacted,Missing,C,Impacted,,55,3,q0474
+017375,333,closed,How many teeth are visualized in the panoramic radiograph?,28,30,32,34,C,32,,55,3,q0475
+017375,390,open,What is the general condition of the teeth as observed in the radiograph?,,,,,,,30 teeth are visualized with clear anatomical definition.,55,3,q0476
+017375,391,open,What is the finding and intervention noted at tooth #36?,,,,,,,Tooth #36 shows a periapical lesion likely abscess.,55,3,q0477
+017375,392,open,What preventive measure is recommended?,,,,,,,Monitor upper jaw bone loss with radiographic follow-up.,55,3,q0478
+017375,393,open,What visible structures are identified in the radiograph?,,,,,,,The mandibular canal and bilateral maxillary sinuses are visible.,55,3,q0479
+017375,394,open,What findings can be observed in the panoramic radiograph regarding tooth #36?,,,,,,,"Findings: periapical lesions (abscess), root fracture.",55,3,q0480
+017936,375,closed,Are there any fillings present?,No fillings,Fillings in 47,Fillings in 37,Fillings present but specifics unknown,B,Fillings in 47,,56,3,q0481
+017936,376,closed,Which wisdom teeth are impacted?,#18 and #28,#38 and #48,#38 and #18,#48 and #28,C,#38 and #18,,56,3,q0482
+017936,377,closed,Which tooth has a suspected periapical granuloma?,#47,#37,#27,#36,D,#36,,56,3,q0483
+017936,378,closed,Is there apparent bone loss?,Yes,No,Maybe,Partial,C,Maybe,,56,3,q0484
+017936,379,closed,Which teeth show signs of caries?,"#47, #37, #27","#36, #37, #38","#27, #37, #47","#17, #27, #37",A,"#47, #37, #27",,56,3,q0485
+017936,442,open,What preventive measures are recommended?,,,,,,,"Monitor suspicious caries at #47, #37, and #27.",56,3,q0486
+017936,443,open,Which teeth show signs of caries and any additional findings?,,,,,,,"Teeth #47, #37, and #27 show signs of caries. Additionally, #37 has a suspected periapical granuloma.",56,3,q0487
+017936,444,open,Describe the status of the wisdom teeth.,,,,,,,"Teeth #18 and #28 are erupted, while #38 and #48 are impacted.",56,3,q0488
+017936,445,open,What is the status of the bone architecture?,,,,,,,No apparent bone loss is visible.,56,3,q0489
+017936,446,open,What is the overall structural integrity of tooth #28 as seen on the panoramic radiograph?,,,,,,,Findings: wisdom tooth.,56,3,q0490
+018047,385,closed,What is the condition of the mandibular canals in the radiograph?,Unilateral,Bilateral,Absent,Obstructed,C,Absent,,57,3,q0491
+018047,386,closed,Is there any apparent bone loss observed in the radiograph?,Yes,No,Suspected,Unclear,B,No,,57,3,q0492
+018047,387,closed,How many teeth are visualized in the radiograph?,28,32,36,40,A,28,,57,3,q0493
+018047,389,closed,Which of the following teeth does NOT show signs of caries?,#26,#28,#36,#28 and #37,C,#36,,57,3,q0494
+018047,454,open,What is the status of the wisdom teeth in the radiograph?,,,,,,,"All four wisdom teeth (18, #28, #38, #48) are suspected to be erupted.",57,3,q0495
+018047,455,open,What significant pathological finding is associated with tooth #37?,,,,,,,Tooth #37 shows imaging features sign of a periapical cyst.,57,3,q0496
+018047,456,open,What is the observed condition of the bone architecture in the radiograph?,,,,,,,No apparent bone loss is observed in the image.,57,3,q0497
+018047,457,open,Which teeth show signs of caries?,,,,,,,"#26, and #36 show signs of caries.",57,3,q0498
+018047,458,open,What radiographic features are visible in tooth #38 on the panoramic X-ray?,,,,,,,Findings: wisdom tooth.,57,3,q0499
+018105,390,closed,How many vertically erupted wisdom teeth are present according to the report?,2,3,4,1,B,3,,58,3,q0500
+018105,391,closed,Which tooth exhibits signs of a periapical granuloma?,#47,#48,#38,None,D,None,,58,3,q0501
+018105,392,closed,In which jaw is evidence of bone loss observed?,Upper jaw,Lower jaw,Both jaws,No bone loss,D,No bone loss,,58,3,q0502
+018105,460,open,What is the general condition of the teeth and wisdom teeth in the report?,,,,,,,"32 teeth are visualized with clear anatomical definition. Wisdom teeth: #18, #28, #38 are vertically erupted; #48 is impacted.",58,3,q0503
+018105,461,open,What pathological findings are noted in teeth #47 and #48?,,,,,,,Caries in both #47 and #48.,58,3,q0504
+018105,462,open,What jaw-specific observations are mentioned in the report?,,,,,,,Evidence of bone loss in the lower jaw; clear visualization of bilateral mandibular canals and maxillary sinuses.,58,3,q0505
+018105,464,open,Does the panoramic X-ray show any systemic involvement of the impacted teeth across the entire dentition?,,,,,,,Tooth #48: impacted.,58,3,q0506
+018494,476,closed,How many teeth are visualized in the panoramic radiograph?,30,32,31,29,B,32,,59,3,q0507
+018494,477,closed,Which tooth shows signs of a periapical granuloma?,#45,#46,#47,None,D,None,,59,3,q0508
+018494,478,closed,Which wisdom tooth is erupted?,#18,#48,#38,#28,C,#38,,59,3,q0509
+018494,479,closed,Which teeth show signs of root canal treatment?,#45 and #46,#46,#47 and #48,#48 and #49,A,#45 and #46,,59,3,q0510
+018494,561,open,What structures are visible in the radiograph?,,,,,,,Bilateral mandibular canals and bilateral maxillary sinuses are visible.,59,3,q0511
+018494,562,open,What historical interventions are noted for tooth #46?,,,,,,,Tooth #46 has signs of fillings and root canal treatment.,59,3,q0512
+018494,563,open,Provide details about the wisdom teeth.,,,,,,,"Wisdom tooth #18 is erupted; #48, #38, and #28 are impacted.",59,3,q0513
+018494,564,open,Please provide a full description of the condition of tooth #46.,,,,,,,"Findings: filling, root canal treatment.",59,3,q0514
+018539,481,closed,How many wisdom teeth were detected in the panoramic radiograph?,2,3,4,5,A,2,,60,3,q0515
+018539,482,closed,Which tooth shows signs of a periapical abscess?,#35,#36,#37,#38,C,#37,,60,3,q0516
+018539,484,closed,In which jaw is bone loss detected?,Lower jaw,Upper jaw,Both jaws,No bone loss detected,C,Both jaws,,60,3,q0517
+018539,485,closed,How many teeth are visible in this panoramic dental X-ray image?,29,16,32,31,B,16,,60,3,q0518
+018539,566,open,What bone and jaw observations are noted in the report?,,,,,,,Imaging features show signs of bilateral mandibular canals and bilateral maxillary sinuses.,60,3,q0519
+018539,567,open,What is the general condition of the teeth and the status of the wisdom teeth?,,,,,,,"32 teeth are visualized with clear anatomical definition. Four wisdom teeth are detected, with #18, #28, #38 erupted, and #48 erupted but requiring clinical review.",60,3,q0520
+018539,569,open,What historical interventions are evident for #16 and #36?,,,,,,,Signs of crown and root canal treatment are present for both #16 and #36.,60,3,q0521
+018539,570,open,Which areas show the maxillary sinus in the panoramic image?,,,,,,,Findings: maxillary sinus.,60,3,q0522
+016650,23,closed,Which teeth have undergone root canal treatment?,"#14, #24, #34, #44","#35, #38, #45, #46","#55, #65, #75, #85","#11, #21, #31, #41",A,"#14, #24, #34, #44",,61,3,q0523
+016650,24,closed,Which tooth shows signs of a periapical granuloma?,#36,#46,#26,#56,A,#36,,61,3,q0524
+016650,26,closed,Which teeth are suspected to have deep caries?,"#15, #25, #35, #45","#18, #28, #38, #48","#11, #21, #31, #41","#52, #62, #72, #82",D,"#52, #62, #72, #82",,61,3,q0525
+016650,27,closed,What is visible in the mandibular areas?,Bilateral mandibular canals,Unilateral mandibular canals,No mandibular canals,Mandibular fractures,A,Bilateral mandibular canals,,61,3,q0526
+016650,29,open,"What is the general condition of the teeth, and how many wisdom teeth are erupted?",,,,,,,"32 teeth are visualized with clear anatomical definition, and all four wisdom teeth (18, #28, #38, #48) are erupted.",61,3,q0527
+016650,30,open,"Which teeth show signs of deep caries, and what additional finding is noted in tooth #46?",,,,,,,"Teeth #18, #28, #38, #45, #48, and #46 show signs of deep caries. Tooth #46 also has a periapical granuloma.",61,3,q0528
+016650,31,open,"Which teeth have signs of fillings, and which have undergone root canal treatment?",,,,,,,"Teeth #16, #17, #35, and #37 have signs of fillings. Teeth #35, #38, #45 and #46 have undergone root canal treatment.",61,3,q0529
+016650,32,open,"What is observed regarding the bone architecture, and what structures are visible in the mandibular areas?",,,,,,,Mild bone loss is indicated. Bilateral mandibular canals are visible.,61,3,q0530
+016650,33,open,Identify the mandibular canal in the X-ray image.,,,,,,,Findings: mandibular canal.,61,3,q0531
+016690,47,closed,Which of the following is TRUE regarding the wisdom teeth in this patient?,All wisdom teeth are impacted,Wisdom teeth are partially erupted,No wisdom teeth are present,All wisdom teeth are erupted,A,All wisdom teeth are impacted,,62,3,q0532
+016690,48,closed,What type of bone loss is detected in the upper jaw?,None,Slight,Moderate,Severe,B,Slight,,62,3,q0533
+016690,49,closed,Which tooth has both a filling and root canal treatment?,#16,#26,#36,#46,A,#16,,62,3,q0534
+016690,50,closed,Which tooth shows signs of a periapical granuloma?,#15,#16,#17,None,D,None,,62,3,q0535
+016690,51,closed,Which structure is well-defined bilaterally in the maxilla?,Mandibular canals,Maxillary sinuses,Nasal cavities,Eustachian tubes,D,Eustachian tubes,,62,3,q0536
+016690,59,open,Which teeth show signs of fillings?,,,,,,,"#16, #26, #36, and #46 show signs of fillings.",62,3,q0537
+016690,60,open,What is the status of the wisdom teeth in this patient?,,,,,,,"All four wisdom teeth (18, #28, #38, #48) are erupted.",62,3,q0538
+016690,62,open,What preventive measure is emphasized to prevent caries progression?,,,,,,,Emphasize oral hygiene practices to prevent caries progression.,62,3,q0539
+016744,87,closed,Which tooth shows signs of a periapical abscess?,#22,#23,#24,None,A,#22,,63,3,q0540
+016744,88,closed,What should be monitored for potential complications?,Non-vital teeth,Impacted wisdom teeth,Dental restorations,Periapical lesions,B,Impacted wisdom teeth,,63,3,q0541
+016744,89,closed,In which jaw is there evidence of bone loss?,Lower jaw,Upper jaw,Both jaws,No bone loss,A,Lower jaw,,63,3,q0542
+016744,91,closed,What necessitates further investigation in the upper jaw?,Impacted wisdom teeth,Bone loss,None,Caries,C,None,,63,3,q0543
+016744,105,open,What signs were present in the mandibular canals?,,,,,,,Bilateral mandibular canals,63,3,q0544
+016744,106,open,How many teeth were visualized with clear anatomical definition?,,,,,,,29 teeth,63,3,q0545
+016744,107,open,Which wisdom teeth were detected as impacted?,,,,,,,#38 and #48,63,3,q0546
+016975,205,closed,How many teeth have signs of fillings?,4,6,8,None,D,None,,64,3,q0547
+016975,206,closed,Which of the following teeth are impacted?,"#18, #28, #38, #48","#14, #15, #34, #47","#25, #35, #44, #46","#16, #36, #45, #47",D,"#16, #36, #45, #47",,64,3,q0548
+016975,207,closed,What is visible in the mandible?,Maxillary sinuses,Bilateral mandibular canals,Nasal cavity,None of the above,D,None of the above,,64,3,q0549
+016975,208,closed,Which teeth are suspected to have caries?,"#14, #15, #25","#34, #35, #36","#44, #46, #47",#15,C,"#44, #46, #47",,64,3,q0550
+016975,209,closed,Which teeth have had root canal treatment?,"#14, #16","#35, #44","#15, #36","#25, #46",A,"#14, #16",,64,3,q0551
+016975,240,open,What preventive measures are recommended?,,,,,,,"Fluoride application, oral hygiene maintenance, and patient education",64,3,q0552
+016975,241,open,Which tooth needs urgent evaluation?,,,,,,,#36,64,3,q0553
+016975,242,open,Which teeth are suspicious for caries and which has a periapical abscess?,,,,,,,Caries: #15; Periapical abscess: #36,64,3,q0554
+016975,243,open,What is the condition of the bone architecture?,,,,,,,No apparent bone loss,64,3,q0555
+016975,244,open,What findings can be observed in the panoramic radiograph regarding tooth #38?,,,,,,,"Findings: wisdom tooth, impacted.",64,3,q0556
+017204,276,closed,What is the condition of the maxillary sinuses?,Well-defined with significant pathology,Poorly defined with significant pathology,Well-defined with no significant pathology,Poorly defined with no significant pathology,D,Poorly defined with no significant pathology,,65,3,q0557
+017204,277,closed,Which of the following is NOT a preventive measure recommended?,Fluoride application,Oral hygiene practices,Extraction of wisdom teeth,Monitoring of interproximal areas,B,Oral hygiene practices,,65,3,q0558
+017204,279,closed,Which teeth show signs of fillings?,#11 and #21,#12 and #22,#11 and #22,#13 and #23,B,#12 and #22,,65,3,q0559
+017204,324,open,What is the primary recommendation for tooth #15?,,,,,,,Endodontic evaluation is required for the periapical lesion at tooth #15.,65,3,q0560
+017204,326,open,What visible structures are noted in the radiograph?,,,,,,,Bilateral mandibular canals and well-defined maxillary sinuses are visible.,65,3,q0561
+017204,327,open,What pathological finding is observed in tooth #15?,,,,,,,Tooth #15 shows imaging features of a periapical granuloma.,65,3,q0562
+017204,328,open,What radiographic features are visible in tooth #35 on the panoramic X-ray?,,,,,,,"Findings: crown, implant.",65,3,q0563
+017360,325,closed,How many wisdom teeth are suspected to be erupted in the radiograph?,2,3,4,None,C,4,,66,3,q0564
+017360,326,closed,Which tooth shows signs of a periapical abscess?,#35,#36,#36 and #37,#34,B,#36,,66,3,q0565
+017360,327,closed,Is there any apparent bone loss observed in the jaw?,None,Mild,Moderate,Severe,D,Severe,,66,3,q0566
+017360,328,closed,How are the maxillary sinuses described in the radiograph?,Not visible,Unilateral,Bilateral but poorly defined,Well-defined bilaterally,B,Unilateral,,66,3,q0567
+017360,384,open,Which tooth has a periapical abscess and what is its clinical implication?,,,,,,,"Tooth #36 has a periapical abscess, requiring urgent endodontic evaluation and treatment.",66,3,q0568
+017360,385,open,Which tooth is suspicious for a periapical abscess and what does it necessitate?,,,,,,,"Tooth #47 is suspicious for a periapical abscess due to root fracture, necessitating further diagnostic workup and possible surgical intervention.",66,3,q0569
+017360,386,open,Are the mandibular canals visible in the radiograph?,,,,,,,"Yes, the mandibular canals are clearly visible bilaterally.",66,3,q0570
+017360,387,open,What preventive measures are recommended regarding the suspicious deep caries and oral hygiene?,,,,,,,Monitor the suspicious deep caries at #36 and emphasize oral hygiene practices to prevent progression.,66,3,q0571
+017360,388,open,What radiographic features are visible in tooth #28 on the panoramic X-ray?,,,,,,,Findings: wisdom tooth.,66,3,q0572
+018278,443,closed,Which tooth is suspicious for caries?,#46,#47,#48,#45,D,#45,,67,3,q0573
+018278,444,closed,Which tooth shows evidence of a periapical granuloma?,#36,#37,#38,None,A,#36,,67,3,q0574
+018278,445,closed,Is there any apparent bone loss in the jaw?,Yes,No,Maybe,Not mentioned,A,Yes,,67,3,q0575
+018278,446,closed,What historical intervention is noted in the report?,Crown,Implant,Filling,None,D,None,,67,3,q0576
+018278,520,open,Is there any apparent bone loss in the jaw?,,,,,,,No apparent bone loss,67,3,q0577
+018278,521,open,Which wisdom teeth are vertically erupted?,,,,,,,#18 and #28,67,3,q0578
+018278,522,open,Which teeth need monitoring for suspicious caries?,,,,,,,#37 and #47,67,3,q0579
+018278,523,open,What findings can be observed in the panoramic radiograph regarding tooth #28?,,,,,,,Findings: wisdom tooth.,67,3,q0580
+018466,467,closed,Which tooth is associated with imaging features of a periapical granuloma?,#36,#46,#26,#16,C,#26,,68,3,q0581
+018466,468,closed,Which tooth shows signs of root canal treatment?,#24,#34,#44,#54,B,#34,,68,3,q0582
+018466,470,closed,How many wisdom teeth are detected in the panoramic radiograph?,2,3,4,5,C,4,,68,3,q0583
+018466,471,closed,In which region is a missing tooth detected?,Upper jaw,Lower jaw,Maxillary sinus,Mandibular canal,B,Lower jaw,,68,3,q0584
+018466,549,open,How many teeth are visualized in the panoramic radiograph and how many wisdom teeth are detected?,,,,,,,"31 teeth (including two restored teeth; otherwise, 29 natural teeth) are visualized, and 4 wisdom teeth are detected.",68,3,q0585
+018466,550,open,Which teeth have crowns?,,,,,,,"Teeth #11,12, 13,14, 15, 21, 22, 23, 24, 25, 31,32, 33, 34, 35, 36,41,42, 43, 44, 45, 46, 47, 48 have crowns.",68,3,q0586
+018466,551,open,What is the clinical concern related to the missing tooth region?,,,,,,,The missing tooth region in the lower jaw requires monitoring for potential issues related to masticatory function.,68,3,q0587
+018466,552,open,Does tooth #42 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,,,,,,,Findings: crown.,68,3,q0588
+018466,553,open,What radiographic features are visible in tooth #48 on the panoramic X-ray?,,,,,,,"Findings: wisdom tooth, crown.",68,3,q0589
+018477,472,closed,Which tooth shows signs of a periapical lesion?,#46,#47,#45,#44,D,#44,,69,3,q0590
+018477,473,closed,Which tooth is suspicious for caries?,#43,#44,#45,#46,A,#43,,69,3,q0591
+018477,474,closed,Which of the following wisdom teeth is erupted?,#18,#38,#28,#48,D,#48,,69,3,q0592
+018477,475,closed,What is the status of bone architecture in the image?,Severe bone loss,Moderate bone loss,No apparent bone loss,Slight bone loss,A,Severe bone loss,,69,3,q0593
+018477,555,open,What is the general condition of the teeth in the panoramic radiograph?,,,,,,,32 teeth are visualized with clear anatomical definition.,69,3,q0594
+018477,556,open,What is the status of the wisdom teeth?,,,,,,,"Wisdom teeth #18 and #48 are erupted, while #38 and #28 are impacted.",69,3,q0595
+018477,557,open,What pathological findings are present in the radiograph?,,,,,,,"Caries are suspected in #27, #46, and #47, and a periapical lesion is present at #47.",69,3,q0596
+018477,558,open,What anatomical structures are visible in the radiograph?,,,,,,,Bilateral mandibular canals and the right maxillary sinus are visible.,69,3,q0597
+018477,559,open,Which teeth exhibit signs of pathology on the panoramic radiograph? Summarize the key findings.,,,,,,,Tooth #47: caries.,69,3,q0598
+016640,0,closed,Which of the following teeth is suspected to have caries?,#15,#24,#27,#42,B,#24,,70,3,q0599
+016640,1,closed,How many natural teeth are visualized in the panoramic radiograph?,28,31,32,34,D,34,,70,3,q0600
+016640,2,closed,Which tooth shows signs of a periapical abscess?,#45,#46,#47,#48,A,#45,,70,3,q0601
+016640,3,closed,Which of the following teeth has a crown and root canal treatment?,#15,"#15, and #16",#26,#31,D,#31,,70,3,q0602
+016640,4,closed,Which of the following is TRUE regarding the jaw-specific observations?,Apparent alveolar bone loss noted,Unilateral mandibular canals,No apparent bone loss,No mandibular canals visible,B,Unilateral mandibular canals,,70,3,q0603
+016640,0,open,How many wisdom teeth are detected in the radiograph and which are they?,,,,,,,"Four wisdom teeth are detected: #18, #28, #38, and #48.",70,3,q0604
+016640,1,open,Which teeth are suspected to have caries?,,,,,,,"Teeth #15, and #38 are suspected to have caries.",70,3,q0605
+016640,2,open,Which teeth have a fixed dental prosthesis ?,,,,,,,"Teeth #16, #26, #31, #42, #46, and #41.",70,3,q0606
+016640,3,open,Which tooth shows signs of a periapical abscess?,,,,,,,Tooth #46 shows signs of a periapical abscess.,70,3,q0607
+016640,4,open,Please provide a full description of the condition of tooth #26.,,,,,,,"Findings: crown, root canal treatment.",70,3,q0608
+016648,14,closed,How many wisdom teeth are erupted in the patient?,2,3,4,5,C,4,,71,3,q0609
+016648,15,closed,What is the status of bone loss in the image?,Severe bone loss,Moderate bone loss,Mild bone loss,No apparent bone loss,A,Severe bone loss,,71,3,q0610
+016648,16,closed,Which tooth is suspicious for deep caries?,#17,#18,#28,#38,C,#28,,71,3,q0611
+016648,17,open,How many teeth are visualized in the radiograph?,,,,,,,32 teeth are visualized.,71,3,q0612
+016648,18,open,What is the status of the wisdom teeth in the patient?,,,,,,,"All four wisdom teeth (18, #28, #38, #48) are erupted.",71,3,q0613
+016648,19,open,What is the finding for tooth #47?,,,,,,,Tooth #47 shows evidence of a periapical lesion.,71,3,q0614
+016648,20,open,What is the status of bone architecture in the image?,,,,,,,No apparent bone loss is observed in the image.,71,3,q0615
+016648,21,open,Describe the overall status of tooth #18 based on the panoramic radiograph findings.,,,,,,,"Findings: wisdom tooth, caries, deep caries, periapical lesions (granuloma).",71,3,q0616
+016652,28,closed,Which teeth are recommended for monitoring due to suspicious caries?,#15 and #23,#18 and #38,#28 and #48,No obvious caries,B,#18 and #38,,72,3,q0617
+016652,30,closed,Is there apparent bone loss observed in the jaw?,Yes,No,Unclear,Not mentioned,A,Yes,,72,3,q0618
+016652,31,closed,Which tooth shows signs of a periapical granuloma?,#15,#23,#36,#46,B,#23,,72,3,q0619
+016652,32,closed,What is the primary recommendation for the periapical lesion at 46?,Monitor with radiographic follow-up,Immediate extraction,Endodontic evaluation,Crown restoration,B,Immediate extraction,,72,3,q0620
+016652,35,open,What is the immediate intervention required for tooth #46?,,,,,,,The periapical lesion requires endodontic evaluation.,72,3,q0621
+016652,36,open,What structures are visible in the imaging?,,,,,,,Bilateral mandibular canals and bilateral maxillary sinuses.,72,3,q0622
+016652,37,open,What pathological findings are present in tooth #46?,,,,,,,Signs of imaging features suggestive of a periapical granuloma.,72,3,q0623
+016652,38,open,What is the status of the wisdom tooth #18?,,,,,,,Impacted with signs of impaction.,72,3,q0624
+016823,126,closed,Which tooth is suspected to have an impacted wisdom tooth?,#18,#25,#32,None detected,A,#18,,73,3,q0625
+016823,127,closed,How many teeth are observed with crowns?,5,6,7,8,C,7,,73,3,q0626
+016823,128,closed,Which tooth requires endodontic evaluation?,#10,#11,#12,#13,D,#13,,73,3,q0627
+016823,129,closed,What is recommended for interproximal caries detection?,Panoramic radiographs,Bitewing radiographs,CT scans,MRI,B,Bitewing radiographs,,73,3,q0628
+016823,130,closed,Which structures are visible in the radiograph?,Mandibular canals only,Maxillary sinus only,Both mandibular canals and maxillary sinus,Neither,B,Maxillary sinus only,,73,3,q0629
+016823,150,open,Which tooth needs endodontic evaluation?,,,,,,,Tooth #11 requires endodontic evaluation due to the periapical lesion.,73,3,q0630
+016823,151,open,"How many teeth were visualized, and were there any impacted wisdom teeth?",,,,,,,26 teeth were visualized with no impacted wisdom teeth detected.,73,3,q0631
+016823,152,open,Which tooth has evidence of a periapical granuloma?,,,,,,,Tooth #11 shows evidence of a periapical granuloma.,73,3,q0632
+016823,153,open,What preventive measures are recommended?,,,,,,,Monitor all crowned teeth for stability and consider bitewing radiographs for interproximal caries detection.,73,3,q0633
+016823,154,open,What radiographic features are visible in tooth #16 on the panoramic X-ray?,,,,,,,Findings: crown.,73,3,q0634
+016826,136,closed,Which tooth shows signs of a periapical abscess?,#46,#45,#47,#48,B,#45,,74,3,q0635
+016826,137,closed,Which tooth has a crown and root canal treatment?,#11,#14,#26,#37,D,#37,,74,3,q0636
+016826,139,closed,What is observed in the jawbone?,Bone loss,Fracture,No apparent bone loss,Tumor,C,No apparent bone loss,,74,3,q0637
+016826,162,open,What pathological findings are present?,,,,,,,"Suspected caries at #25, #35; periapical abscesses at #46, #47.",74,3,q0638
+016826,163,open,What historical interventions are noted?,,,,,,,"Fillings at #37; crowns at #11, #44, #46; root canal treatments at #11, #26, #46, #47.",74,3,q0639
+016826,164,open,How many wisdom teeth are impacted?,,,,,,,"Three wisdom teeth are impacted: #18, #38, #48.",74,3,q0640
+016826,165,open,What is the general condition of the teeth?,,,,,,,30 teeth visualized with clear anatomical definition.,74,3,q0641
+016826,166,open,Identify areas showing the maxillary sinus in the panoramic radiograph.,,,,,,,Findings: maxillary sinus.,74,3,q0642
+016918,170,closed,Which of the following wisdom teeth is erupted?,#18,#28,#38,#48,C,#38,,75,4,q0643
+016918,172,closed,Which tooth shows imaging features of a periapical lesion (likely abscess)?,#26,#37,#47,#45,D,#45,,75,4,q0644
+016918,173,closed,What is the status of the maxillary sinuses?,Not visible,Visible unilaterally,Visible bilaterally,Obstructed,D,Obstructed,,75,4,q0645
+016918,174,closed,What is observed in the bilateral mandibular canals?,Bone loss,Signs of bilateral mandibular canals,Impacted wisdom teeth,Periapical lesions,C,Impacted wisdom teeth,,75,4,q0646
+016918,201,open,"What is the general condition of the teeth, and how many wisdom teeth are detected?",,,,,,,"31 teeth are visualized with clear anatomical definition, and 4 wisdom teeth are detected: #18, #28, and #38 are impacted, while #48 is erupted.",75,4,q0647
+016918,202,open,Which teeth show signs of fillings?,,,,,,,Teeth #36 and #45 show signs of fillings.,75,4,q0648
+016918,203,open,What is the bone architecture observation in the jaw?,,,,,,,No apparent bone loss is observed in the image.,75,4,q0649
+016918,204,open,What pathological findings are present in tooth #47?,,,,,,,"Tooth #47 shows evidence of caries, suspicious for deep caries, and imaging features sign of a periapical lesion (likely abscess).",75,4,q0650
+017112,235,closed,What is observed regarding the bone architecture?,Generalized bone loss,No apparent bone loss,Localized bone loss,Severe bone loss,A,Generalized bone loss,,76,4,q0651
+017112,236,closed,Which structures are visible in the radiograph?,Mandibular canals only,Maxillary sinuses only,Both mandibular canals and maxillary sinuses,Neither mandibular canals nor maxillary sinuses,D,Neither mandibular canals nor maxillary sinuses,,76,4,q0652
+017112,238,closed,Which of the following is true about the wisdom teeth?,All are erupted,Some are erupted and others impacted,All are impacted,None are visible,D,None are visible,,76,4,q0653
+017112,239,closed,How many teeth are visualized in the radiograph?,28,32,34,36,A,28,,76,4,q0654
+017112,276,open,What is the condition of the wisdom teeth?,,,,,,,"All four wisdom teeth (18, #28, #38, #48) are impacted.",76,4,q0655
+017112,277,open,What pathological findings are present in tooth #14?,,,,,,,Tooth #14 is suspicious for deep caries and shows imaging features of a periapical granuloma.,76,4,q0656
+017112,278,open,What is the observed bone architecture?,,,,,,,No apparent bone loss is observed in the image.,76,4,q0657
+017112,279,open,What historical interventions are noted in teeth #36 and #46?,,,,,,,Both teeth #36 and #46 have crown restorations and signs of root canal treatment with restoration.,76,4,q0658
+017112,280,open,Please detect the maxillary sinus in the panoramic image.,,,,,,,Findings: maxillary sinus.,76,4,q0659
+018211,413,closed,Which tooth exhibits signs of a periapical granuloma?,#45,#46,#47,#44,A,#45,,77,4,q0660
+018211,414,closed,Which tooth shows evidence of a filling?,#12,#11,#21,#22,C,#21,,77,4,q0661
+018211,415,closed,What is a notable finding in the bilateral mandibular canals?,Absence of bilateral mandibular canals,Unilateral mandibular canal,Bilateral mandibular canals,Narrow mandibular canals,D,Narrow mandibular canals,,77,4,q0662
+018211,487,open,What is the observed bone architecture?,,,,,,,No apparent bone loss in the image.,77,4,q0663
+018211,488,open,What structures are visible in the imaging?,,,,,,,Bilateral mandibular canals and bilateral maxillary sinuses.,77,4,q0664
+018211,489,open,Which wisdom teeth are suspected to be erupted?,,,,,,,"#18, #28, #38, #48 are suspected to be erupted wisdom teeth.",77,4,q0665
+018211,490,open,What type of intervention is evident at tooth #11?,,,,,,,Sign of filling.,77,4,q0666
+018211,491,open,Identify the periapical lesions in the X-ray image.,,,,,,,Tooth #46: periapical lesions (granuloma).,77,4,q0667
+018325,447,closed,How many wisdom teeth are present in the report?,2,3,4,5,C,4,,78,4,q0668
+018325,448,closed,Which tooth suggests the presence of a filling?,#26,#36,#46,#56,A,#26,,78,4,q0669
+018325,450,closed,Which tooth shows evidence of a periapical abscess?,#36,#46,#26,#56,C,#26,,78,4,q0670
+018325,451,closed,Which tooth is suspected to have caries according to the report?,#15,#25,#35,#45,A,#15,,78,4,q0671
+018325,525,open,What historical intervention is suggested for tooth #36?,,,,,,,Tooth #36 is suggestive of a filling.,78,4,q0672
+018325,526,open,What observations are made regarding the bone architecture and visible structures?,,,,,,,No apparent bone loss is visible. Bilateral mandibular canals and maxillary sinuses are visible.,78,4,q0673
+018325,527,open,What is the general condition of the teeth and wisdom teeth in this report?,,,,,,,"32 teeth are visualized with clear anatomical definition. All 4 wisdom teeth (18, #28, #38, #48) are present.",78,4,q0674
+018325,528,open,What clinical recommendations are provided based on the findings?,,,,,,,"The periapical abscess at #46 requires extraction, and the suspicious caries at #25 need further investigation. Monitoring of the erupted wisdom teeth is advised.",78,4,q0675
+018325,529,open,What radiographic features are visible in tooth #46 on the panoramic X-ray?,,,,,,,Findings: periapical lesions (abscess).,78,4,q0676
+016693,52,closed,Which teeth have crown restorations?,"#12, #11, #21","#18, #28, #38","#47, #48, #38","#12, #28, #47",C,"#47, #48, #38",,79,4,q0677
+016693,53,closed,Which of the following wisdom teeth are impacted?,#18 and #28,#38 and #48,#18 and #38,#28 and #48,D,#28 and #48,,79,4,q0678
+016693,54,closed,Which tooth shows signs of a periapical abscess?,#12,#21,#47,#28,D,#28,,79,4,q0679
+016693,55,closed,Which tooth requires monitoring for suspicious caries?,#21,#47,#28,#12,A,#21,,79,4,q0680
+016693,56,closed,In which jaw is the missing tooth region detected?,Upper jaw,Lower jaw,Both jaws,Not specified,C,Both jaws,,79,4,q0681
+016693,65,open,What is observed regarding bone architecture and visible structures?,,,,,,,"There is no apparent bone loss, with bilateral mandibular canals and maxillary sinuses visible.",79,4,q0682
+016693,66,open,What is the finding for tooth #47?,,,,,,,Tooth #47 is suspicious for caries with a confidence score less than 0.80.,79,4,q0683
+016693,67,open,How many wisdom teeth are present and what is their status?,,,,,,,"There are four wisdom teeth: #18 and #28 are erupted, while #38 and #48 are impacted.",79,4,q0684
+016693,68,open,What is the condition of tooth #21?,,,,,,,Tooth #21 has a periapical abscess and signs of both crown restoration and root canal treatment.,79,4,q0685
+016693,69,open,Please detect the teeth in the panoramic image.,,,,,,,"Tooth #26, #25, #16, #12, #47, #14, #24, #32, #43, #46, #17, #48, #45, #21, #37, #13, #31, #15, #18, #23, #22, #11, #38, #44, #36, #28, #42, #33, #27, #41, #35.",79,4,q0686
+016708,62,closed,Which tooth shows evidence of a crown restoration and root canal treatment?,#15,#36,#47,#45,D,#45,,80,4,q0687
+016708,63,closed,Which tooth is described as having an implant restoration?,#15,#45 and #47,#45,#47,C,#45,,80,4,q0688
+016708,64,closed,Which tooth is suspected to have a periapical granuloma?,#24 and #34,#25,#33,#34,C,#33,,80,4,q0689
+016708,65,closed,Which of the following is a finding in the maxillary sinuses?,Bilateral mandibular canals,Clearly visible bilaterally,Signs of bone loss,Periapical abscess,C,Signs of bone loss,,80,4,q0690
+016708,66,closed,How many teeth are visualized in the panoramic radiograph?,22,26,27,28,D,28,,80,4,q0691
+016708,77,open,What jaw-specific observations are noted in the report?,,,,,,,"Apparent bone loss in the posterior maxilla (upper posterior jaw) is observed, and the bilateral mandibular canals and maxillary sinuses are clearly visible.",80,4,q0692
+016708,78,open,What is the general condition of the teeth as observed in the report?,,,,,,,"22 teeth are visualized with clear anatomical definition, and there is 1 missing tooth region in the upper jaw.",80,4,q0693
+016708,79,open,What historical interventions are evident in tooth #36?,,,,,,,Tooth #36 shows evidence of a crown restoration and root canal treatment.,80,4,q0694
+016708,81,open,Detect missing teeth in the panoramic image.,,,,,,,Findings: side upper.,80,4,q0695
+016723,77,closed,Which tooth is suspicious for a periapical granuloma?,#16,#17,#18,None,A,#16,,81,4,q0696
+016723,78,closed,Which tooth shows signs of root canal treatment?,#16,#17,#18,#19,B,#17,,81,4,q0697
+016723,79,closed,How many teeth are visualized in the panoramic radiograph?,28,29,30,31,D,31,,81,4,q0698
+016723,80,closed,What is noted regarding the bone architecture?,Abnormal bone architecture,Normal bone architecture,Bone loss,Bone fracture,C,Bone loss,,81,4,q0699
+016723,81,closed,What is observed in the maxillary sinuses?,Abnormal features,Normal features,Sinusitis,Bone sclerosis,C,Sinusitis,,81,4,q0700
+016723,95,open,What is the clinical recommendation for tooth #17?,,,,,,,Endodontic evaluation is required for tooth #17.,81,4,q0701
+016723,96,open,What is the condition of the bone architecture?,,,,,,,Normal bone architecture is noted.,81,4,q0702
+016723,97,open,Which tooth is identified as a wisdom tooth?,,,,,,,#28 is identified as the wisdom tooth.,81,4,q0703
+016723,98,open,Which historical treatments could be detected in the panoramic image?,,,,,,,Tooth #17: root canal treatment.,81,4,q0704
+016855,156,closed,Where is the evidence of bone loss observed?,Lower jaw,Upper jaw,Both jaws,None of the above,A,Lower jaw,,82,4,q0705
+016855,157,closed,What type of intervention is evident at tooth 26?,Crown restoration,Filling,Root canal treatment,Extraction,B,Filling,,82,4,q0706
+016855,158,closed,Which tooth is impacted?,#18,#28,#38,#48,A,#18,,82,4,q0707
+016855,159,closed,What is the pathological finding at tooth 26?,Caries,Periapical cyst,Periapical lesion,Deep caries,A,Caries,,82,4,q0708
+016855,160,closed,How many wisdom teeth are erupted according to the report?,1,2,3,4,B,2,,82,4,q0709
+016855,185,open,What interventions are noted at teeth #26?,,,,,,,Evidence of fillings.,82,4,q0710
+016855,186,open,What is the general condition of the teeth?,,,,,,,26 teeth are visualized with clear anatomical definition.,82,4,q0711
+016855,187,open,What is observed in the bone architecture of the upper jaw?,,,,,,,Evidence of bone loss.,82,4,q0712
+016855,188,open,Please accurately identify the wisdom tooth in the X-ray image.,,,,,,,"Tooth #48: impacted. Tooth #28, #18.",82,4,q0713
+017018,210,closed,Which tooth shows signs of a periapical granuloma?,#13,#36,#46,#47,B,#36,,83,4,q0714
+017018,212,closed,Which of the following is true regarding the bone architecture?,Significant bone loss is present,Bone structure appears intact,Bone loss is evident around 36,Mandibular canals are not visible,A,Significant bone loss is present,,83,4,q0715
+017018,213,closed,Which teeth have crowns?,"#35, #45","#36, #46","#16, #26","#24, #34",D,"#24, #34",,83,4,q0716
+017018,214,closed,Which teeth show signs of root canal treatment?,"#34, #44","#36, #46","#14, #24","#25, #35",C,"#14, #24",,83,4,q0717
+017018,246,open,What clinical recommendations are made regarding the periapical granuloma and caries?,,,,,,,"The periapical granuloma at tooth #36 requires endodontic evaluation and possible treatment, and the caries at tooth #16 should be clinically re-evaluated and managed appropriately.",83,4,q0718
+017018,247,open,What is the status of the wisdom teeth in the report?,,,,,,,"Teeth #38 and #18 are erupted and non-impacted, while tooth #48 is impacted.",83,4,q0719
+017018,249,open,What is the condition of the mandibular canals and maxillary sinuses?,,,,,,,"Both mandibular canals are clearly visible, and both maxillary sinuses are visible with no apparent signs of pathosis.",83,4,q0720
+017018,250,open,What are the characteristic features of the crown visible in multiple teeth on the panoramic radiograph?,,,,,,,"Tooth #36, #46.",83,4,q0721
+017209,280,closed,How many wisdom teeth are detected in the radiograph?,1,2,3,4,C,3,,84,4,q0722
+017209,281,closed,Which of the following teeth shows signs of a periapical cyst?,#34,#35,#36,#37,C,#36,,84,4,q0723
+017209,282,closed,Which teeth show signs of crown restorations?,"#34, #35","#35, #36","#35, #36, #37","#37, #38",C,"#35, #36, #37",,84,4,q0724
+017209,283,closed,Which tooth is suspicious for caries and requires clinical re-evaluation?,#45,#46,#47,#48,B,#46,,84,4,q0725
+017209,284,closed,Which tooth has signs of root canal treatment?,#20,#21,#22,#23,C,#22,,84,4,q0726
+017209,330,open,What is recommended for the periapical cyst at tooth #35?,,,,,,,Requires endodontic evaluation.,84,4,q0727
+017209,331,open,What historical interventions are noted in the radiograph?,,,,,,,"Signs of fillings detected; crown restorations in #35, #36, #37; root canal treatment in #21.",84,4,q0728
+017209,332,open,What is the general condition of the teeth in the radiograph?,,,,,,,"30 (including restored teeth; otherwise, 29 natural teeth) teeth visualized with clear anatomical definition.",84,4,q0729
+017209,333,open,What is the primary concern regarding tooth #46?,,,,,,,"Suspicious for caries, suggests clinical re-evaluation.",84,4,q0730
+017346,320,closed,What is recommended for the periapical lesion at 37?,Extraction,Filling,Crown,Endodontic evaluation,D,Endodontic evaluation,,85,4,q0731
+017346,321,closed,What is the pathological finding at tooth 37?,Caries,Periapical granuloma,Crown restoration,Filling,C,Crown restoration,,85,4,q0732
+017346,322,closed,Is there any apparent bone loss observed?,Yes,No,Unclear,Partial,A,Yes,,85,4,q0733
+017346,323,closed,Which region is suspicious for a missing tooth?,Upper jaw,Lower jaw,Maxillary sinus,Mandibular canal,B,Lower jaw,,85,4,q0734
+017346,324,closed,What is the status of the maxillary sinuses?,Well-aerated,Cloudy,Obliterated,Enlarged,A,Well-aerated,,85,4,q0735
+017346,378,open,Describe the pathological findings in the report.,,,,,,,Tooth #37 shows evidence of a periapical granuloma. The lower jaw is suspicious for a missing tooth region.,85,4,q0736
+017346,379,open,Which wisdom teeth are erupted and their positions?,,,,,,,"All four wisdom teeth (18, 28, 38, 48) are erupted.",85,4,q0737
+017346,380,open,What historical interventions are present in the teeth?,,,,,,,"Teeth #11, 21 have fillings present, and tooth #37 has a crown restoration.",85,4,q0738
+018384,462,closed,Which of the following teeth suggest clinical re-evaluation for a crown?,#36,#46,#26,#16,D,#16,,86,4,q0739
+018384,463,closed,What is the status of the bone architecture in the radiograph?,Apparent bone loss,No apparent bone loss,Severe bone loss,Moderate bone loss,D,Moderate bone loss,,86,4,q0740
+018384,464,closed,Which of the following teeth are erupted wisdom teeth?,#18 and #38,#15 and #25,#35 and #45,#48 and #28,C,#35 and #45,,86,4,q0741
+018384,465,closed,Which of the following teeth require clinical re-evaluation for fillings?,"#16, #27, #46, and #37","#15, #25, and #35","#16, #26, and #36","#17, #27, and #37",C,"#16, #26, and #36",,86,4,q0742
+018384,543,open,What visible structures are noted in the jaw-specific observations?,,,,,,,Signs of bilateral mandibular canals are visible.,86,4,q0743
+018384,544,open,Which teeth are suspicious for caries?,,,,,,,"The teeth suspicious for caries are #18, #47, and #26.",86,4,q0744
+018384,545,open,What preventive measures are recommended for the detected caries?,,,,,,,"Monitor suspicious caries at #18, #26, and #47 with radiographic follow-up.",86,4,q0745
+018384,546,open,"What is the general condition of the teeth, and which wisdom teeth are erupted?",,,,,,,30 teeth are visualized with clear anatomical definition. The erupted wisdom teeth are #18 and #38.,86,4,q0746
+018384,547,open,What are the characteristic features of the filling visible in multiple teeth on the panoramic radiograph?,,,,,,,"Tooth #16, #46, #37, #27.",86,4,q0747
+019277,486,closed,Which wisdom tooth is impacted?,#18,#28,None,#48,A,#18,,87,4,q0748
+019277,488,closed,How many teeth are visualized in the radiograph?,30,32,31,29,B,32,,87,4,q0749
+019277,489,closed,Which tooth shows evidence of a periapical cyst?,#12,#13,#14,#15,D,#15,,87,4,q0750
+019277,490,closed,What is recommended for the periapical cyst at 13?,Extraction,Endodontic evaluation and treatment,Crown placement,No treatment needed,B,Endodontic evaluation and treatment,,87,4,q0751
+019277,572,open,What is the general condition of the teeth in the radiograph?,,,,,,,32 teeth are visualized with clear anatomical definition.,87,4,q0752
+019277,573,open,What is the appearance of the maxillary sinus?,,,,,,,"Partially visible, suggestive of normal anatomical structure.",87,4,q0753
+019277,574,open,What is the status of the jaw bone architecture?,,,,,,,No apparent bone loss is visible in the image.,87,4,q0754
+019277,575,open,What pathological finding is noted at tooth #13?,,,,,,,Evidence of a periapical cyst.,87,4,q0755
+019277,576,open,Does tooth #48 exhibit any signs of pathology or structural compromise on the panoramic radiograph?,,,,,,,Findings: wisdom tooth.,87,4,q0756
+016712,67,closed,What is the status of bone loss in the jaw according to the report?,Severe bone loss,Mild bone loss,No apparent bone loss,Moderate bone loss,A,Severe bone loss,,88,4,q0757
+016712,68,closed,Which of the following is a preventive measure recommended in the report?,Monitor wisdom teeth 28 and 38,Initiate root canal treatment for 37,Place fillings in 23 and 25,Review crown restorations in 11 and 12,B,Initiate root canal treatment for 37,,88,4,q0758
+016712,69,closed,Which structures are visible in the radiograph?,Teeth,Bilateral maxillary sinuses,Bilateral mandibular canals,All of the above,C,Bilateral mandibular canals,,88,4,q0759
+016712,70,closed,What is the priority concern regarding tooth 37?,Needs filling,Needs crown restoration,Requires endodontic evaluation,Needs extraction,B,Needs crown restoration,,88,4,q0760
+016712,71,closed,Which of the following teeth has a crown restoration with underlying root canal treatment?,#23,#25,#11,#38,D,#38,,88,4,q0761
+016712,83,open,What preventive measure is recommended for the wisdom teeth #28 and #38?,,,,,,,Regular follow-up the suspected eruption status of wisdom teeth #28 and #38,88,4,q0762
+016712,84,open,What is the priority concern for tooth #37?,,,,,,,Periapical abscess at #37 requires endodontic evaluation and management,88,4,q0763
+016712,85,open,What pathological finding is noted for tooth #37?,,,,,,,Imaging features sign of periapical abscess,88,4,q0764
+016712,86,open,What structures are visible in the maxillary and mandibular regions?,,,,,,,Bilateral maxillary sinuses and bilateral mandibular canals,88,4,q0765
+016712,87,open,Which mandibular canal is/are visible in the panoramic dental image?,,,,,,,Findings: mandibular canal.,88,4,q0766
+016973,201,closed,Which tooth has a root canal treatment with restoration?,#17,#27,#37,#47,C,#37,,89,4,q0767
+016973,202,closed,Which tooth has a periapical abscess?,#17,#27,#37,#47,C,#37,,89,4,q0768
+016973,203,closed,Which tooth site has a dental implant present? ,#17,#27,#37,#47,C,#37,,89,4,q0769
+016973,204,closed,What is visible in the bilateral structures of the mandible?,Sinuses,Canals,Foramina,None,A,Sinuses,,89,4,q0770
+016973,234,open,What pathological findings are present at tooth #37?,,,,,,,Suspected caries and a periapical abscess.,89,4,q0771
+016973,235,open,What visible structures are present in the bilateral maxillary regions?,,,,,,,Bilateral maxillary sinuses.,89,4,q0772
+016973,236,open,What historical interventions are noted at tooth #37?,,,,,,,Crown restoration (suspected) and root canal treatment with restoration.,89,4,q0773
+016973,237,open,What is the general condition of the teeth in the radiograph?,,,,,,,28 teeth are visualized with clear anatomical definition.,89,4,q0774
+016973,238,open,Are there any pathological findings on the panoramic radiograph? List them systematically.,,,,,,,Tooth #37: caries.,89,4,q0775
+017022,215,closed,How many wisdom teeth were detected in the radiograph?,3,4,5,6,B,4,,90,4,q0776
+017022,216,closed,Which structures are visible bilaterally in the maxilla?,Mandibular canals,Maxillary sinuses,Eustachian tubes,Tonsils,D,Tonsils,,90,4,q0777
+017022,217,closed,Which tooth requires endodontic evaluation?,#35,#38,#48,#28,D,#28,,90,4,q0778
+017022,218,closed,What is the observation regarding bone architecture?,Severe bone loss,Moderate bone loss,No apparent bone loss,Bone augmentation needed,D,Bone augmentation needed,,90,4,q0779
+017022,219,closed,Which of the following is true regarding historical interventions?,None detected,Root canal treatment found,Implants present,Crowns visible,B,Root canal treatment found,,90,4,q0780
+017022,252,open,What preventive measure is suggested for caries monitoring?,,,,,,,Monitor caries at #35 and #48 with radiographic follow-up.,90,4,q0781
+017022,253,open,What structures are visible in the jaw beyond the teeth?,,,,,,,Bilateral mandibular canals and maxillary sinuses are visible.,90,4,q0782
+017022,254,open,What is the status of the wisdom teeth in this radiograph?,,,,,,,"Four wisdom teeth are erupted: #18, #28, #38, and #48.",90,4,q0783
+017022,255,open,What is the clinical recommendation for tooth #48?,,,,,,,Tooth #48 requires endodontic evaluation and immediate intervention for deep caries.,90,4,q0784
+017022,256,open,What radiographic features are visible in tooth #18 on the panoramic X-ray?,,,,,,,Findings: wisdom tooth.,90,4,q0785
+017416,335,closed,Which tooth sites present implants?,"#24, #14","13,15,17,23,25,27,36,37 ","#26, #16","#27, #17",D,"#27, #17",,91,4,q0786
+017416,336,closed,What is the observation regarding bone architecture?,Severe bone loss,Mild bone loss,Moderate bone loss in bone jaws ,Bone fracture,C,Moderate bone loss in bone jaws ,,91,4,q0787
+017416,337,closed,Which tooth has signs of a filling?,#13,#44,#15,None,C,#15,,91,4,q0788
+017416,338,closed,What is noted about the mandibular canals?,Unilateral,Bilateral,Absent,Narrowed,C,Absent,,91,4,q0789
+017416,339,closed,What is the appearance of the maxillary sinuses?,Cloudy,Clear,Obscured,Not visible,D,Not visible,,91,4,q0790
+017416,396,open,What are the priority concerns highlighted in the report?,,,,,,,Periapical lesion at #46.,91,4,q0791
+017416,397,open,List the historical interventions observed in the report.,,,,,,,"Crowns: #45, 46,47; Root canal treatment: #48, #47,46; Implants: #25, #13, #23, 27,36, 37,15, #17.",91,4,q0792
+017416,398,open,What preventive measures are recommended?,,,,,,,Review implants for osseointegration.,91,4,q0793
+017416,400,open,Does tooth #unknown exhibit any signs of pathology or structural compromise on the panoramic radiograph?,,,,,,,Findings: implant.,91,4,q0794
+018174,400,closed,How many teeth are visualized in the panoramic radiograph?,28,30,32,36,B,30,,92,4,q0795
+018174,401,closed,What historical interventions are evident at tooth 47?,Crown restoration only,Root canal treatment only,Crown restoration and root canal treatment,Filling only,A,Crown restoration only,,92,4,q0796
+018174,402,closed,What pathological finding is present at tooth 47?,Periapical cyst,Periapical granuloma,Dental abscess,Periodontal pocket,B,Periapical granuloma,,92,4,q0797
+018174,403,closed,Which of the following describes the status of the wisdom teeth 18 and 28?,Both are impacted,Both are partially erupted,Both are erupted,"One erupted, one impacted",C,Both are erupted,,92,4,q0798
+018174,471,open,What pathological finding is present at tooth #47?,,,,,,,Imaging features sign of periapical granuloma.,92,4,q0799
+018174,472,open,What is the general condition of the teeth and the status of the wisdom teeth?,,,,,,,30 teeth are visualized with clear anatomical definition. Wisdom teeth #18 and #28 are both erupted.,92,4,q0800
+018174,473,open,What structures are visible in the radiograph?,,,,,,,Imaging features signs of bilateral mandibular canals and maxillary sinuses.,92,4,q0801
+018174,474,open,What is the overall structural integrity of tooth #47 as seen on the panoramic radiograph?,,,,,,,"Findings: periapical lesions (granuloma), crown, root canal treatment.",92,4,q0802
+018276,432,closed,Which tooth shows signs of a filling?,#27,#37,#47,#46,D,#46,,93,4,q0803
+018276,433,closed,Which tooth has both root canal treatment and a filling?,#36,#37,#46,#47,C,#46,,93,4,q0804
+018276,435,closed,Which tooth shows signs of suspected caries?,#11,#13,#15,None,B,#13,,93,4,q0805
+018276,436,closed,Which tooth has a periapical abscess?,#36,#37,#46,#47,B,#37,,93,4,q0806
+018276,508,open,What is the status of the wisdom teeth?,,,,,,,"All four wisdom teeth (18, #28, #38, #48) are suspected to be erupted.",93,4,q0807
+018276,509,open,What is the general condition of the teeth?,,,,,,,32 teeth are visualized with clear anatomical definition.,93,4,q0808
+018276,510,open,What historical interventions are noted?,,,,,,,Root canal treatment with filling at #46.,93,4,q0809
+018276,511,open,What pathological findings are present?,,,,,,,Suspected caries at #13 and a periapical abscess at #46.,93,4,q0810
+018276,512,open,What findings can be observed in the panoramic radiograph regarding tooth #48?,,,,,,,Findings: wisdom tooth.,93,4,q0811
+016769,92,closed,Which of the following teeth has signs of a root canal treatment?,#12,#24,#35,#47,D,#47,,94,4,q0812
+016769,93,closed,Which of the following teeth is identified as a wisdom tooth?,#8,#18,#28,#38,B,#18,,94,4,q0813
+016769,94,closed,How many teeth were visualized in the panoramic radiograph?,28,30,32,34,C,32,,94,4,q0814
+016769,95,closed,What is the radiographic feature of the maxillary sinus?,Bilateral visibility,Unilateral visibility,Reduced visibility,Absent,B,Unilateral visibility,,94,4,q0815
+016769,109,open,How many wisdom teeth were detected and which one is erupted?,,,,,,,"One wisdom tooth was detected, #18, which is overerupted.",94,4,q0816
+016769,110,open,What is the observed condition of the upper jawbone?,,,,,,,The upper jaw is suspicious for bone loss.,94,4,q0817
+016769,111,open,What visible structures are present in the radiograph?,,,,,,,Bilateral mandibular canals and maxillary sinuses are visible.,94,4,q0818
+016769,112,open,Which tooth is suspicious for root canal treatment?,,,,,,,#35 is suspicious for root canal treatment.,94,4,q0819
+018179,404,closed,What evaluation is needed for the periapical lesion at 47?,Surgical extraction,Endodontic evaluation,Crown replacement,Filling,C,Crown replacement,,95,4,q0820
+018179,405,closed,Which wisdom tooth is erupted?,#28,#38,#48,#18,C,#48,,95,4,q0821
+018179,406,closed,Which tooth is suspicious for caries?,#35,#36,#37,#38,C,#37,,95,4,q0822
+018179,407,closed,What is the appearance of the maxillary sinuses?,Cloudy boundaries,Clear boundaries,Obliterated,Not visible,C,Obliterated,,95,4,q0823
+018179,476,open,What visible structures are noted in the jaw?,,,,,,,Bilateral mandibular canals and maxillary sinuses with clear boundaries are visible.,95,4,q0824
+018179,477,open,What historical interventions are present in the teeth?,,,,,,,Tooth #47 has had root canal treatment and tooth #37 has both a crown and root canal treatment.,95,4,q0825
+018179,478,open,What pathological findings are noted in the report?,,,,,,,Tooth #36 is suspicious for caries and tooth #47 shows evidence of a periapical granuloma.,95,4,q0826
+018179,479,open,What management is required for the lesion at tooth #47?,,,,,,,Endodontic evaluation is required for the periapical lesion at tooth #47.,95,4,q0827
+018179,480,open,Please detect the dental caries in the panoramic image.,,,,,,,Tooth #36: caries.,95,4,q0828
+016641,5,closed,What is required for the periapical lesion at tooth 36?,Extraction,Filling,Crown restoration,Endodontic evaluation,C,Crown restoration,,96,4,q0829
+016641,6,closed,Which structures are visible in the image?,Bilateral maxillary sinuses,Unilateral mandibular canal,Nasal cavity,Bilateral mandibular canals and bilateral maxillary sinuses,A,Bilateral maxillary sinuses,,96,4,q0830
+016641,7,closed,Which tooth exhibits imaging features suggestive of a periapical granuloma?,#34,#35,#36,#37,D,#37,,96,4,q0831
+016641,8,closed,Which tooth is obvious for a filling?,#35,#37,#38,#39,B,#37,,96,4,q0832
+016641,6,open,What are the findings associated with tooth #36?,,,,,,,"Imaging features sign of crown restoration; obvious for root canal treatment, suspicious for a periapical lesion.",96,4,q0833
+016641,7,open,What is the observation regarding tooth #38?,,,,,,,"Obvious ious for filling, suspicious for a periapical lesion.",96,4,q0834
+016641,8,open,Does the panoramic radiograph reveal any specific tooth involvement trends related to root canal treatment?,,,,,,,Tooth #36.,96,4,q0835
+016641,9,open,Which historical treatments can be detected in the panoramic image?,,,,,,,"Tooth #36: crown, root canal treatment. Tooth #38: filling.",96,4,q0836
+017091,230,closed,Which tooth shows signs of deep caries and requires immediate restorative intervention?,#18,#28,#38,None,C,#38,,97,4,q0837
+017091,231,closed,Which tooth has signs of a crown and root canal treatment with restoration?,#15,#11 and #21,#21,#24,B,#11 and #21,,97,4,q0838
+017091,232,closed,Which of the following is visible in the maxillary sinus?,Bilateral mandibular canals,Clear anatomical definition,Signs of caries,Periapical granuloma,A,Bilateral mandibular canals,,97,4,q0839
+017091,233,closed,Which tooth is suspected to have a periapical lesion (likely abscess)?,#28,#38,#48,#18,D,#18,,97,4,q0840
+017091,234,closed,How many wisdom teeth are detected in the radiograph?,2,3,4,5,D,5,,97,4,q0841
+017091,270,open,What preventive measures are recommended for the suspected caries in tooth #28?,,,,,,,Extraction.,97,4,q0842
+017091,271,open,What are the pathological findings in tooth #38?,,,,,,,Tooth #38 shows signs of deep caries.,97,4,q0843
+017091,272,open,What is the clinical recommendation for the periapical lesion at tooth #38?,,,,,,,Extraction.,97,4,q0844
+017091,273,open,What is observed in the bilateral mandibular canals?,,,,,,,Imaging features signs of bilateral mandibular canals.,97,4,q0845
+017091,274,open,Detect wisdom tooth in the panoramic image.,,,,,,,"Tooth #38, #48, #18, #28.",97,4,q0846
+017840,365,closed,How many erupted wisdom teeth are present?,1,2,3,4,A,1,,98,4,q0847
+017840,366,closed,Which of the following is a visible structure in the jaw?,Nasal cavity,Mandibular canals,Ethmoid sinuses,Sphenoid sinuses,C,Ethmoid sinuses,,98,4,q0848
+017840,368,closed,Which tooth exhibits deep caries and a periapical abscess?,#35,#36,#37,#38,A,#35,,98,4,q0849
+017840,369,closed,What is the recommended immediate action for tooth 36?,Monitoring,Filling,Root canal treatment or extraction,Crown,D,Crown,,98,4,q0850
+017840,431,open,What structures are clearly visible in the maxillary region?,,,,,,,Maxillary sinuses are clearly visible bilaterally.,98,4,q0851
+017840,432,open,How many teeth are visualized in the panoramic radiograph?,,,,,,,30 teeth are visualized.,98,4,q0852
+017840,433,open,What pathological findings are present in tooth #36?,,,,,,,Deep caries and a periapical abscess.,98,4,q0853
+017840,434,open,Where is bone loss detected?,,,,,,,No apparent Bone loss is detected.,98,4,q0854
+017840,435,open,Please provide a full description of the condition of tooth #38.,,,,,,,Findings: wisdom tooth.,98,4,q0855
+017309,310,closed,Which tooth shows signs of a periapical granuloma?,#35,#36,#37,#38,B,#36,,99,4,q0856
+017309,311,closed,What is visible in the bilateral mandibular areas?,Signs of infection,Mandibular canals,Bone fractures,Tumors,C,Bone fractures,,99,4,q0857
+017309,312,closed,Which of the following is TRUE regarding the wisdom teeth?,Only 18 is impacted,Only 28 is impacted,All four wisdom teeth are impacted,None are impacted,C,All four wisdom teeth are impacted,,99,4,q0858
+017309,313,closed,What type of pathological finding is present in tooth 36?,Periapical cyst,Periapical granuloma,Lesion likely abscess,Benign tumor,C,Lesion likely abscess,,99,4,q0859
+017309,366,open,What structures are visible in the bilateral mandibular areas?,,,,,,,Imaging features show signs of bilateral mandibular canals.,99,4,q0860
+017309,367,open,What is the status of the wisdom teeth in the radiograph?,,,,,,,"All four wisdom teeth (18, #28, #38, #48) are impacted.",99,4,q0861
+017309,368,open,What is the general condition of the teeth in the radiograph?,,,,,,,29 teeth are visualized with clear anatomical definition.,99,4,q0862
+017309,369,open,What historical interventions are evident in the radiograph?,,,,,,,Evidence of dental implants is present.,99,4,q0863
