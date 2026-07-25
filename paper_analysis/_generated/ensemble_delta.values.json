@@ -1,0 +1,29 @@
+{
+  "n": 287,
+  "gemini35_baseline": 49.7,
+  "gpt5mini": 46.7,
+  "per_item_oracle": 63.2,
+  "ensemble": 30.9,
+  "delta_vs_gemini": [
+    -18.7,
+    -23.0,
+    -14.5
+  ],
+  "oracle_gap_pts": 13.6,
+  "captured_of_oracle_gap_pct": -138.3,
+  "items_beat_both_drafts": 21,
+  "items_worse_than_both_drafts": 81,
+  "behaviour": {
+    "kept_own_draft": 69,
+    "took_other_draft": 4,
+    "rewrote": 214
+  },
+  "caveat": "Not prompt-matched to the baseline: the ensemble arm drops the OPG primer, calls once per question instead of once per image, and asks for a single terse final answer. Bounds this arm; does not isolate deliberation.",
+  "_generator": "paper_analysis/ensemble_delta.py",
+  "_source_csv": [
+    "results/open/ensemble_gemjudge_concrete_scores.csv",
+    "results/open/batched_gemini35_plain578_scores.csv",
+    "results/open/batched_gpt5mini_scores.csv"
+  ],
+  "_generated_utc": "2026-07-25T12:49:57+00:00"
+}
