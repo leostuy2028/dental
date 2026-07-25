@@ -1,0 +1,49 @@
+139 other-concrete questions across 90 images (tooth 96, non-tooth 43)
+  016640.jpg [2] tooth    base 0.7  B 0.9  | Which teeth have a fixed dental prosth
+  016641.jpg [6] tooth    base 0.9  B 0.9  | What are the findings associated with 
+  016641.jpg [7] tooth    base 0.0  B 0.0  | What is the observation regarding toot
+  016641.jpg [8] tooth    base 0.9  B 0.9  | Does the panoramic radiograph reveal a
+  016641.jpg [9] nontooth base 0.6  B 0.7  | Which historical treatments can be det
+  016642.jpg [12] tooth    base 0.3  B 0.4  | What is the radiographic finding at to
+  016642.jpg [15] tooth    base 0.3  B 0.6  | Output the positions of wisdom tooth i
+  016648.jpg [19] tooth    base 0.3  B 0.3  | What is the finding for tooth #47?
+  016648.jpg [21] tooth    base 0.0  B 0.0  | Describe the overall status of tooth #
+  016649.jpg [26] nontooth base 0.2  B 0.3  | What historical interventions are note
+  016649.jpg [27] tooth    base 0.0  B 0.9  | Does the panoramic radiograph reveal a
+  016650.jpg [33] nontooth base 0.7  B 0.7  | Identify the mandibular canal in the X
+  016652.jpg [38] tooth    base 0.0  B 0.3  | What is the status of the wisdom tooth
+  016652.jpg [39] tooth    base 0.7  B 0.6  | What is the overall structural integri
+  016657.jpg [51] tooth    base 0.6  B 0.0  | What radiographic features are visible
+  016659.jpg [57] nontooth base 0.0  B 0.0  | Identify areas showing the bone loss i
+  016690.jpg [63] nontooth base 0.6  B 0.6  | Output the positions of mandibular can
+  016693.jpg [66] tooth    base 0.6  B 0.3  | What is the finding for tooth #47?
+  016693.jpg [69] tooth    base 0.6  B 0.9  | Please detect the teeth in the panoram
+  016694.jpg [75] nontooth base 0.6  B 0.3  | Identify the historical treatments in 
+  016712.jpg [83] tooth    base 0.0  B 0.0  | What preventive measure is recommended
+  016712.jpg [84] tooth    base 0.0  B 0.6  | What is the priority concern for tooth
+  016712.jpg [87] nontooth base 1.0  B 0.9  | Which mandibular canal is/are visible 
+  016713.jpg [93] nontooth base 0.7  B 0.7  | Identify areas showing the maxillary s
+  016723.jpg [95] tooth    base 0.7  B 0.2  | What is the clinical recommendation fo
+  016723.jpg [97] tooth    base 0.7  B 0.7  | Which tooth is identified as a wisdom 
+  016723.jpg [98] nontooth base 0.6  B 0.6  | Which historical treatments could be d
+  016726.jpg [103] tooth    base 0.0  B 0.7  | What is the overall structural integri
+  016783.jpg [117] tooth    base 0.7  B 0.6  | What is the clinical recommendation fo
+  016783.jpg [118] tooth    base 0.9  B 0.7  | Which areas show the wisdom tooth in t
+  016790.jpg [121] tooth    base 0.3  B 0.2  | Describe the findings for tooth #46.
+  016792.jpg [127] tooth    base 0.2  B 0.0  | What is recommended for tooth #37?
+  016792.jpg [129] tooth    base 0.2  B 0.0  | What is recommended for tooth #47?
+  016792.jpg [130] tooth    base 1.0  B 0.6  | Please accurately identify the teeth i
+  016807.jpg [136] tooth    base 1.0  B 0.9  | Does the panoramic radiograph reveal a
+  016808.jpg [140] tooth    base 0.6  B 0.2  | Which teeth are suspected to be erupte
+  016808.jpg [142] tooth    base 0.0  B 0.3  | What radiographic features are visible
+  016821.jpg [148] nontooth base 0.0  B 0.0  | Output the positions of mandibular can
+  016823.jpg [154] tooth    base 0.0  B 0.0  | What radiographic features are visible
+  016825.jpg [160] nontooth base 0.7  B 0.6  | Please detect the mandibular canal in 
+  016826.jpg [163] nontooth base 0.3  B 0.3  | What historical interventions are note
+  016826.jpg [166] nontooth base 0.7  B 0.6  | Identify areas showing the maxillary s
+  016829.jpg [172] tooth    base 0.3  B 0.6  | What radiographic features are visible
+  016836.jpg [175] tooth    base 0.9  B 0.9  | Describe the findings related to tooth
+  016836.jpg [177] tooth    base 0.6  B 0.6  | Identify areas showing the wisdom toot
+  016839.jpg [183] tooth    base 0.7  B 0.6  | Please detect the teeth in the panoram
+  016855.jpg [188] tooth    base 0.7  B 0.7  | Please accurately identify the wisdom 
+  016874.jpg [193] tooth    base 0.0  B 0.0  | What radiographic features are visible

@@ -1,0 +1,11 @@
+regrading 287 of 287 (sequential)
+  graded 30/287  running mean 22.0%
+  graded 60/287  running mean 28.3%
+  graded 90/287  running mean 28.2%
+  graded 120/287  running mean 30.2%
+  graded 150/287  running mean 31.7%
+  graded 180/287  running mean 32.1%
+  graded 210/287  running mean 31.9%
+  graded 240/287  running mean 32.1%
+  graded 270/287  running mean 31.4%
+done: clean ensemble concrete score = 30.9%  (n=287)

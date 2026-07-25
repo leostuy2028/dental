@@ -37,6 +37,9 @@ results/closed_ended/position_bias/*.log
 results/closed_ended/position_bias/*.pid
 results/progress_claude.txt
 
+# resume checkpoints written beside a scores CSV (identical content, rebuilt on re-run)
+results/open/*.csv.clean
+
 # throwaway smoke-test outputs from harness reorg checks (not ledgered)
 results/_pilot/*smoke*
 data/closed_ended_hard50_shuffled.parquet
