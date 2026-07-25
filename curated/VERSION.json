@@ -1,0 +1,33 @@
+{
+  "name": "MMOral-Bench (curated)",
+  "version": "0.1.0",
+  "built_utc": "2026-07-25T19:00:20+00:00",
+  "source_dataset": "OralGPT/MMOral-OPG-Bench (HuggingFace, MIT licence)",
+  "source_commit_hash": "[verify: record the HF dataset commit at download time]",
+  "built_from_code_commit": "634cd6f",
+  "form": "patch, not a fork: dispositions + corrected key + repaired references. No images.",
+  "closed": {
+    "total": 491,
+    "DROP": 7,
+    "FLAG": 71,
+    "KEEP": 413,
+    "in_reading_score": 484
+  },
+  "open": {
+    "total": 578,
+    "FLAG": 29,
+    "KEEP": 341,
+    "MALFORMED": 13,
+    "REPAIR": 82,
+    "SEPARATE": 107,
+    "SPATIAL": 6,
+    "in_reading_score": 452,
+    "references_rewritten": 82
+  },
+  "generators": [
+    "paper_analysis/corrected_benchmark.py",
+    "dataio/repair_coordinate_refs.py",
+    "dataio/prepare_datasets.py",
+    "curated/build_curated.py"
+  ]
+}

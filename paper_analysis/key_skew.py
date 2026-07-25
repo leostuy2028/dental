@@ -54,6 +54,23 @@ def main():
     ])
     with open(os.path.join(OUT_DIR, "key_skew_table.md"), "w", encoding="utf-8") as f:
         f.write(table)
+
+    # §7.1.1: the same key before and after balancing, which is the whole justification
+    # for that fix. Nothing about the questions or the option wording changes between them.
+    s = vals["shuffled"]
+    ba = "\n".join([
+        prov,
+        "| Correct answer sits at | Original key | After balancing |",
+        "|:--|--:|--:|",
+        *[f"| {L} | {c['count'][L]} ({c['share'][L]}%) | {s['count'][L]} ({s['share'][L]}%) |"
+          for L in "ABCD"],
+        f"| **Best always-one-letter score** | **{c['always_best_pct']}%** "
+        f"| **{s['always_best_pct']}%** |",
+        "",
+    ])
+    with open(os.path.join(OUT_DIR, "key_balance_table.md"), "w", encoding="utf-8") as f:
+        f.write(ba)
+    print(ba)
     vals["_generator"] = "paper_analysis/key_skew.py"
     vals["_source"] = list(SETS.values())
     vals["_note"] = "dataset-derived (answer key), not model outputs"

@@ -44,7 +44,7 @@
     "concrete_but_coordinate_reference": 78
   },
   "_generator": "paper_analysis/corrected_benchmark.py",
-  "_generated_utc": "2026-07-25T18:14:07+00:00",
+  "_generated_utc": "2026-07-25T18:53:22+00:00",
   "_source": [
     "data/closed_ended.parquet",
     "data/open_ended.parquet"

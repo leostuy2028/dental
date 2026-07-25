@@ -1,0 +1,579 @@
+index,concreteness,disposition,reason,repaired_reference,reference_changed,in_reading_score,score_track
+0,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+1,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+2,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+3,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+4,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: crown, root canal treatment.",True,True,reading
+5,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+6,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+7,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+8,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #36.,True,True,reading
+9,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #36: crown, root canal treatment. Tooth #38: filling.",True,True,reading
+10,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+11,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+12,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+13,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+14,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+15,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+16,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+17,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+18,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+19,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+20,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+21,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: wisdom tooth, caries, deep caries, periapical lesions (granuloma).",True,True,reading
+22,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+23,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+24,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+25,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+26,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+27,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+28,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+29,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+30,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+31,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+32,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+33,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: mandibular canal.,True,True,reading
+34,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+35,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+36,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+37,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+38,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+39,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+40,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+41,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+42,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+43,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+44,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+45,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+46,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+47,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+48,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+49,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+50,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+51,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+52,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+53,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+54,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+55,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+56,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+57,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: bone loss, side lower.",True,True,reading
+58,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+59,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+60,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+61,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+62,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+63,Concrete,SPATIAL,"question asks for a location; score by box overlap, not by a text judge",,False,False,overlap
+64,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+65,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+66,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+67,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+68,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+69,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #26, #25, #16, #12, #47, #14, #24, #32, #43, #46, #17, #48, #45, #21, #37, #13, #31, #15, #18, #23, #22, #11, #38, #44, #36, #28, #42, #33, #27, #41, #35.",True,True,reading
+70,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+71,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+72,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+73,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+74,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+75,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #44: crown, root canal treatment. Tooth #46: crown. Tooth #36: crown, root canal treatment. Tooth #34: crown. Tooth #35: crown, root canal treatment. Tooth #26: crown, root canal treatment. Tooth #41: crown. Tooth #43: crown, root canal treatment. Tooth #25: crown, root canal treatment. Tooth #15: root canal treatment. Tooth #17: crown, root canal treatment. Tooth #33: crown, root canal treatment. Tooth #24: crown. Tooth #16: crown. Tooth #37: crown, root canal treatment. Tooth #13: implant. Tooth #31: crown. Tooth #42: crown. Tooth #27: crown, root canal treatment.",True,True,reading
+76,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+77,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+78,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+79,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+80,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+81,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: side upper.,True,True,reading
+82,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+83,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+84,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+85,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+86,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+87,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: mandibular canal.,True,True,reading
+88,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+89,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+90,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+91,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+92,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+93,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: maxillary sinus.,True,True,reading
+94,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+95,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+96,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+97,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+98,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #17: root canal treatment.,True,True,reading
+99,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+100,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+101,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+102,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+103,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+104,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+105,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+106,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+107,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+108,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+109,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+110,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+111,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+112,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+113,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+114,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+115,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+116,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+117,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+118,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+119,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+120,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+121,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+122,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+123,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+124,Vague,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #45: deep caries. Tooth #18: impacted. Tooth #38: impacted. Tooth #28: impacted.,True,True,reading
+125,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+126,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+127,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+128,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+129,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+130,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #34, #41, #31, #36, #24, #35, #45, #44, #32, #43, #23, #26, #22, #11, #42, #14, #12, #33, #17, #21, #46, #16, #25, #15, #13, #47, #37, #27.",True,True,reading
+131,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+132,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+133,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+134,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+135,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+136,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #24, #36, #26, #25, #16, #15, #46, #47.",True,True,reading
+137,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+138,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+139,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+140,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+141,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+142,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: wisdom tooth, periapical lesions (abscess).",True,True,reading
+143,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+144,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+145,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+146,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+147,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+148,Concrete,SPATIAL,"question asks for a location; score by box overlap, not by a text judge",,False,False,overlap
+149,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+150,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+151,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+152,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+153,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+154,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: crown.,True,True,reading
+155,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+156,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+157,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+158,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+159,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+160,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: mandibular canal.,True,True,reading
+161,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+162,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+163,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+164,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+165,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+166,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: maxillary sinus.,True,True,reading
+167,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+168,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+169,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+170,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+171,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+172,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: periapical lesions (cyst), filling, root canal treatment.",True,True,reading
+173,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+174,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+175,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+176,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+177,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #18, #38, #48, #28.",True,True,reading
+178,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+179,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+180,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+181,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+182,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+183,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #44, #42, #35, #14, #18, #16, #45, #15, #12, #34, #41, #33, #11, #13, #43, #48, #31, #32, #17, #46, #22, #47, #23, #24, #38, #21, #26, #28, #25.",True,True,reading
+184,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+185,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+186,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+187,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+188,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #48: impacted. Tooth #28, #18.",True,True,reading
+189,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+190,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+191,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+192,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+193,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: wisdom tooth, filling.",True,True,reading
+194,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+195,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+196,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+197,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+198,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+199,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: crown.,True,True,reading
+200,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+201,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+202,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+203,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+204,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+205,Concrete,SPATIAL,"question asks for a location; score by box overlap, not by a text judge",,False,False,overlap
+206,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+207,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+208,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+209,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+210,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+211,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+212,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+213,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+214,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+215,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+216,Broad,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: mandibular canal, maxillary sinus.",True,True,reading
+217,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+218,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+219,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+220,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+221,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+222,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #28: impacted.,True,True,reading
+223,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+224,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+225,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+226,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+227,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+228,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+229,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+230,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+231,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+232,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: mandibular canal.,True,True,reading
+233,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+234,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+235,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+236,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+237,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+238,Broad,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #37: caries.,True,True,reading
+239,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+240,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+241,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+242,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+243,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+244,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: wisdom tooth, impacted.",True,True,reading
+245,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+246,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+247,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+248,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+249,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+250,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #36, #46.",True,True,reading
+251,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+252,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+253,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+254,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+255,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+256,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+257,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+258,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+259,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+260,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+261,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+262,Concrete,SPATIAL,"question asks for a location; score by box overlap, not by a text judge",,False,False,overlap
+263,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+264,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+265,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+266,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+267,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+268,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #16: periapical lesions (abscess).,True,True,reading
+269,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+270,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+271,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+272,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+273,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+274,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #38, #48, #18, #28.",True,True,reading
+275,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+276,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+277,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+278,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+279,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+280,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: maxillary sinus.,True,True,reading
+281,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+282,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+283,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+284,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+285,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+286,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: crown.,True,True,reading
+287,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+288,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+289,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+290,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+291,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+292,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+293,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+294,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+295,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+296,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+297,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+298,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: crown.,True,True,reading
+299,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+300,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+301,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+302,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+303,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+304,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+305,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+306,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+307,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+308,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+309,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+310,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #35, #37, #25.",True,True,reading
+311,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+312,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+313,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+314,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+315,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+316,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: crown.,True,True,reading
+317,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+318,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+319,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+320,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+321,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+322,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: crown.,True,True,reading
+323,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+324,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+325,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+326,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+327,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+328,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: crown, implant.",True,True,reading
+329,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+330,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+331,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+332,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+333,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+334,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+335,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+336,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+337,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+338,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+339,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+340,Concrete,SPATIAL,"question asks for a location; score by box overlap, not by a text judge",,False,False,overlap
+341,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+342,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+343,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+344,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+345,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+346,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+347,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+348,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+349,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+350,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+351,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+352,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: crown.,True,True,reading
+353,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+354,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+355,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+356,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+357,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+358,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #48.,True,True,reading
+359,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+360,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+361,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+362,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+363,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+364,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: wisdom tooth, filling.",True,True,reading
+365,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+366,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+367,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+368,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+369,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+370,Concrete,SPATIAL,"question asks for a location; score by box overlap, not by a text judge",,False,False,overlap
+371,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+372,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+373,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+374,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+375,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+376,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #35, #41, #33, #32, #23, #45, #28, #17, #43.",True,True,reading
+377,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+378,Vague,KEEP,no defect found by inspection of the released files,,False,True,reading
+379,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+380,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+381,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+382,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+383,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+384,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+385,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+386,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+387,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+388,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+389,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+390,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+391,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+392,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+393,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+394,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: periapical lesions (abscess), root fracture.",True,True,reading
+395,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+396,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+397,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+398,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+399,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+400,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: implant.,True,True,reading
+401,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+402,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+403,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+404,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+405,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+406,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #48, #18, #38, #28.",True,True,reading
+407,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+408,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+409,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+410,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+411,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+412,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #46: crown. Tooth #36: filling. Tooth #16: crown. Tooth #17: filling. Tooth #37: crown, implant.",True,True,reading
+413,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+414,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+415,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+416,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+417,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+418,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #32, #31, #16, #45, #11, #14, #12, #26, #21, #13, #37.",True,True,reading
+419,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+420,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+421,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+422,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+423,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+424,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: filling.,True,True,reading
+425,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+426,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+427,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+428,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+429,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #25: filling. Tooth #36: filling. Tooth #26: filling. Tooth #47: filling. Tooth #17: filling. Tooth #37: root canal treatment. Tooth #46: crown, root canal treatment. Tooth #15: filling. Tooth #27: filling. Tooth #16: filling.",True,True,reading
+430,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+431,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+432,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+433,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+434,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+435,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+436,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+437,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+438,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+439,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+440,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #38: filling. Tooth #17: filling. Tooth #18: filling. Tooth #48: filling. Tooth #37: filling. Tooth #47: filling. Tooth #27: filling.,True,True,reading
+441,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+442,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+443,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+444,Vague,KEEP,no defect found by inspection of the released files,,False,True,reading
+445,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+446,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+447,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+448,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+449,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+450,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+451,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+452,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #47: caries.,True,True,reading
+453,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+454,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+455,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+456,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+457,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+458,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+459,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+460,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+461,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+462,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+463,Concrete,MALFORMED,reference answer is not valid JSON in the released file; left unchanged,,False,False,excluded
+464,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #48: impacted.,True,True,reading
+465,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+466,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+467,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+468,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+469,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #38: periapical lesions (cyst).,True,True,reading
+470,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+471,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+472,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+473,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+474,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: periapical lesions (granuloma), crown, root canal treatment.",True,True,reading
+475,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+476,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+477,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+478,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+479,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+480,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #36: caries.,True,True,reading
+481,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+482,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+483,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+484,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+485,Vague,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #36: caries.,True,True,reading
+486,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+487,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+488,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+489,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+490,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+491,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #46: periapical lesions (granuloma).,True,True,reading
+492,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+493,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+494,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+495,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: mandibular canal.,True,True,reading
+496,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+497,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+498,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+499,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+500,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+501,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #37: periapical lesions (abscess).,True,True,reading
+502,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+503,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+504,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+505,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+506,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: periapical lesions (cyst), crown.",True,True,reading
+507,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+508,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+509,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+510,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+511,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+512,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+513,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+514,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+515,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+516,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+517,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+518,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: mandibular canal.,True,True,reading
+519,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+520,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+521,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+522,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+523,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+524,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+525,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+526,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+527,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+528,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+529,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: periapical lesions (abscess).,True,True,reading
+530,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+531,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+532,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+533,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+534,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+535,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #38.,True,True,reading
+536,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+537,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+538,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+539,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+540,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+541,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: mandibular canal.,True,True,reading
+542,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+543,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+544,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+545,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+546,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+547,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Tooth #16, #46, #37, #27.",True,True,reading
+548,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+549,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+550,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+551,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+552,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: crown.,True,True,reading
+553,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: wisdom tooth, crown.",True,True,reading
+554,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+555,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+556,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+557,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+558,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+559,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Tooth #47: caries.,True,True,reading
+560,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+561,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+562,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+563,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+564,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,"Findings: filling, root canal treatment.",True,True,reading
+565,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+566,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+567,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+568,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+569,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+570,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: maxillary sinus.,True,True,reading
+571,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing
+572,Broad,KEEP,no defect found by inspection of the released files,,False,True,reading
+573,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+574,Broad,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",,False,True,reading
+575,Concrete,KEEP,no defect found by inspection of the released files,,False,True,reading
+576,Concrete,REPAIR,reference answer was a coordinate list; rewritten as the sentence it encodes,Findings: wisdom tooth.,True,True,reading
+577,Vague,SEPARATE,"no determinate answer; score as writing quality, never as reading accuracy",,False,False,writing

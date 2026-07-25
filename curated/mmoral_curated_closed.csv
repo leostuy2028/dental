@@ -1,0 +1,492 @@
+index,disposition,reason,original_answer,balanced_answer,flag_reason,in_reading_score
+0,KEEP,no defect found by inspection of the released files,A,B,,True
+1,KEEP,no defect found by inspection of the released files,B,D,,True
+2,KEEP,no defect found by inspection of the released files,B,A,,True
+3,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,D,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+4,KEEP,no defect found by inspection of the released files,A,B,,True
+5,KEEP,no defect found by inspection of the released files,D,C,,True
+6,KEEP,no defect found by inspection of the released files,D,A,,True
+7,KEEP,no defect found by inspection of the released files,C,D,,True
+8,KEEP,no defect found by inspection of the released files,C,B,,True
+9,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,B,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+10,KEEP,no defect found by inspection of the released files,C,B,,True
+11,KEEP,no defect found by inspection of the released files,B,B,,True
+12,KEEP,no defect found by inspection of the released files,C,B,,True
+13,KEEP,no defect found by inspection of the released files,C,D,,True
+14,KEEP,no defect found by inspection of the released files,C,C,,True
+15,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+16,KEEP,no defect found by inspection of the released files,B,C,,True
+17,KEEP,no defect found by inspection of the released files,D,D,,True
+18,KEEP,no defect found by inspection of the released files,B,D,,True
+19,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",C,C,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+20,KEEP,no defect found by inspection of the released files,B,D,,True
+21,KEEP,no defect found by inspection of the released files,B,D,,True
+22,KEEP,no defect found by inspection of the released files,C,B,,True
+23,KEEP,no defect found by inspection of the released files,B,A,,True
+24,KEEP,no defect found by inspection of the released files,B,A,,True
+25,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+26,KEEP,no defect found by inspection of the released files,B,D,,True
+27,KEEP,no defect found by inspection of the released files,A,A,,True
+28,KEEP,no defect found by inspection of the released files,D,B,,True
+29,KEEP,no defect found by inspection of the released files,D,A,,True
+30,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+31,KEEP,no defect found by inspection of the released files,D,B,,True
+32,KEEP,no defect found by inspection of the released files,C,B,,True
+33,KEEP,no defect found by inspection of the released files,B,D,,True
+34,KEEP,no defect found by inspection of the released files,B,A,,True
+35,KEEP,no defect found by inspection of the released files,B,B,,True
+36,KEEP,no defect found by inspection of the released files,A,C,,True
+37,KEEP,no defect found by inspection of the released files,B,A,,True
+38,KEEP,no defect found by inspection of the released files,A,B,,True
+39,KEEP,no defect found by inspection of the released files,C,B,,True
+40,KEEP,no defect found by inspection of the released files,C,C,,True
+41,KEEP,no defect found by inspection of the released files,A,B,,True
+42,KEEP,no defect found by inspection of the released files,B,B,,True
+43,KEEP,no defect found by inspection of the released files,B,C,,True
+44,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+45,KEEP,no defect found by inspection of the released files,B,C,,True
+46,KEEP,no defect found by inspection of the released files,B,C,,True
+47,KEEP,no defect found by inspection of the released files,D,A,,True
+48,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,B,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+49,KEEP,no defect found by inspection of the released files,D,A,,True
+50,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,D,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+51,KEEP,no defect found by inspection of the released files,B,D,,True
+52,KEEP,no defect found by inspection of the released files,A,C,,True
+53,KEEP,no defect found by inspection of the released files,B,D,,True
+54,KEEP,no defect found by inspection of the released files,B,D,,True
+55,KEEP,no defect found by inspection of the released files,B,A,,True
+56,KEEP,no defect found by inspection of the released files,B,C,,True
+57,KEEP,no defect found by inspection of the released files,C,A,,True
+58,KEEP,no defect found by inspection of the released files,D,A,,True
+59,KEEP,no defect found by inspection of the released files,B,D,,True
+60,KEEP,no defect found by inspection of the released files,B,C,,True
+61,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",A,C,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+62,KEEP,no defect found by inspection of the released files,B,D,,True
+63,KEEP,no defect found by inspection of the released files,B,C,,True
+64,KEEP,no defect found by inspection of the released files,A,C,,True
+65,KEEP,no defect found by inspection of the released files,B,C,,True
+66,KEEP,no defect found by inspection of the released files,A,D,,True
+67,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",C,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+68,KEEP,no defect found by inspection of the released files,A,B,,True
+69,KEEP,no defect found by inspection of the released files,D,C,,True
+70,KEEP,no defect found by inspection of the released files,C,B,,True
+71,KEEP,no defect found by inspection of the released files,C,D,,True
+72,KEEP,no defect found by inspection of the released files,C,C,,True
+73,KEEP,no defect found by inspection of the released files,D,A,,True
+74,KEEP,no defect found by inspection of the released files,C,A,,True
+75,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,D,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+76,KEEP,no defect found by inspection of the released files,B,C,,True
+77,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+78,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,B,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+79,KEEP,no defect found by inspection of the released files,B,D,,True
+80,KEEP,no defect found by inspection of the released files,B,C,,True
+81,KEEP,no defect found by inspection of the released files,B,C,,True
+82,KEEP,no defect found by inspection of the released files,B,D,,True
+83,KEEP,no defect found by inspection of the released files,B,C,,True
+84,KEEP,no defect found by inspection of the released files,C,D,,True
+85,KEEP,no defect found by inspection of the released files,C,C,,True
+86,KEEP,no defect found by inspection of the released files,C,C,,True
+87,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+88,KEEP,no defect found by inspection of the released files,B,B,,True
+89,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+90,KEEP,no defect found by inspection of the released files,B,D,,True
+91,KEEP,no defect found by inspection of the released files,C,C,,True
+92,KEEP,no defect found by inspection of the released files,D,D,,True
+93,KEEP,no defect found by inspection of the released files,B,B,,True
+94,KEEP,no defect found by inspection of the released files,A,C,,True
+95,KEEP,no defect found by inspection of the released files,A,B,,True
+96,KEEP,no defect found by inspection of the released files,B,C,,True
+97,KEEP,no defect found by inspection of the released files,B,D,,True
+98,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",C,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+99,KEEP,no defect found by inspection of the released files,A,B,,True
+100,KEEP,no defect found by inspection of the released files,C,B,,True
+101,KEEP,no defect found by inspection of the released files,B,D,,True
+102,KEEP,no defect found by inspection of the released files,D,B,,True
+103,KEEP,no defect found by inspection of the released files,C,C,,True
+104,KEEP,no defect found by inspection of the released files,D,C,,True
+105,KEEP,no defect found by inspection of the released files,D,C,,True
+106,KEEP,no defect found by inspection of the released files,C,A,,True
+107,KEEP,no defect found by inspection of the released files,D,B,,True
+108,KEEP,no defect found by inspection of the released files,D,A,,True
+109,KEEP,no defect found by inspection of the released files,C,D,,True
+110,DROP,unanswerable: asks about a box at coordinates that do not appear on the image,C,C,,False
+111,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+112,KEEP,no defect found by inspection of the released files,B,B,,True
+113,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+114,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+115,KEEP,no defect found by inspection of the released files,B,A,,True
+116,KEEP,no defect found by inspection of the released files,D,B,,True
+117,KEEP,no defect found by inspection of the released files,A,C,,True
+118,KEEP,no defect found by inspection of the released files,D,C,,True
+119,KEEP,no defect found by inspection of the released files,B,B,,True
+120,KEEP,no defect found by inspection of the released files,C,A,,True
+121,KEEP,no defect found by inspection of the released files,C,A,,True
+122,KEEP,no defect found by inspection of the released files,A,A,,True
+123,KEEP,no defect found by inspection of the released files,B,C,,True
+124,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+125,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,B,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+126,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+127,KEEP,no defect found by inspection of the released files,C,C,,True
+128,KEEP,no defect found by inspection of the released files,B,D,,True
+129,KEEP,no defect found by inspection of the released files,B,B,,True
+130,KEEP,no defect found by inspection of the released files,C,B,,True
+131,KEEP,no defect found by inspection of the released files,B,C,,True
+132,KEEP,no defect found by inspection of the released files,A,C,,True
+133,KEEP,no defect found by inspection of the released files,A,A,,True
+134,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+135,KEEP,no defect found by inspection of the released files,D,C,,True
+136,KEEP,no defect found by inspection of the released files,A,B,,True
+137,KEEP,no defect found by inspection of the released files,A,D,,True
+138,KEEP,no defect found by inspection of the released files,A,A,,True
+139,KEEP,no defect found by inspection of the released files,C,C,,True
+140,DROP,unanswerable: asks about a box at coordinates that do not appear on the image,D,C,,False
+141,KEEP,no defect found by inspection of the released files,B,B,,True
+142,KEEP,no defect found by inspection of the released files,C,A,,True
+143,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",A,C,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+144,KEEP,no defect found by inspection of the released files,A,C,,True
+145,KEEP,no defect found by inspection of the released files,C,C,,True
+146,KEEP,no defect found by inspection of the released files,B,D,,True
+147,KEEP,no defect found by inspection of the released files,A,A,,True
+148,KEEP,no defect found by inspection of the released files,C,C,,True
+149,KEEP,no defect found by inspection of the released files,B,B,,True
+150,KEEP,no defect found by inspection of the released files,B,C,,True
+151,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",A,B,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+152,KEEP,no defect found by inspection of the released files,B,A,,True
+153,KEEP,no defect found by inspection of the released files,B,A,,True
+154,KEEP,no defect found by inspection of the released files,B,D,,True
+155,KEEP,no defect found by inspection of the released files,C,D,,True
+156,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",C,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+157,KEEP,no defect found by inspection of the released files,C,B,,True
+158,KEEP,no defect found by inspection of the released files,D,A,,True
+159,KEEP,no defect found by inspection of the released files,C,A,,True
+160,KEEP,no defect found by inspection of the released files,B,B,,True
+161,KEEP,no defect found by inspection of the released files,B,D,,True
+162,KEEP,no defect found by inspection of the released files,B,A,,True
+163,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+164,KEEP,no defect found by inspection of the released files,A,D,,True
+165,KEEP,no defect found by inspection of the released files,C,A,,True
+166,KEEP,no defect found by inspection of the released files,B,D,,True
+167,KEEP,no defect found by inspection of the released files,B,D,,True
+168,KEEP,no defect found by inspection of the released files,B,B,,True
+169,KEEP,no defect found by inspection of the released files,C,D,,True
+170,KEEP,no defect found by inspection of the released files,D,C,,True
+171,KEEP,no defect found by inspection of the released files,A,B,,True
+172,KEEP,no defect found by inspection of the released files,C,D,,True
+173,KEEP,no defect found by inspection of the released files,C,D,,True
+174,KEEP,no defect found by inspection of the released files,B,C,,True
+175,KEEP,no defect found by inspection of the released files,D,D,,True
+176,KEEP,no defect found by inspection of the released files,C,B,,True
+177,KEEP,no defect found by inspection of the released files,A,A,,True
+178,KEEP,no defect found by inspection of the released files,C,C,,True
+179,KEEP,no defect found by inspection of the released files,B,D,,True
+180,KEEP,no defect found by inspection of the released files,B,D,,True
+181,KEEP,no defect found by inspection of the released files,C,A,,True
+182,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+183,KEEP,no defect found by inspection of the released files,B,A,,True
+184,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+185,KEEP,no defect found by inspection of the released files,A,D,,True
+186,KEEP,no defect found by inspection of the released files,D,C,,True
+187,KEEP,no defect found by inspection of the released files,A,B,,True
+188,KEEP,no defect found by inspection of the released files,D,C,,True
+189,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",A,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+190,KEEP,no defect found by inspection of the released files,B,B,,True
+191,KEEP,no defect found by inspection of the released files,C,B,,True
+192,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",C,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+193,KEEP,no defect found by inspection of the released files,D,D,,True
+194,KEEP,no defect found by inspection of the released files,C,C,,True
+195,KEEP,no defect found by inspection of the released files,D,D,,True
+196,KEEP,no defect found by inspection of the released files,B,B,,True
+197,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+198,KEEP,no defect found by inspection of the released files,D,A,,True
+199,KEEP,no defect found by inspection of the released files,D,C,,True
+200,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,C,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+201,KEEP,no defect found by inspection of the released files,C,C,,True
+202,KEEP,no defect found by inspection of the released files,C,C,,True
+203,KEEP,no defect found by inspection of the released files,D,C,,True
+204,KEEP,no defect found by inspection of the released files,B,A,,True
+205,KEEP,no defect found by inspection of the released files,D,D,,True
+206,KEEP,no defect found by inspection of the released files,A,D,,True
+207,KEEP,no defect found by inspection of the released files,B,D,,True
+208,KEEP,no defect found by inspection of the released files,D,C,,True
+209,KEEP,no defect found by inspection of the released files,C,A,,True
+210,KEEP,no defect found by inspection of the released files,B,B,,True
+211,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,C,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+212,KEEP,no defect found by inspection of the released files,B,A,,True
+213,KEEP,no defect found by inspection of the released files,B,D,,True
+214,KEEP,no defect found by inspection of the released files,B,C,,True
+215,KEEP,no defect found by inspection of the released files,B,B,,True
+216,KEEP,no defect found by inspection of the released files,B,D,,True
+217,KEEP,no defect found by inspection of the released files,C,D,,True
+218,KEEP,no defect found by inspection of the released files,C,D,,True
+219,KEEP,no defect found by inspection of the released files,A,B,,True
+220,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+221,KEEP,no defect found by inspection of the released files,B,D,,True
+222,KEEP,no defect found by inspection of the released files,B,B,,True
+223,KEEP,no defect found by inspection of the released files,B,C,,True
+224,KEEP,no defect found by inspection of the released files,B,B,,True
+225,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+226,KEEP,no defect found by inspection of the released files,B,A,,True
+227,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,B,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+228,KEEP,no defect found by inspection of the released files,B,D,,True
+229,KEEP,no defect found by inspection of the released files,B,D,,True
+230,KEEP,no defect found by inspection of the released files,D,C,,True
+231,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,B,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+232,KEEP,no defect found by inspection of the released files,B,A,,True
+233,KEEP,no defect found by inspection of the released files,B,D,,True
+234,KEEP,no defect found by inspection of the released files,C,D,,True
+235,KEEP,no defect found by inspection of the released files,B,A,,True
+236,KEEP,no defect found by inspection of the released files,C,D,,True
+237,KEEP,no defect found by inspection of the released files,B,A,,True
+238,KEEP,no defect found by inspection of the released files,C,D,,True
+239,KEEP,no defect found by inspection of the released files,B,A,,True
+240,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,C,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+241,KEEP,no defect found by inspection of the released files,B,C,,True
+242,KEEP,no defect found by inspection of the released files,D,A,,True
+243,KEEP,no defect found by inspection of the released files,B,C,,True
+244,KEEP,no defect found by inspection of the released files,B,C,,True
+245,KEEP,no defect found by inspection of the released files,C,B,,True
+246,KEEP,no defect found by inspection of the released files,B,B,,True
+247,KEEP,no defect found by inspection of the released files,B,C,,True
+248,KEEP,no defect found by inspection of the released files,B,B,,True
+249,KEEP,no defect found by inspection of the released files,B,B,,True
+250,KEEP,no defect found by inspection of the released files,B,C,,True
+251,KEEP,no defect found by inspection of the released files,A,A,,True
+252,KEEP,no defect found by inspection of the released files,A,D,,True
+253,KEEP,no defect found by inspection of the released files,C,A,,True
+254,KEEP,no defect found by inspection of the released files,B,B,,True
+255,KEEP,no defect found by inspection of the released files,C,A,,True
+256,KEEP,no defect found by inspection of the released files,C,B,,True
+257,KEEP,no defect found by inspection of the released files,B,C,,True
+258,KEEP,no defect found by inspection of the released files,B,B,,True
+259,KEEP,no defect found by inspection of the released files,B,A,,True
+260,KEEP,no defect found by inspection of the released files,C,A,,True
+261,KEEP,no defect found by inspection of the released files,A,C,,True
+262,KEEP,no defect found by inspection of the released files,D,C,,True
+263,KEEP,no defect found by inspection of the released files,C,B,,True
+264,DROP,unanswerable: asks about a box at coordinates that do not appear on the image,A,B,,False
+265,KEEP,no defect found by inspection of the released files,B,C,,True
+266,KEEP,no defect found by inspection of the released files,B,A,,True
+267,KEEP,no defect found by inspection of the released files,D,B,,True
+268,KEEP,no defect found by inspection of the released files,B,B,,True
+269,KEEP,no defect found by inspection of the released files,B,A,,True
+270,KEEP,no defect found by inspection of the released files,D,C,,True
+271,KEEP,no defect found by inspection of the released files,C,C,,True
+272,KEEP,no defect found by inspection of the released files,C,A,,True
+273,KEEP,no defect found by inspection of the released files,B,D,,True
+274,KEEP,no defect found by inspection of the released files,D,C,,True
+275,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,B,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+276,KEEP,no defect found by inspection of the released files,C,D,,True
+277,KEEP,no defect found by inspection of the released files,C,B,,True
+278,KEEP,no defect found by inspection of the released files,B,C,,True
+279,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",A,B,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+280,KEEP,no defect found by inspection of the released files,B,C,,True
+281,KEEP,no defect found by inspection of the released files,B,C,,True
+282,KEEP,no defect found by inspection of the released files,C,C,,True
+283,KEEP,no defect found by inspection of the released files,B,B,,True
+284,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,C,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+285,KEEP,no defect found by inspection of the released files,C,D,,True
+286,KEEP,no defect found by inspection of the released files,A,C,,True
+287,KEEP,no defect found by inspection of the released files,C,B,,True
+288,KEEP,no defect found by inspection of the released files,D,B,,True
+289,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",C,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+290,KEEP,no defect found by inspection of the released files,A,B,,True
+291,KEEP,no defect found by inspection of the released files,B,A,,True
+292,KEEP,no defect found by inspection of the released files,B,D,,True
+293,KEEP,no defect found by inspection of the released files,A,B,,True
+294,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,D,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+295,KEEP,no defect found by inspection of the released files,D,C,,True
+296,KEEP,no defect found by inspection of the released files,A,D,,True
+297,KEEP,no defect found by inspection of the released files,D,C,,True
+298,KEEP,no defect found by inspection of the released files,D,A,,True
+299,KEEP,no defect found by inspection of the released files,B,A,,True
+300,KEEP,no defect found by inspection of the released files,C,D,,True
+301,KEEP,no defect found by inspection of the released files,B,B,,True
+302,KEEP,no defect found by inspection of the released files,A,B,,True
+303,KEEP,no defect found by inspection of the released files,B,A,,True
+304,KEEP,no defect found by inspection of the released files,C,A,,True
+305,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,B,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+306,KEEP,no defect found by inspection of the released files,B,A,,True
+307,KEEP,no defect found by inspection of the released files,D,C,,True
+308,KEEP,no defect found by inspection of the released files,C,A,,True
+309,KEEP,no defect found by inspection of the released files,B,C,,True
+310,KEEP,no defect found by inspection of the released files,B,B,,True
+311,KEEP,no defect found by inspection of the released files,B,C,,True
+312,KEEP,no defect found by inspection of the released files,C,C,,True
+313,KEEP,no defect found by inspection of the released files,C,C,,True
+314,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",C,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+315,KEEP,no defect found by inspection of the released files,C,C,,True
+316,KEEP,no defect found by inspection of the released files,C,A,,True
+317,KEEP,no defect found by inspection of the released files,A,C,,True
+318,KEEP,no defect found by inspection of the released files,C,B,,True
+319,KEEP,no defect found by inspection of the released files,B,D,,True
+320,KEEP,no defect found by inspection of the released files,D,D,,True
+321,KEEP,no defect found by inspection of the released files,B,C,,True
+322,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+323,KEEP,no defect found by inspection of the released files,B,B,,True
+324,KEEP,no defect found by inspection of the released files,A,A,,True
+325,KEEP,no defect found by inspection of the released files,C,C,,True
+326,KEEP,no defect found by inspection of the released files,C,B,,True
+327,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",A,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+328,KEEP,no defect found by inspection of the released files,D,B,,True
+329,DROP,unanswerable: asks about a box at coordinates that do not appear on the image,D,D,,False
+330,KEEP,no defect found by inspection of the released files,B,B,,True
+331,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+332,KEEP,no defect found by inspection of the released files,C,C,,True
+333,KEEP,no defect found by inspection of the released files,B,C,,True
+334,KEEP,no defect found by inspection of the released files,B,D,,True
+335,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,D,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+336,KEEP,no defect found by inspection of the released files,C,C,,True
+337,KEEP,no defect found by inspection of the released files,D,C,,True
+338,KEEP,no defect found by inspection of the released files,B,C,,True
+339,KEEP,no defect found by inspection of the released files,B,D,,True
+340,KEEP,no defect found by inspection of the released files,B,A,,True
+341,KEEP,no defect found by inspection of the released files,B,A,,True
+342,KEEP,no defect found by inspection of the released files,B,A,,True
+343,KEEP,no defect found by inspection of the released files,D,C,,True
+344,KEEP,no defect found by inspection of the released files,B,C,,True
+345,KEEP,no defect found by inspection of the released files,B,A,,True
+346,KEEP,no defect found by inspection of the released files,C,C,,True
+347,KEEP,no defect found by inspection of the released files,B,B,,True
+348,KEEP,no defect found by inspection of the released files,C,D,,True
+349,KEEP,no defect found by inspection of the released files,A,A,,True
+350,KEEP,no defect found by inspection of the released files,C,D,,True
+351,KEEP,no defect found by inspection of the released files,B,C,,True
+352,KEEP,no defect found by inspection of the released files,B,A,,True
+353,KEEP,no defect found by inspection of the released files,B,B,,True
+354,KEEP,no defect found by inspection of the released files,D,A,,True
+355,KEEP,no defect found by inspection of the released files,B,D,,True
+356,KEEP,no defect found by inspection of the released files,B,C,,True
+357,KEEP,no defect found by inspection of the released files,C,A,,True
+358,KEEP,no defect found by inspection of the released files,D,B,,True
+359,KEEP,no defect found by inspection of the released files,B,B,,True
+360,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+361,KEEP,no defect found by inspection of the released files,C,C,,True
+362,KEEP,no defect found by inspection of the released files,C,D,,True
+363,KEEP,no defect found by inspection of the released files,C,B,,True
+364,KEEP,no defect found by inspection of the released files,B,B,,True
+365,KEEP,no defect found by inspection of the released files,B,A,,True
+366,KEEP,no defect found by inspection of the released files,B,C,,True
+367,KEEP,no defect found by inspection of the released files,B,B,,True
+368,KEEP,no defect found by inspection of the released files,B,A,,True
+369,KEEP,no defect found by inspection of the released files,C,D,,True
+370,KEEP,no defect found by inspection of the released files,B,B,,True
+371,KEEP,no defect found by inspection of the released files,C,D,,True
+372,KEEP,no defect found by inspection of the released files,C,C,,True
+373,KEEP,no defect found by inspection of the released files,C,B,,True
+374,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+375,KEEP,no defect found by inspection of the released files,A,B,,True
+376,KEEP,no defect found by inspection of the released files,B,C,,True
+377,KEEP,no defect found by inspection of the released files,B,D,,True
+378,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,C,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+379,KEEP,no defect found by inspection of the released files,C,A,,True
+380,KEEP,no defect found by inspection of the released files,B,D,,True
+381,KEEP,no defect found by inspection of the released files,B,C,,True
+382,KEEP,no defect found by inspection of the released files,B,C,,True
+383,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",C,B,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+384,KEEP,no defect found by inspection of the released files,B,A,,True
+385,KEEP,no defect found by inspection of the released files,B,C,,True
+386,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,B,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+387,KEEP,no defect found by inspection of the released files,B,A,,True
+388,KEEP,no defect found by inspection of the released files,D,B,,True
+389,KEEP,no defect found by inspection of the released files,D,C,,True
+390,KEEP,no defect found by inspection of the released files,B,B,,True
+391,KEEP,no defect found by inspection of the released files,D,D,,True
+392,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+393,DROP,unanswerable: asks about a box at coordinates that do not appear on the image,D,A,,False
+394,DROP,unanswerable: asks about a box at coordinates that do not appear on the image,A,C,,False
+395,KEEP,no defect found by inspection of the released files,B,C,,True
+396,KEEP,no defect found by inspection of the released files,D,A,,True
+397,KEEP,no defect found by inspection of the released files,B,B,,True
+398,KEEP,no defect found by inspection of the released files,C,A,,True
+399,KEEP,no defect found by inspection of the released files,C,B,,True
+400,KEEP,no defect found by inspection of the released files,B,B,,True
+401,KEEP,no defect found by inspection of the released files,C,A,,True
+402,KEEP,no defect found by inspection of the released files,B,B,,True
+403,KEEP,no defect found by inspection of the released files,C,C,,True
+404,KEEP,no defect found by inspection of the released files,B,C,,True
+405,KEEP,no defect found by inspection of the released files,D,C,,True
+406,KEEP,no defect found by inspection of the released files,B,C,,True
+407,KEEP,no defect found by inspection of the released files,B,C,,True
+408,KEEP,no defect found by inspection of the released files,C,A,,True
+409,KEEP,no defect found by inspection of the released files,C,A,,True
+410,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,B,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+411,KEEP,no defect found by inspection of the released files,C,A,,True
+412,KEEP,no defect found by inspection of the released files,B,A,,True
+413,KEEP,no defect found by inspection of the released files,B,A,,True
+414,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,C,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+415,KEEP,no defect found by inspection of the released files,C,D,,True
+416,KEEP,no defect found by inspection of the released files,C,D,,True
+417,KEEP,no defect found by inspection of the released files,C,A,,True
+418,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,C,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+419,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,D,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+420,KEEP,no defect found by inspection of the released files,B,B,,True
+421,KEEP,no defect found by inspection of the released files,B,C,,True
+422,KEEP,no defect found by inspection of the released files,D,D,,True
+423,KEEP,no defect found by inspection of the released files,B,B,,True
+424,KEEP,no defect found by inspection of the released files,B,A,,True
+425,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+426,DROP,unanswerable: asks about a box at coordinates that do not appear on the image,A,A,,False
+427,KEEP,no defect found by inspection of the released files,C,C,,True
+428,KEEP,no defect found by inspection of the released files,C,D,,True
+429,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",C,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+430,KEEP,no defect found by inspection of the released files,D,C,,True
+431,KEEP,no defect found by inspection of the released files,D,B,,True
+432,KEEP,no defect found by inspection of the released files,D,D,,True
+433,KEEP,no defect found by inspection of the released files,C,C,,True
+434,KEEP,no defect found by inspection of the released files,B,A,,True
+435,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,B,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+436,KEEP,no defect found by inspection of the released files,C,B,,True
+437,KEEP,no defect found by inspection of the released files,B,A,,True
+438,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",A,B,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+439,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,C,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+440,KEEP,no defect found by inspection of the released files,D,C,,True
+441,KEEP,no defect found by inspection of the released files,D,C,,True
+442,KEEP,no defect found by inspection of the released files,D,B,,True
+443,KEEP,no defect found by inspection of the released files,B,D,,True
+444,KEEP,no defect found by inspection of the released files,D,A,,True
+445,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,A,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+446,KEEP,no defect found by inspection of the released files,D,D,,True
+447,KEEP,no defect found by inspection of the released files,C,C,,True
+448,KEEP,no defect found by inspection of the released files,B,A,,True
+449,KEEP,no defect found by inspection of the released files,D,A,,True
+450,KEEP,no defect found by inspection of the released files,B,C,,True
+451,KEEP,no defect found by inspection of the released files,B,A,,True
+452,KEEP,no defect found by inspection of the released files,D,B,,True
+453,KEEP,no defect found by inspection of the released files,B,D,,True
+454,KEEP,no defect found by inspection of the released files,B,B,,True
+455,KEEP,no defect found by inspection of the released files,D,B,,True
+456,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,D,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+457,KEEP,no defect found by inspection of the released files,B,D,,True
+458,KEEP,no defect found by inspection of the released files,C,C,,True
+459,KEEP,no defect found by inspection of the released files,C,A,,True
+460,KEEP,no defect found by inspection of the released files,C,D,,True
+461,KEEP,no defect found by inspection of the released files,B,B,,True
+462,KEEP,no defect found by inspection of the released files,A,D,,True
+463,KEEP,no defect found by inspection of the released files,B,D,,True
+464,KEEP,no defect found by inspection of the released files,A,C,,True
+465,KEEP,no defect found by inspection of the released files,A,C,,True
+466,KEEP,no defect found by inspection of the released files,A,D,,True
+467,KEEP,no defect found by inspection of the released files,B,C,,True
+468,KEEP,no defect found by inspection of the released files,A,B,,True
+469,KEEP,no defect found by inspection of the released files,A,A,,True
+470,KEEP,no defect found by inspection of the released files,C,C,,True
+471,KEEP,no defect found by inspection of the released files,B,B,,True
+472,KEEP,no defect found by inspection of the released files,B,D,,True
+473,KEEP,no defect found by inspection of the released files,D,A,,True
+474,KEEP,no defect found by inspection of the released files,A,D,,True
+475,KEEP,no defect found by inspection of the released files,C,A,,True
+476,KEEP,no defect found by inspection of the released files,B,B,,True
+477,KEEP,no defect found by inspection of the released files,D,D,,True
+478,KEEP,no defect found by inspection of the released files,A,C,,True
+479,KEEP,no defect found by inspection of the released files,B,A,,True
+480,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,B,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+481,KEEP,no defect found by inspection of the released files,C,A,,True
+482,KEEP,no defect found by inspection of the released files,B,C,,True
+483,KEEP,no defect found by inspection of the released files,C,D,,True
+484,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",D,C,bone loss: the one topic the dentist audit found the key repeatedly wrong on,True
+485,KEEP,no defect found by inspection of the released files,C,B,,True
+486,KEEP,no defect found by inspection of the released files,C,A,,True
+487,KEEP,no defect found by inspection of the released files,B,C,,True
+488,KEEP,no defect found by inspection of the released files,B,B,,True
+489,FLAG,"kept and scored, but sits on ground known to be unreliable (see flag_reason)",B,D,tooth codes are valid in BOTH the FDI and US Universal systems and mean different teeth in each; the benchmark never states which it uses,True
+490,KEEP,no defect found by inspection of the released files,B,B,,True
