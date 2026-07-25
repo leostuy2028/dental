@@ -16,6 +16,15 @@ the two numbers describe one model under one setup. Only the thinking budget dif
 (0 closed / 4000 open, each task-standard).
 Paper numbers are quoted from arXiv:2509.09254 Tables 2-3 (not our computation).
 
+SECOND TABLE (added 2026-07-25): the DECOMPOSITION. The headline "a generalist beats
+the dental model" is weak on its own, because our best generalist is a newer model than
+any the paper tested, so a reviewer can attribute the whole gap to model progress. The
+decomposition answers that objection with the paper's OWN model: GPT-4o, same 491
+questions, same X-rays, same benchmark parser, moves +11.0 on the closed half from a
+prompt change alone. Averaged across both halves it reaches parity with OralGPT WITHOUT
+any model progress; clearing OralGPT takes the prompt change AND a newer generation.
+That separation is the defensible claim, so both tables are generated here together.
+
   python -m paper_analysis.avg_table
 """
 import pandas as pd
@@ -26,12 +35,21 @@ closed = pd.read_csv(CLOSED_ORIG).correct.mean() * 100      # original key = pap
 closed_bal = pd.read_csv(CLOSED_BAL).correct.mean() * 100   # our debiased key (footnote)
 op = pd.read_csv("results/open/batched_gemini35_plain578_scores.csv").score.mean() * 100
 
+# GPT-4o, the paper's own model, under the two prompts — the decomposition's evidence.
+G4_FAITHFUL = "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv"
+G4_COAX = "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
+G4_OPEN = "results/open/coordarms_gpt4o_cpc_all_scores.csv"
+g4_faithful = pd.read_csv(G4_FAITHFUL).correct.mean() * 100
+g4_coax = pd.read_csv(G4_COAX).correct.mean() * 100
+g4_open = pd.read_csv(G4_OPEN).score.mean() * 100
+
 # paper-reported (arXiv:2509.09254): (label, closed, open) — all on the ORIGINAL key
 PAPER = [
     ("OralGPT (paper's best-avg model)", 39.60, 52.77),
     ("GPT-4o (paper)", 45.40, 37.50),
     ("Claude-3.7-Sonnet (paper)", 41.40, 40.67),
 ]
+ORALGPT_AVG = (39.60 + 52.77) / 2
 
 print("| Model | Closed (MCQ) | Open (free-text) | Avg. |")
 print("|:--|--:|--:|--:|")
@@ -42,4 +60,23 @@ print(f"\n(ours: closed = coax + primer on the ORIGINAL paper key (§5.4), match
       f"leaderboard rows are measured on; open = coax + primer full-578 free-text, GPT-4o judge (§6.1); "
       f"no exemplars, matched across the two halves. Paper rows quoted from arXiv:2509.09254 Tables 2-3. "
       f"On our debiased balanced key the same config scores {closed_bal:.1f}% -> Avg "
-      f"{(closed_bal+op)/2:.1f}, still above OralGPT's {(39.60+52.77)/2:.1f}.)")
+      f"{(closed_bal+op)/2:.1f}, still above OralGPT's {ORALGPT_AVG:.1f}.)")
+
+# ---- decomposition table: how much of the specialist's lead is measurement? ----
+g4_avg = (g4_coax + g4_open) / 2
+print("\n\n| Step | Closed (MCQ) | Open (free-text) | Avg. | vs OralGPT |")
+print("|:--|--:|--:|--:|:--|")
+print(f"| GPT-4o as the paper measured it | {45.40:.1f} | {37.50:.1f} | {(45.40+37.50)/2:.1f} | "
+      f"{(45.40+37.50)/2 - ORALGPT_AVG:+.1f} |")
+print(f"| GPT-4o, our reproduction of that pipeline | {g4_faithful:.1f} | — | — | — |")
+print(f"| **Same model, prompt fixed** (no model change) | **{g4_coax:.1f}** | {g4_open:.1f} | "
+      f"**{g4_avg:.1f}** | **{g4_avg - ORALGPT_AVG:+.1f}** |")
+print(f"| Prompt fixed **and** a newer generation (gemini-3.5-flash) | {closed:.1f} | {op:.1f} | "
+      f"**{(closed+op)/2:.1f}** | **{(closed+op)/2 - ORALGPT_AVG:+.1f}** |")
+print(f"| OralGPT (the purpose-built dental model) | {39.60:.1f} | {52.77:.1f} | {ORALGPT_AVG:.1f} | — |")
+print(f"\n(prompt-change effect on the paper's own model, same 491 items and same X-rays: "
+      f"{g4_coax - g4_faithful:+.1f} points on the closed half, of which ~5.3 is the benchmark's parser "
+      f"misreading answers the model got right (§5.2). GPT-4o's open number is the coordinate-eliciting "
+      f"run, which LOWERS prose-item scores (§6.2), so {g4_avg:.1f} is a LOWER BOUND on GPT-4o under our "
+      f"prompting and the prompt-matched run is pending. Even so it lands within "
+      f"{abs(g4_avg - ORALGPT_AVG):.1f} of OralGPT with no model progress at all.)")
