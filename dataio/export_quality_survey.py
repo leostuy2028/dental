@@ -233,7 +233,13 @@ def main():
 
     # image ids are zero-padded ("016825"); read as str so CSV round-tripping
     # does not silently turn them into integers.
-    man = pd.read_csv(p("results/dentist_audit/quality_manifest.csv"), dtype={"image": str})
+    # keep_default_na=False is load-bearing: 38 questions have "None" as a real answer
+    # option, and pandas' default NA list contains the string "None", so a plain read_csv
+    # turns those options into NaN and they render as "nan" to the dentist. That is the
+    # reproduction bug RESEARCH_PLAN §3.7 documents, and it comes back through any CSV
+    # round-trip unless this is set.
+    man = pd.read_csv(p("results/dentist_audit/quality_manifest.csv"),
+                      dtype={"image": str}, keep_default_na=False)
     man["image"] = man.image.str.zfill(6)
     cl = pd.read_parquet(p("data/closed_ended.parquet"))
     op = pd.read_parquet(p("data/open_ended.parquet"))
@@ -249,8 +255,14 @@ def main():
         rows = man[man.survey == s].reset_index(drop=True)
         imgs = {im: img_uri(pool[im]) for im in dict.fromkeys(rows.image)}
         out = p("survey", f"quality_{s}.html")
+        page = render(s, rows, imgs)
+        # a rendered "nan" means a real option or reference was lost in a round-trip
+        stray = re.findall(r">\s*nan\s*<|>\s*[A-D]\)\s*nan", page)
+        if stray:
+            raise SystemExit(f"survey {s}: {len(stray)} 'nan' cells in the rendered page. "
+                             f"A real option or reference was lost (see §3.7); refusing to write.")
         with open(out, "w", encoding="utf-8") as f:
-            f.write(render(s, rows, imgs))
+            f.write(page)
         mb = os.path.getsize(out) / 1e6
         print(f"survey {s}: {rows.image.nunique()} images, {len(rows)} questions -> {out}  ({mb:.1f} MB)")
 

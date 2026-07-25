@@ -41,7 +41,8 @@ def p(*r):
 
 
 def load():
-    man = pd.read_csv(p("results/dentist_audit/quality_manifest.csv"), dtype={"image": str})
+    man = pd.read_csv(p("results/dentist_audit/quality_manifest.csv"),
+                      dtype={"image": str}, keep_default_na=False)  # "None" is a real option (§3.7)
     subs = sorted(glob.glob(p("results/dentist_audit/quality_*_submission_*.json")))
     rows = []
     for f in subs:
