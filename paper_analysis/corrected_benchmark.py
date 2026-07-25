@@ -79,6 +79,26 @@ def closed_dispositions(cl):
                "bone_loss_items": int(boneloss.sum())}
 
 
+# Questions that genuinely ASK for a location. Their coordinate reference is CORRECT; what
+# is wrong is scoring them with a text-only judge. That is a grader problem, not an item problem.
+ASKS_POSITION = r"output the position|positions? of|locate|bounding box|coordinates"
+
+# Hand corrections applied after auditing the automatic buckets item by item (2026-07-25).
+# The concreteness classifier is a keyword heuristic and it mis-sorted four items. Each is
+# listed with its reason so the correction is reviewable rather than silent.
+OVERRIDES = {
+    444: ("KEEP", "'Describe the status of the wisdom teeth' — reference names which teeth are "
+                  "erupted vs impacted, fully determinate. This is the benchmark paper's own "
+                  "worked example of a free-text question; calling it vague was plainly wrong."),
+    378: ("KEEP", "'Describe the pathological findings in the report' — reference names tooth #37 "
+                  "and a specific lesion, so it is checkable."),
+    124: ("REPAIR", "reference is a coordinate box list, so it belongs with the other "
+                    "coordinate-reference items rather than with the captions."),
+    485: ("REPAIR", "reference is a coordinate box list (and lists one finding for a question "
+                    "asking for all of them)."),
+}
+
+
 def open_dispositions(op):
     """Disjoint disposition per free-text item, in precedence order."""
     bucket = op.question.map(classify)
@@ -88,19 +108,40 @@ def open_dispositions(op):
     d = pd.Series("KEEP", index=op.index)
     d[boneloss] = "FLAG"                          # lowest precedence of the defects
     d[coordref] = "REPAIR"
-    d[bucket == "Vague"] = "SEPARATE"             # highest: no determinate answer at all
+    d[bucket == "Vague"] = "SEPARATE"             # no determinate answer at all
+    for idx, (disp, _reason) in OVERRIDES.items():
+        if idx in d.index:
+            d[idx] = disp
+
+    # Split the coordinate-reference pile into its three genuinely different problems.
+    malformed = ref.map(lambda s: not _parses(s))
+    spatial = op.question.str.contains(ASKS_POSITION, case=False, regex=True)
+    is_rep = d == "REPAIR"
+    d[is_rep & spatial] = "SPATIAL"               # reference correct; needs an overlap metric
+    d[is_rep & malformed] = "MALFORMED"           # blocking data defect; fix before anything else
     return d, bucket, {"coord_reference": int(coordref.sum()),
                        "bone_loss_reference": int(boneloss.sum()),
-                       "vague": int((bucket == "Vague").sum())}
+                       "vague": int((bucket == "Vague").sum()),
+                       "hand_overrides": {str(k): v[0] for k, v in OVERRIDES.items()}}
 
 
-ORDER = ["KEEP", "FLAG", "REPAIR", "SEPARATE", "DROP"]
+def _parses(s):
+    try:
+        json.loads(str(s))
+        return True
+    except Exception:
+        return False
+
+
+ORDER = ["KEEP", "REPAIR", "FLAG", "SPATIAL", "MALFORMED", "SEPARATE", "DROP"]
 MEANING = {
-    "KEEP": "checkable, no known defect; the core to evaluate and improve on",
-    "FLAG": "kept and scored, but marked for expert re-adjudication",
-    "REPAIR": "checkable question, but the reference answer is a raw coordinate box list",
-    "SEPARATE": "no determinate answer; score as writing quality on its own track",
-    "DROP": "unanswerable as posed; the question quotes coordinates not on the image",
+    "KEEP": "usable as released",
+    "REPAIR": "answer is buried in a coordinate list; a script can unwrap it into a sentence",
+    "FLAG": "usable, but the reference says 'no apparent bone loss', the one error the dentist confirmed",
+    "SPATIAL": "question genuinely asks for a location; the reference is right, the text judge is wrong for it",
+    "MALFORMED": "reference is not valid JSON (a stray curly quote), so it cannot be unwrapped automatically",
+    "SEPARATE": "no single right answer; score as writing, not as reading",
+    "DROP": "unanswerable: asks about a box at coordinates that are not on the image",
 }
 
 

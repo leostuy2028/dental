@@ -2,8 +2,10 @@
   "closed": {
     "total": 491,
     "KEEP": 413,
-    "FLAG": 71,
     "REPAIR": 0,
+    "FLAG": 71,
+    "SPATIAL": 0,
+    "MALFORMED": 0,
     "SEPARATE": 0,
     "DROP": 7,
     "detail": {
@@ -15,15 +17,23 @@
   },
   "open": {
     "total": 578,
-    "KEEP": 339,
+    "KEEP": 341,
+    "REPAIR": 82,
     "FLAG": 29,
-    "REPAIR": 99,
-    "SEPARATE": 111,
+    "SPATIAL": 6,
+    "MALFORMED": 13,
+    "SEPARATE": 107,
     "DROP": 0,
     "detail": {
       "coord_reference": 101,
       "bone_loss_reference": 87,
-      "vague": 111
+      "vague": 111,
+      "hand_overrides": {
+        "444": "KEEP",
+        "378": "KEEP",
+        "124": "REPAIR",
+        "485": "REPAIR"
+      }
     },
     "concreteness": {
       "Concrete": 287,
@@ -31,10 +41,10 @@
       "Vague": 111
     },
     "concrete_and_clean": 190,
-    "concrete_but_coordinate_reference": 97
+    "concrete_but_coordinate_reference": 78
   },
   "_generator": "paper_analysis/corrected_benchmark.py",
-  "_generated_utc": "2026-07-25T15:59:39+00:00",
+  "_generated_utc": "2026-07-25T18:14:07+00:00",
   "_source": [
     "data/closed_ended.parquet",
     "data/open_ended.parquet"
