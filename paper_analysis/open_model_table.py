@@ -15,7 +15,13 @@ RT = pd.read_parquet("eval_open/predictions.parquet")[["index", "ref_type"]]
 
 # (label, prompt description, scores CSV) — all graded by gpt-4o judge, rubric='original' (unchanged)
 ROWS = [
-    ("GPT-4o", "primer + coordinate elicitation",
+    # The prompt-MATCHED GPT-4o row (2026-07-25): same protocol as every other row here
+    # (batched per image, coax + primer, NO coordinate instruction), so the table can now be
+    # read as a model comparison rather than only within-row. Model pinned to the paper's
+    # own snapshot, gpt-4o-2024-11-20, matching our closed-half run.
+    ("GPT-4o (prompt-matched)", "primer, no coordinates",
+     "results/open/batched_gpt4o_matched_scores.csv"),
+    ("GPT-4o (coordinate-elicited)", "primer + coordinate elicitation",
      "results/open/coordarms_gpt4o_cpc_all_scores.csv"),
     ("gpt-5-mini", "primer, no coordinates",
      "results/open/batched_gpt5mini_scores.csv"),

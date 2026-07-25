@@ -1,0 +1,133 @@
+reasoning_effort = minimal | thinking_budget = 0
+  [1/100] 016641.jpg: 5 Q answered
+  [2/100] 016640.jpg: 6 Q answered
+  [3/100] 016648.jpg: 6 Q answered
+  [4/100] 016642.jpg: 6 Q answered
+  [5/100] 016652.jpg: 6 Q answered
+  [6/100] 016655.jpg: 6 Q answered
+  [7/100] 016650.jpg: 6 Q answered
+  [8/100] 016649.jpg: 6 Q answered
+  [9/100] 016657.jpg: 6 Q answered
+  [10/100] 016659.jpg: 6 Q answered
+  [11/100] 016690.jpg: 6 Q answered
+  [12/100] 016693.jpg: 6 Q answered
+  [13/100] 016708.jpg: 6 Q answered
+  [14/100] 016694.jpg: 6 Q answered
+  [15/100] 016713.jpg: 6 Q answered
+  [16/100] 016723.jpg: 5 Q answered
+  [17/100] 016726.jpg: 5 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1957. Please try again in 3.914s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [18/100] 016744.jpg: 4 Q answered
+  [19/100] 016783.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1945. Please try again in 3.89s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [20/100] 016712.jpg: 6 Q answered
+  [21/100] 016792.jpg: 6 Q answered
+  [22/100] 016769.jpg: 5 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29969, Requested 1968. Please try again in 3.873s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [23/100] 016821.jpg: 6 Q answered
+  [24/100] 016808.jpg: 6 Q answered
+  [25/100] 016790.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1959. Please try again in 3.918s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [26/100] 016825.jpg: 6 Q answered
+  [27/100] 016826.jpg: 6 Q answered
+  [28/100] 016807.jpg: 6 Q answered
+  [29/100] 016823.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29791, Requested 1940. Please try again in 3.462s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [30/100] 016829.jpg: 6 Q answered
+  [31/100] 016836.jpg: 5 Q answered
+  [32/100] 016855.jpg: 5 Q answered
+  [33/100] 016874.jpg: 5 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 2): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 28484, Requested 1940. Please try again in 848ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29861, Requested 1965. Please try again in 3.652s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [34/100] 016918.jpg: 6 Q answered
+  [35/100] 016920.jpg: 6 Q answered
+  [36/100] 016955.jpg: 6 Q answered
+  [37/100] 016839.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 2): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29239, Requested 1965. Please try again in 2.408s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [38/100] 016961.jpg: 4 Q answered
+  [39/100] 016964.jpg: 6 Q answered
+  [40/100] 016947.jpg: 5 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 28162, Requested 1965. Please try again in 254ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [41/100] 016975.jpg: 6 Q answered
+  [42/100] 017018.jpg: 6 Q answered
+  [43/100] 016910.jpg: 6 Q answered
+  [44/100] 016973.jpg: 6 Q answered
+  [45/100] 017061.jpg: 6 Q answered
+  [46/100] 017083.jpg: 6 Q answered
+  [47/100] 017022.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1961. Please try again in 3.922s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [48/100] 017112.jpg: 6 Q answered
+  [49/100] 017118.jpg: 6 Q answered
+  [50/100] 017091.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1958. Please try again in 3.916s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [51/100] 017137.jpg: 6 Q answered
+  [52/100] 017148.jpg: 6 Q answered
+  [53/100] 017113.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1974. Please try again in 3.948s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [54/100] 017204.jpg: 6 Q answered
+  [55/100] 017144.jpg: 6 Q answered
+  [56/100] 017168.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1970. Please try again in 3.94s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [57/100] 017215.jpg: 6 Q answered
+  [58/100] 017209.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29182, Requested 1952. Please try again in 2.268s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+    [answer] openai/gpt-4o-2024-11-20 error (try 2): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29088, Requested 1970. Please try again in 2.116s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [59/100] 017202.jpg: 6 Q answered
+  [60/100] 017239.jpg: 6 Q answered
+  [61/100] 017220.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29460, Requested 1935. Please try again in 2.79s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [62/100] 017300.jpg: 6 Q answered
+  [63/100] 017271.jpg: 6 Q answered
+  [64/100] 017336.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1962. Please try again in 3.924s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [65/100] 017375.jpg: 6 Q answered
+  [66/100] 017346.jpg: 6 Q answered
+  [67/100] 017309.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1986. Please try again in 3.971s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [68/100] 017540.jpg: 6 Q answered
+  [69/100] 017656.jpg: 6 Q answered
+  [70/100] 017360.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1968. Please try again in 3.936s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [71/100] 017690.jpg: 6 Q answered
+  [72/100] 017693.jpg: 6 Q answered
+  [73/100] 017773.jpg: 5 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 2): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29648, Requested 1968. Please try again in 3.232s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [74/100] 017880.jpg: 5 Q answered
+  [75/100] 017840.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 28665, Requested 1961. Please try again in 1.252s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [76/100] 018010.jpg: 6 Q answered
+  [77/100] 017416.jpg: 6 Q answered
+  [78/100] 017936.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1964. Please try again in 3.928s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [79/100] 018160.jpg: 5 Q answered
+  [80/100] 018047.jpg: 6 Q answered
+  [81/100] 018105.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1957. Please try again in 3.914s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [82/100] 018179.jpg: 6 Q answered
+  [83/100] 018231.jpg: 4 Q answered
+  [84/100] 018211.jpg: 6 Q answered
+  [85/100] 018189.jpg: 5 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 2): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1957. Please try again in 3.914s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [86/100] 018174.jpg: 5 Q answered
+  [87/100] 018276.jpg: 6 Q answered
+  [88/100] 018254.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1943. Please try again in 3.886s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [89/100] 018277.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 28635, Requested 1942. Please try again in 1.154s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+    [answer] openai/gpt-4o-2024-11-20 error (try 1): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 29834, Requested 1981. Please try again in 3.63s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [90/100] 018328.jpg: 6 Q answered
+  [91/100] 018278.jpg: 5 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 2): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1943. Please try again in 3.886s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [92/100] 018263.jpg: 5 Q answered
+  [93/100] 018377.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 2): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 28913, Requested 1981. Please try again in 1.788s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [94/100] 018466.jpg: 6 Q answered
+  [95/100] 018477.jpg: 6 Q answered
+  [96/100] 018384.jpg: 6 Q answered
+  [97/100] 019277.jpg: 6 Q answered
+  [98/100] 018494.jpg: 5 Q answered
+  [99/100] 018539.jpg: 6 Q answered
+    [answer] openai/gpt-4o-2024-11-20 error (try 3): Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-2024-11-20 (for limit gpt-4o) in organization org-0Y8MVxRmLdkcYsBj3Jgb1Bmp on tokens per min (TPM): Limit 30000, Used 30000, Requested 1981. Please try again in 3.962s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  [100/100] 018325.jpg: 6 Q answered
+
+gpt-4o-2024-11-20: overall 40.2%  (n=578)  -> results/open/batched_gpt4o_matched_scores.csv

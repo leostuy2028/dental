@@ -38,10 +38,12 @@ op = pd.read_csv("results/open/batched_gemini35_plain578_scores.csv").score.mean
 # GPT-4o, the paper's own model, under the two prompts — the decomposition's evidence.
 G4_FAITHFUL = "results/closed_ended/gpt-4o-2024-11-20__faithful-direct-k0__whole__n491.csv"
 G4_COAX = "results/closed_ended/gpt-4o-2024-11-20__coax-direct-k0__whole__n491.csv"
-G4_OPEN = "results/open/coordarms_gpt4o_cpc_all_scores.csv"
+G4_OPEN = "results/open/batched_gpt4o_matched_scores.csv"        # prompt-matched: primer, NO coords
+G4_OPEN_COORD = "results/open/coordarms_gpt4o_cpc_all_scores.csv"  # the older coordinate-elicited arm
 g4_faithful = pd.read_csv(G4_FAITHFUL).correct.mean() * 100
 g4_coax = pd.read_csv(G4_COAX).correct.mean() * 100
 g4_open = pd.read_csv(G4_OPEN).score.mean() * 100
+g4_open_coord = pd.read_csv(G4_OPEN_COORD).score.mean() * 100
 
 # paper-reported (arXiv:2509.09254): (label, closed, open) — all on the ORIGINAL key
 PAPER = [
@@ -69,14 +71,16 @@ print("|:--|--:|--:|--:|:--|")
 print(f"| GPT-4o as the paper measured it | {45.40:.1f} | {37.50:.1f} | {(45.40+37.50)/2:.1f} | "
       f"{(45.40+37.50)/2 - ORALGPT_AVG:+.1f} |")
 print(f"| GPT-4o, our reproduction of that pipeline | {g4_faithful:.1f} | — | — | — |")
-print(f"| **Same model, prompt fixed** (no model change) | **{g4_coax:.1f}** | {g4_open:.1f} | "
+print(f"| **Same model, prompted properly** (no model change) | **{g4_coax:.1f}** | **{g4_open:.1f}** | "
       f"**{g4_avg:.1f}** | **{g4_avg - ORALGPT_AVG:+.1f}** |")
-print(f"| Prompt fixed **and** a newer generation (gemini-3.5-flash) | {closed:.1f} | {op:.1f} | "
-      f"**{(closed+op)/2:.1f}** | **{(closed+op)/2 - ORALGPT_AVG:+.1f}** |")
 print(f"| OralGPT (the purpose-built dental model) | {39.60:.1f} | {52.77:.1f} | {ORALGPT_AVG:.1f} | — |")
-print(f"\n(prompt-change effect on the paper's own model, same 491 items and same X-rays: "
+print(f"| *(for reference)* a newer generation, same treatment | {closed:.1f} | {op:.1f} | "
+      f"{(closed+op)/2:.1f} | {(closed+op)/2 - ORALGPT_AVG:+.1f} |")
+print(f"\n(the prompt change on the paper's OWN model, same 491 items and same X-rays: "
       f"{g4_coax - g4_faithful:+.1f} points on the closed half, of which ~5.3 is the benchmark's parser "
-      f"misreading answers the model got right (§5.2). GPT-4o's open number is the coordinate-eliciting "
-      f"run, which LOWERS prose-item scores (§6.2), so {g4_avg:.1f} is a LOWER BOUND on GPT-4o under our "
-      f"prompting and the prompt-matched run is pending. Even so it lands within "
-      f"{abs(g4_avg - ORALGPT_AVG):.1f} of OralGPT with no model progress at all.)")
+      f"misreading answers the model got right (§5.2). Open half = the prompt-matched run "
+      f"(primer, NO coordinate instruction, batched, gpt-4o-2024-11-20): {g4_open:.1f}% vs "
+      f"{g4_open_coord:.1f}% for the coordinate-eliciting arm, a paired +{g4_open - g4_open_coord:.1f} "
+      f"concentrated in the prose items. Both halves are the same pinned model snapshot, so the "
+      f"{g4_avg:.1f} average involves NO model progress. Closed cell carries no primer while the open "
+      f"cell does, which understates rather than flatters it.)")

@@ -1,0 +1,27 @@
+{
+  "n_reference_images": 86,
+  "rows": {
+    "Gemini 3.5": {
+      "states_count": 18,
+      "exact_pct": 10.5,
+      "within1_pct": 16.3
+    },
+    "GPT-5-mini": {
+      "states_count": 7,
+      "exact_pct": 0.0,
+      "within1_pct": 1.2
+    },
+    "GPT-4o": {
+      "states_count": 0,
+      "exact_pct": 0.0,
+      "within1_pct": 0.0
+    },
+    "Tooth detector": {
+      "states_count": 86,
+      "exact_pct": 51.2,
+      "within1_pct": 86.0
+    }
+  },
+  "_generator": "paper_analysis/count_headtohead.py",
+  "_generated_utc": "2026-07-25T15:07:47+00:00"
+}

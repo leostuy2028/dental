@@ -1,0 +1,14 @@
+{
+  "experiment": "E-match (prompt-matched GPT-4o open arm)",
+  "paper_section": "\u00a76.1 (Table 6.1), \u00a76.3 (Table 6.2)",
+  "model": "gpt-4o-2024-11-20",
+  "judge": "gpt-4o",
+  "rubric": "original (verbatim VLMEvalKit, unchanged)",
+  "config": "image-BATCHED (one call per unique image, all its questions): coax persona + reference/opg_primer.txt, NO coordinate instruction, temp=0, img_detail=high, max_tokens=4096",
+  "dataset": "open_ended full 578 / 100 images",
+  "n": 578,
+  "command": "python -m eval_open.run_batched --model gpt-4o-2024-11-20 --provider openai --n-images 100 --workers 4 --tag gpt4o_matched",
+  "code_commit": "6881da0",
+  "generated_utc": "2026-07-25T15:03:02+00:00",
+  "note": "2 images (016910, 018325) returned unparseable replies on the first pass; their 12 rows were REMOVED and re-elicited by re-running the same command (resumable by image). Final file has 0 unparsed and 0 refusals. Never counted a harness parse failure as a model answer."
+}
