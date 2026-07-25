@@ -34,6 +34,13 @@ Runtime -> Change runtime type -> **T4 GPU**, then run the cells top to bottom.
 | 3 validate | `validate.py` | Colab | mAP **plus** count + FDI accuracy and the worst errors — this is the gate |
 | 4 infer | `infer_mmoral.py` | **your machine (CPU)** | runs on the 100 MMOral images, checks the count against dentist-confirmed references |
 
+**The trained weights are committed** at the repo root as `best.pt` (6 MB, YOLOv8-nano).
+That is the exact checkpoint behind every committed detector number (DENTEX val mAP50
+0.935; MMOral 51% exact / 86% within one tooth) and behind `reference/mmoral_map.json`,
+so Stage 4 reproduces without retraining: `python detector/infer_mmoral.py --weights best.pt`.
+Retraining produces a *different* model, so replace `best.pt` only alongside re-running the
+downstream results.
+
 ## Data lives on Drive
 
 `prepare_data.py --out /content/drive/MyDrive/dentex_yolo` writes:
