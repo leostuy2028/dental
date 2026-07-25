@@ -50,7 +50,9 @@ def main():
         print("(The dentist's survey emails/downloads that file; drop it in results/dentist_audit/ then re-run.)")
         return
     sub = subs[0]
-    man = pd.read_csv(MANIFEST).set_index("item_id")
+    # keep_default_na=False: three stance cells are the literal string "n/a",
+    # which pandas would otherwise read as missing (RESEARCH_PLAN §3.7).
+    man = pd.read_csv(MANIFEST, keep_default_na=False).set_index("item_id")
     data = json.load(open(sub, encoding="utf-8"))
     resp = {r["item_id"]: r for r in data["responses"]}
     print(f"submission: {sub}  |  dentist: {data.get('dentist_name','?')}  "
