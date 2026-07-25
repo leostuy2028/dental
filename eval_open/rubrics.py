@@ -90,8 +90,78 @@ REPHRASED_COORD_EXAMPLES = [
 ]
 
 
+# ============================================================================
+# V2 — the replacement rubric we propose and release (PAPER_DRAFT §7.3.8).
+#
+# ORIGINAL and REPHRASED are an A/B pair built to isolate one bias; neither is meant
+# to be a good grader. V2 is the actual proposal. It differs in four ways:
+#
+#   1. the scoring policy is WRITTEN DOWN, instead of left to be inferred from nine
+#      examples (the original states no criteria at all);
+#   2. the judge must give a one-line reason BEFORE the score, so a disagreement can
+#      be inspected rather than only observed;
+#   3. formatting, and coordinates in particular, cannot move the score unless the
+#      question asked where something is;
+#   4. the cases the original leaves undefined are settled explicitly: a wrong tooth
+#      is a clinical error, counts are exact, a correct finding the ground truth omits
+#      is not penalised, and a ground truth that is itself a coordinate list is scored
+#      on the clinical labels inside it.
+#
+# Call it at a FIXED low temperature. The original pipeline re-queries at rising
+# randomness until a number parses, which makes the score depend on how many times the
+# grader was asked (judges.TEMP_SCHEDULE).
+# ============================================================================
+INSTRUCTION_V2 = """You are grading how clinically correct an AI model's answer is, for a question about a panoramic dental X-ray. You are given the question, the ground-truth answer, and the model's prediction.
+
+Score from 0.0 to 1.0 using this scale:
+  1.0        every finding in the ground truth is present and correct, and nothing incorrect is added
+  0.7 - 0.9  the main clinical finding is correct; a minor detail is missing or slightly wrong
+  0.4 - 0.6  partly correct: some findings are right, others are missing or wrong
+  0.1 - 0.3  mostly wrong, but it touches something the ground truth mentions
+  0.0        wrong, or it contradicts the ground truth
+
+Apply these rules:
+1. Judge clinical content only. Ignore wording, length, and presentation.
+2. Coordinates, bounding boxes and pixel positions are NOT required unless the question explicitly asks where something is. Never raise or lower the score because of their presence, absence, or formatting.
+3. Naming the wrong tooth is a clinical error, not a formatting one. Score it as a substantive mistake.
+4. Counts are exact. A wrong number of teeth is wrong.
+5. If the prediction reports a correct finding that the ground truth omits, do not penalise it. The ground truth may be incomplete.
+6. If the ground truth is itself a list of coordinates, score the prediction against the clinical labels inside that list and ignore the numbers.
+
+Reply in exactly two lines:
+Reason: <one sentence saying what is right and what is wrong>
+Score: <the number>"""
+
+# Four worked examples, each carrying the reason the score was given. The original
+# rubric shows nine examples and explains none of them.
+V2_EXAMPLES = [
+    ("How many teeth are visualized in the radiograph?",
+     "30 teeth are visualized with clear anatomical definition.",
+     "30",
+     "The count matches exactly; no coordinates were asked for and none are needed.", "1.0"),
+    ("How many teeth are visualized in the radiograph?",
+     "30 teeth are visualized with clear anatomical definition.",
+     "29 teeth are visualized with clear anatomical definition.",
+     "Counts are exact and 29 is not 30, so the answer is wrong despite matching wording.", "0.0"),
+    ("What is the condition of the teeth #26 and #14?",
+     "Teeth #26 and #14 show signs of periapical abscesses.",
+     "Teeth #26 and #23 show signs of periapical abscesses.",
+     "The finding is right and one of two teeth is correctly named; #23 is the wrong tooth, "
+     "which is a clinical error.", "0.5"),
+    (_COORD_Q, _COORD_GT, "Crown",
+     "The ground truth is a coordinate list whose clinical label is a crown on #31, and the "
+     "prediction names exactly that; the question did not ask for a location.", "1.0"),
+]
+
+
 def _format_examples(examples):
     return "\n".join(f"{q} | {gt} | {pred} | {score}" for q, gt, pred, score in examples)
+
+
+def _format_v2_examples(examples):
+    return "\n\n".join(
+        f"Question: {q}\nGround truth: {gt}\nPrediction: {pred}\nReason: {reason}\nScore: {score}"
+        for q, gt, pred, reason, score in examples)
 
 
 def _prep_gt(ground_truth):
@@ -111,8 +181,17 @@ def build_grading_prompt(question, ground_truth, prediction, rubric="original"):
     elif rubric == "rephrased":
         instruction = INSTRUCTION + "\n" + DEBIAS_RULE
         examples = SHARED_EXAMPLES + REPHRASED_COORD_EXAMPLES
+    elif rubric == "v2":
+        # the released replacement: written criteria + reason-before-score.
+        # judges.parse_score() takes the LAST in-range number, so "Score: x" on the
+        # final line parses correctly with no change to the caller.
+        gt = _prep_gt(ground_truth)
+        return (f"{INSTRUCTION_V2}\n\n"
+                f"Worked examples:\n\n{_format_v2_examples(V2_EXAMPLES)}\n\n"
+                f"Now grade this one:\n"
+                f"Question: {question}\nGround truth: {gt}\nPrediction: {prediction}\n")
     else:
-        raise ValueError(f"unknown rubric {rubric!r} (expected 'original' or 'rephrased')")
+        raise ValueError(f"unknown rubric {rubric!r} (expected 'original', 'rephrased' or 'v2')")
 
     gt = _prep_gt(ground_truth)
     real_row = f"{question} | {gt} | {prediction} | "
