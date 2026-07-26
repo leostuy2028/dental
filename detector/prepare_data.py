@@ -8,9 +8,16 @@ DATA HYGIENE (the point of this script):
   a duplicated FDI code (the same tooth boxed twice) or >32 boxes — are EXCLUDED
   entirely, not silently patched, so no bad labels enter training OR validation.
   The exclusions are recorded in qc_report.csv + excluded.json (the single blocklist
-  any other process can read), and a post-build pass VERIFIES no label file that made
-  it in has a duplicate class. Legit sparse/edentulous mouths are kept (a counter must
-  handle them); only genuinely broken annotations are dropped.
+  any other process can read), and verify_build() then re-derives the invariant from what
+  was actually written. Legit sparse/edentulous mouths are kept (a counter must handle
+  them); only genuinely broken annotations are dropped.
+
+  --single-class flattens every tooth to class 0, which DESTROYS the FDI codes, so the
+  written labels can no longer prove "no tooth boxed twice" on their own. The codes are
+  therefore recorded in fdi_codes.json and verify_build() checks them from there. The gate
+  itself is unaffected either way: qc_image() runs on the raw codes before any flattening,
+  and only clean images reach the write loop. detector/test_prepare_qc.py plants a
+  duplicate tooth in both modes and asserts the build refuses it.
 
 Run:
   python detector/prepare_data.py --out /content/drive/MyDrive/dentex_yolo
@@ -51,6 +58,42 @@ def open_zip(source):
         return RemoteZip(source)
     import zipfile
     return zipfile.ZipFile(source)
+
+
+def verify_build(out, single_class):
+    """Re-derive the QC invariant from what was actually written, independently of qc_image.
+
+    Flattening to one class destroys the FDI codes, so the written labels alone can no longer
+    prove "no tooth boxed twice". The codes are therefore recorded in fdi_codes.json and
+    checked from there, which keeps the SAME invariant enforced in both modes: every shipped
+    image has MIN_BOXES..32 boxes, no repeated FDI code, and exactly as many label lines as
+    it has codes.
+
+    Returns a list of problems (empty when the build is clean).
+    """
+    import glob
+    codes_by_stem = {os.path.splitext(fn)[0]: cs
+                     for fn, cs in json.load(open(f"{out}/fdi_codes.json")).items()}
+    bad = []
+    for lf in sorted(glob.glob(f"{out}/labels/*/*.txt")):
+        stem = os.path.splitext(os.path.basename(lf))[0]
+        cls = [ln.split()[0] for ln in open(lf) if ln.strip()]
+        codes = codes_by_stem.get(stem)
+        if codes is None:
+            bad.append(f"{lf}: shipped but not in the kept set")
+            continue
+        if len(set(codes)) != len(codes):
+            dup = sorted(c for c, k in Counter(codes).items() if k > 1)
+            bad.append(f"{lf}: duplicate tooth {dup} survived QC")
+        if not (MIN_BOXES <= len(codes) <= 32):
+            bad.append(f"{lf}: {len(codes)} boxes, outside {MIN_BOXES}..32")
+        if len(cls) != len(codes):
+            bad.append(f"{lf}: {len(cls)} label lines vs {len(codes)} codes")
+        if single_class and set(cls) - {"0"}:
+            bad.append(f"{lf}: non-zero class in single-class mode")
+        if not single_class and len(cls) != len(set(cls)):
+            bad.append(f"{lf}: duplicate class")
+    return bad
 
 
 def main():
@@ -130,24 +173,9 @@ def main():
             f.write(f"nc: {len(FDI)}\nnames: {FDI}\n")
 
     # --- VERIFY that the QC gate actually held ------------------------------------
-    # In 32-class mode a duplicate class IS a duplicate tooth, so check that directly.
-    # In single-class mode every box is class 0 by construction, so that check would fire
-    # on every image and prove nothing; the duplicate-FDI gate already ran upstream on the
-    # raw codes, so here we verify instead that each file kept exactly the boxes QC counted.
-    import glob
-    expect = {r["file"]: r["n_boxes"] for r in report if r["status"] == "ok"}
-    bad = []
-    for lf in glob.glob(f"{args.out}/labels/*/*.txt"):
-        cls = [ln.split()[0] for ln in open(lf) if ln.strip()]
-        if args.single_class:
-            stem = os.path.splitext(os.path.basename(lf))[0]
-            hit = [n for f, n in expect.items() if os.path.splitext(f)[0] == stem]
-            if hit and len(cls) != hit[0]:
-                bad.append(f"{lf}: {len(cls)} boxes, QC counted {hit[0]}")
-            if set(cls) - {"0"}:
-                bad.append(f"{lf}: non-zero class in single-class mode")
-        elif len(cls) != len(set(cls)):
-            bad.append(f"{lf}: duplicate class")
+    with open(f"{args.out}/fdi_codes.json", "w") as f:
+        json.dump({info[i]["file_name"]: [c for c, _ in per[i]] for i in clean_ids}, f)
+    bad = verify_build(args.out, args.single_class)
     assert not bad, f"VERIFY FAILED: {bad[:3]} — bad labels leaked through"
 
     reasons = Counter(r["reason"].split(":")[0] for r in excluded)
