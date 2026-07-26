@@ -63,14 +63,25 @@ def main():
         rows.append((stem, true_n, raw_n, phys_n, enum_n, phys_n - true_n))
 
     n = max(len(imgs), 1)
+    single = int(d.get("nc", 32)) == 1
     print(f"COUNT raw      (per-class NMS):    exact {raw_exact:2d}/{n} ({raw_exact / n * 100:2.0f}%)   "
           f"mean |err| {sum(raw_err) / n:.2f} teeth")
     print(f"COUNT physical (agnostic NMS):     exact {phys_exact:2d}/{n} ({phys_exact / n * 100:2.0f}%)   "
-          f"mean |err| {sum(phys_err) / n:.2f} teeth")
-    print(f"COUNT enum     (agnostic + 1/FDI): exact {enum_exact:2d}/{n} ({enum_exact / n * 100:2.0f}%)   "
-          f"mean |err| {sum(enum_err) / n:.2f} teeth")
-    print(f"FDI:           {fdi_hit}/{fdi_tot} true teeth detected with the right number "
-          f"({fdi_hit / max(fdi_tot, 1) * 100:.0f}%)")
+          f"mean |err| {sum(phys_err) / n:.2f} teeth"
+          + ("   <- THE GATE in single-class mode" if single else ""))
+    if single:
+        # With nc=1 every box is class 0, so "one box per FDI code" collapses to one box and
+        # the FDI check compares {0} against {0}. Both would print flattering nonsense
+        # (enum count 1, FDI 100%), so they are suppressed rather than shown.
+        print("COUNT enum / FDI:                  n/a — this model has ONE class, so there is no "
+              "FDI code to score here.")
+        print("                                   Numbering is scored separately, against the "
+              "benchmark's own answers, by detector/eval_numbering.py.")
+    else:
+        print(f"COUNT enum     (agnostic + 1/FDI): exact {enum_exact:2d}/{n} ({enum_exact / n * 100:2.0f}%)   "
+              f"mean |err| {sum(enum_err) / n:.2f} teeth")
+        print(f"FDI:           {fdi_hit}/{fdi_tot} true teeth detected with the right number "
+              f"({fdi_hit / max(fdi_tot, 1) * 100:.0f}%)")
 
     print("\nWorst PHYSICAL count errors (true -> predicted):")
     for stem, tn, rn, pn, en, e in sorted(rows, key=lambda x: -abs(x[5]))[:10]:

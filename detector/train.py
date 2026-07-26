@@ -23,6 +23,11 @@ def main():
     ap.add_argument("--project", default="runs")
     ap.add_argument("--name", default="dentex_yolov8n")
     ap.add_argument("--patience", type=int, default=30, help="early-stop patience")
+    ap.add_argument("--mosaic", type=float, default=0.0,
+                    help="mosaic augmentation. Default 0 (OFF) and that is deliberate: mosaic "
+                         "stitches four images into a collage, which destroys the whole-arch "
+                         "geometry. Numbering (detector/number_teeth.py) is derived from the "
+                         "shape of the arch, so training on collages teaches against it.")
     ap.add_argument("--resume", action="store_true",
                     help="continue an interrupted run from its last.pt (Colab disconnected, etc.)")
     args = ap.parse_args()
@@ -43,7 +48,7 @@ def main():
             project=args.project,
             name=args.name,
             patience=args.patience,
-            mosaic=0.4,          # ease off heavy augmentation for medical images
+            mosaic=args.mosaic,  # 0 by default; see --mosaic for why
             cache=True,          # cache images so Drive I/O isn't the bottleneck after epoch 1
             plots=True,          # write results.png / confusion_matrix.png / val previews
             seed=0,

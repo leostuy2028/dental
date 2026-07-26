@@ -59,6 +59,8 @@ def main():
     ap.add_argument("--source", default=HF_URL, help="DENTEX training zip URL or local .zip path")
     ap.add_argument("--val-frac", type=float, default=0.1)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--single-class", action="store_true",
+                    help="write every tooth as class 0 (nc=1). Numbering then comes from detector/number_teeth.py, not from the network. This is the step-2 build.")
     args = ap.parse_args()
 
     from PIL import Image
@@ -103,7 +105,8 @@ def main():
             f.write(raw)
         lines = []
         for code, (x, y, w, h) in per[img_id]:
-            lines.append(f"{FDI2CLS[code]} {(x + w / 2) / W:.6f} {(y + h / 2) / H:.6f} "
+            cls = 0 if args.single_class else FDI2CLS[code]
+            lines.append(f"{cls} {(x + w / 2) / W:.6f} {(y + h / 2) / H:.6f} "
                          f"{w / W:.6f} {h / H:.6f}")
         stem = os.path.splitext(fn)[0]
         with open(f"{args.out}/labels/{split}/{stem}.txt", "w") as f:
@@ -120,23 +123,39 @@ def main():
                    "reasons": {r["file"]: r["reason"] for r in excluded}}, f, indent=1)
 
     with open(f"{args.out}/dentex.yaml", "w") as f:
-        f.write(f"path: {args.out}\ntrain: images/train\nval: images/val\n"
-                f"nc: {len(FDI)}\nnames: {FDI}\n")
+        f.write(f"path: {args.out}\ntrain: images/train\nval: images/val\n")
+        if args.single_class:
+            f.write("nc: 1\nnames: ['tooth']\n")
+        else:
+            f.write(f"nc: {len(FDI)}\nnames: {FDI}\n")
 
-    # --- VERIFY: no label file that made it in has a duplicate class -------------
+    # --- VERIFY that the QC gate actually held ------------------------------------
+    # In 32-class mode a duplicate class IS a duplicate tooth, so check that directly.
+    # In single-class mode every box is class 0 by construction, so that check would fire
+    # on every image and prove nothing; the duplicate-FDI gate already ran upstream on the
+    # raw codes, so here we verify instead that each file kept exactly the boxes QC counted.
     import glob
+    expect = {r["file"]: r["n_boxes"] for r in report if r["status"] == "ok"}
     bad = []
     for lf in glob.glob(f"{args.out}/labels/*/*.txt"):
         cls = [ln.split()[0] for ln in open(lf) if ln.strip()]
-        if len(cls) != len(set(cls)):
-            bad.append(lf)
-    assert not bad, f"VERIFY FAILED: duplicate class in {bad[:3]} — bad labels leaked through"
+        if args.single_class:
+            stem = os.path.splitext(os.path.basename(lf))[0]
+            hit = [n for f, n in expect.items() if os.path.splitext(f)[0] == stem]
+            if hit and len(cls) != hit[0]:
+                bad.append(f"{lf}: {len(cls)} boxes, QC counted {hit[0]}")
+            if set(cls) - {"0"}:
+                bad.append(f"{lf}: non-zero class in single-class mode")
+        elif len(cls) != len(set(cls)):
+            bad.append(f"{lf}: duplicate class")
+    assert not bad, f"VERIFY FAILED: {bad[:3]} — bad labels leaked through"
 
     reasons = Counter(r["reason"].split(":")[0] for r in excluded)
     print(f"kept {len(clean_ids)} clean images "
           f"({len(clean_ids) - len(val_ids)} train / {len(val_ids)} val)")
     print(f"EXCLUDED {len(excluded)} images -> {dict(reasons)}  (see qc_report.csv, excluded.json)")
-    print("VERIFY OK: no training/val label has a duplicate tooth.")
+    print("VERIFY OK: " + ("box counts match QC, all class 0" if args.single_class
+                          else "no training/val label has a duplicate tooth."))
     print(f"wrote {args.out}/dentex.yaml")
 
 
