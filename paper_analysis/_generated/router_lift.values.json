@@ -1,0 +1,48 @@
+{
+  "n_routed": 41,
+  "n_closed": 491,
+  "rows": {
+    "Gemini-2.5-flash": {
+      "run": "gemini-2.5-flash__coax-direct-k0__shuffled__n491",
+      "base": 43.58,
+      "routed": 47.05,
+      "lift": 3.46,
+      "model_on_routed": 34.1,
+      "detector_on_routed": 75.6
+    },
+    "GPT-4o": {
+      "run": "gpt-4o-2024-11-20__coax-direct-k0__shuffled__n491",
+      "base": 48.88,
+      "routed": 51.12,
+      "lift": 2.24,
+      "model_on_routed": 48.8,
+      "detector_on_routed": 75.6
+    },
+    "Gemini-3.5-flash": {
+      "run": "gemini-3.5-flash__coax-direct-k0__shuffled__n491",
+      "base": 58.04,
+      "routed": 60.29,
+      "lift": 2.24,
+      "model_on_routed": 48.8,
+      "detector_on_routed": 75.6
+    },
+    "Gemini-3.5-flash + primer": {
+      "run": "gemini-3.5-flash__coax-direct-ctx-opgprimer__shuffled__n491",
+      "base": 60.29,
+      "routed": 63.34,
+      "lift": 3.05,
+      "model_on_routed": 39.0,
+      "detector_on_routed": 75.6
+    },
+    "Gemini-3.5-flash + primer + examples": {
+      "run": "gemini-3.5-flash__coax-direct-primerv1+visualex-v2__shuffled__n491",
+      "base": 62.73,
+      "routed": 65.78,
+      "lift": 3.05,
+      "model_on_routed": 39.0,
+      "detector_on_routed": 75.6
+    }
+  },
+  "_generator": "detector/eval_router.py",
+  "_generated_utc": "2026-07-31T17:52:04+00:00"
+}
