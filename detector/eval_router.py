@@ -112,6 +112,12 @@ def main():
     ap.add_argument("--iou", type=float, default=0.45)
     ap.add_argument("--cache", default="results/detector/router_readings.json")
     ap.add_argument("--out", default="results/detector/router_lift.csv")
+    ap.add_argument("--curated", default="curated/mmoral_curated_closed.csv",
+                    help="§7's release manifest. Its rebalanced key is IDENTICAL to the "
+                         "shuffled key (verified), so restricting to the reading score costs "
+                         "no re-scoring — it only removes the 7 items §7 drops as broken.")
+    ap.add_argument("--all-491", action="store_true",
+                    help="score the full 491 including the items §7 drops (the pre-§7 view)")
     ap.add_argument("--refresh", action="store_true")
     args = ap.parse_args()
 
@@ -120,6 +126,15 @@ def main():
     det = detector_readings(args, images)
 
     cl = pd.read_parquet(args.closed)
+    if not args.all_491 and os.path.exists(args.curated):
+        cur = pd.read_csv(args.curated, keep_default_na=False)
+        keep = set(cur[cur.in_reading_score.astype(str).str.lower() == "true"]["index"])
+        dropped = len(cl) - len(cl[cl["index"].isin(keep)])
+        cl = cl[cl["index"].isin(keep)].copy()
+        print(f"scoring the CURATED set: {len(cl)} items "
+              f"({dropped} dropped by §7 as broken). Pass --all-491 for the pre-§7 view.")
+    else:
+        print(f"scoring all {len(cl)} items, including any §7 drops")
     img_col = "file_name" if "file_name" in cl.columns else "image_id"
     cl["kind"] = cl.question.map(route)
 
@@ -154,6 +169,9 @@ def main():
         d = pd.read_csv(f, keep_default_na=False)
         if "correct" not in d.columns or "index" not in d.columns:
             continue
+        # score on the SAME item set the router was applied to, or the denominator silently
+        # stays at 491 while the numerator changes
+        d = d[d["index"].isin(set(cl["index"]))].copy()
         d["base_ok"] = d.correct.astype(str).str.lower().isin(["true", "1"])
         d["routed_ok"] = [dec.get(i, b) for i, b in zip(d["index"], d.base_ok)]
         touched = d[d["index"].isin(dec)]
@@ -181,7 +199,12 @@ def main():
           f"{res.api_calls_saved.iloc[0]}/{res.n.iloc[0]} "
           f"({100*res.api_calls_saved.iloc[0]/res.n.iloc[0]:.0f}% of the closed half)")
     print(f"\n-> {args.out}")
-    emit_paper_table(res, len(dec), len(cl))
+    if args.all_491:
+        # The paper reports the corrected set. Letting the alternate view overwrite the
+        # published fragment is exactly how a table goes stale without anyone noticing.
+        print("\n(--all-491: paper fragment NOT rewritten; it belongs to the curated run)")
+    else:
+        emit_paper_table(res, len(dec), len(cl))
 
 
 if __name__ == "__main__":
