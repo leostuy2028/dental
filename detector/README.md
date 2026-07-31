@@ -41,6 +41,91 @@ so Stage 4 reproduces without retraining: `python detector/infer_mmoral.py --wei
 Retraining produces a *different* model, so replace `best.pt` only alongside re-running the
 downstream results.
 
+---
+
+## Two detectors live here. Know which one you want.
+
+| | `best.pt` (v1) | `best2.pt` (v2) |
+|---|---|---|
+| model | YOLOv8-**nano**, 3M params | YOLOv8-**small**, 11M |
+| classes | 32, one per FDI code | **1** (`tooth`) |
+| trained at | imgsz 1024, mosaic 0.4 | imgsz **1536**, mosaic **0** |
+| DENTEX val | mAP50 0.935 (32-class) | mAP50 0.991, recall 0.985 (1-class) |
+| **inference settings** | `imgsz=1280, conf=0.25, iou=0.7` | **`imgsz=1536, conf=0.20, iou=0.45`** |
+| MMOral exact count | 69.8% (0.66 err) | **81.4%** (0.36 err) |
+| held out, 800 splits | 64.1% | **76.1%** |
+| 28 counting MCQs | 67.9% | **75.0%** |
+
+`best.pt` is kept because every number currently in the paper traces to it. **`best2.pt` is
+the better counter** and is what new work should use.
+
+The mAP figures are **not** comparable: v1's is over 32 classes, so a correctly-placed box
+with the wrong FDI code counted against it. Compare the count rows, not the mAP row.
+
+### The inference settings are not optional
+
+`iou=0.45` is load-bearing for v2, not a nicety. Going single-class removed v1's "one box per
+FDI code" rule, which had been suppressing duplicate boxes as a side effect. At ultralytics'
+default `iou=0.7` v2 counts *worse* than v1 (64% vs 70%) because two boxes land on one tooth
+and nothing collapses them. At 0.45 it reaches 81%. At 0.30 it falls to 42%, because it starts
+merging genuinely adjacent teeth. There is a real optimum in the middle — see
+`results/detector/inference_sweep_v2.csv` for the whole surface.
+
+Same story for numbering: a duplicate box inflates its quadrant's index and shifts every code
+behind it, so `eval_numbering.py` must be passed the same `--iou`.
+
+### Reproduce the v2 numbers (CPU, no GPU, no retraining)
+
+```bash
+# counting: the grid, a held-out check, and the benchmark's 28 counting MCQs
+python detector/tune_inference.py --weights best2.pt --res 1280,1536,1792 --iou 0.3,0.45,0.6,0.7 \
+    --raw results/detector/inference_raw_confs_v2.json --out results/detector/inference_sweep_v2.csv
+
+# numbering: wisdom teeth, scored against the benchmark's own reference answers
+python detector/eval_numbering.py --weights best2.pt --imgsz 1536 --conf 0.20 --iou 0.45 \
+    --out results/detector/numbering_wisdom_v2.csv
+
+# the data-hygiene gate, both class modes
+python detector/test_prepare_qc.py
+```
+
+Raw confidences are cached, so re-runs take seconds; pass `--refresh` to redo inference.
+Both scripts default to `best.pt`, so **always pass `--weights best2.pt`** for v2.
+
+### What the pipeline actually outputs
+
+The network emits only boxes — one class, no tooth numbers:
+
+```
+box [1166, 268, 1242, 611]  conf 0.74  class 0 (tooth)
+```
+
+`number_teeth.py` then adds the FDI code from geometry: fit each arch, find the midline,
+quadrant = arch x side, number outward from the midline. Final per-tooth record:
+
+```
+FDI 11  box [1166, 268, 1242, 611]  conf 0.74
+```
+
+From which the two answerable question types fall out: **how many teeth** = number of boxes;
+**which wisdom teeth** = the codes ending in 8.
+
+### Numbering is NOT solved — do not quote it as working
+
+Wisdom-tooth accuracy is **39%** (per-tooth recall 0.69), against 37% for v1. Better detection
+did not fix it, which rules out detection quality as the cause.
+
+The cause is the method. Numbering counts ordinally outward from the midline, so *any* upstream
+error — one missed tooth, or a midline off by a few percent — shifts every code behind it and
+the third molar lands on 7 instead of 8. Worked example, `016640.jpg`: 30 teeth detected
+(reference 31), all 30 numbered, midline at x=1264 against an image centre of 1236. Quadrants 1
+and 4 reach index 8; quadrants 2 and 3 stop at 7. So the pipeline reports wisdom teeth
+`[18, 48]` while the reference says all four are present. Nothing is missing from the picture —
+the counting scheme simply ran short in two quadrants.
+
+The fix is to assign a code from **normalised position along the arch**, calibrated on DENTEX's
+real expert FDI labels, which is robust to a missing neighbour by construction. Not built yet.
+
 ## Data lives on Drive
 
 `prepare_data.py --out /content/drive/MyDrive/dentex_yolo` writes:
