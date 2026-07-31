@@ -179,3 +179,103 @@ def assign_fdi(boxes):
 def wisdom_teeth(boxes):
     """The FDI codes ending in 8 that this image actually has (the third molars)."""
     return sorted(c for c in assign_fdi(boxes) if c and c.endswith("8"))
+
+
+# ---------------------------------------------------------------------------------------
+# Positional numbering: assign the FDI index from WHERE a tooth sits, not from how many
+# teeth precede it.
+#
+# assign_fdi() above counts ordinally outward from the midline, so any upstream error --
+# one undetected tooth, or a midline off by a couple of percent -- shifts every index
+# behind it and the third molar lands on 7. Measured: 39% on wisdom teeth, and better
+# detection did not move it (37% -> 39% from v1 to v2), which rules out box quality as
+# the cause.
+#
+# A third molar instead sits at a characteristic DISTANCE from the midline whether or not
+# the premolar in front of it is present. So: measure arc length along the fitted arch,
+# express it in tooth-widths (self-scaling, so it survives a change of scanner without
+# recalibration), and match against a prior calibrated on DENTEX's real expert FDI labels.
+# A missing tooth then leaves a hole rather than renaming everything behind it.
+
+def _arc_len(q, x0, x1, steps=24):
+    """Arc length along y = ax^2+bx+c between two x values. Sign follows x1-x0."""
+    a, b, _ = q
+    lo, hi = (x0, x1) if x1 >= x0 else (x1, x0)
+    h = (hi - lo) / steps
+    total = 0.0
+    for i in range(steps):
+        t = lo + h * (i + 0.5)
+        slope = 2 * a * t + b
+        total += h * (1.0 + slope * slope) ** 0.5
+    return total if x1 >= x0 else -total
+
+
+def tooth_positions(boxes):
+    """[(quadrant, normalised arc distance from the midline), ...] aligned with boxes.
+
+    Distance is measured along the fitted arch curve and divided by the median box width in
+    this image, so the unit is 'tooth-widths' and does not depend on image size or scanner.
+    """
+    if not boxes:
+        return []
+    centres = [_centre(b) for b in boxes]
+    side = split_arches(centres)
+    mid = find_midline(centres, side)
+    widths = sorted(abs(b[2] - b[0]) for b in boxes)
+    unit = widths[len(widths) // 2] or 1.0
+
+    fits = {}
+    for arch in ("upper", "lower"):
+        pts = [p for p, s in zip(centres, side) if s == arch]
+        fits[arch] = _fit_quadratic(pts) if len(pts) >= 3 else (0.0, 0.0, 0.0)
+
+    out = []
+    for (cx, _), s in zip(centres, side):
+        hand = "left" if cx < mid else "right"
+        d = abs(_arc_len(fits[s], mid, cx)) / unit
+        out.append((QUADRANT[(s, hand)], d))
+    return out
+
+
+def assign_fdi_positional(boxes, prior):
+    """boxes -> ['11', ...] using a calibrated position prior.
+
+    prior maps an index '1'..'8' to the typical distance in tooth-widths. Within a quadrant
+    the teeth are matched to indices by the cheapest assignment that keeps indices strictly
+    increasing outward -- a small dynamic program, so one odd tooth cannot scramble the rest.
+    """
+    pos = tooth_positions(boxes)
+    out = [None] * len(boxes)
+    for q in (1, 2, 3, 4):
+        members = sorted((i for i, (qq, _) in enumerate(pos) if qq == q),
+                         key=lambda i: pos[i][1])
+        if not members:
+            continue
+        d = [pos[i][1] for i in members]
+        exp = [prior[str(k)] for k in range(1, 9)]
+        n, m = len(d), 8
+        INF = float("inf")
+        # best[i][k] = cheapest way to place the first i teeth using indices up to k
+        best = [[INF] * (m + 1) for _ in range(n + 1)]
+        back = [[None] * (m + 1) for _ in range(n + 1)]
+        for k in range(m + 1):
+            best[0][k] = 0.0
+        for i in range(1, n + 1):
+            for k in range(1, m + 1):
+                skip = best[i][k - 1]                       # index k unused (missing tooth)
+                take = best[i - 1][k - 1] + abs(d[i - 1] - exp[k - 1])
+                if take <= skip:
+                    best[i][k], back[i][k] = take, "take"
+                else:
+                    best[i][k], back[i][k] = skip, "skip"
+        i, k = n, m
+        while i > 0 and k > 0:
+            if back[i][k] == "take":
+                out[members[i - 1]] = f"{q}{k}"
+                i -= 1
+            k -= 1
+    return out
+
+
+def wisdom_teeth_positional(boxes, prior):
+    return sorted(c for c in assign_fdi_positional(boxes, prior) if c and c.endswith("8"))

@@ -26,7 +26,7 @@ import sys
 import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from number_teeth import assign_fdi
+from number_teeth import assign_fdi, assign_fdi_positional
 
 BOX_RE = re.compile(r'box_2d"?\s*:\s*\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\]')
 ID_RE = re.compile(r'tooth_id"?\s*:\s*"?(\d{2})')
@@ -54,11 +54,24 @@ def main():
                          "one tooth inflate that quadrant's index and shift every code "
                          "behind it. The single-class model needs ~0.45; 0.7 is the "
                          "ultralytics default and is far too permissive for it.")
+    ap.add_argument("--method", choices=["ordinal", "positional"], default="ordinal",
+                    help="ordinal counts outward from the midline; positional matches each "
+                         "tooth's arc distance against the DENTEX-calibrated prior")
+    ap.add_argument("--prior", default="detector/arch_prior.json")
     ap.add_argument("--out", default="results/detector/numbering_wisdom.csv")
     args = ap.parse_args()
 
     from PIL import Image
     from ultralytics import YOLO
+
+    if args.method == "positional":
+        import json
+        prior = json.load(open(args.prior))["median"]
+        print(f"positional numbering, prior from {args.prior} "
+              f"(calibrated on DENTEX expert labels)")
+        number = lambda b: assign_fdi_positional(b, prior)
+    else:
+        number = assign_fdi
 
     op = pd.read_parquet(args.data)
     wis = op[op.question.str.contains("wisdom", case=False)]
@@ -88,7 +101,7 @@ def main():
         r = model.predict(im, imgsz=args.imgsz, conf=args.conf, iou=args.iou,
                           agnostic_nms=True, verbose=False)[0]
         boxes = [tuple(round(v) for v in b) for b in r.boxes.xyxy.tolist()]
-        pred = {c for c in assign_fdi(boxes) if c and c.endswith("8")}
+        pred = {c for c in number(boxes) if c and c.endswith("8")}
         rows.append(dict(image=name, n_boxes=len(boxes),
                          truth="|".join(sorted(gt)), pred="|".join(sorted(pred)),
                          exact_set=pred == gt, n_truth=len(gt), n_pred=len(pred),
@@ -121,7 +134,7 @@ def main():
         rr = model.predict(im, imgsz=args.imgsz, conf=args.conf, iou=args.iou,
                           agnostic_nms=True, verbose=False)[0]
         boxes = [tuple(round(v) for v in b) for b in rr.boxes.xyxy.tolist()]
-        codes = assign_fdi(boxes)
+        codes = number(boxes)
         for gb, gid in pairs:
             j = max(range(len(boxes)), key=lambda k: iou(boxes[k], gb)) if boxes else None
             box_rows.append(dict(image=r.image_name, gt_code=gid,
