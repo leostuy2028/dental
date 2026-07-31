@@ -49,6 +49,11 @@ def main():
     ap.add_argument("--data", default="data/open_ended.parquet")
     ap.add_argument("--imgsz", type=int, default=1280)
     ap.add_argument("--conf", type=float, default=0.25)
+    ap.add_argument("--iou", type=float, default=0.7,
+                    help="NMS overlap threshold. LOAD-BEARING for numbering: two boxes on "
+                         "one tooth inflate that quadrant's index and shift every code "
+                         "behind it. The single-class model needs ~0.45; 0.7 is the "
+                         "ultralytics default and is far too permissive for it.")
     ap.add_argument("--out", default="results/detector/numbering_wisdom.csv")
     args = ap.parse_args()
 
@@ -80,7 +85,8 @@ def main():
     for name, gt in sorted(truth.items()):
         blob = base64.b64decode(re.sub(r"^data:image/\w+;base64,", "", str(imgs[name])))
         im = Image.open(io.BytesIO(blob)).convert("RGB")
-        r = model.predict(im, imgsz=args.imgsz, conf=args.conf, agnostic_nms=True, verbose=False)[0]
+        r = model.predict(im, imgsz=args.imgsz, conf=args.conf, iou=args.iou,
+                          agnostic_nms=True, verbose=False)[0]
         boxes = [tuple(round(v) for v in b) for b in r.boxes.xyxy.tolist()]
         pred = {c for c in assign_fdi(boxes) if c and c.endswith("8")}
         rows.append(dict(image=name, n_boxes=len(boxes),
@@ -112,7 +118,8 @@ def main():
             continue
         blob = base64.b64decode(re.sub(r"^data:image/\w+;base64,", "", str(imgs[r.image_name])))
         im = Image.open(io.BytesIO(blob)).convert("RGB")
-        rr = model.predict(im, imgsz=args.imgsz, conf=args.conf, agnostic_nms=True, verbose=False)[0]
+        rr = model.predict(im, imgsz=args.imgsz, conf=args.conf, iou=args.iou,
+                          agnostic_nms=True, verbose=False)[0]
         boxes = [tuple(round(v) for v in b) for b in rr.boxes.xyxy.tolist()]
         codes = assign_fdi(boxes)
         for gb, gid in pairs:

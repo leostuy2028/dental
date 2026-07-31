@@ -38,7 +38,12 @@ import pandas as pd
 
 RES = [768, 1024, 1280, 1536, 1792, 2048]
 CONF = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.60]
-SHIPPED = (1024, 0.25)
+# NMS overlap threshold. 0.7 is ultralytics' default and the only value v1 ever used, so it
+# stays first and alone by default -- that keeps the v1 numbers reproducible. It becomes a real
+# axis for the single-class model, where nothing downstream collapses two boxes on one tooth
+# any more (v1's "one box per FDI code" rule was doing that job as a side effect).
+IOU = [0.7]
+SHIPPED = (1024, 0.25, 0.7)
 PURE = re.compile(r"^how many (natural |permanent )?teeth (are|were|is|was)?\s*"
                   r"(visualized|visible|present|detected|seen)[^,]*\??$", re.I)
 OPTS = ["option1", "option2", "option3", "option4"]
@@ -61,7 +66,14 @@ def load_raw(args, op):
     """(imgsz, image) -> descending list of surviving box confidences."""
     if os.path.exists(args.raw) and not args.refresh:
         with open(args.raw) as f:
-            return {(int(k.split("|", 1)[0]), k.split("|", 1)[1]): v for k, v in json.load(f).items()}
+            out = {}
+            for k, v in json.load(f).items():
+                parts = k.split("|")
+                if len(parts) == 2:            # v1 cache, written before iou was an axis
+                    out[(int(parts[0]), 0.7, parts[1])] = v
+                else:
+                    out[(int(parts[0]), float(parts[1]), parts[2])] = v
+            return out
 
     from PIL import Image
     from ultralytics import YOLO
@@ -75,19 +87,26 @@ def load_raw(args, op):
     model = YOLO(args.weights)
     raw = {}
     for imgsz in RES:
-        for name, im in decoded.items():
-            r = model.predict(im, imgsz=imgsz, conf=0.01, agnostic_nms=True, verbose=False)[0]
-            raw[(imgsz, name)] = sorted((float(c) for c in r.boxes.conf.tolist()), reverse=True)
-        print(f"  imgsz={imgsz} done", flush=True)
+        for u in IOU:
+            for name, im in decoded.items():
+                r = model.predict(im, imgsz=imgsz, conf=0.01, iou=u,
+                                  agnostic_nms=True, verbose=False)[0]
+                raw[(imgsz, u, name)] = sorted((float(c) for c in r.boxes.conf.tolist()),
+                                               reverse=True)
+            print(f"  imgsz={imgsz} iou={u} done", flush=True)
 
     os.makedirs(os.path.dirname(args.raw) or ".", exist_ok=True)
     with open(args.raw, "w") as f:
-        json.dump({f"{i}|{n}": v for (i, n), v in raw.items()}, f)
+        json.dump({f"{i}|{u}|{n}": v for (i, u, n), v in raw.items()}, f)
     return raw
 
 
+def settings():
+    return [(i, c, u) for i in RES for u in IOU for c in CONF]
+
+
 def count_at(raw, setting, name):
-    return sum(1 for c in raw[(setting[0], name)] if c >= setting[1])
+    return sum(1 for c in raw[(setting[0], setting[2], name)] if c >= setting[1])
 
 
 def exact_rate(raw, ref, setting, subset):
@@ -103,8 +122,17 @@ def main():
     ap.add_argument("--raw", default="results/detector/inference_raw_confs.json")
     ap.add_argument("--out", default="results/detector/inference_sweep.csv")
     ap.add_argument("--splits", type=int, default=400)
+    ap.add_argument("--iou", default="0.7",
+                    help="comma-separated NMS overlap thresholds to sweep. Default 0.7 "
+                         "(ultralytics' default, what v1 used). Widen it for the single-class "
+                         "model, whose duplicate boxes nothing else collapses.")
+    ap.add_argument("--res", default="", help="comma-separated resolutions (default: the full grid)")
     ap.add_argument("--refresh", action="store_true", help="re-run inference, ignore the cache")
     args = ap.parse_args()
+    global IOU, RES
+    IOU = [float(v) for v in args.iou.split(",")]
+    if args.res:
+        RES = [int(v) for v in args.res.split(",")]
 
     op, ref = reference_counts(args.open)
     raw = load_raw(args, op)
@@ -113,10 +141,9 @@ def main():
 
     # ---- 1. the grid -------------------------------------------------------------
     rows = []
-    for imgsz in RES:
-        for conf in CONF:
-            errs = [abs(count_at(raw, (imgsz, conf), n) - ref[n]) for n in names]
-            rows.append(dict(imgsz=imgsz, conf=conf, n=len(names),
+    for imgsz, conf, u in settings():
+            errs = [abs(count_at(raw, (imgsz, conf, u), n) - ref[n]) for n in names]
+            rows.append(dict(imgsz=imgsz, conf=conf, iou=u, n=len(names),
                              exact=100 * sum(e == 0 for e in errs) / len(errs),
                              within1=100 * sum(e <= 1 for e in errs) / len(errs),
                              mae=sum(errs) / len(errs)))
@@ -124,12 +151,15 @@ def main():
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
     grid.to_csv(args.out, index=False)
 
-    print("exact-count %  (rows = imgsz, cols = conf)")
-    print(grid.pivot(index="imgsz", columns="conf", values="exact").round(0).to_string())
-    best = max(((i, c) for i in RES for c in CONF), key=lambda s: exact_rate(raw, ref, s, names))
-    for label, s in (("shipped ", SHIPPED), ("best    ", best)):
-        r = grid[(grid.imgsz == s[0]) & (grid.conf == s[1])].iloc[0]
-        print(f"\n  {label} imgsz={s[0]}, conf={s[1]}:  "
+    print("exact-count %  (rows = imgsz x nms-iou, cols = conf)")
+    print(grid.pivot(index=["imgsz", "iou"], columns="conf", values="exact").round(0).to_string())
+    best = max(settings(), key=lambda s: exact_rate(raw, ref, s, names))
+    shown = [("best    ", best)]
+    if SHIPPED[0] in RES and SHIPPED[2] in IOU:
+        shown.insert(0, ("shipped ", SHIPPED))
+    for label, s in shown:
+        r = grid[(grid.imgsz == s[0]) & (grid.conf == s[1]) & (grid.iou == s[2])].iloc[0]
+        print(f"\n  {label} imgsz={s[0]}, conf={s[1]}, iou={s[2]}:  "
               f"exact {r.exact:.1f}%   within-1 {r.within1:.1f}%   mean err {r.mae:.2f}")
 
     # ---- 2. held-out check -------------------------------------------------------
@@ -140,17 +170,18 @@ def main():
         rng.shuffle(sh)
         a, b = sh[:len(sh) // 2], sh[len(sh) // 2:]
         for tune, test in ((a, b), (b, a)):
-            pick = max(((i, c) for i in RES for c in CONF),
-                       key=lambda s: exact_rate(raw, ref, s, tune))
+            pick = max(settings(), key=lambda s: exact_rate(raw, ref, s, tune))
             chosen[pick] = chosen.get(pick, 0) + 1
             held.append(exact_rate(raw, ref, pick, test))
-            base_held.append(exact_rate(raw, ref, SHIPPED, test))
+            if SHIPPED[0] in RES and SHIPPED[2] in IOU:
+                base_held.append(exact_rate(raw, ref, SHIPPED, test))
     print(f"\n{2 * args.splits} tune/test splits — tuned on half, scored on the unseen half:")
     print(f"  tuned setting, held out : {st.mean(held):.1f}%")
-    print(f"  shipped setting, same   : {st.mean(base_held):.1f}%")
-    print(f"  gain that survives      : {st.mean(held) - st.mean(base_held):+.1f} points")
+    if base_held:
+        print(f"  shipped setting, same   : {st.mean(base_held):.1f}%")
+        print(f"  gain that survives      : {st.mean(held) - st.mean(base_held):+.1f} points")
     top = sorted(chosen.items(), key=lambda kv: -kv[1])[0]
-    print(f"  most-chosen setting     : imgsz={top[0][0]}, conf={top[0][1]} "
+    print(f"  most-chosen setting     : imgsz={top[0][0]}, conf={top[0][1]}, iou={top[0][2]} "
           f"({100 * top[1] / len(held):.0f}% of splits)")
 
     # ---- 3. payoff on the benchmark's own counting questions ---------------------
@@ -160,8 +191,7 @@ def main():
     mcq = mcq[mcq[OPTS].map(lambda v: bool(re.fullmatch(r"\s*\d+\s*", str(v)))).all(axis=1)]
     test_imgs = set(mcq.file_name)
     tune_imgs = [n for n in names if n not in test_imgs]
-    clean = max(((i, c) for i in RES for c in CONF),
-                key=lambda s: exact_rate(raw, ref, s, tune_imgs))
+    clean = max(settings(), key=lambda s: exact_rate(raw, ref, s, tune_imgs))
 
     def detector_mcq(setting):
         hit = 0
@@ -174,9 +204,10 @@ def main():
 
     print(f"\n{len(mcq)} pure-count multiple-choice questions on {len(test_imgs)} images.")
     print(f"setting chosen on the {len(tune_imgs)} images carrying none of them: "
-          f"imgsz={clean[0]}, conf={clean[1]}")
+          f"imgsz={clean[0]}, conf={clean[1]}, iou={clean[2]}")
     print(f"  detector, tuned   : {detector_mcq(clean):.1f}%")
-    print(f"  detector, shipped : {detector_mcq(SHIPPED):.1f}%")
+    if SHIPPED[0] in RES and SHIPPED[2] in IOU:
+        print(f"  detector, shipped : {detector_mcq(SHIPPED):.1f}%")
     idx = set(mcq["index"])
     scores = []
     for f in glob.glob("results/closed_ended/**/*.csv", recursive=True):
