@@ -112,13 +112,19 @@ def _fmt(row, template):
     )
 
 
-def build_prompt(row, examples=None, cot=False, mode="faithful", detail="high"):
+def build_prompt(row, examples=None, cot=False, mode="faithful", detail="high", context=None, chart=None):
     if mode not in ("faithful", "coax"):
         raise ValueError(f"unknown prompt mode: {mode}")
 
     system = COAX_SYSTEM if mode == "coax" else None
 
     content = []
+    # Primer goes before the image, matching prompts/gemini.py so a GPT-family run with
+    # --context is comparable to the gemini SOTA row rather than merely similar. It is also
+    # a constant prefix, which is what OpenAI's prompt cache can reuse across questions.
+    if context:
+        content.append(_text_part(context.strip() + "\n"))
+
     if examples:
         content.append(_text_part("Here are some examples:\n"))
         for ex in examples:
@@ -136,5 +142,9 @@ def build_prompt(row, examples=None, cot=False, mode="faithful", detail="high"):
     else:
         block = _fmt(row, COAX_COT_BLOCK if cot else COAX_BLOCK)
 
+    if chart:
+        # after the question, so the model has read what is being asked before it sees the
+        # tool output; and outside the cached primer prefix, since it varies per image
+        block = block + "\n\n" + chart + "\n"
     content.append(_text_part(block))
     return system, content

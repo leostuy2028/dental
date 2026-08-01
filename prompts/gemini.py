@@ -103,7 +103,7 @@ def _half_crops(b64_string):
 
 
 def build_prompt(row, examples=None, cot=False, mode="house", context=None, max_image_px=None,
-                 crops=False, visual_exemplars=None):
+                 crops=False, visual_exemplars=None, chart=None):
     """
     Build a Gemini content list for a closed-ended question.
 
@@ -161,5 +161,10 @@ def build_prompt(row, examples=None, cot=False, mode="house", context=None, max_
         option3=row["option3"],
         option4=row["option4"],
     ))
+
+    if chart:
+        # after the question, matching prompts/gpt.py, so the model reads what is being asked
+        # before it sees the tool output
+        parts.append("\n" + chart + "\n")
 
     return parts

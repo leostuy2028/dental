@@ -1,0 +1,19 @@
+{
+  "experiment": "fdimap-gemini-taste",
+  "paper_section": "8",
+  "description": "Gemini-3.5-flash + OPG primer + v2 detector tooth chart, seeded random 180 of the shuffled 491. Compared against the committed 2026-07-08 no-chart baseline on the same items (3-week alias gap: provisional)",
+  "context_file": "reference/opg_primer.txt",
+  "detector_map": "reference/mmoral_map_v2.json",
+  "max_image_px": "full",
+  "crops": false,
+  "visual_exemplars": "",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_shuffled_sample180.parquet",
+  "n": 180,
+  "accuracy_pct": 63.33,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --data data/closed_ended_shuffled_sample180.parquet --context reference/opg_primer.txt --detector-map reference/mmoral_map_v2.json --paper-section 8 --out results/closed_ended/knowledge_context/gemini-3.5-flash__coax-direct-ctx-opgprimer-fdimap__sample180.csv --exp fdimap-gemini-taste --description Gemini-3.5-flash + OPG primer + v2 detector tooth chart, seeded random 180 of the shuffled 491. Compared against the committed 2026-07-08 no-chart baseline on the same items (3-week alias gap: provisional)",
+  "code_commit": "26fd2c5",
+  "generated_utc": "2026-07-31T20:21:13+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-ctx-opgprimer-fdimap__sample180.csv"
+}

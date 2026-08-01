@@ -10,6 +10,7 @@ Slicing matches the Gemini harness:
   k==0 -> score the whole dataset (0-shot); use --start/--limit for a sub-slice.
   For the full 453-item E1 run: --k 0 --start 0  (no --limit).
 """
+import json
 import os
 import sys
 import random
@@ -73,7 +74,8 @@ def print_summary(df, model, k, mode):
 
 
 def run(model, k, results_path, data_path, mode="faithful", cot=False,
-        limit=None, start=0, reasoning_effort="none", meta=None, detail="high"):
+        limit=None, start=0, reasoning_effort="none", meta=None, detail="high",
+        context=None, detector_map=None, service_tier=None):
     # HARD-ENFORCE the benchmark-faithful config for the reproduction path. The faithful
     # prompt only reproduces the paper if the generation settings also match
     # config_mmoral_opg.json (temp=0, max_tokens=8192, img_detail=high). We force image detail
@@ -120,10 +122,19 @@ def run(model, k, results_path, data_path, mode="faithful", cot=False,
         if row["index"] in done_indices:
             continue
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
+        chart = None
+        if detector_map:
+            key = row.get("file_name") or row.get("image_id")
+            entry = detector_map.get(str(key))
+            if entry:
+                from detector.tooth_chart import build_chart
+                chart = build_chart(entry)
         system, content = build_prompt(row, examples=examples or None, cot=cot,
-                                       mode=mode, detail=detail)
+                                       mode=mode, detail=detail, context=context,
+                                       chart=chart)
         try:
             raw = gpt_client.call(system, content, model=model, cot=cot,
+                                  service_tier=service_tier,
                                   reasoning_effort=reasoning_effort)
         except APICallFailed as e:
             # skip: leave the item out of the CSV so it is retried on the next resume,
@@ -180,6 +191,12 @@ def run(model, k, results_path, data_path, mode="faithful", cot=False,
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--model", default="gpt-4o-2024-11-20")
+    p.add_argument("--service-tier", default=None, choices=["auto","default","flex","priority"],
+                   help="flex is half price for identical output (latency tradeoff only)")
+    p.add_argument("--detector-map", default=None,
+                   help="JSON tooth map (reference/mmoral_map_v2.json). Its chart is appended to each question, so the model ANSWERS with the detector as a hint rather than the detector answering directly.")
+    p.add_argument("--context", default=None,
+                   help="file whose text is prepended as a preamble, e.g. reference/opg_primer.txt (§5.4). Same placement as eval_closed_gemini.py.")
     p.add_argument("--k", type=int, default=0)
     p.add_argument("--out", default=None)
     p.add_argument("--data", default="data/closed_ended.parquet")
@@ -201,9 +218,15 @@ if __name__ == "__main__":
         cot_tag = "cot" if args.cot else "direct"
         args.out = f"results/closed_gpt_{args.model}_{args.prompt}_{cot_tag}_k{args.k}_{tag}.csv"
 
+    context_text = open(args.context, encoding="utf-8").read() if args.context else None
+    dmap = json.load(open(args.detector_map)) if args.detector_map else None
     meta = {"experiment": args.exp, "paper_section": args.paper_section,
-            "description": args.description}
+            "description": args.description, "context_file": args.context or "",
+            "reasoning_effort": args.reasoning_effort,
+            "detector_map": args.detector_map or "",
+            "service_tier": args.service_tier or "default"}
 
     run(model=args.model, k=args.k, results_path=args.out, data_path=args.data,
         mode=args.prompt, cot=args.cot, limit=args.limit, start=args.start,
-        reasoning_effort=args.reasoning_effort, meta=meta, detail=args.detail)
+        reasoning_effort=args.reasoning_effort, meta=meta, detail=args.detail,
+        context=context_text, detector_map=dmap, service_tier=args.service_tier)

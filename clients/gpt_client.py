@@ -64,7 +64,7 @@ def extract_answer(text, cot=False):
 
 
 def call(system, user_content, model=None, cot=False, reasoning_effort="none",
-         retries=4):
+         retries=4, service_tier=None):
     """Return the model's RAW output string. Answer extraction is done by the
     harness (mode-dependent: faithful=VLMEvalKit parser, coax=strict). An empty
     string is a real (empty) model reply; a genuine API failure raises APICallFailed
@@ -77,9 +77,22 @@ def call(system, user_content, model=None, cot=False, reasoning_effort="none",
     messages.append({"role": "user", "content": user_content})
 
     kwargs = dict(model=model, messages=messages)
+    if service_tier:
+        # "flex" is half price for the same model and the same output; it trades
+        # latency, not quality, so it does not affect any measured result.
+        kwargs["service_tier"] = service_tier
     if is_reasoning_model(model):
-        # reasoning models need headroom for hidden reasoning even at effort="none"
-        kwargs["max_completion_tokens"] = 4000 if cot else 2000
+        # Reasoning models need headroom for hidden reasoning even at effort="none", and the
+        # cap has to clear the REASONING spend or the answer never gets emitted: the budget is
+        # consumed thinking and the reply comes back empty, which the harness would then score
+        # as wrong. Measured on gpt-5.6-luna, reasoning tokens alone are ~512 (low), ~1024
+        # (medium), ~2326 (high), ~12100 (xhigh) — so the old flat 2000 silently truncated
+        # every high and xhigh call.
+        # none/low/medium keep the original 2000/4000 so previously committed runs are
+        # unaffected; only the levels that overflow it get more room.
+        base = 4000 if cot else 2000
+        headroom = {"high": 8000, "xhigh": 24000}.get(reasoning_effort, base)
+        kwargs["max_completion_tokens"] = max(base, headroom)
         kwargs["reasoning_effort"] = reasoning_effort
     else:
         # benchmark-faithful, single-sourced (see constants above) — never hand-tune here
