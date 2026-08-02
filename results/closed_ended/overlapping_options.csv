@@ -1,0 +1,43 @@
+index,kind,opt_i,opt_j,text_i,text_j,key,key_in_pair,question
+3,contains,A,B,#15,"#15, and #16",B,True,Which of the following teeth has a crown and root canal treatment?
+6,contains,A,D,Bilateral maxillary sinuses,Bilateral mandibular canals and bilateral maxillary sinuses,D,True,Which structures are visible in the image?
+9,contains,B,D,No,Not mentioned,B,True,Is there any apparent bone loss in the image?
+17,contains,A,D,#18,"#18, #47, and #48",D,True,Which tooth shows evidence of a periapical lesion?
+30,contains,B,D,No,Not mentioned,B,True,Is there apparent bone loss observed in the jaw?
+37,contains,B,C,Obscuration and Signs of infection,Obscuration,B,True,Which of the following is NOT a finding related to the maxillary sinuses?
+63,contains,B,C,#45 and #47,#45,B,True,Which tooth is described as having an implant restoration?
+64,contains,A,D,#24 and #34,#34,A,True,Which tooth is suspected to have a periapical granuloma?
+80,contains,A,B,Abnormal bone architecture,Normal bone architecture,B,True,What is noted regarding the bone architecture?
+81,contains,A,B,Abnormal features,Normal features,B,True,What is observed in the maxillary sinuses?
+93,contains,A,B,#8,#18,B,True,Which of the following teeth is identified as a wisdom tooth?
+115,contains,B,C,#24 and #36,#36,B,True,Which tooth has both a crown and root canal treatment?
+117,near-duplicate,A,C,Bilateral mandibular canals and maxillary sinuses,Bilateral maxillary canals and mandibular sinuses,A,True,Which structures are visible in the imaging?
+122,contains,A,B,#18 and #28,#28,A,True,Which tooth is erupted as a wisdom tooth?
+138,contains,A,D,#18 and #48,#48,A,True,Which tooth is impacted?
+139,contains,A,C,Bone loss,No apparent bone loss,C,True,What is observed in the jawbone?
+147,contains,A,B,Mandibular canals and maxillary sinuses,Maxillary sinuses,A,True,Which structure is visible bilaterally in the maxilla?
+159,contains,A,D,Caries,Deep caries,C,False,What is the pathological finding at tooth 26?
+171,contains,A,B,"#14, #25, #37",#25,A,True,Which of the following teeth does NOT show signs of fillings?
+195,contains,B,D,#28,"#28, #38, #48",D,True,Which wisdom tooth is likely erupted?
+208,contains,A,D,"#14, #15, #25",#15,D,True,Which teeth are suspected to have caries?
+225,contains,B,D,No,Not mentioned,B,True,Is there any apparent bone loss visible in the image?
+227,contains,B,D,#12 and #22,#22,B,True,Which tooth has a crown restoration without any signs of root canal treatment?
+231,contains,B,C,#11 and #21,#21,B,True,Which tooth has signs of a crown and root canal treatment with restoration?
+248,near-duplicate,C,D,"#38 impacted, #48 erupted","#38 erupted, #48 impacted",B,False,Which of the following is true about the wisdom teeth 38 and 48?
+254,contains,A,B,#35,#35 and #36,B,True,Which tooth has a suspected periapical granuloma?
+257,contains,B,C,#36 and #37,#37,B,True,Which tooth shows signs of a periapical abscess?
+263,contains,B,C,#35,#25 and #35,C,True,Which tooth has signs of a crown and root canal treatment?
+276,near-duplicate,A,C,Well-defined with significant pathology,Well-defined with no significant pathology,C,True,What is the condition of the maxillary sinuses?
+282,contains,B,C,"#35, #36","#35, #36, #37",C,True,Which teeth show signs of crown restorations?
+303,contains,A,B,Apparent bone loss,No apparent bone loss,B,True,What is the observed condition of the bone architecture?
+326,contains,B,C,#36,#36 and #37,C,True,Which tooth shows signs of a periapical abscess?
+332,contains,A,B,Erupted,Partially erupted,C,False,What is the status of tooth 38?
+354,contains,B,D,#46,#25 and #46,D,True,Which of the following is NOT a tooth with a crown?
+379,near-duplicate,A,C,"#47, #37, #27","#27, #37, #47",C,True,Which teeth show signs of caries?
+389,contains,B,D,#28,#28 and #37,D,True,Which of the following teeth does NOT show signs of caries?
+415,contains,A,C,Absence of bilateral mandibular canals,Bilateral mandibular canals,C,True,What is a notable finding in the bilateral mandibular canals?
+439,contains,B,D,No,Not specified,B,True,Is there any apparent bone loss in the image?
+445,contains,B,D,No,Not mentioned,B,True,Is there any apparent bone loss in the jaw?
+463,contains,A,B,Apparent bone loss,No apparent bone loss,B,True,What is the status of the bone architecture in the radiograph?
+469,contains,A,D,Apparent bone loss,No apparent bone loss,A,True,Which of the following is NOT a finding in the bone architecture?
+479,contains,A,B,#45 and #46,#46,B,True,Which teeth show signs of root canal treatment?
