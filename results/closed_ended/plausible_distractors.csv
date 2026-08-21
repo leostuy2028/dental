@@ -1,0 +1,429 @@
+index,key_type,key,new_options,new_answer,old_options
+0,tooth_codes,#15,"#15|#32|#36|#12, #11, #21",A,#27|#15|#24|#42
+1,count,31,31|21|6|29,A,34|28|32|31
+2,tooth_codes,#46,#27|#12 and #22|#25 and #35|#46,D,#46|#47|#48|#45
+3,tooth_codes,"#15, and #16","#15, and #16|#21|#25|#32",A,"#31|#15|#26|#15, and #16"
+4,bone_loss_severity,Apparent alveolar bone loss noted,"Mild bone loss in the upper jaw|No bone loss detected|Yes, mild bone loss|Apparent alveolar bone loss noted",D,No apparent bone loss|Apparent alveolar bone loss noted|No mandibular canals visible|Unilateral mandibular canals
+5,prose,Endodontic evaluation,Bitewing radiographs|Obscuration and Signs of infection|Endodontic evaluation|Impacted,C,Extraction|Filling|Endodontic evaluation|Crown restoration
+6,anatomy,Bilateral mandibular canals and bilateral maxillary sinuses,Normal bone architecture|Sphenoid sinus|Bilateral mandibular canals and bilateral maxillary sinuses|Root canal treatment or extraction,C,Bilateral mandibular canals and bilateral maxillary sinuses|Nasal cavity|Unilateral mandibular canal|Bilateral maxillary sinuses
+7,tooth_codes,#36,"#12, #11, #21|Tooth 12|#27, #37, #47|#36",D,#37|#35|#34|#36
+8,tooth_codes,#38,"#12, #11, #21|#38|#24 and #34|#24",B,#35|#38|#39|#37
+10,tooth_codes,#46,#46|#26|Tooth 12|#47 and #26,A,#48|#46|#38|#28
+11,tooth_codes,#48,#48|#43|#21|#36 and #37,A,#18 and #28|#48|#28 and #38|#18 and #38
+12,count,32,32|1|22|21,A,30|32|31|33
+13,tooth_codes,#46,#24 and #36|#25 and #35|#37|#46,D,#48|#28|#38|#46
+14,count,4,30|1|12|4,D,3|5|4|2
+15,bone_loss_severity,No apparent bone loss,No apparent bone loss|Mild bone loss|Suggestive of bone loss|Mild bone loss in the upper jaw,A,No apparent bone loss|Mild bone loss|Severe bone loss|Moderate bone loss
+16,tooth_codes,#18,#17|#18|#33|Dental filling on tooth 46,B,#17|#38|#18|#28
+17,tooth_codes,"#18, #47, and #48","#16, #27, #46, and #37|#24 and #34|#18, #47, and #48|#11",C,"#18|#47|#28|#18, #47, and #48"
+18,tooth_codes,#36,Periapical cyst at 37|#45|#11|#36,D,#37|#38|#35|#36
+19,tooth_codes,#26,Periapical cyst at 37|#26|#34|Periapical lesion on tooth 37,B,#25|#27|#26|#24
+20,tooth_codes,#38,#47|#12|#38|#45,C,#11|#37|#12|#38
+21,tooth_codes,#35,#35|#11 and #21|#37|#27,A,#34|#36|#37|#35
+22,tooth_codes,#36,"#27, #37, #47|#36|#12 and #22|#24",B,#37|#36|#34|#35
+23,tooth_codes,"#35, #38, #45, #46","#25|#11|#27|#35, #38, #45, #46",D,"#35, #38, #45, #46|#11, #21, #31, #41|#14, #24, #34, #44|#55, #65, #75, #85"
+24,tooth_codes,#46,#11|#46|#36|#33,B,#46|#36|#26|#56
+26,tooth_codes,"#18, #28, #38, #48","#18, #28, #38, #48|#36|#43|#34",A,"#52, #62, #72, #82|#15, #25, #35, #45|#11, #21, #31, #41|#18, #28, #38, #48"
+27,anatomy,Bilateral mandibular canals,Root canal treatment or extraction|Normal bone architecture|Bilateral mandibular canals|Both mandibular canals and maxillary sinuses,C,Bilateral mandibular canals|Unilateral mandibular canals|No mandibular canals|Mandibular fractures
+28,prose,No obvious caries,None of the above|No obvious caries|Crown|Clear bilaterally,B,#18 and #38|No obvious caries|#28 and #48|#15 and #23
+29,prose,Ethmoid air cells,Erupted|Visible bilaterally|Ethmoid air cells|No significant findings,C,Ethmoid air cells|Nasal cavity|Maxillary sinuses|Mandibular canals
+31,tooth_codes,#46,#12|#45|#46|#24,C,#36|#46|#23|#15
+32,prose,Endodontic evaluation,Upper side|All wisdom teeth are erupted|Endodontic evaluation|Restore missing teeth in the upper jaw,C,Immediate extraction|Endodontic evaluation|Crown restoration|Monitor with radiographic follow-up
+33,tooth_codes,#41,"#45|#15|#41|#36, 37, 46",C,#40|#42|#43|#41
+34,count,4,22|23|25|4,D,4|2|1|3
+35,prose,Surgical intervention,Normal appearance|Well-defined bilaterally|Surgical intervention|Endodontic evaluation and treatment,C,Restoration|Surgical intervention|Monitoring|Orthodontic treatment
+36,prose,Erupted,Filling|Lesion likely abscess|#19|Erupted,D,Impacted|Restored|Erupted|Missing
+37,prose,Obscuration and Signs of infection,Upper jaw|#19|Filling|Obscuration and Signs of infection,D,Obscuration and Signs of infection|Not visible|Obscuration|Bilaterally visible
+38,tooth_codes,#26,"#26|#34|#22|#46, #21, #11",A,"#32, #33, #34, #35|#26|#33, #34, #35, #36|#38, #39, #40, #41"
+39,tooth_codes,#28,"#27|#16, #33, #34|#45 and #47|#28",D,#48|#28|#18|#38
+40,bone_loss_severity,No apparent bone loss,Mild bone loss in the upper jaw|Suggestive of bone loss|No apparent bone loss|Localized bone loss,C,Moderate bone loss|Severe bone loss|No apparent bone loss|Bone fracture
+42,tooth_codes,#46,#45|Periapical lesion on tooth 37|#46|#24 and #34,C,#26|#46|#16|#36
+43,tooth_codes,#46,#16 and #36|#32|#46|#11 and #21,C,#26|#16|#46|#36
+44,tooth_codes,#17,"#17|#26|#12, #11, #21|#24 and #34",A,#17|#16|#18|#19
+45,prose,Upper side,Upper side|Clear|Root fracture|Periapical lesion likely abscess,A,Lower side|None|Upper side|Both sides
+46,count,4,6|30|22|4,D,5|6|4|3
+47,prose,All wisdom teeth are erupted,All wisdom teeth are erupted|No treatment|Extraction of wisdom teeth|Visible bilaterally with normal appearance,A,All wisdom teeth are erupted|Wisdom teeth are partially erupted|All wisdom teeth are impacted|No wisdom teeth are present
+48,prose,Slight,Bitewing radiographs|Slight|No obvious caries|Well-defined bilaterally,B,Severe|Slight|None|Moderate
+49,tooth_codes,#46,#46|Tooth 12|#33|#45,A,#46|#36|#26|#16
+51,anatomy,Maxillary sinuses,Sphenoid sinus|Crown and root canal treatment|Maxillary sinuses|Normal bone architecture,C,Eustachian tubes|Mandibular canals|Nasal cavities|Maxillary sinuses
+56,prose,Lower jaw,Lower jaw|No significant findings|Bilateral visibility|Dental crown,A,Not specified|Both jaws|Lower jaw|Upper jaw
+57,anatomy,Bilateral mandibular canals and maxillary sinuses,Bilateral mandibular canals and maxillary sinuses|Signs of maxillary sinuses|Normal bone architecture|Filling and Root Canal Treatment,A,Bilateral mandibular canals and maxillary sinuses|Unilateral maxillary sinuses|Bilateral maxillary sinuses|Unilateral mandibular canals
+59,count,21,6|23|30|21,D,22|18|20|21
+61,bone_loss_severity,Mild bone loss,Apparent alveolar bone loss noted|Mild bone loss|Suggestive of bone loss|Moderate bone loss in bone jaws,B,Moderate bone loss|Severe bone loss|Mild bone loss|No apparent bone loss
+62,tooth_codes,#36,#36|#11|#43|#27,A,#45|#47|#15|#36
+63,tooth_codes,#45 and #47,#28 and #37|#43|#45 and #47|Tooth 12,C,#15|#45|#45 and #47|#47
+64,tooth_codes,#24 and #34,#38|#24 and #34|#32|Wisdom tooth 38,B,#33|#25|#24 and #34|#34
+65,prose,Clearly visible bilaterally,Clear boundaries|Clearly visible bilaterally|All erupted|#19,B,Bilateral mandibular canals|Signs of bone loss|Clearly visible bilaterally|Periapical abscess
+66,count,22,6|7|22|1,C,28|27|26|22
+67,bone_loss_severity,No apparent bone loss,"No apparent bone loss|Mild bone loss in the upper jaw|Localized bone loss|Yes, mild bone loss",A,No apparent bone loss|Mild bone loss|Moderate bone loss|Severe bone loss
+68,tooth_codes,Monitor wisdom teeth 28 and 38,"#36 and #46|Monitor wisdom teeth 28 and 38|#36, #42, #35|#35",B,Initiate root canal treatment for 37|Monitor wisdom teeth 28 and 38|Place fillings in 23 and 25|Review crown restorations in 11 and 12
+69,prose,All of the above,Ethmoid air cells|Periapical lesion|All of the above|Extraction of wisdom teeth,C,Bilateral maxillary sinuses|Bilateral mandibular canals|All of the above|Teeth
+70,prose,Requires endodontic evaluation,Radiographically normal|Endodontic evaluation and treatment|Normal appearance|Requires endodontic evaluation,D,Needs extraction|Requires endodontic evaluation|Needs crown restoration|Needs filling
+71,tooth_codes,#11,#11|Tooth 44|Wisdom tooth 48|#45 and #47,A,#25|#23|#38|#11
+74,tooth_codes,#38,"#15, and #16|Dental filling on tooth 46|#38|#36 and #45",C,#38|#48|#28|#18
+75,prose,Both A and B,No significant findings|Dental crown|Surgical intervention|Both A and B,D,#11|#21|#31|Both A and B
+76,count,31,32|31|7|4,B,28|34|31|32
+78,prose,#19,Extraction of wisdom teeth|Dental crown|Neither jaw|#19,D,#18|#19|#16|#17
+79,count,29,23|29|3|30,B,28|30|31|29
+80,anatomy,Normal bone architecture,Normal bone architecture|Signs of maxillary sinuses|Both mandibular canals and maxillary sinuses|Crown restoration and root canal treatment,A,Abnormal bone architecture|Bone fracture|Normal bone architecture|Bone loss
+81,prose,Normal features,Normal features|Endodontic evaluation and treatment|Clear boundaries|Both jaws,A,Abnormal features|Sinusitis|Normal features|Bone sclerosis
+82,tooth_codes,"#18, #28, #48","#22|#18, #28, #48|#24|#26",B,"#18, #28, #38|#18, #38, #48|#28, #38, #48|#18, #28, #48"
+83,tooth_codes,#36,#22|#21|#36|#16,C,#45|#35|#36|#47
+84,bone_loss_severity,No apparent bone loss,"No apparent bone loss|Mild bone loss in the upper jaw|Yes, mild bone loss|Moderate bone loss in bone jaws",A,Mild bone loss|Moderate bone loss|Severe bone loss|No apparent bone loss
+85,prose,No treatment,No treatment|Both A and B|All wisdom teeth are erupted|Clear bilaterally,A,Dental filling|Root canal treatment|No treatment|Dental implant
+86,prose,No treatment,No obvious caries|No treatment|Periapical lesion|Both jaws,B,Root canal treatment|Dental crown|No treatment|Dental filling
+88,prose,Impacted wisdom teeth,Extraction of wisdom teeth|Impacted wisdom teeth|Dental crown|Visible bilaterally with normal appearance,B,Dental restorations|Impacted wisdom teeth|Non-vital teeth|Periapical lesions
+89,bone_loss_severity,No bone loss,"No bone loss|Mild bone loss in the upper jaw|Yes, mild bone loss|Moderate bone loss in bone jaws",A,No bone loss|Upper jaw|Both jaws|Lower jaw
+90,count,29,29|31|1|21,A,31|28|30|29
+92,tooth_codes,#47,"#47|#11,12,13,21,22,23|#26|#38 and #48",A,#12|#24|#35|#47
+93,tooth_codes,#18,"#18|#16, #27, #46, and #37|#12, #11, #21|Periapical lesion on tooth 37",A,#8|#18|#28|#38
+94,count,28,6|4|28|30,C,32|34|28|30
+95,prose,Bilateral visibility,No jaw|Partially visible and normal|Both A and B|Bilateral visibility,D,Reduced visibility|Bilateral visibility|Absent|Unilateral visibility
+96,count,29,29|3|12|32,A,28|31|29|30
+97,prose,All erupted,Well-defined bilaterally|Dental crown|No significant findings|All erupted,D,All impacted|Partially erupted|Not visualized|All erupted
+99,anatomy,Mandibular canals and maxillary sinuses,Mandibular canals and maxillary sinuses|Signs of maxillary sinuses|Normal bone architecture|Crown and root canal treatment,A,Only mandibular canals|Mandibular canals and maxillary sinuses|Only maxillary sinuses|None of the above
+100,count,1,30|2|1|3,C,0|1|2|9
+101,tooth_codes,#16,"Periapical cyst at 37|#27, #37, #47|#16|#43",C,#14|#36|#24|#16
+102,tooth_codes,#25,#25|#22|#27|#11,A,#34|#25|#17|#44
+103,tooth_codes,#36,Periapical lesion on tooth 37|#35|#27|#36,D,#24|#14|#36|#25
+104,tooth_codes,#48,#47 and #26|#48|#26|#35,B,#28|#38|#48|#18
+109,anatomy,Bilateral mandibular canals,Normal bone architecture|Bilateral mandibular canals|Mandibular canals and maxillary sinuses|Sphenoid sinus,B,None of the above|Unilateral maxillary sinus|Unilateral mandibular canal|Bilateral mandibular canals
+110,anatomy,Maxillary sinus,Root canal treatment or extraction|Maxillary sinus|Canals|Normal bone architecture,B,Mandibular canal|Bone structure|Maxillary sinus|Nasal cavity
+112,tooth_codes,#25,#25|#37 and #45|#18 and #48|#27,A,#24|#25|#26|#36
+115,tooth_codes,#24 and #36,"#12, #11, #21|#28|#24 and #36|#37 and #45",C,#24 and #36|#46|#16|#36
+117,anatomy,Bilateral mandibular canals and maxillary sinuses,Signs of maxillary sinuses|Bilateral mandibular canals and maxillary sinuses|Crown and root canal treatment|Root canal treatment or extraction,B,Unilateral maxillary canals and mandibular sinuses|Bilateral maxillary canals and mandibular sinuses|Bilateral mandibular canals and maxillary sinuses|Unilateral mandibular canals and maxillary sinuses
+118,prose,None of the above,Impacted|None of the above|No treatment|Both A and B,B,Implant|Filling|None of the above|Crown
+119,bone_loss_severity,Mild bone loss,Moderate bone loss in bone jaws|Mild bone loss|Suggestive of bone loss|Apparent alveolar bone loss noted,B,Significant bone loss|Mild bone loss|Severe bone loss|No apparent bone loss
+120,prose,Root fracture,Root fracture|Bone structure appears intact|Impacted wisdom teeth|No significant findings,A,Root fracture |Deep caries|Periapical cyst|Periapical granuloma
+121,tooth_codes,#46,#33|#46|Periapical lesion on tooth 37|#13,B,#46|#45|#48|#44
+122,tooth_codes,#18 and #28,"#18 and #28|#22|#35, #36, #37|#34",A,#18 and #28|#48|#38|#28
+123,count,4,31|4|6|7,B,5|6|4|3
+124,tooth_codes,#11,#11|#37|#34|Periapical granuloma at 47,A,#11|#12|#22|#21
+126,prose,None detected,Obscuration and Signs of infection|None detected|Neither jaw|Well-defined with no significant pathology,B,None detected|#25|#32|#18
+127,count,7,32|7|1|2,B,6|8|7|5
+128,tooth_codes,#11,"#35|#35, #38, #45, #46|#28, #38, #48|#11",D,#10|#12|#13|#11
+129,prose,Bitewing radiographs,None detected|Clear bilaterally|Bitewing radiographs|No fillings,C,MRI|Bitewing radiographs|Panoramic radiographs|CT scans
+130,anatomy,Both mandibular canals and maxillary sinus,Both mandibular canals and maxillary sinus|Filling and Root Canal Treatment|Signs of maxillary sinuses|Sphenoid sinus,A,Mandibular canals only|Both mandibular canals and maxillary sinus|Maxillary sinus only|Neither
+131,prose,Lower jaw,Lower jaw|No jaw|No significant findings|Well-defined bilaterally,A,No missing teeth|Upper jaw|Lower jaw|Both jaws
+132,tooth_codes,#18,#32|#17|#18|#46 and #48,C,#28|#38|#18|#48
+133,tooth_codes,#45,#45|Dental filling on tooth 46|#43|Tooth 44,A,#45|#37|#27|#47
+134,bone_loss_severity,No bone loss,Moderate bone loss in bone jaws|No bone loss|Mild bone loss in the upper jaw|Suggestive of bone loss,B,Lower jaw|Upper jaw|Both jaws|No bone loss
+135,tooth_codes,#18 and #28,#25|#18 and #28|#43|#47 and #26,B,#27|#25|#18 and #28|#37
+136,tooth_codes,#46,"#32|#15, #36|#24 and #36|#46",D,#45|#46|#47|#48
+137,tooth_codes,#11,"#11|#32|#28|#15, and #16",A,#26|#14|#37|#11
+138,tooth_codes,#18 and #48,Tooth 12|#43|#18 and #48|#12 and #22,C,#18 and #48|#38|#48|#28
+139,bone_loss_severity,No apparent bone loss,Mild bone loss in the upper jaw|Localized bone loss|No apparent bone loss|Suggestive of bone loss,C,Tumor|Fracture|No apparent bone loss|Bone loss
+140,tooth_codes,Wisdom tooth 38,#32|#28|#41|Wisdom tooth 38,D,Missing tooth on tooth 38|Normal tooth on tooth 21|Wisdom tooth 38|Impacted tooth on tooth 13
+141,tooth_codes,Tooth 44,#47|Tooth 44|#15|#18 and #38,B,Tooth 46|Tooth 44|Tooth 45|Tooth 43
+142,tooth_codes,Tooth 43,Tooth 43|#34|#38|#33,A,Tooth 43|Tooth 42|Tooth 41|Tooth 44
+143,bone_loss_severity,"Yes, mild bone loss","No apparent bone loss|Mild bone loss in the upper jaw|Yes, mild bone loss|Suggestive of bone loss",C,"Unclear|No apparent bone loss|Yes, mild bone loss|Yes, severe bone loss"
+144,tooth_codes,Tooth 12,#34|Periapical granuloma at 47|Periapical cyst at 37|Tooth 12,D,Tooth 14|Tooth 13|Tooth 12|Tooth 15
+145,tooth_codes,Tooth 43,#47|Tooth 43|#48|Tooth 12,B,Tooth 42|Tooth 41|Tooth 43|Tooth 44
+146,tooth_codes,#28 is erupted,#28 is erupted|#13|#41|#33,A,#38 is missing|#48 is absent|#18 is impacted|#28 is erupted
+147,anatomy,Mandibular canals and maxillary sinuses,Bilateral maxillary sinuses|Signs of maxillary sinuses|Mandibular canals and maxillary sinuses|Normal bone architecture,C,Mandibular canals and maxillary sinuses|Nasal cavities|Ethmoid air cells|Maxillary sinuses
+148,anatomy,Crown and root canal treatment,Root canal treatment or extraction|Crown and root canal treatment|Canals|Normal bone architecture,B,Root canal treatment only|Crown only|Crown and root canal treatment|Extraction
+150,count,32,1|32|4|30,B,40|28|32|36
+152,count,29,6|29|3|4,B,29|28|30|31
+155,prose,Both A and B,Both A and B|Partially visible and normal|None of the above|Clear,A,Mandibular canals|Maxillary sinuses|Neither|Both A and B
+156,prose,Both jaws,Partially visible and normal|Both jaws|No obvious caries|Lower jaw,B,Both jaws|Lower jaw|Upper jaw|None of the above
+157,anatomy,Root canal treatment,Both mandibular canals and maxillary sinus|Canals|Root canal treatment|Normal bone architecture,C,Filling|Root canal treatment|Crown restoration|Extraction
+158,tooth_codes,#48,"#25 and #46|#48|#47|#14, #25, #37",B,#48|#38|#18|#28
+159,prose,Periapical lesion,Bilateral|Periapical lesion|Both are erupted|Monitoring,B,Periapical lesion|Periapical cyst|Caries|Deep caries
+160,count,2,4|1|6|2,D,4|2|3|1
+161,count,4,4|1|12|7,A,1|3|0|4
+162,prose,Lower jaw,Clear|Periapical lesion likely abscess|All|Lower jaw,D,Lower jaw|None|Both jaws|Upper jaw
+163,tooth_codes,#22,#32|#36|#22|#13,C,#22|#21|#23|#24
+164,bone_loss_severity,No bone loss,Mild bone loss in the upper jaw|No bone loss|Moderate bone loss in bone jaws|Suggestive of bone loss,B,Tumor|Signs of bone loss|Fracture|No bone loss
+165,prose,Both A and B,Both A and B|No obvious caries|Erupted|Well-defined bilaterally,A,Both A and B|#24|#34|#14
+166,anatomy,Bilateral mandibular canals,Bilateral mandibular canals|Sphenoid sinus|Mandibular canals and maxillary sinuses|Root canal treatment or extraction,A,Bilateral maxillary sinuses|Both A and B|Nasal cavity|Bilateral mandibular canals
+167,bone_loss_severity,Suggestive of bone loss,"No apparent bone loss|Moderate bone loss in bone jaws|Yes, mild bone loss|Suggestive of bone loss",D,Fractured|No significant findings|Normal|Suggestive of bone loss
+168,count,23,6|23|1|25,B,27|23|25|21
+169,tooth_codes,#33,#34|#47 and #26|Tooth 44|#33,D,#32|#31|#41|#33
+170,tooth_codes,#48,#48|Tooth 12|#43|#33,A,#18|#28|#48|#38
+171,tooth_codes,"#14, #25, #37","#11 and #21|#11,12,13,21,22,23|#14, #25, #37|#21",C,"#37|#14, #25, #37|#25|#45"
+172,tooth_codes,#47,#11|#47|#27|Dental filling on tooth 46,B,#37|#45|#26|#47
+173,prose,Visible bilaterally,Partially visible and normal|All wisdom teeth are erupted|Visible bilaterally|Radiographically normal,C,Not visible|Obstructed|Visible unilaterally|Visible bilaterally
+174,anatomy,Signs of bilateral mandibular canals,Root canal treatment|Signs of maxillary sinuses|Signs of bilateral mandibular canals|Both mandibular canals and maxillary sinus,C,Impacted wisdom teeth|Periapical lesions|Signs of bilateral mandibular canals|Bone loss
+176,tooth_codes,#46,#33|#46|#35|#11,B,#36|#46|#16|#26
+177,anatomy,Bilateral maxillary sinuses,Normal bone architecture|Bilateral maxillary sinuses|Sphenoid sinus|Mandibular canals and maxillary sinuses,B,Bilateral maxillary sinuses|Ethmoid air cells|Sphenoid sinus|Unilateral mandibular canal
+178,tooth_codes,#48,#35 and #36|#34|Tooth 43|#48,D,#28|#38|#48|#18
+179,count,31,4|28|31|6,C,33|32|30|31
+180,tooth_codes,#36,"#36|#37|#27, #37, #47|Periapical granuloma at 47",A,#38|#37|#35|#36
+181,count,3,3|2|4|29,A,3|2|4|1
+182,prose,No jaw,No fillings|No jaw|Filling|Ethmoid air cells,B,Both jaws|Lower jaw|Upper jaw|No jaw
+183,tooth_codes,#36,#34|#45 and #47|#36|#24,C,#36|#37|#38|#35
+184,prose,Upper jaw,Well-defined with no significant pathology|Slight|Normal|Upper jaw,D,Upper jaw|No jaw|Lower jaw|Both jaws
+185,prose,Periapical granuloma,Ethmoid air cells|Well-defined with no significant pathology|Obscuration and Signs of infection|Periapical granuloma,D,Periapical abscess|Dental caries|Crown restoration|Periapical granuloma
+186,prose,All,Both jaws|Endodontic evaluation and treatment|All|Both B and C,C,Mandibular canals|Maxillary sinuses|All|Nasal cavity
+187,prose,Periapical abscess,Well-defined with no significant pathology|Slight|Periapical abscess|All of the above,C,Impacted tooth|Periapical abscess|Periapical granuloma|Dental caries
+189,tooth_codes,#28,"#16, #33, #34|#24|#28|#43",C,#28|#29|#30|#31
+190,anatomy,Mandibular canals,Normal bone architecture|Mandibular canals|Sphenoid sinus|Crown and root canal treatment,B,Nasal cavities|Mandibular canals|Tonsils|Maxillary sinuses
+191,tooth_codes,#47,"#16|Periapical lesion on tooth 37|#12, #11, #21|#47",D,#17|#47|#48|#36
+192,bone_loss_severity,No bone loss,"Suggestive of bone loss|Mild bone loss in the upper jaw|Yes, mild bone loss|No bone loss",D,Severe bone loss|Generalized bone loss|Localized bone loss|No bone loss
+193,count,4,4|23|2|12,A,3|2|1|4
+194,count,4,6|7|4|22,C,3|5|4|2
+195,tooth_codes,"#28, #38, #48","#28, #38, #48|#46|#27|Dental filling on tooth 46",A,"#28|#38|#18|#28, #38, #48"
+196,count,30,29|4|23|30,D,32|30|35|25
+197,tooth_codes,#12,#12|#25|#25 and #46|Tooth 44,A,#12|#13|#14|#11
+198,tooth_codes,#47,#17|#47|#34|Dental filling on tooth 46,B,#47|#37|#46|#35
+200,bone_loss_severity,No bone loss,No bone loss|Suggestive of bone loss|Moderate bone loss in bone jaws|Mild bone loss in the upper jaw,A,Upper jaw|Both jaws|No bone loss|Lower jaw
+201,tooth_codes,#37,#37|#41|#45|Tooth 12,A,#47|#27|#37|#17
+202,tooth_codes,#37,#16|#24|#37|Wisdom tooth 38,C,#17|#27|#37|#47
+203,tooth_codes,#47,"Tooth 43|#46, #21, #11|#47|#24 and #36",C,#37|#27|#47|#17
+204,anatomy,Canals,Canals|Sphenoid sinus|Crown and root canal treatment|Root canal treatment or extraction,A,Canals|Foramina|Sinuses|None
+206,tooth_codes,"#18, #28, #38, #48","Dental filling on tooth 46|Periapical lesion on tooth 37|Periapical granuloma at 47|#18, #28, #38, #48",D,"#25, #35, #44, #46|#14, #15, #34, #47|#16, #36, #45, #47|#18, #28, #38, #48"
+207,anatomy,Bilateral mandibular canals,Crown and root canal treatment|Bilateral mandibular canals|Maxillary sinuses|Both mandibular canals and maxillary sinuses,B,None of the above|Maxillary sinuses|Nasal cavity|Bilateral mandibular canals
+208,tooth_codes,#15,#15|#12|#37 and #45|#11,A,"#34, #35, #36|#14, #15, #25|#15|#44, #46, #47"
+209,tooth_codes,"#15, #36","#15, #36|#47 and #26|#11|#12",A,"#15, #36|#35, #44|#25, #46|#14, #16"
+210,tooth_codes,#36,Periapical cyst at 37|#36|Tooth 44|#33,B,#46|#36|#13|#47
+211,tooth_codes,#16,#37 and #45|#16|#33|#34,B,#13|#14|#16|#15
+212,prose,Bone structure appears intact,Clearly visible bilaterally|Upper side|No treatment|Bone structure appears intact,D,Bone structure appears intact|Significant bone loss is present|Bone loss is evident around 36|Mandibular canals are not visible
+213,tooth_codes,"#36, #46","#12|#37|#36, #46|#21",C,"#16, #26|#35, #45|#24, #34|#36, #46"
+214,tooth_codes,"#36, #46","#21|#36, #46|#41|#24",B,"#34, #44|#25, #35|#36, #46|#14, #24"
+215,count,4,29|4|25|23,B,6|4|5|3
+216,anatomy,Maxillary sinuses,Normal bone architecture|Maxillary sinuses|Crown restoration and root canal treatment|Canals,B,Tonsils|Mandibular canals|Eustachian tubes|Maxillary sinuses
+217,tooth_codes,#48,#13|#34|#48|#25 and #46,C,#38|#28|#35|#48
+218,bone_loss_severity,No apparent bone loss,Mild bone loss|Moderate bone loss in bone jaws|Mild bone loss in the upper jaw|No apparent bone loss,D,Moderate bone loss|Bone augmentation needed|Severe bone loss|No apparent bone loss
+219,prose,None detected,Bilateral|Well-aerated|None detected|All wisdom teeth are erupted,C,Root canal treatment found|None detected|Crowns visible|Implants present
+220,prose,Neither jaw,Both A and B|Neither jaw|None detected|Surgical intervention,B,Neither jaw|Lower jaw|Both jaws|Upper jaw
+221,tooth_codes,#37,"#46, #21, #11|#36 and #46|#37|#15",C,#41|#24|#32|#37
+222,tooth_codes,#37,#17|#47|#37|#11 and #21,C,#32|#37|#42|#24
+223,tooth_codes,#28,#35|#21|#28|Periapical granuloma at 47,C,#18|#48|#28|#38
+224,tooth_codes,#41,#45 and #47|#41|Periapical granuloma at 47|#35 and #36,B,#42|#41|#32|#31
+226,tooth_codes,"#16, #33, #34","#35, #36, #37|#16, #33, #34|Periapical cyst at 37|Monitor wisdom teeth 28 and 38",B,"#16, #33, #34|#18, #19, #20|#15, #16, #17|#21, #22, #23"
+227,tooth_codes,#12 and #22,Periapical lesion on tooth 37|#43|#32|#12 and #22,D,#11|#12 and #22|#21|#22
+228,count,29,31|30|29|3,C,31|28|30|29
+229,prose,Bilateral,No obvious caries|Bilateral|Well-aerated|Both are erupted,B,Absent|Not visible|Unilateral|Bilateral
+231,tooth_codes,#11 and #21,"Periapical cyst at 37|#27, #37, #47|#27|#11 and #21",D,#21|#11 and #21|#24|#15
+232,prose,Clear anatomical definition,Ethmoid air cells|Root fracture|Bilateral visibility|Clear anatomical definition,D,Clear anatomical definition|Periapical granuloma|Bilateral mandibular canals|Signs of caries
+233,tooth_codes,#38,#38|#36 and #37|#36|#37,A,#18|#28|#48|#38
+234,count,4,4|32|7|2,A,5|2|3|4
+235,bone_loss_severity,No apparent bone loss,Mild bone loss in the upper jaw|Moderate bone loss in bone jaws|No apparent bone loss|Localized bone loss,C,No apparent bone loss|Generalized bone loss|Severe bone loss|Localized bone loss
+236,anatomy,Both mandibular canals and maxillary sinuses,Both mandibular canals and maxillary sinuses|Sphenoid sinus|Crown and root canal treatment|Signs of maxillary sinuses,A,Mandibular canals only|Neither mandibular canals nor maxillary sinuses|Maxillary sinuses only|Both mandibular canals and maxillary sinuses
+237,tooth_codes,#36 and #46,"#36 and #46|#33|#24 and #34|#15, and #16",A,#36 and #46|#14 and #38|#24 and #35|#18 and #48
+238,prose,All are impacted,No obvious caries|All are impacted|Bilateral visibility|Well-defined with no significant pathology,B,None are visible|Some are erupted and others impacted|All are erupted|All are impacted
+239,count,32,12|4|32|22,C,32|34|36|28
+241,tooth_codes,#21,Wisdom tooth 48|#45 and #47|Periapical granuloma at 47|#21,D,#38|#12|#21|#45
+242,prose,All,Both B and C|Root fracture|Upper jaw|All,D,All|#36|#38|#45
+243,anatomy,Mandibular canals,Signs of maxillary sinuses|Mandibular canals|Root canal treatment or extraction|Crown restoration and root canal treatment,B,None|Maxillary sinuses|Mandibular canals|Nasal cavities
+244,tooth_codes,#36,#48|#25|#36|#26,C,#12|#45|#36|#38
+245,count,7,1|28|7|30,C,3|7|9|5
+246,count,4,1|4|2|7,B,8|4|6|2
+247,count,30,7|23|30|1,C,32|28|30|34
+248,prose,Both are erupted,Both are erupted|No treatment|Surgical intervention|Extraction of wisdom teeth,A,"Both are impacted|Both are erupted|#38 impacted, #48 erupted|#38 erupted, #48 impacted"
+249,tooth_codes,#46 and #48,#46 and #48|Tooth 44|#34|#27,A,#45 and #47|#46 and #48|#15 and #11|#35 and #36
+250,tooth_codes,#34,#33|#34|#12 and #22|Wisdom tooth 48,B,#36|#35|#34|#37
+251,tooth_codes,"#18, #28, #38","#18, #28, #38|#27|#33|Periapical lesion on tooth 37",A,"#18, #28, #38|#18, #28, #48|#18, #38, #48|#28, #38, #48"
+252,tooth_codes,"#36, #42, #35","Periapical cyst at 37|#22|#37|#36, #42, #35",D,"#32, #34, #36|#34, #35, #36|#35, #36, #37|#36, #42, #35"
+253,anatomy,Filling and Root Canal Treatment,Signs of maxillary sinuses|Canals|Bilateral mandibular canals and bilateral maxillary sinuses|Filling and Root Canal Treatment,D,Filling and Root Canal Treatment|Crown only|Filling only|Crown and Filling
+254,tooth_codes,#35 and #36,#35 and #36|Periapical cyst at 37|#27|#37,A,#35|#35 and #36|#38|#37
+255,tooth_codes,#37,#33|Tooth 44|#24|#37,D,#37|#38|#36|#35
+256,tooth_codes,#37,#11|#45|#33|#37,D,#23|#37|#36|#42
+257,tooth_codes,#36 and #37,#11|Tooth 43|#25|#36 and #37,D,#38|#35|#36 and #37|#37
+258,count,12,25|12|30|22,B,14|12|16|10
+259,count,4,29|4|25|30,B,4|8|6|2
+260,tooth_codes,#37,#27|#11 and #21|#37|#13,C,#37|#38|#35|#36
+261,tooth_codes,#17,#28 is erupted|#11 and #21|#17|#24 and #34,C,#25|#35|#17|#45
+262,prose,All,Clear|No treatment|All|Bitewing radiographs,C,Bilateral mandibular canals|Maxillary sinus|All|Nasal cavity
+263,tooth_codes,#25 and #35,#25 and #35|Wisdom tooth 48|#43|#48,A,#26|#25 and #35|#35|#17
+264,tooth_codes,Periapical lesion on tooth 37,Periapical lesion on tooth 37|#28|#27|#21,A,Dental caries on tooth 26|Periapical lesion on tooth 37|Normal tooth on tooth 22|Bone loss on tooth 37
+265,count,2,30|3|7|2,D,1|3|2|4
+266,prose,Periapical granuloma,No treatment|Periapical granuloma|Radiographically normal|Clear boundaries,B,Periapical granuloma|Crown restoration|Dental filling|Dental caries
+267,prose,All,All|None detected|Impacted wisdom teeth|No fillings,A,Clear maxillary sinuses|All|Apparent bone loss|Bilateral mandibular canals
+268,prose,Restore missing teeth in the upper jaw,Periapical abscess|Restore missing teeth in the upper jaw|Clearly visible bilaterally|No jaw,B,Perform root canal treatment on tooth 24|Restore missing teeth in the upper jaw|Extract tooth 21|Place an implant in tooth 23
+269,count,25,28|3|25|1,C,25|30|35|20
+270,tooth_codes,#43,#36 and #37|Periapical lesion on tooth 37|#43|Wisdom tooth 48,C,#41|#18|#43|#22
+271,prose,Both A and B,No jaw|All of the above|None detected|Both A and B,D,#18|#38|Both A and B|Neither
+272,count,6,2|7|6|29,C,6|3|5|7
+273,prose,Visible bilaterally with normal appearance,All erupted|Visible bilaterally with normal appearance|Radiographically normal|All erupted and non-impacted,B,Bone loss|Signs of bilateral mandibular canals|Periapical lesion|Visible bilaterally with normal appearance
+274,prose,Dental crown,Root fracture|Impacted wisdom teeth|Periapical lesion likely abscess|Dental crown,D,Root canal treatment|Dental implant|Dental crown|Dental filling
+275,tooth_codes,#15,#17|#24|#41|#15,D,#17|#15|#16|#14
+276,prose,Well-defined with no significant pathology,No significant findings|Partially visible and normal|Root fracture|Well-defined with no significant pathology,D,Poorly defined with significant pathology|Poorly defined with no significant pathology|Well-defined with significant pathology|Well-defined with no significant pathology
+277,prose,Extraction of wisdom teeth,Extraction of wisdom teeth|Periapical lesion likely abscess|Well-defined bilaterally|Surgical intervention,A,Oral hygiene practices|Extraction of wisdom teeth|Monitoring of interproximal areas|Fluoride application
+278,count,2,31|2|3|4,B,1|4|2|3
+279,tooth_codes,#11 and #21,#33|#11 and #21|#24 and #34|#41,B,#11 and #22|#11 and #21|#12 and #22|#13 and #23
+280,count,2,2|6|30|31,A,4|1|2|3
+281,tooth_codes,#35,Tooth 44|#11|#35|#26,C,#37|#36|#35|#34
+282,tooth_codes,"#35, #36, #37","#38|#35, #36, #37|#47 and #26|#32",B,"#37, #38|#35, #36|#35, #36, #37|#34, #35"
+283,tooth_codes,#46,#25|#46|Tooth 44|#18 and #38,B,#47|#46|#48|#45
+284,tooth_codes,#21,#45|#21|Tooth 44|Tooth 43,B,#23|#22|#21|#20
+285,prose,Both A and B,Upper jaw|Well-aerated|Both A and B|No jaw,C,Mandibular canals|Neither A nor B|Maxillary sinuses|Both A and B
+289,bone_loss_severity,No apparent bone loss,Suggestive of bone loss|Moderate bone loss in bone jaws|No apparent bone loss|Mild bone loss,C,Moderate bone loss|Severe bone loss|Slight bone loss|No apparent bone loss
+290,tooth_codes,#41,#47|#41|#33|Tooth 44,B,#44|#41|#42|#43
+291,tooth_codes,#37,#35|#37|#17|#33,B,#37|#36|#38|#39
+292,count,2,7|3|1|2,D,3|1|4|2
+293,tooth_codes,#18,#48|#18|#38|#27,B,#38|#18|#21|#48
+294,tooth_codes,#12,#12|#24 and #34|#38 and #48|#48,A,#13|#14|#11|#12
+295,tooth_codes,#46,"#46|#12, #11, #21|#12|#21",A,#35|#37|#46|#36
+296,bone_loss_severity,Mild bone loss in the upper jaw,Suggestive of bone loss|No apparent bone loss|Mild bone loss in the upper jaw|Localized bone loss,C,Periapical lesion|No apparent bone loss|Mandibular canal|Mild bone loss in the upper jaw 
+298,tooth_codes,#46,Tooth 43|#41|#12|#46,D,#46|#34|#45|#35
+299,count,2,6|30|31|2,D,2|1|4|3
+300,tooth_codes,#46,#25 and #35|#35|#46|#37,C,#48|#16|#37|#46
+301,tooth_codes,#38,#43|#38|#17|#41,B,#16|#38|#46|#48
+302,prose,Radiographically normal,No jaw|Radiographically normal|Monitoring|Both jaws,B,Obstructed|Radiographically normal|Signs of infection|Enlarged
+303,bone_loss_severity,No apparent bone loss,Mild bone loss in the upper jaw|No apparent bone loss|Mild bone loss|Moderate bone loss in bone jaws,B,No apparent bone loss|Severe bone loss|Moderate bone loss|Apparent bone loss
+304,prose,Bilateral,All four wisdom teeth are impacted|Impacted|Bilateral|None of the above,C,Bilateral|Unilateral|Narrow|Wide
+305,bone_loss_severity,No apparent bone loss,"Yes, mild bone loss|Localized bone loss|No apparent bone loss|Mild bone loss in the upper jaw",C,"Yes, severe bone loss|No apparent bone loss|Yes, mild bone loss|Yes, moderate bone loss"
+306,tooth_codes,#36 and #45,#16|#15|#36 and #45|Periapical cyst at 37,C,#36 and #45|#34 and #38|#46 and #47|#32 and #42
+307,prose,Endodontic evaluation,Upper side|No obvious caries|Endodontic evaluation|Slight,C,Extraction|Filling|Endodontic evaluation|Crown placement
+308,count,4,22|4|2|23,B,4|5|2|3
+309,tooth_codes,#45,#45|#12|#33|Periapical cyst at 37,A,#46|#47|#45|#44
+310,tooth_codes,#36,#45|#34|#36|#41,C,#37|#36|#38|#35
+311,anatomy,Mandibular canals,Maxillary sinus|Normal bone architecture|Crown and root canal treatment|Mandibular canals,D,Tumors|Signs of infection|Mandibular canals|Bone fractures
+312,prose,All four wisdom teeth are impacted,Periapical lesion likely abscess|All four wisdom teeth are impacted|All erupted and non-impacted|Erupted,B,Only 18 is impacted|None are impacted|All four wisdom teeth are impacted|Only 28 is impacted
+313,prose,Lesion likely abscess,None detected|Visible bilaterally with normal appearance|Clear boundaries|Lesion likely abscess,D,Periapical cyst|Benign tumor|Lesion likely abscess|Periapical granuloma
+314,bone_loss_severity,No apparent bone loss,No apparent bone loss|Moderate bone loss in bone jaws|Suggestive of bone loss|Localized bone loss,A,No apparent bone loss|Severe bone loss|Mild bone loss|Moderate bone loss
+315,tooth_codes,#35,#26|#35|Wisdom tooth 38|#24 and #36,B,#17|#28|#35|#36
+316,tooth_codes,#35,#34|Periapical cyst at 37|#25|#35,D,#35|#28|#36|#17
+317,tooth_codes,#17,#24 and #34|#47 and #26|#47|#17,D,#35|#28|#17|#36
+319,count,1,1|3|2|6,A,2|3|0|1
+320,prose,Endodontic evaluation,Endodontic evaluation|Lesion likely abscess|None detected|Partially visible and normal,A,Filling|Extraction|Crown|Endodontic evaluation
+321,prose,Periapical granuloma,Normal features|Impacted|Periapical granuloma|All four wisdom teeth are impacted,C,Filling|Caries|Periapical granuloma|Crown restoration
+323,prose,Lower jaw,Dental crown|Bilateral|Filling|Lower jaw,D,Maxillary sinus|Lower jaw|Mandibular canal|Upper jaw
+324,prose,Well-aerated,Well-aerated|Monitoring|No significant findings|Endodontic evaluation and treatment,A,Well-aerated|Enlarged|Obliterated|Cloudy
+325,count,4,7|25|4|3,C,None|2|4|3
+326,tooth_codes,#36 and #37,#16|#45|#12|#36 and #37,D,#34|#36 and #37|#36|#35
+328,prose,Well-defined bilaterally,No jaw|Well-defined bilaterally|Monitoring|No fillings,B,Not visible|Well-defined bilaterally|Unilateral|Bilateral but poorly defined
+329,anatomy,Mandibular canal,Canals|Both mandibular canals and maxillary sinus|Filling and Root Canal Treatment|Mandibular canal,D,Nerve pathway|Maxillary sinus|Bone structure|Mandibular canal
+330,prose,Periapical lesion likely abscess,All erupted and non-impacted|Extraction of wisdom teeth|Periapical lesion likely abscess|Surgical intervention,C,Periodontal pocket|Periapical lesion likely abscess|Cyst|Dental caries
+331,prose,Upper jaw,All|Upper jaw|Both B and C|Restore missing teeth in the upper jaw,B,Upper jaw|Neither jaw|Lower jaw|Both jaws
+332,prose,Impacted,Ethmoid air cells|Impacted|Dental crown|Normal appearance,B,Erupted|Missing|Impacted|Partially erupted
+333,count,30,32|30|4|7,B,34|28|30|32
+334,prose,Filling,Filling|Normal|Surgical intervention|Bitewing radiographs,A,Crown|Extraction|Root canal treatment|Filling
+335,tooth_codes,"13,15,17,23,25,27,36,37","#34|#26|13,15,17,23,25,27,36,37|#35",C,"#26, #16|#27, #17|#24, #14|13,15,17,23,25,27,36,37 "
+336,bone_loss_severity,Moderate bone loss in bone jaws,Moderate bone loss in bone jaws|Bone loss|Mild bone loss in the upper jaw|Apparent alveolar bone loss noted,A,Mild bone loss|Bone fracture|Moderate bone loss in bone jaws |Severe bone loss
+338,prose,Bilateral,Crown|All four wisdom teeth are impacted|Obscuration and Signs of infection|Bilateral,D,Narrowed|Absent|Bilateral|Unilateral
+339,prose,Clear,Clear|All are impacted|Erupted|Endodontic evaluation and treatment,A,Not visible|Cloudy|Obscured|Clear
+340,tooth_codes,#47,#13|#33|Tooth 44|#47,D,#47|#46|#48|#45
+341,prose,Crown,Crown|Monitoring|No significant findings|Both B and C,A,Crown|Filling|Root canal treatment|Implant
+342,bone_loss_severity,Localized bone loss,Mild bone loss in the upper jaw|No apparent bone loss|Localized bone loss|Suggestive of bone loss,C,Localized bone loss|No significant bone loss|Fracture|Generalized bone loss
+343,tooth_codes,#47,#33|#47|Tooth 12|#11,B,#45|#36|#47|#37
+344,tooth_codes,#46,"#12, #11, #21|Tooth 12|#25|#46",D,#47|#36|#46|#48
+345,tooth_codes,#46,#46|#34|#12|#26,A,#46|#16|#36|#26
+346,tooth_codes,#37,#12|Periapical granuloma at 47|#34|#37,D,#17|#36|#37|#16
+347,tooth_codes,#48,Wisdom tooth 38|#11|#48|#47 and #26,C,#38|#48|#18|#28
+348,tooth_codes,#48,#48|#27|#26|#24 and #34,A,#38|#18|#28|#48
+350,tooth_codes,#37,#24|#37|#27|#48,B,#44|#31|#32|#37
+351,anatomy,Signs of bilateral mandibular canals,Mandibular canals and maxillary sinuses|Signs of bilateral mandibular canals|Sphenoid sinus|Bilateral maxillary sinuses,B,Bone loss|Abscess|Signs of bilateral mandibular canals|Caries
+352,count,29,30|1|29|6,C,29|31|28|30
+353,count,2,1|3|2|6,C,3|2|4|1
+354,tooth_codes,#25 and #46,#25 and #46|#38|#24|#38 and #48,A,#25 and #46|#31|#32|#46
+355,tooth_codes,#27,#25 and #35|#36|#27|#35,C,#28|#37|#26|#27
+356,tooth_codes,#27,#11 and #21|#22|Periapical granuloma at 47|#27,D,#37|#28|#27|#26
+357,count,3,4|1|7|3,D,3|1|4|2
+358,prose,Both B and C,Clearly visible bilaterally|Radiographically normal|Both are erupted|Both B and C,D,#46|Both B and C|#27|#37
+359,anatomy,Signs of maxillary sinuses,Normal bone architecture|Signs of maxillary sinuses|Both mandibular canals and maxillary sinus|Crown restoration and root canal treatment,B,No apparent abnormalities|Signs of maxillary sinuses|Signs of bone loss|Signs of sinusitis
+361,tooth_codes,#38,#13|#38|#45|Tooth 44,B,#18|#48|#38|#28
+362,tooth_codes,#37,#11|#37|#24|#35,B,#38|#36|#34|#37
+363,tooth_codes,#37,Tooth 12|#37|#45|#41,B,#38|#37|#34|#36
+364,tooth_codes,Periapical cyst at 37,Periapical cyst at 37|#13|#43|Tooth 44,A,Deep caries at 47|Periapical cyst at 37|All of the above|Caries at 34
+365,count,2,2|1|6|31,A,2|1|4|3
+366,anatomy,Mandibular canals,Mandibular canals|Sphenoid sinus|Crown restoration and root canal treatment|Signs of maxillary sinuses,A,Ethmoid sinuses|Sphenoid sinuses|Mandibular canals|Nasal cavity
+367,prose,Clear bilaterally,Endodontic evaluation|Periapical granuloma|Clear bilaterally|Ethmoid air cells,C,Enlarged|Clear bilaterally|Obscured|Cloudy unilaterally
+368,tooth_codes,#36,#36|Periapical granuloma at 47|#16|#12 and #22,A,#36|#35|#37|#38
+369,anatomy,Root canal treatment or extraction,Crown and root canal treatment|Sphenoid sinus|Root canal treatment or extraction|Bilateral maxillary sinuses,C,Crown|Monitoring|Filling|Root canal treatment or extraction
+370,tooth_codes,#28,"#25 and #46|#35|#28|#36, #46",C,#38|#28|#37|#27
+371,bone_loss_severity,No apparent bone loss,"Mild bone loss in the upper jaw|No apparent bone loss|Localized bone loss|Yes, mild bone loss",B,Severe bone loss|Moderate bone loss|Slight bone loss|No apparent bone loss
+372,count,4,29|30|22|4,D,5|3|4|2
+373,prose,Both A and B,No treatment|Dental crown|Both A and B|Erupted,C,Maxillary sinuses|Both A and B|None of the above|Mandibular canals
+374,tooth_codes,#18,Tooth 12|#18|#25|#25 and #35,B,#18|#28|#17|#19
+375,prose,No fillings,Crown|Well-defined bilaterally|Root fracture|No fillings,D,Fillings in 37|No fillings|Fillings present but specifics unknown|Fillings in 47
+376,tooth_codes,#38 and #48,#33|#38 and #48|#15|#35,B,#18 and #28|#38 and #18|#38 and #48|#48 and #28
+377,tooth_codes,#37,#35|#21|#37|#13,C,#36|#47|#27|#37
+379,tooth_codes,"#27, #37, #47","#27, #37, #47|#21|#22|#12",A,"#27, #37, #47|#36, #37, #38|#17, #27, #37|#47, #37, #27"
+380,prose,Normal,Slight|Impacted wisdom teeth|Clear boundaries|Normal,D,Infected|Obstructed|Deviated|Normal
+381,count,3,4|3|25|22,B,4|2|3|1
+382,tooth_codes,#48,"#36|#46, #21, #11|#25|#48",D,#28|#18|#48|#38
+383,bone_loss_severity,No apparent bone loss,"No apparent bone loss|Suggestive of bone loss|Moderate bone loss in bone jaws|Yes, mild bone loss",A,"Yes, moderate bone loss|No apparent bone loss|Yes, mild bone loss|Severe bone loss"
+384,tooth_codes,#47,"#25|#47|#35, #38, #45, #46|#36, #42, #35",B,#47|#42|#46|#45
+385,prose,Bilateral,Obscuration and Signs of infection|Bilateral|No jaw|Both B and C,B,Obstructed|Absent|Bilateral|Unilateral
+387,count,32,22|32|12|29,B,32|36|28|40
+388,tooth_codes,#37,"#13|#12, #11, #21|#37|#24",C,#26|#37|#28|#36
+389,tooth_codes,#28 and #37,Tooth 43|#12|#35|#28 and #37,D,#26|#28|#28 and #37|#36
+390,count,3,7|12|21|3,D,1|3|4|2
+392,bone_loss_severity,No bone loss,"No bone loss|Moderate bone loss in bone jaws|Yes, mild bone loss|Mild bone loss in the upper jaw",A,Both jaws|Upper jaw|Lower jaw|No bone loss
+393,anatomy,Mandibular canal,Mandibular canal|Sphenoid sinus|Both mandibular canals and maxillary sinus|Canals,A,Mandibular canal|Nerve pathway|Bone structure|Maxillary sinus
+394,tooth_codes,Wisdom tooth 48,"#16, #27, #46, and #37|Periapical cyst at 37|Wisdom tooth 48|#37 and #45",C,Normal tooth on tooth 27|Impacted tooth on tooth 24|Wisdom tooth 48|Missing tooth on tooth 48
+395,tooth_codes,#38,#35|#25 and #35|#38|#17,C,#18|#28|#38|#48
+397,tooth_codes,#36,"#13|#22|#36|#11,12,13,21,22,23",C,#46|#36|#56|#26
+398,count,4,2|3|4|25,C,4|2|3|5
+399,bone_loss_severity,No apparent bone loss,Mild bone loss|No apparent bone loss|Suggestive of bone loss|Moderate bone loss in bone jaws,B,Moderate bone loss|No apparent bone loss|Slight bone loss|Severe bone loss
+400,count,30,21|4|31|30,D,28|30|36|32
+401,anatomy,Crown restoration and root canal treatment,Signs of maxillary sinuses|Normal bone architecture|Crown restoration and root canal treatment|Both mandibular canals and maxillary sinuses,C,Crown restoration and root canal treatment|Root canal treatment only|Crown restoration only|Filling only
+402,prose,Periapical granuloma,Periapical granuloma|Neither jaw|Surgical intervention|Partially visible and normal,A,Dental abscess|Periapical granuloma|Periapical cyst|Periodontal pocket
+403,prose,Both are erupted,Both are erupted|None of the above|Partially visible and normal|Clearly visible bilaterally,A,"Both are impacted|One erupted, one impacted|Both are erupted|Both are partially erupted"
+404,prose,Endodontic evaluation,Bilateral|Clearly visible bilaterally|Endodontic evaluation|No significant findings,C,Crown replacement|Filling|Endodontic evaluation|Surgical extraction
+405,tooth_codes,#18,#25|#12 and #22|Wisdom tooth 48|#18,D,#48|#38|#18|#28
+406,tooth_codes,#36,#36|#28 is erupted|#25 and #46|#33,A,#35|#37|#36|#38
+407,prose,Clear boundaries,All are impacted|Clear boundaries|No jaw|Partially visible and normal,B,Not visible|Obliterated|Clear boundaries|Cloudy boundaries
+408,count,4,1|4|32|7,B,4|2|3|5
+409,tooth_codes,#36,#22|#26|#36|#47,C,#36|#12|#11|#34
+410,prose,All of the above,Bone structure appears intact|Both jaws|All of the above|No fillings,C,#11|All of the above|#13|#12
+411,bone_loss_severity,No apparent bone loss,Suggestive of bone loss|No apparent bone loss|Localized bone loss|Mild bone loss in the upper jaw,B,No apparent bone loss|Slight bone loss|Severe bone loss|Moderate bone loss
+412,tooth_codes,#38 and #48,#38 and #48|#33|#25|#27,A,#38 and #48|#18 and #28|#28 and #48|#18 and #38
+413,tooth_codes,#46,"#15|#36 and #45|#15, and #16|#46",D,#46|#47|#45|#44
+414,tooth_codes,#11,#33|#35|#11|#36 and #45,C,#21|#12|#11|#22
+415,anatomy,Bilateral mandibular canals,Crown restoration and root canal treatment|Root canal treatment or extraction|Signs of maxillary sinuses|Bilateral mandibular canals,D,Narrow mandibular canals|Unilateral mandibular canal|Absence of bilateral mandibular canals|Bilateral mandibular canals
+416,count,1,7|1|6|29,B,27|0|32|1
+417,anatomy,Bilateral mandibular canals and bilateral maxillary sinuses,Crown restoration and root canal treatment|Normal bone architecture|Bilateral mandibular canals and bilateral maxillary sinuses|Signs of maxillary sinuses,C,Bilateral mandibular canals and bilateral maxillary sinuses|Unilateral maxillary sinuses|None of the above|Unilateral mandibular canals
+418,tooth_codes,#18,"Periapical granuloma at 47|#36, #42, #35|#18|#24",C,#15|#17|#18|#16
+419,tooth_codes,#21,#21|#12 and #22|#37|Tooth 43,A,#22|#23|#20|#21
+420,count,32,22|23|32|31,C,31|32|30|28
+421,prose,All erupted and non-impacted,Upper jaw|All erupted and non-impacted|Both are erupted|Restore missing teeth in the upper jaw,B,All impacted|Not visualized|All erupted and non-impacted|Partially impacted
+422,tooth_codes,#48,"#16, #33, #34|#24 and #34|#47|#48",D,#38|#18|#28|#48
+423,tooth_codes,#37,#24|#12|#26|#37,D,#47|#37|#36|#46
+424,tooth_codes,"#36, 37, 46","#13|#36, 37, 46|#27|#47 and #26",B,"#36, 37, 46|#35, 36, 45, 46|#37, 38, 47, 48|#38, 39, 48, 49"
+426,tooth_codes,Dental filling on tooth 46,"Tooth 44|#33|Dental filling on tooth 46|#12, #11, #21",C,Dental filling on tooth 46|Dental crown on tooth 47|Dental filling on tooth 23|Root canal treatment on tooth 16
+427,prose,Normal appearance,All|Well-aerated|Normal appearance|Surgical intervention,C,Nasal cavity|Signs of infection|Normal appearance|Mandibular canal
+428,tooth_codes,#46,#21|#46|#11 and #21|#32,B,#47|#37|#36|#46
+429,bone_loss_severity,No apparent bone loss,"Yes, mild bone loss|Mild bone loss in the upper jaw|No apparent bone loss|Suggestive of bone loss",C,No apparent bone loss|Moderate bone loss|Mild bone loss|Severe bone loss
+430,prose,Monitoring,Clear|Both A and B|All erupted|Monitoring,D,Surgical consultation|Endodontic evaluation|Monitoring|Crown restoration
+431,tooth_codes,#32,Tooth 12|#32|#16 and #36|#25 and #35,B,#48|#32|#38|#28
+432,tooth_codes,#46,"#46|Tooth 43|#12, #11, #21|#12 and #22",A,#47|#37|#27|#46
+433,tooth_codes,#46,#46|#25 and #35|#37 and #45|#37,A,#36|#47|#46|#37
+434,count,32,12|32|22|31,B,32|40|28|36
+436,tooth_codes,#46,#46|Periapical lesion on tooth 37|#26|#35 and #36,A,#36|#46|#37|#47
+437,tooth_codes,Periapical granuloma at 47,"#25 and #35|#16, #27, #46, and #37|#16|Periapical granuloma at 47",D,Periapical granuloma at 47|Both B and C|Bone loss around 11|Impacted wisdom teeth
+438,tooth_codes,"#11,12,13,21,22,23","#24|Periapical lesion on tooth 37|#11,12,13,21,22,23|Dental filling on tooth 46",C,"#31,32,33,41,42,43|#11,12,13,21,22,23|#17,18,19,27,28,29|#14,15,16,24,25,26"
+441,count,4,4|1|29|25,A,3|1|4|2
+442,prose,Both B and C,Well-aerated|Well-defined with no significant pathology|Periapical lesion likely abscess|Both B and C,D,Unilateral mandibular canals|Both B and C|Bilateral maxillary sinuses|Bilateral mandibular canals
+443,tooth_codes,#47,"#47|#15|#11|#12, #11, #21",A,#48|#45|#46|#47
+447,count,4,21|4|30|12,B,3|2|4|5
+448,tooth_codes,#36,"#24 and #34|#12, #11, #21|#15|#36",D,#36|#56|#26|#46
+449,anatomy,Sphenoid sinus,Sphenoid sinus|Root canal treatment or extraction|Filling and Root Canal Treatment|Normal bone architecture,A,Sphenoid sinus|Nasal cavity|Mandibular canals|Maxillary sinuses
+450,tooth_codes,#46,"#16, #33, #34|#46|#11,12,13,21,22,23|#47",B,#26|#56|#46|#36
+451,tooth_codes,#25,#45 and #47|#47|#25|#45,C,#25|#45|#35|#15
+452,prose,All of the above,Surgical intervention|All of the above|Bilateral visibility|Erupted,B,#21|All of the above|#11|#46
+453,tooth_codes,"#46, #21, #11","#16|#45 and #47|#46, #21, #11|#12 and #22",C,"#15, #25, #35|#48, #38, #18|#24, #47, #38|#46, #21, #11"
+454,tooth_codes,#46,#25 and #35|#35|#46|Tooth 12,C,#45|#46|#44|#47
+457,tooth_codes,#37,#26|#18 and #48|#37|#13,C,#43|#44|#45|#37
+458,prose,Both A and B,Both A and B|Erupted|Both are erupted|Well-defined bilaterally,A,None of the above|Maxillary sinuses|Both A and B|Mandibular canals
+459,prose,No significant findings,Impacted|Normal|Bilateral visibility|No significant findings,D,No significant findings|Evidence of bone gain|Fracture|Evidence of bone loss
+460,tooth_codes,#37,#37|Tooth 43|#24|#26,A,#43|#44|All of the above|#37
+461,tooth_codes,#37 and #45,#24|#37 and #45|#13|#25,B,#28 and #38|#37 and #45|#37 and #38|#43 and #44
+462,tooth_codes,#36,#21|#36|#41|#24,B,#26|#16|#46|#36
+463,bone_loss_severity,No apparent bone loss,"Moderate bone loss in bone jaws|Yes, mild bone loss|Mild bone loss in the upper jaw|No apparent bone loss",D,Severe bone loss|Apparent bone loss|Moderate bone loss|No apparent bone loss
+464,tooth_codes,#18 and #38,Tooth 44|#24 and #34|#12|#18 and #38,D,#15 and #25|#48 and #28|#18 and #38|#35 and #45
+465,tooth_codes,"#16, #27, #46, and #37","#16, #27, #46, and #37|Tooth 12|#12 and #22|#33",A,"#17, #27, and #37|#16, #26, and #36|#16, #27, #46, and #37|#15, #25, and #35"
+466,tooth_codes,#47 and #26,#47 and #26|#43|#33|#12,A,#17 and #36|#27 and #37|#46 and #56|#47 and #26
+467,tooth_codes,#46,#27|Periapical cyst at 37|#46|#17,C,#36|#16|#46|#26
+468,tooth_codes,#24,#17|Periapical lesion on tooth 37|#24|#37,C,#44|#24|#54|#34
+469,bone_loss_severity,Apparent bone loss,"No bone loss detected|Moderate bone loss in bone jaws|Apparent bone loss|Yes, mild bone loss",C,Apparent bone loss|No apparent bone loss|Bilateral mandibular canals|Clear maxillary sinuses
+470,count,4,1|7|4|29,C,5|3|4|2
+471,prose,Lower jaw,Lower jaw|Impacted|All|Periapical abscess,A,Mandibular canal|Lower jaw|Maxillary sinus|Upper jaw
+472,tooth_codes,#47,"#37|#36|#36, #42, #35|#47",D,#45|#44|#46|#47
+473,tooth_codes,#46,"#16, #33, #34|#46|#12|Periapical cyst at 37",B,#46|#43|#44|#45
+474,tooth_codes,#18,#18|#33|#25 and #35|#16 and #36,A,#28|#38|#48|#18
+475,bone_loss_severity,No apparent bone loss,Mild bone loss in the upper jaw|Suggestive of bone loss|No apparent bone loss|Localized bone loss,C,No apparent bone loss|Moderate bone loss|Slight bone loss|Severe bone loss
+476,count,32,7|4|32|22,C,30|32|31|29
+478,tooth_codes,#18,#11|Tooth 43|#18|#41,C,#48|#28|#18|#38
+479,tooth_codes,#46,"#35, #36, #37|#12, #11, #21|#24 and #34|#46",D,#46|#45 and #46|#47 and #48|#48 and #49
+481,count,4,7|4|3|30,B,4|2|3|5
+482,tooth_codes,#36,#25|#24|Tooth 12|#36,D,#38|#35|#36|#37
+483,tooth_codes,#16 and #36,#12|#17|#21|#16 and #36,D,"#16, #36, and #32|#16 only|#36 only|#16 and #36"
+484,bone_loss_severity,No bone loss detected,No bone loss detected|Localized bone loss|Apparent alveolar bone loss noted|Suggestive of bone loss,A,Lower jaw|Both jaws|No bone loss detected|Upper jaw
+485,count,32,22|32|31|6,B,31|32|29|16
+487,prose,Partially visible and normal,Visible bilaterally|Impacted wisdom teeth|Partially visible and normal|Bilateral visibility,C,Not mentioned|Not visible|Partially visible and normal|Fully visible and abnormal
+488,count,32,32|7|12|4,A,29|32|31|30
+489,tooth_codes,#13,"#35, #36, #37|#13|#16, #27, #46, and #37|Tooth 44",B,#12|#15|#14|#13
+490,prose,Endodontic evaluation and treatment,Periapical granuloma|Endodontic evaluation and treatment|No treatment|No obvious caries,B,Extraction|Endodontic evaluation and treatment|Crown placement|No treatment needed

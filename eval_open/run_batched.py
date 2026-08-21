@@ -144,7 +144,7 @@ def _anthropic(image_b64, system, user, model, exemplars=None):
     return "".join(b.text for b in r.content if b.type == "text")
 
 
-def _gemini(image_b64, system, user, model, exemplars=None):
+def _gemini(image_b64, system, user, model, exemplars=None, no_image=False):
     from google import genai
     from google.genai import types
     c = _clients.setdefault("gemini", genai.Client(api_key=os.environ["GEMINI_API_KEY"]))
@@ -154,7 +154,13 @@ def _gemini(image_b64, system, user, model, exemplars=None):
         for b64, cap in exemplars:
             parts.append(decode_image(b64)); parts.append(cap)
         parts.append(EXEMPLAR_OUTRO)
-    parts += [user, decode_image(image_b64)]
+    if no_image:
+        # E3 on the free-text half: the questions, no X-ray. The closed half showed 46%
+        # blind against 25% chance; free text has no options to eliminate, so any score
+        # here is the model writing a plausible report from priors alone.
+        parts += [user, "\n(No radiograph is provided. Answer from the questions alone.)\n"]
+    else:
+        parts += [user, decode_image(image_b64)]
     # max_output_tokens must leave room for thinking tokens + the visible answer
     max_out = 4096 + (THINKING_BUDGET if THINKING_BUDGET > 0 else 0)
     r = c.models.generate_content(model=model, contents=parts,
@@ -180,11 +186,13 @@ def parse_numbered(raw, n):
 
 
 def answer_image(image_b64, questions, primer, system, provider, model, retries=3,
-                 exemplars=None, detection_text=None, overlay=False, concise=False, precision=False):
+                 exemplars=None, detection_text=None, overlay=False, concise=False, precision=False,
+                 no_image=False):
     user = build_user(primer, questions, detection_text, overlay=overlay, concise=concise, precision=precision)
     for a in range(retries):
         try:
-            raw = PROVIDERS[provider](image_b64, system, user, model, exemplars)
+            kw = {"no_image": True} if (no_image and provider == "gemini") else {}
+            raw = PROVIDERS[provider](image_b64, system, user, model, exemplars, **kw)
             ans = parse_numbered(raw, len(questions))
             if sum(bool(x) for x in ans) >= max(1, len(questions) - 1):  # parsed nearly all
                 return ans, raw
@@ -211,6 +219,8 @@ def main():
     ap.add_argument("--reasoning-effort", default="minimal", choices=["minimal", "low", "medium", "high"],
                     help="OpenAI reasoning-model effort (gpt-5*/o*)")
     ap.add_argument("--thinking-budget", type=int, default=0, help="Gemini thinking-token budget (0 = off)")
+    ap.add_argument("--no-image", action="store_true",
+                    help="E3 on the free-text half: send the questions with NO X-ray")
     ap.add_argument("--concise", action="store_true", help="append CONCISE_NOTE (commit to single best answer, no over-listing)")
     ap.add_argument("--precision", action="store_true", help="append PRECISION_NOTE (scoped: be selective on summary/report questions only)")
     ap.add_argument("--workers", type=int, default=1, help="parallel image calls in phase 1")
@@ -263,7 +273,8 @@ def main():
         ans, _ = answer_image(img_b64, g["question"].tolist(), primer,
                               COAX_SYSTEM, args.provider, args.model, exemplars=exemplars,
                               detection_text=detections.get(im), overlay=bool(args.overlay_dir),
-                              concise=args.concise, precision=args.precision)
+                              concise=args.concise, precision=args.precision,
+                              no_image=args.no_image)
         return im, g, ans
 
     n = len(done)

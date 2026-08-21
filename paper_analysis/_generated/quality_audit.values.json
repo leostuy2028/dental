@@ -1,0 +1,30 @@
+{
+  "reviewed": 217,
+  "in_manifest": 863,
+  "submissions": 1,
+  "counts": {
+    "correct": 135,
+    "incorrect": 80,
+    "unsure": 2
+  },
+  "share_pct": {
+    "correct": 62.2,
+    "incorrect": 36.9,
+    "unsure": 0.9
+  },
+  "by_task": {
+    "closed": {
+      "correct": 38,
+      "incorrect": 68,
+      "unsure": 1
+    },
+    "open": {
+      "correct": 97,
+      "incorrect": 12,
+      "unsure": 1
+    }
+  },
+  "comments": 13,
+  "_generator": "paper_analysis/quality_audit.py",
+  "_generated_utc": "2026-08-21T19:04:35+00:00"
+}

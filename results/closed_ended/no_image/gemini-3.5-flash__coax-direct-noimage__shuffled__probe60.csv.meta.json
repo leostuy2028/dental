@@ -1,0 +1,20 @@
+{
+  "experiment": "E3-noimage-probe",
+  "paper_section": "5.7",
+  "description": "E3 language-prior control, 60-question probe",
+  "context_file": "",
+  "detector_map": "",
+  "no_image": true,
+  "max_image_px": "full",
+  "crops": false,
+  "visual_exemplars": "",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_shuffled.parquet",
+  "n": 60,
+  "accuracy_pct": 51.67,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --no-image --data data/closed_ended_shuffled.parquet --limit 60 --paper-section 5.7 --exp E3-noimage-probe --out results/closed_ended/no_image/gemini-3.5-flash__coax-direct-noimage__shuffled__probe60.csv --description E3 language-prior control, 60-question probe",
+  "code_commit": "a39bc98",
+  "generated_utc": "2026-08-02T12:33:59+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-noimage__shuffled__probe60.csv"
+}

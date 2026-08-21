@@ -103,7 +103,7 @@ def _half_crops(b64_string):
 
 
 def build_prompt(row, examples=None, cot=False, mode="house", context=None, max_image_px=None,
-                 crops=False, visual_exemplars=None, chart=None):
+                 crops=False, visual_exemplars=None, chart=None, no_image=False):
     """
     Build a Gemini content list for a closed-ended question.
 
@@ -144,7 +144,15 @@ def build_prompt(row, examples=None, cot=False, mode="house", context=None, max_
             ))
         parts.append("\nNow answer the following:\n")
 
-    parts.append(_image_part(row["image"], max_image_px))  # the test X-ray, full-res
+    if no_image:
+        # E3, the language-prior control (§5.7): the question and its options, no X-ray.
+        # Anything above chance on the BALANCED key is score that never required sight.
+        # The instruction still demands a committed letter, so a refusal is not scored as a
+        # miss and the number stays comparable to the sighted arm.
+        parts.append("\nNo radiograph is provided for this question. Answer from the "
+                     "question and options alone, and still commit to exactly one letter.\n")
+    else:
+        parts.append(_image_part(row["image"], max_image_px))  # the test X-ray, full-res
     if crops:
         parts.append("\nHere are enlarged views of the left and right halves of the same "
                      "panoramic X-ray, to help you examine individual teeth more closely:")

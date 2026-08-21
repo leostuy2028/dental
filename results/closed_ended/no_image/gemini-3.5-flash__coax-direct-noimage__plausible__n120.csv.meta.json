@@ -1,0 +1,20 @@
+{
+  "experiment": "E3-plausible-blind",
+  "paper_section": "5.7",
+  "description": "E3 blind, on the plausible-distractor rewrite",
+  "context_file": "",
+  "detector_map": "",
+  "no_image": true,
+  "max_image_px": "full",
+  "crops": false,
+  "visual_exemplars": "",
+  "model": "gemini-3.5-flash",
+  "config": "coax direct think=0",
+  "dataset": "closed_ended_plausible.parquet",
+  "n": 120,
+  "accuracy_pct": 50.83,
+  "command": "python eval_closed_gemini.py --model gemini-3.5-flash --k 0 --prompt coax --thinking-budget 0 --no-image --data data/closed_ended_plausible.parquet --limit 120 --paper-section 5.7 --exp E3-plausible-blind --out results/closed_ended/no_image/gemini-3.5-flash__coax-direct-noimage__plausible__n120.csv --description E3 blind, on the plausible-distractor rewrite",
+  "code_commit": "a39bc98",
+  "generated_utc": "2026-08-02T13:37:13+00:00",
+  "data_file": "gemini-3.5-flash__coax-direct-noimage__plausible__n120.csv"
+}

@@ -64,7 +64,7 @@ def _chart_for(dmap, row):
 def run(model, k, results_path, data_path="data/closed_ended.parquet",
         limit=None, start=0, thinking_budget=None, cot=False, mode="house", meta=None,
         context=None, max_image_px=None, crops=False, pool_images=None, visual_exemplars=None,
-        detector_map=None):
+        detector_map=None, no_image=False):
     # route the client at the requested model (default gemini-2.0-flash)
     gemini_client.MODEL = model
 
@@ -112,7 +112,7 @@ def run(model, k, results_path, data_path="data/closed_ended.parquet",
         examples = get_examples(pool_df, row, k=k, seed=int(row["index"]))
         parts = build_prompt(row, examples=examples if examples else None, cot=cot, mode=mode,
                              context=context, max_image_px=max_image_px, crops=crops,
-                             chart=_chart_for(detector_map, row),
+                             chart=_chart_for(detector_map, row), no_image=no_image,
                              visual_exemplars=visual_exemplars)
         try:
             predicted, raw = gemini_client.call(parts, thinking_budget=thinking_budget, cot=cot)
@@ -178,6 +178,8 @@ if __name__ == "__main__":
     parser.add_argument("--exp", default="")
     parser.add_argument("--paper-section", default="")
     parser.add_argument("--description", default="")
+    parser.add_argument("--no-image", action="store_true",
+                        help="E3 language-prior control: send the question and options with NO X-ray (§5.7)")
     parser.add_argument("--detector-map", default=None,
                         help="JSON tooth map (reference/mmoral_map_v2.json); its chart is appended to each question")
     parser.add_argument("--context", default=None,
@@ -219,8 +221,9 @@ if __name__ == "__main__":
     run(model=args.model, k=args.k, results_path=args.out, data_path=args.data,
         limit=args.limit, start=args.start, thinking_budget=args.thinking_budget, cot=args.cot, mode=args.prompt,
         context=context_text, max_image_px=args.max_image_px, crops=args.crops, visual_exemplars=vis_ex,
-        detector_map=dmap,
+        detector_map=dmap, no_image=args.no_image,
         meta={"experiment": args.exp, "paper_section": args.paper_section, "description": args.description,
               "context_file": args.context or "", "detector_map": args.detector_map or "",
+              "no_image": args.no_image,
               "max_image_px": args.max_image_px or "full",
               "crops": args.crops, "visual_exemplars": args.visual_exemplars or ""})
