@@ -1,30 +1,30 @@
 {
-  "reviewed": 217,
+  "reviewed": 424,
   "in_manifest": 863,
-  "submissions": 1,
+  "submissions": 2,
   "counts": {
-    "correct": 135,
-    "incorrect": 80,
-    "unsure": 2
+    "correct": 258,
+    "incorrect": 162,
+    "unsure": 4
   },
   "share_pct": {
-    "correct": 62.2,
-    "incorrect": 36.9,
+    "correct": 60.8,
+    "incorrect": 38.2,
     "unsure": 0.9
   },
   "by_task": {
     "closed": {
-      "correct": 38,
-      "incorrect": 68,
-      "unsure": 1
+      "correct": 75,
+      "incorrect": 135,
+      "unsure": 2
     },
     "open": {
-      "correct": 97,
-      "incorrect": 12,
-      "unsure": 1
+      "correct": 183,
+      "incorrect": 27,
+      "unsure": 2
     }
   },
-  "comments": 13,
+  "comments": 28,
   "_generator": "paper_analysis/quality_audit.py",
-  "_generated_utc": "2026-08-21T19:04:35+00:00"
+  "_generated_utc": "2026-08-23T20:07:14+00:00"
 }
