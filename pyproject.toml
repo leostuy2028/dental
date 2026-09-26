@@ -1,0 +1,27 @@
+# Settings for the test suite. Run everything with:
+#   python -m pytest
+# Run with a coverage report with:
+#   python -m coverage run -m pytest ; python -m coverage report
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# the old experiment scripts in eval_open/ and detector/ are also named test_*.py,
+# but they call paid APIs, so pytest must only look inside tests/
+python_files = ["test_*.py"]
+
+[tool.coverage.run]
+# source_dirs makes coverage count EVERY .py file, even the ones in folders
+# without an __init__.py (detector/, paper_analysis/, curated/) and even the
+# ones no test imports yet. Otherwise untested files would hide from the report.
+source_dirs = [
+    "clients", "curated", "dataio", "detector", "eval_open",
+    "paper_analysis", "prompts", "utils",
+]
+source = ["."]
+omit = ["tests/*", "*/__pycache__/*"]
+
+[tool.coverage.report]
+show_missing = false
+skip_empty = true
+# the "run this file directly" block at the bottom of a script is not counted
+exclude_also = ['if __name__ == .__main__.:']
